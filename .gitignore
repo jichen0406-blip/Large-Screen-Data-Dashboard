@@ -1,0 +1,10 @@
+# 敏感数据 - 绝不提交
+rawdata/
+# 依赖/临时文件
+node_modules/
+.DS_Store
+*.log
+# 模板遗留未引用的文件（如确认不需要可删除）
+js/44.json
+js/area_echarts.js
+js/Bubble.js

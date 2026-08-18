@@ -1,0 +1,13 @@
+{
+  "name": "fucaso-board",
+  "version": "1.0.0",
+  "description": "驯鹿生物大数据平台 - 大屏看板",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "data": "node build_data.js"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
