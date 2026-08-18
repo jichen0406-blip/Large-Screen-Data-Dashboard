@@ -10,6 +10,9 @@ cd "$(dirname "$0")"
 echo "==> 1. 重新生成数据 js/data.js"
 node build_data.js
 
+echo "==> 1.1 打包省份地图 js/geo-data.js（内联，离线/file:// 打开无需 fetch）"
+node build_geo.js
+
 echo "==> 2. 确保 .gitignore（排除敏感数据/无关文件）"
 if [ ! -f .gitignore ]; then
   cat > .gitignore <<'EOF'
