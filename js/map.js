@@ -269,6 +269,10 @@ $(function () {
             '澳门': { adcode: 820000, full: '澳门特别行政区', single: true }
         };
 
+        // 省份全名 → 短名反查（散点点击：城市名 → 所在省份短名，如 '广东省'→'广东'）
+        var fullToKey = {};
+        Object.keys(PROV_ADCODE).forEach(function (k) { fullToKey[PROV_ADCODE[k].full] = k; });
+
         var provChart = null;
         function buildProvOption(pts) {
             return {
@@ -336,49 +340,64 @@ $(function () {
             panelOpen = true;
             stopAuto();
             renderProvRank(null, null);
-            var fname = info.adcode + (info.single ? '.json' : '_full.json');
-            var url = 'js/geo/' + fname; // 本地离线 GeoJSON（js/geo/ 下预下载）
             $('#provTitle').text(name);
             $('#provStats').text('');
             $('#provChart').empty();
             $('#provLoading').text('加载中…').show();
             $('#provPanel').show();
-            fetch(url)
-                .then(function (r) { return r.json(); })
-                .then(function (geo) {
-                    $('#provLoading').hide();
-                    if (!geo || !geo.features) throw new Error('bad geojson');
-                    var citySet = {};
-                    geo.features.forEach(function (f) { citySet[f.properties.name] = true; });
-                    var pts = [];
-                    if (B && B.CITY) {
-                        Object.keys(B.CITY).forEach(function (c) {
-                            var coord = geoCoordMap[c];
-                            if (!citySet[c] || !coord) return;
-                            var o = B.CITY[c].o || 0, r = B.CITY[c].r || 0;
-                            if ((o + r) <= 0) return;
-                            pts.push({ name: c, value: coord.concat(o + r), o: o, r: r });
-                        });
-                    }
-                    var provData = (B && B.PROV) ? (B.PROV[info.full] || null) : null;
-                    $('#provStats').text(provData ? ('下单 ' + (provData.o || 0) + ' / 回输 ' + (provData.r || 0)) : '');
-                    renderProvRank(
-                        (B && B.HOSP_PROV && B.HOSP_PROV.O) ? (B.HOSP_PROV.O[info.full] || null) : null,
-                        (B && B.HOSP_PROV && B.HOSP_PROV.R) ? (B.HOSP_PROV.R[info.full] || null) : null
-                    );
-                    echarts.registerMap('provCity', geo);
-                    if (provChart) provChart.dispose();
-                    provChart = echarts.init(document.getElementById('provChart'));
-                    provChart.setOption(buildProvOption(pts));
-                    setTimeout(function () { if (provChart) provChart.resize(); }, 60);
-                })
+            function renderGeo(geo) {
+                if (!geo || !geo.features) { $('#provLoading').text('地图数据缺失').show(); return; }
+                $('#provLoading').hide();
+                var citySet = {};
+                geo.features.forEach(function (f) { citySet[f.properties.name] = true; });
+                var pts = [];
+                if (B && B.CITY) {
+                    Object.keys(B.CITY).forEach(function (c) {
+                        var coord = geoCoordMap[c];
+                        if (!citySet[c] || !coord) return;
+                        var o = B.CITY[c].o || 0, r = B.CITY[c].r || 0;
+                        if ((o + r) <= 0) return;
+                        pts.push({ name: c, value: coord.concat(o + r), o: o, r: r });
+                    });
+                }
+                var provData = (B && B.PROV) ? (B.PROV[info.full] || null) : null;
+                $('#provStats').text(provData ? ('下单 ' + (provData.o || 0) + ' / 回输 ' + (provData.r || 0)) : '');
+                renderProvRank(
+                    (B && B.HOSP_PROV && B.HOSP_PROV.O) ? (B.HOSP_PROV.O[info.full] || null) : null,
+                    (B && B.HOSP_PROV && B.HOSP_PROV.R) ? (B.HOSP_PROV.R[info.full] || null) : null
+                );
+                echarts.registerMap('provCity', geo);
+                if (provChart) provChart.dispose();
+                provChart = echarts.init(document.getElementById('provChart'));
+                provChart.setOption(buildProvOption(pts));
+                setTimeout(function () { if (provChart) provChart.resize(); }, 60);
+            }
+            var fname = info.adcode + (info.single ? '.json' : '_full.json');
+            // GitHub Pages/在线优先 fetch（按需单文件，快）；失败再懒加载内联数据（file:// 离线场景）
+            fetch('js/geo/' + fname)
+                .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+                .then(renderGeo)
                 .catch(function () {
-                    $('#provLoading').text('加载失败，请检查网络后重试').show();
+                    if (window.GEO_DATA && window.GEO_DATA[fname]) { renderGeo(window.GEO_DATA[fname]); return; }
+                    $('#provLoading').text('正在加载离线地图…').show();
+                    var s = document.createElement('script');
+                    s.src = 'js/geo-data.js';
+                    s.onload = function () {
+                        var g = (window.GEO_DATA) ? window.GEO_DATA[fname] : null;
+                        if (g) renderGeo(g); else $('#provLoading').text('地图数据缺失').show();
+                    };
+                    s.onerror = function () { $('#provLoading').text('地图数据缺失').show(); };
+                    document.head.appendChild(s);
                 });
         }
         myChart.on('click', function (params) {
             if (params.componentType === 'geo' && params.name && PROV_ADCODE[params.name]) {
                 openProvince(params.name);
+            } else if (params.componentType === 'series' && params.name) {
+                // 点击城市散点 → 打开该城市所在省份浮窗（直辖市/小省份圆点也能命中）
+                var prov = (B && B.CITY_PROV) ? B.CITY_PROV[params.name] : null;
+                var key = prov ? fullToKey[prov] : null;
+                if (key) openProvince(key);
             }
         });
         $('#provClose').on('click', function () { panelOpen = false; $('#provPanel').hide(); startAuto(); });
