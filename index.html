@@ -12,6 +12,15 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="login-mask" id="loginMask">
+		<div class="login-box">
+			<div class="login-logo">驯鹿生物大数据监控平台</div>
+			<div class="login-tip">请输入访问密码</div>
+			<input type="password" id="loginPwd" placeholder="访问密码" autocomplete="off">
+			<button type="button" id="loginBtn">进 入</button>
+			<div class="login-err" id="loginErr"></div>
+		</div>
+	</div>
 	<div class="head clearfix">
 		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
 		<div class="update" id="dataUpd">数据更新时间 --</div>
@@ -148,5 +157,36 @@ var t = null;
 			</ul>
 		</div>
 	</div>
+	<script>
+	// 页面访问密码校验（客户端门禁，密码以 SHA-256 哈希存储）
+	(function () {
+		var HASH = 'fcde78c0a777ada04fec4ed613421feb59ee71e70608fa7bf53c386970395c66';
+		var mask = document.getElementById('loginMask');
+		if (sessionStorage.getItem('board_authed') === '1') { if (mask) mask.style.display = 'none'; return; }
+		function sha256(text) {
+			return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (h) {
+				return Array.prototype.map.call(new Uint8Array(h), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+			});
+		}
+		function check() {
+			var pwd = document.getElementById('loginPwd');
+			sha256(pwd.value).then(function (h) {
+				if (h === HASH) {
+					sessionStorage.setItem('board_authed', '1');
+					mask.style.display = 'none';
+				} else {
+					document.getElementById('loginErr').textContent = '密码错误，请重试';
+					pwd.value = '';
+					pwd.focus();
+				}
+			}).catch(function () {
+				document.getElementById('loginErr').textContent = '当前环境不支持加密（请用 http/https 访问）';
+			});
+		}
+		document.getElementById('loginBtn').addEventListener('click', check);
+		document.getElementById('loginPwd').addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+		document.getElementById('loginPwd').focus();
+	})();
+	</script>
 </body>
 </html>

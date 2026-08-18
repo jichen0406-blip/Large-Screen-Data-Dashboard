@@ -155,4 +155,15 @@ a:hover{ color:#06c; text-decoration: none!important}
 .tl-hc.r{ background:rgba(98,201,141,.12); color:#62c98d; }
 .tl-empty{ color:rgba(255,255,255,.3); font-style:italic; font-size:10px; }
 
+/* ── 登录门禁 ── */
+.login-mask{ position: fixed; top:0; left:0; right:0; bottom:0; z-index:9999; display:flex; align-items:center; justify-content:center; background: radial-gradient(50% 35%, farthest-corner,#034f8e,#034987,#02366d,#002353); }
+.login-box{ width:320px; background:rgba(2,24,61,.92); border:1px solid rgba(47,137,207,.8); border-radius:10px; box-shadow:0 0 30px rgba(47,137,207,.4); padding:30px 28px 24px; text-align:center; }
+.login-logo{ font-size:20px; font-weight:700; color:#fff; letter-spacing:1px; margin-bottom:6px; }
+.login-tip{ font-size:13px; color:rgba(255,255,255,.55); margin-bottom:18px; }
+.login-box input{ width:100%; box-sizing:border-box; height:40px; background:rgba(255,255,255,.06); border:1px solid rgba(112,187,252,.4); border-radius:6px; color:#fff; font-size:15px; padding:0 12px; outline:none; }
+.login-box input:focus{ border-color:#2f89cf; box-shadow:0 0 8px rgba(47,137,207,.5); }
+.login-box button{ width:100%; height:40px; margin-top:14px; background:linear-gradient(to right,#2f89cf,#4ba6e0); border:none; border-radius:6px; color:#fff; font-size:15px; letter-spacing:4px; cursor:pointer; }
+.login-box button:hover{ opacity:.9; }
+.login-err{ margin-top:10px; font-size:12px; color:#ff6316; min-height:16px; }
+
 
