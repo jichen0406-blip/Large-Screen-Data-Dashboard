@@ -226,8 +226,9 @@ $(function () {
         }
         function startAuto() { if (panelOpen) return; paused = false; if (!playTimer) playTimer = setInterval(showNextCity, 5000); }
         function stopAuto() { paused = true; clearInterval(playTimer); playTimer = null; clearTimeout(tipTimer); hideCityTip(); }
-        startAuto();
-        setTimeout(showNextCity, 2000); // 首张提前展示
+        // 登录后才启动地图轮播：未登录时只挂全局启动函数，由登录脚本密码校验通过后调用
+        window.startBoardAuto = function () { startAuto(); showNextCity(); };
+        if (sessionStorage.getItem('board_authed') === '1') window.startBoardAuto();
         $('#map').on('mouseenter', stopAuto).on('mouseleave', startAuto);
 
         // ═══ 省份城市地图浮窗（点击省份 → 阿里 DataV GeoAtlas 拉取城市边界） ═══

@@ -66,9 +66,10 @@ function monthlyTrend() {
         if (y >= 0) return { color: '#14e144', text: '↑' + y.toFixed(0) + '%' };
         return { color: '#ff6316', text: '↓' + Math.abs(y).toFixed(0) + '%' };
     }
-    function build(domId, cur, ly) {
+    function build(domId, cur, ly, curColor) {
         var el = document.getElementById(domId);
         if (!el) return;
+        curColor = curColor || '#2f89cf';
         var curData = cur.map(function(v, i) {
             var yl = yoyLabel(v, ly[i]);
             return {
@@ -111,8 +112,8 @@ function monthlyTrend() {
                 smooth: true,
                 data: curData,
                 symbolSize: 5,
-                itemStyle: { normal: { color: '#2f89cf' } },
-                lineStyle: { color: '#2f89cf', width: 2 }
+                itemStyle: { normal: { color: curColor } },
+                lineStyle: { color: curColor, width: 2 }
             }, {
                 name: lyLabel,
                 type: 'line',
@@ -127,7 +128,7 @@ function monthlyTrend() {
         window.addEventListener("resize", function () { myChart.resize(); });
     }
     build('echart6', B.MONTH.O, B.MONTH.OLY);
-    build('echart4', B.MONTH.R, B.MONTH.RLY);
+    build('echart4', B.MONTH.R, B.MONTH.RLY, '#62c98d');
 }
 
 // ── 标题8/9：YTD异常订单柱状图 + COE医院销量占比饼图 ──
@@ -174,14 +175,14 @@ function echarts_31() {
     var option3 = coePie(coeOd, '下单');
     var option4 = coePie(coeRd, '回输');
     var option5 = {
-        grid: { left: '0', right: '0', top: '8%', bottom: '24%' },
+        grid: { left: '0', right: '0', top: '14%', bottom: '20%' },
         legend: {
             data: ['PBMC失败', '第一次失败', '二次失败'],
             bottom: 5, itemWidth: 10, itemHeight: 10,
             textStyle: { color: '#fff', fontSize: '10' }, itemGap: 5
         },
         tooltip: { show: true, trigger: 'item' },
-        yAxis: { type: 'value', show: false },
+        yAxis: { type: 'value', show: false, max: function (v) { return Math.max(3, Math.ceil(v.max * 1.25)); } },
         xAxis: [{
             type: 'category', axisTick: { show: false }, axisLine: { show: false }, axisLabel: { show: false },
             data: ['异常订单']
