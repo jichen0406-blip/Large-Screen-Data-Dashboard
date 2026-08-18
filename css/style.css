@@ -156,7 +156,7 @@ a:hover{ color:#06c; text-decoration: none!important}
 .tl-empty{ color:rgba(255,255,255,.3); font-style:italic; font-size:10px; }
 
 /* ── 登录门禁 ── */
-.login-mask{ position: fixed; top:0; left:0; right:0; bottom:0; z-index:9999; display:flex; align-items:center; justify-content:center; background: radial-gradient(50% 35%, farthest-corner,#034f8e,#034987,#02366d,#002353); }
+.login-mask{ position: fixed; top:0; left:0; right:0; bottom:0; z-index:9999; display:flex; align-items:center; justify-content:center; background-color:#02234d; background-image: -webkit-radial-gradient(50% 35%, farthest-corner, #034f8e, #034987, #02366d, #002353); background-image: radial-gradient(farthest-corner at 50% 35%, #034f8e, #034987, #02366d, #002353); }
 .login-box{ width:320px; background:rgba(2,24,61,.92); border:1px solid rgba(47,137,207,.8); border-radius:10px; box-shadow:0 0 30px rgba(47,137,207,.4); padding:30px 28px 24px; text-align:center; }
 .login-logo{ font-size:20px; font-weight:700; color:#fff; letter-spacing:1px; margin-bottom:6px; }
 .login-tip{ font-size:13px; color:rgba(255,255,255,.55); margin-bottom:18px; }
