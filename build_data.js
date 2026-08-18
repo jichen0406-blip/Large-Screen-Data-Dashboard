@@ -217,7 +217,7 @@ function hospList(cnt) {
     .sort(function(a, b) { return b.v - a.v; });
 }
 var last7 = [];
-var _cur = new Date(Y + '-' + DP.slice(5, 7) + '-01');
+var _cur = new Date((Y + '-' + DP.slice(5, 7) + '-01').replace(/-/g, '/')); // 斜杠=本地解析，与 _end 一致，避免时区差导致当天缺失
 var _end = new Date(DP.replace(/-/g, '/'));
 while (_cur <= _end) {
   var ds = toLocal(_cur);
