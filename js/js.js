@@ -187,9 +187,9 @@ function echarts_31() {
             data: ['异常订单']
         }],
         series: [
-            { name: 'PBMC失败', type: 'bar', barWidth: '26', itemStyle: { normal: { color: '#ffc53d', barBorderRadius: 50 } }, zlevel: 2, barGap: '200%', data: [ABN.pbmc], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
-            { name: '第一次失败', type: 'bar', itemStyle: { normal: { color: '#fa8c16', barBorderRadius: 50 } }, zlevel: 2, barWidth: '26', data: [ABN.first], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
-            { name: '二次失败', type: 'bar', itemStyle: { normal: { color: '#f5222d', barBorderRadius: 50 } }, zlevel: 2, barWidth: '26', data: [ABN.second], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } }
+            { name: 'PBMC失败', type: 'bar', barWidth: '12%', itemStyle: { normal: { color: '#ffc53d', barBorderRadius: 50 } }, zlevel: 2, barGap: '200%', data: [ABN.pbmc], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
+            { name: '第一次失败', type: 'bar', itemStyle: { normal: { color: '#fa8c16', barBorderRadius: 50 } }, zlevel: 2, barWidth: '12%', data: [ABN.first], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
+            { name: '二次失败', type: 'bar', itemStyle: { normal: { color: '#f5222d', barBorderRadius: 50 } }, zlevel: 2, barWidth: '12%', data: [ABN.second], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } }
         ]
     };
     myChart3.setOption(option3);

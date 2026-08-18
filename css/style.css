@@ -45,11 +45,11 @@ a:hover{ color:#06c; text-decoration: none!important}
 .boxnav{padding: 10px;}
 .nav2{}
 .nav2>li:first-child{border:none;}
-.nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height:240px; padding: 0 10px 10px 10px;}
+.nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height: clamp(200px, calc(100vh - 720px), 380px); padding: 0 10px 10px 10px; display: flex; flex-direction: column;}
 .tit01{font-size: 16px; font-weight: 500; position: relative; padding-left: 15px;}
 .tit01:before{ left: 3px; top: 8px;}
 
-.ftechart{height: 200px;}
+.ftechart{ flex: 1; min-height: 0; width: 100%; }
 
 
 
