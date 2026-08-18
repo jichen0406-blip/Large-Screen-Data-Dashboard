@@ -37,6 +37,10 @@ if ! git remote | grep -q origin; then
   git remote add origin git@github.com:jichen0406-blip/Large-Screen-Data-Dashboard.git
   echo "    已添加远程仓库"
 fi
+# 统一分支为 main（GitHub 默认分支）
+if [ "$(git branch --show-current)" != "main" ]; then
+  git branch -M main
+fi
 
 echo "==> 4. 提交（无变更则跳过）"
 git add -A
