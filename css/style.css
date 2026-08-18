@@ -23,12 +23,12 @@ a:hover{ color:#06c; text-decoration: none!important}
 .pulll_right{float:right;}
 
 .head{position: relative; height: 57.6px; margin: 0 15px; padding-right: 60px; background: url(../images/topbg.png) no-repeat center center; background-size: 100% 100%;}
-.head h1{  font-size: 30px; letter-spacing: -2px; text-align: center; line-height: 57.6px; color: #daf9ff;}
-.head h1 img.head-logo{ height: 42px; vertical-align: middle; margin-right: 10px; }
+.head h1{  font-size: clamp(16px, 1.5625vw, 30px); letter-spacing: -2px; text-align: center; line-height: 57.6px; color: #daf9ff;}
+.head h1 img.head-logo{ height: clamp(24px, 2.1875vw, 42px); vertical-align: middle; margin-right: 10px; }
 .head .tm-wrap{position: absolute; right: 0; display: flex; align-items: center; line-height: 57.6px; transform: translateY(-40px);}
-.head .time{white-space: nowrap;}
-.head .weather{white-space: nowrap; margin-left: 12px; font-size: 16px; color: rgba(255,255,255,.9);}
-.head .update{position: absolute; left: -15px; padding-left: 5px; line-height: 57.6px; transform: translateY(-40px); font-size: 16px; color: rgba(255,255,255,.9); white-space: nowrap;}
+.head .time{white-space: nowrap; font-size: clamp(11px, 0.8333vw, 16px);}
+.head .weather{white-space: nowrap; margin-left: 12px; font-size: clamp(11px, 0.8333vw, 16px); color: rgba(255,255,255,.9);}
+.head .update{position: absolute; left: -15px; padding-left: 5px; line-height: 57.6px; transform: translateY(-40px); font-size: clamp(11px, 0.8333vw, 16px); color: rgba(255,255,255,.9); white-space: nowrap;}
 
 .mainbox{padding: 0px 10px; margin-top: 14.4px;}
 .nav1{margin-left: -6px; margin-right:-6px;}
@@ -98,8 +98,8 @@ a:hover{ color:#06c; text-decoration: none!important}
 .wancheng{display: flex; align-items: center; justify-content: center; text-align: center;}
 .wancheng span{font-size: 14px; color: #fff;}
 .wancheng h3{font-size: 20px; color:#00b4ff;}
-.wancheng h3.abn-num{font-size: 60px; color:#f5222d;}
-.wancheng h3.abn-num #abnNum{font-size: 60px;}
+.wancheng h3.abn-num{font-size: clamp(30px, 3.5vw, 60px); color:#f5222d;}
+.wancheng h3.abn-num #abnNum{font-size: clamp(30px, 3.5vw, 60px);}
 .wancheng h3 i{font-size: 12px; color:#fff;}
 
 /* ── Top10 表格（锁定表头 + 右侧滚动条） ── */
