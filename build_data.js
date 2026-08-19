@@ -99,6 +99,7 @@ for (var i = 2; i < bsRows.length; i++) {
   if (prov === '新加坡' || prov.indexOf('新加坡') >= 0) { prov = ''; city = ''; } // 排除新加坡
 
   records.push({
+    no: String(row[1] || '').trim(),
     hosp: hosp,
     prov: prov,
     city: city,
@@ -304,6 +305,120 @@ for (var ai = 1; ai < abnRows.length; ai++) {
 }
 var abnTotal = abnPbmc + abnFirst + abnSecond;
 
+// ── 8j. Page2：海外/商业化数据（order dict.xlsx 按 订单号↔合同号 匹配） ──
+// dict 列：1=订单号, 11=海外导流(国籍/常驻地), 12=患者首次付款时间, 21=导流
+// 分类：空=国内导流, 医生导流/OB导流=海外导流(来华→中国), 国家+NPP/商业化=市场化(按订单医院国家), 国内三方导流=不计
+var dictPath = path.join(rawDir, 'order dict.xlsx');
+if (!fs.existsSync(dictPath)) dictPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'order dict.xlsx');
+var dictRows = XLSX.utils.sheet_to_json(XLSX.readFile(dictPath).Sheets['Sheet1'], { header: 1, defval: '' });
+var dictMap = {}, OVERSEAS = {};
+dictRows.slice(1).forEach(function (r) {
+  var no = String(r[1] || '').trim();
+  if (!no) return;
+  var flow = String(r[21] || '').trim();
+  var natl = String(r[11] || '').trim();
+  if (natl) OVERSEAS[natl] = true;
+  var cat = 'dom';
+  if (flow.indexOf('NPP') >= 0) cat = 'npp';
+  else if (flow.indexOf('商业化') >= 0) cat = 'com';
+  else if (flow === '医生导流' || flow === 'OB导流') cat = 'ref';
+  else if (flow === '国内三方导流') cat = 'skip';
+  var pm = flow.match(/^(.*?)(NPP|商业化)$/);
+  dictMap[no] = { cat: cat, flow: flow, natl: natl, prefix: pm ? pm[1].trim() : '' };
+});
+// 医院名 → 国家（masterdata「省份」；境外医院即国家，含新加坡这种在上面被清空省份的）
+var hospCountry = {};
+mdRows.forEach(function (r) {
+  var nm = String(r['标准医院名称'] || '').trim();
+  var pv = String(r['省份'] || '').trim();
+  if (nm && pv) hospCountry[nm] = pv;
+});
+function normCN(c) {
+  if (!c) return null;
+  return String(c).trim(); // 港澳台不并入中国，单独展示
+}
+function isOverseas(c) { return OVERSEAS[c] || c === '中国'; }
+var p2Card = { all: { npO: 0, npR: 0, dO: 0, dR: 0 }, y: {} };
+var p2Left = { all: {}, y: {} }, p2Right = { all: {}, y: {} };
+var p2RightD = { all: {}, y: {} }; // 右侧表格：国家 × 导流分类
+var p2Top = { all: {}, y: {} };
+var yearSet = {};
+function cnt(bucket, yk, country, k) {
+  if (!country) return;
+  bucket.all[country] = bucket.all[country] || { o: 0, r: 0 };
+  bucket.all[country][k]++;
+  bucket.y[yk] = bucket.y[yk] || {};
+  bucket.y[yk][country] = bucket.y[yk][country] || { o: 0, r: 0 };
+  bucket.y[yk][country][k]++;
+}
+function cntCat(bucket, yk, country, cat, k) {
+  if (!country || !cat) return;
+  bucket.all[country] = bucket.all[country] || {};
+  bucket.all[country][cat] = bucket.all[country][cat] || { o: 0, r: 0 };
+  bucket.all[country][cat][k]++;
+  bucket.y[yk] = bucket.y[yk] || {};
+  bucket.y[yk][country] = bucket.y[yk][country] || {};
+  bucket.y[yk][country][cat] = bucket.y[yk][country][cat] || { o: 0, r: 0 };
+  bucket.y[yk][country][cat][k]++;
+}
+function topCnt(yk, country, hosp, k) {
+  if (!country || !hosp) return;
+  var a = p2Top.all[country] || (p2Top.all[country] = { o: {}, r: {} });
+  a[k][hosp] = (a[k][hosp] || 0) + 1;
+  p2Top.y[yk] = p2Top.y[yk] || {};
+  var b = p2Top.y[yk][country] || (p2Top.y[yk][country] = { o: {}, r: {} });
+  b[k][hosp] = (b[k][hosp] || 0) + 1;
+}
+records.forEach(function (r) {
+  var d = dictMap[r.no];
+  if (!d || d.cat === 'skip') return;
+  var country;
+  if (d.cat === 'npp' || d.cat === 'com') {
+    var hc = hospCountry[r.hosp];
+    country = normCN(isOverseas(hc) ? hc : d.prefix);
+  } else if (d.cat === 'ref') {
+    country = normCN(d.natl);
+  } else {
+    country = '中国';
+  }
+  var isNp = (d.cat === 'npp' || d.cat === 'com');
+  var isD = (d.cat === 'ref'); // 国内导流仅统计医生导流/OB导流；导流列为空的国内直接患者不计入
+  // 与 page1 口径一致：下单按下单日期年，回输按回输日期年
+  var oy = r.od ? r.od.slice(0, 4) : null;
+  var ry = r.re ? r.re.slice(0, 4) : null;
+  if (oy) {
+    yearSet[oy] = true;
+    var yko = String(oy);
+    if (!p2Card.y[yko]) p2Card.y[yko] = { npO: 0, npR: 0, dO: 0, dR: 0 };
+    if (isNp) { p2Card.all.npO++; p2Card.y[yko].npO++; }
+    if (isD) { p2Card.all.dO++; p2Card.y[yko].dO++; }
+    if (d.cat === 'ref') { cnt(p2Left, yko, country, 'o'); cntCat(p2RightD, yko, '中国', d.flow, 'o'); topCnt(yko, '中国', r.hosp, 'o'); }
+    if (isNp) { cnt(p2Right, yko, country, 'o'); cnt(p2Left, yko, country, 'o'); cntCat(p2RightD, yko, country, d.cat === 'npp' ? 'NPP' : '商业化', 'o'); topCnt(yko, country, r.hosp, 'o'); }
+  }
+  if (ry) {
+    yearSet[ry] = true;
+    var ykr = String(ry);
+    if (!p2Card.y[ykr]) p2Card.y[ykr] = { npO: 0, npR: 0, dO: 0, dR: 0 };
+    if (isNp) { p2Card.all.npR++; p2Card.y[ykr].npR++; }
+    if (isD) { p2Card.all.dR++; p2Card.y[ykr].dR++; }
+    if (d.cat === 'ref') { cnt(p2Left, ykr, country, 'r'); cntCat(p2RightD, ykr, '中国', d.flow, 'r'); topCnt(ykr, '中国', r.hosp, 'r'); }
+    if (isNp) { cnt(p2Right, ykr, country, 'r'); cnt(p2Left, ykr, country, 'r'); cntCat(p2RightD, ykr, country, d.cat === 'npp' ? 'NPP' : '商业化', 'r'); topCnt(ykr, country, r.hosp, 'r'); }
+  }
+});
+function topToLists(tb) {
+  var out = {};
+  Object.keys(tb).forEach(function (c) {
+    out[c] = {
+      o: Object.keys(tb[c].o).map(function (h) { return { name: h, v: tb[c].o[h] }; }).sort(function (a, b) { return b.v - a.v; }).slice(0, 10),
+      r: Object.keys(tb[c].r).map(function (h) { return { name: h, v: tb[c].r[h] }; }).sort(function (a, b) { return b.v - a.v; }).slice(0, 10)
+    };
+  });
+  return out;
+}
+var p2TopList = { all: topToLists(p2Top.all), y: {} };
+Object.keys(p2Top.y).forEach(function (yk) { p2TopList.y[yk] = topToLists(p2Top.y[yk]); });
+var P2 = { YEARS: Object.keys(yearSet).sort(), CARD: p2Card, LEFT: p2Left, RIGHT: p2Right, RIGHTD: p2RightD, TOP10: p2TopList };
+
 // ── 9. 输出 js/data.js（页面直接 <script> 引用） ──
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
   '/* 数据源: ' + bsFile + ' | 数据截止: ' + DP + ' */\n' +
@@ -322,7 +437,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     HOSP_PROV: HOSP_PROV,
     COE: { O: coeO, R: coeR },
     ABN: { Y: Y, total: abnTotal, pbmc: abnPbmc, first: abnFirst, second: abnSecond },
-    CITY_PROV: CITY_PROV
+    CITY_PROV: CITY_PROV,
+    P2: P2
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
