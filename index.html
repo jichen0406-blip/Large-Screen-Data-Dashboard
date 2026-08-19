@@ -54,7 +54,7 @@ var t = null;
 		<ul class="clearfix nav1">
 			<li style="width: 22%">
 				<div class="box">
-					<div class="tit">Top 30下单医院</div>
+					<div class="tit">Top 30下单医院<button class="map-fs" type="button" data-fs="tbl1body" data-title="Top 30下单医院">⛶</button></div>
 					<div class="boxnav" style="height: 225px;">
 						<div class="tbl-scroll" id="tbl1body">
 							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -67,7 +67,7 @@ var t = null;
 					</div>
 				</div>
 				<div class="box">
-					<div class="tit">Top 30回输医院</div>
+					<div class="tit">Top 30回输医院<button class="map-fs" type="button" data-fs="tbl3body" data-title="Top 30回输医院">⛶</button></div>
 					<div class="boxnav" style="height: 225px;">
 						<div class="tbl-scroll" id="tbl3body">
 							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -123,7 +123,7 @@ var t = null;
 			</li>
 			<li style="width: 22%">
 				<div class="box">
-					<div class="tit">当月下单 & 回输</div>
+					<div class="tit">当月下单 & 回输<button class="map-fs" type="button" data-fs="last7List" data-title="当月下单 & 回输">⛶</button></div>
 					<div class="boxnav" style="height: 505px;">
 						<div class="sev-scroll" id="last7List"></div>
 					</div>
@@ -133,29 +133,31 @@ var t = null;
 		<div class="box" style="padding: 20px 0;">
 			<ul class="clearfix nav2">
 				<li style="width:25%">
-					<div class="tit01">下单月度趋势</div>
-					<div class="ftechart" id="echart6"><button class="map-fs" type="button" data-fs="echart6" data-title="下单月度趋势">⛶</button></div>
+					<div class="tit01">下单月度趋势<button class="map-fs" type="button" data-fs="echart6" data-title="下单月度趋势">⛶</button></div>
+					<div class="chart-box"><div class="ftechart" id="echart6"></div></div>
 				</li>
 				<li style="width:25%">
-					<div class="tit01">回输月度趋势</div>
-					<div class="ftechart" id="echart4"><button class="map-fs" type="button" data-fs="echart4" data-title="回输月度趋势">⛶</button></div>
+					<div class="tit01">回输月度趋势<button class="map-fs" type="button" data-fs="echart4" data-title="回输月度趋势">⛶</button></div>
+					<div class="chart-box"><div class="ftechart" id="echart4"></div></div>
 				</li>
 				<li style="width:25%">
-					<div class="tit01">YTD异常订单</div>
-					<div class="nav2-chart" style="flex: 1; min-height: 0; display: flex;">
+					<div class="tit01">YTD异常订单<button class="map-fs" type="button" data-fs="abnBox" data-title="YTD异常订单">⛶</button></div>
+					<div class="nav2-chart" id="abnBox" style="flex: 1; min-height: 0; display: flex;">
+						
 						<div style="flex: 1; min-width:0" class="wancheng">
 							<div><span>异常订单合计</span>
 								<h3 class="abn-num"><span id="abnNum">--</span><i>单</i></h3>
 							</div>
 						</div>
-						<div style="flex: 2; min-width:0; position: relative" id="myd1"><button class="map-fs" type="button" data-fs="myd1" data-title="YTD异常订单">⛶</button></div>
+						<div style="flex: 2; min-width:0" id="myd1"></div>
 					</div>
 				</li>
 				<li style="width:25%">
-					<div class="tit01">COE医院销量占比</div>
-					<div class="nav2-chart" style="flex: 1; min-height: 0; display: flex;">
-						<div style="flex: 1; min-width:0; position: relative" id="fb03"><button class="map-fs" type="button" data-fs="fb03" data-title="COE 下单占比">⛶</button></div>
-						<div style="flex: 1; min-width:0; position: relative" id="fb04"><button class="map-fs" type="button" data-fs="fb04" data-title="COE 回输占比">⛶</button></div>
+					<div class="tit01">COE医院销量占比<button class="map-fs" type="button" data-fs="coeBox" data-title="COE医院销量占比">⛶</button></div>
+					<div class="nav2-chart" id="coeBox" style="flex: 1; min-height: 0; display: flex;">
+						
+						<div style="flex: 1; min-width:0" id="fb03"></div>
+						<div style="flex: 1; min-width:0" id="fb04"></div>
 					</div>
 				</li>
 			</ul>
@@ -178,7 +180,7 @@ var t = null;
 			</div>
 			<ul class="menu-list">
 				<li class="menu-item" data-href="index.html"><i class="mi-ico">▤</i>福可苏业绩总览</li>
-				<li class="menu-item" data-href="page2"><i class="mi-ico">▨</i>Page 2（海外/商业化）</li>
+				<li class="menu-item" data-href="page2.html"><i class="mi-ico">▨</i>Page 2（海外/商业化）</li>
 				<li class="menu-item disabled"><i class="mi-ico">▢</i>Page 3（预留）</li>
 			</ul>
 			<div class="menu-def">
@@ -225,6 +227,7 @@ var t = null;
 	$(function () {
 		var $mask = $('#menuMask');
 		var cur = location.pathname.split('/').pop() || 'index.html';
+			if (cur === 'page2') cur = 'page2.html';
 		$('#menuBtn').on('click', function () { $mask.show(); });
 		$mask.on('click', function (e) { if (e.target === this) $mask.hide(); });
 		$('#menuClose').on('click', function () { $mask.hide(); });
@@ -252,19 +255,48 @@ var t = null;
 		var def = localStorage.getItem('board_default');
 		if (!def || def === 'index') return;
 		var fromOutside = !document.referrer || document.referrer.indexOf(location.origin) < 0;
-		if (fromOutside) location.replace(def === 'page2' ? 'page2' : 'index');
+		if (fromOutside) location.replace(def === 'page2' ? 'page2.html' : 'index.html');
 	})();
 	</script>
 	<script>
 	// 地图放大全屏（容器移入全屏层 + resize，保留轮播/下钻交互）
 	$(function () {
 		var fsEl = null, fsExtra = null;
+		function resizeChart(el) {
+			var ch = echarts.getInstanceByDom(el);
+			if (ch) { ch.resize(); return; }
+			$(el).find('div').each(function () { var c = echarts.getInstanceByDom(this); if (c) c.resize(); });
+		}
+		function collectCharts(el) {
+			var ch = echarts.getInstanceByDom(el);
+			if (ch) return [ch];
+			var arr = [];
+			$(el).find('div').each(function () { var c = echarts.getInstanceByDom(this); if (c) arr.push(c); });
+			return arr;
+		}
+		function scaleChartFonts(chart, sc) {
+			var opt = chart.getOption();
+			(function walk(o) {
+				if (!o || typeof o !== 'object') return;
+				if (typeof o.fontSize === 'number' || typeof o.fontSize === 'string') { var fn = parseFloat(o.fontSize); if (!isNaN(fn)) o.fontSize = Math.max(6, Math.round(fn * sc)); }
+				if (typeof o.itemWidth === 'number') o.itemWidth = Math.max(6, Math.round(o.itemWidth * sc));
+				if (typeof o.itemHeight === 'number') o.itemHeight = Math.max(6, Math.round(o.itemHeight * sc));
+				if (typeof o.symbolSize === 'number') o.symbolSize = Math.round(o.symbolSize * sc);
+				if (typeof o.distance === 'number') o.distance = Math.round(o.distance * sc);
+				Object.keys(o).forEach(function (k) { if (o[k] && typeof o[k] === 'object') walk(o[k]); });
+			})(opt);
+			chart.setOption(opt);
+		}
 		function closeFs() {
 			if (fsEl) {
+					var _elRef = fsEl;
+				var _snap = fsEl._snap;
 				$(fsEl).appendTo(fsEl._fsHome);
+				$(fsEl).css({ width: '', height: '', transform: '', transformOrigin: '', position: '', left: '', top: '', marginLeft: '', marginTop: '' });
+				if (_snap) { var _charts = collectCharts(fsEl); _charts.forEach(function (ch, i) { if (_snap[i]) ch.setOption(_snap[i]); }); }
 				delete fsEl._fsHome;
-				var ch = echarts.getInstanceByDom(fsEl);
-				if (ch) setTimeout(function () { ch.resize(); }, 50);
+				delete fsEl._snap;
+				setTimeout(function () { resizeChart(_elRef); }, 50);
 				fsEl = null;
 			}
 			if (fsExtra) { $(fsExtra).appendTo(fsExtra._fsHome); delete fsExtra._fsHome; fsExtra = null; }
@@ -274,6 +306,8 @@ var t = null;
 		$('.map-fs').on('click', function () {
 			var el = document.getElementById($(this).data('fs'));
 			if (!el || fsEl) return;
+			var fid = $(this).data('fs');
+			var isChart = (fid === 'echart6' || fid === 'echart4' || fid === 'abnBox' || fid === 'coeBox');
 			fsEl = el;
 			el._fsHome = el.parentNode;
 			var exId = $(this).data('fs2');
@@ -282,11 +316,23 @@ var t = null;
 				if (ex) { fsExtra = ex; ex._fsHome = ex.parentNode; $(ex).appendTo('#fsBody'); }
 			}
 			$('#fsTitle').text($(this).data('title'));
+			if (isChart) { el._ow = el.offsetWidth; el._oh = el.offsetHeight; }
 			$(el).appendTo('#fsBody');
 			$('#fsMask').show();
 			$(document).trigger('boardfs', { active: true });
-			var ch = echarts.getInstanceByDom(el);
-			if (ch) setTimeout(function () { ch.resize(); }, 50);
+			if (isChart) {
+				var ow = el._ow, oh = el._oh;
+				setTimeout(function () {
+					var fsW = $('#fsBody').width(), fsH = $('#fsBody').height();
+					var sc = Math.min(fsW / ow, fsH / oh) * 0.92;
+					$(el).css({ width: (ow * sc) + 'px', height: (oh * sc) + 'px', position: 'absolute', left: '50%', top: '50%', marginLeft: (-ow * sc / 2) + 'px', marginTop: (-oh * sc / 2) + 'px' });
+					var _charts = collectCharts(el);
+					el._snap = _charts.map(function (ch) { return JSON.parse(JSON.stringify(ch.getOption())); });
+					_charts.forEach(function (ch) { ch.resize(); scaleChartFonts(ch, sc); });
+				}, 50);
+			} else {
+				setTimeout(function () { resizeChart(el); }, 50);
+			}
 		});
 		$('#fsClose').on('click', closeFs);
 		$('#fsMask').on('click', function (e) { if (e.target === this) closeFs(); });

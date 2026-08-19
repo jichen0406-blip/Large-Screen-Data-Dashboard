@@ -16,11 +16,9 @@ img{ border:none; max-width: 100%;}
 a{ text-decoration:none; color:#fff;}
 a.active,a:focus{ outline:none!important; text-decoration:none;}
 ol,ul,p,h1,h2,h3,h4,h5,h6{ padding:0; margin:0}
-a:hover{ color:#06c; text-decoration: none!important}
+a:hover{ color:#4ba6e0; text-decoration: none!important}
 .clearfix:after, .clearfix:before {display: table;content: " "}
  .clearfix:after {clear: both}
-.pulll_left{float:left;}
-.pulll_right{float:right;}
 
 .head{position: relative; height: 57.6px; margin: 0 15px; padding-right: 60px; background: url(../images/topbg.png) no-repeat center center; background-size: 100% 100%;}
 .head h1{  font-size: clamp(16px, 1.5625vw, 30px); letter-spacing: -2px; text-align: center; line-height: 57.6px; color: #daf9ff;}
@@ -67,6 +65,9 @@ a:hover{ color:#06c; text-decoration: none!important}
 .p2-map{ position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
 /* Page2 地图明细表格 */
 .p2-tbl-wrap{ border-top: 1px solid rgba(7,118,181,.7); background: rgba(2,24,61,.25); padding: 0 10px 10px; height: 236px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(112,187,252,.5) rgba(255,255,255,.06); }
+.p2-tbl{ table-layout: fixed; }
+.p2-tbl-bar{ display: flex; justify-content: flex-end; padding: 4px 6px 2px; }
+.p2-tbl-bar .map-fs{ position: static; width: 26px; height: 26px; line-height: 24px; }
 .p2-tbl thead th{ background: linear-gradient(180deg, #13417a, #0a2a4a); font-size: 12px; letter-spacing: 2px; height: 26px; line-height: 26px; padding: 0; color: #daf9ff; border-bottom: 1px solid rgba(47,137,207,.8); position: sticky; top: 0; z-index: 1; }
 .p2-tbl td{ border-bottom: 1px dotted rgba(64,122,189,.5); font-size: 11px; height: 21px; line-height: 21px; padding: 0; text-align: center; color: rgba(255,255,255,.7); }
 .p2-tbl tr:last-child td{ border: none; }
@@ -92,9 +93,24 @@ a:hover{ color:#06c; text-decoration: none!important}
 /* ── 地图放大全屏 ── */
 .map-fs{ position:absolute; right:8px; top:8px; z-index:15; width:30px; height:30px; background:rgba(47,137,207,.25); border:1px solid rgba(47,137,207,.8); border-radius:6px; color:#4fe3ff; font-size:16px; line-height:28px; cursor:pointer; }
 .map-fs:hover{ border-color:#4ba6e0; color:#fff; box-shadow:0 0 10px rgba(79,227,255,.5); }
+.tit .map-fs, .tit01 .map-fs{ top: 50%; transform: translateY(-50%); }
+.fs-body .ftechart, .fs-body .chart-box, .fs-body .nav2-chart{ height: 100%; }
+.fs-body .tbl-scroll, .fs-body .sev-scroll, .fs-body .p2-tbl-wrap{ height: 100% !important; }
+/* 表格全屏：统一字号/行高（5 个表格一致） */
+.fs-body .table1 td, .fs-body .p2-tbl td{ font-size: 14px; height: 26px; line-height: 26px; padding: 0; }
+.fs-body .table1 th, .fs-body .p2-tbl thead th{ font-size: 14px; height: 30px; line-height: 30px; padding: 0; }
+.fs-body .tl-date-col, .fs-body .tl-hdr-spacer{ width: 120px; }
+.fs-body .tl-date-num{ font-size: 21px; }
+.fs-body .tl-date-day{ font-size: 12px; }
+.fs-body .tl-date-stats{ font-size: 12px; }
+.fs-body .tl-date-stats .ts-o, .fs-body .tl-date-stats .ts-r{ font-size: 12px; }
+.fs-body .tl-hdr-col{ font-size: 15px; }
+.fs-body .tl-list-col .tl-items li{ font-size: 14px; }
+.fs-body .tl-list-col .tl-hn{ font-size: 14px; }
+.fs-body .tl-list-col .tl-hc{ font-size: 12px; }
 .fs-mask{ position:fixed; top:0; left:0; right:0; bottom:0; z-index:9995; background:rgba(2,20,55,.97); display:flex; flex-direction:column; }
 .fs-head{ display:flex; align-items:center; padding:10px 16px; border-bottom:1px solid rgba(47,137,207,.5); }
-.fs-title{ font-size:16px; font-weight:700; color:#fff; letter-spacing:2px; }
+.fs-title{ font-size: clamp(18px, 1.6vw, 26px); font-weight:700; color:#fff; letter-spacing:2px; }
 .fs-close{ margin-left:auto; background:none; border:1px solid rgba(255,255,255,.4); color:#fff; width:28px; height:28px; line-height:26px; border-radius:50%; cursor:pointer; font-size:18px; }
 .fs-close:hover{ border-color:#f4e925; color:#f4e925; }
 .fs-body{ position:relative; flex:1; min-height:0; }
@@ -106,7 +122,7 @@ a:hover{ color:#06c; text-decoration: none!important}
 
 .box{ border:1px solid rgba(7,118,181,.5); box-shadow:inset 0 0 10px rgba(7,118,181,.4), 0 0 14px rgba(47,137,207,.2); margin-bottom: 12px; position: relative;}
 .box:after{ content:""; position:absolute; left:5%; right:5%; bottom:-1px; height:2px; border-radius:2px; background:linear-gradient(to right, rgba(0,220,255,0), rgba(0,220,255,.7), rgba(0,220,255,0)); box-shadow:0 0 8px rgba(0,220,255,.4);}
-.tit{ padding: 10px 10px 10px 25px;border-bottom:1px solid rgba(7,118,181,.7);font-size: 16px; font-weight: 500; position: relative;}
+.tit{ padding: 10px 42px 10px 25px;border-bottom:1px solid rgba(7,118,181,.7);font-size: 16px; font-weight: 500; position: relative;}
 .tit:before,.tit01:before{position: absolute; content: ""; width: 6px; height: 6px; background: rgba(22,214,255,.9);box-shadow: 0 0 5px rgba(22,214,255,.9); border-radius: 10px; left: 10px; top: 18px;}
 
 .tit:after,.box:before{ width: 100%; height: 1px; content: ""; position: absolute; left: 0; bottom:-1px; background:linear-gradient(to right,#076ead,#4ba6e0,#076ead); box-shadow: 0 0 5px rgba(131,189,227,1); opacity: .6}
@@ -116,11 +132,13 @@ a:hover{ color:#06c; text-decoration: none!important}
 .nav2{}
 .nav2>li:first-child{border:none;}
 .nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height: clamp(200px, calc(100vh - 720px), 380px); padding: 0 10px 10px 10px; display: flex; flex-direction: column;}
-.tit01{font-size: 16px; font-weight: 500; position: relative; padding-left: 15px;}
+.tit01{font-size: 16px; font-weight: 500; position: relative; padding: 0 42px 0 15px;}
 .tit01:before{ left: 3px; top: 8px;}
 
-.ftechart{ flex: 1; min-height: 0; width: 100%; position: relative; }
-#myd1, #fb03, #fb04{ position: relative; }
+.ftechart{ flex: 1; min-height: 0; width: 100%; }
+.chart-box{ position: relative; flex: 1; min-height: 0; }
+.chart-box .ftechart{ height: 100%; flex: none; }
+.nav2-chart{ position: relative; }
 
 
 
@@ -276,6 +294,13 @@ a:hover{ color:#06c; text-decoration: none!important}
 
 	/* Page2 地图明细表 */
 	.p2-tbl-wrap{ height: 220px; }
+
+	/* 弹窗/全屏手机端适配 */
+	.fs-body .tl-date-col, .fs-body .tl-hdr-spacer{ width: 80px; }
+	.fs-body .p2-tbl td{ height: 20px; line-height: 20px; }
+	.fs-body .table1 td{ height: 22px; line-height: 22px; padding: 0; }
+	.map-fs{ width: 26px; height: 26px; line-height: 24px; }
+	.tit, .tit01{ padding-right: 36px; }
 
 	/* 登录框适配窄屏 */
 	.login-box{ max-width: 90vw; }

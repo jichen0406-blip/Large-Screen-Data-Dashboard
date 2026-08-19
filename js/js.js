@@ -24,12 +24,29 @@ function setupTblScroll(elId) {
     if (el.scrollHeight <= el.clientHeight) return;
     var oneCopyH = tbody.offsetHeight;
     tbody.innerHTML += tbody.innerHTML;
-    var timer = null;
+    tbody._dup = true;
+    var timer = null, _fsPause = false;
     function tick() { el.scrollTop += 1; if (el.scrollTop >= oneCopyH) el.scrollTop -= oneCopyH; }
-    function start() { if (!timer) timer = setInterval(tick, 80); }
+    function start() { if (!_fsPause && !timer) timer = setInterval(tick, 80); }
     function stop() { clearInterval(timer); timer = null; }
+    function dedup() {
+        if (!tbody._dup) return;
+        var rows = Array.prototype.slice.call(tbody.children);
+        var half = Math.floor(rows.length / 2);
+        for (var i = rows.length - 1; i >= half; i--) tbody.removeChild(rows[i]);
+        tbody._dup = false;
+        el.scrollTop = 0;
+    }
+    function restore() {
+        if (!tbody._dup) { tbody._dup = true; oneCopyH = tbody.offsetHeight; tbody.innerHTML += tbody.innerHTML; el.scrollTop = 0; start(); }
+    }
     start();
-    $(el).on('mouseenter', stop).on('mouseleave', start);
+    $(el).on('mouseenter', stop).on('mouseleave', function () { if (!_fsPause) start(); });
+    // 全屏放大：去重(避免 1-30 显示两遍) + 停止自动滚动；关闭恢复
+    $(document).on('boardfs.tbl' + elId, function (e, d) {
+        if (d && d.active) { _fsPause = true; stop(); dedup(); }
+        else { _fsPause = false; restore(); }
+    });
 }
 // 过去7天列表无缝滚动（复制 .tl-body，表头 sticky 固定）
 function setupSevScroll() {
@@ -40,12 +57,27 @@ function setupSevScroll() {
     if (el.scrollHeight <= el.clientHeight) return;
     var oneCopyH = body.outerHeight();
     body.append(body.clone(true));
-    var timer = null;
+    body._dup = true;
+    var timer = null, _fsPause = false;
     function tick() { el.scrollTop += 1; if (el.scrollTop >= oneCopyH) el.scrollTop -= oneCopyH; }
-    function start() { if (!timer) timer = setInterval(tick, 80); }
+    function start() { if (!_fsPause && !timer) timer = setInterval(tick, 80); }
     function stop() { clearInterval(timer); timer = null; }
+    function dedup() {
+        if (!body._dup) return;
+        var clones = $(el).find('.tl-body');
+        if (clones.length > 1) clones.eq(1).remove();
+        body._dup = false;
+        el.scrollTop = 0;
+    }
+    function restore() {
+        if (!body._dup) { body._dup = true; oneCopyH = body.outerHeight(); body.append(body.clone(true)); el.scrollTop = 0; start(); }
+    }
     start();
-    $(el).on('mouseenter', stop).on('mouseleave', start);
+    $(el).on('mouseenter', stop).on('mouseleave', function () { if (!_fsPause) start(); });
+    $(document).on('boardfs.sev', function (e, d) {
+        if (d && d.active) { _fsPause = true; stop(); dedup(); }
+        else { _fsPause = false; restore(); }
+    });
 }
 
 $(function () {
