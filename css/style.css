@@ -30,6 +30,76 @@ a:hover{ color:#06c; text-decoration: none!important}
 .head .weather{white-space: nowrap; margin-left: 12px; font-size: clamp(11px, 0.8333vw, 16px); color: rgba(255,255,255,.9);}
 .head .update{position: absolute; left: -15px; padding-left: 5px; line-height: 57.6px; transform: translateY(-40px); font-size: clamp(11px, 0.8333vw, 16px); color: rgba(255,255,255,.9); white-space: nowrap;}
 
+/* ── 表头左侧：数据更新时间 + 功能导航按钮 ── */
+.head .head-left{ position: absolute; left: -15px; line-height: 57.6px; transform: translateY(-40px); white-space: nowrap; padding-left: 5px; }
+.head .head-left .update{ position: static; left: auto; transform: none; line-height: 57.6px; display: inline; margin-right: 12px; }
+.menu-btn{ height: 34px; padding: 0 16px 0 12px; background: linear-gradient(135deg, rgba(47,137,207,.28), rgba(0,180,255,.38)); border: 1px solid rgba(47,137,207,.9); border-radius: 17px; color: #e8fbff; font-size: 14px; letter-spacing: 1px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; vertical-align: middle; box-shadow: 0 0 12px rgba(47,137,207,.55), inset 0 0 8px rgba(47,137,207,.3); }
+.menu-btn i{ font-style: normal; font-size: 17px; line-height: 1; color: #4fe3ff; text-shadow: 0 0 8px rgba(79,227,255,.8); }
+.menu-btn:hover{ border-color: #4ba6e0; color: #fff; box-shadow: 0 0 20px rgba(79,227,255,.8); }
+
+/* ── 功能导航浮窗（菜单） ── */
+.menu-mask{ position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9998; background: rgba(2,20,55,.55); display: flex; align-items: center; justify-content: center; }
+.menu-panel{ width: 340px; max-width: 86vw; background: linear-gradient(rgba(2,20,55,.96), rgba(2,20,55,.96)), url(../images/bg3.png) no-repeat center center; background-size: 100% 100%; border: 1px solid rgba(47,137,207,.8); border-radius: 10px; box-shadow: 0 0 30px rgba(47,137,207,.5); overflow: hidden; }
+.menu-panel-head{ display: flex; align-items: center; padding: 12px 16px; border-bottom: 1px solid rgba(47,137,207,.5); }
+.menu-panel-tit{ font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 2px; }
+.menu-close{ margin-left: auto; background: none; border: 1px solid rgba(255,255,255,.4); color: #fff; width: 26px; height: 26px; line-height: 24px; border-radius: 50%; cursor: pointer; font-size: 16px; }
+.menu-close:hover{ border-color: #f4e925; color: #f4e925; }
+.menu-list{ list-style: none; padding: 8px 0; margin: 0; }
+.menu-item{ display: flex; align-items: center; gap: 10px; padding: 12px 18px; font-size: 15px; color: rgba(255,255,255,.85); cursor: pointer; border-bottom: 1px dotted rgba(112,187,252,.2); transition: background .15s; }
+.menu-item:hover{ background: rgba(47,137,207,.18); color: #fff; }
+.menu-item .mi-ico{ font-style: normal; color: #4fe3ff; font-size: 16px; }
+.menu-item em{ margin-left: auto; font-style: normal; font-size: 12px; color: #f4e925; border: 1px solid rgba(244,233,37,.5); padding: 1px 8px; border-radius: 10px; }
+.menu-item.disabled{ opacity: .35; cursor: not-allowed; }
+.menu-item.disabled:hover{ background: none; }
+
+/* ── Page2：年份切换 + 卡片 + 世界地图 + Top10 浮窗 ── */
+.p2-years{ flex: 0 0 20%; min-width: 0; display: flex; align-items: flex-start; gap: 12px; margin-top: 10px; }
+.p2y-label{ font-size: 14px; color: rgba(255,255,255,.75); letter-spacing: 2px; white-space: nowrap; line-height: 27px; }
+.p2y-btns{ display: grid; grid-template-columns: repeat(3, auto); gap: 6px 8px; }
+.p2y-btn{ height: 27px; padding: 0 12px; background: rgba(47,137,207,.18); border: 1px solid rgba(47,137,207,.6); border-radius: 14px; color: rgba(255,255,255,.8); font-size: 13px; cursor: pointer; letter-spacing: 1px; }
+.p2y-btn:hover{ border-color: #4ba6e0; color: #fff; }
+.p2y-btn.active{ background: linear-gradient(135deg, rgba(47,137,207,.5), rgba(0,180,255,.55)); border-color: #4ba6e0; color: #fff; box-shadow: 0 0 12px rgba(79,227,255,.5); }
+.p2-cards{ display: flex; justify-content: space-between; margin-bottom: 16px; }
+.p2-card{ flex: 0 0 13.333%; min-width: 0; background: url(../images/bg1.png) no-repeat; background-size: 100% auto; text-align: center; padding: 22px 12px 18px; line-height: 120%; box-shadow: 0 0 14px rgba(47,137,207,.35), inset 0 0 8px rgba(47,137,207,.15); position: relative; }
+.p2-card::after{ content:""; position:absolute; left:10%; right:10%; bottom:0; height:2px; border-radius:2px; background:linear-gradient(to right, rgba(0,220,255,0), rgba(0,220,255,.9), rgba(0,220,255,0)); box-shadow:0 0 8px rgba(0,220,255,.6); }
+.p2-card span{ font-size: 14px; opacity: .6; display: block; transform: translateY(-4px); color: #fff; }
+.p2-card p{ font-size: clamp(26px, 2.6vw, 44px); font-weight: bold; color: #4fe3ff; padding-top: 5px; line-height: 1.15; text-shadow: 0 0 16px rgba(79,227,255,.4); }
+.p2-map{ position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+/* Page2 地图明细表格 */
+.p2-tbl-wrap{ border-top: 1px solid rgba(7,118,181,.7); background: rgba(2,24,61,.25); padding: 0 10px 10px; height: 236px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(112,187,252,.5) rgba(255,255,255,.06); }
+.p2-tbl thead th{ background: linear-gradient(180deg, #13417a, #0a2a4a); font-size: 12px; letter-spacing: 2px; height: 26px; line-height: 26px; padding: 0; color: #daf9ff; border-bottom: 1px solid rgba(47,137,207,.8); position: sticky; top: 0; z-index: 1; }
+.p2-tbl td{ border-bottom: 1px dotted rgba(64,122,189,.5); font-size: 11px; height: 21px; line-height: 21px; padding: 0; text-align: center; color: rgba(255,255,255,.7); }
+.p2-tbl tr:last-child td{ border: none; }
+.p2-tbl td:nth-child(1){ color: rgba(255,255,255,.55); }
+.p2-tbl-blank td{ border: none; }
+
+/* 左图点击数据卡片 */
+.p2-click-tip{ position: absolute; z-index: 30; background: rgba(2,24,61,.95); border: 1px solid rgba(47,137,207,.8); border-radius: 8px; box-shadow: 0 0 20px rgba(47,137,207,.5); padding: 8px 12px; font-size: 13px; color: #fff; pointer-events: none; line-height: 1.6; display: none; }
+.p2-click-tip .p2ct-name{ font-weight: 700; font-size: 14px; color: #4fe3ff; margin-bottom: 4px; }
+.p2-tbl-empty{ color: rgba(255,255,255,.35); font-style: italic; }
+/* Top10 浮窗 */
+.p2-panel-mask{ position: fixed; top:0; left:0; right:0; bottom:0; z-index: 9997; background: rgba(2,20,55,.55); display:flex; align-items:center; justify-content:center; }
+.p2-panel{ width: 640px; max-width: 90vw; background: linear-gradient(rgba(2,20,55,.97), rgba(2,20,55,.97)), url(../images/bg3.png) no-repeat center center; background-size: 100% 100%; border: 1px solid rgba(47,137,207,.8); border-radius: 10px; box-shadow: 0 0 30px rgba(47,137,207,.5); overflow: hidden; }
+.p2-panel-body{ display: flex; padding: 10px 14px 14px; gap: 20px; max-height: 70vh; overflow-y: auto; }
+.p2-rank-col{ flex: 1; min-width: 0; }
+/* 网页导航-默认首页 */
+.menu-def{ display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-top: 1px solid rgba(47,137,207,.5); }
+.menu-def-tit{ font-size: 13px; color: rgba(255,255,255,.7); margin-right: 4px; }
+.menu-def-opt{ font-size: 13px; padding: 3px 12px; border: 1px solid rgba(112,187,252,.4); border-radius: 12px; color: rgba(255,255,255,.75); cursor: pointer; }
+.menu-def-opt.active{ background: rgba(47,137,207,.4); border-color: #4ba6e0; color: #fff; }
+.menu-def-opt:hover{ border-color: #4ba6e0; color: #fff; }
+
+/* ── 地图放大全屏 ── */
+.map-fs{ position:absolute; right:8px; top:8px; z-index:15; width:30px; height:30px; background:rgba(47,137,207,.25); border:1px solid rgba(47,137,207,.8); border-radius:6px; color:#4fe3ff; font-size:16px; line-height:28px; cursor:pointer; }
+.map-fs:hover{ border-color:#4ba6e0; color:#fff; box-shadow:0 0 10px rgba(79,227,255,.5); }
+.fs-mask{ position:fixed; top:0; left:0; right:0; bottom:0; z-index:9995; background:rgba(2,20,55,.97); display:flex; flex-direction:column; }
+.fs-head{ display:flex; align-items:center; padding:10px 16px; border-bottom:1px solid rgba(47,137,207,.5); }
+.fs-title{ font-size:16px; font-weight:700; color:#fff; letter-spacing:2px; }
+.fs-close{ margin-left:auto; background:none; border:1px solid rgba(255,255,255,.4); color:#fff; width:28px; height:28px; line-height:26px; border-radius:50%; cursor:pointer; font-size:18px; }
+.fs-close:hover{ border-color:#f4e925; color:#f4e925; }
+.fs-body{ position:relative; flex:1; min-height:0; }
+.fs-body .map{ height:100%; }
+
 .mainbox{padding: 0px 10px; margin-top: 14.4px;}
 .nav1{margin-left: -6px; margin-right:-6px;}
 .nav1>li{padding:0 6px; float: left;}

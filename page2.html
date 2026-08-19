@@ -1,14 +1,14 @@
 <!doctype html>
-<html>
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>福可苏业绩总览</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福可苏业绩总览 · Page 2</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
-<script type="text/javascript" src="js/china.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
-<script type="text/javascript" src="js/map.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/world-data.js"></script>
+<script type="text/javascript" src="js/page2.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,141 +24,84 @@
 	<div class="head clearfix">
 		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
 		<div class="head-left">
-			<div class="update" id="dataUpd">数据更新时间 --</div>
+			<div class="update">数据更新时间 <span id="p2Upd">--</span></div>
 			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
 		</div>
 		<div class="tm-wrap">
-			<div class="time" id="showTime">2018/6/12 17:00:12</div>
+			<div class="time" id="showTime">--</div>
 			<div class="weather" id="weather">上海 --</div>
 		</div>
 		<script>
-var t = null;
-    t = setTimeout(time,1000);//開始运行
-    function time()
-    {
-       clearTimeout(t);//清除定时器
-       var dt = new Date();
-		var y=dt.getFullYear();
-		var mt=dt.getMonth()+1;
-		var day=dt.getDate();
-       var h=dt.getHours();//获取时
-       var m=dt.getMinutes();//获取分
-       var s=dt.getSeconds();//获取秒
-       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
-       t = setTimeout(time,1000); //设定定时器，循环运行
-    }
-
-</script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
 	</div>
 	<div class="mainbox">
+		<div class="p2-cards" id="p2cards">
+			<div class="p2-card"><span>NPP / 商业化 下单</span><p id="p2npO">--</p></div>
+			<div class="p2-card"><span>NPP / 商业化 回输</span><p id="p2npR">--</p></div>
+			<div class="p2-card"><span>国内导流 下单</span><p id="p2dO">--</p></div>
+			<div class="p2-card"><span>国内导流 回输</span><p id="p2dR">--</p></div>
+			<div class="p2-years" id="p2years"></div>
+		</div>
 		<ul class="clearfix nav1">
-			<li style="width: 22%">
+			<li style="width: 50%">
 				<div class="box">
-					<div class="tit">Top 30下单医院</div>
-					<div class="boxnav" style="height: 225px;">
-						<div class="tbl-scroll" id="tbl1body">
-							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
-								<thead>
-									<tr><th>排序</th><th>医院名称</th><th>YTD下单</th><th>同比增长</th></tr>
-								</thead>
-								<tbody id="tbl1"></tbody>
-							</table>
-						</div>
+					<div class="tit">海外患者（含导流以及海外商业化）</div>
+					<div class="boxnav" style="height: 405px; position: relative">
+						<div class="p2-map" id="p2mapL"></div>
+						<button class="map-fs" type="button" data-fs="p2mapL" data-title="海外患者（含导流以及海外商业化）">⛶</button>
 					</div>
-				</div>
-				<div class="box">
-					<div class="tit">Top 30回输医院</div>
-					<div class="boxnav" style="height: 225px;">
-						<div class="tbl-scroll" id="tbl3body">
-							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
-								<thead>
-									<tr><th>排序</th><th>医院名称</th><th>YTD回输</th><th>同比增长</th></tr>
-								</thead>
-								<tbody id="tbl3"></tbody>
-							</table>
-						</div>
+					<div class="p2-tbl-wrap">
+						<table class="p2-tbl" width="100%" border="0" cellspacing="0" cellpadding="0">
+							<thead><tr><th>大洲</th><th>国家/区域</th><th>下单</th><th>回输</th></tr></thead>
+							<tbody id="p2tblL"></tbody>
+						</table>
 					</div>
 				</div>
 			</li>
-			<li style="width: 56%">
+			<li style="width: 50%">
 				<div class="box">
-					<div class="boxnav mapc" style="height: 550px; position: relative">
-						<div class="mapnav">
-							<ul>
-								<li><div><span>YTD下单</span><p id="navO">--</p></div></li>
-								<li><div><span>YTD回输</span><p id="navR">--</p></div></li>
-								<li><div><span>YTD单采</span><p id="navA">--</p></div></li>
-								<li><div><span>YTD放行</span><p id="navQ">--</p></div></li>
-							</ul>
-						</div>
-						<div class="mapnav3">
-							<ul>
-								<li><div><span>MTD下单</span><p id="mtdo">--</p></div></li>
-								<li><div><span>MTD回输</span><p id="mtdr">--</p></div></li>
-								<li><div><span>MTD单采</span><p id="mtda">--</p></div></li>
-								<li><div><span>MTD放行</span><p id="mtdq">--</p></div></li>
-							</ul>
-						</div>
-						<div class="map" id="map"><div class="radar-sweep"></div></div>
-						<button class="map-fs" type="button" data-fs="map" data-fs2="provPanel" data-title="中国地图">⛶</button>
-						<div class="prov-panel" id="provPanel">
-							<div class="prov-head">
-								<span class="prov-title" id="provTitle">--</span>
-								<span class="prov-stats" id="provStats"></span>
-								<button class="prov-close" id="provClose" title="关闭">×</button>
-							</div>
-							<div class="prov-loading" id="provLoading">加载中…</div>
-							<div class="prov-body">
-								<div class="prov-chart-wrap" id="provChart"></div>
-								<div class="prov-rank">
-									<div class="prov-rank-tit">Top 5 下单医院</div>
-									<ul class="prov-rank-list" id="provRank"></ul>
-									<div class="prov-rank-tit prov-rank-tit2">Top 5 回输医院</div>
-									<ul class="prov-rank-list" id="provRankR"></ul>
-								</div>
-							</div>
-						</div>
+					<div class="tit">海外商业化</div>
+					<div class="boxnav" style="height: 405px; position: relative">
+						<div class="p2-map" id="p2mapR"></div>
+						<button class="map-fs" type="button" data-fs="p2mapR" data-title="海外商业化">⛶</button>
 					</div>
-				</div>
-			</li>
-			<li style="width: 22%">
-				<div class="box">
-					<div class="tit">当月下单 & 回输</div>
-					<div class="boxnav" style="height: 505px;">
-						<div class="sev-scroll" id="last7List"></div>
+					<div class="p2-tbl-wrap">
+						<table class="p2-tbl p2-tbl-r" width="100%" border="0" cellspacing="0" cellpadding="0">
+							<thead><tr><th>大洲</th><th>国家/区域</th><th>导流分类</th><th>下单</th><th>回输</th></tr></thead>
+							<tbody id="p2tblR"></tbody>
+						</table>
 					</div>
 				</div>
 			</li>
 		</ul>
-		<div class="box" style="padding: 20px 0;">
-			<ul class="clearfix nav2">
-				<li style="width:25%">
-					<div class="tit01">下单月度趋势</div>
-					<div class="ftechart" id="echart6"></div>
-				</li>
-				<li style="width:25%">
-					<div class="tit01">回输月度趋势</div>
-					<div class="ftechart" id="echart4"></div>
-				</li>
-				<li style="width:25%">
-					<div class="tit01">YTD异常订单</div>
-					<div style="flex: 1; min-height: 0; display: flex;">
-						<div style="flex: 1; min-width:0" class="wancheng">
-							<div><span>异常订单合计</span>
-								<h3 class="abn-num"><span id="abnNum">--</span><i>单</i></h3>
-							</div>
-						</div>
-						<div style="flex: 2; min-width:0" id="myd1"></div>
-					</div>
-				</li>
-				<li style="width:25%">
-					<div class="tit01">COE医院销量占比</div>
-					<div style="flex: 1; min-height: 0; display: flex;">
-						<div style="flex: 1; min-width:0" id="fb03"></div>
-						<div style="flex: 1; min-width:0" id="fb04"></div>
-					</div>
-				</li>
-			</ul>
+	</div>
+	<!-- Top10 浮窗（右侧地图点击） -->
+	<div class="p2-panel-mask" id="p2PanelMask" style="display:none;">
+		<div class="p2-panel">
+			<div class="prov-head">
+				<span class="prov-title" id="p2Title">--</span>
+				<button class="prov-close" id="p2Close" type="button">×</button>
+			</div>
+			<div class="p2-panel-body">
+				<div class="p2-rank-col">
+					<div class="prov-rank-tit">Top 10 下单医院</div>
+					<ul class="prov-rank-list" id="p2RankO"></ul>
+				</div>
+				<div class="p2-rank-col">
+					<div class="prov-rank-tit">Top 10 回输医院</div>
+					<ul class="prov-rank-list" id="p2RankR"></ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- 地图放大全屏 -->
@@ -169,7 +112,7 @@ var t = null;
 		</div>
 		<div class="fs-body" id="fsBody"></div>
 	</div>
-	<!-- 网页导航浮窗（菜单） -->
+	<!-- 网页导航菜单 -->
 	<div class="menu-mask" id="menuMask" style="display:none;">
 		<div class="menu-panel">
 			<div class="menu-panel-head">
@@ -189,7 +132,7 @@ var t = null;
 		</div>
 	</div>
 	<script>
-	// 页面访问密码校验（客户端门禁，密码以 SHA-256 哈希存储）
+	// 页面访问密码校验（与总览页一致，sessionStorage 共享）
 	(function () {
 		var HASH = 'fcde78c0a777ada04fec4ed613421feb59ee71e70608fa7bf53c386970395c66';
 		var mask = document.getElementById('loginMask');
@@ -205,7 +148,6 @@ var t = null;
 				if (h === HASH) {
 					sessionStorage.setItem('board_authed', '1');
 					mask.style.display = 'none';
-					if (window.startBoardAuto) window.startBoardAuto();
 				} else {
 					document.getElementById('loginErr').textContent = '密码错误，请重试';
 					pwd.value = '';
@@ -221,7 +163,21 @@ var t = null;
 	})();
 	</script>
 	<script>
-	// 网页导航浮窗：打开/关闭 + 跳转（当前页高亮）+ 默认首页
+	// 当天上海天气与温度
+	(function () {
+		var wEl = document.getElementById('weather');
+		var WSYM = {0:'☀',1:'☀',2:'⛅',3:'☁',45:'☁',48:'☁',51:'☔',53:'☔',55:'☔',56:'☔',57:'☔',61:'☔',63:'☔☔',65:'☔☔☔',66:'☔☔',67:'☔☔',71:'❄',73:'❄',75:'❄',77:'❄',80:'☔',81:'☔☔',82:'☔☔☔',85:'❄',86:'❄',95:'⛈',96:'⛈',99:'⛈'};
+		fetch('https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&current=temperature_2m,weather_code&timezone=Asia%2FShanghai')
+			.then(function (r) { return r.json(); })
+			.then(function (d) {
+				var t = Math.round(d.current.temperature_2m);
+				wEl.innerHTML = '上海 ' + (WSYM[d.current.weather_code] || '--') + ' ' + t + '℃';
+			})
+			.catch(function () { wEl.innerHTML = '上海 --'; });
+	})();
+	</script>
+	<script>
+	// 网页导航 + 默认首页
 	$(function () {
 		var $mask = $('#menuMask');
 		var cur = location.pathname.split('/').pop() || 'index.html';
@@ -247,16 +203,7 @@ var t = null;
 	});
 	</script>
 	<script>
-	// 默认首页：仅从站点外部首次进入总览根地址时跳转，站内互跳不受影响
-	(function () {
-		var def = localStorage.getItem('board_default');
-		if (!def || def === 'index') return;
-		var fromOutside = !document.referrer || document.referrer.indexOf(location.origin) < 0;
-		if (fromOutside) location.replace(def === 'page2' ? 'page2' : 'index');
-	})();
-	</script>
-	<script>
-	// 地图放大全屏（容器移入全屏层 + resize，保留轮播/下钻交互）
+	// 地图放大全屏（容器移入全屏层 + resize，保留轮播/点击交互）
 	$(function () {
 		var fsEl = null, fsExtra = null;
 		function closeFs() {

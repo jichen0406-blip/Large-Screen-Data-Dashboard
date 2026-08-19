@@ -230,6 +230,8 @@ $(function () {
         window.startBoardAuto = function () { startAuto(); showNextCity(); };
         if (sessionStorage.getItem('board_authed') === '1') window.startBoardAuto();
         $('#map').on('mouseenter', stopAuto).on('mouseleave', startAuto);
+        // 地图放大全屏时暂停轮播，关闭恢复
+        $(document).on('boardfs', function (e, d) { if (d && d.active) stopAuto(); else startAuto(); });
 
         // ═══ 省份城市地图浮窗（点击省份 → 阿里 DataV GeoAtlas 拉取城市边界） ═══
         var PROV_ADCODE = {
