@@ -236,4 +236,48 @@ a:hover{ color:#06c; text-decoration: none!important}
 .login-box button:hover{ opacity:.9; }
 .login-err{ margin-top:10px; font-size:12px; color:#ff6316; min-height:16px; }
 
+/* ── 手机端自适应（≤768px） ── */
+@media (max-width: 768px) {
+	/* 表头：改为流式堆叠 */
+	.head{ height: auto; padding: 8px 0; padding-right: 0; text-align: center; }
+	.head h1{ line-height: 1.4; padding: 2px 0; font-size: 15px; }
+	.head .head-left{ position: static; transform: none; line-height: 1.4; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+	.head .head-left .update{ line-height: 1.4; display: inline; }
+	.head .tm-wrap{ position: static; transform: none; justify-content: center; margin-top: 4px; line-height: 1.4; }
+
+	/* 总览页第一排/第二排：纵向堆叠 */
+	.nav1>li{ width: 100% !important; float: none; padding: 0; }
+	.nav1>li>.box{ margin-bottom: 12px; }
+	.nav2>li{ width: 100% !important; float: none; height: auto; padding: 0 10px 10px; }
+
+	/* 第二排图表：父级 height:auto 后 flex:1 会塌陷成 0，给固定高度 */
+	.nav2 .ftechart, .nav2 .nav2-chart{ height: 240px; flex: none; }
+
+	/* 地图等容器高度压缩 */
+	.boxnav{ height: 320px !important; }
+	.boxnav.mapc{ height: 380px !important; }
+
+	/* 地图左右指标卡片压缩，给地图留空间 */
+	.mapnav div, .mapnav3 div{ width: 78px; padding: 14px 4px; }
+	.mapnav div p, .mapnav3 div p{ font-size: 16px; }
+
+	/* 省份浮窗适配窄屏 */
+	.prov-panel{ width: 92%; height: 82%; }
+	.prov-rank{ width: 40%; }
+
+	/* 总览表格字号微调 */
+	.top-table th, .top-table td{ font-size: 11px; padding: 4px 0; }
+
+	/* Page2：卡片 2 列换行 + 年份整行 */
+	.p2-cards{ flex-wrap: wrap; justify-content: space-between; }
+	.p2-card{ flex: 0 0 47%; margin-bottom: 10px; }
+	.p2-years{ flex: 0 0 100%; align-items: center; justify-content: center; margin-top: 0; }
+
+	/* Page2 地图明细表 */
+	.p2-tbl-wrap{ height: 220px; }
+
+	/* 登录框适配窄屏 */
+	.login-box{ max-width: 90vw; }
+}
+
 
