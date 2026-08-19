@@ -55,12 +55,12 @@
 		<ul class="clearfix nav1">
 			<li style="width: 50%">
 				<div class="box">
-					<div class="tit">海外患者（含导流以及海外商业化）</div>
+					<div class="tit">海外患者（含导流以及海外商业化）<button class="map-fs" type="button" data-fs="p2mapL" data-title="海外患者（含导流以及海外商业化）">⛶</button></div>
 					<div class="boxnav" style="height: 405px; position: relative">
 						<div class="p2-map" id="p2mapL"></div>
-						<button class="map-fs" type="button" data-fs="p2mapL" data-title="海外患者（含导流以及海外商业化）">⛶</button>
 					</div>
-					<div class="p2-tbl-wrap">
+					<div class="p2-tbl-bar"><button class="map-fs" type="button" data-fs="tblwrapL" data-title="海外患者 明细">⛶</button></div>
+					<div class="p2-tbl-wrap" id="tblwrapL">
 						<table class="p2-tbl" width="100%" border="0" cellspacing="0" cellpadding="0">
 							<thead><tr><th>大洲</th><th>国家/区域</th><th>下单</th><th>回输</th></tr></thead>
 							<tbody id="p2tblL"></tbody>
@@ -70,12 +70,12 @@
 			</li>
 			<li style="width: 50%">
 				<div class="box">
-					<div class="tit">海外商业化</div>
+					<div class="tit">海外商业化<button class="map-fs" type="button" data-fs="p2mapR" data-title="海外商业化">⛶</button></div>
 					<div class="boxnav" style="height: 405px; position: relative">
 						<div class="p2-map" id="p2mapR"></div>
-						<button class="map-fs" type="button" data-fs="p2mapR" data-title="海外商业化">⛶</button>
 					</div>
-					<div class="p2-tbl-wrap">
+					<div class="p2-tbl-bar"><button class="map-fs" type="button" data-fs="tblwrapR" data-title="海外商业化 明细">⛶</button></div>
+					<div class="p2-tbl-wrap" id="tblwrapR">
 						<table class="p2-tbl p2-tbl-r" width="100%" border="0" cellspacing="0" cellpadding="0">
 							<thead><tr><th>大洲</th><th>国家/区域</th><th>导流分类</th><th>下单</th><th>回输</th></tr></thead>
 							<tbody id="p2tblR"></tbody>
@@ -121,7 +121,7 @@
 			</div>
 			<ul class="menu-list">
 				<li class="menu-item" data-href="index.html"><i class="mi-ico">▤</i>福可苏业绩总览</li>
-				<li class="menu-item" data-href="page2"><i class="mi-ico">▨</i>Page 2（海外/商业化）</li>
+				<li class="menu-item" data-href="page2.html"><i class="mi-ico">▨</i>Page 2（海外/商业化）</li>
 				<li class="menu-item disabled"><i class="mi-ico">▢</i>Page 3（预留）</li>
 			</ul>
 			<div class="menu-def">
@@ -181,6 +181,7 @@
 	$(function () {
 		var $mask = $('#menuMask');
 		var cur = location.pathname.split('/').pop() || 'index.html';
+			if (cur === 'page2') cur = 'page2.html';
 		$('#menuBtn').on('click', function () { $mask.show(); });
 		$mask.on('click', function (e) { if (e.target === this) $mask.hide(); });
 		$('#menuClose').on('click', function () { $mask.hide(); });
@@ -206,12 +207,43 @@
 	// 地图放大全屏（容器移入全屏层 + resize，保留轮播/点击交互）
 	$(function () {
 		var fsEl = null, fsExtra = null;
+		function resizeChart(el) {
+			var ch = echarts.getInstanceByDom(el);
+			if (ch) { ch.resize(); return; }
+			$(el).find('div').each(function () { var c = echarts.getInstanceByDom(this); if (c) c.resize(); });
+		}
+		function collectCharts(el) {
+			var ch = echarts.getInstanceByDom(el);
+			if (ch) return [ch];
+			var arr = [];
+			$(el).find('div').each(function () { var c = echarts.getInstanceByDom(this); if (c) arr.push(c); });
+			return arr;
+		}
+		function scaleChartFonts(chart, sc) {
+			var opt = chart.getOption();
+			(function walk(o) {
+				if (!o || typeof o !== 'object') return;
+				if (typeof o.fontSize === 'number' || typeof o.fontSize === 'string') { var fn = parseFloat(o.fontSize); if (!isNaN(fn)) o.fontSize = Math.max(6, Math.round(fn * sc)); }
+				if (typeof o.itemWidth === 'number') o.itemWidth = Math.max(6, Math.round(o.itemWidth * sc));
+				if (typeof o.itemHeight === 'number') o.itemHeight = Math.max(6, Math.round(o.itemHeight * sc));
+				if (typeof o.symbolSize === 'number') o.symbolSize = Math.round(o.symbolSize * sc);
+				if (typeof o.distance === 'number') o.distance = Math.round(o.distance * sc);
+				Object.keys(o).forEach(function (k) { if (o[k] && typeof o[k] === 'object') walk(o[k]); });
+			})(opt);
+			chart.setOption(opt);
+		}
 		function closeFs() {
 			if (fsEl) {
+					var _elRef = fsEl;
+				var _isTbl = (_elRef.id === 'tblwrapL' || _elRef.id === 'tblwrapR');
+				var _snap = fsEl._snap;
 				$(fsEl).appendTo(fsEl._fsHome);
+				$(fsEl).css({ width: '', height: '', transform: '', transformOrigin: '', position: '', left: '', top: '', marginLeft: '', marginTop: '' });
+				if (_snap) { var _charts = collectCharts(fsEl); _charts.forEach(function (ch, i) { if (_snap[i]) ch.setOption(_snap[i]); }); }
 				delete fsEl._fsHome;
-				var ch = echarts.getInstanceByDom(fsEl);
-				if (ch) setTimeout(function () { ch.resize(); }, 50);
+				delete fsEl._snap;
+				if (_isTbl && window.p2SetTblRows) window.p2SetTblRows(10);
+				setTimeout(function () { resizeChart(_elRef); }, 50);
 				fsEl = null;
 			}
 			if (fsExtra) { $(fsExtra).appendTo(fsExtra._fsHome); delete fsExtra._fsHome; fsExtra = null; }
@@ -221,6 +253,9 @@
 		$('.map-fs').on('click', function () {
 			var el = document.getElementById($(this).data('fs'));
 			if (!el || fsEl) return;
+			var fid = $(this).data('fs');
+			if ((fid === 'tblwrapL' || fid === 'tblwrapR') && window.p2SetTblRows) window.p2SetTblRows(30);
+			var isChart = (fid === 'echart6' || fid === 'echart4' || fid === 'abnBox' || fid === 'coeBox');
 			fsEl = el;
 			el._fsHome = el.parentNode;
 			var exId = $(this).data('fs2');
@@ -229,11 +264,23 @@
 				if (ex) { fsExtra = ex; ex._fsHome = ex.parentNode; $(ex).appendTo('#fsBody'); }
 			}
 			$('#fsTitle').text($(this).data('title'));
+			if (isChart) { el._ow = el.offsetWidth; el._oh = el.offsetHeight; }
 			$(el).appendTo('#fsBody');
 			$('#fsMask').show();
 			$(document).trigger('boardfs', { active: true });
-			var ch = echarts.getInstanceByDom(el);
-			if (ch) setTimeout(function () { ch.resize(); }, 50);
+			if (isChart) {
+				var ow = el._ow, oh = el._oh;
+				setTimeout(function () {
+					var fsW = $('#fsBody').width(), fsH = $('#fsBody').height();
+					var sc = Math.min(fsW / ow, fsH / oh) * 0.92;
+					$(el).css({ width: (ow * sc) + 'px', height: (oh * sc) + 'px', position: 'absolute', left: '50%', top: '50%', marginLeft: (-ow * sc / 2) + 'px', marginTop: (-oh * sc / 2) + 'px' });
+					var _charts = collectCharts(el);
+					el._snap = _charts.map(function (ch) { return JSON.parse(JSON.stringify(ch.getOption())); });
+					_charts.forEach(function (ch) { ch.resize(); scaleChartFonts(ch, sc); });
+				}, 50);
+			} else {
+				setTimeout(function () { resizeChart(el); }, 50);
+			}
 		});
 		$('#fsClose').on('click', closeFs);
 		$('#fsMask').on('click', function (e) { if (e.target === this) closeFs(); });

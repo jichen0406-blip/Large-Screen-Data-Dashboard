@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const dir = path.join(__dirname, 'js', 'geo');
-const files = fs.readdirSync(dir).filter(function (f) { return f.endsWith('.json') && f !== 'world.json'; });
+const files = fs.readdirSync(dir).filter(function (f) { return f.endsWith('.json') && f.indexOf('world') !== 0; });
 const out = {};
 files.forEach(function (f) {
     out[f.replace('.json', '')] = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));

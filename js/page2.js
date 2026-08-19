@@ -309,26 +309,44 @@ $(function () {
                 }
             });
         }
-        for (var b = trCount; b < 10; b++) html += '<tr class="p2-tbl-blank"><td colspan="4">&nbsp;</td></tr>';
+        for (var b = trCount; b < (window.P2_TBL_ROWS || 10); b++) html += '<tr class="p2-tbl-blank"><td colspan="4">&nbsp;</td></tr>';
         $('#' + id).html(html);
+        document.getElementById(id)._dup = false;
     }
     function renderTables() { fillTbl('p2tblL', agg(P2.LEFT)); fillTblRight('p2tblR', agg(P2.RIGHTD)); setupTblAutoScroll(); }
+    // 明细表行数控制（全屏放大 30 行，普通 10 行）
+    window.P2_TBL_ROWS = 10;
+    window.p2SetTblRows = function (n) { window.P2_TBL_ROWS = n; renderTables(); };
 
     // 左侧表格自动滚动（参照 page1：复制 tbody 一份无缝回绕，80ms/1px，悬停暂停）
     var tblTimer = null;
     function setupTblAutoScroll() {
         if (tblTimer) { clearInterval(tblTimer); tblTimer = null; }
+        var _fsPause = false;
         var el = $('#p2tblL').closest('.p2-tbl-wrap')[0];
         var tbody = document.getElementById('p2tblL');
         if (!el || !tbody) return;
         if (el.scrollHeight <= el.clientHeight) return;
         var oneCopyH = tbody.offsetHeight;
         tbody.innerHTML += tbody.innerHTML;
+        tbody._dup = true;
         function tick() { el.scrollTop += 1; if (el.scrollTop >= oneCopyH) el.scrollTop -= oneCopyH; }
-        function start() { if (!tblTimer) tblTimer = setInterval(tick, 80); }
+        function start() { if (!_fsPause && !tblTimer) tblTimer = setInterval(tick, 80); }
         function stop() { clearInterval(tblTimer); tblTimer = null; }
+        function dedup() {
+            if (!tbody._dup) return;
+            var rows = Array.prototype.slice.call(tbody.children);
+            var half = Math.floor(rows.length / 2);
+            for (var i = rows.length - 1; i >= half; i--) tbody.removeChild(rows[i]);
+            tbody._dup = false;
+            el.scrollTop = 0;
+        }
         start();
-        $(el).off('mouseenter.p2tbl mouseleave.p2tbl').on('mouseenter.p2tbl', stop).on('mouseleave.p2tbl', start);
+        $(el).off('mouseenter.p2tbl mouseleave.p2tbl').on('mouseenter.p2tbl', stop).on('mouseleave.p2tbl', function () { if (!_fsPause) start(); });
+        $(document).off('boardfs.p2tbl').on('boardfs.p2tbl', function (e, d) {
+            if (d && d.active) { _fsPause = true; stop(); dedup(); }
+            else { _fsPause = false; if (!tbody._dup) setupTblAutoScroll(); }
+        });
     }
 
     // 右侧表格：国家 × 导流分类（医生导流/OB导流/NPP/商业化），大洲/国家合并，固定 15 行
@@ -376,8 +394,9 @@ $(function () {
                 });
             });
         }
-        for (var b = trCount; b < 10; b++) html += '<tr class="p2-tbl-blank"><td colspan="5">&nbsp;</td></tr>';
+        for (var b = trCount; b < (window.P2_TBL_ROWS || 10); b++) html += '<tr class="p2-tbl-blank"><td colspan="5">&nbsp;</td></tr>';
         $('#' + id).html(html);
+        document.getElementById(id)._dup = false;
     }
 
     // 年份切换
@@ -448,6 +467,6 @@ $(function () {
     // 地图放大全屏时暂停右侧图轮播，关闭恢复（左侧海外导流图本身不轮播）
     $(document).on('boardfs', function (e, d) {
         if (d && d.active) { chartPause(rightChart); }
-        else { startAuto(rightChart, buildMapData(agg(P2.RIGHT))); }
+        else { $('#p2PanelMask').hide(); startAuto(rightChart, buildMapData(agg(P2.RIGHT))); }
     });
 });
