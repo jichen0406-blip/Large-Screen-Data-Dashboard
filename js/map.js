@@ -103,7 +103,12 @@ $(function () {
                 subtext: '数据源：bs_order  |  点击省份可查看城市数据明细',
                 left: 'center',
                 textStyle: {
-                    color: '#fff'
+                    color: '#fff',
+                    fontSize: 20
+                },
+                subtextStyle: {
+                    color: 'rgba(255,255,255,.6)',
+                    fontSize: 14
                 }
             },
             tooltip: {

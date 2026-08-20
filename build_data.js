@@ -193,12 +193,13 @@ function mtdCount(f) { return records.filter(function(r) { return inRange(r[f], 
 var mtdO = mtdCount('od'), mtdR = mtdCount('re'), mtdA = mtdCount('ap'), mtdQ = mtdCount('qa');
 
 // ── 8d. Top10 医院（下单 / 回输）+ 同比（去年同截止日 YTD） ──
-var lyDP = LY + DP.slice(4); // 去年同月同日截止，用于 YTD 同比
+var curEnd = Y + '-' + DP.slice(5, 7) + '-31'; // 当年当月最后一天（同比按完整月，即使当月未结束）
+var lyDP = LY + '-' + DP.slice(5, 7) + '-31'; // 去年同月最后一天，用于 YTD 同比
 var hospO = {}, hospR = {}, hospOly = {}, hospRly = {};
 records.forEach(function(r) {
   if (!r.hosp || r.hosp === '未知医院') return;
-  if (inRange(r.od, Y + '-01-01', DP)) hospO[r.hosp] = (hospO[r.hosp] || 0) + 1;
-  if (inRange(r.re, Y + '-01-01', DP)) hospR[r.hosp] = (hospR[r.hosp] || 0) + 1;
+  if (inRange(r.od, Y + '-01-01', curEnd)) hospO[r.hosp] = (hospO[r.hosp] || 0) + 1;
+  if (inRange(r.re, Y + '-01-01', curEnd)) hospR[r.hosp] = (hospR[r.hosp] || 0) + 1;
   if (inRange(r.od, LY + '-01-01', lyDP)) hospOly[r.hosp] = (hospOly[r.hosp] || 0) + 1;
   if (inRange(r.re, LY + '-01-01', lyDP)) hospRly[r.hosp] = (hospRly[r.hosp] || 0) + 1;
 });
@@ -419,6 +420,134 @@ var p2TopList = { all: topToLists(p2Top.all), y: {} };
 Object.keys(p2Top.y).forEach(function (yk) { p2TopList.y[yk] = topToLists(p2Top.y[yk]); });
 var P2 = { YEARS: Object.keys(yearSet).sort(), CARD: p2Card, LEFT: p2Left, RIGHT: p2Right, RIGHTD: p2RightD, TOP10: p2TopList };
 
+// ── 8k. Page3：目标（Target.xlsx 公司目标）+ 月度实际下单/回输 ──
+var tgtPath = path.join(rawDir, 'Target.xlsx');
+if (!fs.existsSync(tgtPath)) tgtPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'Target.xlsx');
+var tgtWb = null;
+try { tgtWb = XLSX.readFile(tgtPath); } catch (e) { console.error('⚠️ 读取 Target.xlsx 失败:', e.message); }
+var TARGET = {};
+try {
+  var tgtRows = XLSX.utils.sheet_to_json(tgtWb.Sheets['公司目标'], { header: 1, defval: '' });
+  for (var ti = 1; ti < tgtRows.length; ti++) {
+    var tr = tgtRows[ti];
+    var ym = String(tr[0] || '').trim();
+    if (!ym || !/^\d{6}$/.test(ym)) continue;
+    var yk = ym.slice(0, 4) + '-' + ym.slice(4, 6); // 'YYYYMM' → 'YYYY-MM'，与月度实际键一致
+    TARGET[yk] = { o: Number(tr[1]) || 0, r: Number(tr[2]) || 0 };
+  }
+} catch (e) { console.error('⚠️ 读取 Target.xlsx 失败:', e.message); }
+var p3MO = {}, p3MR = {}; // 每月实际下单/回输（'YYYY-MM'）
+records.forEach(function(r) {
+  if (r.od) { var k = r.od.slice(0, 7); p3MO[k] = (p3MO[k] || 0) + 1; }
+  if (r.re) { var k2 = r.re.slice(0, 7); p3MR[k2] = (p3MR[k2] || 0) + 1; }
+});
+var P3 = { TARGET: TARGET, MONTH_O: p3MO, MONTH_R: p3MR };
+
+// ── 8l. Page3 新表：挑战目标（挑战指标）+ 辖区 AM/地区 月度达成（4.1/4.2/4.3/6.1/6.2） ──
+// 目标：Target.xlsx「挑战目标」sheet（Region: DOM=国内 / HK=香港 / SG=新加坡 / KSA=沙特）
+var CHAL = {};
+try {
+  var chalRows = XLSX.utils.sheet_to_json(tgtWb.Sheets['挑战目标'], { header: 1, defval: '' });
+  for (var chi = 1; chi < chalRows.length; chi++) {
+    var cr = chalRows[chi];
+    var cym = String(cr[0] || '').trim();
+    if (!/^\d{6}$/.test(cym)) continue;
+    var cyk = cym.slice(0, 4) + '-' + cym.slice(4, 6);
+    var creg = String(cr[1] || '').trim();
+    var cam = String(cr[2] || '').trim();
+    var regB = CHAL[cyk] || (CHAL[cyk] = {});
+    if (creg === 'DOM') {
+      var domB = regB.DOM || (regB.DOM = {});
+      var s1 = domB[cam] || (domB[cam] = { o: 0, r: 0 });
+      s1.o += Number(cr[3]) || 0; s1.r += Number(cr[4]) || 0;
+    } else {
+      var regB2 = regB[creg] || (regB[creg] = {});
+      var s2 = regB2._ || (regB2._ = { o: 0, r: 0 });
+      s2.o += Number(cr[3]) || 0; s2.r += Number(cr[4]) || 0;
+    }
+  }
+} catch (e) { console.error('⚠️ 读取挑战目标失败:', e.message); }
+
+// 表格 1/2 目标：Target.xlsx「公司DOM&OB目标」sheet（分类: DOM=国内 / OB=海外）
+var COMP = {};
+try {
+  var compRows = XLSX.utils.sheet_to_json(tgtWb.Sheets['公司DOM&OB目标'], { header: 1, defval: '' });
+  for (var ci2 = 1; ci2 < compRows.length; ci2++) {
+    var cr2 = compRows[ci2];
+    var cym2 = String(cr2[0] || '').trim();
+    if (!/^\d{6}$/.test(cym2)) continue;
+    var cyk2 = cym2.slice(0, 4) + '-' + cym2.slice(4, 6);
+    var cat2 = String(cr2[1] || '').trim();
+    if (cat2 !== 'DOM' && cat2 !== 'OB') continue;
+    var cb = COMP[cyk2] || (COMP[cyk2] = {});
+    var cs = cb[cat2] || (cb[cat2] = { o: 0, r: 0 });
+    cs.o += Number(cr2[2]) || 0; cs.r += Number(cr2[3]) || 0;
+  }
+} catch (e) { console.error('⚠️ 读取 公司DOM&OB目标 失败:', e.message); }
+
+// 达成归属所需映射：masterdata 医院→(AM,Region) + Sheet3 离职AM清洗 + orderdict(AM/回输AM/回输医院/导流)
+var mdRowsS1 = XLSX.utils.sheet_to_json(mdWb.Sheets['Sheet1'], { header: 1, defval: '' });
+var mdByName = {};
+mdRowsS1.slice(1).forEach(function (mr) {
+  var nm = String(mr[3] || '').trim();
+  var info = { am: String(mr[5] || '').trim(), reg: String(mr[7] || '').trim() };
+  if (nm) mdByName[nm] = info;
+});
+var amClean = {};
+try {
+  var s3Rows = XLSX.utils.sheet_to_json(mdWb.Sheets['Sheet3'], { header: 1, defval: '' });
+  s3Rows.forEach(function (sr) { var k = String(sr[0] || '').trim(); if (k) amClean[k] = String(sr[1] || '').trim(); });
+} catch (e) { console.error('⚠️ 读取 masterdata Sheet3(AM清洗) 失败:', e.message); }
+var dictInfo = {};
+try {
+  dictRows.slice(1).forEach(function (dr) {
+    var no = String(dr[1] || '').trim();
+    if (!no) return;
+    dictInfo[no] = { am: String(dr[3] || '').trim(), ram: String(dr[27] || '').trim(), rhc: String(dr[25] || '').trim(), rhn: String(dr[26] || '').trim(), flow: String(dr[21] || '').trim() };
+  });
+} catch (e) { console.error('⚠️ 读取 order dict(AM) 失败:', e.message); }
+var OV_AM = { HK_AM1: 'HK', SG_AM: 'SG', KSA_AM: 'KSA' }; // 海外AM兜底 → 对应地区
+var REG_LABEL = { HK: '香港', SG: '新加坡', KSA: '沙特' };
+var P3T_AMS = ['崔珺', '赵蕊', '赵俊兴', '龚卉', '高威龙', '董硕', '兰明金', '李磊'];
+
+var p3tND = {}, p3tREG = {}, p3tOV = {}; // 键：'YYYY-MM'
+function p3tInit(k) {
+  if (!p3tND[k]) {
+    p3tND[k] = { dom: { o: 0, r: 0 }, ov: { o: 0, r: 0 } };
+    p3tREG[k] = {};
+    p3tOV[k] = { docRef: { o: 0, r: 0 }, obRef: { o: 0, r: 0 }, hk: { o: 0, r: 0 }, sg: { o: 0, r: 0 }, ksa: { o: 0, r: 0 }, total: { o: 0, r: 0 } };
+  }
+}
+function p3tReg(k, ent) { var b = p3tREG[k]; if (!b[ent]) b[ent] = { o: 0, r: 0 }; return b[ent]; }
+// 返回 { ov, regKey, am }：ov=海外; regKey=海外地区键或''; am=清洗后AM
+// 回输与下单统一用下单医院（回输医院字段基本全空，仅个别记录，不采用）
+function attribP3(r, d, isRe) {
+  var info = mdByName[r.hosp];
+  var reg = info ? info.reg : '';
+  var raw = isRe ? (d.ram || d.am || (info && info.am) || '') : (d.am || (info && info.am) || '');
+  var am = amClean[raw] || raw;
+  if (OV_AM[am]) reg = OV_AM[am];
+  return { ov: !!(reg && reg !== 'DOM'), regKey: (reg && reg !== 'DOM') ? reg : '', am: am };
+}
+// 统计一单（fld='o'下单 / 'r'回输）到 ND/REG/OV 三桶；未知海外地区安全兜底
+function addP3(k, d, fld, a) {
+  if (a.ov) p3tND[k].ov[fld]++; else p3tND[k].dom[fld]++;
+  var ent = a.ov ? (REG_LABEL[a.regKey] || a.regKey) : a.am;
+  p3tReg(k, ent)[fld]++;
+  if (!a.ov) p3tReg(k, '国内')[fld]++;
+  p3tReg(k, 'total')[fld]++;
+  var cat = a.ov
+    ? (p3tOV[k][a.regKey.toLowerCase()] ? a.regKey.toLowerCase() : null)
+    : (d.flow === '医生导流' ? 'docRef' : d.flow === 'OB导流' ? 'obRef' : null);
+  if (cat) { p3tOV[k][cat][fld]++; p3tOV[k].total[fld]++; }
+}
+records.forEach(function (r) {
+  var d = dictInfo[r.no] || {};
+  if (r.od) { var k1 = r.od.slice(0, 7); p3tInit(k1); addP3(k1, d, 'o', attribP3(r, d, false)); }
+  if (r.re) { var k2 = r.re.slice(0, 7); p3tInit(k2); addP3(k2, d, 'r', attribP3(r, d, true)); }
+});
+var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: p3tND, REG: p3tREG, OV: p3tOV };
+
 // ── 9. 输出 js/data.js（页面直接 <script> 引用） ──
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
   '/* 数据源: ' + bsFile + ' | 数据截止: ' + DP + ' */\n' +
@@ -438,7 +567,9 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     COE: { O: coeO, R: coeR },
     ABN: { Y: Y, total: abnTotal, pbmc: abnPbmc, first: abnFirst, second: abnSecond },
     CITY_PROV: CITY_PROV,
-    P2: P2
+    P2: P2,
+    P3: P3,
+    P3T: P3T
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
