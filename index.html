@@ -7,6 +7,7 @@
 <script type="text/javascript" src="js/echarts.min.js"></script>
 <script type="text/javascript" src="js/china.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/js.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -171,23 +172,15 @@ var t = null;
 		</div>
 		<div class="fs-body" id="fsBody"></div>
 	</div>
-	<!-- 网页导航浮窗（菜单） -->
+	<!-- 网页导航菜单（nav.js 统一渲染） -->
 	<div class="menu-mask" id="menuMask" style="display:none;">
 		<div class="menu-panel">
 			<div class="menu-panel-head">
 				<span class="menu-panel-tit">网页导航</span>
 				<button class="menu-close" id="menuClose" type="button">×</button>
 			</div>
-			<ul class="menu-list">
-				<li class="menu-item" data-href="index.html"><i class="mi-ico">▤</i>福可苏业绩总览</li>
-				<li class="menu-item" data-href="page2.html"><i class="mi-ico">▨</i>Page 2（海外/商业化）</li>
-				<li class="menu-item disabled"><i class="mi-ico">▢</i>Page 3（预留）</li>
-			</ul>
-			<div class="menu-def">
-				<span class="menu-def-tit">默认首页</span>
-				<span class="menu-def-opt" data-def="index">总览</span>
-				<span class="menu-def-opt" data-def="page2">Page 2</span>
-			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
 		</div>
 	</div>
 	<script>
@@ -222,122 +215,7 @@ var t = null;
 		document.getElementById('loginPwd').focus();
 	})();
 	</script>
-	<script>
-	// 网页导航浮窗：打开/关闭 + 跳转（当前页高亮）+ 默认首页
-	$(function () {
-		var $mask = $('#menuMask');
-		var cur = location.pathname.split('/').pop() || 'index.html';
-			if (cur === 'page2') cur = 'page2.html';
-		$('#menuBtn').on('click', function () { $mask.show(); });
-		$mask.on('click', function (e) { if (e.target === this) $mask.hide(); });
-		$('#menuClose').on('click', function () { $mask.hide(); });
-		$('.menu-item:not(.disabled)').on('click', function () {
-			var href = $(this).data('href');
-			if (href && href !== cur) { location.href = href; } else { $mask.hide(); }
-		});
-		$('.menu-item').each(function () {
-			if ($(this).data('href') === cur) $(this).addClass('cur').append('<em>当前</em>');
-		});
-		function renderDef() {
-			var d = localStorage.getItem('board_default') || 'index';
-			$('.menu-def-opt').each(function () { $(this).toggleClass('active', $(this).data('def') === d); });
-		}
-		$('.menu-def-opt').on('click', function () {
-			localStorage.setItem('board_default', $(this).data('def'));
-			renderDef();
-		});
-		renderDef();
-	});
-	</script>
-	<script>
-	// 默认首页：仅从站点外部首次进入总览根地址时跳转，站内互跳不受影响
-	(function () {
-		var def = localStorage.getItem('board_default');
-		if (!def || def === 'index') return;
-		var fromOutside = !document.referrer || document.referrer.indexOf(location.origin) < 0;
-		if (fromOutside) location.replace(def === 'page2' ? 'page2.html' : 'index.html');
-	})();
-	</script>
-	<script>
-	// 地图放大全屏（容器移入全屏层 + resize，保留轮播/下钻交互）
-	$(function () {
-		var fsEl = null, fsExtra = null;
-		function resizeChart(el) {
-			var ch = echarts.getInstanceByDom(el);
-			if (ch) { ch.resize(); return; }
-			$(el).find('div').each(function () { var c = echarts.getInstanceByDom(this); if (c) c.resize(); });
-		}
-		function collectCharts(el) {
-			var ch = echarts.getInstanceByDom(el);
-			if (ch) return [ch];
-			var arr = [];
-			$(el).find('div').each(function () { var c = echarts.getInstanceByDom(this); if (c) arr.push(c); });
-			return arr;
-		}
-		function scaleChartFonts(chart, sc) {
-			var opt = chart.getOption();
-			(function walk(o) {
-				if (!o || typeof o !== 'object') return;
-				if (typeof o.fontSize === 'number' || typeof o.fontSize === 'string') { var fn = parseFloat(o.fontSize); if (!isNaN(fn)) o.fontSize = Math.max(6, Math.round(fn * sc)); }
-				if (typeof o.itemWidth === 'number') o.itemWidth = Math.max(6, Math.round(o.itemWidth * sc));
-				if (typeof o.itemHeight === 'number') o.itemHeight = Math.max(6, Math.round(o.itemHeight * sc));
-				if (typeof o.symbolSize === 'number') o.symbolSize = Math.round(o.symbolSize * sc);
-				if (typeof o.distance === 'number') o.distance = Math.round(o.distance * sc);
-				Object.keys(o).forEach(function (k) { if (o[k] && typeof o[k] === 'object') walk(o[k]); });
-			})(opt);
-			chart.setOption(opt);
-		}
-		function closeFs() {
-			if (fsEl) {
-					var _elRef = fsEl;
-				var _snap = fsEl._snap;
-				$(fsEl).appendTo(fsEl._fsHome);
-				$(fsEl).css({ width: '', height: '', transform: '', transformOrigin: '', position: '', left: '', top: '', marginLeft: '', marginTop: '' });
-				if (_snap) { var _charts = collectCharts(fsEl); _charts.forEach(function (ch, i) { if (_snap[i]) ch.setOption(_snap[i]); }); }
-				delete fsEl._fsHome;
-				delete fsEl._snap;
-				setTimeout(function () { resizeChart(_elRef); }, 50);
-				fsEl = null;
-			}
-			if (fsExtra) { $(fsExtra).appendTo(fsExtra._fsHome); delete fsExtra._fsHome; fsExtra = null; }
-			$('#fsMask').hide();
-			$(document).trigger('boardfs', { active: false });
-		}
-		$('.map-fs').on('click', function () {
-			var el = document.getElementById($(this).data('fs'));
-			if (!el || fsEl) return;
-			var fid = $(this).data('fs');
-			var isChart = (fid === 'echart6' || fid === 'echart4' || fid === 'abnBox' || fid === 'coeBox');
-			fsEl = el;
-			el._fsHome = el.parentNode;
-			var exId = $(this).data('fs2');
-			if (exId) {
-				var ex = document.getElementById(exId);
-				if (ex) { fsExtra = ex; ex._fsHome = ex.parentNode; $(ex).appendTo('#fsBody'); }
-			}
-			$('#fsTitle').text($(this).data('title'));
-			if (isChart) { el._ow = el.offsetWidth; el._oh = el.offsetHeight; }
-			$(el).appendTo('#fsBody');
-			$('#fsMask').show();
-			$(document).trigger('boardfs', { active: true });
-			if (isChart) {
-				var ow = el._ow, oh = el._oh;
-				setTimeout(function () {
-					var fsW = $('#fsBody').width(), fsH = $('#fsBody').height();
-					var sc = Math.min(fsW / ow, fsH / oh) * 0.92;
-					$(el).css({ width: (ow * sc) + 'px', height: (oh * sc) + 'px', position: 'absolute', left: '50%', top: '50%', marginLeft: (-ow * sc / 2) + 'px', marginTop: (-oh * sc / 2) + 'px' });
-					var _charts = collectCharts(el);
-					el._snap = _charts.map(function (ch) { return JSON.parse(JSON.stringify(ch.getOption())); });
-					_charts.forEach(function (ch) { ch.resize(); scaleChartFonts(ch, sc); });
-				}, 50);
-			} else {
-				setTimeout(function () { resizeChart(el); }, 50);
-			}
-		});
-		$('#fsClose').on('click', closeFs);
-		$('#fsMask').on('click', function (e) { if (e.target === this) closeFs(); });
-		$(document).on('keydown', function (e) { if (e.key === 'Escape') closeFs(); });
-	});
-	</script>
+	
+	<script type="text/javascript" src="js/fs.js"></script>
 </body>
 </html>

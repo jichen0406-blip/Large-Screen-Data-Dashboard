@@ -84,7 +84,7 @@ $(function () {
     // 热力色阶
     function hexToRgb(h) { var n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
     function rampColor(v, max) {
-        var ramp = ['#0a2a4a', '#1b6bb0', '#22c1e3', '#7bed9f', '#ffeb7b'];
+        var ramp = ['#1f7fd4', '#26a5e0', '#2fe0f0', '#7bed9f', '#ffeb7b'];
         var t = max > 0 ? v / max : 0;
         var pos = Math.min(ramp.length - 1, t * (ramp.length - 1));
         var i = Math.floor(pos), f = pos - i;
@@ -160,26 +160,34 @@ $(function () {
             if (withLines && linesData.length) {
                 series.push({
                     name: '飞线', type: 'lines', coordinateSystem: 'geo', zlevel: 2,
-                    effect: { show: true, period: 4, trailLength: 0, symbol: 'circle', symbolSize: 4, color: '#fff' },
+                    effect: { show: true, period: 7, constantSpeed: 50, trailLength: 0, symbol: 'image://images/plane-white.png', symbolSize: 16, color: '#fff' },
                     lineStyle: { normal: { color: '#22c1e3', width: 1, opacity: 0.5, curveness: 0.25 } },
                     data: linesData
                 });
             }
-            // 中国中心标记：圆圈向外辐射光圈
+            // 中国中心标记：半透明蓝点背景 + iaso 驯鹿 logo（白字+橙鹿）
             if (withLines && chinaC) {
                 series.push({
-                    name: '中国工厂',
+                    name: 'iaso 驯鹿',
                     type: 'effectScatter',
                     coordinateSystem: 'geo',
-                    zlevel: 4,
-                    data: [{ name: '中国驯鹿', value: chinaC.concat([0]) }],
+                    zlevel: 5,
+                    data: [{ name: '', value: chinaC.concat([0]) }],
                     symbol: 'circle',
-                    symbolSize: 14,
-                    rippleEffect: { show: true, brushType: 'stroke', scale: 4, period: 3 },
-                    label: {
-                        normal: { show: true, formatter: '中国驯鹿', position: 'right', distance: 6, fontSize: 9, color: 'rgba(255,255,255,.85)' },
-                        emphasis: { show: true, fontSize: 11 }
-                    },
+                    symbolSize: 8,
+                    rippleEffect: { show: true, brushType: 'stroke', scale: 2.2, period: 3 },
+                    label: { normal: { show: false }, emphasis: { show: false } },
+                    itemStyle: { normal: { color: 'rgba(0,90,180,.9)' } }
+                });
+                series.push({
+                    name: 'iaso 驯鹿',
+                    type: 'scatter',
+                    coordinateSystem: 'geo',
+                    zlevel: 4,
+                    data: [{ name: 'iaso 驯鹿', value: chinaC.concat([0]) }],
+                    symbol: 'image://images/logo-deer-cn-white.png',
+                    symbolSize: 52,
+                    label: { normal: { show: false }, emphasis: { show: false } },
                     itemStyle: { normal: { color: '#00d4ff' } }
                 });
             }
@@ -220,14 +228,14 @@ $(function () {
                 type: 'continuous', min: 0, max: max || 1, seriesIndex: 0,
                 left: 12, bottom: 12, itemWidth: 12, itemHeight: 90,
                 text: ['高', '低'], textStyle: { color: 'rgba(255,255,255,.7)', fontSize: 10 },
-                inRange: { color: ['#0a2a4a', '#1b6bb0', '#22c1e3', '#7bed9f', '#ffeb7b'] }
+                inRange: { color: ['#1f7fd4', '#26a5e0', '#2fe0f0', '#7bed9f', '#ffeb7b'] }
             };
         }
         return option;
     }
 
-    var leftChart = echarts.init(document.getElementById('p2mapL'));
-    var rightChart = echarts.init(document.getElementById('p2mapR'));
+    var leftChart = echarts.init(document.getElementById('p2mapL'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
+    var rightChart = echarts.init(document.getElementById('p2mapR'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
 
     // 轮播（按纬度北→南），tooltip 卡片展示该区域下单/回输
     function startAuto(chart, md) {

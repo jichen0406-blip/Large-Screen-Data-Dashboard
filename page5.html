@@ -3,13 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>福可苏业绩总览 · Page 2</title>
+<title>福可苏业绩总览 · Page 5</title>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/echarts.min.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/world-data.js"></script>
-<script type="text/javascript" src="js/page2.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,7 +22,7 @@
 	<div class="head clearfix">
 		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
 		<div class="head-left">
-			<div class="update">数据更新时间 <span id="p2Upd">--</span></div>
+			<div class="update">数据更新时间 <span id="p5Upd">--</span></div>
 			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
 		</div>
 		<div class="tm-wrap">
@@ -46,61 +43,13 @@
 		</script>
 	</div>
 	<div class="mainbox">
-		<div class="p2-cards" id="p2cards">
-			<div class="p2-card"><span>NPP / 商业化 下单</span><p id="p2npO">--</p></div>
-			<div class="p2-card"><span>NPP / 商业化 回输</span><p id="p2npR">--</p></div>
-			<div class="p2-card"><span>国内导流 下单</span><p id="p2dO">--</p></div>
-			<div class="p2-card"><span>国内导流 回输</span><p id="p2dR">--</p></div>
-			<div class="p2-years" id="p2years"></div>
-		</div>
-		<ul class="clearfix nav1">
-			<li style="width: 50%">
-				<div class="box">
-					<div class="tit">海外患者（含导流以及海外商业化）<button class="map-fs" type="button" data-fs="p2mapL" data-title="海外患者（含导流以及海外商业化）">⛶</button></div>
-					<div class="boxnav" style="height: 405px; position: relative">
-						<div class="p2-map" id="p2mapL"></div>
-					</div>
-					<div class="p2-tbl-bar"><button class="map-fs" type="button" data-fs="tblwrapL" data-title="海外患者 明细">⛶</button></div>
-					<div class="p2-tbl-wrap" id="tblwrapL">
-						<table class="p2-tbl" width="100%" border="0" cellspacing="0" cellpadding="0">
-							<thead><tr><th>大洲</th><th>国家/区域</th><th>下单</th><th>回输</th></tr></thead>
-							<tbody id="p2tblL"></tbody>
-						</table>
-					</div>
-				</div>
-			</li>
-			<li style="width: 50%">
-				<div class="box">
-					<div class="tit">海外商业化<button class="map-fs" type="button" data-fs="p2mapR" data-title="海外商业化">⛶</button></div>
-					<div class="boxnav" style="height: 405px; position: relative">
-						<div class="p2-map" id="p2mapR"></div>
-					</div>
-					<div class="p2-tbl-bar"><button class="map-fs" type="button" data-fs="tblwrapR" data-title="海外商业化 明细">⛶</button></div>
-					<div class="p2-tbl-wrap" id="tblwrapR">
-						<table class="p2-tbl p2-tbl-r" width="100%" border="0" cellspacing="0" cellpadding="0">
-							<thead><tr><th>大洲</th><th>国家/区域</th><th>导流分类</th><th>下单</th><th>回输</th></tr></thead>
-							<tbody id="p2tblR"></tbody>
-						</table>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<!-- Top10 浮窗（右侧地图点击） -->
-	<div class="p2-panel-mask" id="p2PanelMask" style="display:none;">
-		<div class="p2-panel">
-			<div class="prov-head">
-				<span class="prov-title" id="p2Title">--</span>
-				<button class="prov-close" id="p2Close" type="button">×</button>
-			</div>
-			<div class="p2-panel-body">
-				<div class="p2-rank-col">
-					<div class="prov-rank-tit">Top 10 下单医院</div>
-					<ul class="prov-rank-list" id="p2RankO"></ul>
-				</div>
-				<div class="p2-rank-col">
-					<div class="prov-rank-tit">Top 10 回输医院</div>
-					<ul class="prov-rank-list" id="p2RankR"></ul>
+		<div class="box">
+			<div class="tit">P5（预留）<button class="map-fs" type="button" data-fs="p5body" data-title="Page 5">⛶</button></div>
+			<div class="boxnav p3-body" id="p5body" style="min-height: 420px; position: relative;">
+				<div class="p3-ph">
+					<div class="p3-ph-ico">Page 5</div>
+					<div class="p3-ph-txt">预留页面</div>
+					<div class="p3-ph-sub">内容待定（新建页标准模板）</div>
 				</div>
 			</div>
 		</div>
@@ -113,7 +62,7 @@
 		</div>
 		<div class="fs-body" id="fsBody"></div>
 	</div>
-	<!-- 网页导航菜单（nav.js 统一渲染） -->
+	<!-- 网页导航菜单 -->
 	<div class="menu-mask" id="menuMask" style="display:none;">
 		<div class="menu-panel">
 			<div class="menu-panel-head">
@@ -125,7 +74,7 @@
 		</div>
 	</div>
 	<script>
-	// 页面访问密码校验（与总览页一致，sessionStorage 共享）
+	// 页面访问密码校验（sessionStorage 共享，登录一次全站放行）
 	(function () {
 		var HASH = 'fcde78c0a777ada04fec4ed613421feb59ee71e70608fa7bf53c386970395c66';
 		var mask = document.getElementById('loginMask');
@@ -169,7 +118,13 @@
 			.catch(function () { wEl.innerHTML = '上海 --'; });
 	})();
 	</script>
-	
+	<script>
+	// 数据更新时间
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		$('#p5Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
+	});
+	</script>
 	<script type="text/javascript" src="js/fs.js"></script>
 </body>
 </html>
