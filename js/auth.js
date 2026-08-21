@@ -48,6 +48,12 @@
         sha256(pwd).then(function (h) {
             if (h !== u.pwdHash) { err('密码错误，请重试'); return; }
             saveSession(String(uname || '').trim(), u);
+            // 记住密码：勾选存 localStorage（账号+密码），否则清除
+            var remEl = document.getElementById('loginRemember');
+            try {
+                if (remEl && remEl.checked) localStorage.setItem('board_remember', JSON.stringify({ user: String(uname || '').trim(), pwd: pwd }));
+                else localStorage.removeItem('board_remember');
+            } catch (e) {}
             hideMask();
             if (window.jQuery) $(document).trigger('boardlogin');
             if (!canAccess(curPage())) location.replace(home());
@@ -60,6 +66,15 @@
             if (window.jQuery) $(document).trigger('boardlogin'); // 通知导航按权限重渲染
             if (!canAccess(curPage())) { location.replace(home()); return; }
         }
+        // 记住密码预填
+        try {
+            var rem = JSON.parse(localStorage.getItem('board_remember') || 'null');
+            if (rem && rem.user) {
+                var uel = document.getElementById('loginUser'); if (uel) uel.value = rem.user;
+                var pel = document.getElementById('loginPwd'); if (pel && rem.pwd) pel.value = rem.pwd;
+                var rel = document.getElementById('loginRemember'); if (rel) rel.checked = true;
+            }
+        } catch (e) {}
         var btn = document.getElementById('loginBtn');
         if (btn) btn.addEventListener('click', check);
         var pwd = document.getElementById('loginPwd');
