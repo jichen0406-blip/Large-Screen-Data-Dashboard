@@ -11,6 +11,8 @@
 <script type="text/javascript" src="js/world-data.js"></script>
 <script type="text/javascript" src="js/page2.js"></script>
 <link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
 </head>
 <body>
 		<div class="login-mask" id="loginMask">
@@ -141,44 +143,7 @@
 			<div class="menu-pager" id="menuPager"></div>
 		</div>
 	</div>
-		<script>
-	// 页面访问密码校验（账号 administrator + 密码，sessionStorage 共享）
-	(function () {
-		var HASH = 'fcde78c0a777ada04fec4ed613421feb59ee71e70608fa7bf53c386970395c66';
-		var mask = document.getElementById('loginMask');
-		if (sessionStorage.getItem('board_authed') === '1') { if (mask) mask.style.display = 'none'; return; }
-		function sha256(text) {
-			return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (h) {
-				return Array.prototype.map.call(new Uint8Array(h), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
-			});
-		}
-		function check() {
-			var user = document.getElementById('loginUser');
-			var pwd = document.getElementById('loginPwd');
-			if (!user || !pwd) return;
-			if (user.value.trim() !== 'administrator') {
-				document.getElementById('loginErr').textContent = '账号错误，请重试';
-				pwd.value = '';
-				return;
-			}
-			sha256(pwd.value).then(function (h) {
-				if (h === HASH) {
-					sessionStorage.setItem('board_authed', '1');
-					mask.style.display = 'none';
-				} else {
-					document.getElementById('loginErr').textContent = '密码错误，请重试';
-					pwd.value = '';
-					pwd.focus();
-				}
-			}).catch(function () {
-				document.getElementById('loginErr').textContent = '当前环境不支持加密（请用 http/https 访问）';
-			});
-		}
-		document.getElementById('loginBtn').addEventListener('click', check);
-		document.getElementById('loginPwd').addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
-		document.getElementById('loginUser').focus();
-	})();
-	</script>
+		
 	<script>
 	// 当天上海天气与温度
 	(function () {

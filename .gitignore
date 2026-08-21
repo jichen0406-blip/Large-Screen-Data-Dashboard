@@ -8,3 +8,5 @@ node_modules/
 js/44.json
 js/area_echarts.js
 js/Bubble.js
+
+sync_server.js

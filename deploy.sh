@@ -45,8 +45,9 @@ if [ "$(git branch --show-current)" != "main" ]; then
   git branch -M main
 fi
 
-echo "==> 4. 提交（无变更则跳过）"
+echo "==> 4. 提交（无变更则跳过；js/users.js 为本地账号权限配置，由 sync_server.js 单独管理，部署不提交）"
 git add -A
+git reset -q js/users.js
 MSG="更新数据 $(node -e "console.log(new Date().toISOString().slice(0,10))")"
 if git diff --cached --quiet; then
   echo "    无变更，跳过提交"
