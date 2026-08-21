@@ -97,11 +97,16 @@ $(function () {
             msg('已复制');
         };
     }
+    function syncUrl() {
+        var p = location.port;
+        var port = (p === '62030') ? 62000 : 62001; // 测试 62030→62000；生产 53202→62001
+        return 'http://127.0.0.1:' + port + '/api/users';
+    }
     function showGen() {
         var code = genConfig();
         var body = document.getElementById('adminBody');
         body.innerHTML = '<div class="admin-hint">正在同步到本地 js/users.js 并推送到 GitHub…</div>';
-        fetch('http://127.0.0.1:62001/api/users', {
+        fetch(syncUrl(), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ content: code })
