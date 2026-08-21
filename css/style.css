@@ -123,7 +123,7 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .fs-body{ position:relative; flex:1; min-height:0; }
 .fs-body .map{ height:100%; }
 
-.mainbox{padding: 0px 10px; margin-top: 14.4px;}
+.mainbox{padding: 0px 10px; margin-top: 14.4px; margin-left: 66px; overflow: hidden;}
 .nav1{margin-left: -6px; margin-right:-6px;}
 .nav1>li{padding:0 6px; float: left;}
 
@@ -252,15 +252,33 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .tl-empty{ color:rgba(255,255,255,.3); font-style:italic; font-size:10px; }
 
 /* ── 登录门禁 ── */
-.login-mask{ position: fixed; top:0; left:0; right:0; bottom:0; z-index:9999; display:flex; align-items:center; justify-content:center; background-color:#02234d; background-image: -webkit-radial-gradient(50% 35%, farthest-corner, #034f8e, #034987, #02366d, #002353); background-image: radial-gradient(farthest-corner at 50% 35%, #034f8e, #034987, #02366d, #002353); }
-.login-box{ width:320px; background:rgba(2,24,61,.92); border:1px solid rgba(47,137,207,.8); border-radius:10px; box-shadow:0 0 30px rgba(47,137,207,.4); padding:30px 28px 24px; text-align:center; }
-.login-logo{ font-size:20px; font-weight:700; color:#fff; letter-spacing:1px; margin-bottom:6px; }
-.login-tip{ font-size:13px; color:rgba(255,255,255,.55); margin-bottom:18px; }
-.login-box input{ width:100%; box-sizing:border-box; height:40px; background:rgba(255,255,255,.06); border:1px solid rgba(112,187,252,.4); border-radius:6px; color:#fff; font-size:15px; padding:0 12px; outline:none; }
-.login-box input:focus{ border-color:#2f89cf; box-shadow:0 0 8px rgba(47,137,207,.5); }
-.login-box button{ width:100%; height:40px; margin-top:14px; background:linear-gradient(to right,#2f89cf,#4ba6e0); border:none; border-radius:6px; color:#fff; font-size:15px; letter-spacing:4px; cursor:pointer; }
-.login-box button:hover{ opacity:.9; }
-.login-err{ margin-top:10px; font-size:12px; color:#ff6316; min-height:16px; }
+/* ── 登录页（login_29 设计） ── */
+.login-mask{ position: fixed; top:0; left:0; right:0; bottom:0; z-index:9999; background-color:#02234d; display:flex; justify-content:center; align-items:center; overflow:hidden; }
+.login-mask::before{ content:''; position:absolute; inset:-4%; background:url(../images/login29/bg.jpg) center center / cover no-repeat; animation:login-bg-zoom 22s ease-in-out infinite alternate; z-index:0; }
+@keyframes login-bg-zoom{ from{ transform:scale(1) translateX(0);} to{ transform:scale(1.1) translateX(-1.2%);} }
+.login-body{ width:100%; height:100%; display:flex; justify-content:center; align-items:center; position:relative; z-index:1; }
+.login-left{ width:50%; height:100%; display:flex; align-items:center; justify-content:center; }
+.login-left img{ max-width:72%; animation:qiu-float 7s ease-in-out infinite; }
+@keyframes qiu-float{ 0%,100%{ transform:translateY(0) rotate(0);} 50%{ transform:translateY(-22px) rotate(4deg);} }
+.login-center{ width:50%; height:100%; position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:10; }
+.login-shuzibg{ position:absolute; inset:0; background:url(../images/login29/shuzibg.png) no-repeat center center; background-size:contain; opacity:.5; z-index:-1; }
+.login-title{ text-align:center; margin-bottom:30px; animation:login-fade .8s ease-out; }
+.login-title-main{ font-size:38px; font-weight:700; color:#00bff4; font-family:'PangMenZhengDao'; background:linear-gradient(90deg,#009FF1 0%,#00E8CF 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:8px; letter-spacing:2px; }
+.login-title-sub{ font-size:20px; color:#daf9ff; letter-spacing:8px; }
+.login-logo{ width:64px; margin:0 auto 10px; display:block; }
+.login-card{ width:420px; background:rgba(32,163,245,.1); border:1px solid rgb(17,107,178); padding:26px 30px 22px; display:flex; flex-direction:column; animation:login-fade .8s ease-out; box-shadow:0 0 24px rgba(32,163,245,.15); box-sizing:border-box; }
+.login-welcome{ font-size:18px; color:#34dcfc; text-align:center; margin-bottom:18px; letter-spacing:3px; }
+.login-input{ width:100%; display:flex; align-items:center; background:rgba(24,80,136,.4); border:1px solid rgba(32,163,245,.4); margin-bottom:14px; height:46px; box-sizing:border-box; }
+.login-ico{ display:flex; align-items:center; justify-content:center; width:42px; flex:0 0 42px; }
+.login-ico img{ width:18px; }
+.login-input input{ width:100%; background:none; border:none; color:#fff; outline:none; font-size:15px; font-weight:700; box-sizing:border-box; }
+.login-input input::-webkit-input-placeholder{ color:#fff; }
+.login-err{ margin:0 0 10px; font-size:12px; color:#ff6316; min-height:16px; text-align:center; }
+.login-btn{ width:100%; height:46px; font-size:18px; letter-spacing:8px; text-indent:8px; color:#fff; background:#20A3F5; display:flex; align-items:center; justify-content:center; cursor:pointer; user-select:none; }
+.login-btn:hover{ opacity:.9; }
+.login-bolang{ position:fixed; bottom:0; left:0; right:0; height:90px; background:url(../images/login29/bolang.png) no-repeat; background-size:100% 100%; pointer-events:none; animation:pieMove 2s ease-in 0s infinite alternate; }
+@keyframes pieMove{ from{ transform:translateY(15px);} to{ transform:translateY(0);} }
+@keyframes login-fade{ from{ opacity:0; transform:translateY(12px);} to{ opacity:1; transform:translateY(0);} }
 
 /* ── 手机端自适应（≤768px） ── */
 @media (max-width: 768px) {
@@ -310,7 +328,11 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 	.tit, .tit01{ padding-right: 36px; }
 
 	/* 登录框适配窄屏 */
-	.login-box{ max-width: 90vw; }
+	/* 登录页手机端 */
+	.login-left{ display:none; }
+	.login-center{ width:100%; padding:0 16px; }
+	.login-card{ width:100%; max-width:360px; }
+	.login-title-main{ font-size:26px; }
 
 	/* Page3 手机端 */
 	.p3-kpis{ flex-direction: column; }
@@ -396,3 +418,29 @@ table.p3t .p3t-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .fs-body .p3c-main{ font-size: 14px; }
 .fs-body .p3c-sub{ font-size: 12px; }
 .fs-body .p3t-sum-tit{ font-size: 14px; }
+
+/* ── 左侧悬浮导航栏（icon 常驻，hover 展开名称，当前页高亮） ── */
+.side-nav{ position:fixed; left:0; top:72px; z-index:980; display:flex; flex-direction:column; gap:10px; padding:14px 8px; background:rgba(2,24,61,.6); border-right:1px solid rgba(47,137,207,.45); border-top-right-radius:10px; border-bottom-right-radius:10px; }
+.side-item{ display:flex; align-items:center; width:52px; height:52px; border-radius:10px; background:rgba(2,24,61,.85); border:1px solid rgba(47,137,207,.6); color:#7fd8ff; cursor:pointer; overflow:hidden; white-space:nowrap; transition:width .25s, box-shadow .25s, background .25s; text-decoration:none; }
+.side-ico{ flex:0 0 52px; text-align:center; }
+.side-ico svg{ width:30px; height:30px; fill:#fff; vertical-align:middle; }
+.side-name{ font-size:15px; color:#eaf9ff; padding-left:4px; opacity:0; transition:opacity .15s .1s; }
+.side-item:hover{ width:220px; box-shadow:0 0 14px rgba(79,227,255,.5); background:rgba(47,137,207,.55); }
+.side-item:hover .side-name{ opacity:1; }
+.side-item.cur{ background:rgba(79,227,255,.22); border-color:#4fe3ff; box-shadow:0 0 14px rgba(79,227,255,.6), inset 0 0 8px rgba(79,227,255,.25); }
+.side-item.cur .side-ico svg{ fill:#4fe3ff; }
+/* 桌面端（侧边栏可见）隐藏 ☰ 网页导航按钮，手机端保留 */
+@media (min-width: 769px){ .menu-btn{ display:none; } }
+@media (max-width: 768px){ .side-nav{ display:none; } }
+
+/* ── Page5 彩蛋：猜猜下一页 ── */
+.egg{ max-width:720px; margin:70px auto; text-align:center; border:1px solid rgba(79,227,255,.4); border-radius:14px; padding:52px 30px; background:rgba(2,37,101,.35); box-shadow:0 0 30px rgba(79,227,255,.15), inset 0 0 20px rgba(79,227,255,.08); position:relative; overflow:hidden; }
+.egg-box{ font-size:76px; animation:egg-bounce 2s infinite; }
+@keyframes egg-bounce{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-16px);} }
+.egg-title{ font-size:32px; color:#fff; letter-spacing:6px; margin-top:12px; text-shadow:0 0 16px rgba(79,227,255,.6); }
+.egg-sub{ font-size:18px; color:#daf9ff; margin-top:12px; }
+.egg-sub b{ color:#4fe3ff; }
+.egg-options{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:32px; }
+.egg-opt{ padding:11px 20px; border:1px solid rgba(47,137,207,.7); border-radius:22px; background:rgba(2,24,61,.7); color:#e8fbff; font-size:15px; cursor:pointer; transition:all .25s; }
+.egg-opt:hover{ border-color:#4fe3ff; color:#fff; box-shadow:0 0 16px rgba(79,227,255,.55); transform:translateY(-3px); }
+.egg-foot{ font-size:14px; color:rgba(255,255,255,.5); margin-top:34px; letter-spacing:1px; }

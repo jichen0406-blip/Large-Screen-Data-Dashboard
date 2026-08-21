@@ -18,7 +18,48 @@
     function defPage() { return localStorage.getItem('board_default') || 'index.html'; }
     function isKnown(id) { for (var i = 0; i < PAGES.length; i++) if (PAGES[i].id === id) return true; return false; }
 
+    // 左侧导航栏 icon（白色 Material 线条图标，page id → SVG）
+    var NAV_ICONS = {
+        'index.html': '<svg viewBox="0 0 24 24"><path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg>',
+        'page2.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
+        'page3.html': '<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 20H4v-4h4v4zm0-6H4v-4h4v4zm0-6H4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4z"/></svg>',
+        'page4.html': '<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>',
+        'page5.html': '<svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>'
+    };
+    // 左侧悬浮导航栏：白色 icon 常驻，hover 展开显示 编号+名称，当前页高亮
+    function renderSideNav() {
+        var $nav = $('#sideNav');
+        if (!$nav.length) return;
+        var html = '';
+        PAGES.forEach(function (p) {
+            var isCur = p.id === cur;
+            html += '<a class="side-item' + (isCur ? ' cur' : '') + '" href="' + p.id + '" title="' + p.num + ' ' + p.name + '">' +
+                '<span class="side-ico">' + (NAV_ICONS[p.id] || '') + '</span>' +
+                '<span class="side-name">' + p.num + ' ' + p.name + '</span>' +
+                '</a>';
+        });
+        $nav.html(html);
+    }
+    // 导航栏固定（CSS top:72px 不动），高度匹配右侧内容，至少填满可视区
+    function sizeSideNav() {
+        var $nav = $('#sideNav');
+        var $mb = $('.mainbox');
+        if (!$nav.length || !$mb.length) return;
+        var r = $mb[0].getBoundingClientRect();
+        var h = Math.max(r.height, window.innerHeight - r.top - 20);
+        $nav.css({ height: Math.round(h) + 'px' });
+    }
+
     $(function () {
+        renderSideNav();
+        sizeSideNav();
+        $(window).on('resize', sizeSideNav);
+        // mainbox 尺寸变化（如表格异步填充、折叠展开）时同步导航栏高度
+        var $mb = $('.mainbox');
+        if (typeof ResizeObserver !== 'undefined' && $mb.length) {
+            var ro = new ResizeObserver(function () { sizeSideNav(); });
+            ro.observe($mb[0]);
+        }
         var $mask = $('#menuMask');
         var $list = $('#menuList');
         var $pager = $('#menuPager');
