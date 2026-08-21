@@ -14,7 +14,11 @@
     function err(msg) { var el = document.getElementById('loginErr'); if (el) el.textContent = msg; }
     function loadSession() { try { CURRENT = JSON.parse(sessionStorage.getItem('board_user') || 'null'); } catch (e) { CURRENT = null; } }
     function hideMask() { var m = document.getElementById('loginMask'); if (m) m.style.display = 'none'; }
-    function curPage() { return location.pathname.split('/').pop() || 'index.html'; }
+    function curPage() {
+        var p = location.pathname.split('/').pop() || 'index.html';
+        if (p !== 'index.html' && p.indexOf('.html') < 0) p = p + '.html'; // npx serve 无扩展名重定向兼容
+        return p;
+    }
     // 计算用户可访问页面：admin → null（全部）；user → pageAccess 中含该用户的页面
     function accessPages(user) {
         var u = USERS[user];
