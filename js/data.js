@@ -1,8 +1,8 @@
 /* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */
-/* 数据源: bs_order - 2026-08-21T173149.559.xlsx | 数据截止: 2026-08-21 */
+/* 数据源: bs_order - 2026-08-21T173149.559.xlsx | 数据截止: 2026-08-24 */
 var BOARD_DATA = {
   "UPDATED": "2026-08-21 17:31:58",
-  "DP": "2026-08-21",
+  "DP": "2026-08-24",
   "Y": "2026",
   "YTD": {
     "O": 248,
@@ -953,6 +953,21 @@ var BOARD_DATA = {
     },
     {
       "date": "2026-08-21",
+      "orders": [],
+      "reinfusion": []
+    },
+    {
+      "date": "2026-08-22",
+      "orders": [],
+      "reinfusion": []
+    },
+    {
+      "date": "2026-08-23",
+      "orders": [],
+      "reinfusion": []
+    },
+    {
+      "date": "2026-08-24",
       "orders": [],
       "reinfusion": []
     }
@@ -6482,5 +6497,195 @@ var BOARD_DATA = {
         }
       }
     }
+  },
+  "REG": {
+    "updated": "2026-08-24 14:24:04",
+    "regions": [
+      "港澳台",
+      "东南亚",
+      "中东",
+      "东亚",
+      "拉美",
+      "中北亚",
+      "发达市场"
+    ],
+    "items": [
+      {
+        "region": "港澳台",
+        "name": "中国澳门",
+        "geo": "澳门",
+        "mode": "自营",
+        "status": "approved",
+        "statusLabel": "已获批",
+        "path": "/",
+        "approvalTxt": "2025.03",
+        "approvalTs": "2025-03-01"
+      },
+      {
+        "region": "港澳台",
+        "name": "中国香港",
+        "geo": "香港",
+        "mode": "自营",
+        "status": "approved",
+        "statusLabel": "已获批",
+        "path": "1+ mechanism",
+        "approvalTxt": "2025.11",
+        "approvalTs": "2025-11-01"
+      },
+      {
+        "region": "东南亚",
+        "name": "新加坡",
+        "geo": "Singapore",
+        "mode": "自营",
+        "status": "approved",
+        "statusLabel": "已获批",
+        "path": "Full evaluation route",
+        "approvalTxt": "2026.07",
+        "approvalTs": "2026-07-01"
+      },
+      {
+        "region": "东南亚",
+        "name": "马来西亚",
+        "geo": "Malaysia",
+        "mode": "自营",
+        "status": "submitted",
+        "statusLabel": "已提交",
+        "path": "已授予Conditional Registration，争取priority review",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "东南亚",
+        "name": "泰国",
+        "geo": "Thailand",
+        "mode": "自营",
+        "status": "submitted",
+        "statusLabel": "已提交",
+        "path": "争取Conditional Registration和 priority review",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "东南亚",
+        "name": "越南",
+        "geo": "Vietnam",
+        "mode": "自营",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "计划本月递交NDA, 争取 priority review (High-Tech)",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "东南亚",
+        "name": "印尼",
+        "geo": "Indonesia",
+        "mode": "自营",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "争取以新加坡为参考国，申请简化审评路径",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "中东",
+        "name": "沙特阿拉伯",
+        "geo": "Saudi Arabia",
+        "mode": "自营",
+        "status": "review",
+        "statusLabel": "评审中",
+        "path": "ODD, Priority review",
+        "approvalTxt": "2026 Q4",
+        "approvalTs": "2026-12-01"
+      },
+      {
+        "region": "中东",
+        "name": "阿联酋",
+        "geo": "United Arab Emirates",
+        "mode": "自营",
+        "status": "review",
+        "statusLabel": "评审中",
+        "path": "争取Fast track",
+        "approvalTxt": "2027 Q1",
+        "approvalTs": "2027-03-01"
+      },
+      {
+        "region": "中东",
+        "name": "科威特",
+        "geo": "Kuwait",
+        "mode": "自营",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "预计2026.9提交, 争取Fast track",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "东亚",
+        "name": "日本",
+        "geo": "Japan",
+        "mode": "自营",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "开展小样本量临床桥接",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "东亚",
+        "name": "韩国",
+        "geo": "Korea",
+        "mode": "授权合作伙伴",
+        "status": "review",
+        "statusLabel": "评审中",
+        "path": "ODD, Priority review",
+        "approvalTxt": "2027 Q1",
+        "approvalTs": "2027-03-01"
+      },
+      {
+        "region": "拉美",
+        "name": "巴西",
+        "geo": "Brazil",
+        "mode": "授权合作伙伴",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "中北亚",
+        "name": "俄罗斯",
+        "geo": "Russia",
+        "mode": "授权合作伙伴",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "发达市场",
+        "name": "澳大利亚",
+        "geo": "Australia",
+        "mode": "自营",
+        "status": "submitted",
+        "statusLabel": "已提交",
+        "path": "Full evaluation route",
+        "approvalTxt": "",
+        "approvalTs": null
+      },
+      {
+        "region": "发达市场",
+        "name": "加拿大",
+        "geo": "Canada",
+        "mode": "自营",
+        "status": "planned",
+        "statusLabel": "计划中",
+        "path": "Conditional approval",
+        "approvalTxt": "",
+        "approvalTs": null
+      }
+    ]
   }
 };

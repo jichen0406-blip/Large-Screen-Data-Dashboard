@@ -2,17 +2,17 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>福可苏业绩总览 · Page 6</title>
+<title>福可苏业绩总览 · 更新日志</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <link rel="stylesheet" href="css/style.css">
-	<script>window.PAGE_KEY='reserved';</script>
+	<script>window.PAGE_KEY='changelog';</script>
 	<script type="text/javascript" src="js/users.js"></script>
 	<script type="text/javascript" src="js/auth.js"></script>
 </head>
 <body>
-		<div class="login-mask" id="loginMask">
+	<div class="login-mask" id="loginMask">
 		<div class="login-body">
 			<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
 			<div class="login-center">
@@ -42,7 +42,7 @@
 	</div><div class="head clearfix">
 		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
 		<div class="head-left">
-			<div class="update">数据更新时间 <span id="p5Upd">--</span></div>
+			<div class="update" id="dataUpd">数据更新时间 --</div>
 			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
 		</div>
 		<div class="tm-wrap">
@@ -62,27 +62,13 @@
 		}
 		</script>
 	</div>
-	<div class="mainbox">
-		<div class="egg">
-			<div class="egg-box">🎁</div>
-			<div class="egg-title">彩蛋 · 敬请期待</div>
-			<div class="egg-sub">大家猜猜，<b>下一页会是什么内容？</b></div>
-			<div class="egg-options">
-				<span class="egg-opt">📊 更多数据图表</span>
-				<span class="egg-opt">🏥 医院明细榜单</span>
-				<span class="egg-opt">🌏 全球市场版图</span>
-				<span class="egg-opt">🤔 你猜？</span>
+	<div class="mainbox clg-main">
+		<div class="box clg-box">
+			<div class="tit">更新日志</div>
+			<div class="boxnav clg-body">
+				<div class="clg-list" id="clgList"></div>
 			</div>
-			<div class="egg-foot">猜中的朋友… 有奖（也许 😄）</div>
 		</div>
-	</div>
-	<!-- 地图放大全屏 -->
-	<div class="fs-mask" id="fsMask" style="display:none;">
-		<div class="fs-head">
-			<span class="fs-title" id="fsTitle">--</span>
-			<button class="fs-close" id="fsClose" type="button">×</button>
-		</div>
-		<div class="fs-body" id="fsBody"></div>
 	</div>
 	<!-- 网页导航菜单 -->
 	<div class="menu-mask" id="menuMask" style="display:none;">
@@ -95,7 +81,7 @@
 			<div class="menu-pager" id="menuPager"></div>
 		</div>
 	</div>
-		
+
 	<script>
 	// 当天上海天气与温度
 	(function () {
@@ -114,9 +100,40 @@
 	// 数据更新时间
 	$(function () {
 		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
-		$('#p5Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
+		$('#dataUpd').text((B && B.UPDATED) ? ('数据更新时间 ' + B.UPDATED) : '数据更新时间 --');
 	});
 	</script>
+	<script>
+	// 更新日志：主要新开发功能，按时间从新到旧
+	$(function () {
+		var CHANGES = [
+			{ d: '2026-08-24', t: [
+				'新增「更新日志」页',
+				'新增「海外注册进度」页（世界地图 + 甘特图）',
+				'页面授权改为识别码机制',
+				'页面样式/脚本前缀规范化'
+			] },
+			{ d: '2026-08-23', t: '新增后台管理：账号与页面权限配置' },
+			{ d: '2026-08-22', t: '新增「辖区数据管理 1/2」页' },
+			{ d: '2026-08-20', t: '新增 P3 海外/商业化、P4 海外注册进度 页面' }
+		];
+		var html = '';
+		CHANGES.forEach(function (c) {
+			var items = Object.prototype.toString.call(c.t) === '[object Array]' ? c.t : [c.t];
+			var txt = '';
+			for (var i = 0; i < items.length; i++) {
+				txt += '<div class="clg-line">' + (items.length > 1 ? (i + 1) + '、' : '') + items[i] + '</div>';
+			}
+			html += '<div class="clg-item">' +
+				'<div class="clg-txt">' + txt + '</div>' +
+				'<span class="clg-dot"></span>' +
+				'<span class="clg-date">' + c.d + '</span></div>';
+		});
+		$('#clgList').html(html);
+	});
+	</script>
+	<!-- 右下角装饰球体（复用登录页球体 + 浮动动画） -->
+	<div class="clg-ball"><img src="images/login29/qiu.png" alt=""></div>
 	<script type="text/javascript" src="js/fs.js"></script>
 	<!-- 左侧悬浮导航栏 -->
 	<div class="side-nav" id="sideNav"></div>
