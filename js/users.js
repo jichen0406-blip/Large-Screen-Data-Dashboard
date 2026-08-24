@@ -20,6 +20,11 @@ window.BOARD_USERS = {
       "pwdHash": "a8c40115a8e5893e5392b39e1af8d968585d556691b57fc5d5117b44d56280de",
       "role": "user",
       "enabled": true
+    },
+    "test3": {
+      "pwdHash": "fd61a03af4f77d870fc21e05e7e80678095c92d808cfb3b5c279ee04c74aca13",
+      "role": "user",
+      "enabled": true
     }
   },
   "pageAccess": {
@@ -38,7 +43,9 @@ window.BOARD_USERS = {
     "region2": [
       "test"
     ],
-    "reserved": [],
+    "reserved": [
+      "test3"
+    ],
     "admin": [],
     "changelog": [
       "userA",
