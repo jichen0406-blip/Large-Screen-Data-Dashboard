@@ -6,32 +6,44 @@ window.BOARD_USERS = {
       "role": "admin",
       "enabled": true
     },
-    "test1": {
+    "userA": {
+      "pwdHash": "91b4d142823f7d20c5f08df69122de43f35f057a988d9619f6d3138485c9a203",
+      "role": "user",
+      "enabled": true
+    },
+    "test": {
       "pwdHash": "bcb15f821479b4d5772bd0ca866c00ad5f926e3580720659cc80d39c9d09802a",
       "role": "user",
       "enabled": true
     },
-    "test2": {
-      "pwdHash": "4cc8f4d609b717356701c57a03e737e5ac8fe885da8c7163d3de47e01849c635",
+    "xiejiaxiao": {
+      "pwdHash": "a8c40115a8e5893e5392b39e1af8d968585d556691b57fc5d5117b44d56280de",
       "role": "user",
       "enabled": true
     }
   },
   "pageAccess": {
-    "index.html": [
-      "test1"
+    "index": [
+      "userA"
     ],
-    "page2.html": [
-      "test1"
+    "sales": [
+      "test"
     ],
-    "page3.html": [
-      "test2"
+    "reg": [
+      "xiejiaxiao"
     ],
-    "page4.html": [
-      "test2"
+    "region1": [
+      "test"
     ],
-    "page5.html": [
-      "test2"
+    "region2": [
+      "test"
+    ],
+    "reserved": [],
+    "admin": [],
+    "changelog": [
+      "userA",
+      "test",
+      "xiejiaxiao"
     ]
   }
 };
