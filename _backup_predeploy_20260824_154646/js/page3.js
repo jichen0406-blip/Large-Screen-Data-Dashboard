@@ -1,5 +1,5 @@
 // Page3：辖区数据管理1 — KPI 目标达成（公司目标）+ 国内&海外月度表 1/2（公司DOM&OB目标）
-// 共享函数见 js/pt-common.js；时间控制 P3/P4 共享（sessionStorage pt_time）
+// 共享函数见 js/p3t-common.js；时间控制 P3/P4 共享（sessionStorage p3t_time）
 $(function () {
     var B = window.BOARD_DATA;
     if (!B || !B.P3) return;
@@ -11,11 +11,11 @@ $(function () {
     Object.keys(TARGET).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
     Object.keys(MO).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
     function updateAll() { calc(); renderTables(); }
-    initPtTime('#p4y', '#p4m', yearKeys, updateAll);
+    initP3tTime('#p3y', '#p3m', yearKeys, updateAll);
 
     // KPI 卡片（公司目标）
     function calc() {
-        var y = $('#p4y').val(), m = parseInt($('#p4m').val(), 10);
+        var y = $('#p3y').val(), m = parseInt($('#p3m').val(), 10);
         var ly = String(parseInt(y, 10) - 1);
         var ytgtO = 0, ytgtR = 0, yactO = 0, yactR = 0, lyactO = 0, lyactR = 0;
         for (var i = 1; i <= m; i++) {
@@ -31,8 +31,8 @@ $(function () {
         var mtgt = TARGET[mk] || { o: 0, r: 0 };
         set('mtdOtgt', mtgt.o); set('mtdOact', MO[mk] || 0); set('mtdOrate', rate(MO[mk] || 0, mtgt.o)); set('mtdOyoy', yoy(MO[mk] || 0, MO[mlk] || 0));
         set('mtdRtgt', mtgt.r); set('mtdRact', MR[mk] || 0); set('mtdRrate', rate(MR[mk] || 0, mtgt.r)); set('mtdRyoy', yoy(MR[mk] || 0, MR[mlk] || 0));
-        $('#p4ytdNum').text('下单' + yactO + ' · 回输' + yactR);
-        $('#p4mtdNum').text('下单' + (MO[mk] || 0) + ' · 回输' + (MR[mk] || 0));
+        $('#p3ytdNum').text('下单' + yactO + ' · 回输' + yactR);
+        $('#p3mtdNum').text('下单' + (MO[mk] || 0) + ' · 回输' + (MR[mk] || 0));
     }
     function set(id, v) {
         var el = document.getElementById(id);
@@ -53,20 +53,20 @@ $(function () {
         return (b && b[cat] && b[cat][fld]) || 0;
     }
     function renderND(elId, fld, name) {
-        var y = parseInt($('#p4y').val(), 10), m = parseInt($('#p4m').val(), 10);
+        var y = parseInt($('#p3y').val(), 10), m = parseInt($('#p3m').val(), 10);
         var ly = y - 1;
         var gs = [
             { label: '国内', dom: true },
             { label: '海外', dom: false },
             { label: 'Total', dom: null }
         ];
-        var h = '<table class="pt"><thead><tr><th class="pt-lbl">' + name + '</th>';
+        var h = '<table class="p3t"><thead><tr><th class="p3t-lbl">' + name + '</th>';
         for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th></tr></thead><tbody>';
+        h += '<th class="p3t-ytd">YTD</th></tr></thead><tbody>';
         gs.forEach(function (g) {
-            h += '<tr class="pt-grp"><td class="pt-lbl" colspan="14">' + g.label + '</td></tr>';
+            h += '<tr class="p3t-grp"><td class="p3t-lbl" colspan="14">' + g.label + '</td></tr>';
             ['Tar', 'Act', 'Act%', 'LY', 'YOY'].forEach(function (mt) {
-                var row = ptMetricRowHTML(mt, m, function (i) {
+                var row = p3tMetricRowHTML(mt, m, function (i) {
                     var t, a, l;
                     if (g.dom === true) { t = compV(y + '-' + pad(i), 'DOM', fld); a = mVal(ND, y, i, 'dom', fld); l = mVal(ND, ly, i, 'dom', fld); }
                     else if (g.dom === false) { t = compV(y + '-' + pad(i), 'OB', fld); a = mVal(ND, y, i, 'ov', fld); l = mVal(ND, ly, i, 'ov', fld); }
@@ -81,8 +81,8 @@ $(function () {
     }
 
     function renderTables() {
-        renderND('p4t41', 'o', '1. 国内&海外 下单月度');
-        renderND('p4t42', 'r', '2. 国内&海外 回输月度');
+        renderND('p3t41', 'o', '1. 国内&海外 下单月度');
+        renderND('p3t42', 'r', '2. 国内&海外 回输月度');
     }
 
     updateAll();

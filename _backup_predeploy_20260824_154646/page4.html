@@ -2,12 +2,14 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>福可苏业绩总览 · Page 6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福可苏业绩总览 · 辖区数据管理2</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/p3t-common.js"></script>
+<script type="text/javascript" src="js/page4.js"></script>
 <link rel="stylesheet" href="css/style.css">
-	<script>window.PAGE_KEY='reserved';</script>
 	<script type="text/javascript" src="js/users.js"></script>
 	<script type="text/javascript" src="js/auth.js"></script>
 </head>
@@ -42,7 +44,7 @@
 	</div><div class="head clearfix">
 		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
 		<div class="head-left">
-			<div class="update">数据更新时间 <span id="p5Upd">--</span></div>
+			<div class="update">数据更新时间 <span id="p4Upd">--</span></div>
 			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
 		</div>
 		<div class="tm-wrap">
@@ -63,17 +65,29 @@
 		</script>
 	</div>
 	<div class="mainbox">
-		<div class="egg">
-			<div class="egg-box">🎁</div>
-			<div class="egg-title">彩蛋 · 敬请期待</div>
-			<div class="egg-sub">大家猜猜，<b>下一页会是什么内容？</b></div>
-			<div class="egg-options">
-				<span class="egg-opt">📊 更多数据图表</span>
-				<span class="egg-opt">🏥 医院明细榜单</span>
-				<span class="egg-opt">🌏 全球市场版图</span>
-				<span class="egg-opt">🤔 你猜？</span>
+		<div class="p3-time">
+			<span class="p3-time-tit">时间控制</span>
+			<select id="p4y" class="p3-sel" title="年份"></select>
+			<select id="p4m" class="p3-sel" title="月份"></select>
+			<span class="p3-time-note">时间控制 P3/P4 共享；下单按合同创建日期 / 回输按实际回输结束时间；同比按完整月</span>
+		</div>
+		<div class="p3-tables">
+			<div class="p3-tbl-row">
+				<div class="p3-tbl-col">
+					<div class="p3-tbl-tit">3. 辖区下单达成 <span class="p3-tbl-tag">挑战目标</span><button class="map-fs" type="button" data-fs="p3t61" data-title="3. 辖区下单达成（挑战目标）">⛶</button></div>
+					<div class="p3-tbl-wrap" id="p3t61"></div>
+				</div>
+				<div class="p3-tbl-col">
+					<div class="p3-tbl-tit">4. 辖区回输达成 <span class="p3-tbl-tag">挑战目标</span><button class="map-fs" type="button" data-fs="p3t62" data-title="4. 辖区回输达成（挑战目标）">⛶</button></div>
+					<div class="p3-tbl-wrap" id="p3t62"></div>
+				</div>
 			</div>
-			<div class="egg-foot">猜中的朋友… 有奖（也许 😄）</div>
+			<div class="p3-tbl-row">
+				<div class="p3-tbl-col p3-tbl-full">
+					<div class="p3-tbl-tit">5. 患者渠道销量<button class="map-fs" type="button" data-fs="p3t43" data-title="5. 患者渠道销量">⛶</button></div>
+					<div class="p3-tbl-wrap" id="p3t43"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- 地图放大全屏 -->
@@ -114,7 +128,7 @@
 	// 数据更新时间
 	$(function () {
 		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
-		$('#p5Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
+		$('#p4Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
 	});
 	</script>
 	<script type="text/javascript" src="js/fs.js"></script>

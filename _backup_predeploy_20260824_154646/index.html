@@ -1,13 +1,16 @@
 <!doctype html>
-<html lang="zh-CN">
+<html>
 <head>
 <meta charset="utf-8">
-<title>福可苏业绩总览 · Page 6</title>
+<title>福可苏业绩总览</title>
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
 <link rel="stylesheet" href="css/style.css">
-	<script>window.PAGE_KEY='reserved';</script>
 	<script type="text/javascript" src="js/users.js"></script>
 	<script type="text/javascript" src="js/auth.js"></script>
 </head>
@@ -42,38 +45,143 @@
 	</div><div class="head clearfix">
 		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
 		<div class="head-left">
-			<div class="update">数据更新时间 <span id="p5Upd">--</span></div>
+			<div class="update" id="dataUpd">数据更新时间 --</div>
 			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
 		</div>
 		<div class="tm-wrap">
-			<div class="time" id="showTime">--</div>
+			<div class="time" id="showTime">2018/6/12 17:00:12</div>
 			<div class="weather" id="weather">上海 --</div>
 		</div>
 		<script>
-		var t = null;
-		t = setTimeout(time, 1000);
-		function time() {
-			clearTimeout(t);
-			var dt = new Date();
-			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
-			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
-			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
-			t = setTimeout(time, 1000);
-		}
-		</script>
+var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       var dt = new Date();
+		var y=dt.getFullYear();
+		var mt=dt.getMonth()+1;
+		var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"/"+mt+"/"+day+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环运行
+    }
+
+</script>
 	</div>
 	<div class="mainbox">
-		<div class="egg">
-			<div class="egg-box">🎁</div>
-			<div class="egg-title">彩蛋 · 敬请期待</div>
-			<div class="egg-sub">大家猜猜，<b>下一页会是什么内容？</b></div>
-			<div class="egg-options">
-				<span class="egg-opt">📊 更多数据图表</span>
-				<span class="egg-opt">🏥 医院明细榜单</span>
-				<span class="egg-opt">🌏 全球市场版图</span>
-				<span class="egg-opt">🤔 你猜？</span>
-			</div>
-			<div class="egg-foot">猜中的朋友… 有奖（也许 😄）</div>
+		<ul class="clearfix nav1">
+			<li style="width: 22%">
+				<div class="box">
+					<div class="tit">Top 30下单医院<button class="map-fs" type="button" data-fs="tbl1body" data-title="Top 30下单医院">⛶</button></div>
+					<div class="boxnav" style="height: 225px;">
+						<div class="tbl-scroll" id="tbl1body">
+							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
+								<thead>
+									<tr><th>排序</th><th>医院名称</th><th>YTD下单</th><th>同比增长</th></tr>
+								</thead>
+								<tbody id="tbl1"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="tit">Top 30回输医院<button class="map-fs" type="button" data-fs="tbl3body" data-title="Top 30回输医院">⛶</button></div>
+					<div class="boxnav" style="height: 225px;">
+						<div class="tbl-scroll" id="tbl3body">
+							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
+								<thead>
+									<tr><th>排序</th><th>医院名称</th><th>YTD回输</th><th>同比增长</th></tr>
+								</thead>
+								<tbody id="tbl3"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="width: 56%">
+				<div class="box">
+					<div class="boxnav mapc" style="height: 550px; position: relative">
+						<div class="mapnav">
+							<ul>
+								<li><div><span>YTD下单</span><p id="navO">--</p></div></li>
+								<li><div><span>YTD回输</span><p id="navR">--</p></div></li>
+								<li><div><span>YTD单采</span><p id="navA">--</p></div></li>
+								<li><div><span>YTD放行</span><p id="navQ">--</p></div></li>
+							</ul>
+						</div>
+						<div class="mapnav3">
+							<ul>
+								<li><div><span>MTD下单</span><p id="mtdo">--</p></div></li>
+								<li><div><span>MTD回输</span><p id="mtdr">--</p></div></li>
+								<li><div><span>MTD单采</span><p id="mtda">--</p></div></li>
+								<li><div><span>MTD放行</span><p id="mtdq">--</p></div></li>
+							</ul>
+						</div>
+						<div class="map" id="map"><div class="radar-sweep"></div></div>
+						<button class="map-fs" type="button" data-fs="map" data-fs2="provPanel" data-title="中国地图">⛶</button>
+						<div class="prov-panel" id="provPanel">
+							<div class="prov-head">
+								<span class="prov-title" id="provTitle">--</span>
+								<span class="prov-stats" id="provStats"></span>
+								<button class="prov-close" id="provClose" title="关闭">×</button>
+							</div>
+							<div class="prov-loading" id="provLoading">加载中…</div>
+							<div class="prov-body">
+								<div class="prov-chart-wrap" id="provChart"></div>
+								<div class="prov-rank">
+									<div class="prov-rank-tit">Top 5 下单医院</div>
+									<ul class="prov-rank-list" id="provRank"></ul>
+									<div class="prov-rank-tit prov-rank-tit2">Top 5 回输医院</div>
+									<ul class="prov-rank-list" id="provRankR"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="width: 22%">
+				<div class="box">
+					<div class="tit">当月下单 & 回输<button class="map-fs" type="button" data-fs="last7List" data-title="当月下单 & 回输">⛶</button></div>
+					<div class="boxnav" style="height: 505px;">
+						<div class="sev-scroll" id="last7List"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="box" style="padding: 20px 0;">
+			<ul class="clearfix nav2">
+				<li style="width:25%">
+					<div class="tit01">下单月度趋势<button class="map-fs" type="button" data-fs="echart6" data-title="下单月度趋势">⛶</button></div>
+					<div class="chart-box"><div class="ftechart" id="echart6"></div></div>
+				</li>
+				<li style="width:25%">
+					<div class="tit01">回输月度趋势<button class="map-fs" type="button" data-fs="echart4" data-title="回输月度趋势">⛶</button></div>
+					<div class="chart-box"><div class="ftechart" id="echart4"></div></div>
+				</li>
+				<li style="width:25%">
+					<div class="tit01">YTD异常订单<button class="map-fs" type="button" data-fs="abnBox" data-title="YTD异常订单">⛶</button></div>
+					<div class="nav2-chart" id="abnBox" style="flex: 1; min-height: 0; display: flex;">
+						
+						<div style="flex: 1; min-width:0" class="wancheng">
+							<div><span>异常订单合计</span>
+								<h3 class="abn-num"><span id="abnNum">--</span><i>单</i></h3>
+							</div>
+						</div>
+						<div style="flex: 2; min-width:0" id="myd1"></div>
+					</div>
+				</li>
+				<li style="width:25%">
+					<div class="tit01">COE医院销量占比<button class="map-fs" type="button" data-fs="coeBox" data-title="COE医院销量占比">⛶</button></div>
+					<div class="nav2-chart" id="coeBox" style="flex: 1; min-height: 0; display: flex;">
+						
+						<div style="flex: 1; min-width:0" id="fb03"></div>
+						<div style="flex: 1; min-width:0" id="fb04"></div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<!-- 地图放大全屏 -->
@@ -84,7 +192,7 @@
 		</div>
 		<div class="fs-body" id="fsBody"></div>
 	</div>
-	<!-- 网页导航菜单 -->
+	<!-- 网页导航菜单（nav.js 统一渲染） -->
 	<div class="menu-mask" id="menuMask" style="display:none;">
 		<div class="menu-panel">
 			<div class="menu-panel-head">
@@ -96,27 +204,7 @@
 		</div>
 	</div>
 		
-	<script>
-	// 当天上海天气与温度
-	(function () {
-		var wEl = document.getElementById('weather');
-		var WSYM = {0:'☀',1:'☀',2:'⛅',3:'☁',45:'☁',48:'☁',51:'☔',53:'☔',55:'☔',56:'☔',57:'☔',61:'☔',63:'☔☔',65:'☔☔☔',66:'☔☔',67:'☔☔',71:'❄',73:'❄',75:'❄',77:'❄',80:'☔',81:'☔☔',82:'☔☔☔',85:'❄',86:'❄',95:'⛈',96:'⛈',99:'⛈'};
-		fetch('https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&current=temperature_2m,weather_code&timezone=Asia%2FShanghai')
-			.then(function (r) { return r.json(); })
-			.then(function (d) {
-				var t = Math.round(d.current.temperature_2m);
-				wEl.innerHTML = '上海 ' + (WSYM[d.current.weather_code] || '--') + ' ' + t + '℃';
-			})
-			.catch(function () { wEl.innerHTML = '上海 --'; });
-	})();
-	</script>
-	<script>
-	// 数据更新时间
-	$(function () {
-		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
-		$('#p5Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
-	});
-	</script>
+	
 	<script type="text/javascript" src="js/fs.js"></script>
 	<!-- 左侧悬浮导航栏 -->
 	<div class="side-nav" id="sideNav"></div>

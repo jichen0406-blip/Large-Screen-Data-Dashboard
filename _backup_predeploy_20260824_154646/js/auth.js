@@ -19,21 +19,6 @@
         if (p !== 'index.html' && p.indexOf('.html') < 0) p = p + '.html'; // npx serve 无扩展名重定向兼容
         return p;
     }
-    // 页面唯一识别码：优先取页内 window.PAGE_KEY（随内容走，改文件名不影响），否则按 BOARD_PAGES 由文件名反解
-    function keyOfFile(file) {
-        var pages = window.BOARD_PAGES || [];
-        for (var i = 0; i < pages.length; i++) if (pages[i].id === file) return pages[i].key;
-        return null;
-    }
-    function fileOfKey(k) {
-        var pages = window.BOARD_PAGES || [];
-        for (var i = 0; i < pages.length; i++) if (pages[i].key === k) return pages[i].id;
-        return 'index.html';
-    }
-    function curKey() {
-        if (window.PAGE_KEY) return window.PAGE_KEY;
-        return keyOfFile(curPage()) || curPage();
-    }
     // 计算用户可访问页面：admin → null（全部）；user → pageAccess 中含该用户的页面
     function accessPages(user) {
         var u = USERS[user];
@@ -53,10 +38,7 @@
         if (CURRENT.role === 'admin') return true;
         return (CURRENT.pages || []).indexOf(page) >= 0;
     }
-    function home() {
-        var pages = (CURRENT && CURRENT.pages) || [];
-        return fileOfKey(pages[0] || 'index');
-    }
+    function home() { return (CURRENT && CURRENT.pages && CURRENT.pages[0]) ? CURRENT.pages[0] : 'index.html'; }
     function check() {
         var uname = (document.getElementById('loginUser') || {}).value;
         var pwd = (document.getElementById('loginPwd') || {}).value;
@@ -74,7 +56,7 @@
             } catch (e) {}
             hideMask();
             if (window.jQuery) $(document).trigger('boardlogin');
-            if (!canAccess(curKey())) location.replace(home());
+            if (!canAccess(curPage())) location.replace(home());
         });
     }
     function init() {
@@ -82,7 +64,7 @@
         if (CURRENT && CURRENT.authed === '1') {
             hideMask();
             if (window.jQuery) $(document).trigger('boardlogin'); // 通知导航按权限重渲染
-            if (!canAccess(curKey())) { location.replace(home()); return; }
+            if (!canAccess(curPage())) { location.replace(home()); return; }
         }
         // 记住密码预填
         try {

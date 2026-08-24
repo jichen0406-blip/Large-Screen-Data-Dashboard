@@ -2,12 +2,14 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>福可苏业绩总览 · Page 5</title>
+<title>福可苏业绩总览 · 辖区数据管理2</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/pt-common.js"></script>
+<script type="text/javascript" src="js/page5.js"></script>
 <link rel="stylesheet" href="css/style.css">
+	<script>window.PAGE_KEY='region2';</script>
 	<script type="text/javascript" src="js/users.js"></script>
 	<script type="text/javascript" src="js/auth.js"></script>
 </head>
@@ -63,17 +65,29 @@
 		</script>
 	</div>
 	<div class="mainbox">
-		<div class="egg">
-			<div class="egg-box">🎁</div>
-			<div class="egg-title">彩蛋 · 敬请期待</div>
-			<div class="egg-sub">大家猜猜，<b>下一页会是什么内容？</b></div>
-			<div class="egg-options">
-				<span class="egg-opt">📊 更多数据图表</span>
-				<span class="egg-opt">🏥 医院明细榜单</span>
-				<span class="egg-opt">🌏 全球市场版图</span>
-				<span class="egg-opt">🤔 你猜？</span>
+		<div class="pt-time">
+			<span class="pt-time-tit">时间控制</span>
+			<select id="p5y" class="pt-sel" title="年份"></select>
+			<select id="p5m" class="pt-sel" title="月份"></select>
+			<span class="pt-time-note">时间控制 P3/P4 共享；下单按合同创建日期 / 回输按实际回输结束时间；同比按完整月</span>
+		</div>
+		<div class="pt-tables">
+			<div class="pt-tbl-row">
+				<div class="pt-tbl-col">
+					<div class="pt-tbl-tit">3. 辖区下单达成 <span class="pt-tbl-tag">挑战目标</span><button class="map-fs" type="button" data-fs="p5t61" data-title="3. 辖区下单达成（挑战目标）">⛶</button></div>
+					<div class="pt-tbl-wrap" id="p5t61"></div>
+				</div>
+				<div class="pt-tbl-col">
+					<div class="pt-tbl-tit">4. 辖区回输达成 <span class="pt-tbl-tag">挑战目标</span><button class="map-fs" type="button" data-fs="p5t62" data-title="4. 辖区回输达成（挑战目标）">⛶</button></div>
+					<div class="pt-tbl-wrap" id="p5t62"></div>
+				</div>
 			</div>
-			<div class="egg-foot">猜中的朋友… 有奖（也许 😄）</div>
+			<div class="pt-tbl-row">
+				<div class="pt-tbl-col pt-tbl-full">
+					<div class="pt-tbl-tit">5. 患者渠道销量<button class="map-fs" type="button" data-fs="p5t43" data-title="5. 患者渠道销量">⛶</button></div>
+					<div class="pt-tbl-wrap" id="p5t43"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- 地图放大全屏 -->

@@ -68,9 +68,9 @@ $(function () {
     function renderPages() {
         var users = userNames('user');
         var rows = pages().map(function (p) {
-            var sel = (state.pageAccess[p.key] || []).slice();
+            var sel = (state.pageAccess[p.id] || []).slice();
             var boxes = users.map(function (n) {
-                return '<label class="admin-ck"><input type="checkbox" value="' + n + '" data-pg="' + p.key + '"' + (sel.indexOf(n) >= 0 ? ' checked' : '') + '>' + n + '</label>';
+                return '<label class="admin-ck"><input type="checkbox" value="' + n + '" data-pg="' + p.id + '"' + (sel.indexOf(n) >= 0 ? ' checked' : '') + '>' + n + '</label>';
             }).join('');
             return '<tr><td>' + p.num + ' ' + p.name + '</td><td class="admin-ckwrap">' + (boxes || '<span class="admin-off">（无用户）</span>') + '</td></tr>';
         }).join('');
@@ -167,7 +167,7 @@ $(function () {
         var arr = state.pageAccess[pg] = state.pageAccess[pg] || [];
         if (this.checked) { if (arr.indexOf(this.value) < 0) arr.push(this.value); }
         else { var i = arr.indexOf(this.value); if (i >= 0) arr.splice(i, 1); }
-        var p = pages().filter(function (x) { return x.key === pg; })[0];
+        var p = pages().filter(function (x) { return x.id === pg; })[0];
         msg('已更新 ' + (p ? p.num : pg) + ' 权限');
     });
 

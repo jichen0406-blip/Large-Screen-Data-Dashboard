@@ -510,15 +510,15 @@ var OV_AM = { HK_AM1: 'HK', SG_AM: 'SG', KSA_AM: 'KSA' }; // 海外AM兜底 → 
 var REG_LABEL = { HK: '香港', SG: '新加坡', KSA: '沙特' };
 var P3T_AMS = ['崔珺', '赵蕊', '赵俊兴', '龚卉', '高威龙', '董硕', '兰明金', '李磊'];
 
-var ptND = {}, ptREG = {}, ptOV = {}; // 键：'YYYY-MM'
-function ptInit(k) {
-  if (!ptND[k]) {
-    ptND[k] = { dom: { o: 0, r: 0 }, ov: { o: 0, r: 0 } };
-    ptREG[k] = {};
-    ptOV[k] = { docRef: { o: 0, r: 0 }, obRef: { o: 0, r: 0 }, hk: { o: 0, r: 0 }, sg: { o: 0, r: 0 }, ksa: { o: 0, r: 0 }, total: { o: 0, r: 0 } };
+var p3tND = {}, p3tREG = {}, p3tOV = {}; // 键：'YYYY-MM'
+function p3tInit(k) {
+  if (!p3tND[k]) {
+    p3tND[k] = { dom: { o: 0, r: 0 }, ov: { o: 0, r: 0 } };
+    p3tREG[k] = {};
+    p3tOV[k] = { docRef: { o: 0, r: 0 }, obRef: { o: 0, r: 0 }, hk: { o: 0, r: 0 }, sg: { o: 0, r: 0 }, ksa: { o: 0, r: 0 }, total: { o: 0, r: 0 } };
   }
 }
-function ptReg(k, ent) { var b = ptREG[k]; if (!b[ent]) b[ent] = { o: 0, r: 0 }; return b[ent]; }
+function p3tReg(k, ent) { var b = p3tREG[k]; if (!b[ent]) b[ent] = { o: 0, r: 0 }; return b[ent]; }
 // 返回 { ov, regKey, am }：ov=海外; regKey=海外地区键或''; am=清洗后AM
 // 回输与下单统一用下单医院（回输医院字段基本全空，仅个别记录，不采用）
 function attribP3(r, d, isRe) {
@@ -531,97 +531,22 @@ function attribP3(r, d, isRe) {
 }
 // 统计一单（fld='o'下单 / 'r'回输）到 ND/REG/OV 三桶；未知海外地区安全兜底
 function addP3(k, d, fld, a) {
-  if (a.ov) ptND[k].ov[fld]++; else ptND[k].dom[fld]++;
+  if (a.ov) p3tND[k].ov[fld]++; else p3tND[k].dom[fld]++;
   var ent = a.ov ? (REG_LABEL[a.regKey] || a.regKey) : a.am;
-  ptReg(k, ent)[fld]++;
-  if (!a.ov) ptReg(k, '国内')[fld]++;
-  ptReg(k, 'total')[fld]++;
+  p3tReg(k, ent)[fld]++;
+  if (!a.ov) p3tReg(k, '国内')[fld]++;
+  p3tReg(k, 'total')[fld]++;
   var cat = a.ov
-    ? (ptOV[k][a.regKey.toLowerCase()] ? a.regKey.toLowerCase() : null)
+    ? (p3tOV[k][a.regKey.toLowerCase()] ? a.regKey.toLowerCase() : null)
     : (d.flow === '医生导流' ? 'docRef' : d.flow === 'OB导流' ? 'obRef' : null);
-  if (cat) { ptOV[k][cat][fld]++; ptOV[k].total[fld]++; }
+  if (cat) { p3tOV[k][cat][fld]++; p3tOV[k].total[fld]++; }
 }
 records.forEach(function (r) {
   var d = dictInfo[r.no] || {};
-  if (r.od) { var k1 = r.od.slice(0, 7); ptInit(k1); addP3(k1, d, 'o', attribP3(r, d, false)); }
-  if (r.re) { var k2 = r.re.slice(0, 7); ptInit(k2); addP3(k2, d, 'r', attribP3(r, d, true)); }
+  if (r.od) { var k1 = r.od.slice(0, 7); p3tInit(k1); addP3(k1, d, 'o', attribP3(r, d, false)); }
+  if (r.re) { var k2 = r.re.slice(0, 7); p3tInit(k2); addP3(k2, d, 'r', attribP3(r, d, true)); }
 });
-var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, REG: ptREG, OV: ptOV };
-
-// ── 8m. Page3 海外注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
-var regPath = path.join(rawDir, '注册项目数据.xlsx');
-if (!fs.existsSync(regPath)) regPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '注册项目数据.xlsx');
-var REG = { updated: '', regions: [], items: [] };
-try {
-  var regWb = XLSX.readFile(regPath);
-  var regRows = XLSX.utils.sheet_to_json(regWb.Sheets[regWb.SheetNames[0]], { header: 1, defval: '' });
-  var regHdr = regRows[0] || [];
-  var rci = {};
-  regHdr.forEach(function (h, i) {
-    h = String(h || '').trim();
-    if (h === '区域') rci.region = i;
-    else if (h === '国家/地区') rci.name = i;
-    else if (h === '运营方式') rci.mode = i;
-    else if (h === '申报状态') rci.status = i;
-    else if (h === '申报路径/资格认定') rci.path = i;
-    else if (h === '预估获批时间') rci.approval = i;
-  });
-  var STATUS_MAP = { '已获批': 'approved', 'NDA申请已提交': 'submitted', '评审中': 'review', 'NDA申报计划中': 'planned' };
-  var STATUS_LABEL = { 'approved': '已获批', 'submitted': '已提交', 'review': '评审中', 'planned': '计划中' };
-  var GEO_NAME = {
-    '中国澳门': '澳门', '中国香港': '香港', '新加坡': 'Singapore', '马来西亚': 'Malaysia',
-    '泰国': 'Thailand', '越南': 'Vietnam', '印尼': 'Indonesia', '沙特阿拉伯': 'Saudi Arabia',
-    '阿联酋': 'United Arab Emirates', '科威特': 'Kuwait', '日本': 'Japan', '韩国': 'Korea',
-    '巴西': 'Brazil', '俄罗斯': 'Russia', '澳大利亚': 'Australia', '加拿大': 'Canada'
-  };
-  function pad2(n) { return (n < 10 ? '0' : '') + n; }
-  function parseApproval(v) {
-    if (v === '' || v == null) return { txt: '', ts: null };
-    if (typeof v === 'number') {
-      var s = String(v);
-      var p = s.split('.');
-      var y = parseInt(p[0], 10) || 0;
-      var m = p[1] ? parseInt(p[1], 10) : 1;
-      if (m < 1 || m > 12) m = 1;
-      return { txt: y + '.' + pad2(m), ts: y + '-' + pad2(m) + '-01' };
-    }
-    var s2 = String(v).trim();
-    var m2 = s2.match(/(\d{4})\.Q([1-4])/);
-    if (m2) {
-      var yy = m2[1], q = parseInt(m2[2], 10);
-      var em = q * 3;
-      return { txt: yy + ' Q' + q, ts: yy + '-' + pad2(em) + '-01' };
-    }
-    return { txt: s2, ts: null };
-  }
-  var regSeen = {};
-  for (var ri = 1; ri < regRows.length; ri++) {
-    var rr = regRows[ri];
-    if (!rr) continue;
-    var rname = String(rr[rci.name] || '').trim();
-    if (!rname || regSeen[rname]) continue;
-    regSeen[rname] = true;
-    var rstatus = String(rr[rci.status] || '').trim();
-    var status = STATUS_MAP[rstatus] || 'planned';
-    var ap = parseApproval(rr[rci.approval]);
-    REG.items.push({
-      region: String(rr[rci.region] || '').trim(),
-      name: rname,
-      geo: GEO_NAME[rname] || rname,
-      mode: String(rr[rci.mode] || '').trim(),
-      status: status,
-      statusLabel: STATUS_LABEL[status],
-      path: String(rr[rci.path] || '').trim(),
-      approvalTxt: ap.txt,
-      approvalTs: ap.ts
-    });
-  }
-  REG.items.forEach(function (it) { if (REG.regions.indexOf(it.region) < 0) REG.regions.push(it.region); });
-  REG.updated = fmtDT(fs.statSync(regPath).mtime);
-  console.log('注册项目国家数:', REG.items.length, '| 区域:', REG.regions.join('/'));
-} catch (e) {
-  console.error('⚠️ 读取 注册项目数据.xlsx 失败:', e.message);
-}
+var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: p3tND, REG: p3tREG, OV: p3tOV };
 
 // ── 9. 输出 js/data.js（页面直接 <script> 引用） ──
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
@@ -644,8 +569,7 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     CITY_PROV: CITY_PROV,
     P2: P2,
     P3: P3,
-    P3T: P3T,
-    REG: REG
+    P3T: P3T
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
