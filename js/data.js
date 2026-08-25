@@ -1,8 +1,8 @@
 /* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */
-/* 数据源: bs_order - 2026-08-24T170242.364.xlsx | 数据截止: 2026-08-24 */
+/* 数据源: bs_order - 2026-08-24T170242.364.xlsx | 数据截止: 2026-08-25 */
 var BOARD_DATA = {
   "UPDATED": "2026-08-24 17:02:45",
-  "DP": "2026-08-24",
+  "DP": "2026-08-25",
   "Y": "2026",
   "YTD": {
     "O": 254,
@@ -1002,6 +1002,11 @@ var BOARD_DATA = {
           "v": 1
         }
       ]
+    },
+    {
+      "date": "2026-08-25",
+      "orders": [],
+      "reinfusion": []
     }
   ],
   "HOSP_PROV": {
@@ -6717,6 +6722,17 @@ var BOARD_DATA = {
         "path": "Conditional approval",
         "approvalTxt": "",
         "approvalTs": null
+      },
+      {
+        "region": "东亚",
+        "name": "中国",
+        "geo": "China",
+        "mode": "自营",
+        "status": "approved",
+        "statusLabel": "已获批",
+        "path": "",
+        "approvalTxt": "2023.06",
+        "approvalTs": "2023-06-01"
       }
     ]
   }

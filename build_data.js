@@ -548,7 +548,7 @@ records.forEach(function (r) {
 });
 var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, REG: ptREG, OV: ptOV };
 
-// ── 8m. Page3 海外注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
+// ── 8m. Page3 全球注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
 var regPath = path.join(rawDir, '注册项目数据.xlsx');
 if (!fs.existsSync(regPath)) regPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '注册项目数据.xlsx');
 var REG = { updated: '', regions: [], items: [] };
@@ -616,6 +616,17 @@ try {
       approvalTs: ap.ts
     });
   }
+  REG.items.push({
+    region: '东亚',
+    name: '中国',
+    geo: 'China',
+    mode: '自营',
+    status: 'approved',
+    statusLabel: '已获批',
+    path: '',
+    approvalTxt: '2023.06',
+    approvalTs: '2023-06-01'
+  });
   REG.items.forEach(function (it) { if (REG.regions.indexOf(it.region) < 0) REG.regions.push(it.region); });
   REG.updated = fmtDT(fs.statSync(regPath).mtime);
   console.log('注册项目国家数:', REG.items.length, '| 区域:', REG.regions.join('/'));
