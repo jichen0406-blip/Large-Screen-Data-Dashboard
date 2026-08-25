@@ -1,4 +1,4 @@
-// Page3 渲染逻辑：海外注册进度 —— 世界地图（状态着色 + 合作伙伴 icon）+ 甘特图（时间轴进度条）
+// Page3 渲染逻辑：全球注册进度 —— 世界地图（状态着色 + 合作伙伴 icon）+ 甘特图（时间轴进度条）
 // 数据：BOARD_DATA.REG（build_data.js 生成）
 $(function () {
     var B = window.BOARD_DATA;
@@ -253,10 +253,11 @@ $(function () {
         }
         axisHtml += '</div>';
 
-        // 按区域分组（保持 REG.regions 顺序）
+        // 按区域分组（保持 REG.regions 顺序；中国为本上市展示项，甘特图不体现）
+        var ganttItems = items.filter(function (it) { return it.name !== '中国'; });
         var groups = {};
         REG.regions.forEach(function (r) { groups[r] = []; });
-        items.forEach(function (it) {
+        ganttItems.forEach(function (it) {
             if (!groups[it.region]) groups[it.region] = [];
             groups[it.region].push(it);
         });

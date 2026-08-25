@@ -7,7 +7,7 @@
         { id: 'changelog.html', key: 'changelog', num: 'P1', name: '更新日志' },
         { id: 'index.html', key: 'index', num: 'P2', name: '福可苏业绩总览' },
         { id: 'page2.html', key: 'sales', num: 'P3', name: '海外/商业化' },
-        { id: 'page3.html', key: 'reg', num: 'P4', name: '海外注册进度' },
+        { id: 'page3.html', key: 'reg', num: 'P4', name: '全球注册进度' },
         { id: 'page4.html', key: 'region1', num: 'P5', name: '辖区数据管理1' },
         { id: 'page5.html', key: 'region2', num: 'P6', name: '辖区数据管理2' },
         { id: 'page6.html', key: 'reserved', num: 'P7', name: '预留' }
