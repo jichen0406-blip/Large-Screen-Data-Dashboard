@@ -216,7 +216,7 @@ $(function () {
                 var bt = b.approvalTs || '0000';
                 return at < bt ? 1 : at > bt ? -1 : 0;
             });
-        var html = '<div class="p3r-appr-tit">已获批国家<span class="p3r-appr-n">' + appr.length + '</span></div>' +
+        var html = '<div class="p3r-appr-tit">已获批国家/地区<span class="p3r-appr-n">' + appr.length + '</span></div>' +
             '<ul class="p3r-appr-list">';
         appr.forEach(function (it) {
             html += '<li><span class="p3r-appr-name">' + dispName(it) + '</span>' +
