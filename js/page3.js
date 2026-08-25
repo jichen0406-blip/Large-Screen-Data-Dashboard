@@ -208,9 +208,14 @@ $(function () {
     }
     renderLegend();
 
-    // 右侧：已获批国家名单 + 获批时间
+    // 右侧：已获批国家名单 + 获批时间（按获批时间从新到旧）
     function renderRight() {
-        var appr = items.filter(function (it) { return it.status === 'approved'; });
+        var appr = items.filter(function (it) { return it.status === 'approved'; })
+            .sort(function (a, b) {
+                var at = a.approvalTs || '0000';
+                var bt = b.approvalTs || '0000';
+                return at < bt ? 1 : at > bt ? -1 : 0;
+            });
         var html = '<div class="p3r-appr-tit">已获批国家<span class="p3r-appr-n">' + appr.length + '</span></div>' +
             '<ul class="p3r-appr-list">';
         appr.forEach(function (it) {
