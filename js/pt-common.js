@@ -45,11 +45,26 @@ function ptMetricRowHTML(mt, m, calcMonth, yt, ya, yl) {
     return { h: h + ptYtdCell(mt, yt, ya, yl) + '</tr>', yt: yt, ya: ya, yl: yl };
 }
 
-// 时间控制：构建年月选项、读共享 sessionStorage（新开网页默认当前年月）、onchange 保存并回调
+// 时间控制：构建年月选项、读共享 sessionStorage（无保存值时默认「最新有数据的月份」，辖区1/2/3 一致）、onchange 保存并回调
 function initPtTime(selY, selM, yearKeys, onchange) {
     var yArr = Object.keys(yearKeys).sort();
     var now = new Date();
     var defY = String(now.getFullYear()), defM = now.getMonth() + 1;
+    // 默认最新有数据月份：扫描 P3T.ND/HOSP 的 'YYYY-MM' 键，取下拉可选年份内的最大月份
+    try {
+        var B = window.BOARD_DATA;
+        var bks = (B && B.P3T) ? [B.P3T.ND, B.P3T.HOSP] : [];
+        var lm = null;
+        bks.forEach(function (bk) {
+            if (!bk) return;
+            Object.keys(bk).forEach(function (k) {
+                if (/^\d{4}-\d{2}$/.test(k) && yArr.indexOf(k.slice(0, 4)) >= 0) {
+                    if (!lm || k > lm) lm = k;
+                }
+            });
+        });
+        if (lm) { defY = lm.slice(0, 4); defM = parseInt(lm.slice(5, 7), 10); }
+    } catch (e) {}
     try {
         var _sh = JSON.parse(sessionStorage.getItem('pt_time') || 'null');
         if (_sh && yArr.indexOf(String(_sh.y)) >= 0) defY = String(_sh.y);

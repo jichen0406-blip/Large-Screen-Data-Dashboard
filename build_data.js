@@ -38,6 +38,20 @@ var UPDATED = fmtDT(bsStat.mtime);
 // ── 2. 读取 Excel ──
 var bsWb = XLSX.readFile(path.join(rawDir, bsFile));
 var bsRows = XLSX.utils.sheet_to_json(bsWb.Sheets[bsWb.SheetNames[0]], { header: 1 });
+
+// ── 2b. 合并手工补录订单（manual bs order.xlsx；列顺序与 bs_order 一致，仅表头在第 0 行） ──
+var manualFile = 'manual bs order.xlsx';
+var manualPath = path.join(rawDir, manualFile);
+if (!fs.existsSync(manualPath)) manualPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', manualFile);
+if (fs.existsSync(manualPath)) {
+  var mWb = XLSX.readFile(manualPath);
+  var mRows = XLSX.utils.sheet_to_json(mWb.Sheets[mWb.SheetNames[0]], { header: 1 });
+  for (var mi = 1; mi < mRows.length; mi++) { if (mRows[mi]) bsRows.push(mRows[mi]); }
+  console.log('已合并手工订单:', mRows.length - 1, '条（' + manualFile + '）');
+} else {
+  console.warn('⚠️ 未找到', manualFile, '，跳过手工订单合并');
+}
+
 var mdWb = XLSX.readFile(path.join(rawDir, 'masterdata.xlsx'));
 var mdRows = XLSX.utils.sheet_to_json(mdWb.Sheets[mdWb.SheetNames[0]]);
 
@@ -73,6 +87,9 @@ headers.forEach(function(h, i) {
   if (h.includes('实际回输') && h.includes('结束时间')) ci.re = i;
   if (h.includes('实际单采') && h.includes('开始时间')) ci.ap = i;
   if (h.includes('生产质量') && h.includes('放行时间')) ci.qa = i;
+  if (h === '支付方式') ci.pay = i;
+  if (h === '单采预约时间') ci.apmt = i;
+  if (h === '仓库接收单采血时间') ci.receive = i;
 });
 console.log('关键列索引:', JSON.stringify(ci));
 
@@ -107,7 +124,10 @@ for (var i = 2; i < bsRows.length; i++) {
     od: excelToDate(row[ci.od]),
     re: parseDt(row[ci.re]),
     ap: parseDt(row[ci.ap]),
-    qa: parseDt(row[ci.qa])
+    qa: parseDt(row[ci.qa]),
+    pay: String(row[ci.pay] || '').trim(),
+    apmt: excelToDate(row[ci.apmt]),
+    receive: excelToDate(row[ci.receive])
   });
 }
 
@@ -503,7 +523,7 @@ try {
   dictRows.slice(1).forEach(function (dr) {
     var no = String(dr[1] || '').trim();
     if (!no) return;
-    dictInfo[no] = { am: String(dr[3] || '').trim(), ram: String(dr[27] || '').trim(), rhc: String(dr[25] || '').trim(), rhn: String(dr[26] || '').trim(), flow: String(dr[21] || '').trim() };
+    dictInfo[no] = { am: String(dr[3] || '').trim(), ram: String(dr[27] || '').trim(), rhc: String(dr[25] || '').trim(), rhn: String(dr[26] || '').trim(), flow: String(dr[21] || '').trim(), cancel: String(dr[6] || '').trim(), resume: excelToDate(dr[13]), note: String(dr[10] || '').trim(), modZq: String(dr[15] || '').trim() };
   });
 } catch (e) { console.error('⚠️ 读取 order dict(AM) 失败:', e.message); }
 var OV_AM = { HK_AM1: 'HK', SG_AM: 'SG', KSA_AM: 'KSA' }; // 海外AM兜底 → 对应地区
@@ -546,7 +566,44 @@ records.forEach(function (r) {
   if (r.od) { var k1 = r.od.slice(0, 7); ptInit(k1); addP3(k1, d, 'o', attribP3(r, d, false)); }
   if (r.re) { var k2 = r.re.slice(0, 7); ptInit(k2); addP3(k2, d, 'r', attribP3(r, d, true)); }
 });
-var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, REG: ptREG, OV: ptOV };
+
+// ── 8l2. Page7 辖区数据管理3：医院/省份 月度明细（仅国内 DOM；AM 归属同 P3T） ──
+// 键：'YYYY-MM' → 'AM|省份|城市|医院' → {o, r}；下单/回输分别按订单归属AM统计
+var ptHOSP = {}; // P3T.HOSP
+function hpInit(k) { if (!ptHOSP[k]) ptHOSP[k] = {}; }
+records.forEach(function (r) {
+  var d = dictInfo[r.no] || {};
+  if (r.od) {
+    var a1 = attribP3(r, d, false);
+    if (!a1.ov && r.prov) {
+      var k1 = r.od.slice(0, 7); hpInit(k1);
+      var key1 = a1.am + '|' + r.prov + '|' + (r.city || '') + '|' + r.hosp;
+      var b1 = ptHOSP[k1][key1] || (ptHOSP[k1][key1] = { o: 0, r: 0 });
+      b1.o++;
+    }
+  }
+  if (r.re) {
+    var a2 = attribP3(r, d, true);
+    if (!a2.ov && r.prov) {
+      var k2 = r.re.slice(0, 7); hpInit(k2);
+      var key2 = a2.am + '|' + r.prov + '|' + (r.city || '') + '|' + r.hosp;
+      var b2 = ptHOSP[k2][key2] || (ptHOSP[k2][key2] = { o: 0, r: 0 });
+      b2.r++;
+    }
+  }
+});
+// ── 8l3. Page7 医院「最近一次下单日期」：按医院实体（省份|城市|医院名）合并，历史全量、不随任何筛选变动 ──
+// 仅国内 DOM；取该医院全部下单（跨 AM）的最大合同创建日期 od（'YYYY-MM-DD'）
+var ptHSLast = {}; // P3T.HSLAST：'省份|城市|医院名' → 'YYYY-MM-DD'
+records.forEach(function (r) {
+  if (!r.od) return;
+  var d = dictInfo[r.no] || {};
+  var a = attribP3(r, d, false);
+  if (a.ov || !r.prov) return;
+  var hk = r.prov + '|' + (r.city || '') + '|' + r.hosp;
+  if (!ptHSLast[hk] || r.od > ptHSLast[hk]) ptHSLast[hk] = r.od;
+});
+var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, REG: ptREG, OV: ptOV, HOSP: ptHOSP, HSLAST: ptHSLast };
 
 // ── 8m. Page3 全球注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
 var regPath = path.join(rawDir, '注册项目数据.xlsx');
@@ -634,6 +691,18 @@ try {
   console.error('⚠️ 读取 注册项目数据.xlsx 失败:', e.message);
 }
 
+// ── 8o. Page3 福可苏全流程跟进：订单明细（前端按时间段计算 13 列漏斗） ──
+// 每单字段：od 下单日期 / pay 支付方式 / apmt 单采预约时间 / receive 仓库接收单采血时间 / qa 质量放行 / re 实际回输结束
+//           cancel 取消回输标记 / resume 恢复生产时间 / note 备注 / modZq 申请修改为择期生产（非空=全流程转择期）
+var FLOW = { orders: [] };
+records.forEach(function (r) {
+  var d = dictInfo[r.no] || {};
+  FLOW.orders.push({
+    no: r.no, od: r.od, pay: r.pay, apmt: r.apmt, receive: r.receive, qa: r.qa, re: r.re,
+    cancel: d.cancel || '', resume: d.resume || '', note: d.note || '', modZq: d.modZq || ''
+  });
+});
+
 // ── 9. 输出 js/data.js（页面直接 <script> 引用） ──
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
   '/* 数据源: ' + bsFile + ' | 数据截止: ' + DP + ' */\n' +
@@ -656,7 +725,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     P2: P2,
     P3: P3,
     P3T: P3T,
-    REG: REG
+    REG: REG,
+    FLOW: FLOW
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
