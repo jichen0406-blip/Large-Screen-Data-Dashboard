@@ -587,3 +587,15 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 /* 右下角装饰球体（复用登录页 qiu 浮动动画，大小与登录页一致、保持比例不变形） */
 .clg-ball{ position: fixed; right: -5vw; bottom: -5vw; width: 36vw; height: 36vw; pointer-events: none; z-index: 1; opacity: .55; }
 .clg-ball img{ width: 100%; height: 100%; object-fit: contain; animation: qiu-float 7s ease-in-out infinite; filter: drop-shadow(0 0 28px rgba(79,227,255,.5)); }
+
+/* ── 福可苏全流程跟进（P3） ── */
+.flow-box{ padding: 12px 14px 14px; }
+.flow-ctl{ display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.flow-ctl-label{ color: #daf9ff; font-size: 14px; letter-spacing: 1px; }
+.flow-ctl-sep{ color: rgba(255,255,255,.6); font-size: 13px; }
+.flow-sel{ height: 30px; padding: 0 26px 0 10px; color: #daf9ff; font-size: 13px; background: rgba(47,137,207,.18) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2Ij48cGF0aCBkPSJNMCAwaDEwbC01IDZ6IiBmaWxsPSIjNGZlM2ZmIi8+PC9zdmc+) no-repeat right 10px center; border: 1px solid rgba(47,137,207,.7); border-radius: 4px; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.flow-sel:hover, .flow-sel:focus{ border-color: #4ba6e0; box-shadow: 0 0 8px rgba(79,227,255,.35); outline: none; }
+.flow-sel option{ background: #0a2a4a; color: #daf9ff; }
+.flow-chart{ width: 100%; height: 560px; }
+.flow-err{ display: none; margin: 0 0 10px; padding: 10px 14px; background: rgba(239,83,80,.14); border: 1px solid rgba(239,83,80,.7); border-radius: 6px; color: #ffd2d0; font-size: 13px; line-height: 1.7; }
+#fsBody .flow-chart{ width: 100%; height: 100%; }
