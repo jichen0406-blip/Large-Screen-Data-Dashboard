@@ -15203,7 +15203,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -15476,7 +15476,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -16529,7 +16529,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -16789,7 +16789,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "2025-04-02",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -16932,7 +16932,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -17101,7 +17101,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "2025-06-14",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -17400,7 +17400,7 @@ var BOARD_DATA = {
         "re": null,
         "cancel": "1",
         "resume": "",
-        "note": "生产完成取消回输 -患者疾病进展，终止治疗",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -17646,7 +17646,7 @@ var BOARD_DATA = {
         "qa": null,
         "re": null,
         "cancel": "",
-        "resume": "",
+        "resume": "2026-08-26",
         "note": "",
         "modZq": ""
       },
@@ -22510,7 +22510,7 @@ var BOARD_DATA = {
         "cancel": "",
         "resume": "",
         "note": "",
-        "modZq": ""
+        "modZq": "转为择期生产-2026/8/21"
       },
       {
         "no": "XL26D93",
@@ -22731,7 +22731,7 @@ var BOARD_DATA = {
         "cancel": "",
         "resume": "",
         "note": "",
-        "modZq": ""
+        "modZq": "转为择期生产-2026/8/26"
       },
       {
         "no": "XL26V62",
