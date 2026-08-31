@@ -97,6 +97,7 @@ console.log('关键列索引:', JSON.stringify(ci));
 // 优先用医疗机构编码(col32)，空则用处方来源医疗机构编号(col5)
 var records = [];
 var unmatched = [];
+var code2Missing = []; // 反馈：code2(处方来源编号) 非空但主数据未收录
 for (var i = 2; i < bsRows.length; i++) {
   var row = bsRows[i];
   if (!row) continue;
@@ -112,6 +113,8 @@ for (var i = 2; i < bsRows.length; i++) {
     if (code1 || code2) unmatched.push({ row: i, code1: code1, code2: code2, rawHosp: fallbackHosp });
     hosp = fallbackHosp;
   }
+  // 反馈机制：处方来源医疗机构编号(col5) 非空但主数据未收录 → 即使本单已用 code1 匹配成功也需报告
+  if (code2 && !masterMap[code2]) code2Missing.push({ row: i, no: String(row[1] || '').trim(), code2: code2, hosp: hosp });
   if (!hosp) hosp = '未知医院';
   if (prov === '新加坡' || prov.indexOf('新加坡') >= 0) { prov = ''; city = ''; } // 排除新加坡
 
@@ -145,6 +148,18 @@ if (unmatched.length > 0) {
     }
   });
   console.error('请将以上编码添加至 masterdata.xlsx 后重新运行！');
+  console.error('========================================\n');
+  process.exit(1);
+}
+// 反馈机制：处方来源医疗机构编号(col5) 非空但主数据未收录 → 也需报错
+if (code2Missing.length > 0) {
+  console.error('\n========================================');
+  console.error('⚠️  警告：' + code2Missing.length + ' 条记录「处方来源医疗机构编号」(col5) 未在主数据中收录！');
+  console.error('以下编号在 masterdata.xlsx 中未找到：');
+  code2Missing.forEach(function(w) {
+    console.error('  · ' + w.code2 + '   合同号 ' + w.no + '  归属医院: ' + (w.hosp || '未知'));
+  });
+  console.error('请将以上「处方来源医疗机构编号」添加至 masterdata.xlsx 后重新运行！');
   console.error('========================================\n');
   process.exit(1);
 }
