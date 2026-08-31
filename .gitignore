@@ -4,6 +4,8 @@ rawdata/
 node_modules/
 .DS_Store
 *.log
+# 导出/交付文件（本地生成，不进 git）
+*.xlsx
 # 模板遗留未引用的文件（如确认不需要可删除）
 js/44.json
 js/area_echarts.js
