@@ -17750,9 +17750,9 @@ var BOARD_DATA = {
         "receive": "2025-08-04",
         "qa": null,
         "re": null,
-        "cancel": "",
+        "cancel": "1",
         "resume": "",
-        "note": "",
+        "note": "单采后取消 - 单采后，患者疾病进展，放弃治疗",
         "modZq": ""
       },
       {
@@ -21585,9 +21585,9 @@ var BOARD_DATA = {
         "receive": "2026-06-08",
         "qa": "2026-06-26",
         "re": null,
-        "cancel": "",
+        "cancel": "1",
         "resume": "",
-        "note": "",
+        "note": "生产完成取消回输-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -22511,7 +22511,7 @@ var BOARD_DATA = {
         "cancel": "",
         "resume": "",
         "note": "",
-        "modZq": ""
+        "modZq": "转为择期生产-2026/8/31"
       },
       {
         "no": "XL26Q85",
@@ -22586,9 +22586,9 @@ var BOARD_DATA = {
         "receive": null,
         "qa": null,
         "re": null,
-        "cancel": "",
+        "cancel": "1",
         "resume": "",
-        "note": "",
+        "note": "患者单采前取消-患者疾病进展，终止治疗",
         "modZq": ""
       },
       {
@@ -23574,9 +23574,9 @@ var BOARD_DATA = {
         "receive": null,
         "qa": null,
         "re": null,
-        "cancel": "",
+        "cancel": "1",
         "resume": "",
-        "note": "",
+        "note": "患者单采预约前取消 -患者疾病进展，死亡（排期过长）",
         "modZq": ""
       },
       {
@@ -24042,9 +24042,9 @@ var BOARD_DATA = {
         "receive": null,
         "qa": null,
         "re": null,
-        "cancel": "",
+        "cancel": "1",
         "resume": "",
-        "note": "",
+        "note": "患者单采预约前取消 -患者疾病进展，死亡（排期过长）",
         "modZq": ""
       },
       {
