@@ -6,13 +6,14 @@
     window.BOARD_PAGES = [
         { id: 'changelog.html', key: 'changelog', num: 'P1', name: '更新日志' },
         { id: 'index.html', key: 'index', num: 'P2', name: '福可苏业绩总览' },
-        { id: 'flow.html', key: 'flow', num: 'P3', name: '福可苏全流程跟进' },
-        { id: 'page2.html', key: 'sales', num: 'P4', name: '海外/商业化' },
-        { id: 'page3.html', key: 'reg', num: 'P5', name: '全球注册进度' },
-        { id: 'page4.html', key: 'region1', num: 'P6', name: '辖区数据管理1' },
-        { id: 'page5.html', key: 'region2', num: 'P7', name: '辖区数据管理2' },
-        { id: 'page6.html', key: 'region3', num: 'P8', name: '辖区数据管理3' },
-        { id: 'page8.html', key: 'reserved', num: 'P9', name: '预留' }
+        { id: 'page9.html', key: 'daily30', num: 'P3', name: '过去30天福可苏订单每日进展跟进' },
+        { id: 'flow.html', key: 'flow', num: 'P4', name: '福可苏全流程跟进' },
+        { id: 'page2.html', key: 'sales', num: 'P5', name: '海外/商业化' },
+        { id: 'page3.html', key: 'reg', num: 'P6', name: '全球注册进度' },
+        { id: 'page4.html', key: 'region1', num: 'P7', name: '辖区数据管理1' },
+        { id: 'page5.html', key: 'region2', num: 'P8', name: '辖区数据管理2' },
+        { id: 'page6.html', key: 'region3', num: 'P9', name: '辖区数据管理3' },
+        { id: 'page8.html', key: 'reserved', num: 'P10', name: '预留' }
     ];
     var PAGES = window.BOARD_PAGES;
     var PER = 4; // 每屏最多 4 项
@@ -36,6 +37,7 @@
     var NAV_ICONS = {
         'changelog.html': '<svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>',
         'index.html': '<svg viewBox="0 0 24 24"><path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg>',
+        'page9.html': '<svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>',
         'flow.html': '<svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>',
         'page2.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
         'page3.html': '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>',
