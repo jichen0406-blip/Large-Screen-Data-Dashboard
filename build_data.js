@@ -90,8 +90,28 @@ headers.forEach(function(h, i) {
   if (h === '支付方式') ci.pay = i;
   if (h === '单采预约时间') ci.apmt = i;
   if (h === '仓库接收单采血时间') ci.receive = i;
+  if (h === '患者姓名') ci.patient = i;
 });
 console.log('关键列索引:', JSON.stringify(ci));
+
+// 患者姓名脱敏（与 build_poster.js maskName 相同规则）
+function maskName(name) {
+  if (!name) return '';
+  name = String(name).trim();
+  if (name.length <= 1) return name + '*';
+  if (/[a-zA-Z]/.test(name) && name.indexOf(' ') >= 0) {
+    return name.split(' ').map(function(seg) {
+      if (seg.length <= 2) return seg[0] + '*';
+      return seg[0] + '*' + seg[seg.length - 1];
+    }).join(' ');
+  }
+  if (/[a-zA-Z]/.test(name)) {
+    if (name.length <= 2) return name[0] + '*';
+    return name[0] + '*' + name[name.length - 1];
+  }
+  if (name.length === 2) return name[0] + '*';
+  return name[0] + '*' + name[name.length - 1];
+}
 
 // ── 6. 处理数据行（与 build_poster.js 相同的匹配规则） ──
 // 优先用医疗机构编码(col32)，空则用处方来源医疗机构编号(col5)
@@ -130,7 +150,8 @@ for (var i = 2; i < bsRows.length; i++) {
     qa: parseDt(row[ci.qa]),
     pay: String(row[ci.pay] || '').trim(),
     apmt: excelToDate(row[ci.apmt]),
-    receive: excelToDate(row[ci.receive])
+    receive: excelToDate(row[ci.receive]),
+    patient: maskName(String(row[ci.patient] || ''))
   });
 }
 
@@ -266,6 +287,24 @@ while (_cur <= _end) {
   });
   last7.push({ date: ds, orders: hospList(oCnt), reinfusion: hospList(rCnt) });
   _cur.setDate(_cur.getDate() + 1);
+}
+
+// ── 8e2. 过去30天 逐日 下单/回输/单采/质量放行（DP-29 ~ DP，按日期 + 医院+脱敏患者明细） ──
+var daily30 = [];
+var _d30 = new Date(DP.replace(/-/g, '/'));
+_d30.setDate(_d30.getDate() - 29);
+while (_d30 <= _end) {
+  var ds30 = toLocal(_d30);
+  var dO = [], dR = [], dA = [], dQ = [];
+  records.forEach(function(r) {
+    if (!r.hosp || r.hosp === '未知医院') return;
+    if (r.od === ds30) dO.push({ hosp: r.hosp, name: r.patient });
+    if (r.re === ds30) dR.push({ hosp: r.hosp, name: r.patient });
+    if (r.ap === ds30) dA.push({ hosp: r.hosp, name: r.patient });
+    if (r.qa === ds30) dQ.push({ hosp: r.hosp, name: r.patient });
+  });
+  daily30.push({ date: ds30, orders: dO, reinfusion: dR, apheresis: dA, release: dQ });
+  _d30.setDate(_d30.getDate() + 1);
 }
 
 // ── 8f. 各省份 Top 5 下单 / 回输医院（用于省份浮窗右侧榜单） ──
@@ -733,6 +772,7 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     TOP_O: TOP_O,
     TOP_R: TOP_R,
     LAST7: last7,
+    DAILY30: daily30,
     HOSP_PROV: HOSP_PROV,
     COE: { O: coeO, R: coeR },
     ABN: { Y: Y, total: abnTotal, pbmc: abnPbmc, first: abnFirst, second: abnSecond },
