@@ -1,11 +1,11 @@
 // Page3：辖区数据管理1 — KPI 目标达成（公司目标）+ 国内&海外月度表 1/2（公司DOM&OB目标）
-// 共享函数见 js/pt-common.js；时间控制 P3/P4 共享（sessionStorage pt_time）
+// 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
 $(function () {
     var B = window.BOARD_DATA;
-    if (!B || !B.P3) return;
-    var P3 = B.P3;
-    var TARGET = P3.TARGET || {}, MO = P3.MONTH_O || {}, MR = P3.MONTH_R || {};
-    var P3T = B.P3T;
+    if (!B || !B.REGION1_KPI) return;
+    var REGION1_KPI = B.REGION1_KPI;
+    var TARGET = REGION1_KPI.TARGET || {}, MO = REGION1_KPI.MONTH_O || {}, MR = REGION1_KPI.MONTH_R || {};
+    var REGIONS = B.REGIONS;
 
     var yearKeys = {};
     Object.keys(TARGET).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
@@ -46,8 +46,8 @@ $(function () {
     }
 
     // 表格 1/2：国内&海外 月度（公司DOM&OB目标：DOM=国内 / OB=海外）
-    if (!P3T) { calc(); return; }
-    var COMP = P3T.COMP || {}, ND = P3T.ND || {};
+    if (!REGIONS) { calc(); return; }
+    var COMP = REGIONS.COMP || {}, ND = REGIONS.ND || {};
     function compV(ym, cat, fld) {
         var b = COMP[ym];
         return (b && b[cat] && b[cat][fld]) || 0;

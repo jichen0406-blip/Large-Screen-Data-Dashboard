@@ -1,11 +1,11 @@
 // Page4：辖区数据管理2 — 辖区达成 3/4（挑战目标）+ 患者渠道销量 5
-// 共享函数见 js/pt-common.js；时间控制 P3/P4 共享（sessionStorage pt_time）
+// 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
 $(function () {
     var B = window.BOARD_DATA;
-    if (!B || !B.P3T) return;
-    var P3T = B.P3T;
-    var CHAL = P3T.CHAL || {}, REG = P3T.REG || {}, OV = P3T.OV || {};
-    var AMS = P3T.AMS || [];
+    if (!B || !B.REGIONS) return;
+    var REGIONS = B.REGIONS;
+    var CHAL = REGIONS.CHAL || {}, ATTAIN = REGIONS.ATTAIN || {}, OV = REGIONS.OV || {};
+    var AMS = REGIONS.AMS || [];
 
     // 表5 渠道（下单/回输共用，仅 fld 不同）
     var CH_ITEMS = [
@@ -18,7 +18,7 @@ $(function () {
     ];
 
     var yearKeys = {};
-    Object.keys(P3T.ND || {}).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
+    Object.keys(REGIONS.ND || {}).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
     function updateAll() { renderTables(); }
     initPtTime('#p5y', '#p5m', yearKeys, updateAll);
 
@@ -73,7 +73,7 @@ $(function () {
         return list;
     }
     function renderREG(elId, title, fld) {
-        renderEntTable(elId, title, REG, regEnts(fld));
+        renderEntTable(elId, title, ATTAIN, regEnts(fld));
     }
 
     // 5 患者渠道销量（仅达成，白字，Total 蓝色行；首列类型合并区分下单/回输）

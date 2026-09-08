@@ -500,7 +500,7 @@ function topToLists(tb) {
 }
 var p2TopList = { all: topToLists(p2Top.all), y: {} };
 Object.keys(p2Top.y).forEach(function (yk) { p2TopList.y[yk] = topToLists(p2Top.y[yk]); });
-var P2 = { YEARS: Object.keys(yearSet).sort(), CARD: p2Card, LEFT: p2Left, RIGHT: p2Right, RIGHTD: p2RightD, TOP10: p2TopList };
+var OVERSEAS = { YEARS: Object.keys(yearSet).sort(), CARD: p2Card, LEFT: p2Left, RIGHT: p2Right, RIGHTD: p2RightD, TOP10: p2TopList };
 
 // ── 8k. Page3：目标（Target.xlsx 公司目标）+ 月度实际下单/回输 ──
 var tgtPath = path.join(rawDir, 'Target.xlsx');
@@ -523,7 +523,7 @@ records.forEach(function(r) {
   if (r.od) { var k = r.od.slice(0, 7); p3MO[k] = (p3MO[k] || 0) + 1; }
   if (r.re) { var k2 = r.re.slice(0, 7); p3MR[k2] = (p3MR[k2] || 0) + 1; }
 });
-var P3 = { TARGET: TARGET, MONTH_O: p3MO, MONTH_R: p3MR };
+var REGION1_KPI = { TARGET: TARGET, MONTH_O: p3MO, MONTH_R: p3MR };
 
 // ── 8l. Page3 新表：挑战目标（挑战指标）+ 辖区 AM/地区 月度达成（4.1/4.2/4.3/6.1/6.2） ──
 // 目标：Target.xlsx「挑战目标」sheet（Region: DOM=国内 / HK=香港 / SG=新加坡 / KSA=沙特）
@@ -590,7 +590,7 @@ try {
 } catch (e) { console.error('⚠️ 读取 order dict(AM) 失败:', e.message); }
 var OV_AM = { HK_AM1: 'HK', SG_AM: 'SG', KSA_AM: 'KSA' }; // 海外AM兜底 → 对应地区
 var REG_LABEL = { HK: '香港', SG: '新加坡', KSA: '沙特' };
-var P3T_AMS = ['崔珺', '赵蕊', '赵俊兴', '龚卉', '高威龙', '董硕', '兰明金', '李磊'];
+var REGION_AMS = ['崔珺', '赵蕊', '赵俊兴', '龚卉', '高威龙', '董硕', '兰明金', '李磊'];
 
 var ptND = {}, ptREG = {}, ptOV = {}; // 键：'YYYY-MM'
 function ptInit(k) {
@@ -611,7 +611,7 @@ function attribP3(r, d, isRe) {
   if (OV_AM[am]) reg = OV_AM[am];
   return { ov: !!(reg && reg !== 'DOM'), regKey: (reg && reg !== 'DOM') ? reg : '', am: am };
 }
-// 统计一单（fld='o'下单 / 'r'回输）到 ND/REG/OV 三桶；未知海外地区安全兜底
+// 统计一单（fld='o'下单 / 'r'回输）到 ND/ATTAIN/OV 三桶；未知海外地区安全兜底
 function addP3(k, d, fld, a) {
   if (a.ov) ptND[k].ov[fld]++; else ptND[k].dom[fld]++;
   var ent = a.ov ? (REG_LABEL[a.regKey] || a.regKey) : a.am;
@@ -629,9 +629,9 @@ records.forEach(function (r) {
   if (r.re) { var k2 = r.re.slice(0, 7); ptInit(k2); addP3(k2, d, 'r', attribP3(r, d, true)); }
 });
 
-// ── 8l2. Page7 辖区数据管理3：医院/省份 月度明细（仅国内 DOM；AM 归属同 P3T） ──
+// ── 8l2. Page7 辖区数据管理3：医院/省份 月度明细（仅国内 DOM；AM 归属同 REGIONS） ──
 // 键：'YYYY-MM' → 'AM|省份|城市|医院' → {o, r}；下单/回输分别按订单归属AM统计
-var ptHOSP = {}; // P3T.HOSP
+var ptHOSP = {}; // REGIONS.HOSP
 function hpInit(k) { if (!ptHOSP[k]) ptHOSP[k] = {}; }
 records.forEach(function (r) {
   var d = dictInfo[r.no] || {};
@@ -656,7 +656,7 @@ records.forEach(function (r) {
 });
 // ── 8l3. Page7 医院「最近一次下单日期」：按医院实体（省份|城市|医院名）合并，历史全量、不随任何筛选变动 ──
 // 仅国内 DOM；取该医院全部下单（跨 AM）的最大合同创建日期 od（'YYYY-MM-DD'）
-var ptHSLast = {}; // P3T.HSLAST：'省份|城市|医院名' → 'YYYY-MM-DD'
+var ptHSLast = {}; // REGIONS.HSLAST：'省份|城市|医院名' → 'YYYY-MM-DD'
 records.forEach(function (r) {
   if (!r.od) return;
   var d = dictInfo[r.no] || {};
@@ -665,12 +665,12 @@ records.forEach(function (r) {
   var hk = r.prov + '|' + (r.city || '') + '|' + r.hosp;
   if (!ptHSLast[hk] || r.od > ptHSLast[hk]) ptHSLast[hk] = r.od;
 });
-var P3T = { AMS: P3T_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, REG: ptREG, OV: ptOV, HOSP: ptHOSP, HSLAST: ptHSLast };
+var REGIONS = { AMS: REGION_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, ATTAIN: ptREG, OV: ptOV, HOSP: ptHOSP, HSLAST: ptHSLast };
 
 // ── 8m. Page3 全球注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
 var regPath = path.join(rawDir, '注册项目数据.xlsx');
 if (!fs.existsSync(regPath)) regPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '注册项目数据.xlsx');
-var REG = { updated: '', regions: [], items: [] };
+var GLOBAL_REG = { updated: '', regions: [], items: [] };
 try {
   var regWb = XLSX.readFile(regPath);
   var regRows = XLSX.utils.sheet_to_json(regWb.Sheets[regWb.SheetNames[0]], { header: 1, defval: '' });
@@ -723,7 +723,7 @@ try {
     var rstatus = String(rr[rci.status] || '').trim();
     var status = STATUS_MAP[rstatus] || 'planned';
     var ap = parseApproval(rr[rci.approval]);
-    REG.items.push({
+    GLOBAL_REG.items.push({
       region: String(rr[rci.region] || '').trim(),
       name: rname,
       geo: GEO_NAME[rname] || rname,
@@ -735,7 +735,7 @@ try {
       approvalTs: ap.ts
     });
   }
-  REG.items.push({
+  GLOBAL_REG.items.push({
     region: '东亚',
     name: '中国',
     geo: 'China',
@@ -746,9 +746,9 @@ try {
     approvalTxt: '2023.06',
     approvalTs: '2023-06-01'
   });
-  REG.items.forEach(function (it) { if (REG.regions.indexOf(it.region) < 0) REG.regions.push(it.region); });
-  REG.updated = fmtDT(fs.statSync(regPath).mtime);
-  console.log('注册项目国家数:', REG.items.length, '| 区域:', REG.regions.join('/'));
+  GLOBAL_REG.items.forEach(function (it) { if (GLOBAL_REG.regions.indexOf(it.region) < 0) GLOBAL_REG.regions.push(it.region); });
+  GLOBAL_REG.updated = fmtDT(fs.statSync(regPath).mtime);
+  console.log('注册项目国家数:', GLOBAL_REG.items.length, '| 区域:', GLOBAL_REG.regions.join('/'));
 } catch (e) {
   console.error('⚠️ 读取 注册项目数据.xlsx 失败:', e.message);
 }
@@ -785,10 +785,10 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     COE: { O: coeO, R: coeR },
     ABN: { Y: Y, total: abnTotal, pbmc: abnPbmc, first: abnFirst, second: abnSecond },
     CITY_PROV: CITY_PROV,
-    P2: P2,
-    P3: P3,
-    P3T: P3T,
-    REG: REG,
+    OVERSEAS: OVERSEAS,
+    REGION1_KPI: REGION1_KPI,
+    REGIONS: REGIONS,
+    GLOBAL_REG: GLOBAL_REG,
     FLOW: FLOW
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');

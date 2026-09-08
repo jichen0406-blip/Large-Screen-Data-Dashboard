@@ -13,6 +13,9 @@ node build_data.js
 echo "==> 1.1 打包省份地图 js/geo-data.js（内联，离线/file:// 打开无需 fetch）"
 node build_geo.js
 
+echo "==> 1.2 刷新项目文档页面索引 js/nav.js → 项目文档.md §4.0"
+node page_sync.js index || echo "    （索引刷新失败但继续部署）"
+
 echo "==> 2. 确保 .gitignore（排除敏感数据/无关文件）"
 if [ ! -f .gitignore ]; then
   cat > .gitignore <<'EOF'
