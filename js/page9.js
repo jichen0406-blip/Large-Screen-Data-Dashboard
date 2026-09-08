@@ -1,4 +1,4 @@
-// page9.js — P3 过去30天福可苏订单每日进展跟进：顶部 4 线趋势图 + 每日明细表（医院 + 脱敏患者，表头锁定）
+// page9.js — P3 过去30天福可苏订单每日进展跟进：顶部 4 线趋势图 + 每日明细表（追溯码 + 医院 + 脱敏患者，表头锁定）
 (function () {
     var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
     if (!B || !B.DAILY30) return;
@@ -12,22 +12,16 @@
     ];
     function total(list) { return list ? list.length : 0; }
 
-    // 按医院分组（保持首现顺序，院内脱敏患者用、连接）
-    function groupByHosp(list) {
-        var map = {}, order = [];
-        (list || []).forEach(function (it) {
-            var h = it.hosp || '未知医院';
-            if (!map[h]) { map[h] = []; order.push(h); }
-            map[h].push(it.name || '·');
-        });
-        return order.map(function (h) { return { hosp: h, names: map[h] }; });
-    }
+    // 空追溯码用 13 位空白占位，与 13 位追溯码长度对齐
+    var CODE_PAD = '             ';
+    // 每条明细独立一行：追溯码 + 医院 + 脱敏患者（追溯码一单一码，置前）
     function cellHTML(list) {
-        var g = groupByHosp(list);
-        if (!g.length) return '<ul class="p9-items"><li class="p9-empty">暂无</li></ul>';
+        if (!list || !list.length) return '<ul class="p9-items"><li class="p9-empty">暂无</li></ul>';
         var s = '<ul class="p9-items">';
-        g.forEach(function (h) {
-            s += '<li><span class="p9-hn">' + h.hosp + '</span><span class="p9-pn">' + h.names.join('、') + '</span></li>';
+        list.forEach(function (it) {
+            s += '<li><span class="p9-code">' + (it.code || CODE_PAD) + '</span>' +
+                '<span class="p9-hn">' + (it.hosp || '未知医院') + '</span>' +
+                '<span class="p9-pn">' + (it.name || '·') + '</span></li>';
         });
         return s + '</ul>';
     }

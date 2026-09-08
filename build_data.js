@@ -91,6 +91,7 @@ headers.forEach(function(h, i) {
   if (h === '单采预约时间') ci.apmt = i;
   if (h === '仓库接收单采血时间') ci.receive = i;
   if (h === '患者姓名') ci.patient = i;
+  if (h === '追溯码') ci.code = i;
 });
 console.log('关键列索引:', JSON.stringify(ci));
 
@@ -111,6 +112,12 @@ function maskName(name) {
   }
   if (name.length === 2) return name[0] + '*';
   return name[0] + '*' + name[name.length - 1];
+}
+
+// 追溯码清洗：手工订单的追溯码列是占位值「手工订单」，视为空
+function sanCode(v) {
+  v = String(v == null ? '' : v).trim();
+  return (v === '手工订单') ? '' : v;
 }
 
 // ── 6. 处理数据行（与 build_poster.js 相同的匹配规则） ──
@@ -140,6 +147,7 @@ for (var i = 2; i < bsRows.length; i++) {
 
   records.push({
     no: String(row[1] || '').trim(),
+    code: sanCode(row[ci.code]),
     hosp: hosp,
     prov: prov,
     city: city,
@@ -298,10 +306,10 @@ while (_d30 <= _end) {
   var dO = [], dR = [], dA = [], dQ = [];
   records.forEach(function(r) {
     if (!r.hosp || r.hosp === '未知医院') return;
-    if (r.od === ds30) dO.push({ hosp: r.hosp, name: r.patient });
-    if (r.re === ds30) dR.push({ hosp: r.hosp, name: r.patient });
-    if (r.ap === ds30) dA.push({ hosp: r.hosp, name: r.patient });
-    if (r.qa === ds30) dQ.push({ hosp: r.hosp, name: r.patient });
+    if (r.od === ds30) dO.push({ code: r.code, hosp: r.hosp, name: r.patient });
+    if (r.re === ds30) dR.push({ code: r.code, hosp: r.hosp, name: r.patient });
+    if (r.ap === ds30) dA.push({ code: r.code, hosp: r.hosp, name: r.patient });
+    if (r.qa === ds30) dQ.push({ code: r.code, hosp: r.hosp, name: r.patient });
   });
   daily30.push({ date: ds30, orders: dO, reinfusion: dR, apheresis: dA, release: dQ });
   _d30.setDate(_d30.getDate() + 1);
