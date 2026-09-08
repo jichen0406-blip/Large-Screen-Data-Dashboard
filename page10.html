@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>福可苏业绩总览 · CART运营每日跟进</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/cart_daily.js"></script>
+<link rel="stylesheet" href="css/style.css">
+	<script>window.PAGE_KEY='cart_daily';</script>
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
+</head>
+<body>
+	<div class="login-mask" id="loginMask">
+	<div class="login-body">
+		<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
+		<div class="login-center">
+			<div class="login-shuzibg"></div>
+			<div class="login-title">
+				<img class="login-logo" src="images/logo-white.png" alt="驯鹿生物">
+				<p class="login-title-main">驯鹿生物大数据监控平台</p>
+				<p class="login-title-sub">登录页</p>
+			</div>
+			<div class="login-card">
+				<div class="login-welcome">欢迎登录系统!</div>
+				<div class="login-input">
+					<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+					<input type="text" id="loginUser" placeholder="请输入账号" value="administrator" autocomplete="off">
+				</div>
+				<div class="login-input">
+					<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+					<input type="password" id="loginPwd" placeholder="密码" autocomplete="off">
+				</div>
+				<label class="login-remember"><input type="checkbox" id="loginRemember"><span>记住密码</span></label>
+				<div class="login-err" id="loginErr"></div>
+				<div class="login-btn" id="loginBtn"><span>登 录</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="login-bolang"></div>
+</div><div class="head clearfix">
+		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
+		<div class="head-left">
+			<div class="update">数据更新时间 <span id="p10Upd">--</span></div>
+			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
+		</div>
+		<div class="tm-wrap">
+			<div class="time" id="showTime">--</div>
+			<div class="weather" id="weather">上海 --</div>
+		</div>
+		<script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
+	</div>
+	<div class="mainbox">
+		<div class="pt-time">
+			<span class="pt-time-tit">年月控制</span>
+			<select id="p10y" class="pt-sel" title="年份"></select>
+			<select id="p10m" class="pt-sel" title="月份"></select>
+			<span class="cart-sep"></span>
+			<span class="cart-ctl-lab">状态筛选（多选）</span>
+			<div class="cart-lights" id="p10lights"></div>
+			<div class="cart-search">
+				<input type="text" id="p10code" placeholder="追溯码精确搜索" autocomplete="off">
+				<select id="p10qtype" class="pt-sel cart-qtype" title="类型">
+					<option value="apheresis">单采</option>
+					<option value="reinfusion">回输</option>
+				</select>
+				<button type="button" class="cart-btn" id="p10qbtn">搜索</button>
+				<button type="button" class="cart-btn ghost" id="p10cbtn">清空</button>
+			</div>
+			<span class="pt-time-note cart-msg" id="p10msg"></span>
+		</div>
+		<div class="cart-stack">
+			<div class="pt-tbl-col">
+				<div class="pt-tbl-tit">日历 Dashboard<span class="pt-tbl-tag">按计划日期落格</span><span id="p10calstat"></span><button class="map-fs" type="button" data-fs="p10calwrap" data-title="日历 Dashboard">⛶</button></div>
+				<div class="pt-tbl-wrap" id="p10calwrap"><div id="p10cal"></div></div>
+			</div>
+			<div class="pt-tbl-col">
+				<div class="pt-tbl-tit">明细表格 <span class="pt-tbl-tag">整月 · 排序 红→灰→黄→绿</span><button class="map-fs" type="button" data-fs="p10tbl" data-title="明细表格">⛶</button></div>
+				<div class="pt-tbl-wrap" id="p10tbl"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 地图放大全屏 -->
+	<div class="fs-mask" id="fsMask" style="display:none;">
+		<div class="fs-head">
+			<span class="fs-title" id="fsTitle">--</span>
+			<button class="fs-close" id="fsClose" type="button">×</button>
+		</div>
+		<div class="fs-body" id="fsBody"></div>
+	</div>
+	<!-- 网页导航菜单 -->
+	<div class="menu-mask" id="menuMask" style="display:none;">
+		<div class="menu-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit">网页导航</span>
+				<button class="menu-close" id="menuClose" type="button">×</button>
+			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
+		</div>
+	</div>
+
+	<script>
+	// 当天上海天气与温度
+	(function () {
+		var wEl = document.getElementById('weather');
+		var WSYM = {0:'☀',1:'☀',2:'⛅',3:'☁',45:'☁',48:'☁',51:'☔',53:'☔',55:'☔',56:'☔',57:'☔',61:'☔',63:'☔☔',65:'☔☔☔',66:'☔☔',67:'☔☔',71:'❄',73:'❄',75:'❄',77:'❄',80:'☔',81:'☔☔',82:'☔☔☔',85:'❄',86:'❄',95:'⛈',96:'⛈',99:'⛈'};
+		fetch('https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&current=temperature_2m,weather_code&timezone=Asia%2FShanghai')
+			.then(function (r) { return r.json(); })
+			.then(function (d) {
+				var t = Math.round(d.current.temperature_2m);
+				wEl.innerHTML = '上海 ' + (WSYM[d.current.weather_code] || '--') + ' ' + t + '℃';
+			})
+			.catch(function () { wEl.innerHTML = '上海 --'; });
+	})();
+	</script>
+	<script>
+	// 数据更新时间
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		$('#p10Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
+	});
+	</script>
+	<script type="text/javascript" src="js/fs.js"></script>
+	<!-- 左侧悬浮导航栏 -->
+	<div class="side-nav" id="sideNav"></div>
+</body>
+</html>

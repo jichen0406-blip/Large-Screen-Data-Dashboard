@@ -73,7 +73,7 @@ function indexSection(pages) {
     MA + '\n' + indexTable(pages) + '\n' + MB;
 }
 function updateDocIndex(pages, dry) {
-  if (!fs.existsSync(DOC)) ERR('找不到 ' + DOC);
+  if (!fs.existsSync(DOC)) { console.warn('⚠️ 跳过文档索引：找不到 ' + DOC); return { skipped: true, doc: null }; }
   var doc = readText(DOC);
   // 仅识别「独占一行」的标记（正文代码片段里出现的同名文字不视为标记）
   var re = /^<!-- PAGES:AUTO -->[\s\S]*?^<!-- \/PAGES:AUTO -->/m;
@@ -81,7 +81,7 @@ function updateDocIndex(pages, dry) {
     doc = doc.replace(re, MA + '\n' + indexTable(pages) + '\n' + MB);
   } else {
     var h = doc.indexOf('## 4. 页面结构与功能');
-    if (h < 0) ERR('项目文档.md 缺少「## 4. 页面结构与功能」锚点，请先在该章开头手动放 ' + MA + ' … ' + MB);
+    if (h < 0) { console.warn('⚠️ 跳过文档索引：项目文档.md 缺少「## 4. 页面结构与功能」锚点（本地测试环境文档为占位，正式环境部署时才刷新）'); return { skipped: true, doc: null }; }
     // 在标题行之后插入（标题后原本有 1 空行，故前缀空一行分隔）
     doc = doc.slice(0, h) + '## 4. 页面结构与功能\n\n' + indexSection(pages) + '\n' + doc.slice(h).replace(/^## 4\. 页面结构与功能/, '');
   }
@@ -208,6 +208,7 @@ function nextFreeId(pages) {
 function cmdIndex(opts) {
   var np = navPages();
   var r = updateDocIndex(np.pages, opts.dryRun);
+  if (r.skipped) { console.log('页面索引刷新跳过（见上方警告）'); return 0; }
   var res = scanResidualP(r.doc);
   console.log((opts.dryRun ? '[dry-run] ' : '') + '刷新页面索引 → 共 ' + np.pages.length + ' 页');
   if (!opts.dryRun) console.log('已写回 ' + DOC);
@@ -266,7 +267,8 @@ function cmdAdd(opts) {
     console.log('  文件    ' + path.join(HTML_DIR, id));
     console.log('  nav.js  插入 { id:' + id + ", key:'" + opts.key + "', num:'" + pages2[idx].num + "', name:'" + opts.name + "' }，其余页面序号自动重排");
     console.log('  users.js pageAccess 增加 "' + opts.key + '": []（不触碰任何既有账号/权限）');
-    console.log('  文档    刷新 §4.0 索引（' + pages2.length + ' 页）');
+    if (idxInfo && idxInfo.skipped) console.log('  文档    索引刷新将跳过（占位/无锚点文档）');
+    else console.log('  文档    刷新 §4.0 索引（' + pages2.length + ' 页）');
     console.log('  -- 后续待你手动：填充页面主体、样式前缀 ' + id.replace('.html', '') + '-*，若需给用户看 → 到后台「页面权限管理」勾选；并在项目文档 §4 增写新页说明小节。');
     return 0;
   }
@@ -276,12 +278,12 @@ function cmdAdd(opts) {
   var nsrc = np.src.replace(np.block, navBlockText(pages2));
   writeText(NAV, nsrc);
   writeText(USERS, u2);
-  updateDocIndex(pages2, false);
+  var ures = updateDocIndex(pages2, false);
   console.log('✓ 已新建页面并接入：');
   console.log('  文件    ' + path.join(HTML_DIR, id));
   console.log('  nav.js  num 重排 → 新页 ' + pages2[idx].num);
   console.log('  users.js pageAccess 已加 "' + opts.key + '": []');
-  console.log('  文档    §4.0 索引已刷新');
+  console.log('  文档    ' + (ures.skipped ? '索引刷新跳过（占位/无锚点文档，正式部署时自动刷新）' : '§4.0 索引已刷新'));
   console.log('  -- 后续待你手动：填充 ' + id + ' 主体、样式前缀 ' + id.replace('.html', '') + '-*；在后台「页面权限管理」给该页勾选用户；在项目文档 §4 增写新页说明小节。');
   return 0;
 }

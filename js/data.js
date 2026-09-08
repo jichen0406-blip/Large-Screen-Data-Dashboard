@@ -25494,5 +25494,11455 @@ var BOARD_DATA = {
         "modZq": ""
       }
     ]
-  }
+  },
+  "CART_DAILY": [
+    {
+      "code": "A1C0001",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "陈*钟",
+      "type": "apheresis",
+      "plan": "2023-07-07",
+      "actual": "2023-07-07"
+    },
+    {
+      "code": "A1C0001",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "陈*钟",
+      "type": "reinfusion",
+      "plan": "2023-08-16",
+      "actual": "2023-08-21"
+    },
+    {
+      "code": "A1C0002",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "卢*华",
+      "type": "apheresis",
+      "plan": "2023-07-11",
+      "actual": "2023-07-11"
+    },
+    {
+      "code": "A1C0002",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "卢*华",
+      "type": "reinfusion",
+      "plan": "2023-08-08",
+      "actual": "2023-08-08"
+    },
+    {
+      "code": "A1C0003",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*俊",
+      "type": "apheresis",
+      "plan": "2023-07-11",
+      "actual": "2023-07-11"
+    },
+    {
+      "code": "A1C0003",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*俊",
+      "type": "reinfusion",
+      "plan": "2023-08-11",
+      "actual": "2023-08-11"
+    },
+    {
+      "code": "A1C0004",
+      "hosp": "北京大学第一医院",
+      "patient": "王*平",
+      "type": "apheresis",
+      "plan": "2023-07-12",
+      "actual": "2023-07-12"
+    },
+    {
+      "code": "A1C0004",
+      "hosp": "北京大学第一医院",
+      "patient": "王*平",
+      "type": "reinfusion",
+      "plan": "2023-08-07",
+      "actual": "2023-08-07"
+    },
+    {
+      "code": "A1C0005",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "曹*华",
+      "type": "apheresis",
+      "plan": "2023-07-13",
+      "actual": "2023-07-13"
+    },
+    {
+      "code": "A1C0005",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "曹*华",
+      "type": "reinfusion",
+      "plan": "2023-08-14",
+      "actual": "2023-08-14"
+    },
+    {
+      "code": "A1C0006",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "王*训",
+      "type": "apheresis",
+      "plan": "2023-07-18",
+      "actual": "2023-07-18"
+    },
+    {
+      "code": "A1C0006",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "王*训",
+      "type": "reinfusion",
+      "plan": "2023-09-08",
+      "actual": "2023-09-08"
+    },
+    {
+      "code": "A1C0011",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陈*阳",
+      "type": "apheresis",
+      "plan": "2023-07-28",
+      "actual": "2023-07-28"
+    },
+    {
+      "code": "A1C0011",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陈*阳",
+      "type": "reinfusion",
+      "plan": "2023-08-30",
+      "actual": "2023-08-30"
+    },
+    {
+      "code": "A1C0008",
+      "hosp": "北京大学人民医院",
+      "patient": "李*国",
+      "type": "apheresis",
+      "plan": "2023-07-21",
+      "actual": "2023-07-21"
+    },
+    {
+      "code": "A1C0008",
+      "hosp": "北京大学人民医院",
+      "patient": "李*国",
+      "type": "reinfusion",
+      "plan": "2023-08-17",
+      "actual": "2023-08-17"
+    },
+    {
+      "code": "A1C0009",
+      "hosp": "深圳市罗湖区人民医院（友谊路院区）",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2023-07-21",
+      "actual": "2023-07-21"
+    },
+    {
+      "code": "A1C0009",
+      "hosp": "深圳市罗湖区人民医院（友谊路院区）",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2023-08-29",
+      "actual": "2023-08-29"
+    },
+    {
+      "code": "A1C0010",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*明",
+      "type": "apheresis",
+      "plan": "2023-07-26",
+      "actual": "2023-07-26"
+    },
+    {
+      "code": "A1C0010",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*明",
+      "type": "reinfusion",
+      "plan": "2023-09-28",
+      "actual": "2023-09-28"
+    },
+    {
+      "code": "A1C0013",
+      "hosp": "苏州大学附属第二医院",
+      "patient": "吴*珠",
+      "type": "apheresis",
+      "plan": "2023-07-28",
+      "actual": "2023-07-28"
+    },
+    {
+      "code": "A1C0013",
+      "hosp": "苏州大学附属第二医院",
+      "patient": "吴*珠",
+      "type": "reinfusion",
+      "plan": "2023-08-28",
+      "actual": "2023-08-28"
+    },
+    {
+      "code": "A1C0015",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*莲",
+      "type": "apheresis",
+      "plan": "2023-07-31",
+      "actual": "2023-07-31"
+    },
+    {
+      "code": "A1C0015",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*莲",
+      "type": "reinfusion",
+      "plan": "2023-08-28",
+      "actual": "2023-08-28"
+    },
+    {
+      "code": "A1C0024",
+      "hosp": "上海长征医院",
+      "patient": "张*珍",
+      "type": "apheresis",
+      "plan": "2023-08-24",
+      "actual": "2023-08-24"
+    },
+    {
+      "code": "A1C0024",
+      "hosp": "上海长征医院",
+      "patient": "张*珍",
+      "type": "reinfusion",
+      "plan": "2023-09-20",
+      "actual": "2023-09-20"
+    },
+    {
+      "code": "A1C0018",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "施*珍",
+      "type": "apheresis",
+      "plan": "2023-08-10",
+      "actual": "2023-08-10"
+    },
+    {
+      "code": "A1C0018",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "施*珍",
+      "type": "reinfusion",
+      "plan": "2023-09-11",
+      "actual": "2023-09-11"
+    },
+    {
+      "code": "A1C0017",
+      "hosp": "南方医科大学南方医院",
+      "patient": "叶*秀",
+      "type": "apheresis",
+      "plan": "2023-08-08",
+      "actual": "2023-08-08"
+    },
+    {
+      "code": "A1C0017",
+      "hosp": "南方医科大学南方医院",
+      "patient": "叶*秀",
+      "type": "reinfusion",
+      "plan": "2023-10-13",
+      "actual": "2023-10-13"
+    },
+    {
+      "code": "A1C0016",
+      "hosp": "北京协和医院",
+      "patient": "林*",
+      "type": "apheresis",
+      "plan": "2023-08-08",
+      "actual": "2023-08-08"
+    },
+    {
+      "code": "A1C0016",
+      "hosp": "北京协和医院",
+      "patient": "林*",
+      "type": "reinfusion",
+      "plan": "2023-09-04",
+      "actual": "2023-09-04"
+    },
+    {
+      "code": "A1C0027",
+      "hosp": "北京大学人民医院",
+      "patient": "马*颖",
+      "type": "apheresis",
+      "plan": "2023-08-30",
+      "actual": "2023-08-30"
+    },
+    {
+      "code": "A1C0027",
+      "hosp": "北京大学人民医院",
+      "patient": "马*颖",
+      "type": "reinfusion",
+      "plan": "2023-09-26",
+      "actual": "2023-09-26"
+    },
+    {
+      "code": "A1C0020",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "张*兴",
+      "type": "apheresis",
+      "plan": "2023-08-21",
+      "actual": "2023-08-21"
+    },
+    {
+      "code": "A1C0020",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "张*兴",
+      "type": "reinfusion",
+      "plan": "2023-09-14",
+      "actual": "2023-09-14"
+    },
+    {
+      "code": "A1C0023",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "胡*君",
+      "type": "apheresis",
+      "plan": "2023-08-24",
+      "actual": "2023-08-24"
+    },
+    {
+      "code": "A1C0023",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "胡*君",
+      "type": "reinfusion",
+      "plan": "2023-10-16",
+      "actual": "2023-10-16"
+    },
+    {
+      "code": "A1C0025",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "程*玲",
+      "type": "apheresis",
+      "plan": "2023-08-25",
+      "actual": "2023-08-25"
+    },
+    {
+      "code": "A1C0025",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "程*玲",
+      "type": "reinfusion",
+      "plan": "2023-09-28",
+      "actual": "2023-09-28"
+    },
+    {
+      "code": "A1C0026",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "王*君",
+      "type": "apheresis",
+      "plan": "2023-08-28",
+      "actual": "2023-08-28"
+    },
+    {
+      "code": "A1C0026",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "王*君",
+      "type": "reinfusion",
+      "plan": "2023-10-30",
+      "actual": "2023-10-30"
+    },
+    {
+      "code": "A1C0029",
+      "hosp": "上海嘉会国际医院",
+      "patient": "A*w J*n W*e",
+      "type": "apheresis",
+      "plan": "2023-08-31",
+      "actual": "2023-08-31"
+    },
+    {
+      "code": "A1C0029",
+      "hosp": "上海嘉会国际医院",
+      "patient": "A*w J*n W*e",
+      "type": "reinfusion",
+      "plan": "2023-11-09",
+      "actual": "2023-11-09"
+    },
+    {
+      "code": "A1C0031",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "方*红",
+      "type": "apheresis",
+      "plan": "2023-09-06",
+      "actual": "2023-09-06"
+    },
+    {
+      "code": "A1C0031",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "方*红",
+      "type": "reinfusion",
+      "plan": "2023-12-29",
+      "actual": "2023-12-29"
+    },
+    {
+      "code": "A1C0032",
+      "hosp": "上海市同济医院",
+      "patient": "M*n K*n",
+      "type": "apheresis",
+      "plan": "2023-09-08",
+      "actual": "2023-09-08"
+    },
+    {
+      "code": "A1C0032",
+      "hosp": "上海市同济医院",
+      "patient": "M*n K*n",
+      "type": "reinfusion",
+      "plan": "2023-10-14",
+      "actual": "2023-10-14"
+    },
+    {
+      "code": "A1C0034",
+      "hosp": "北京大学人民医院",
+      "patient": "周*林",
+      "type": "apheresis",
+      "plan": "2023-09-21",
+      "actual": "2023-09-21"
+    },
+    {
+      "code": "A1C0034",
+      "hosp": "北京大学人民医院",
+      "patient": "周*林",
+      "type": "reinfusion",
+      "plan": "2023-10-16",
+      "actual": "2023-10-16"
+    },
+    {
+      "code": "A1C0035",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*波",
+      "type": "apheresis",
+      "plan": "2023-09-14",
+      "actual": "2023-09-14"
+    },
+    {
+      "code": "A1C0035",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*波",
+      "type": "reinfusion",
+      "plan": "2023-10-18",
+      "actual": "2023-10-18"
+    },
+    {
+      "code": "A1C0036",
+      "hosp": "广西医科大学附属肿瘤医院",
+      "patient": "甘*爱",
+      "type": "apheresis",
+      "plan": "2023-09-14",
+      "actual": "2023-09-14"
+    },
+    {
+      "code": "A1C0036",
+      "hosp": "广西医科大学附属肿瘤医院",
+      "patient": "甘*爱",
+      "type": "reinfusion",
+      "plan": "2023-10-31",
+      "actual": "2023-10-31"
+    },
+    {
+      "code": "A1C0041",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*平",
+      "type": "apheresis",
+      "plan": "2023-09-27",
+      "actual": "2023-09-27"
+    },
+    {
+      "code": "A1C0041",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*平",
+      "type": "reinfusion",
+      "plan": "2023-11-10",
+      "actual": "2023-11-10"
+    },
+    {
+      "code": "A1C0037",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*艳",
+      "type": "apheresis",
+      "plan": "2023-09-15",
+      "actual": "2023-09-15"
+    },
+    {
+      "code": "A1C0037",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*艳",
+      "type": "reinfusion",
+      "plan": "2023-10-23",
+      "actual": "2023-10-23"
+    },
+    {
+      "code": "A1C0038",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "丁*生",
+      "type": "apheresis",
+      "plan": "2023-09-19",
+      "actual": "2023-09-19"
+    },
+    {
+      "code": "A1C0038",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "丁*生",
+      "type": "reinfusion",
+      "plan": "2023-10-23",
+      "actual": "2023-10-23"
+    },
+    {
+      "code": "A1C0039",
+      "hosp": "北京大学人民医院",
+      "patient": "贾*明",
+      "type": "apheresis",
+      "plan": "2023-09-21",
+      "actual": "2023-09-21"
+    },
+    {
+      "code": "A1C0039",
+      "hosp": "北京大学人民医院",
+      "patient": "贾*明",
+      "type": "reinfusion",
+      "plan": "2024-04-17",
+      "actual": "2024-04-17"
+    },
+    {
+      "code": "A1C0042",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "马*芝",
+      "type": "apheresis",
+      "plan": "2023-09-26",
+      "actual": "2023-09-26"
+    },
+    {
+      "code": "A1C0042",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "马*芝",
+      "type": "reinfusion",
+      "plan": "2023-11-06",
+      "actual": "2023-11-06"
+    },
+    {
+      "code": "A1C0046",
+      "hosp": "北京大学人民医院",
+      "patient": "戴*",
+      "type": "apheresis",
+      "plan": "2023-10-19",
+      "actual": "2023-10-19"
+    },
+    {
+      "code": "A1C0046",
+      "hosp": "北京大学人民医院",
+      "patient": "戴*",
+      "type": "reinfusion",
+      "plan": "2023-11-15",
+      "actual": "2023-11-15"
+    },
+    {
+      "code": "A1C0047",
+      "hosp": "南方医科大学南方医院",
+      "patient": "梁*贞",
+      "type": "apheresis",
+      "plan": "2023-10-23",
+      "actual": "2023-10-23"
+    },
+    {
+      "code": "A1C0047",
+      "hosp": "南方医科大学南方医院",
+      "patient": "梁*贞",
+      "type": "reinfusion",
+      "plan": "2023-12-27",
+      "actual": "2023-12-27"
+    },
+    {
+      "code": "A1C0048",
+      "hosp": "中山大学附属第一医院",
+      "patient": "于*",
+      "type": "apheresis",
+      "plan": "2023-10-20",
+      "actual": "2023-10-20"
+    },
+    {
+      "code": "A1C0048",
+      "hosp": "中山大学附属第一医院",
+      "patient": "于*",
+      "type": "reinfusion",
+      "plan": "2023-11-22",
+      "actual": "2023-11-22"
+    },
+    {
+      "code": "A1C0049",
+      "hosp": "上海长征医院",
+      "patient": "王*华",
+      "type": "apheresis",
+      "plan": "2023-10-20",
+      "actual": "2023-10-20"
+    },
+    {
+      "code": "A1C0049",
+      "hosp": "上海长征医院",
+      "patient": "王*华",
+      "type": "reinfusion",
+      "plan": "2023-11-17",
+      "actual": "2023-11-17"
+    },
+    {
+      "code": "A1C0050",
+      "hosp": "上海仁济医院",
+      "patient": "薛*华",
+      "type": "apheresis",
+      "plan": "2023-10-23",
+      "actual": "2023-10-23"
+    },
+    {
+      "code": "A1C0050",
+      "hosp": "上海仁济医院",
+      "patient": "薛*华",
+      "type": "reinfusion",
+      "plan": "2023-11-22",
+      "actual": "2023-11-22"
+    },
+    {
+      "code": "A1C0052",
+      "hosp": "北京协和医院",
+      "patient": "邓*",
+      "type": "apheresis",
+      "plan": "2023-10-27",
+      "actual": "2023-10-27"
+    },
+    {
+      "code": "A1C0052",
+      "hosp": "北京协和医院",
+      "patient": "邓*",
+      "type": "reinfusion",
+      "plan": "2023-12-07",
+      "actual": "2023-12-07"
+    },
+    {
+      "code": "A1C0054",
+      "hosp": "空军军医大学西京医院",
+      "patient": "毛*成",
+      "type": "apheresis",
+      "plan": "2023-11-07",
+      "actual": "2023-11-07"
+    },
+    {
+      "code": "A1C0054",
+      "hosp": "空军军医大学西京医院",
+      "patient": "毛*成",
+      "type": "reinfusion",
+      "plan": "2024-05-20",
+      "actual": "2024-05-20"
+    },
+    {
+      "code": "A1C0053",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "夏*伦",
+      "type": "apheresis",
+      "plan": "2023-11-05",
+      "actual": "2023-11-05"
+    },
+    {
+      "code": "A1C0053",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "夏*伦",
+      "type": "reinfusion",
+      "plan": "2023-12-14",
+      "actual": "2023-12-14"
+    },
+    {
+      "code": "A1C0055",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "黄*蓉",
+      "type": "apheresis",
+      "plan": "2023-11-07",
+      "actual": "2023-11-07"
+    },
+    {
+      "code": "A1C0055",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "黄*蓉",
+      "type": "reinfusion",
+      "plan": "2024-01-24",
+      "actual": "2024-01-24"
+    },
+    {
+      "code": "A1C0060",
+      "hosp": "上海嘉会国际医院",
+      "patient": "汤*星",
+      "type": "apheresis",
+      "plan": "2023-11-15",
+      "actual": "2023-11-15"
+    },
+    {
+      "code": "A1C0060",
+      "hosp": "上海嘉会国际医院",
+      "patient": "汤*星",
+      "type": "reinfusion",
+      "plan": "2024-01-09",
+      "actual": "2024-01-09"
+    },
+    {
+      "code": "A1D0277",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*祥",
+      "type": "apheresis",
+      "plan": "2024-10-31",
+      "actual": "2024-10-31"
+    },
+    {
+      "code": "A1D0277",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*祥",
+      "type": "reinfusion",
+      "plan": "2025-03-24",
+      "actual": "2025-03-24"
+    },
+    {
+      "code": "A1C0057",
+      "hosp": "北京大学第三医院",
+      "patient": "时*强",
+      "type": "apheresis",
+      "plan": "2023-11-10",
+      "actual": "2023-11-10"
+    },
+    {
+      "code": "A1C0057",
+      "hosp": "北京大学第三医院",
+      "patient": "时*强",
+      "type": "reinfusion",
+      "plan": "2024-03-15",
+      "actual": "2024-03-15"
+    },
+    {
+      "code": "A1C0059",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*光",
+      "type": "apheresis",
+      "plan": "2023-11-16",
+      "actual": "2023-11-16"
+    },
+    {
+      "code": "A1C0059",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*光",
+      "type": "reinfusion",
+      "plan": "2024-03-11",
+      "actual": "2024-03-11"
+    },
+    {
+      "code": "A1C0062",
+      "hosp": "上海市第六人民医院",
+      "patient": "张*成",
+      "type": "apheresis",
+      "plan": "2023-11-17",
+      "actual": "2023-11-17"
+    },
+    {
+      "code": "A1C0062",
+      "hosp": "上海市第六人民医院",
+      "patient": "张*成",
+      "type": "reinfusion",
+      "plan": "2023-12-28",
+      "actual": "2023-12-28"
+    },
+    {
+      "code": "A1C0065",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "周*有",
+      "type": "apheresis",
+      "plan": "2023-11-16",
+      "actual": "2023-11-16"
+    },
+    {
+      "code": "A1C0065",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "周*有",
+      "type": "reinfusion",
+      "plan": "2024-01-18",
+      "actual": "2024-01-18"
+    },
+    {
+      "code": "A1C0064",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "孙*燕",
+      "type": "apheresis",
+      "plan": "2023-11-15",
+      "actual": "2023-11-15"
+    },
+    {
+      "code": "A1C0064",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "孙*燕",
+      "type": "reinfusion",
+      "plan": "2024-01-15",
+      "actual": "2024-01-15"
+    },
+    {
+      "code": "A1E0079",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "范*江",
+      "type": "apheresis",
+      "plan": "2025-04-16",
+      "actual": "2025-04-16"
+    },
+    {
+      "code": "A1C0070",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "周*菊",
+      "type": "apheresis",
+      "plan": "2023-11-22",
+      "actual": "2023-11-22"
+    },
+    {
+      "code": "A1C0070",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "周*菊",
+      "type": "reinfusion",
+      "plan": "2023-12-28",
+      "actual": "2023-12-28"
+    },
+    {
+      "code": "A1C0069",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "蒋*权",
+      "type": "apheresis",
+      "plan": "2023-11-23",
+      "actual": "2023-11-23"
+    },
+    {
+      "code": "A1C0069",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "蒋*权",
+      "type": "reinfusion",
+      "plan": "2024-01-02",
+      "actual": "2024-01-02"
+    },
+    {
+      "code": "A1C0072",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "陈*玲",
+      "type": "apheresis",
+      "plan": "2023-11-24",
+      "actual": "2023-11-24"
+    },
+    {
+      "code": "A1C0072",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "陈*玲",
+      "type": "reinfusion",
+      "plan": "2023-12-28",
+      "actual": "2023-12-28"
+    },
+    {
+      "code": "A1C0085",
+      "hosp": "上海嘉会国际医院",
+      "patient": "V*R B*V",
+      "type": "apheresis",
+      "plan": "2023-12-20",
+      "actual": "2023-12-20"
+    },
+    {
+      "code": "A1C0085",
+      "hosp": "上海嘉会国际医院",
+      "patient": "V*R B*V",
+      "type": "reinfusion",
+      "plan": "2024-01-25",
+      "actual": "2024-01-25"
+    },
+    {
+      "code": "A1C0073",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2023-12-22",
+      "actual": "2023-12-22"
+    },
+    {
+      "code": "A1C0073",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2024-02-26",
+      "actual": "2024-02-26"
+    },
+    {
+      "code": "A1C0075",
+      "hosp": "上海嘉会国际医院",
+      "patient": "L*U F*N C*N",
+      "type": "apheresis",
+      "plan": "2023-11-25",
+      "actual": "2023-11-25"
+    },
+    {
+      "code": "A1C0075",
+      "hosp": "上海嘉会国际医院",
+      "patient": "L*U F*N C*N",
+      "type": "reinfusion",
+      "plan": "2024-01-10",
+      "actual": "2024-01-10"
+    },
+    {
+      "code": "A1C0074",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "吴*奇",
+      "type": "apheresis",
+      "plan": "2023-11-25",
+      "actual": "2023-11-25"
+    },
+    {
+      "code": "A1C0074",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "吴*奇",
+      "type": "reinfusion",
+      "plan": "2024-01-03",
+      "actual": "2024-01-03"
+    },
+    {
+      "code": "A1C0077",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "P*E S*Y",
+      "type": "apheresis",
+      "plan": "2023-11-30",
+      "actual": "2023-11-30"
+    },
+    {
+      "code": "A1C0077",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "P*E S*Y",
+      "type": "reinfusion",
+      "plan": "2024-03-05",
+      "actual": "2024-03-05"
+    },
+    {
+      "code": "A1C0076",
+      "hosp": "宁波市第二医院",
+      "patient": "张*亚",
+      "type": "apheresis",
+      "plan": "2023-11-28",
+      "actual": "2023-11-28"
+    },
+    {
+      "code": "A1C0076",
+      "hosp": "宁波市第二医院",
+      "patient": "张*亚",
+      "type": "reinfusion",
+      "plan": "2023-12-28",
+      "actual": "2023-12-28"
+    },
+    {
+      "code": "A1C0078",
+      "hosp": "北京大学人民医院",
+      "patient": "毛*征",
+      "type": "apheresis",
+      "plan": "2023-11-30",
+      "actual": "2023-11-30"
+    },
+    {
+      "code": "A1C0078",
+      "hosp": "北京大学人民医院",
+      "patient": "毛*征",
+      "type": "reinfusion",
+      "plan": "2024-01-16",
+      "actual": "2024-01-16"
+    },
+    {
+      "code": "A1C0079",
+      "hosp": "上海长征医院",
+      "patient": "任*",
+      "type": "apheresis",
+      "plan": "2023-12-04",
+      "actual": "2023-12-04"
+    },
+    {
+      "code": "A1C0079",
+      "hosp": "上海长征医院",
+      "patient": "任*",
+      "type": "reinfusion",
+      "plan": "2024-02-24",
+      "actual": "2024-02-24"
+    },
+    {
+      "code": "A1C0082",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "郑*珠",
+      "type": "apheresis",
+      "plan": "2023-12-05",
+      "actual": "2023-12-05"
+    },
+    {
+      "code": "A1C0082",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "郑*珠",
+      "type": "reinfusion",
+      "plan": "2024-03-07",
+      "actual": "2024-03-07"
+    },
+    {
+      "code": "A1D0013",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*领",
+      "type": "apheresis",
+      "plan": "2024-01-17",
+      "actual": "2024-01-17"
+    },
+    {
+      "code": "A1D0013",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*领",
+      "type": "reinfusion",
+      "plan": "2024-03-29",
+      "actual": "2024-03-29"
+    },
+    {
+      "code": "A1C0083",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "吴*英",
+      "type": "apheresis",
+      "plan": "2023-12-07",
+      "actual": "2023-12-07"
+    },
+    {
+      "code": "A1C0083",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "吴*英",
+      "type": "reinfusion",
+      "plan": "2024-03-18",
+      "actual": "2024-03-19"
+    },
+    {
+      "code": "A1C0084",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "王*美",
+      "type": "apheresis",
+      "plan": "2023-12-07",
+      "actual": "2023-12-07"
+    },
+    {
+      "code": "A1C0084",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "王*美",
+      "type": "reinfusion",
+      "plan": "2024-09-23",
+      "actual": "2024-09-23"
+    },
+    {
+      "code": "A1C0088",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "邢*斌",
+      "type": "apheresis",
+      "plan": "2023-12-15",
+      "actual": "2023-12-15"
+    },
+    {
+      "code": "A1C0088",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "邢*斌",
+      "type": "reinfusion",
+      "plan": "2024-01-19",
+      "actual": "2024-01-19"
+    },
+    {
+      "code": "A1C0087",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "韦*",
+      "type": "apheresis",
+      "plan": "2023-12-15",
+      "actual": "2023-12-15"
+    },
+    {
+      "code": "A1C0087",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "韦*",
+      "type": "reinfusion",
+      "plan": "2024-01-22",
+      "actual": "2024-01-22"
+    },
+    {
+      "code": "A1C0086",
+      "hosp": "上海嘉会国际医院",
+      "patient": "陈*凤",
+      "type": "apheresis",
+      "plan": "2023-12-13",
+      "actual": "2023-12-13"
+    },
+    {
+      "code": "A1C0086",
+      "hosp": "上海嘉会国际医院",
+      "patient": "陈*凤",
+      "type": "reinfusion",
+      "plan": "2024-04-11",
+      "actual": "2024-04-11"
+    },
+    {
+      "code": "A1C0090",
+      "hosp": "广州医科大学附属第五医院",
+      "patient": "文*森",
+      "type": "apheresis",
+      "plan": "2023-12-18",
+      "actual": "2023-12-18"
+    },
+    {
+      "code": "A1C0090",
+      "hosp": "广州医科大学附属第五医院",
+      "patient": "文*森",
+      "type": "reinfusion",
+      "plan": "2024-03-14",
+      "actual": "2024-03-14"
+    },
+    {
+      "code": "A1C0093",
+      "hosp": "温州医科大学附属第一医院",
+      "patient": "季*峰",
+      "type": "apheresis",
+      "plan": "2023-12-20",
+      "actual": "2023-12-20"
+    },
+    {
+      "code": "A1C0093",
+      "hosp": "温州医科大学附属第一医院",
+      "patient": "季*峰",
+      "type": "reinfusion",
+      "plan": "2024-02-01",
+      "actual": "2024-02-01"
+    },
+    {
+      "code": "A1C0097",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "董*方",
+      "type": "apheresis",
+      "plan": "2023-12-26",
+      "actual": "2023-12-26"
+    },
+    {
+      "code": "A1C0097",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "董*方",
+      "type": "reinfusion",
+      "plan": "2024-03-08",
+      "actual": "2024-03-08"
+    },
+    {
+      "code": "A1D0039",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "何*",
+      "type": "apheresis",
+      "plan": "2024-02-22",
+      "actual": "2024-02-22"
+    },
+    {
+      "code": "A1D0039",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "何*",
+      "type": "reinfusion",
+      "plan": "2024-04-02",
+      "actual": "2024-04-02"
+    },
+    {
+      "code": "A1C0096",
+      "hosp": "安徽省立医院南区（安徽省心血管医院）",
+      "patient": "庞*",
+      "type": "apheresis",
+      "plan": "2023-12-26",
+      "actual": "2023-12-26"
+    },
+    {
+      "code": "A1C0096",
+      "hosp": "安徽省立医院南区（安徽省心血管医院）",
+      "patient": "庞*",
+      "type": "reinfusion",
+      "plan": "2024-05-14",
+      "actual": "2024-05-14"
+    },
+    {
+      "code": "A1C0095",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "蒋*成",
+      "type": "apheresis",
+      "plan": "2023-12-23",
+      "actual": "2023-12-23"
+    },
+    {
+      "code": "A1C0095",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "蒋*成",
+      "type": "reinfusion",
+      "plan": "2024-04-01",
+      "actual": "2024-04-05"
+    },
+    {
+      "code": "A1C0098",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*伟",
+      "type": "apheresis",
+      "plan": "2024-01-08",
+      "actual": "2024-01-08"
+    },
+    {
+      "code": "A1C0098",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*伟",
+      "type": "reinfusion",
+      "plan": "2024-04-08",
+      "actual": "2024-04-08"
+    },
+    {
+      "code": "A1D0001",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "张*海",
+      "type": "apheresis",
+      "plan": "2024-01-03",
+      "actual": "2024-01-03"
+    },
+    {
+      "code": "A1D0001",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "张*海",
+      "type": "reinfusion",
+      "plan": "2024-02-29",
+      "actual": "2024-02-29"
+    },
+    {
+      "code": "A1D0002",
+      "hosp": "北京大学人民医院",
+      "patient": "薛*辉",
+      "type": "apheresis",
+      "plan": "2024-01-03",
+      "actual": "2024-01-03"
+    },
+    {
+      "code": "A1D0002",
+      "hosp": "北京大学人民医院",
+      "patient": "薛*辉",
+      "type": "reinfusion",
+      "plan": "2024-02-24",
+      "actual": "2024-02-24"
+    },
+    {
+      "code": "A1D0003",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "何*凤",
+      "type": "apheresis",
+      "plan": "2024-01-11",
+      "actual": "2024-01-11"
+    },
+    {
+      "code": "A1D0003",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "何*凤",
+      "type": "reinfusion",
+      "plan": "2024-07-04",
+      "actual": "2024-07-04"
+    },
+    {
+      "code": "A1D0004",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "徐*华",
+      "type": "apheresis",
+      "plan": "2024-01-06",
+      "actual": "2024-01-06"
+    },
+    {
+      "code": "A1D0004",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "徐*华",
+      "type": "reinfusion",
+      "plan": "2024-03-11",
+      "actual": "2024-03-11"
+    },
+    {
+      "code": "A1D0005",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "张*俊",
+      "type": "apheresis",
+      "plan": "2024-01-06",
+      "actual": "2024-01-06"
+    },
+    {
+      "code": "A1D0005",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "张*俊",
+      "type": "reinfusion",
+      "plan": "2024-04-22",
+      "actual": "2024-04-22"
+    },
+    {
+      "code": "A1D0008",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "郭*萍",
+      "type": "apheresis",
+      "plan": "2024-01-10",
+      "actual": "2024-01-10"
+    },
+    {
+      "code": "A1D0008",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "郭*萍",
+      "type": "reinfusion",
+      "plan": "2024-02-26",
+      "actual": "2024-02-26"
+    },
+    {
+      "code": "A1D0006",
+      "hosp": "北京大学深圳医院",
+      "patient": "杨*明",
+      "type": "apheresis",
+      "plan": "2024-01-18",
+      "actual": "2024-01-18"
+    },
+    {
+      "code": "A1D0006",
+      "hosp": "北京大学深圳医院",
+      "patient": "杨*明",
+      "type": "reinfusion",
+      "plan": "2024-03-25",
+      "actual": "2024-03-25"
+    },
+    {
+      "code": "A1D0007",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*山",
+      "type": "apheresis",
+      "plan": "2024-01-10",
+      "actual": "2024-01-10"
+    },
+    {
+      "code": "A1D0007",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*山",
+      "type": "reinfusion",
+      "plan": "2024-02-27",
+      "actual": "2024-02-28"
+    },
+    {
+      "code": "A1D0009",
+      "hosp": "中日友好医院",
+      "patient": "刘*范",
+      "type": "apheresis",
+      "plan": "2024-01-10",
+      "actual": "2024-01-10"
+    },
+    {
+      "code": "A1D0010",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "孟*利",
+      "type": "apheresis",
+      "plan": "2024-01-15",
+      "actual": "2024-01-15"
+    },
+    {
+      "code": "A1D0010",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "孟*利",
+      "type": "reinfusion",
+      "plan": "2024-06-11",
+      "actual": "2024-06-11"
+    },
+    {
+      "code": "A1D0011",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-01-29",
+      "actual": "2024-01-29"
+    },
+    {
+      "code": "A1D0011",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2024-05-14",
+      "actual": "2024-05-14"
+    },
+    {
+      "code": "A1D0012",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "鱼*菊",
+      "type": "apheresis",
+      "plan": "2024-01-16",
+      "actual": "2024-01-16"
+    },
+    {
+      "code": "A1D0012",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "鱼*菊",
+      "type": "reinfusion",
+      "plan": "2024-06-06",
+      "actual": "2024-06-06"
+    },
+    {
+      "code": "A1D0015",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*忠",
+      "type": "apheresis",
+      "plan": "2024-01-18",
+      "actual": "2024-01-18"
+    },
+    {
+      "code": "A1D0015",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*忠",
+      "type": "reinfusion",
+      "plan": "2024-03-25",
+      "actual": "2024-03-25"
+    },
+    {
+      "code": "A1D0016",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "章*浩",
+      "type": "apheresis",
+      "plan": "2024-01-18",
+      "actual": "2024-01-18"
+    },
+    {
+      "code": "A1D0016",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "章*浩",
+      "type": "reinfusion",
+      "plan": "2024-03-11",
+      "actual": "2024-03-11"
+    },
+    {
+      "code": "A1D0018",
+      "hosp": "中国医科大学附属盛京医院",
+      "patient": "付*海",
+      "type": "apheresis",
+      "plan": "2024-01-22",
+      "actual": "2024-01-22"
+    },
+    {
+      "code": "A1D0018",
+      "hosp": "中国医科大学附属盛京医院",
+      "patient": "付*海",
+      "type": "reinfusion",
+      "plan": "2024-03-04",
+      "actual": "2024-03-04"
+    },
+    {
+      "code": "A1D0019",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "T*s K*e",
+      "type": "apheresis",
+      "plan": "2024-01-22",
+      "actual": "2024-01-22"
+    },
+    {
+      "code": "A1D0019",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "T*s K*e",
+      "type": "reinfusion",
+      "plan": "2024-02-26",
+      "actual": "2024-02-26"
+    },
+    {
+      "code": "A1D0021",
+      "hosp": "上海长征医院",
+      "patient": "于*英",
+      "type": "apheresis",
+      "plan": "2024-01-23",
+      "actual": "2024-01-23"
+    },
+    {
+      "code": "A1D0021",
+      "hosp": "上海长征医院",
+      "patient": "于*英",
+      "type": "reinfusion",
+      "plan": "2024-03-28",
+      "actual": "2024-03-28"
+    },
+    {
+      "code": "A1D0024",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "温*芹",
+      "type": "apheresis",
+      "plan": "2024-01-25",
+      "actual": "2024-01-25"
+    },
+    {
+      "code": "A1D0024",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "温*芹",
+      "type": "reinfusion",
+      "plan": "2024-05-27",
+      "actual": "2024-05-27"
+    },
+    {
+      "code": "A1D0022",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2024-01-25",
+      "actual": "2024-01-25"
+    },
+    {
+      "code": "A1D0022",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "李*",
+      "type": "reinfusion",
+      "plan": "2024-03-29",
+      "actual": "2024-03-29"
+    },
+    {
+      "code": "A1D0023",
+      "hosp": "北京大学深圳医院",
+      "patient": "万*元",
+      "type": "apheresis",
+      "plan": "2024-01-24",
+      "actual": "2024-01-24"
+    },
+    {
+      "code": "A1D0023",
+      "hosp": "北京大学深圳医院",
+      "patient": "万*元",
+      "type": "reinfusion",
+      "plan": "2024-03-08",
+      "actual": "2024-03-08"
+    },
+    {
+      "code": "A1D0026",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "胡*贤",
+      "type": "apheresis",
+      "plan": "2024-01-24",
+      "actual": "2024-01-24"
+    },
+    {
+      "code": "A1D0026",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "胡*贤",
+      "type": "reinfusion",
+      "plan": "2024-03-19",
+      "actual": "2024-03-19"
+    },
+    {
+      "code": "A1D0027",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2024-01-30",
+      "actual": "2024-01-30"
+    },
+    {
+      "code": "A1D0027",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*",
+      "type": "reinfusion",
+      "plan": "2024-04-12",
+      "actual": "2024-04-12"
+    },
+    {
+      "code": "A1D0028",
+      "hosp": "北京大学人民医院",
+      "patient": "王*红",
+      "type": "apheresis",
+      "plan": "2024-01-30",
+      "actual": "2024-01-30"
+    },
+    {
+      "code": "A1D0028",
+      "hosp": "北京大学人民医院",
+      "patient": "王*红",
+      "type": "reinfusion",
+      "plan": "2024-03-21",
+      "actual": "2024-03-21"
+    },
+    {
+      "code": "A1D0030",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "方*兰",
+      "type": "apheresis",
+      "plan": "2024-02-06",
+      "actual": "2024-02-06"
+    },
+    {
+      "code": "A1D0030",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "方*兰",
+      "type": "reinfusion",
+      "plan": "2024-03-15",
+      "actual": "2024-03-15"
+    },
+    {
+      "code": "A1D0032",
+      "hosp": "中南大学湘雅医院",
+      "patient": "董*",
+      "type": "apheresis",
+      "plan": "2024-02-06",
+      "actual": "2024-02-06"
+    },
+    {
+      "code": "A1D0032",
+      "hosp": "中南大学湘雅医院",
+      "patient": "董*",
+      "type": "reinfusion",
+      "plan": "2024-03-21",
+      "actual": "2024-03-21"
+    },
+    {
+      "code": "A1D0034",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "支*芬",
+      "type": "apheresis",
+      "plan": "2024-02-06",
+      "actual": "2024-02-06"
+    },
+    {
+      "code": "A1D0034",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "支*芬",
+      "type": "reinfusion",
+      "plan": "2024-08-01",
+      "actual": "2024-08-01"
+    },
+    {
+      "code": "A1D0035",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "李*德",
+      "type": "apheresis",
+      "plan": "2024-02-08",
+      "actual": "2024-02-08"
+    },
+    {
+      "code": "A1D0035",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "李*德",
+      "type": "reinfusion",
+      "plan": "2024-03-14",
+      "actual": "2024-03-14"
+    },
+    {
+      "code": "9009126000236",
+      "hosp": "南方医科大学南方医院",
+      "patient": "李*鸣",
+      "type": "apheresis",
+      "plan": "2026-08-20",
+      "actual": "2026-08-20"
+    },
+    {
+      "code": "A1D0036",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*其",
+      "type": "apheresis",
+      "plan": "2024-02-09",
+      "actual": "2024-02-09"
+    },
+    {
+      "code": "A1D0036",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*其",
+      "type": "reinfusion",
+      "plan": "2024-03-20",
+      "actual": "2024-03-20"
+    },
+    {
+      "code": "A1D0038",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*柱",
+      "type": "apheresis",
+      "plan": "2024-03-07",
+      "actual": "2024-03-07"
+    },
+    {
+      "code": "A1D0038",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*柱",
+      "type": "reinfusion",
+      "plan": "2024-04-15",
+      "actual": "2024-04-15"
+    },
+    {
+      "code": "A1D0040",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "姜*霞",
+      "type": "apheresis",
+      "plan": "2024-02-26",
+      "actual": "2024-02-26"
+    },
+    {
+      "code": "A1D0040",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "姜*霞",
+      "type": "reinfusion",
+      "plan": "2024-05-14",
+      "actual": "2024-05-14"
+    },
+    {
+      "code": "A1D0042",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "罗*",
+      "type": "apheresis",
+      "plan": "2024-02-28",
+      "actual": "2024-02-28"
+    },
+    {
+      "code": "A1D0042",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "罗*",
+      "type": "reinfusion",
+      "plan": "2024-05-22",
+      "actual": "2024-05-22"
+    },
+    {
+      "code": "A1D0043",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "I*E M*V",
+      "type": "apheresis",
+      "plan": "2024-02-28",
+      "actual": "2024-02-28"
+    },
+    {
+      "code": "A1D0043",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "I*E M*V",
+      "type": "reinfusion",
+      "plan": "2024-04-08",
+      "actual": "2024-04-08"
+    },
+    {
+      "code": "A1D0045",
+      "hosp": "北京大学第三医院",
+      "patient": "刘*燕",
+      "type": "apheresis",
+      "plan": "2024-03-04",
+      "actual": "2024-03-04"
+    },
+    {
+      "code": "A1D0045",
+      "hosp": "北京大学第三医院",
+      "patient": "刘*燕",
+      "type": "reinfusion",
+      "plan": "2024-04-23",
+      "actual": "2024-04-23"
+    },
+    {
+      "code": "A1D0046",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "高*利",
+      "type": "apheresis",
+      "plan": "2024-03-07",
+      "actual": "2024-03-07"
+    },
+    {
+      "code": "A1D0046",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "高*利",
+      "type": "reinfusion",
+      "plan": "2024-06-07",
+      "actual": "2024-06-07"
+    },
+    {
+      "code": "A1D0047",
+      "hosp": "江苏省中医院",
+      "patient": "姜*星",
+      "type": "apheresis",
+      "plan": "2024-03-08",
+      "actual": "2024-03-08"
+    },
+    {
+      "code": "A1D0047",
+      "hosp": "江苏省中医院",
+      "patient": "姜*星",
+      "type": "reinfusion",
+      "plan": "2024-05-06",
+      "actual": "2024-05-06"
+    },
+    {
+      "code": "A1D0049",
+      "hosp": "宁波市第二医院",
+      "patient": "励*英",
+      "type": "apheresis",
+      "plan": "2024-03-12",
+      "actual": "2024-03-12"
+    },
+    {
+      "code": "A1D0049",
+      "hosp": "宁波市第二医院",
+      "patient": "励*英",
+      "type": "reinfusion",
+      "plan": "2024-06-05",
+      "actual": "2024-06-05"
+    },
+    {
+      "code": "A1D0050",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "金*永",
+      "type": "apheresis",
+      "plan": "2024-03-14",
+      "actual": "2024-03-14"
+    },
+    {
+      "code": "A1D0050",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "金*永",
+      "type": "reinfusion",
+      "plan": "2024-08-12",
+      "actual": "2024-08-12"
+    },
+    {
+      "code": "A1D0053",
+      "hosp": "河南科技大学第一附属医院",
+      "patient": "孟*菊",
+      "type": "apheresis",
+      "plan": "2024-03-15",
+      "actual": "2024-03-15"
+    },
+    {
+      "code": "A1D0053",
+      "hosp": "河南科技大学第一附属医院",
+      "patient": "孟*菊",
+      "type": "reinfusion",
+      "plan": "2024-04-19",
+      "actual": "2024-04-19"
+    },
+    {
+      "code": "A1D0051",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "魏*",
+      "type": "apheresis",
+      "plan": "2024-03-12",
+      "actual": "2024-03-12"
+    },
+    {
+      "code": "A1D0051",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "魏*",
+      "type": "reinfusion",
+      "plan": "2024-05-17",
+      "actual": "2024-05-17"
+    },
+    {
+      "code": "A1E0156",
+      "hosp": "中山大学附属第一医院",
+      "patient": "杨*",
+      "type": "apheresis",
+      "plan": "2025-07-11",
+      "actual": "2025-07-11"
+    },
+    {
+      "code": "A1E0156",
+      "hosp": "中山大学附属第一医院",
+      "patient": "杨*",
+      "type": "reinfusion",
+      "plan": "2025-08-26",
+      "actual": "2025-08-26"
+    },
+    {
+      "code": "A1D0055",
+      "hosp": "天津医科大学总医院",
+      "patient": "李*华",
+      "type": "apheresis",
+      "plan": "2024-03-14",
+      "actual": "2024-03-14"
+    },
+    {
+      "code": "A1D0055",
+      "hosp": "天津医科大学总医院",
+      "patient": "李*华",
+      "type": "reinfusion",
+      "plan": "2024-08-19",
+      "actual": "2024-08-20"
+    },
+    {
+      "code": "A1D0054",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "郑*阳",
+      "type": "apheresis",
+      "plan": "2024-03-14",
+      "actual": "2024-03-14"
+    },
+    {
+      "code": "A1D0054",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "郑*阳",
+      "type": "reinfusion",
+      "plan": "2024-05-17",
+      "actual": "2024-05-17"
+    },
+    {
+      "code": "A1D0056",
+      "hosp": "四川省人民医院",
+      "patient": "方*成",
+      "type": "apheresis",
+      "plan": "2024-03-15",
+      "actual": "2024-03-15"
+    },
+    {
+      "code": "A1D0056",
+      "hosp": "四川省人民医院",
+      "patient": "方*成",
+      "type": "reinfusion",
+      "plan": "2024-04-23",
+      "actual": "2024-04-23"
+    },
+    {
+      "code": "A1D0058",
+      "hosp": "南方医科大学南方医院",
+      "patient": "吴*锋",
+      "type": "apheresis",
+      "plan": "2024-03-19",
+      "actual": "2024-03-19"
+    },
+    {
+      "code": "A1D0058",
+      "hosp": "南方医科大学南方医院",
+      "patient": "吴*锋",
+      "type": "reinfusion",
+      "plan": "2024-04-23",
+      "actual": "2024-04-23"
+    },
+    {
+      "code": "A1D0057",
+      "hosp": "复旦大学附属中山医院厦门医院",
+      "patient": "邱*红",
+      "type": "apheresis",
+      "plan": "2024-03-20",
+      "actual": "2024-03-20"
+    },
+    {
+      "code": "A1D0057",
+      "hosp": "复旦大学附属中山医院厦门医院",
+      "patient": "邱*红",
+      "type": "reinfusion",
+      "plan": "2024-10-15",
+      "actual": "2024-10-15"
+    },
+    {
+      "code": "A1D0085",
+      "hosp": "宁波市医疗中心李惠利医院（东部院区）",
+      "patient": "陈*宏",
+      "type": "apheresis",
+      "plan": "2024-04-26",
+      "actual": "2024-04-26"
+    },
+    {
+      "code": "A1D0085",
+      "hosp": "宁波市医疗中心李惠利医院（东部院区）",
+      "patient": "陈*宏",
+      "type": "reinfusion",
+      "plan": "2024-07-02",
+      "actual": "2024-07-02"
+    },
+    {
+      "code": "A1D0060",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "陈*荣",
+      "type": "apheresis",
+      "plan": "2024-03-21",
+      "actual": "2024-03-21"
+    },
+    {
+      "code": "A1D0060",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "陈*荣",
+      "type": "reinfusion",
+      "plan": "2024-08-05",
+      "actual": "2024-08-05"
+    },
+    {
+      "code": "A1D0061",
+      "hosp": "南方医科大学南方医院",
+      "patient": "李*英",
+      "type": "apheresis",
+      "plan": "2024-03-22",
+      "actual": "2024-03-22"
+    },
+    {
+      "code": "A1D0063",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2024-03-25",
+      "actual": "2024-03-25"
+    },
+    {
+      "code": "A1D0064",
+      "hosp": "南方医科大学深圳医院",
+      "patient": "余*浩",
+      "type": "apheresis",
+      "plan": "2024-03-25",
+      "actual": "2024-03-25"
+    },
+    {
+      "code": "A1D0064",
+      "hosp": "南方医科大学深圳医院",
+      "patient": "余*浩",
+      "type": "reinfusion",
+      "plan": "2024-11-04",
+      "actual": "2024-11-04"
+    },
+    {
+      "code": "A1D0065",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "徐*",
+      "type": "apheresis",
+      "plan": "2024-03-26",
+      "actual": "2024-03-26"
+    },
+    {
+      "code": "A1D0065",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "徐*",
+      "type": "reinfusion",
+      "plan": "2024-08-26",
+      "actual": "2024-08-26"
+    },
+    {
+      "code": "A1D0310",
+      "hosp": "北京大学人民医院",
+      "patient": "龙*平",
+      "type": "apheresis",
+      "plan": "2024-12-05",
+      "actual": "2024-12-05"
+    },
+    {
+      "code": "A1D0310",
+      "hosp": "北京大学人民医院",
+      "patient": "龙*平",
+      "type": "reinfusion",
+      "plan": "2025-08-03",
+      "actual": "2025-08-03"
+    },
+    {
+      "code": "A1D0068",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "张*怀",
+      "type": "apheresis",
+      "plan": "2024-04-02",
+      "actual": "2024-04-02"
+    },
+    {
+      "code": "A1D0068",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "张*怀",
+      "type": "reinfusion",
+      "plan": "2024-07-22",
+      "actual": "2024-07-22"
+    },
+    {
+      "code": "A1D0069",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*升",
+      "type": "apheresis",
+      "plan": "2024-04-03",
+      "actual": "2024-04-03"
+    },
+    {
+      "code": "A1D0069",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*升",
+      "type": "reinfusion",
+      "plan": "2024-05-20",
+      "actual": "2024-05-20"
+    },
+    {
+      "code": "A1D0070",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "姜*勇",
+      "type": "apheresis",
+      "plan": "2024-04-11",
+      "actual": "2024-04-11"
+    },
+    {
+      "code": "A1D0070",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "姜*勇",
+      "type": "reinfusion",
+      "plan": "2024-05-22",
+      "actual": "2024-05-22"
+    },
+    {
+      "code": "A1D0071",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "刘*庭",
+      "type": "apheresis",
+      "plan": "2024-04-12",
+      "actual": "2024-04-12"
+    },
+    {
+      "code": "A1D0071",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "刘*庭",
+      "type": "reinfusion",
+      "plan": "2024-08-19",
+      "actual": "2024-08-19"
+    },
+    {
+      "code": "A1D0072",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "李*午",
+      "type": "apheresis",
+      "plan": "2024-04-15",
+      "actual": "2024-04-15"
+    },
+    {
+      "code": "A1D0072",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "李*午",
+      "type": "reinfusion",
+      "plan": "2024-05-29",
+      "actual": "2024-05-29"
+    },
+    {
+      "code": "A1D0074",
+      "hosp": "天津医科大学总医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-04-16",
+      "actual": "2024-04-16"
+    },
+    {
+      "code": "A1D0074",
+      "hosp": "天津医科大学总医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2024-06-27",
+      "actual": "2024-06-27"
+    },
+    {
+      "code": "A1D0077",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "郭*",
+      "type": "apheresis",
+      "plan": "2024-04-18",
+      "actual": "2024-04-18"
+    },
+    {
+      "code": "A1D0078",
+      "hosp": "天津医科大学总医院",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2024-04-18",
+      "actual": "2024-04-18"
+    },
+    {
+      "code": "A1D0078",
+      "hosp": "天津医科大学总医院",
+      "patient": "李*",
+      "type": "reinfusion",
+      "plan": "2024-06-03",
+      "actual": "2024-06-03"
+    },
+    {
+      "code": "A1D0079",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "沈*燕",
+      "type": "apheresis",
+      "plan": "2024-04-22",
+      "actual": "2024-04-22"
+    },
+    {
+      "code": "A1D0079",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "沈*燕",
+      "type": "reinfusion",
+      "plan": "2024-05-15",
+      "actual": "2024-05-15"
+    },
+    {
+      "code": "A1D0080",
+      "hosp": "山西白求恩医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2024-04-22",
+      "actual": "2024-04-22"
+    },
+    {
+      "code": "A1D0081",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "郑*琼",
+      "type": "apheresis",
+      "plan": "2024-04-24",
+      "actual": "2024-04-24"
+    },
+    {
+      "code": "A1D0081",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "郑*琼",
+      "type": "reinfusion",
+      "plan": "2024-05-27",
+      "actual": "2024-05-27"
+    },
+    {
+      "code": "A1D0082",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "宋*秀",
+      "type": "apheresis",
+      "plan": "2024-04-23",
+      "actual": "2024-04-23"
+    },
+    {
+      "code": "A1D0082",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "宋*秀",
+      "type": "reinfusion",
+      "plan": "2024-09-16",
+      "actual": "2024-09-16"
+    },
+    {
+      "code": "A1D0083",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "班*芳",
+      "type": "apheresis",
+      "plan": "2024-04-25",
+      "actual": "2024-04-25"
+    },
+    {
+      "code": "A1D0083",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "班*芳",
+      "type": "reinfusion",
+      "plan": "2024-06-28",
+      "actual": "2024-06-28"
+    },
+    {
+      "code": "A1D0086",
+      "hosp": "江南大学附属医院（南院）",
+      "patient": "倪*莎",
+      "type": "apheresis",
+      "plan": "2024-04-26",
+      "actual": "2024-04-26"
+    },
+    {
+      "code": "A1D0086",
+      "hosp": "江南大学附属医院（南院）",
+      "patient": "倪*莎",
+      "type": "reinfusion",
+      "plan": "2024-09-09",
+      "actual": "2024-09-09"
+    },
+    {
+      "code": "A1D0084",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*华",
+      "type": "apheresis",
+      "plan": "2024-04-26",
+      "actual": "2024-04-26"
+    },
+    {
+      "code": "A1D0084",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*华",
+      "type": "reinfusion",
+      "plan": "2024-05-23",
+      "actual": "2024-05-23"
+    },
+    {
+      "code": "A1D0089",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "侯*祥",
+      "type": "apheresis",
+      "plan": "2024-05-07",
+      "actual": "2024-05-07"
+    },
+    {
+      "code": "A1D0089",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "侯*祥",
+      "type": "reinfusion",
+      "plan": "2024-06-24",
+      "actual": "2024-06-24"
+    },
+    {
+      "code": "A1D0110",
+      "hosp": "广西壮族自治区人民医院",
+      "patient": "农*良",
+      "type": "apheresis",
+      "plan": "2024-05-29",
+      "actual": "2024-05-29"
+    },
+    {
+      "code": "A1D0110",
+      "hosp": "广西壮族自治区人民医院",
+      "patient": "农*良",
+      "type": "reinfusion",
+      "plan": "2024-07-02",
+      "actual": "2024-07-02"
+    },
+    {
+      "code": "A1D0092",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "陶*",
+      "type": "apheresis",
+      "plan": "2024-05-08",
+      "actual": "2024-05-08"
+    },
+    {
+      "code": "A1D0091",
+      "hosp": "天津医科大学总医院",
+      "patient": "王*华",
+      "type": "apheresis",
+      "plan": "2024-05-08",
+      "actual": "2024-05-08"
+    },
+    {
+      "code": "A1D0091",
+      "hosp": "天津医科大学总医院",
+      "patient": "王*华",
+      "type": "reinfusion",
+      "plan": "2024-07-23",
+      "actual": "2024-07-23"
+    },
+    {
+      "code": "A1D0093",
+      "hosp": "厦门大学附属中山医院",
+      "patient": "杨*筑",
+      "type": "apheresis",
+      "plan": "2024-05-09",
+      "actual": "2024-05-09"
+    },
+    {
+      "code": "A1D0094",
+      "hosp": "北京大学人民医院",
+      "patient": "薛*娜",
+      "type": "apheresis",
+      "plan": "2024-05-10",
+      "actual": "2024-05-10"
+    },
+    {
+      "code": "A1D0094",
+      "hosp": "北京大学人民医院",
+      "patient": "薛*娜",
+      "type": "reinfusion",
+      "plan": "2024-06-04",
+      "actual": "2024-06-04"
+    },
+    {
+      "code": "A1D0096",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "张*艳",
+      "type": "apheresis",
+      "plan": "2024-05-10",
+      "actual": "2024-05-10"
+    },
+    {
+      "code": "A1D0096",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "张*艳",
+      "type": "reinfusion",
+      "plan": "2024-06-27",
+      "actual": "2024-06-27"
+    },
+    {
+      "code": "A1D0097",
+      "hosp": "北京大学人民医院",
+      "patient": "段*友",
+      "type": "apheresis",
+      "plan": "2024-05-13",
+      "actual": "2024-05-13"
+    },
+    {
+      "code": "A1D0097",
+      "hosp": "北京大学人民医院",
+      "patient": "段*友",
+      "type": "reinfusion",
+      "plan": "2024-07-15",
+      "actual": "2024-07-15"
+    },
+    {
+      "code": "A1D0098",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "王*加",
+      "type": "apheresis",
+      "plan": "2024-05-15",
+      "actual": "2024-05-15"
+    },
+    {
+      "code": "A1D0098",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "王*加",
+      "type": "reinfusion",
+      "plan": "2025-06-04",
+      "actual": "2025-06-04"
+    },
+    {
+      "code": "A1D0099",
+      "hosp": "北京大学人民医院",
+      "patient": "杨*蒲",
+      "type": "apheresis",
+      "plan": "2024-05-14",
+      "actual": "2024-05-14"
+    },
+    {
+      "code": "A1D0099",
+      "hosp": "北京大学人民医院",
+      "patient": "杨*蒲",
+      "type": "reinfusion",
+      "plan": "2024-06-07",
+      "actual": "2024-06-07"
+    },
+    {
+      "code": "A1D0100",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "潘*通",
+      "type": "apheresis",
+      "plan": "2024-05-14",
+      "actual": "2024-05-14"
+    },
+    {
+      "code": "A1D0100",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "潘*通",
+      "type": "reinfusion",
+      "plan": "2025-04-09",
+      "actual": "2025-04-09"
+    },
+    {
+      "code": "A1D0101",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*春",
+      "type": "apheresis",
+      "plan": "2024-05-15",
+      "actual": "2024-05-15"
+    },
+    {
+      "code": "A1D0101",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*春",
+      "type": "reinfusion",
+      "plan": "2024-09-27",
+      "actual": "2024-09-27"
+    },
+    {
+      "code": "A1D0102",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "徐*兴",
+      "type": "apheresis",
+      "plan": "2024-05-16",
+      "actual": "2024-05-16"
+    },
+    {
+      "code": "A1D0102",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "徐*兴",
+      "type": "reinfusion",
+      "plan": "2024-07-09",
+      "actual": "2024-07-09"
+    },
+    {
+      "code": "A1D0104",
+      "hosp": "四川大学华西医院",
+      "patient": "蒲*柏",
+      "type": "apheresis",
+      "plan": "2024-05-20",
+      "actual": "2024-05-20"
+    },
+    {
+      "code": "A1D0104",
+      "hosp": "四川大学华西医院",
+      "patient": "蒲*柏",
+      "type": "reinfusion",
+      "plan": "2025-03-06",
+      "actual": "2025-03-06"
+    },
+    {
+      "code": "A1E0062",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "孔*杰",
+      "type": "apheresis",
+      "plan": "2025-03-21",
+      "actual": "2025-03-21"
+    },
+    {
+      "code": "A1D0109",
+      "hosp": "上海长征医院",
+      "patient": "孙*根",
+      "type": "apheresis",
+      "plan": "2024-05-27",
+      "actual": "2024-05-27"
+    },
+    {
+      "code": "A1D0109",
+      "hosp": "上海长征医院",
+      "patient": "孙*根",
+      "type": "reinfusion",
+      "plan": "2024-06-28",
+      "actual": "2024-06-28"
+    },
+    {
+      "code": "A1D0107",
+      "hosp": "江苏省人民医院",
+      "patient": "殷*强",
+      "type": "apheresis",
+      "plan": "2024-05-28",
+      "actual": "2024-05-28"
+    },
+    {
+      "code": "A1D0107",
+      "hosp": "江苏省人民医院",
+      "patient": "殷*强",
+      "type": "reinfusion",
+      "plan": "2024-08-12",
+      "actual": "2024-08-12"
+    },
+    {
+      "code": "A1D0108",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*明",
+      "type": "apheresis",
+      "plan": "2024-05-27",
+      "actual": "2024-05-27"
+    },
+    {
+      "code": "A1D0108",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*明",
+      "type": "reinfusion",
+      "plan": "2024-08-02",
+      "actual": "2024-08-02"
+    },
+    {
+      "code": "A1E0080",
+      "hosp": "南方医科大学南方医院",
+      "patient": "董*平",
+      "type": "apheresis",
+      "plan": "2025-04-22",
+      "actual": "2025-04-22"
+    },
+    {
+      "code": "A1E0080",
+      "hosp": "南方医科大学南方医院",
+      "patient": "董*平",
+      "type": "reinfusion",
+      "plan": "2025-07-08",
+      "actual": "2025-07-08"
+    },
+    {
+      "code": "A1D0114",
+      "hosp": "中国人民解放军西部战区总医院",
+      "patient": "何*仙",
+      "type": "apheresis",
+      "plan": "2024-06-03",
+      "actual": "2024-06-03"
+    },
+    {
+      "code": "A1D0114",
+      "hosp": "中国人民解放军西部战区总医院",
+      "patient": "何*仙",
+      "type": "reinfusion",
+      "plan": "2024-08-23",
+      "actual": "2024-08-23"
+    },
+    {
+      "code": "A1D0113",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "席*波",
+      "type": "apheresis",
+      "plan": "2024-06-03",
+      "actual": "2024-06-03"
+    },
+    {
+      "code": "A1D0113",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "席*波",
+      "type": "reinfusion",
+      "plan": "2024-07-18",
+      "actual": "2024-07-21"
+    },
+    {
+      "code": "A1D0115",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "谢*余",
+      "type": "apheresis",
+      "plan": "2024-06-04",
+      "actual": "2024-06-04"
+    },
+    {
+      "code": "A1D0115",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "谢*余",
+      "type": "reinfusion",
+      "plan": "2024-07-22",
+      "actual": "2024-07-22"
+    },
+    {
+      "code": "A1D0118",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*枫",
+      "type": "apheresis",
+      "plan": "2024-06-05",
+      "actual": "2024-06-05"
+    },
+    {
+      "code": "A1D0118",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*枫",
+      "type": "reinfusion",
+      "plan": "2024-09-14",
+      "actual": "2024-09-14"
+    },
+    {
+      "code": "A1D0119",
+      "hosp": "北京大学深圳医院",
+      "patient": "王*平",
+      "type": "apheresis",
+      "plan": "2024-06-07",
+      "actual": "2024-06-07"
+    },
+    {
+      "code": "A1D0119",
+      "hosp": "北京大学深圳医院",
+      "patient": "王*平",
+      "type": "reinfusion",
+      "plan": "2025-01-18",
+      "actual": "2025-01-18"
+    },
+    {
+      "code": "A1D0120",
+      "hosp": "大连医科大学附属第二医院（钻石湾院区）",
+      "patient": "潘*伟",
+      "type": "apheresis",
+      "plan": "2024-06-12",
+      "actual": "2024-06-12"
+    },
+    {
+      "code": "A1D0120",
+      "hosp": "大连医科大学附属第二医院（钻石湾院区）",
+      "patient": "潘*伟",
+      "type": "reinfusion",
+      "plan": "2024-09-14",
+      "actual": "2024-09-14"
+    },
+    {
+      "code": "A1D0122",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*伟",
+      "type": "apheresis",
+      "plan": "2024-06-12",
+      "actual": "2024-06-12"
+    },
+    {
+      "code": "A1D0122",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*伟",
+      "type": "reinfusion",
+      "plan": "2025-03-24",
+      "actual": "2025-03-24"
+    },
+    {
+      "code": "A1D0123",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "汪*英",
+      "type": "apheresis",
+      "plan": "2024-06-13",
+      "actual": "2024-06-13"
+    },
+    {
+      "code": "A1D0123",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "汪*英",
+      "type": "reinfusion",
+      "plan": "2024-09-25",
+      "actual": "2024-09-25"
+    },
+    {
+      "code": "A1D0125",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*丽",
+      "type": "apheresis",
+      "plan": "2024-06-13",
+      "actual": "2024-06-13"
+    },
+    {
+      "code": "A1D0127",
+      "hosp": "香港大学深圳医院",
+      "patient": "伍*丽",
+      "type": "apheresis",
+      "plan": "2024-06-14",
+      "actual": "2024-06-14"
+    },
+    {
+      "code": "A1D0133",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "游*子",
+      "type": "apheresis",
+      "plan": "2024-06-21",
+      "actual": "2024-06-21"
+    },
+    {
+      "code": "A1D0133",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "游*子",
+      "type": "reinfusion",
+      "plan": "2024-07-24",
+      "actual": "2024-07-25"
+    },
+    {
+      "code": "A1D0128",
+      "hosp": "嘉兴市第一医院",
+      "patient": "罗*忠",
+      "type": "apheresis",
+      "plan": "2024-06-17",
+      "actual": "2024-06-17"
+    },
+    {
+      "code": "A1D0128",
+      "hosp": "嘉兴市第一医院",
+      "patient": "罗*忠",
+      "type": "reinfusion",
+      "plan": "2024-11-12",
+      "actual": "2024-11-12"
+    },
+    {
+      "code": "A1D0129",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-06-19",
+      "actual": "2024-06-19"
+    },
+    {
+      "code": "A1D0129",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2024-07-23",
+      "actual": "2024-07-23"
+    },
+    {
+      "code": "A1D0130",
+      "hosp": "哈尔滨医科大学附属第二医院",
+      "patient": "鞠*",
+      "type": "apheresis",
+      "plan": "2024-06-19",
+      "actual": "2024-06-19"
+    },
+    {
+      "code": "A1D0131",
+      "hosp": "北京协和医院",
+      "patient": "郑*亮",
+      "type": "apheresis",
+      "plan": "2024-06-19",
+      "actual": "2024-06-19"
+    },
+    {
+      "code": "A1D0131",
+      "hosp": "北京协和医院",
+      "patient": "郑*亮",
+      "type": "reinfusion",
+      "plan": "2024-07-24",
+      "actual": "2024-07-24"
+    },
+    {
+      "code": "A1D0132",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*玲",
+      "type": "apheresis",
+      "plan": "2024-06-21",
+      "actual": "2024-06-21"
+    },
+    {
+      "code": "A1D0132",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*玲",
+      "type": "reinfusion",
+      "plan": "2024-08-19",
+      "actual": "2024-08-19"
+    },
+    {
+      "code": "A1D0134",
+      "hosp": "广西医科大学附属肿瘤医院",
+      "patient": "农*全",
+      "type": "apheresis",
+      "plan": "2024-06-21",
+      "actual": "2024-06-21"
+    },
+    {
+      "code": "A1D0134",
+      "hosp": "广西医科大学附属肿瘤医院",
+      "patient": "农*全",
+      "type": "reinfusion",
+      "plan": "2024-08-18",
+      "actual": "2024-08-18"
+    },
+    {
+      "code": "A1D0135",
+      "hosp": "青岛市市立医院",
+      "patient": "黄*华",
+      "type": "apheresis",
+      "plan": "2024-06-21",
+      "actual": "2024-06-21"
+    },
+    {
+      "code": "A1D0135",
+      "hosp": "青岛市市立医院",
+      "patient": "黄*华",
+      "type": "reinfusion",
+      "plan": "2025-07-21",
+      "actual": "2025-07-21"
+    },
+    {
+      "code": "A1D0137",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "樊*升",
+      "type": "apheresis",
+      "plan": "2024-06-24",
+      "actual": "2024-06-24"
+    },
+    {
+      "code": "A1D0137",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "樊*升",
+      "type": "reinfusion",
+      "plan": "2024-08-06",
+      "actual": "2024-08-06"
+    },
+    {
+      "code": "A1D0138",
+      "hosp": "中山大学附属第六医院（广东省胃肠肛门医院）",
+      "patient": "黄*",
+      "type": "apheresis",
+      "plan": "2024-06-23",
+      "actual": "2024-06-23"
+    },
+    {
+      "code": "A1D0138",
+      "hosp": "中山大学附属第六医院（广东省胃肠肛门医院）",
+      "patient": "黄*",
+      "type": "reinfusion",
+      "plan": "2024-09-15",
+      "actual": "2024-09-15"
+    },
+    {
+      "code": "A1D0142",
+      "hosp": "南方医科大学南方医院",
+      "patient": "胡*卓",
+      "type": "apheresis",
+      "plan": "2024-06-28",
+      "actual": "2024-06-28"
+    },
+    {
+      "code": "A1D0142",
+      "hosp": "南方医科大学南方医院",
+      "patient": "胡*卓",
+      "type": "reinfusion",
+      "plan": "2024-08-06",
+      "actual": "2024-08-06"
+    },
+    {
+      "code": "A1D0140",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*",
+      "type": "apheresis",
+      "plan": "2024-06-26",
+      "actual": "2024-06-26"
+    },
+    {
+      "code": "A1D0140",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*",
+      "type": "reinfusion",
+      "plan": "2024-08-26",
+      "actual": "2024-08-26"
+    },
+    {
+      "code": "A1D0143",
+      "hosp": "北京大学人民医院",
+      "patient": "宋*",
+      "type": "apheresis",
+      "plan": "2024-06-27",
+      "actual": "2024-06-27"
+    },
+    {
+      "code": "A1D0143",
+      "hosp": "北京大学人民医院",
+      "patient": "宋*",
+      "type": "reinfusion",
+      "plan": "2024-08-21",
+      "actual": "2024-08-21"
+    },
+    {
+      "code": "A1D0159",
+      "hosp": "上海市浦东医院",
+      "patient": "钟*辉",
+      "type": "apheresis",
+      "plan": "2024-07-19",
+      "actual": "2024-07-19"
+    },
+    {
+      "code": "A1D0159",
+      "hosp": "上海市浦东医院",
+      "patient": "钟*辉",
+      "type": "reinfusion",
+      "plan": "2024-09-11",
+      "actual": "2024-09-11"
+    },
+    {
+      "code": "A1D0145",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "江*",
+      "type": "apheresis",
+      "plan": "2024-07-03",
+      "actual": "2024-07-03"
+    },
+    {
+      "code": "A1D0146",
+      "hosp": "上海市同济医院",
+      "patient": "王*云",
+      "type": "apheresis",
+      "plan": "2024-07-05",
+      "actual": "2024-07-05"
+    },
+    {
+      "code": "A1D0146",
+      "hosp": "上海市同济医院",
+      "patient": "王*云",
+      "type": "reinfusion",
+      "plan": "2024-08-12",
+      "actual": "2024-08-12"
+    },
+    {
+      "code": "A1D0149",
+      "hosp": "上海仁济医院",
+      "patient": "於*英",
+      "type": "apheresis",
+      "plan": "2024-07-09",
+      "actual": "2024-07-09"
+    },
+    {
+      "code": "A1D0149",
+      "hosp": "上海仁济医院",
+      "patient": "於*英",
+      "type": "reinfusion",
+      "plan": "2024-08-27",
+      "actual": "2024-08-27"
+    },
+    {
+      "code": "A1D0147",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "姚*",
+      "type": "apheresis",
+      "plan": "2024-07-09",
+      "actual": "2024-07-09"
+    },
+    {
+      "code": "A1D0147",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "姚*",
+      "type": "reinfusion",
+      "plan": "2024-10-08",
+      "actual": "2024-10-08"
+    },
+    {
+      "code": "A1D0148",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "田*维",
+      "type": "apheresis",
+      "plan": "2024-07-08",
+      "actual": "2024-07-08"
+    },
+    {
+      "code": "A1D0148",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "田*维",
+      "type": "reinfusion",
+      "plan": "2024-10-23",
+      "actual": "2024-10-23"
+    },
+    {
+      "code": "A1D0151",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*利",
+      "type": "apheresis",
+      "plan": "2024-07-10",
+      "actual": "2024-07-10"
+    },
+    {
+      "code": "A1D0151",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*利",
+      "type": "reinfusion",
+      "plan": "2024-08-20",
+      "actual": "2024-08-20"
+    },
+    {
+      "code": "A1D0152",
+      "hosp": "北京大学深圳医院",
+      "patient": "罗*英",
+      "type": "apheresis",
+      "plan": "2024-07-12",
+      "actual": "2024-07-12"
+    },
+    {
+      "code": "A1D0152",
+      "hosp": "北京大学深圳医院",
+      "patient": "罗*英",
+      "type": "reinfusion",
+      "plan": "2025-06-30",
+      "actual": "2025-06-30"
+    },
+    {
+      "code": "A1D0153",
+      "hosp": "暨南大学附属第一医院（广州华侨医院）",
+      "patient": "周*亮",
+      "type": "apheresis",
+      "plan": "2024-07-12",
+      "actual": "2024-07-12"
+    },
+    {
+      "code": "A1D0153",
+      "hosp": "暨南大学附属第一医院（广州华侨医院）",
+      "patient": "周*亮",
+      "type": "reinfusion",
+      "plan": "2024-09-09",
+      "actual": "2024-09-09"
+    },
+    {
+      "code": "A1D0154",
+      "hosp": "江苏省人民医院",
+      "patient": "曹*竟",
+      "type": "apheresis",
+      "plan": "2024-07-17",
+      "actual": "2024-07-17"
+    },
+    {
+      "code": "A1D0154",
+      "hosp": "江苏省人民医院",
+      "patient": "曹*竟",
+      "type": "reinfusion",
+      "plan": "2025-04-03",
+      "actual": "2025-04-03"
+    },
+    {
+      "code": "A1D0157",
+      "hosp": "北京协和医院",
+      "patient": "林*珍",
+      "type": "apheresis",
+      "plan": "2024-07-18",
+      "actual": "2024-07-18"
+    },
+    {
+      "code": "A1D0157",
+      "hosp": "北京协和医院",
+      "patient": "林*珍",
+      "type": "reinfusion",
+      "plan": "2024-09-04",
+      "actual": "2024-09-04"
+    },
+    {
+      "code": "A1D0158",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "张*秀",
+      "type": "apheresis",
+      "plan": "2024-07-19",
+      "actual": "2024-07-19"
+    },
+    {
+      "code": "A1D0158",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "张*秀",
+      "type": "reinfusion",
+      "plan": "2024-09-03",
+      "actual": "2024-09-03"
+    },
+    {
+      "code": "A1D0161",
+      "hosp": "上海市曜影医院",
+      "patient": "T*Y C*S S*E",
+      "type": "apheresis",
+      "plan": "2024-07-20",
+      "actual": "2024-07-20"
+    },
+    {
+      "code": "A1D0161",
+      "hosp": "上海市曜影医院",
+      "patient": "T*Y C*S S*E",
+      "type": "reinfusion",
+      "plan": "2024-09-02",
+      "actual": "2024-09-02"
+    },
+    {
+      "code": "A1D0160",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "龚*忠",
+      "type": "apheresis",
+      "plan": "2024-07-22",
+      "actual": "2024-07-22"
+    },
+    {
+      "code": "A1D0160",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "龚*忠",
+      "type": "reinfusion",
+      "plan": "2025-10-22",
+      "actual": "2025-10-22"
+    },
+    {
+      "code": "A1D0162",
+      "hosp": "上海长征医院",
+      "patient": "陆*宝",
+      "type": "apheresis",
+      "plan": "2024-07-22",
+      "actual": "2024-07-22"
+    },
+    {
+      "code": "A1D0162",
+      "hosp": "上海长征医院",
+      "patient": "陆*宝",
+      "type": "reinfusion",
+      "plan": "2024-09-03",
+      "actual": "2024-09-03"
+    },
+    {
+      "code": "A1D0163",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*军",
+      "type": "apheresis",
+      "plan": "2024-07-23",
+      "actual": "2024-07-23"
+    },
+    {
+      "code": "A1D0163",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*军",
+      "type": "reinfusion",
+      "plan": "2024-09-18",
+      "actual": "2024-09-18"
+    },
+    {
+      "code": "A1D0165",
+      "hosp": "安徽省立医院南区（安徽省心血管医院）",
+      "patient": "梁*秀",
+      "type": "apheresis",
+      "plan": "2024-07-25",
+      "actual": "2024-07-25"
+    },
+    {
+      "code": "A1D0165",
+      "hosp": "安徽省立医院南区（安徽省心血管医院）",
+      "patient": "梁*秀",
+      "type": "reinfusion",
+      "plan": "2024-09-12",
+      "actual": "2024-09-12"
+    },
+    {
+      "code": "A1D0166",
+      "hosp": "北京大学人民医院",
+      "patient": "贾*国",
+      "type": "apheresis",
+      "plan": "2024-07-25",
+      "actual": "2024-07-25"
+    },
+    {
+      "code": "A1D0166",
+      "hosp": "北京大学人民医院",
+      "patient": "贾*国",
+      "type": "reinfusion",
+      "plan": "2024-09-01",
+      "actual": "2024-09-01"
+    },
+    {
+      "code": "A1D0168",
+      "hosp": "天津医科大学总医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2024-07-26",
+      "actual": "2024-07-26"
+    },
+    {
+      "code": "A1D0168",
+      "hosp": "天津医科大学总医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2024-11-18",
+      "actual": "2024-11-18"
+    },
+    {
+      "code": "A1D0170",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "Z*G S*",
+      "type": "apheresis",
+      "plan": "2024-07-29",
+      "actual": "2024-07-29"
+    },
+    {
+      "code": "A1D0170",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "Z*G S*",
+      "type": "reinfusion",
+      "plan": "2024-11-07",
+      "actual": "2024-11-07"
+    },
+    {
+      "code": "A1D0174",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "郭*",
+      "type": "apheresis",
+      "plan": "2024-07-31",
+      "actual": "2024-07-31"
+    },
+    {
+      "code": "A1D0174",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "郭*",
+      "type": "reinfusion",
+      "plan": "2024-10-14",
+      "actual": "2024-10-14"
+    },
+    {
+      "code": "A1D0305",
+      "hosp": "福建医科大学附属第一医院",
+      "patient": "陈*莺",
+      "type": "apheresis",
+      "plan": "2024-11-29",
+      "actual": "2024-11-29"
+    },
+    {
+      "code": "A1D0305",
+      "hosp": "福建医科大学附属第一医院",
+      "patient": "陈*莺",
+      "type": "reinfusion",
+      "plan": "2024-12-31",
+      "actual": "2024-12-31"
+    },
+    {
+      "code": "A1D0172",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*汉",
+      "type": "apheresis",
+      "plan": "2024-07-31",
+      "actual": "2024-07-31"
+    },
+    {
+      "code": "A1D0172",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*汉",
+      "type": "reinfusion",
+      "plan": "2024-09-29",
+      "actual": "2024-09-29"
+    },
+    {
+      "code": "A1D0175",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郑*锋",
+      "type": "apheresis",
+      "plan": "2024-08-01",
+      "actual": "2024-08-01"
+    },
+    {
+      "code": "A1D0175",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郑*锋",
+      "type": "reinfusion",
+      "plan": "2024-10-02",
+      "actual": "2024-10-02"
+    },
+    {
+      "code": "A1D0177",
+      "hosp": "北京大学人民医院",
+      "patient": "马*兴",
+      "type": "apheresis",
+      "plan": "2024-08-07",
+      "actual": "2024-08-07"
+    },
+    {
+      "code": "A1D0177",
+      "hosp": "北京大学人民医院",
+      "patient": "马*兴",
+      "type": "reinfusion",
+      "plan": "2024-09-20",
+      "actual": "2024-09-20"
+    },
+    {
+      "code": "A1D0176",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "刘*萍",
+      "type": "apheresis",
+      "plan": "2024-08-05",
+      "actual": "2024-08-05"
+    },
+    {
+      "code": "A1D0176",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "刘*萍",
+      "type": "reinfusion",
+      "plan": "2024-09-18",
+      "actual": "2024-09-18"
+    },
+    {
+      "code": "A1D0180",
+      "hosp": "中南大学湘雅三医院",
+      "patient": "龙*万",
+      "type": "apheresis",
+      "plan": "2024-08-09",
+      "actual": "2024-08-09"
+    },
+    {
+      "code": "A1D0180",
+      "hosp": "中南大学湘雅三医院",
+      "patient": "龙*万",
+      "type": "reinfusion",
+      "plan": "2024-09-19",
+      "actual": "2024-09-19"
+    },
+    {
+      "code": "A1D0178",
+      "hosp": "空军军医大学西京医院",
+      "patient": "陈*国",
+      "type": "apheresis",
+      "plan": "2024-08-06",
+      "actual": "2024-08-06"
+    },
+    {
+      "code": "A1D0178",
+      "hosp": "空军军医大学西京医院",
+      "patient": "陈*国",
+      "type": "reinfusion",
+      "plan": "2025-02-14",
+      "actual": "2025-02-14"
+    },
+    {
+      "code": "A1D0218",
+      "hosp": "北京大学人民医院",
+      "patient": "张*香",
+      "type": "apheresis",
+      "plan": "2024-08-29",
+      "actual": "2024-08-29"
+    },
+    {
+      "code": "A1D0218",
+      "hosp": "北京大学人民医院",
+      "patient": "张*香",
+      "type": "reinfusion",
+      "plan": "2024-09-28",
+      "actual": "2024-09-28"
+    },
+    {
+      "code": "A1D0189",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-08-12",
+      "actual": "2024-08-12"
+    },
+    {
+      "code": "A1D0189",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2024-09-30",
+      "actual": "2024-09-30"
+    },
+    {
+      "code": "A1D0182",
+      "hosp": "中山大学附属第一医院",
+      "patient": "朱*宝",
+      "type": "apheresis",
+      "plan": "2024-08-08",
+      "actual": "2024-08-08"
+    },
+    {
+      "code": "A1D0182",
+      "hosp": "中山大学附属第一医院",
+      "patient": "朱*宝",
+      "type": "reinfusion",
+      "plan": "2024-11-26",
+      "actual": "2024-11-26"
+    },
+    {
+      "code": "A1D0181",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*大",
+      "type": "apheresis",
+      "plan": "2024-08-08",
+      "actual": "2024-08-08"
+    },
+    {
+      "code": "A1D0181",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*大",
+      "type": "reinfusion",
+      "plan": "2025-02-27",
+      "actual": "2025-02-27"
+    },
+    {
+      "code": "A1D0184",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "黄*贞",
+      "type": "apheresis",
+      "plan": "2024-08-09",
+      "actual": "2024-08-09"
+    },
+    {
+      "code": "A1D0184",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "黄*贞",
+      "type": "reinfusion",
+      "plan": "2024-09-23",
+      "actual": "2024-09-23"
+    },
+    {
+      "code": "A1D0211",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2024-08-27",
+      "actual": "2024-08-27"
+    },
+    {
+      "code": "A1D0211",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2024-09-30",
+      "actual": "2024-09-30"
+    },
+    {
+      "code": "A1D0186",
+      "hosp": "北京大学人民医院",
+      "patient": "佟*国",
+      "type": "apheresis",
+      "plan": "2024-08-14",
+      "actual": "2024-08-14"
+    },
+    {
+      "code": "A1D0186",
+      "hosp": "北京大学人民医院",
+      "patient": "佟*国",
+      "type": "reinfusion",
+      "plan": "2024-09-25",
+      "actual": "2024-09-25"
+    },
+    {
+      "code": "A1D0188",
+      "hosp": "中国人民解放军总医院",
+      "patient": "冯*钗",
+      "type": "apheresis",
+      "plan": "2024-08-13",
+      "actual": "2024-08-13"
+    },
+    {
+      "code": "A1D0188",
+      "hosp": "中国人民解放军总医院",
+      "patient": "冯*钗",
+      "type": "reinfusion",
+      "plan": "2024-10-14",
+      "actual": "2024-10-14"
+    },
+    {
+      "code": "A1D0187",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*军",
+      "type": "apheresis",
+      "plan": "2024-08-12",
+      "actual": "2024-08-12"
+    },
+    {
+      "code": "A1D0187",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*军",
+      "type": "reinfusion",
+      "plan": "2024-09-05",
+      "actual": "2024-09-05"
+    },
+    {
+      "code": "A1D0213",
+      "hosp": "上海市第六人民医院",
+      "patient": "侯*梅",
+      "type": "apheresis",
+      "plan": "2024-08-30",
+      "actual": "2024-08-30"
+    },
+    {
+      "code": "A1D0213",
+      "hosp": "上海市第六人民医院",
+      "patient": "侯*梅",
+      "type": "reinfusion",
+      "plan": "2024-10-29",
+      "actual": "2024-10-29"
+    },
+    {
+      "code": "A1D0191",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2024-08-14",
+      "actual": "2024-08-14"
+    },
+    {
+      "code": "A1D0191",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2024-09-24",
+      "actual": "2024-09-24"
+    },
+    {
+      "code": "A1D0192",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "胡*明",
+      "type": "apheresis",
+      "plan": "2024-08-15",
+      "actual": "2024-08-15"
+    },
+    {
+      "code": "A1D0223",
+      "hosp": "河南省肿瘤医院",
+      "patient": "麻*兰",
+      "type": "apheresis",
+      "plan": "2024-09-06",
+      "actual": "2024-09-06"
+    },
+    {
+      "code": "A1D0223",
+      "hosp": "河南省肿瘤医院",
+      "patient": "麻*兰",
+      "type": "reinfusion",
+      "plan": "2024-12-18",
+      "actual": "2024-12-18"
+    },
+    {
+      "code": "A1D0194",
+      "hosp": "浙江省中医院",
+      "patient": "干*花",
+      "type": "apheresis",
+      "plan": "2024-08-15",
+      "actual": "2024-08-15"
+    },
+    {
+      "code": "A1D0194",
+      "hosp": "浙江省中医院",
+      "patient": "干*花",
+      "type": "reinfusion",
+      "plan": "2024-11-27",
+      "actual": "2024-11-27"
+    },
+    {
+      "code": "A1D0196",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "胡*雷",
+      "type": "apheresis",
+      "plan": "2024-08-16",
+      "actual": "2024-08-16"
+    },
+    {
+      "code": "A1D0196",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "胡*雷",
+      "type": "reinfusion",
+      "plan": "2024-12-06",
+      "actual": "2024-12-06"
+    },
+    {
+      "code": "A1D0198",
+      "hosp": "南方医科大学南方医院",
+      "patient": "梁*华",
+      "type": "apheresis",
+      "plan": "2024-08-16",
+      "actual": "2024-08-16"
+    },
+    {
+      "code": "A1D0198",
+      "hosp": "南方医科大学南方医院",
+      "patient": "梁*华",
+      "type": "reinfusion",
+      "plan": "2024-10-15",
+      "actual": "2024-10-15"
+    },
+    {
+      "code": "A1D0199",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "徐*城",
+      "type": "apheresis",
+      "plan": "2024-08-16",
+      "actual": "2024-08-16"
+    },
+    {
+      "code": "A1D0199",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "徐*城",
+      "type": "reinfusion",
+      "plan": "2025-09-09",
+      "actual": "2025-09-09"
+    },
+    {
+      "code": "A1D0201",
+      "hosp": "中国人民解放军总医院第五医学中心（307医院）",
+      "patient": "任*财",
+      "type": "apheresis",
+      "plan": "2024-08-19",
+      "actual": "2024-08-19"
+    },
+    {
+      "code": "A1D0201",
+      "hosp": "中国人民解放军总医院第五医学中心（307医院）",
+      "patient": "任*财",
+      "type": "reinfusion",
+      "plan": "2024-11-19",
+      "actual": "2024-11-19"
+    },
+    {
+      "code": "A1D0200",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*萍",
+      "type": "apheresis",
+      "plan": "2024-08-19",
+      "actual": "2024-08-19"
+    },
+    {
+      "code": "A1D0200",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*萍",
+      "type": "reinfusion",
+      "plan": "2024-11-29",
+      "actual": "2024-11-29"
+    },
+    {
+      "code": "A1D0321",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "侯*华",
+      "type": "apheresis",
+      "plan": "2024-12-17",
+      "actual": "2024-12-17"
+    },
+    {
+      "code": "A1D0321",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "侯*华",
+      "type": "reinfusion",
+      "plan": "2025-03-10",
+      "actual": "2025-03-10"
+    },
+    {
+      "code": "A1D0206",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "谢*良",
+      "type": "apheresis",
+      "plan": "2024-08-22",
+      "actual": "2024-08-22"
+    },
+    {
+      "code": "A1D0206",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "谢*良",
+      "type": "reinfusion",
+      "plan": "2024-10-14",
+      "actual": "2024-10-14"
+    },
+    {
+      "code": "A1D0207",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "杨*原",
+      "type": "apheresis",
+      "plan": "2024-08-22",
+      "actual": "2024-08-22"
+    },
+    {
+      "code": "A1D0207",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "杨*原",
+      "type": "reinfusion",
+      "plan": "2025-01-14",
+      "actual": "2025-01-14"
+    },
+    {
+      "code": "A1D0209",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "韩*英",
+      "type": "apheresis",
+      "plan": "2024-08-26",
+      "actual": "2024-08-26"
+    },
+    {
+      "code": "A1D0209",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "韩*英",
+      "type": "reinfusion",
+      "plan": "2024-09-20",
+      "actual": "2024-09-20"
+    },
+    {
+      "code": "A1D0210",
+      "hosp": "中国人民解放军海军特色医学中心",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2024-08-26",
+      "actual": "2024-08-26"
+    },
+    {
+      "code": "A1D0210",
+      "hosp": "中国人民解放军海军特色医学中心",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2024-11-21",
+      "actual": "2024-11-21"
+    },
+    {
+      "code": "A1D0212",
+      "hosp": "中国人民解放军总医院第五医学中心（307医院）",
+      "patient": "徐*孝",
+      "type": "apheresis",
+      "plan": "2024-09-02",
+      "actual": "2024-09-02"
+    },
+    {
+      "code": "A1D0212",
+      "hosp": "中国人民解放军总医院第五医学中心（307医院）",
+      "patient": "徐*孝",
+      "type": "reinfusion",
+      "plan": "2024-10-22",
+      "actual": "2024-10-22"
+    },
+    {
+      "code": "A1D0216",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*荣",
+      "type": "apheresis",
+      "plan": "2024-08-29",
+      "actual": "2024-08-29"
+    },
+    {
+      "code": "A1D0216",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*荣",
+      "type": "reinfusion",
+      "plan": "2024-10-18",
+      "actual": "2024-10-18"
+    },
+    {
+      "code": "A1D0217",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*华",
+      "type": "apheresis",
+      "plan": "2024-08-29",
+      "actual": "2024-08-29"
+    },
+    {
+      "code": "A1D0217",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*华",
+      "type": "reinfusion",
+      "plan": "2024-11-04",
+      "actual": "2024-11-04"
+    },
+    {
+      "code": "A1D0243",
+      "hosp": "深圳市罗湖区人民医院（友谊路院区）",
+      "patient": "邓*",
+      "type": "apheresis",
+      "plan": "2024-09-29",
+      "actual": "2024-09-29"
+    },
+    {
+      "code": "A1D0243",
+      "hosp": "深圳市罗湖区人民医院（友谊路院区）",
+      "patient": "邓*",
+      "type": "reinfusion",
+      "plan": "2025-10-21",
+      "actual": "2025-10-21"
+    },
+    {
+      "code": "A1D0219",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "蒙*莲",
+      "type": "apheresis",
+      "plan": "2024-09-04",
+      "actual": "2024-09-04"
+    },
+    {
+      "code": "A1D0219",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "蒙*莲",
+      "type": "reinfusion",
+      "plan": "2024-11-12",
+      "actual": "2024-11-12"
+    },
+    {
+      "code": "A1D0264",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "徐*珠",
+      "type": "apheresis",
+      "plan": "2024-10-18",
+      "actual": "2024-10-18"
+    },
+    {
+      "code": "A1D0264",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "徐*珠",
+      "type": "reinfusion",
+      "plan": "2024-12-04",
+      "actual": "2024-12-04"
+    },
+    {
+      "code": "A1D0224",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "段*均",
+      "type": "apheresis",
+      "plan": "2024-09-09",
+      "actual": "2024-09-09"
+    },
+    {
+      "code": "A1D0224",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "段*均",
+      "type": "reinfusion",
+      "plan": "2024-12-13",
+      "actual": "2024-12-13"
+    },
+    {
+      "code": "A1D0222",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "苟*民",
+      "type": "apheresis",
+      "plan": "2024-09-05",
+      "actual": "2024-09-05"
+    },
+    {
+      "code": "A1D0222",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "苟*民",
+      "type": "reinfusion",
+      "plan": "2025-09-23",
+      "actual": "2025-09-23"
+    },
+    {
+      "code": "A1D0226",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "励*芬",
+      "type": "apheresis",
+      "plan": "2024-09-11",
+      "actual": "2024-09-11"
+    },
+    {
+      "code": "A1D0226",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "励*芬",
+      "type": "reinfusion",
+      "plan": "2024-11-08",
+      "actual": "2024-11-08"
+    },
+    {
+      "code": "A1D0228",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "方*金",
+      "type": "apheresis",
+      "plan": "2024-09-11",
+      "actual": "2024-09-11"
+    },
+    {
+      "code": "A1D0228",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "方*金",
+      "type": "reinfusion",
+      "plan": "2025-01-16",
+      "actual": "2025-01-16"
+    },
+    {
+      "code": "A1D0229",
+      "hosp": "北京大学人民医院",
+      "patient": "赵*良",
+      "type": "apheresis",
+      "plan": "2024-09-12",
+      "actual": "2024-09-12"
+    },
+    {
+      "code": "A1D0229",
+      "hosp": "北京大学人民医院",
+      "patient": "赵*良",
+      "type": "reinfusion",
+      "plan": "2024-11-15",
+      "actual": "2024-11-15"
+    },
+    {
+      "code": "A1D0230",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "沈*芳",
+      "type": "apheresis",
+      "plan": "2024-09-13",
+      "actual": "2024-09-13"
+    },
+    {
+      "code": "A1D0230",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "沈*芳",
+      "type": "reinfusion",
+      "plan": "2024-12-17",
+      "actual": "2024-12-17"
+    },
+    {
+      "code": "A1D0242",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "袁*强",
+      "type": "apheresis",
+      "plan": "2024-09-24",
+      "actual": "2024-09-24"
+    },
+    {
+      "code": "A1D0242",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "袁*强",
+      "type": "reinfusion",
+      "plan": "2024-11-01",
+      "actual": "2024-11-01"
+    },
+    {
+      "code": "A1D0274",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "赵*平",
+      "type": "apheresis",
+      "plan": "2024-10-24",
+      "actual": "2024-10-24"
+    },
+    {
+      "code": "A1D0274",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "赵*平",
+      "type": "reinfusion",
+      "plan": "2024-12-03",
+      "actual": "2024-12-03"
+    },
+    {
+      "code": "A1D0232",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "廖*璐",
+      "type": "apheresis",
+      "plan": "2024-09-20",
+      "actual": "2024-09-20"
+    },
+    {
+      "code": "A1D0232",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "廖*璐",
+      "type": "reinfusion",
+      "plan": "2024-11-27",
+      "actual": "2024-11-27"
+    },
+    {
+      "code": "A1D0234",
+      "hosp": "温州医科大学附属第一医院",
+      "patient": "吕*泽",
+      "type": "apheresis",
+      "plan": "2024-09-19",
+      "actual": "2024-09-19"
+    },
+    {
+      "code": "A1D0234",
+      "hosp": "温州医科大学附属第一医院",
+      "patient": "吕*泽",
+      "type": "reinfusion",
+      "plan": "2025-04-17",
+      "actual": "2025-04-17"
+    },
+    {
+      "code": "A1D0236",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "尚*娟",
+      "type": "apheresis",
+      "plan": "2024-09-23",
+      "actual": "2024-09-23"
+    },
+    {
+      "code": "A1D0236",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "尚*娟",
+      "type": "reinfusion",
+      "plan": "2024-11-04",
+      "actual": "2024-11-04"
+    },
+    {
+      "code": "A1D0239",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2024-09-26",
+      "actual": "2024-09-26"
+    },
+    {
+      "code": "A1D0239",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2024-12-20",
+      "actual": "2024-12-20"
+    },
+    {
+      "code": "A1E0019",
+      "hosp": "北京大学人民医院",
+      "patient": "陈*民",
+      "type": "apheresis",
+      "plan": "2025-02-08",
+      "actual": "2025-02-08"
+    },
+    {
+      "code": "A1E0019",
+      "hosp": "北京大学人民医院",
+      "patient": "陈*民",
+      "type": "reinfusion",
+      "plan": "2025-03-19",
+      "actual": "2025-03-19"
+    },
+    {
+      "code": "A1D0245",
+      "hosp": "成都上锦南府医院 （四川大学华西医院上锦医院位）",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-09-25",
+      "actual": "2024-09-25"
+    },
+    {
+      "code": "A1D0245",
+      "hosp": "成都上锦南府医院 （四川大学华西医院上锦医院位）",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2025-01-28",
+      "actual": "2025-01-28"
+    },
+    {
+      "code": "A1D0252",
+      "hosp": "上海市同济医院",
+      "patient": "刘*华",
+      "type": "apheresis",
+      "plan": "2024-10-08",
+      "actual": "2024-10-08"
+    },
+    {
+      "code": "A1D0252",
+      "hosp": "上海市同济医院",
+      "patient": "刘*华",
+      "type": "reinfusion",
+      "plan": "2024-12-11",
+      "actual": "2024-12-10"
+    },
+    {
+      "code": "A1D0320",
+      "hosp": "广州市第一人民医院",
+      "patient": "黄*红",
+      "type": "apheresis",
+      "plan": "2024-12-16",
+      "actual": "2024-12-16"
+    },
+    {
+      "code": "A1D0320",
+      "hosp": "广州市第一人民医院",
+      "patient": "黄*红",
+      "type": "reinfusion",
+      "plan": "2025-02-12",
+      "actual": "2025-02-12"
+    },
+    {
+      "code": "A1D0247",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "林*金",
+      "type": "apheresis",
+      "plan": "2024-09-27",
+      "actual": "2024-09-27"
+    },
+    {
+      "code": "A1D0248",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杜*国",
+      "type": "apheresis",
+      "plan": "2024-09-27",
+      "actual": "2024-09-27"
+    },
+    {
+      "code": "A1D0248",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杜*国",
+      "type": "reinfusion",
+      "plan": "2024-12-25",
+      "actual": "2024-12-25"
+    },
+    {
+      "code": "A1D0255",
+      "hosp": "上海仁济医院",
+      "patient": "卢*兰",
+      "type": "apheresis",
+      "plan": "2024-10-10",
+      "actual": "2024-10-10"
+    },
+    {
+      "code": "A1D0255",
+      "hosp": "上海仁济医院",
+      "patient": "卢*兰",
+      "type": "reinfusion",
+      "plan": "2025-02-10",
+      "actual": "2025-02-10"
+    },
+    {
+      "code": "A1D0254",
+      "hosp": "北京大学人民医院",
+      "patient": "藏*芹",
+      "type": "apheresis",
+      "plan": "2024-10-10",
+      "actual": "2024-10-10"
+    },
+    {
+      "code": "A1D0254",
+      "hosp": "北京大学人民医院",
+      "patient": "藏*芹",
+      "type": "reinfusion",
+      "plan": "2024-12-18",
+      "actual": "2024-12-18"
+    },
+    {
+      "code": "A1D0256",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*波",
+      "type": "apheresis",
+      "plan": "2024-10-12",
+      "actual": "2024-10-12"
+    },
+    {
+      "code": "A1D0256",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*波",
+      "type": "reinfusion",
+      "plan": "2024-11-11",
+      "actual": "2024-11-11"
+    },
+    {
+      "code": "A1D0257",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "黄*清",
+      "type": "apheresis",
+      "plan": "2024-10-16",
+      "actual": "2024-10-16"
+    },
+    {
+      "code": "A1D0257",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "黄*清",
+      "type": "reinfusion",
+      "plan": "2024-12-23",
+      "actual": "2024-12-23"
+    },
+    {
+      "code": "A1D0258",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "徐*贤",
+      "type": "apheresis",
+      "plan": "2024-10-15",
+      "actual": "2024-10-15"
+    },
+    {
+      "code": "A1D0258",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "徐*贤",
+      "type": "reinfusion",
+      "plan": "2024-11-25",
+      "actual": "2024-11-25"
+    },
+    {
+      "code": "A1D0263",
+      "hosp": "上海市同济医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-10-17",
+      "actual": "2024-10-17"
+    },
+    {
+      "code": "A1D0261",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "林*芳",
+      "type": "apheresis",
+      "plan": "2024-10-22",
+      "actual": "2024-10-22"
+    },
+    {
+      "code": "A1D0261",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "林*芳",
+      "type": "reinfusion",
+      "plan": "2024-12-30",
+      "actual": "2024-12-30"
+    },
+    {
+      "code": "A1D0265",
+      "hosp": "江苏省人民医院",
+      "patient": "王*光",
+      "type": "apheresis",
+      "plan": "2024-10-17",
+      "actual": "2024-10-17"
+    },
+    {
+      "code": "A1D0265",
+      "hosp": "江苏省人民医院",
+      "patient": "王*光",
+      "type": "reinfusion",
+      "plan": "2025-02-18",
+      "actual": "2025-02-18"
+    },
+    {
+      "code": "A1D0266",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*秀",
+      "type": "apheresis",
+      "plan": "2024-10-29",
+      "actual": "2024-10-29"
+    },
+    {
+      "code": "A1D0266",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*秀",
+      "type": "reinfusion",
+      "plan": "2025-01-14",
+      "actual": "2025-01-14"
+    },
+    {
+      "code": "A1D0267",
+      "hosp": "四川省人民医院",
+      "patient": "黄*力",
+      "type": "apheresis",
+      "plan": "2024-10-23",
+      "actual": "2024-10-23"
+    },
+    {
+      "code": "A1D0267",
+      "hosp": "四川省人民医院",
+      "patient": "黄*力",
+      "type": "reinfusion",
+      "plan": "2024-12-19",
+      "actual": "2024-12-19"
+    },
+    {
+      "code": "A1D0268",
+      "hosp": "中国人民解放军西部战区总医院",
+      "patient": "宋*",
+      "type": "apheresis",
+      "plan": "2024-10-23",
+      "actual": "2024-10-23"
+    },
+    {
+      "code": "A1D0268",
+      "hosp": "中国人民解放军西部战区总医院",
+      "patient": "宋*",
+      "type": "reinfusion",
+      "plan": "2025-03-06",
+      "actual": "2025-03-06"
+    },
+    {
+      "code": "A1D0269",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "邓*福",
+      "type": "apheresis",
+      "plan": "2024-10-22",
+      "actual": "2024-10-22"
+    },
+    {
+      "code": "A1D0269",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "邓*福",
+      "type": "reinfusion",
+      "plan": "2024-11-25",
+      "actual": "2024-11-29"
+    },
+    {
+      "code": "A1D0270",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "房*明",
+      "type": "apheresis",
+      "plan": "2024-10-23",
+      "actual": "2024-10-23"
+    },
+    {
+      "code": "A1D0270",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "房*明",
+      "type": "reinfusion",
+      "plan": "2025-01-08",
+      "actual": "2025-01-08"
+    },
+    {
+      "code": "A1E0186",
+      "hosp": "南京鼓楼医院",
+      "patient": "周*荣",
+      "type": "apheresis",
+      "plan": "2025-08-13",
+      "actual": "2025-08-13"
+    },
+    {
+      "code": "A1E0186",
+      "hosp": "南京鼓楼医院",
+      "patient": "周*荣",
+      "type": "reinfusion",
+      "plan": "2025-09-26",
+      "actual": "2025-09-26"
+    },
+    {
+      "code": "A1E0038",
+      "hosp": "上海市同济医院",
+      "patient": "徐*陶",
+      "type": "apheresis",
+      "plan": "2025-02-25",
+      "actual": "2025-02-25"
+    },
+    {
+      "code": "A1E0038",
+      "hosp": "上海市同济医院",
+      "patient": "徐*陶",
+      "type": "reinfusion",
+      "plan": "2025-06-19",
+      "actual": "2025-06-19"
+    },
+    {
+      "code": "A1D0278",
+      "hosp": "宁波市第二医院",
+      "patient": "闻*鸿",
+      "type": "apheresis",
+      "plan": "2024-10-30",
+      "actual": "2024-10-30"
+    },
+    {
+      "code": "A1D0278",
+      "hosp": "宁波市第二医院",
+      "patient": "闻*鸿",
+      "type": "reinfusion",
+      "plan": "2025-02-27",
+      "actual": "2025-02-27"
+    },
+    {
+      "code": "A1D0280",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "赵*萍",
+      "type": "apheresis",
+      "plan": "2024-11-01",
+      "actual": "2024-11-01"
+    },
+    {
+      "code": "A1D0280",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "赵*萍",
+      "type": "reinfusion",
+      "plan": "2025-02-17",
+      "actual": "2025-02-17"
+    },
+    {
+      "code": "A1D0283",
+      "hosp": "南方医科大学南方医院",
+      "patient": "樊*好",
+      "type": "apheresis",
+      "plan": "2024-11-04",
+      "actual": "2024-11-04"
+    },
+    {
+      "code": "A1D0283",
+      "hosp": "南方医科大学南方医院",
+      "patient": "樊*好",
+      "type": "reinfusion",
+      "plan": "2025-04-01",
+      "actual": "2025-04-01"
+    },
+    {
+      "code": "A1D0281",
+      "hosp": "中山大学附属第一医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2024-11-01",
+      "actual": "2024-11-01"
+    },
+    {
+      "code": "A1D0281",
+      "hosp": "中山大学附属第一医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2025-02-17",
+      "actual": "2025-02-17"
+    },
+    {
+      "code": "A1D0284",
+      "hosp": "北京协和医院",
+      "patient": "王*良",
+      "type": "apheresis",
+      "plan": "2024-11-06",
+      "actual": "2024-11-06"
+    },
+    {
+      "code": "A1D0284",
+      "hosp": "北京协和医院",
+      "patient": "王*良",
+      "type": "reinfusion",
+      "plan": "2025-03-24",
+      "actual": "2025-03-24"
+    },
+    {
+      "code": "A1D0300",
+      "hosp": "北京大学人民医院",
+      "patient": "高*明",
+      "type": "apheresis",
+      "plan": "2024-11-26",
+      "actual": "2024-11-26"
+    },
+    {
+      "code": "A1D0300",
+      "hosp": "北京大学人民医院",
+      "patient": "高*明",
+      "type": "reinfusion",
+      "plan": "2024-12-30",
+      "actual": "2024-12-30"
+    },
+    {
+      "code": "A1D0286",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*芝",
+      "type": "apheresis",
+      "plan": "2024-11-11",
+      "actual": "2024-11-11"
+    },
+    {
+      "code": "A1D0286",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*芝",
+      "type": "reinfusion",
+      "plan": "2025-03-13",
+      "actual": "2025-03-13"
+    },
+    {
+      "code": "A1D0288",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "张*军",
+      "type": "apheresis",
+      "plan": "2024-11-13",
+      "actual": "2024-11-13"
+    },
+    {
+      "code": "A1D0289",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*",
+      "type": "apheresis",
+      "plan": "2024-11-14",
+      "actual": "2024-11-14"
+    },
+    {
+      "code": "A1D0289",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*",
+      "type": "reinfusion",
+      "plan": "2025-06-05",
+      "actual": "2025-06-05"
+    },
+    {
+      "code": "A1D0290",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*芝",
+      "type": "apheresis",
+      "plan": "2024-11-18",
+      "actual": "2024-11-18"
+    },
+    {
+      "code": "A1D0290",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*芝",
+      "type": "reinfusion",
+      "plan": "2025-01-15",
+      "actual": "2025-01-15"
+    },
+    {
+      "code": "9009125000050",
+      "hosp": "北京大学人民医院",
+      "patient": "田*东",
+      "type": "apheresis",
+      "plan": "2025-12-23",
+      "actual": "2025-12-23"
+    },
+    {
+      "code": "A1D0291",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2024-11-19",
+      "actual": "2024-11-19"
+    },
+    {
+      "code": "A1D0291",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2025-03-26",
+      "actual": "2025-03-26"
+    },
+    {
+      "code": "A1D0294",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "杜*贤",
+      "type": "apheresis",
+      "plan": "2024-11-21",
+      "actual": "2024-11-21"
+    },
+    {
+      "code": "A1D0294",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "杜*贤",
+      "type": "reinfusion",
+      "plan": "2025-09-26",
+      "actual": "2025-09-26"
+    },
+    {
+      "code": "A1E0037",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "罗*禄",
+      "type": "apheresis",
+      "plan": "2025-02-24",
+      "actual": "2025-02-24"
+    },
+    {
+      "code": "A1E0037",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "罗*禄",
+      "type": "reinfusion",
+      "plan": "2025-04-08",
+      "actual": "2025-04-08"
+    },
+    {
+      "code": "A1D0295",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*静",
+      "type": "apheresis",
+      "plan": "2024-11-21",
+      "actual": "2024-11-21"
+    },
+    {
+      "code": "A1D0295",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*静",
+      "type": "reinfusion",
+      "plan": "2025-02-17",
+      "actual": "2025-02-17"
+    },
+    {
+      "code": "A1D0301",
+      "hosp": "上海市曜影医院",
+      "patient": "T*R K*T G*N",
+      "type": "apheresis",
+      "plan": "2024-11-27",
+      "actual": "2024-11-27"
+    },
+    {
+      "code": "A1D0301",
+      "hosp": "上海市曜影医院",
+      "patient": "T*R K*T G*N",
+      "type": "reinfusion",
+      "plan": "2024-12-31",
+      "actual": "2024-12-31"
+    },
+    {
+      "code": "A1D0298",
+      "hosp": "北京协和医院",
+      "patient": "白*",
+      "type": "apheresis",
+      "plan": "2024-11-25",
+      "actual": "2024-11-25"
+    },
+    {
+      "code": "A1D0298",
+      "hosp": "北京协和医院",
+      "patient": "白*",
+      "type": "reinfusion",
+      "plan": "2024-12-25",
+      "actual": "2024-12-25"
+    },
+    {
+      "code": "A1E0035",
+      "hosp": "中国人民解放军海军特色医学中心",
+      "patient": "彭*英",
+      "type": "apheresis",
+      "plan": "2025-02-26",
+      "actual": "2025-02-26"
+    },
+    {
+      "code": "A1E0035",
+      "hosp": "中国人民解放军海军特色医学中心",
+      "patient": "彭*英",
+      "type": "reinfusion",
+      "plan": "2025-06-06",
+      "actual": "2025-06-06"
+    },
+    {
+      "code": "9009126000038",
+      "hosp": "湖州市中心医院",
+      "patient": "陆*荣",
+      "type": "apheresis",
+      "plan": "2026-02-02",
+      "actual": "2026-02-02"
+    },
+    {
+      "code": "A1E0040",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "张*书",
+      "type": "apheresis",
+      "plan": "2025-04-24",
+      "actual": "2025-04-24"
+    },
+    {
+      "code": "A1E0040",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "张*书",
+      "type": "reinfusion",
+      "plan": "2025-06-02",
+      "actual": "2025-06-02"
+    },
+    {
+      "code": "A1D0306",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "沈*东",
+      "type": "apheresis",
+      "plan": "2024-12-03",
+      "actual": "2024-12-03"
+    },
+    {
+      "code": "A1D0306",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "沈*东",
+      "type": "reinfusion",
+      "plan": "2025-05-30",
+      "actual": "2025-05-30"
+    },
+    {
+      "code": "A1D0308",
+      "hosp": "中山大学附属第一医院",
+      "patient": "孔*金",
+      "type": "apheresis",
+      "plan": "2024-12-04",
+      "actual": "2024-12-04"
+    },
+    {
+      "code": "A1D0308",
+      "hosp": "中山大学附属第一医院",
+      "patient": "孔*金",
+      "type": "reinfusion",
+      "plan": "2025-04-07",
+      "actual": "2025-04-07"
+    },
+    {
+      "code": "A1D0309",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2024-12-05",
+      "actual": "2024-12-05"
+    },
+    {
+      "code": "A1D0309",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2025-03-24",
+      "actual": "2025-03-24"
+    },
+    {
+      "code": "9009126000135",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "仲*",
+      "type": "apheresis",
+      "plan": "2026-04-29",
+      "actual": "2026-04-29"
+    },
+    {
+      "code": "9009126000135",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "仲*",
+      "type": "reinfusion",
+      "plan": "2026-06-06",
+      "actual": "2026-06-06"
+    },
+    {
+      "code": "A1D0312",
+      "hosp": "浙江省中医院",
+      "patient": "吕*琴",
+      "type": "apheresis",
+      "plan": "2024-12-06",
+      "actual": "2024-12-06"
+    },
+    {
+      "code": "A1D0312",
+      "hosp": "浙江省中医院",
+      "patient": "吕*琴",
+      "type": "reinfusion",
+      "plan": "2025-02-27",
+      "actual": "2025-02-27"
+    },
+    {
+      "code": "A1D0313",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "刘*林",
+      "type": "apheresis",
+      "plan": "2024-12-10",
+      "actual": "2024-12-10"
+    },
+    {
+      "code": "A1D0313",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "刘*林",
+      "type": "reinfusion",
+      "plan": "2025-03-25",
+      "actual": "2025-03-25"
+    },
+    {
+      "code": "A1D0315",
+      "hosp": "北京大学人民医院",
+      "patient": "陈*林",
+      "type": "apheresis",
+      "plan": "2024-12-12",
+      "actual": "2024-12-12"
+    },
+    {
+      "code": "A1D0315",
+      "hosp": "北京大学人民医院",
+      "patient": "陈*林",
+      "type": "reinfusion",
+      "plan": "2025-03-10",
+      "actual": "2025-03-10"
+    },
+    {
+      "code": "A1D0317",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "韩*如",
+      "type": "apheresis",
+      "plan": "2024-12-13",
+      "actual": "2024-12-13"
+    },
+    {
+      "code": "A1D0323",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "符*信",
+      "type": "apheresis",
+      "plan": "2024-12-18",
+      "actual": "2024-12-18"
+    },
+    {
+      "code": "A1D0323",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "符*信",
+      "type": "reinfusion",
+      "plan": "2025-02-26",
+      "actual": "2025-02-26"
+    },
+    {
+      "code": "A1D0324",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "朱*明",
+      "type": "apheresis",
+      "plan": "2024-12-18",
+      "actual": "2024-12-18"
+    },
+    {
+      "code": "A1D0324",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "朱*明",
+      "type": "reinfusion",
+      "plan": "2025-10-20",
+      "actual": "2025-10-20"
+    },
+    {
+      "code": "A1E0014",
+      "hosp": "江苏省人民医院",
+      "patient": "曹*根",
+      "type": "apheresis",
+      "plan": "2025-01-23",
+      "actual": "2025-01-23"
+    },
+    {
+      "code": "A1E0014",
+      "hosp": "江苏省人民医院",
+      "patient": "曹*根",
+      "type": "reinfusion",
+      "plan": "2025-03-04",
+      "actual": "2025-03-04"
+    },
+    {
+      "code": "A1D0326",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "张*清",
+      "type": "apheresis",
+      "plan": "2024-12-26",
+      "actual": "2024-12-26"
+    },
+    {
+      "code": "A1E0001",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "吕*",
+      "type": "apheresis",
+      "plan": "2025-01-06",
+      "actual": "2025-01-06"
+    },
+    {
+      "code": "A1E0001",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "吕*",
+      "type": "reinfusion",
+      "plan": "2025-03-11",
+      "actual": "2025-03-11"
+    },
+    {
+      "code": "A1E0002",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*武",
+      "type": "apheresis",
+      "plan": "2025-01-16",
+      "actual": "2025-01-16"
+    },
+    {
+      "code": "A1E0002",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*武",
+      "type": "reinfusion",
+      "plan": "2025-07-30",
+      "actual": "2025-07-30"
+    },
+    {
+      "code": "A1E0006",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "高*明",
+      "type": "apheresis",
+      "plan": "2025-01-13",
+      "actual": "2025-01-13"
+    },
+    {
+      "code": "A1E0006",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "高*明",
+      "type": "reinfusion",
+      "plan": "2025-04-15",
+      "actual": "2025-04-15"
+    },
+    {
+      "code": "A1E0004",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*玲",
+      "type": "apheresis",
+      "plan": "2025-01-10",
+      "actual": "2025-01-10"
+    },
+    {
+      "code": "A1E0004",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*玲",
+      "type": "reinfusion",
+      "plan": "2025-05-15",
+      "actual": "2025-05-15"
+    },
+    {
+      "code": "A1E0005",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "孙*宝",
+      "type": "apheresis",
+      "plan": "2025-01-15",
+      "actual": "2025-01-15"
+    },
+    {
+      "code": "A1E0005",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "孙*宝",
+      "type": "reinfusion",
+      "plan": "2025-06-18",
+      "actual": "2025-06-18"
+    },
+    {
+      "code": "A1E0020",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "黄*秋",
+      "type": "apheresis",
+      "plan": "2025-02-12",
+      "actual": "2025-02-12"
+    },
+    {
+      "code": "A1E0020",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "黄*秋",
+      "type": "reinfusion",
+      "plan": "2025-03-31",
+      "actual": "2025-03-31"
+    },
+    {
+      "code": "A1E0045",
+      "hosp": "北京大学人民医院",
+      "patient": "C*N Q*U",
+      "type": "apheresis",
+      "plan": "2025-03-24",
+      "actual": "2025-03-24"
+    },
+    {
+      "code": "A1E0045",
+      "hosp": "北京大学人民医院",
+      "patient": "C*N Q*U",
+      "type": "reinfusion",
+      "plan": "2025-06-23",
+      "actual": "2025-06-23"
+    },
+    {
+      "code": "A1E0012",
+      "hosp": "北京大学人民医院",
+      "patient": "张*华",
+      "type": "apheresis",
+      "plan": "2025-01-22",
+      "actual": "2025-01-22"
+    },
+    {
+      "code": "A1E0012",
+      "hosp": "北京大学人民医院",
+      "patient": "张*华",
+      "type": "reinfusion",
+      "plan": "2025-03-02",
+      "actual": "2025-03-02"
+    },
+    {
+      "code": "A1E0008",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "刘*生",
+      "type": "apheresis",
+      "plan": "2025-01-14",
+      "actual": "2025-01-14"
+    },
+    {
+      "code": "A1E0008",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "刘*生",
+      "type": "reinfusion",
+      "plan": "2025-10-15",
+      "actual": "2025-10-15"
+    },
+    {
+      "code": "A1E0013",
+      "hosp": "上海市同济医院",
+      "patient": "谢*哥",
+      "type": "apheresis",
+      "plan": "2025-01-16",
+      "actual": "2025-01-16"
+    },
+    {
+      "code": "A1E0013",
+      "hosp": "上海市同济医院",
+      "patient": "谢*哥",
+      "type": "reinfusion",
+      "plan": "2025-06-11",
+      "actual": "2025-06-11"
+    },
+    {
+      "code": "A1E0076",
+      "hosp": "上海市同济医院",
+      "patient": "陈*芬",
+      "type": "apheresis",
+      "plan": "2025-04-10",
+      "actual": "2025-04-10"
+    },
+    {
+      "code": "A1E0076",
+      "hosp": "上海市同济医院",
+      "patient": "陈*芬",
+      "type": "reinfusion",
+      "plan": "2025-05-26",
+      "actual": "2025-05-26"
+    },
+    {
+      "code": "A1E0010",
+      "hosp": "北京协和医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-01-16",
+      "actual": "2025-01-16"
+    },
+    {
+      "code": "A1E0010",
+      "hosp": "北京协和医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2025-04-21",
+      "actual": "2025-04-21"
+    },
+    {
+      "code": "A1E0011",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "范*英",
+      "type": "apheresis",
+      "plan": "2025-01-17",
+      "actual": "2025-01-17"
+    },
+    {
+      "code": "A1E0011",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "范*英",
+      "type": "reinfusion",
+      "plan": "2025-03-31",
+      "actual": "2025-03-31"
+    },
+    {
+      "code": "A1E0137",
+      "hosp": "上海市同济医院",
+      "patient": "陈*松",
+      "type": "apheresis",
+      "plan": "2025-06-27",
+      "actual": "2025-06-27"
+    },
+    {
+      "code": "A1E0137",
+      "hosp": "上海市同济医院",
+      "patient": "陈*松",
+      "type": "reinfusion",
+      "plan": "2025-08-11",
+      "actual": "2025-08-11"
+    },
+    {
+      "code": "A1E0018",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "程*龙",
+      "type": "apheresis",
+      "plan": "2025-02-07",
+      "actual": "2025-02-07"
+    },
+    {
+      "code": "A1E0018",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "程*龙",
+      "type": "reinfusion",
+      "plan": "2025-10-28",
+      "actual": "2025-10-28"
+    },
+    {
+      "code": "A1E0021",
+      "hosp": "江苏省人民医院",
+      "patient": "李*梅",
+      "type": "apheresis",
+      "plan": "2025-02-10",
+      "actual": "2025-02-10"
+    },
+    {
+      "code": "A1E0021",
+      "hosp": "江苏省人民医院",
+      "patient": "李*梅",
+      "type": "reinfusion",
+      "plan": "2025-03-20",
+      "actual": "2025-03-20"
+    },
+    {
+      "code": "A1E0023",
+      "hosp": "北京大学人民医院",
+      "patient": "齐*平",
+      "type": "apheresis",
+      "plan": "2025-02-11",
+      "actual": "2025-02-11"
+    },
+    {
+      "code": "A1E0023",
+      "hosp": "北京大学人民医院",
+      "patient": "齐*平",
+      "type": "reinfusion",
+      "plan": "2025-03-30",
+      "actual": "2025-03-30"
+    },
+    {
+      "code": "A1E0025",
+      "hosp": "安徽省立医院南区（安徽省心血管医院）",
+      "patient": "杨*荣",
+      "type": "apheresis",
+      "plan": "2025-02-09",
+      "actual": "2025-02-09"
+    },
+    {
+      "code": "A1E0025",
+      "hosp": "安徽省立医院南区（安徽省心血管医院）",
+      "patient": "杨*荣",
+      "type": "reinfusion",
+      "plan": "2025-04-10",
+      "actual": "2025-04-10"
+    },
+    {
+      "code": "A1E0027",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "林*治",
+      "type": "apheresis",
+      "plan": "2025-02-13",
+      "actual": "2025-02-13"
+    },
+    {
+      "code": "A1E0027",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "林*治",
+      "type": "reinfusion",
+      "plan": "2025-04-16",
+      "actual": "2025-04-16"
+    },
+    {
+      "code": "A1E0028",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*秀",
+      "type": "apheresis",
+      "plan": "2025-02-14",
+      "actual": "2025-02-14"
+    },
+    {
+      "code": "A1E0028",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*秀",
+      "type": "reinfusion",
+      "plan": "2025-04-09",
+      "actual": "2025-04-09"
+    },
+    {
+      "code": "A1E0030",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "叶*红",
+      "type": "apheresis",
+      "plan": "2025-02-18",
+      "actual": "2025-02-18"
+    },
+    {
+      "code": "A1E0029",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "何*群",
+      "type": "apheresis",
+      "plan": "2025-02-17",
+      "actual": "2025-02-17"
+    },
+    {
+      "code": "A1E0029",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "何*群",
+      "type": "reinfusion",
+      "plan": "2025-04-11",
+      "actual": "2025-04-11"
+    },
+    {
+      "code": "A1E0031",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "肖*华",
+      "type": "apheresis",
+      "plan": "2025-02-19",
+      "actual": "2025-02-19"
+    },
+    {
+      "code": "A1E0031",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "肖*华",
+      "type": "reinfusion",
+      "plan": "2025-04-15",
+      "actual": "2025-04-15"
+    },
+    {
+      "code": "A1E0032",
+      "hosp": "浙江大学医学院附属邵逸夫医院",
+      "patient": "孙*",
+      "type": "apheresis",
+      "plan": "2025-02-20",
+      "actual": "2025-02-20"
+    },
+    {
+      "code": "A1E0032",
+      "hosp": "浙江大学医学院附属邵逸夫医院",
+      "patient": "孙*",
+      "type": "reinfusion",
+      "plan": "2025-10-27",
+      "actual": "2025-10-27"
+    },
+    {
+      "code": "A1E0033",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2025-02-20",
+      "actual": "2025-02-20"
+    },
+    {
+      "code": "A1E0033",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2025-03-31",
+      "actual": "2025-03-31"
+    },
+    {
+      "code": "A1E0034",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "孙*周",
+      "type": "apheresis",
+      "plan": "2025-02-21",
+      "actual": "2025-02-21"
+    },
+    {
+      "code": "A1E0034",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "孙*周",
+      "type": "reinfusion",
+      "plan": "2025-04-02",
+      "actual": "2025-04-02"
+    },
+    {
+      "code": "A1E0068",
+      "hosp": "天津医科大学总医院",
+      "patient": "魏*霞",
+      "type": "apheresis",
+      "plan": "2025-04-02",
+      "actual": "2025-04-02"
+    },
+    {
+      "code": "A1E0039",
+      "hosp": "青岛市市立医院",
+      "patient": "魏*暖",
+      "type": "apheresis",
+      "plan": "2025-02-24",
+      "actual": "2025-02-24"
+    },
+    {
+      "code": "A1E0039",
+      "hosp": "青岛市市立医院",
+      "patient": "魏*暖",
+      "type": "reinfusion",
+      "plan": "2026-04-20",
+      "actual": "2026-04-20"
+    },
+    {
+      "code": "A1E0041",
+      "hosp": "天津医科大学总医院",
+      "patient": "翟*军",
+      "type": "apheresis",
+      "plan": "2025-02-27",
+      "actual": "2025-02-27"
+    },
+    {
+      "code": "A1E0043",
+      "hosp": "暨南大学附属第一医院（广州华侨医院）",
+      "patient": "容*风",
+      "type": "apheresis",
+      "plan": "2025-02-28",
+      "actual": "2025-02-28"
+    },
+    {
+      "code": "A1E0043",
+      "hosp": "暨南大学附属第一医院（广州华侨医院）",
+      "patient": "容*风",
+      "type": "reinfusion",
+      "plan": "2025-06-03",
+      "actual": "2025-06-03"
+    },
+    {
+      "code": "A1E0044",
+      "hosp": "上海市同济医院",
+      "patient": "潘*祥",
+      "type": "apheresis",
+      "plan": "2025-02-28",
+      "actual": "2025-02-28"
+    },
+    {
+      "code": "A1E0044",
+      "hosp": "上海市同济医院",
+      "patient": "潘*祥",
+      "type": "reinfusion",
+      "plan": "2025-05-24",
+      "actual": "2025-05-24"
+    },
+    {
+      "code": "A1E0047",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "解*",
+      "type": "apheresis",
+      "plan": "2025-03-06",
+      "actual": "2025-03-06"
+    },
+    {
+      "code": "A1E0047",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "解*",
+      "type": "reinfusion",
+      "plan": "2025-08-15",
+      "actual": "2025-08-15"
+    },
+    {
+      "code": "A1E0046",
+      "hosp": "中山大学附属第一医院",
+      "patient": "黄*耀",
+      "type": "apheresis",
+      "plan": "2025-03-06",
+      "actual": "2025-03-06"
+    },
+    {
+      "code": "A1E0046",
+      "hosp": "中山大学附属第一医院",
+      "patient": "黄*耀",
+      "type": "reinfusion",
+      "plan": "2025-07-08",
+      "actual": "2025-07-08"
+    },
+    {
+      "code": "A1E0049",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "吴*者",
+      "type": "apheresis",
+      "plan": "2025-03-07",
+      "actual": "2025-03-07"
+    },
+    {
+      "code": "A1E0048",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "朱*旭",
+      "type": "apheresis",
+      "plan": "2025-04-17",
+      "actual": "2025-04-17"
+    },
+    {
+      "code": "A1E0048",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "朱*旭",
+      "type": "reinfusion",
+      "plan": "2025-05-16",
+      "actual": "2025-05-16"
+    },
+    {
+      "code": "A1E0050",
+      "hosp": "武汉大学中南医院",
+      "patient": "赵*林",
+      "type": "apheresis",
+      "plan": "2025-03-11",
+      "actual": "2025-03-11"
+    },
+    {
+      "code": "A1E0050",
+      "hosp": "武汉大学中南医院",
+      "patient": "赵*林",
+      "type": "reinfusion",
+      "plan": "2025-05-20",
+      "actual": "2025-05-20"
+    },
+    {
+      "code": "A1E0053",
+      "hosp": "宁波市第二医院",
+      "patient": "张*亚",
+      "type": "apheresis",
+      "plan": "2025-03-13",
+      "actual": "2025-03-13"
+    },
+    {
+      "code": "A1E0053",
+      "hosp": "宁波市第二医院",
+      "patient": "张*亚",
+      "type": "reinfusion",
+      "plan": "2025-05-13",
+      "actual": "2025-05-14"
+    },
+    {
+      "code": "A1E0054",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*军",
+      "type": "apheresis",
+      "plan": "2025-03-14",
+      "actual": "2025-03-14"
+    },
+    {
+      "code": "A1E0054",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*军",
+      "type": "reinfusion",
+      "plan": "2025-09-25",
+      "actual": "2025-09-25"
+    },
+    {
+      "code": "A1E0059",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "叶*松",
+      "type": "apheresis",
+      "plan": "2025-03-20",
+      "actual": "2025-03-20"
+    },
+    {
+      "code": "A1E0056",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2025-03-18",
+      "actual": "2025-03-18"
+    },
+    {
+      "code": "A1E0056",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "李*",
+      "type": "reinfusion",
+      "plan": "2025-08-20",
+      "actual": "2025-08-20"
+    },
+    {
+      "code": "A1E0058",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*中",
+      "type": "apheresis",
+      "plan": "2025-03-21",
+      "actual": "2025-03-21"
+    },
+    {
+      "code": "A1E0058",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*中",
+      "type": "reinfusion",
+      "plan": "2025-06-16",
+      "actual": "2025-06-16"
+    },
+    {
+      "code": "A1E0057",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "吴*梅",
+      "type": "apheresis",
+      "plan": "2025-03-19",
+      "actual": "2025-03-19"
+    },
+    {
+      "code": "A1E0057",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "吴*梅",
+      "type": "reinfusion",
+      "plan": "2025-07-16",
+      "actual": "2025-07-16"
+    },
+    {
+      "code": "A1E0061",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "时*业",
+      "type": "apheresis",
+      "plan": "2025-03-20",
+      "actual": "2025-03-20"
+    },
+    {
+      "code": "A1E0061",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "时*业",
+      "type": "reinfusion",
+      "plan": "2025-08-08",
+      "actual": "2025-08-08"
+    },
+    {
+      "code": "A1E0064",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "阮*富",
+      "type": "apheresis",
+      "plan": "2025-03-25",
+      "actual": "2025-03-25"
+    },
+    {
+      "code": "A1E0064",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "阮*富",
+      "type": "reinfusion",
+      "plan": "2025-06-17",
+      "actual": "2025-06-17"
+    },
+    {
+      "code": "A1E0065",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "尹*祥",
+      "type": "apheresis",
+      "plan": "2025-03-26",
+      "actual": "2025-03-26"
+    },
+    {
+      "code": "A1E0066",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "苏*军",
+      "type": "apheresis",
+      "plan": "2025-03-28",
+      "actual": "2025-03-28"
+    },
+    {
+      "code": "A1E0066",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "苏*军",
+      "type": "reinfusion",
+      "plan": "2025-06-30",
+      "actual": "2025-06-30"
+    },
+    {
+      "code": "A1E0069",
+      "hosp": "上海市同济医院",
+      "patient": "凌*",
+      "type": "apheresis",
+      "plan": "2025-04-01",
+      "actual": "2025-04-01"
+    },
+    {
+      "code": "A1E0069",
+      "hosp": "上海市同济医院",
+      "patient": "凌*",
+      "type": "reinfusion",
+      "plan": "2026-03-03",
+      "actual": "2026-03-05"
+    },
+    {
+      "code": "A1E0071",
+      "hosp": "四川大学华西医院",
+      "patient": "刘*君",
+      "type": "apheresis",
+      "plan": "2025-04-08",
+      "actual": "2025-04-08"
+    },
+    {
+      "code": "A1E0071",
+      "hosp": "四川大学华西医院",
+      "patient": "刘*君",
+      "type": "reinfusion",
+      "plan": "2025-06-30",
+      "actual": "2025-06-30"
+    },
+    {
+      "code": "A1E0072",
+      "hosp": "江苏省人民医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2025-04-08",
+      "actual": "2025-04-08"
+    },
+    {
+      "code": "A1E0072",
+      "hosp": "江苏省人民医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2025-06-03",
+      "actual": "2025-06-03"
+    },
+    {
+      "code": "A1E0073",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "吴*斌",
+      "type": "apheresis",
+      "plan": "2025-04-09",
+      "actual": "2025-04-09"
+    },
+    {
+      "code": "A1E0073",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "吴*斌",
+      "type": "reinfusion",
+      "plan": "2025-05-29",
+      "actual": "2025-05-29"
+    },
+    {
+      "code": "A1E0074",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "王*凤",
+      "type": "apheresis",
+      "plan": "2025-04-10",
+      "actual": "2025-04-10"
+    },
+    {
+      "code": "A1E0075",
+      "hosp": "中国人民解放军总医院",
+      "patient": "袁*献",
+      "type": "apheresis",
+      "plan": "2025-04-10",
+      "actual": "2025-04-10"
+    },
+    {
+      "code": "A1E0075",
+      "hosp": "中国人民解放军总医院",
+      "patient": "袁*献",
+      "type": "reinfusion",
+      "plan": "2025-06-03",
+      "actual": "2025-06-03"
+    },
+    {
+      "code": "A1E0078",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*海",
+      "type": "apheresis",
+      "plan": "2025-04-14",
+      "actual": "2025-04-14"
+    },
+    {
+      "code": "A1E0078",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*海",
+      "type": "reinfusion",
+      "plan": "2025-06-04",
+      "actual": "2025-06-04"
+    },
+    {
+      "code": "A1E0082",
+      "hosp": "北京大学人民医院",
+      "patient": "许*",
+      "type": "apheresis",
+      "plan": "2025-04-23",
+      "actual": "2025-04-23"
+    },
+    {
+      "code": "A1E0082",
+      "hosp": "北京大学人民医院",
+      "patient": "许*",
+      "type": "reinfusion",
+      "plan": "2025-07-03",
+      "actual": "2025-07-03"
+    },
+    {
+      "code": "A1E0083",
+      "hosp": "北京大学第一医院",
+      "patient": "孙*忠",
+      "type": "apheresis",
+      "plan": "2025-04-29",
+      "actual": "2025-04-29"
+    },
+    {
+      "code": "A1E0083",
+      "hosp": "北京大学第一医院",
+      "patient": "孙*忠",
+      "type": "reinfusion",
+      "plan": "2025-06-13",
+      "actual": "2025-06-13"
+    },
+    {
+      "code": "A1E0084",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "陈*云",
+      "type": "apheresis",
+      "plan": "2025-04-30",
+      "actual": "2025-04-30"
+    },
+    {
+      "code": "A1E0084",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "陈*云",
+      "type": "reinfusion",
+      "plan": "2025-12-31",
+      "actual": "2025-12-31"
+    },
+    {
+      "code": "A1E0087",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-05-07",
+      "actual": "2025-05-07"
+    },
+    {
+      "code": "A1E0087",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2025-10-17",
+      "actual": "2025-10-17"
+    },
+    {
+      "code": "A1E0088",
+      "hosp": "上海市同济医院",
+      "patient": "陈*炳",
+      "type": "apheresis",
+      "plan": "2025-08-15",
+      "actual": "2025-08-15"
+    },
+    {
+      "code": "A1E0088",
+      "hosp": "上海市同济医院",
+      "patient": "陈*炳",
+      "type": "reinfusion",
+      "plan": "2025-11-19",
+      "actual": "2025-11-19"
+    },
+    {
+      "code": "A1E0094",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "刘*松",
+      "type": "apheresis",
+      "plan": "2025-05-15",
+      "actual": "2025-05-15"
+    },
+    {
+      "code": "A1E0094",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "刘*松",
+      "type": "reinfusion",
+      "plan": "2025-07-01",
+      "actual": "2025-07-01"
+    },
+    {
+      "code": "A1E0093",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "师*伟",
+      "type": "apheresis",
+      "plan": "2025-05-14",
+      "actual": "2025-05-14"
+    },
+    {
+      "code": "A1E0093",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "师*伟",
+      "type": "reinfusion",
+      "plan": "2025-07-16",
+      "actual": "2025-07-16"
+    },
+    {
+      "code": "A1E0097",
+      "hosp": "江苏省中医院",
+      "patient": "阙*鸿",
+      "type": "apheresis",
+      "plan": "2025-05-16",
+      "actual": "2025-05-16"
+    },
+    {
+      "code": "A1E0097",
+      "hosp": "江苏省中医院",
+      "patient": "阙*鸿",
+      "type": "reinfusion",
+      "plan": "2025-07-14",
+      "actual": "2025-07-14"
+    },
+    {
+      "code": "A1E0098",
+      "hosp": "四川大学华西医院",
+      "patient": "张*勇",
+      "type": "apheresis",
+      "plan": "2025-05-16",
+      "actual": "2025-05-16"
+    },
+    {
+      "code": "A1E0098",
+      "hosp": "四川大学华西医院",
+      "patient": "张*勇",
+      "type": "reinfusion",
+      "plan": "2025-07-07",
+      "actual": "2025-07-07"
+    },
+    {
+      "code": "9009125000060",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "余*",
+      "type": "apheresis",
+      "plan": "2025-12-26",
+      "actual": "2025-12-26"
+    },
+    {
+      "code": "9009125000060",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "余*",
+      "type": "reinfusion",
+      "plan": "2026-01-26",
+      "actual": "2026-01-26"
+    },
+    {
+      "code": "A1E0101",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "张*伟",
+      "type": "apheresis",
+      "plan": "2025-05-21",
+      "actual": "2025-05-21"
+    },
+    {
+      "code": "A1E0101",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "张*伟",
+      "type": "reinfusion",
+      "plan": "2025-08-04",
+      "actual": "2025-08-04"
+    },
+    {
+      "code": "A1E0103",
+      "hosp": "北京协和医院",
+      "patient": "崔*华",
+      "type": "apheresis",
+      "plan": "2025-05-22",
+      "actual": "2025-05-22"
+    },
+    {
+      "code": "A1E0103",
+      "hosp": "北京协和医院",
+      "patient": "崔*华",
+      "type": "reinfusion",
+      "plan": "2025-06-24",
+      "actual": "2025-06-24"
+    },
+    {
+      "code": "A1E0104",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "梁*顺",
+      "type": "apheresis",
+      "plan": "2025-05-21",
+      "actual": "2025-05-21"
+    },
+    {
+      "code": "A1E0104",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "梁*顺",
+      "type": "reinfusion",
+      "plan": "2025-07-07",
+      "actual": "2025-07-07"
+    },
+    {
+      "code": "A1E0105",
+      "hosp": "南京鼓楼医院",
+      "patient": "万*胜",
+      "type": "apheresis",
+      "plan": "2025-05-22",
+      "actual": "2025-05-22"
+    },
+    {
+      "code": "A1E0105",
+      "hosp": "南京鼓楼医院",
+      "patient": "万*胜",
+      "type": "reinfusion",
+      "plan": "2025-07-09",
+      "actual": "2025-07-09"
+    },
+    {
+      "code": "A1E0106",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "廖*容",
+      "type": "apheresis",
+      "plan": "2025-05-23",
+      "actual": "2025-05-23"
+    },
+    {
+      "code": "A1E0106",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "廖*容",
+      "type": "reinfusion",
+      "plan": "2025-08-18",
+      "actual": "2025-08-18"
+    },
+    {
+      "code": "A1E0107",
+      "hosp": "北京大学人民医院",
+      "patient": "徐*英",
+      "type": "apheresis",
+      "plan": "2025-05-27",
+      "actual": "2025-05-27"
+    },
+    {
+      "code": "A1E0108",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "江*军",
+      "type": "apheresis",
+      "plan": "2025-05-29",
+      "actual": "2025-05-29"
+    },
+    {
+      "code": "A1E0108",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "江*军",
+      "type": "reinfusion",
+      "plan": "2025-07-11",
+      "actual": "2025-07-11"
+    },
+    {
+      "code": "A1E0109",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "钱*青",
+      "type": "apheresis",
+      "plan": "2025-05-30",
+      "actual": "2025-05-30"
+    },
+    {
+      "code": "A1E0109",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "钱*青",
+      "type": "reinfusion",
+      "plan": "2025-08-19",
+      "actual": "2025-08-21"
+    },
+    {
+      "code": "A1E0110",
+      "hosp": "上海市同济医院",
+      "patient": "王*农",
+      "type": "apheresis",
+      "plan": "2025-06-05",
+      "actual": "2025-06-05"
+    },
+    {
+      "code": "A1E0110",
+      "hosp": "上海市同济医院",
+      "patient": "王*农",
+      "type": "reinfusion",
+      "plan": "2025-07-22",
+      "actual": "2025-07-22"
+    },
+    {
+      "code": "A1E0126",
+      "hosp": "南方医科大学南方医院",
+      "patient": "王*惠",
+      "type": "apheresis",
+      "plan": "2025-08-22",
+      "actual": "2025-08-22"
+    },
+    {
+      "code": "A1E0126",
+      "hosp": "南方医科大学南方医院",
+      "patient": "王*惠",
+      "type": "reinfusion",
+      "plan": "2025-10-31",
+      "actual": "2025-10-31"
+    },
+    {
+      "code": "A1E0199",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*春",
+      "type": "apheresis",
+      "plan": "2025-08-22",
+      "actual": "2025-08-22"
+    },
+    {
+      "code": "A1E0199",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*春",
+      "type": "reinfusion",
+      "plan": "2025-09-23",
+      "actual": "2025-09-23"
+    },
+    {
+      "code": "A1E0112",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2025-06-06",
+      "actual": "2025-06-06"
+    },
+    {
+      "code": "A1E0112",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2025-08-07",
+      "actual": "2025-08-07"
+    },
+    {
+      "code": "A1E0113",
+      "hosp": "吉林大学第一医院",
+      "patient": "宣*瑾",
+      "type": "apheresis",
+      "plan": "2025-06-13",
+      "actual": "2025-06-13"
+    },
+    {
+      "code": "A1E0122",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*福",
+      "type": "apheresis",
+      "plan": "2025-06-17",
+      "actual": "2025-06-17"
+    },
+    {
+      "code": "A1E0122",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*福",
+      "type": "reinfusion",
+      "plan": "2025-09-09",
+      "actual": "2025-09-09"
+    },
+    {
+      "code": "A1E0117",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "童*珍",
+      "type": "apheresis",
+      "plan": "2025-06-11",
+      "actual": "2025-06-11"
+    },
+    {
+      "code": "A1E0117",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "童*珍",
+      "type": "reinfusion",
+      "plan": "2026-01-05",
+      "actual": "2026-01-05"
+    },
+    {
+      "code": "A1E0118",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "满*坤",
+      "type": "apheresis",
+      "plan": "2025-06-13",
+      "actual": "2025-06-13"
+    },
+    {
+      "code": "A1E0118",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "满*坤",
+      "type": "reinfusion",
+      "plan": "2025-12-11",
+      "actual": "2025-12-11"
+    },
+    {
+      "code": "A1E0121",
+      "hosp": "北京大学人民医院",
+      "patient": "张*明",
+      "type": "apheresis",
+      "plan": "2025-06-17",
+      "actual": "2025-06-17"
+    },
+    {
+      "code": "A1E0121",
+      "hosp": "北京大学人民医院",
+      "patient": "张*明",
+      "type": "reinfusion",
+      "plan": "2025-09-07",
+      "actual": "2025-09-07"
+    },
+    {
+      "code": "A1E0120",
+      "hosp": "中山大学附属第一医院",
+      "patient": "曾*文",
+      "type": "apheresis",
+      "plan": "2025-06-13",
+      "actual": "2025-06-13"
+    },
+    {
+      "code": "A1E0120",
+      "hosp": "中山大学附属第一医院",
+      "patient": "曾*文",
+      "type": "reinfusion",
+      "plan": "2025-07-30",
+      "actual": "2025-07-30"
+    },
+    {
+      "code": "A1E0124",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*营",
+      "type": "apheresis",
+      "plan": "2025-06-16",
+      "actual": "2025-06-16"
+    },
+    {
+      "code": "A1E0124",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*营",
+      "type": "reinfusion",
+      "plan": "2025-09-22",
+      "actual": "2025-09-22"
+    },
+    {
+      "code": "A1E0127",
+      "hosp": "南方医科大学南方医院",
+      "patient": "王*珠",
+      "type": "apheresis",
+      "plan": "2025-06-17",
+      "actual": "2025-06-17"
+    },
+    {
+      "code": "A1E0127",
+      "hosp": "南方医科大学南方医院",
+      "patient": "王*珠",
+      "type": "reinfusion",
+      "plan": "2025-09-01",
+      "actual": "2025-09-01"
+    },
+    {
+      "code": "A1E0125",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "吴*连",
+      "type": "apheresis",
+      "plan": "2025-06-20",
+      "actual": "2025-06-20"
+    },
+    {
+      "code": "A1E0125",
+      "hosp": "浙江大学医学院附属第二医院",
+      "patient": "吴*连",
+      "type": "reinfusion",
+      "plan": "2025-08-05",
+      "actual": "2025-08-05"
+    },
+    {
+      "code": "A1E0128",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "李*永",
+      "type": "apheresis",
+      "plan": "2025-06-18",
+      "actual": "2025-06-18"
+    },
+    {
+      "code": "A1E0128",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "李*永",
+      "type": "reinfusion",
+      "plan": "2025-10-05",
+      "actual": "2025-10-05"
+    },
+    {
+      "code": "A1E0129",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*芳",
+      "type": "apheresis",
+      "plan": "2025-06-19",
+      "actual": "2025-06-19"
+    },
+    {
+      "code": "A1E0130",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*明",
+      "type": "apheresis",
+      "plan": "2025-06-20",
+      "actual": "2025-06-20"
+    },
+    {
+      "code": "A1E0130",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*明",
+      "type": "reinfusion",
+      "plan": "2025-08-12",
+      "actual": "2025-08-12"
+    },
+    {
+      "code": "A1E0132",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "洪*",
+      "type": "apheresis",
+      "plan": "2025-06-30",
+      "actual": "2025-06-30"
+    },
+    {
+      "code": "A1E0132",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "洪*",
+      "type": "reinfusion",
+      "plan": "2025-09-04",
+      "actual": "2025-09-04"
+    },
+    {
+      "code": "A1E0136",
+      "hosp": "北京协和医院",
+      "patient": "陈*德",
+      "type": "apheresis",
+      "plan": "2025-06-26",
+      "actual": "2025-06-26"
+    },
+    {
+      "code": "A1E0136",
+      "hosp": "北京协和医院",
+      "patient": "陈*德",
+      "type": "reinfusion",
+      "plan": "2025-08-13",
+      "actual": "2025-08-13"
+    },
+    {
+      "code": "A1E0135",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*红",
+      "type": "apheresis",
+      "plan": "2025-06-27",
+      "actual": "2025-06-27"
+    },
+    {
+      "code": "A1E0135",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*红",
+      "type": "reinfusion",
+      "plan": "2025-08-08",
+      "actual": "2025-08-08"
+    },
+    {
+      "code": "9009126000250",
+      "hosp": "南京鼓楼医院",
+      "patient": "秦*忠",
+      "type": "apheresis",
+      "plan": "2026-08-25",
+      "actual": "2026-08-25"
+    },
+    {
+      "code": "A1E0141",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "孙*勤",
+      "type": "apheresis",
+      "plan": "2025-07-02",
+      "actual": "2025-07-02"
+    },
+    {
+      "code": "A1E0141",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "孙*勤",
+      "type": "reinfusion",
+      "plan": "2025-08-25",
+      "actual": "2025-08-25"
+    },
+    {
+      "code": "A1E0139",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "朱*成",
+      "type": "apheresis",
+      "plan": "2025-07-03",
+      "actual": "2025-07-03"
+    },
+    {
+      "code": "A1E0139",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "朱*成",
+      "type": "reinfusion",
+      "plan": "2026-03-16",
+      "actual": "2026-03-16"
+    },
+    {
+      "code": "A1E0149",
+      "hosp": "上海第四人民医院",
+      "patient": "忻*敏",
+      "type": "apheresis",
+      "plan": "2025-07-10",
+      "actual": "2025-07-10"
+    },
+    {
+      "code": "A1E0149",
+      "hosp": "上海第四人民医院",
+      "patient": "忻*敏",
+      "type": "reinfusion",
+      "plan": "2025-09-16",
+      "actual": "2025-09-16"
+    },
+    {
+      "code": "A1E0143",
+      "hosp": "上海市同济医院",
+      "patient": "陈*儒",
+      "type": "apheresis",
+      "plan": "2025-07-04",
+      "actual": "2025-07-04"
+    },
+    {
+      "code": "A1E0143",
+      "hosp": "上海市同济医院",
+      "patient": "陈*儒",
+      "type": "reinfusion",
+      "plan": "2025-08-23",
+      "actual": "2025-08-23"
+    },
+    {
+      "code": "A1E0140",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "解*庆",
+      "type": "apheresis",
+      "plan": "2025-07-02",
+      "actual": "2025-07-02"
+    },
+    {
+      "code": "A1E0140",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "解*庆",
+      "type": "reinfusion",
+      "plan": "2025-10-22",
+      "actual": "2025-10-22"
+    },
+    {
+      "code": "A1E0144",
+      "hosp": "高博医疗集团上海力泉医院",
+      "patient": "张*勤",
+      "type": "apheresis",
+      "plan": "2025-07-07",
+      "actual": "2025-07-07"
+    },
+    {
+      "code": "A1E0144",
+      "hosp": "高博医疗集团上海力泉医院",
+      "patient": "张*勤",
+      "type": "reinfusion",
+      "plan": "2025-09-23",
+      "actual": "2025-09-23"
+    },
+    {
+      "code": "A1E0151",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "龚*芳",
+      "type": "apheresis",
+      "plan": "2025-07-14",
+      "actual": "2025-07-14"
+    },
+    {
+      "code": "A1E0151",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "龚*芳",
+      "type": "reinfusion",
+      "plan": "2025-08-19",
+      "actual": "2025-08-19"
+    },
+    {
+      "code": "A1E0148",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "李*强",
+      "type": "apheresis",
+      "plan": "2025-07-07",
+      "actual": "2025-07-07"
+    },
+    {
+      "code": "A1E0148",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "李*强",
+      "type": "reinfusion",
+      "plan": "2025-08-25",
+      "actual": "2025-08-25"
+    },
+    {
+      "code": "A1E0150",
+      "hosp": "南京鼓楼医院",
+      "patient": "李*龙",
+      "type": "apheresis",
+      "plan": "2025-07-10",
+      "actual": "2025-07-10"
+    },
+    {
+      "code": "A1E0150",
+      "hosp": "南京鼓楼医院",
+      "patient": "李*龙",
+      "type": "reinfusion",
+      "plan": "2026-01-16",
+      "actual": "2026-01-16"
+    },
+    {
+      "code": "A1E0153",
+      "hosp": "北京大学人民医院",
+      "patient": "薛*娜",
+      "type": "apheresis",
+      "plan": "2025-07-11",
+      "actual": "2025-07-11"
+    },
+    {
+      "code": "A1E0153",
+      "hosp": "北京大学人民医院",
+      "patient": "薛*娜",
+      "type": "reinfusion",
+      "plan": "2025-09-14",
+      "actual": "2025-09-14"
+    },
+    {
+      "code": "A1E0152",
+      "hosp": "山东第一医科大学第一附属医院（山东省千佛山医院）",
+      "patient": "鞠*艳",
+      "type": "apheresis",
+      "plan": "2025-07-16",
+      "actual": "2025-07-16"
+    },
+    {
+      "code": "A1E0152",
+      "hosp": "山东第一医科大学第一附属医院（山东省千佛山医院）",
+      "patient": "鞠*艳",
+      "type": "reinfusion",
+      "plan": "2025-09-08",
+      "actual": "2025-09-08"
+    },
+    {
+      "code": "A1E0154",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "周*津",
+      "type": "apheresis",
+      "plan": "2025-07-10",
+      "actual": "2025-07-10"
+    },
+    {
+      "code": "A1E0154",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "周*津",
+      "type": "reinfusion",
+      "plan": "2026-03-27",
+      "actual": "2026-03-27"
+    },
+    {
+      "code": "A1E0155",
+      "hosp": "北京大学深圳医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-07-11",
+      "actual": "2025-07-11"
+    },
+    {
+      "code": "A1E0155",
+      "hosp": "北京大学深圳医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2025-09-23",
+      "actual": "2025-09-23"
+    },
+    {
+      "code": "A1E0157",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "单*红",
+      "type": "apheresis",
+      "plan": "2025-07-16",
+      "actual": "2025-07-16"
+    },
+    {
+      "code": "A1E0157",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "单*红",
+      "type": "reinfusion",
+      "plan": "2025-09-24",
+      "actual": "2025-09-24"
+    },
+    {
+      "code": "A1E0158",
+      "hosp": "南京鼓楼医院",
+      "patient": "姜*琴",
+      "type": "apheresis",
+      "plan": "2025-07-16",
+      "actual": "2025-07-16"
+    },
+    {
+      "code": "A1E0159",
+      "hosp": "上海长海医院",
+      "patient": "王*霞",
+      "type": "apheresis",
+      "plan": "2025-07-17",
+      "actual": "2025-07-17"
+    },
+    {
+      "code": "A1E0160",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "魏*",
+      "type": "apheresis",
+      "plan": "2025-07-17",
+      "actual": "2025-07-17"
+    },
+    {
+      "code": "A1E0160",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "魏*",
+      "type": "reinfusion",
+      "plan": "2025-10-27",
+      "actual": "2025-10-27"
+    },
+    {
+      "code": "A1E0193",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "李*生",
+      "type": "apheresis",
+      "plan": "2025-08-13",
+      "actual": "2025-08-13"
+    },
+    {
+      "code": "A1E0193",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "李*生",
+      "type": "reinfusion",
+      "plan": "2025-10-22",
+      "actual": "2025-10-22"
+    },
+    {
+      "code": "A1E0164",
+      "hosp": "福建医科大学附属第一医院",
+      "patient": "翁*华",
+      "type": "apheresis",
+      "plan": "2025-07-22",
+      "actual": "2025-07-22"
+    },
+    {
+      "code": "A1E0164",
+      "hosp": "福建医科大学附属第一医院",
+      "patient": "翁*华",
+      "type": "reinfusion",
+      "plan": "2025-11-25",
+      "actual": "2025-11-25"
+    },
+    {
+      "code": "A1E0166",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "陈*萍",
+      "type": "apheresis",
+      "plan": "2025-07-29",
+      "actual": "2025-07-29"
+    },
+    {
+      "code": "A1E0166",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "陈*萍",
+      "type": "reinfusion",
+      "plan": "2025-12-02",
+      "actual": "2025-12-02"
+    },
+    {
+      "code": "A1E0173",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "罗*",
+      "type": "apheresis",
+      "plan": "2025-07-31",
+      "actual": "2025-07-31"
+    },
+    {
+      "code": "A1E0173",
+      "hosp": "上海复旦大学附属中山医院",
+      "patient": "罗*",
+      "type": "reinfusion",
+      "plan": "2025-09-24",
+      "actual": "2025-09-24"
+    },
+    {
+      "code": "A1E0165",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "毕*章",
+      "type": "apheresis",
+      "plan": "2025-07-24",
+      "actual": "2025-07-24"
+    },
+    {
+      "code": "A1E0165",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "毕*章",
+      "type": "reinfusion",
+      "plan": "2025-09-11",
+      "actual": "2025-09-11"
+    },
+    {
+      "code": "A1E0171",
+      "hosp": "广西壮族自治区人民医院",
+      "patient": "赖*珍",
+      "type": "apheresis",
+      "plan": "2025-07-31",
+      "actual": "2025-07-31"
+    },
+    {
+      "code": "A1E0171",
+      "hosp": "广西壮族自治区人民医院",
+      "patient": "赖*珍",
+      "type": "reinfusion",
+      "plan": "2025-09-15",
+      "actual": "2025-09-15"
+    },
+    {
+      "code": "A1E0172",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "高*云",
+      "type": "apheresis",
+      "plan": "2025-08-01",
+      "actual": "2025-08-01"
+    },
+    {
+      "code": "A1E0172",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "高*云",
+      "type": "reinfusion",
+      "plan": "2025-11-22",
+      "actual": "2025-11-22"
+    },
+    {
+      "code": "A1E0169",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郭*访",
+      "type": "apheresis",
+      "plan": "2025-07-31",
+      "actual": "2025-07-31"
+    },
+    {
+      "code": "A1E0169",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郭*访",
+      "type": "reinfusion",
+      "plan": "2025-10-30",
+      "actual": "2025-10-30"
+    },
+    {
+      "code": "9009125000029",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*国",
+      "type": "apheresis",
+      "plan": "2025-11-28",
+      "actual": "2025-11-28"
+    },
+    {
+      "code": "9009125000029",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*国",
+      "type": "reinfusion",
+      "plan": "2026-05-19",
+      "actual": "2026-05-19"
+    },
+    {
+      "code": "A1E0174",
+      "hosp": "吉林大学第一医院",
+      "patient": "李*航",
+      "type": "apheresis",
+      "plan": "2025-08-05",
+      "actual": "2025-08-05"
+    },
+    {
+      "code": "A1E0174",
+      "hosp": "吉林大学第一医院",
+      "patient": "李*航",
+      "type": "reinfusion",
+      "plan": "2025-09-19",
+      "actual": "2025-09-19"
+    },
+    {
+      "code": "A1E0215",
+      "hosp": "上海交通大学医学院附属同仁医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-08-29",
+      "actual": "2025-08-29"
+    },
+    {
+      "code": "A1E0177",
+      "hosp": "北京大学人民医院",
+      "patient": "齐*臣",
+      "type": "apheresis",
+      "plan": "2025-08-08",
+      "actual": "2025-08-08"
+    },
+    {
+      "code": "A1E0177",
+      "hosp": "北京大学人民医院",
+      "patient": "齐*臣",
+      "type": "reinfusion",
+      "plan": "2025-12-24",
+      "actual": "2025-12-24"
+    },
+    {
+      "code": "A1E0175",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2025-08-01",
+      "actual": "2025-08-01"
+    },
+    {
+      "code": "A1E0175",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2026-01-20",
+      "actual": "2026-01-20"
+    },
+    {
+      "code": "A1E0176",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "黄*初",
+      "type": "apheresis",
+      "plan": "2025-08-04",
+      "actual": "2025-08-04"
+    },
+    {
+      "code": "A1E0176",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "黄*初",
+      "type": "reinfusion",
+      "plan": "2025-09-05",
+      "actual": "2025-09-05"
+    },
+    {
+      "code": "A1E0243",
+      "hosp": "上海市曜影医院",
+      "patient": "A*L S*N C*A",
+      "type": "apheresis",
+      "plan": "2025-09-24",
+      "actual": "2025-09-24"
+    },
+    {
+      "code": "A1E0243",
+      "hosp": "上海市曜影医院",
+      "patient": "A*L S*N C*A",
+      "type": "reinfusion",
+      "plan": "2025-11-24",
+      "actual": "2025-11-24"
+    },
+    {
+      "code": "A1E0179",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "尹*锋",
+      "type": "apheresis",
+      "plan": "2025-08-04",
+      "actual": "2025-08-04"
+    },
+    {
+      "code": "A1E0179",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "尹*锋",
+      "type": "reinfusion",
+      "plan": "2025-10-14",
+      "actual": "2025-10-14"
+    },
+    {
+      "code": "A1E0210",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-08-27",
+      "actual": "2025-08-27"
+    },
+    {
+      "code": "A1E0210",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2026-01-05",
+      "actual": "2026-01-05"
+    },
+    {
+      "code": "A1E0181",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "叶*棠",
+      "type": "apheresis",
+      "plan": "2025-08-06",
+      "actual": "2025-08-06"
+    },
+    {
+      "code": "A1E0181",
+      "hosp": "南方医科大学珠江医院",
+      "patient": "叶*棠",
+      "type": "reinfusion",
+      "plan": "2025-11-24",
+      "actual": "2025-11-24"
+    },
+    {
+      "code": "A1E0182",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-08-07",
+      "actual": "2025-08-07"
+    },
+    {
+      "code": "A1E0182",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2025-10-17",
+      "actual": "2025-10-17"
+    },
+    {
+      "code": "A1E0183",
+      "hosp": "中山大学附属第一医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2025-08-07",
+      "actual": "2025-08-07"
+    },
+    {
+      "code": "A1E0183",
+      "hosp": "中山大学附属第一医院",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2025-11-19",
+      "actual": "2025-11-19"
+    },
+    {
+      "code": "A1E0184",
+      "hosp": "四川省人民医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2025-08-08",
+      "actual": "2025-08-08"
+    },
+    {
+      "code": "A1E0184",
+      "hosp": "四川省人民医院",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2025-10-27",
+      "actual": "2025-10-27"
+    },
+    {
+      "code": "A1E0188",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "陈*缘",
+      "type": "apheresis",
+      "plan": "2025-08-11",
+      "actual": "2025-08-11"
+    },
+    {
+      "code": "A1E0188",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "陈*缘",
+      "type": "reinfusion",
+      "plan": "2025-10-20",
+      "actual": "2025-10-20"
+    },
+    {
+      "code": "A1E0189",
+      "hosp": "南方医科大学南方医院",
+      "patient": "何*光",
+      "type": "apheresis",
+      "plan": "2025-08-11",
+      "actual": "2025-08-11"
+    },
+    {
+      "code": "A1E0189",
+      "hosp": "南方医科大学南方医院",
+      "patient": "何*光",
+      "type": "reinfusion",
+      "plan": "2025-10-22",
+      "actual": "2025-10-22"
+    },
+    {
+      "code": "A1E0191",
+      "hosp": "南京鼓楼医院",
+      "patient": "朱*妹",
+      "type": "apheresis",
+      "plan": "2025-08-12",
+      "actual": "2025-08-12"
+    },
+    {
+      "code": "A1E0192",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "任*石",
+      "type": "apheresis",
+      "plan": "2025-08-26",
+      "actual": "2025-08-26"
+    },
+    {
+      "code": "A1E0192",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "任*石",
+      "type": "reinfusion",
+      "plan": "2025-10-20",
+      "actual": "2025-10-20"
+    },
+    {
+      "code": "A1E0194",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2025-08-13",
+      "actual": "2025-08-13"
+    },
+    {
+      "code": "A1E0194",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "李*",
+      "type": "reinfusion",
+      "plan": "2025-10-06",
+      "actual": "2025-10-06"
+    },
+    {
+      "code": "A1E0196",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杜*荣",
+      "type": "apheresis",
+      "plan": "2025-08-14",
+      "actual": "2025-08-14"
+    },
+    {
+      "code": "A1E0196",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杜*荣",
+      "type": "reinfusion",
+      "plan": "2025-11-13",
+      "actual": "2025-11-13"
+    },
+    {
+      "code": "A1E0197",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "高*龙",
+      "type": "apheresis",
+      "plan": "2025-08-15",
+      "actual": "2025-08-15"
+    },
+    {
+      "code": "A1E0197",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "高*龙",
+      "type": "reinfusion",
+      "plan": "2025-11-18",
+      "actual": "2025-11-18"
+    },
+    {
+      "code": "A1E0201",
+      "hosp": "复旦大学附属中山医院厦门医院",
+      "patient": "陈*荣",
+      "type": "apheresis",
+      "plan": "2025-08-21",
+      "actual": "2025-08-21"
+    },
+    {
+      "code": "A1E0201",
+      "hosp": "复旦大学附属中山医院厦门医院",
+      "patient": "陈*荣",
+      "type": "reinfusion",
+      "plan": "2025-10-20",
+      "actual": "2025-10-20"
+    },
+    {
+      "code": "A1E0202",
+      "hosp": "复旦大学附属中山医院厦门医院",
+      "patient": "林*质",
+      "type": "apheresis",
+      "plan": "2025-08-26",
+      "actual": "2025-08-26"
+    },
+    {
+      "code": "A1E0200",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*刚",
+      "type": "apheresis",
+      "plan": "2025-08-20",
+      "actual": "2025-08-20"
+    },
+    {
+      "code": "A1E0200",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*刚",
+      "type": "reinfusion",
+      "plan": "2026-01-19",
+      "actual": "2026-01-19"
+    },
+    {
+      "code": "A1E0203",
+      "hosp": "四川大学华西医院",
+      "patient": "张*功",
+      "type": "apheresis",
+      "plan": "2025-08-22",
+      "actual": "2025-08-22"
+    },
+    {
+      "code": "A1E0203",
+      "hosp": "四川大学华西医院",
+      "patient": "张*功",
+      "type": "reinfusion",
+      "plan": "2025-11-03",
+      "actual": "2025-11-03"
+    },
+    {
+      "code": "A1E0205",
+      "hosp": "西藏自治区人民政府驻成都办事处医院",
+      "patient": "柳*琪",
+      "type": "apheresis",
+      "plan": "2025-08-26",
+      "actual": "2025-08-26"
+    },
+    {
+      "code": "A1E0205",
+      "hosp": "西藏自治区人民政府驻成都办事处医院",
+      "patient": "柳*琪",
+      "type": "reinfusion",
+      "plan": "2025-10-21",
+      "actual": "2025-10-21"
+    },
+    {
+      "code": "A1E0206",
+      "hosp": "广西壮族自治区人民医院",
+      "patient": "陈*华",
+      "type": "apheresis",
+      "plan": "2025-08-22",
+      "actual": "2025-08-22"
+    },
+    {
+      "code": "A1E0206",
+      "hosp": "广西壮族自治区人民医院",
+      "patient": "陈*华",
+      "type": "reinfusion",
+      "plan": "2025-10-21",
+      "actual": "2025-10-21"
+    },
+    {
+      "code": "A1E0204",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "连*鱼",
+      "type": "apheresis",
+      "plan": "2025-08-22",
+      "actual": "2025-08-22"
+    },
+    {
+      "code": "A1E0204",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "连*鱼",
+      "type": "reinfusion",
+      "plan": "2025-12-22",
+      "actual": "2025-12-22"
+    },
+    {
+      "code": "A1E0207",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "栗*仙",
+      "type": "apheresis",
+      "plan": "2025-08-25",
+      "actual": "2025-08-25"
+    },
+    {
+      "code": "A1E0207",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "栗*仙",
+      "type": "reinfusion",
+      "plan": "2025-10-29",
+      "actual": "2025-10-29"
+    },
+    {
+      "code": "A1E0208",
+      "hosp": "北京协和医院",
+      "patient": "邵*华",
+      "type": "apheresis",
+      "plan": "2025-08-27",
+      "actual": "2025-08-27"
+    },
+    {
+      "code": "A1E0208",
+      "hosp": "北京协和医院",
+      "patient": "邵*华",
+      "type": "reinfusion",
+      "plan": "2025-11-03",
+      "actual": "2025-11-03"
+    },
+    {
+      "code": "A1E0212",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "傅*利",
+      "type": "apheresis",
+      "plan": "2025-08-28",
+      "actual": "2025-08-28"
+    },
+    {
+      "code": "A1E0212",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "傅*利",
+      "type": "reinfusion",
+      "plan": "2025-11-17",
+      "actual": "2025-11-17"
+    },
+    {
+      "code": "A1E0213",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*",
+      "type": "apheresis",
+      "plan": "2025-09-17",
+      "actual": "2025-09-17"
+    },
+    {
+      "code": "A1E0213",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*",
+      "type": "reinfusion",
+      "plan": "2026-04-03",
+      "actual": "2026-04-03"
+    },
+    {
+      "code": "A1E0214",
+      "hosp": "上海市同济医院",
+      "patient": "陆*",
+      "type": "apheresis",
+      "plan": "2025-08-28",
+      "actual": "2025-08-28"
+    },
+    {
+      "code": "A1E0214",
+      "hosp": "上海市同济医院",
+      "patient": "陆*",
+      "type": "reinfusion",
+      "plan": "2025-11-09",
+      "actual": "2025-11-09"
+    },
+    {
+      "code": "A1E0216",
+      "hosp": "上海市曜影医院",
+      "patient": "M*L J*N B*S",
+      "type": "apheresis",
+      "plan": "2025-09-01",
+      "actual": "2025-09-01"
+    },
+    {
+      "code": "A1E0216",
+      "hosp": "上海市曜影医院",
+      "patient": "M*L J*N B*S",
+      "type": "reinfusion",
+      "plan": "2026-01-20",
+      "actual": "2026-01-20"
+    },
+    {
+      "code": "A1E0217",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "赵*英",
+      "type": "apheresis",
+      "plan": "2025-08-31",
+      "actual": "2025-08-31"
+    },
+    {
+      "code": "A1E0217",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "赵*英",
+      "type": "reinfusion",
+      "plan": "2025-11-14",
+      "actual": "2025-11-14"
+    },
+    {
+      "code": "A1E0218",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "段*想",
+      "type": "apheresis",
+      "plan": "2025-09-01",
+      "actual": "2025-09-01"
+    },
+    {
+      "code": "A1E0218",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "段*想",
+      "type": "reinfusion",
+      "plan": "2025-12-01",
+      "actual": "2025-12-01"
+    },
+    {
+      "code": "A1E0219",
+      "hosp": "北京大学人民医院",
+      "patient": "赵*培",
+      "type": "apheresis",
+      "plan": "2025-09-04",
+      "actual": "2025-09-04"
+    },
+    {
+      "code": "A1E0220",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "田*",
+      "type": "apheresis",
+      "plan": "2025-09-08",
+      "actual": "2025-09-08"
+    },
+    {
+      "code": "A1E0220",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "田*",
+      "type": "reinfusion",
+      "plan": "2025-11-12",
+      "actual": "2025-11-12"
+    },
+    {
+      "code": "A1E0221",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "盛*鸣",
+      "type": "apheresis",
+      "plan": "2025-09-05",
+      "actual": "2025-09-05"
+    },
+    {
+      "code": "A1E0222",
+      "hosp": "中山大学附属第一医院",
+      "patient": "许*鹏",
+      "type": "apheresis",
+      "plan": "2025-09-05",
+      "actual": "2025-09-05"
+    },
+    {
+      "code": "A1E0222",
+      "hosp": "中山大学附属第一医院",
+      "patient": "许*鹏",
+      "type": "reinfusion",
+      "plan": "2025-11-18",
+      "actual": "2025-11-18"
+    },
+    {
+      "code": "A1E0227",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "许*开",
+      "type": "apheresis",
+      "plan": "2025-09-11",
+      "actual": "2025-09-11"
+    },
+    {
+      "code": "A1E0227",
+      "hosp": "陆军军医大学第二附属医院(新桥医院)",
+      "patient": "许*开",
+      "type": "reinfusion",
+      "plan": "2025-11-28",
+      "actual": "2025-11-28"
+    },
+    {
+      "code": "A1E0226",
+      "hosp": "中山大学附属第一医院",
+      "patient": "麦*光",
+      "type": "apheresis",
+      "plan": "2025-09-09",
+      "actual": "2025-09-09"
+    },
+    {
+      "code": "A1E0226",
+      "hosp": "中山大学附属第一医院",
+      "patient": "麦*光",
+      "type": "reinfusion",
+      "plan": "2026-03-10",
+      "actual": "2026-03-10"
+    },
+    {
+      "code": "A1E0224",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*婷",
+      "type": "apheresis",
+      "plan": "2025-09-10",
+      "actual": "2025-09-10"
+    },
+    {
+      "code": "A1E0224",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*婷",
+      "type": "reinfusion",
+      "plan": "2025-12-08",
+      "actual": "2025-12-08"
+    },
+    {
+      "code": "A1E0225",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "郭*生",
+      "type": "apheresis",
+      "plan": "2025-09-08",
+      "actual": "2025-09-08"
+    },
+    {
+      "code": "A1E0225",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "郭*生",
+      "type": "reinfusion",
+      "plan": "2025-11-26",
+      "actual": "2025-11-26"
+    },
+    {
+      "code": "A1E0231",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "于*芬",
+      "type": "apheresis",
+      "plan": "2025-09-12",
+      "actual": "2025-09-12"
+    },
+    {
+      "code": "A1E0231",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "于*芬",
+      "type": "reinfusion",
+      "plan": "2025-11-27",
+      "actual": "2025-11-27"
+    },
+    {
+      "code": "A1E0228",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "孙*霄",
+      "type": "apheresis",
+      "plan": "2025-09-12",
+      "actual": "2025-09-12"
+    },
+    {
+      "code": "A1E0228",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "孙*霄",
+      "type": "reinfusion",
+      "plan": "2025-12-15",
+      "actual": "2025-12-15"
+    },
+    {
+      "code": "A1E0229",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "王*海",
+      "type": "apheresis",
+      "plan": "2025-09-11",
+      "actual": "2025-09-11"
+    },
+    {
+      "code": "A1E0230",
+      "hosp": "江苏省人民医院",
+      "patient": "王*双",
+      "type": "apheresis",
+      "plan": "2025-09-12",
+      "actual": "2025-09-12"
+    },
+    {
+      "code": "A1E0230",
+      "hosp": "江苏省人民医院",
+      "patient": "王*双",
+      "type": "reinfusion",
+      "plan": "2025-10-24",
+      "actual": "2025-10-24"
+    },
+    {
+      "code": "A1E0233",
+      "hosp": "上海市曜影医院",
+      "patient": "I*n T*T",
+      "type": "apheresis",
+      "plan": "2025-09-22",
+      "actual": "2025-09-22"
+    },
+    {
+      "code": "A1E0233",
+      "hosp": "上海市曜影医院",
+      "patient": "I*n T*T",
+      "type": "reinfusion",
+      "plan": "2025-10-28",
+      "actual": "2025-10-28"
+    },
+    {
+      "code": "A1E0235",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2025-09-15",
+      "actual": "2025-09-15"
+    },
+    {
+      "code": "A1E0235",
+      "hosp": "西安交通大学第二附属医院（西北医院）",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2025-10-29",
+      "actual": "2025-10-29"
+    },
+    {
+      "code": "A1E0237",
+      "hosp": "上海市同济医院",
+      "patient": "朱*琴",
+      "type": "apheresis",
+      "plan": "2025-09-17",
+      "actual": "2025-09-17"
+    },
+    {
+      "code": "A1E0237",
+      "hosp": "上海市同济医院",
+      "patient": "朱*琴",
+      "type": "reinfusion",
+      "plan": "2026-05-29",
+      "actual": "2026-05-29"
+    },
+    {
+      "code": "A1E0234",
+      "hosp": "上海市曜影医院",
+      "patient": "潘*曙",
+      "type": "apheresis",
+      "plan": "2025-09-16",
+      "actual": "2025-09-16"
+    },
+    {
+      "code": "A1E0234",
+      "hosp": "上海市曜影医院",
+      "patient": "潘*曙",
+      "type": "reinfusion",
+      "plan": "2026-03-10",
+      "actual": "2026-03-10"
+    },
+    {
+      "code": "A1E0238",
+      "hosp": "中山大学附属第一医院",
+      "patient": "徐*城",
+      "type": "apheresis",
+      "plan": "2025-09-19",
+      "actual": "2025-09-19"
+    },
+    {
+      "code": "A1E0238",
+      "hosp": "中山大学附属第一医院",
+      "patient": "徐*城",
+      "type": "reinfusion",
+      "plan": "2025-11-25",
+      "actual": "2025-11-25"
+    },
+    {
+      "code": "A1E0248",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "张*忠",
+      "type": "apheresis",
+      "plan": "2025-10-13",
+      "actual": "2025-10-13"
+    },
+    {
+      "code": "A1E0248",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "张*忠",
+      "type": "reinfusion",
+      "plan": "2026-04-27",
+      "actual": "2026-04-27"
+    },
+    {
+      "code": "A1E0240",
+      "hosp": "中山大学附属第一医院",
+      "patient": "马*香",
+      "type": "apheresis",
+      "plan": "2025-10-02",
+      "actual": "2025-10-02"
+    },
+    {
+      "code": "A1E0240",
+      "hosp": "中山大学附属第一医院",
+      "patient": "马*香",
+      "type": "reinfusion",
+      "plan": "2025-12-22",
+      "actual": "2025-12-22"
+    },
+    {
+      "code": "A1E0241",
+      "hosp": "天津医科大学总医院",
+      "patient": "杨*恩",
+      "type": "apheresis",
+      "plan": "2025-09-23",
+      "actual": "2025-09-23"
+    },
+    {
+      "code": "A1E0241",
+      "hosp": "天津医科大学总医院",
+      "patient": "杨*恩",
+      "type": "reinfusion",
+      "plan": "2025-11-17",
+      "actual": "2025-11-17"
+    },
+    {
+      "code": "A1E0244",
+      "hosp": "上海交通大学医学院附属第九人民医院",
+      "patient": "陈*",
+      "type": "apheresis",
+      "plan": "2025-09-25",
+      "actual": "2025-09-25"
+    },
+    {
+      "code": "A1E0244",
+      "hosp": "上海交通大学医学院附属第九人民医院",
+      "patient": "陈*",
+      "type": "reinfusion",
+      "plan": "2025-11-27",
+      "actual": "2025-11-27"
+    },
+    {
+      "code": "A1E0246",
+      "hosp": "中国人民解放军总医院",
+      "patient": "郭*里",
+      "type": "apheresis",
+      "plan": "2025-09-28",
+      "actual": "2025-09-28"
+    },
+    {
+      "code": "A1E0246",
+      "hosp": "中国人民解放军总医院",
+      "patient": "郭*里",
+      "type": "reinfusion",
+      "plan": "2025-12-09",
+      "actual": "2025-12-09"
+    },
+    {
+      "code": "A1E0247",
+      "hosp": "上海市同济医院",
+      "patient": "K*E C*A C*N S*G",
+      "type": "apheresis",
+      "plan": "2025-10-06",
+      "actual": "2025-10-06"
+    },
+    {
+      "code": "A1E0247",
+      "hosp": "上海市同济医院",
+      "patient": "K*E C*A C*N S*G",
+      "type": "reinfusion",
+      "plan": "2025-11-26",
+      "actual": "2025-11-26"
+    },
+    {
+      "code": "A1E0249",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "边*生",
+      "type": "apheresis",
+      "plan": "2025-10-10",
+      "actual": "2025-10-10"
+    },
+    {
+      "code": "A1E0249",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "边*生",
+      "type": "reinfusion",
+      "plan": "2026-01-27",
+      "actual": "2026-01-27"
+    },
+    {
+      "code": "A1E0250",
+      "hosp": "北京大学人民医院",
+      "patient": "张*桂",
+      "type": "apheresis",
+      "plan": "2025-10-21",
+      "actual": "2025-10-21"
+    },
+    {
+      "code": "A1E0250",
+      "hosp": "北京大学人民医院",
+      "patient": "张*桂",
+      "type": "reinfusion",
+      "plan": "2025-12-10",
+      "actual": "2025-12-10"
+    },
+    {
+      "code": "A1E0251",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*涛",
+      "type": "apheresis",
+      "plan": "2025-10-11",
+      "actual": "2025-10-11"
+    },
+    {
+      "code": "A1E0251",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "于*涛",
+      "type": "reinfusion",
+      "plan": "2026-03-05",
+      "actual": "2026-03-05"
+    },
+    {
+      "code": "A1E0253",
+      "hosp": "上海市曜影医院",
+      "patient": "M*. B*N V*M",
+      "type": "apheresis",
+      "plan": "2025-10-20",
+      "actual": "2025-10-20"
+    },
+    {
+      "code": "A1E0253",
+      "hosp": "上海市曜影医院",
+      "patient": "M*. B*N V*M",
+      "type": "reinfusion",
+      "plan": "2025-11-26",
+      "actual": "2025-11-26"
+    },
+    {
+      "code": "A1E0258",
+      "hosp": "南方医科大学南方医院",
+      "patient": "谢*妹",
+      "type": "apheresis",
+      "plan": "2025-10-22",
+      "actual": "2025-10-22"
+    },
+    {
+      "code": "A1E0258",
+      "hosp": "南方医科大学南方医院",
+      "patient": "谢*妹",
+      "type": "reinfusion",
+      "plan": "2025-12-08",
+      "actual": "2025-12-08"
+    },
+    {
+      "code": "A1E0254",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-10-16",
+      "actual": "2025-10-16"
+    },
+    {
+      "code": "A1E0254",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2026-03-12",
+      "actual": "2026-03-12"
+    },
+    {
+      "code": "A1E0255",
+      "hosp": "中山大学附属第一医院",
+      "patient": "韩*",
+      "type": "apheresis",
+      "plan": "2025-10-16",
+      "actual": "2025-10-16"
+    },
+    {
+      "code": "A1E0255",
+      "hosp": "中山大学附属第一医院",
+      "patient": "韩*",
+      "type": "reinfusion",
+      "plan": "2025-12-02",
+      "actual": "2025-12-02"
+    },
+    {
+      "code": "A1E0256",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*英",
+      "type": "apheresis",
+      "plan": "2025-10-17",
+      "actual": "2025-10-17"
+    },
+    {
+      "code": "A1E0256",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*英",
+      "type": "reinfusion",
+      "plan": "2025-12-29",
+      "actual": "2025-12-29"
+    },
+    {
+      "code": "A1E0257",
+      "hosp": "宁波大学附属人民医院",
+      "patient": "包*虎",
+      "type": "apheresis",
+      "plan": "2025-10-21",
+      "actual": "2025-10-21"
+    },
+    {
+      "code": "A1E0259",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "杨*姿",
+      "type": "apheresis",
+      "plan": "2025-10-23",
+      "actual": "2025-10-23"
+    },
+    {
+      "code": "A1E0259",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "杨*姿",
+      "type": "reinfusion",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "A1E0260",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "龚*昌",
+      "type": "apheresis",
+      "plan": "2025-10-22",
+      "actual": "2025-10-22"
+    },
+    {
+      "code": "A1E0260",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "龚*昌",
+      "type": "reinfusion",
+      "plan": "2025-12-12",
+      "actual": "2025-12-12"
+    },
+    {
+      "code": "A1E0261",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "孙*金",
+      "type": "apheresis",
+      "plan": "2025-10-24",
+      "actual": "2025-10-24"
+    },
+    {
+      "code": "A1E0261",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "孙*金",
+      "type": "reinfusion",
+      "plan": "2025-12-22",
+      "actual": "2025-12-22"
+    },
+    {
+      "code": "A1E0262",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "张*春",
+      "type": "apheresis",
+      "plan": "2025-10-24",
+      "actual": "2025-10-24"
+    },
+    {
+      "code": "9009125000002",
+      "hosp": "上海长征医院",
+      "patient": "陈*芬",
+      "type": "apheresis",
+      "plan": "2025-10-30",
+      "actual": "2025-10-30"
+    },
+    {
+      "code": "9009125000002",
+      "hosp": "上海长征医院",
+      "patient": "陈*芬",
+      "type": "reinfusion",
+      "plan": "2025-12-24",
+      "actual": "2025-12-24"
+    },
+    {
+      "code": "A1E0263",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "符*道",
+      "type": "apheresis",
+      "plan": "2025-10-27",
+      "actual": "2025-10-27"
+    },
+    {
+      "code": "A1E0263",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "符*道",
+      "type": "reinfusion",
+      "plan": "2026-01-28",
+      "actual": "2026-01-28"
+    },
+    {
+      "code": "A1E0264",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*枝",
+      "type": "apheresis",
+      "plan": "2025-10-28",
+      "actual": "2025-10-28"
+    },
+    {
+      "code": "A1E0264",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*枝",
+      "type": "reinfusion",
+      "plan": "2026-01-27",
+      "actual": "2026-01-27"
+    },
+    {
+      "code": "9009125000001",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "郑*涛",
+      "type": "apheresis",
+      "plan": "2025-10-30",
+      "actual": "2025-10-30"
+    },
+    {
+      "code": "9009125000001",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "郑*涛",
+      "type": "reinfusion",
+      "plan": "2025-12-29",
+      "actual": "2025-12-29"
+    },
+    {
+      "code": "9009125000006",
+      "hosp": "上海仁济医院",
+      "patient": "朱*平",
+      "type": "apheresis",
+      "plan": "2025-11-05",
+      "actual": "2025-11-05"
+    },
+    {
+      "code": "9009125000006",
+      "hosp": "上海仁济医院",
+      "patient": "朱*平",
+      "type": "reinfusion",
+      "plan": "2025-12-15",
+      "actual": "2025-12-15"
+    },
+    {
+      "code": "9009125000004",
+      "hosp": "大连医科大学附属第二医院（钻石湾院区）",
+      "patient": "潘*强",
+      "type": "apheresis",
+      "plan": "2025-11-05",
+      "actual": "2025-11-05"
+    },
+    {
+      "code": "9009125000004",
+      "hosp": "大连医科大学附属第二医院（钻石湾院区）",
+      "patient": "潘*强",
+      "type": "reinfusion",
+      "plan": "2026-01-12",
+      "actual": "2026-01-12"
+    },
+    {
+      "code": "9009125000003",
+      "hosp": "上海长征医院",
+      "patient": "钱*忠",
+      "type": "apheresis",
+      "plan": "2025-11-03",
+      "actual": "2025-11-03"
+    },
+    {
+      "code": "9009125000003",
+      "hosp": "上海长征医院",
+      "patient": "钱*忠",
+      "type": "reinfusion",
+      "plan": "2025-12-17",
+      "actual": "2025-12-17"
+    },
+    {
+      "code": "9009125000005",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "张*美",
+      "type": "apheresis",
+      "plan": "2025-11-04",
+      "actual": "2025-11-04"
+    },
+    {
+      "code": "9009125000005",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "张*美",
+      "type": "reinfusion",
+      "plan": "2026-04-15",
+      "actual": "2026-04-15"
+    },
+    {
+      "code": "9009125000007",
+      "hosp": "江苏省人民医院",
+      "patient": "姚*东",
+      "type": "apheresis",
+      "plan": "2025-11-05",
+      "actual": "2025-11-05"
+    },
+    {
+      "code": "9009125000007",
+      "hosp": "江苏省人民医院",
+      "patient": "姚*东",
+      "type": "reinfusion",
+      "plan": "2026-01-24",
+      "actual": "2026-01-24"
+    },
+    {
+      "code": "9009125000009",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "卿*盛",
+      "type": "apheresis",
+      "plan": "2025-11-07",
+      "actual": "2025-11-07"
+    },
+    {
+      "code": "9009125000009",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "卿*盛",
+      "type": "reinfusion",
+      "plan": "2025-12-08",
+      "actual": "2025-12-08"
+    },
+    {
+      "code": "9009125000010",
+      "hosp": "成都上锦南府医院 （四川大学华西医院上锦医院位）",
+      "patient": "黄*琼",
+      "type": "apheresis",
+      "plan": "2025-11-11",
+      "actual": "2025-11-11"
+    },
+    {
+      "code": "9009125000011",
+      "hosp": "四川大学华西医院",
+      "patient": "何*",
+      "type": "apheresis",
+      "plan": "2025-11-11",
+      "actual": "2025-11-11"
+    },
+    {
+      "code": "9009125000012",
+      "hosp": "四川大学华西医院",
+      "patient": "杨*文",
+      "type": "apheresis",
+      "plan": "2025-11-12",
+      "actual": "2025-11-12"
+    },
+    {
+      "code": "9009125000012",
+      "hosp": "四川大学华西医院",
+      "patient": "杨*文",
+      "type": "reinfusion",
+      "plan": "2025-12-26",
+      "actual": "2025-12-26"
+    },
+    {
+      "code": "9009125000013",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*",
+      "type": "apheresis",
+      "plan": "2025-11-12",
+      "actual": "2025-11-12"
+    },
+    {
+      "code": "9009125000013",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*",
+      "type": "reinfusion",
+      "plan": "2026-05-11",
+      "actual": "2026-05-11"
+    },
+    {
+      "code": "9009125000016",
+      "hosp": "中山大学附属第一医院",
+      "patient": "黄*玲",
+      "type": "apheresis",
+      "plan": "2025-11-12",
+      "actual": "2025-11-12"
+    },
+    {
+      "code": "9009125000016",
+      "hosp": "中山大学附属第一医院",
+      "patient": "黄*玲",
+      "type": "reinfusion",
+      "plan": "2026-02-03",
+      "actual": "2026-02-03"
+    },
+    {
+      "code": "9009125000017",
+      "hosp": "上海市曜影医院",
+      "patient": "徐*城",
+      "type": "apheresis",
+      "plan": "2025-11-17",
+      "actual": "2025-11-17"
+    },
+    {
+      "code": "9009125000017",
+      "hosp": "上海市曜影医院",
+      "patient": "徐*城",
+      "type": "reinfusion",
+      "plan": "2025-12-29",
+      "actual": "2025-12-29"
+    },
+    {
+      "code": "9009125000021",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "金*娥",
+      "type": "apheresis",
+      "plan": "2025-11-18",
+      "actual": "2025-11-18"
+    },
+    {
+      "code": "9009125000021",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "金*娥",
+      "type": "reinfusion",
+      "plan": "2025-12-30",
+      "actual": "2025-12-30"
+    },
+    {
+      "code": "9009125000018",
+      "hosp": "中国人民解放军西部战区空军医院",
+      "patient": "韩*容",
+      "type": "apheresis",
+      "plan": "2025-11-17",
+      "actual": "2025-11-17"
+    },
+    {
+      "code": "9009125000018",
+      "hosp": "中国人民解放军西部战区空军医院",
+      "patient": "韩*容",
+      "type": "reinfusion",
+      "plan": "2025-12-25",
+      "actual": "2025-12-25"
+    },
+    {
+      "code": "9009125000019",
+      "hosp": "中国人民解放军西部战区空军医院",
+      "patient": "阮*彬",
+      "type": "apheresis",
+      "plan": "2025-11-18",
+      "actual": "2025-11-18"
+    },
+    {
+      "code": "9009125000019",
+      "hosp": "中国人民解放军西部战区空军医院",
+      "patient": "阮*彬",
+      "type": "reinfusion",
+      "plan": "2025-12-18",
+      "actual": "2025-12-18"
+    },
+    {
+      "code": "9009125000022",
+      "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
+      "patient": "赵*魁",
+      "type": "apheresis",
+      "plan": "2025-11-19",
+      "actual": "2025-11-19"
+    },
+    {
+      "code": "9009125000022",
+      "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
+      "patient": "赵*魁",
+      "type": "reinfusion",
+      "plan": "2025-12-15",
+      "actual": "2025-12-15"
+    },
+    {
+      "code": "9009125000023",
+      "hosp": "吉林大学第一医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2025-11-20",
+      "actual": "2025-11-20"
+    },
+    {
+      "code": "9009125000023",
+      "hosp": "吉林大学第一医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2025-12-31",
+      "actual": "2026-01-09"
+    },
+    {
+      "code": "9009125000027",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "张*清",
+      "type": "apheresis",
+      "plan": "2025-11-24",
+      "actual": "2025-11-24"
+    },
+    {
+      "code": "9009125000027",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "张*清",
+      "type": "reinfusion",
+      "plan": "2025-12-22",
+      "actual": "2025-12-22"
+    },
+    {
+      "code": "9009125000026",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*明",
+      "type": "apheresis",
+      "plan": "2025-11-24",
+      "actual": "2025-11-24"
+    },
+    {
+      "code": "9009125000026",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*明",
+      "type": "reinfusion",
+      "plan": "2026-01-12",
+      "actual": "2026-01-12"
+    },
+    {
+      "code": "9009125000025",
+      "hosp": "暨南大学附属第一医院（广州华侨医院）",
+      "patient": "刘*刚",
+      "type": "apheresis",
+      "plan": "2025-11-21",
+      "actual": "2025-11-21"
+    },
+    {
+      "code": "9009125000025",
+      "hosp": "暨南大学附属第一医院（广州华侨医院）",
+      "patient": "刘*刚",
+      "type": "reinfusion",
+      "plan": "2025-12-29",
+      "actual": "2025-12-29"
+    },
+    {
+      "code": "9009125000031",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "张*廷",
+      "type": "apheresis",
+      "plan": "2025-12-13",
+      "actual": "2025-12-13"
+    },
+    {
+      "code": "9009125000031",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "张*廷",
+      "type": "reinfusion",
+      "plan": "2026-01-16",
+      "actual": "2026-01-16"
+    },
+    {
+      "code": "9009125000028",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*",
+      "type": "apheresis",
+      "plan": "2025-11-26",
+      "actual": "2025-11-26"
+    },
+    {
+      "code": "9009125000028",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "马*",
+      "type": "reinfusion",
+      "plan": "2026-08-19",
+      "actual": "2026-08-19"
+    },
+    {
+      "code": "9009125000035",
+      "hosp": "上海市曜影医院",
+      "patient": "M*O Y*N S*N C*W",
+      "type": "apheresis",
+      "plan": "2025-12-02",
+      "actual": "2025-12-02"
+    },
+    {
+      "code": "9009125000035",
+      "hosp": "上海市曜影医院",
+      "patient": "M*O Y*N S*N C*W",
+      "type": "reinfusion",
+      "plan": "2026-01-20",
+      "actual": "2026-01-20"
+    },
+    {
+      "code": "9009125000030",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "王*军",
+      "type": "apheresis",
+      "plan": "2025-11-27",
+      "actual": "2025-11-27"
+    },
+    {
+      "code": "9009125000030",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "王*军",
+      "type": "reinfusion",
+      "plan": "2025-12-23",
+      "actual": "2025-12-23"
+    },
+    {
+      "code": "9009125000034",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "王*仁",
+      "type": "apheresis",
+      "plan": "2025-12-30",
+      "actual": "2025-12-30"
+    },
+    {
+      "code": "9009125000034",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "王*仁",
+      "type": "reinfusion",
+      "plan": "2026-02-17",
+      "actual": "2026-02-17"
+    },
+    {
+      "code": "9009125000033",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "陈*清",
+      "type": "apheresis",
+      "plan": "2025-11-29",
+      "actual": "2025-11-29"
+    },
+    {
+      "code": "9009125000033",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "陈*清",
+      "type": "reinfusion",
+      "plan": "2025-12-31",
+      "actual": "2025-12-31"
+    },
+    {
+      "code": "9009125000036",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*然",
+      "type": "apheresis",
+      "plan": "2025-12-04",
+      "actual": "2025-12-04"
+    },
+    {
+      "code": "9009125000036",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "周*然",
+      "type": "reinfusion",
+      "plan": "2026-01-05",
+      "actual": "2026-01-05"
+    },
+    {
+      "code": "9009125000037",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "舒*榜",
+      "type": "apheresis",
+      "plan": "2025-12-04",
+      "actual": "2025-12-04"
+    },
+    {
+      "code": "9009125000037",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "舒*榜",
+      "type": "reinfusion",
+      "plan": "2026-03-25",
+      "actual": "2026-03-25"
+    },
+    {
+      "code": "9009125000038",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*梅",
+      "type": "apheresis",
+      "plan": "2025-12-08",
+      "actual": "2025-12-08"
+    },
+    {
+      "code": "9009125000038",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "赵*梅",
+      "type": "reinfusion",
+      "plan": "2026-01-26",
+      "actual": "2026-01-26"
+    },
+    {
+      "code": "9009125000039",
+      "hosp": "上海市同济医院",
+      "patient": "叶*雄",
+      "type": "apheresis",
+      "plan": "2025-12-11",
+      "actual": "2025-12-11"
+    },
+    {
+      "code": "9009125000039",
+      "hosp": "上海市同济医院",
+      "patient": "叶*雄",
+      "type": "reinfusion",
+      "plan": "2026-02-04",
+      "actual": "2026-02-04"
+    },
+    {
+      "code": "9009125000052",
+      "hosp": "上海仁济医院",
+      "patient": "杜*珊",
+      "type": "apheresis",
+      "plan": "2025-12-23",
+      "actual": "2025-12-23"
+    },
+    {
+      "code": "9009125000040",
+      "hosp": "南方医科大学南方医院",
+      "patient": "姜*妹",
+      "type": "apheresis",
+      "plan": "2025-12-10",
+      "actual": "2025-12-10"
+    },
+    {
+      "code": "9009125000040",
+      "hosp": "南方医科大学南方医院",
+      "patient": "姜*妹",
+      "type": "reinfusion",
+      "plan": "2026-03-30",
+      "actual": "2026-03-30"
+    },
+    {
+      "code": "9009125000041",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*花",
+      "type": "apheresis",
+      "plan": "2025-12-10",
+      "actual": "2025-12-10"
+    },
+    {
+      "code": "9009125000041",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*花",
+      "type": "reinfusion",
+      "plan": "2026-06-03",
+      "actual": "2026-06-03"
+    },
+    {
+      "code": "9009125000043",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "芮*生",
+      "type": "apheresis",
+      "plan": "2025-12-16",
+      "actual": "2025-12-16"
+    },
+    {
+      "code": "9009125000043",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "芮*生",
+      "type": "reinfusion",
+      "plan": "2026-02-04",
+      "actual": "2026-02-04"
+    },
+    {
+      "code": "9009125000042",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "黄*荣",
+      "type": "apheresis",
+      "plan": "2025-12-15",
+      "actual": "2025-12-15"
+    },
+    {
+      "code": "9009125000042",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "黄*荣",
+      "type": "reinfusion",
+      "plan": "2026-04-06",
+      "actual": "2026-04-06"
+    },
+    {
+      "code": "9009125000044",
+      "hosp": "上海长征医院",
+      "patient": "陈*海",
+      "type": "apheresis",
+      "plan": "2025-12-18",
+      "actual": "2025-12-18"
+    },
+    {
+      "code": "9009125000044",
+      "hosp": "上海长征医院",
+      "patient": "陈*海",
+      "type": "reinfusion",
+      "plan": "2026-01-19",
+      "actual": "2026-01-19"
+    },
+    {
+      "code": "9009125000045",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "彭*华",
+      "type": "apheresis",
+      "plan": "2025-12-19",
+      "actual": "2025-12-19"
+    },
+    {
+      "code": "9009125000045",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "彭*华",
+      "type": "reinfusion",
+      "plan": "2026-01-19",
+      "actual": "2026-01-19"
+    },
+    {
+      "code": "9009125000047",
+      "hosp": "上海长征医院",
+      "patient": "宫*",
+      "type": "apheresis",
+      "plan": "2025-12-19",
+      "actual": "2025-12-19"
+    },
+    {
+      "code": "9009125000047",
+      "hosp": "上海长征医院",
+      "patient": "宫*",
+      "type": "reinfusion",
+      "plan": "2026-02-11",
+      "actual": "2026-02-11"
+    },
+    {
+      "code": "9009125000051",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "黄*方",
+      "type": "apheresis",
+      "plan": "2026-02-06",
+      "actual": "2026-02-06"
+    },
+    {
+      "code": "9009125000048",
+      "hosp": "中山大学附属第一医院",
+      "patient": "高*辉",
+      "type": "apheresis",
+      "plan": "2025-12-19",
+      "actual": "2025-12-19"
+    },
+    {
+      "code": "9009125000048",
+      "hosp": "中山大学附属第一医院",
+      "patient": "高*辉",
+      "type": "reinfusion",
+      "plan": "2026-03-11",
+      "actual": "2026-03-11"
+    },
+    {
+      "code": "9009125000049",
+      "hosp": "中山大学附属第一医院",
+      "patient": "黄*",
+      "type": "apheresis",
+      "plan": "2025-12-20",
+      "actual": "2025-12-20"
+    },
+    {
+      "code": "9009125000049",
+      "hosp": "中山大学附属第一医院",
+      "patient": "黄*",
+      "type": "reinfusion",
+      "plan": "2026-01-20",
+      "actual": "2026-01-20"
+    },
+    {
+      "code": "9009125000062",
+      "hosp": "大连医科大学附属第一医院",
+      "patient": "吕*贵",
+      "type": "apheresis",
+      "plan": "2025-12-29",
+      "actual": "2025-12-29"
+    },
+    {
+      "code": "9009125000062",
+      "hosp": "大连医科大学附属第一医院",
+      "patient": "吕*贵",
+      "type": "reinfusion",
+      "plan": "2026-02-02",
+      "actual": "2026-02-02"
+    },
+    {
+      "code": "9009125000059",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "张*妹",
+      "type": "apheresis",
+      "plan": "2025-12-29",
+      "actual": "2025-12-29"
+    },
+    {
+      "code": "9009125000059",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "张*妹",
+      "type": "reinfusion",
+      "plan": "2026-01-30",
+      "actual": "2026-01-30"
+    },
+    {
+      "code": "9009125000053",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*祥",
+      "type": "apheresis",
+      "plan": "2025-12-24",
+      "actual": "2025-12-24"
+    },
+    {
+      "code": "9009125000053",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*祥",
+      "type": "reinfusion",
+      "plan": "2026-03-02",
+      "actual": "2026-03-02"
+    },
+    {
+      "code": "9009125000056",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2025-12-25",
+      "actual": "2025-12-25"
+    },
+    {
+      "code": "9009125000054",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*卿",
+      "type": "apheresis",
+      "plan": "2025-12-25",
+      "actual": "2025-12-25"
+    },
+    {
+      "code": "9009125000054",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*卿",
+      "type": "reinfusion",
+      "plan": "2026-04-15",
+      "actual": "2026-04-15"
+    },
+    {
+      "code": "9009125000055",
+      "hosp": "四川省人民医院",
+      "patient": "班*书",
+      "type": "apheresis",
+      "plan": "2025-12-25",
+      "actual": "2025-12-25"
+    },
+    {
+      "code": "9009125000055",
+      "hosp": "四川省人民医院",
+      "patient": "班*书",
+      "type": "reinfusion",
+      "plan": "2026-01-29",
+      "actual": "2026-01-29"
+    },
+    {
+      "code": "9009125000058",
+      "hosp": "天津医科大学总医院",
+      "patient": "姜*芝",
+      "type": "apheresis",
+      "plan": "2025-12-25",
+      "actual": "2025-12-25"
+    },
+    {
+      "code": "9009125000061",
+      "hosp": "上海市同济医院",
+      "patient": "陆*梅",
+      "type": "apheresis",
+      "plan": "2025-12-26",
+      "actual": "2025-12-26"
+    },
+    {
+      "code": "9009125000063",
+      "hosp": "上海仁济医院",
+      "patient": "王*华",
+      "type": "apheresis",
+      "plan": "2025-12-30",
+      "actual": "2025-12-30"
+    },
+    {
+      "code": "9009125000063",
+      "hosp": "上海仁济医院",
+      "patient": "王*华",
+      "type": "reinfusion",
+      "plan": "2026-01-31",
+      "actual": "2026-01-31"
+    },
+    {
+      "code": "9009125000065",
+      "hosp": "北京协和医院",
+      "patient": "刘*芬",
+      "type": "apheresis",
+      "plan": "2026-01-04",
+      "actual": "2026-01-04"
+    },
+    {
+      "code": "9009125000065",
+      "hosp": "北京协和医院",
+      "patient": "刘*芬",
+      "type": "reinfusion",
+      "plan": "2026-02-03",
+      "actual": "2026-02-03"
+    },
+    {
+      "code": "9009125000064",
+      "hosp": "北京大学人民医院",
+      "patient": "杜*恒",
+      "type": "apheresis",
+      "plan": "2026-01-01",
+      "actual": ""
+    },
+    {
+      "code": "9009126000002",
+      "hosp": "北京大学人民医院",
+      "patient": "闫*平",
+      "type": "apheresis",
+      "plan": "2026-01-05",
+      "actual": "2026-01-05"
+    },
+    {
+      "code": "9009126000002",
+      "hosp": "北京大学人民医院",
+      "patient": "闫*平",
+      "type": "reinfusion",
+      "plan": "2026-02-25",
+      "actual": "2026-02-25"
+    },
+    {
+      "code": "9009126000001",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*福",
+      "type": "apheresis",
+      "plan": "2026-01-05",
+      "actual": "2026-01-05"
+    },
+    {
+      "code": "9009126000001",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*福",
+      "type": "reinfusion",
+      "plan": "2026-04-09",
+      "actual": "2026-04-09"
+    },
+    {
+      "code": "9009126000003",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郄*",
+      "type": "apheresis",
+      "plan": "2026-01-07",
+      "actual": "2026-01-07"
+    },
+    {
+      "code": "9009126000003",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郄*",
+      "type": "reinfusion",
+      "plan": "2026-03-05",
+      "actual": "2026-03-05"
+    },
+    {
+      "code": "9009126000004",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "武*海",
+      "type": "apheresis",
+      "plan": "2026-01-07",
+      "actual": "2026-01-07"
+    },
+    {
+      "code": "9009126000004",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "武*海",
+      "type": "reinfusion",
+      "plan": "2026-02-09",
+      "actual": "2026-02-09"
+    },
+    {
+      "code": "9009126000005",
+      "hosp": "北京陆道培医院",
+      "patient": "陈*祥",
+      "type": "apheresis",
+      "plan": "2026-01-08",
+      "actual": "2026-01-08"
+    },
+    {
+      "code": "9009126000005",
+      "hosp": "北京陆道培医院",
+      "patient": "陈*祥",
+      "type": "reinfusion",
+      "plan": "2026-01-29",
+      "actual": "2026-01-29"
+    },
+    {
+      "code": "9009126000006",
+      "hosp": "南京鼓楼医院",
+      "patient": "严*玉",
+      "type": "apheresis",
+      "plan": "2026-01-08",
+      "actual": "2026-01-08"
+    },
+    {
+      "code": "9009126000007",
+      "hosp": "南方医科大学南方医院",
+      "patient": "杨*营",
+      "type": "apheresis",
+      "plan": "2026-01-09",
+      "actual": "2026-01-09"
+    },
+    {
+      "code": "9009126000007",
+      "hosp": "南方医科大学南方医院",
+      "patient": "杨*营",
+      "type": "reinfusion",
+      "plan": "2026-03-04",
+      "actual": "2026-03-04"
+    },
+    {
+      "code": "9009126000008",
+      "hosp": "上海市第十人民医院（同济大学附属第十人民医院）",
+      "patient": "欧*仁",
+      "type": "apheresis",
+      "plan": "2026-01-14",
+      "actual": "2026-01-14"
+    },
+    {
+      "code": "9009126000008",
+      "hosp": "上海市第十人民医院（同济大学附属第十人民医院）",
+      "patient": "欧*仁",
+      "type": "reinfusion",
+      "plan": "2026-03-10",
+      "actual": "2026-03-10"
+    },
+    {
+      "code": "9009126000010",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "包*娅",
+      "type": "apheresis",
+      "plan": "2026-01-14",
+      "actual": "2026-01-14"
+    },
+    {
+      "code": "9009126000010",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "包*娅",
+      "type": "reinfusion",
+      "plan": "2026-03-31",
+      "actual": "2026-03-31"
+    },
+    {
+      "code": "9009126000014",
+      "hosp": "上海市同济医院",
+      "patient": "M*S V*A I*M",
+      "type": "apheresis",
+      "plan": "2026-01-14",
+      "actual": "2026-01-14"
+    },
+    {
+      "code": "9009126000013",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "黄*浩",
+      "type": "apheresis",
+      "plan": "2026-01-14",
+      "actual": "2026-01-14"
+    },
+    {
+      "code": "9009126000013",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "黄*浩",
+      "type": "reinfusion",
+      "plan": "2026-03-05",
+      "actual": "2026-03-05"
+    },
+    {
+      "code": "9009126000012",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "戴*珠",
+      "type": "apheresis",
+      "plan": "2026-01-14",
+      "actual": "2026-01-14"
+    },
+    {
+      "code": "9009126000012",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "戴*珠",
+      "type": "reinfusion",
+      "plan": "2026-02-10",
+      "actual": "2026-02-10"
+    },
+    {
+      "code": "9009126000015",
+      "hosp": "上海市曜影医院",
+      "patient": "A*O L*N E*A",
+      "type": "apheresis",
+      "plan": "2026-01-14",
+      "actual": "2026-01-14"
+    },
+    {
+      "code": "9009126000015",
+      "hosp": "上海市曜影医院",
+      "patient": "A*O L*N E*A",
+      "type": "reinfusion",
+      "plan": "2026-02-24",
+      "actual": "2026-02-24"
+    },
+    {
+      "code": "9009126000016",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "陈*媚",
+      "type": "apheresis",
+      "plan": "2026-01-16",
+      "actual": "2026-01-16"
+    },
+    {
+      "code": "9009126000016",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "陈*媚",
+      "type": "reinfusion",
+      "plan": "2026-04-30",
+      "actual": "2026-04-30"
+    },
+    {
+      "code": "9009126000018",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陶*华",
+      "type": "apheresis",
+      "plan": "2026-01-16",
+      "actual": "2026-01-16"
+    },
+    {
+      "code": "9009126000018",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陶*华",
+      "type": "reinfusion",
+      "plan": "2026-06-03",
+      "actual": "2026-06-04"
+    },
+    {
+      "code": "9009126000021",
+      "hosp": "北京和睦家医院",
+      "patient": "S*H K*R K*A",
+      "type": "apheresis",
+      "plan": "2026-01-20",
+      "actual": "2026-01-20"
+    },
+    {
+      "code": "9009126000021",
+      "hosp": "北京和睦家医院",
+      "patient": "S*H K*R K*A",
+      "type": "reinfusion",
+      "plan": "2026-02-25",
+      "actual": "2026-02-25"
+    },
+    {
+      "code": "9009126000022",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "高*雄",
+      "type": "apheresis",
+      "plan": "2026-01-21",
+      "actual": "2026-01-21"
+    },
+    {
+      "code": "9009126000022",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "高*雄",
+      "type": "reinfusion",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "9009126000028",
+      "hosp": "上海市曜影医院",
+      "patient": "A*E I*N I*",
+      "type": "apheresis",
+      "plan": "2026-01-27",
+      "actual": ""
+    },
+    {
+      "code": "9009126000024",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "顾*强",
+      "type": "apheresis",
+      "plan": "2026-01-22",
+      "actual": "2026-01-22"
+    },
+    {
+      "code": "9009126000024",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "顾*强",
+      "type": "reinfusion",
+      "plan": "2026-06-08",
+      "actual": "2026-06-08"
+    },
+    {
+      "code": "9009126000025",
+      "hosp": "北京大学人民医院",
+      "patient": "辛*桥",
+      "type": "apheresis",
+      "plan": "2026-01-23",
+      "actual": "2026-01-23"
+    },
+    {
+      "code": "9009126000025",
+      "hosp": "北京大学人民医院",
+      "patient": "辛*桥",
+      "type": "reinfusion",
+      "plan": "2026-02-21",
+      "actual": "2026-02-21"
+    },
+    {
+      "code": "9009126000032",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "A*N K*A",
+      "type": "apheresis",
+      "plan": "2026-01-28",
+      "actual": "2026-01-28"
+    },
+    {
+      "code": "9009126000030",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "宁*仁",
+      "type": "apheresis",
+      "plan": "2026-01-28",
+      "actual": "2026-01-28"
+    },
+    {
+      "code": "9009126000030",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "宁*仁",
+      "type": "reinfusion",
+      "plan": "2026-04-20",
+      "actual": "2026-04-20"
+    },
+    {
+      "code": "9009126000026",
+      "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
+      "patient": "张*池",
+      "type": "apheresis",
+      "plan": "2026-01-25",
+      "actual": "2026-01-25"
+    },
+    {
+      "code": "9009126000026",
+      "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
+      "patient": "张*池",
+      "type": "reinfusion",
+      "plan": "2026-04-27",
+      "actual": "2026-04-27"
+    },
+    {
+      "code": "9009126000031",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2026-01-28",
+      "actual": "2026-01-28"
+    },
+    {
+      "code": "9009126000031",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "张*",
+      "type": "reinfusion",
+      "plan": "2026-05-06",
+      "actual": "2026-05-06"
+    },
+    {
+      "code": "9009126000033",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "马*霞",
+      "type": "apheresis",
+      "plan": "2026-01-29",
+      "actual": "2026-01-29"
+    },
+    {
+      "code": "9009126000033",
+      "hosp": "首都医科大学附属复兴医院",
+      "patient": "马*霞",
+      "type": "reinfusion",
+      "plan": "2026-04-13",
+      "actual": "2026-04-13"
+    },
+    {
+      "code": "9009126000034",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "渠*安",
+      "type": "apheresis",
+      "plan": "2026-01-30",
+      "actual": "2026-01-30"
+    },
+    {
+      "code": "9009126000034",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "渠*安",
+      "type": "reinfusion",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000035",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "付*",
+      "type": "apheresis",
+      "plan": "2026-01-29",
+      "actual": "2026-01-29"
+    },
+    {
+      "code": "9009126000040",
+      "hosp": "福建省立医院",
+      "patient": "方*清",
+      "type": "apheresis",
+      "plan": "2026-02-05",
+      "actual": "2026-02-05"
+    },
+    {
+      "code": "9009126000040",
+      "hosp": "福建省立医院",
+      "patient": "方*清",
+      "type": "reinfusion",
+      "plan": "2026-03-27",
+      "actual": "2026-03-27"
+    },
+    {
+      "code": "9009126000039",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "李*驹",
+      "type": "apheresis",
+      "plan": "2026-02-04",
+      "actual": "2026-02-04"
+    },
+    {
+      "code": "9009126000039",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "李*驹",
+      "type": "reinfusion",
+      "plan": "2026-08-24",
+      "actual": "2026-08-24"
+    },
+    {
+      "code": "9009126000041",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "董*秀",
+      "type": "apheresis",
+      "plan": "2026-02-05",
+      "actual": "2026-02-05"
+    },
+    {
+      "code": "9009126000041",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "董*秀",
+      "type": "reinfusion",
+      "plan": "2026-07-09",
+      "actual": "2026-07-09"
+    },
+    {
+      "code": "9009126000042",
+      "hosp": "南京鼓楼医院",
+      "patient": "王*琪",
+      "type": "apheresis",
+      "plan": "2026-02-06",
+      "actual": "2026-02-06"
+    },
+    {
+      "code": "9009126000043",
+      "hosp": "北京大学第一医院",
+      "patient": "范*东",
+      "type": "apheresis",
+      "plan": "2026-02-07",
+      "actual": "2026-02-07"
+    },
+    {
+      "code": "9009126000043",
+      "hosp": "北京大学第一医院",
+      "patient": "范*东",
+      "type": "reinfusion",
+      "plan": "2026-03-31",
+      "actual": "2026-03-31"
+    },
+    {
+      "code": "9009126000044",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "王*玉",
+      "type": "apheresis",
+      "plan": "2026-02-24",
+      "actual": "2026-02-24"
+    },
+    {
+      "code": "9009126000044",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "王*玉",
+      "type": "reinfusion",
+      "plan": "2026-03-31",
+      "actual": "2026-04-01"
+    },
+    {
+      "code": "9009126000046",
+      "hosp": "佛山市第一人民医院",
+      "patient": "李*仪",
+      "type": "apheresis",
+      "plan": "2026-02-25",
+      "actual": "2026-02-25"
+    },
+    {
+      "code": "9009126000046",
+      "hosp": "佛山市第一人民医院",
+      "patient": "李*仪",
+      "type": "reinfusion",
+      "plan": "2026-05-13",
+      "actual": "2026-05-13"
+    },
+    {
+      "code": "9009126000048",
+      "hosp": "北京大学人民医院",
+      "patient": "张*勋",
+      "type": "apheresis",
+      "plan": "2026-02-27",
+      "actual": "2026-02-27"
+    },
+    {
+      "code": "9009126000047",
+      "hosp": "中国人民解放军总医院",
+      "patient": "李*华",
+      "type": "apheresis",
+      "plan": "2026-02-24",
+      "actual": "2026-02-24"
+    },
+    {
+      "code": "9009126000049",
+      "hosp": "上海市曜影医院",
+      "patient": "王*风",
+      "type": "apheresis",
+      "plan": "2026-02-26",
+      "actual": "2026-02-26"
+    },
+    {
+      "code": "9009126000049",
+      "hosp": "上海市曜影医院",
+      "patient": "王*风",
+      "type": "reinfusion",
+      "plan": "2026-04-14",
+      "actual": "2026-04-14"
+    },
+    {
+      "code": "9009126000050",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "蔡*军",
+      "type": "apheresis",
+      "plan": "2026-02-28",
+      "actual": "2026-02-28"
+    },
+    {
+      "code": "9009126000050",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "蔡*军",
+      "type": "reinfusion",
+      "plan": "2026-07-28",
+      "actual": "2026-07-28"
+    },
+    {
+      "code": "9009126000051",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*海",
+      "type": "apheresis",
+      "plan": "2026-02-28",
+      "actual": "2026-02-28"
+    },
+    {
+      "code": "9009126000051",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*海",
+      "type": "reinfusion",
+      "plan": "2026-07-13",
+      "actual": "2026-07-13"
+    },
+    {
+      "code": "9009126000054",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "王*全",
+      "type": "apheresis",
+      "plan": "2026-03-03",
+      "actual": "2026-03-03"
+    },
+    {
+      "code": "9009126000054",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "王*全",
+      "type": "reinfusion",
+      "plan": "2026-03-31",
+      "actual": "2026-03-31"
+    },
+    {
+      "code": "9009126000053",
+      "hosp": "中山大学附属第一医院",
+      "patient": "许*华",
+      "type": "apheresis",
+      "plan": "2026-03-03",
+      "actual": "2026-03-03"
+    },
+    {
+      "code": "9009126000055",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "吴*华",
+      "type": "apheresis",
+      "plan": "2026-03-03",
+      "actual": "2026-03-03"
+    },
+    {
+      "code": "9009126000056",
+      "hosp": "北京大学深圳医院",
+      "patient": "刘*农",
+      "type": "apheresis",
+      "plan": "2026-03-03",
+      "actual": "2026-03-03"
+    },
+    {
+      "code": "9009126000057",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "杨*",
+      "type": "apheresis",
+      "plan": "2026-03-05",
+      "actual": "2026-03-05"
+    },
+    {
+      "code": "9009126000057",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "杨*",
+      "type": "reinfusion",
+      "plan": "2026-05-06",
+      "actual": "2026-05-06"
+    },
+    {
+      "code": "9009126000060",
+      "hosp": "南方医科大学南方医院",
+      "patient": "彭*霞",
+      "type": "apheresis",
+      "plan": "2026-03-06",
+      "actual": "2026-03-06"
+    },
+    {
+      "code": "9009126000060",
+      "hosp": "南方医科大学南方医院",
+      "patient": "彭*霞",
+      "type": "reinfusion",
+      "plan": "2026-05-06",
+      "actual": "2026-05-06"
+    },
+    {
+      "code": "9009126000146",
+      "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
+      "patient": "王*秀",
+      "type": "apheresis",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000146",
+      "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
+      "patient": "王*秀",
+      "type": "reinfusion",
+      "plan": "2026-06-17",
+      "actual": "2026-06-17"
+    },
+    {
+      "code": "9009126000064",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "李*生",
+      "type": "apheresis",
+      "plan": "2026-03-10",
+      "actual": "2026-03-10"
+    },
+    {
+      "code": "9009126000064",
+      "hosp": "厦门大学附属第一医院",
+      "patient": "李*生",
+      "type": "reinfusion",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000059",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*瑜",
+      "type": "apheresis",
+      "plan": "2026-03-05",
+      "actual": "2026-03-05"
+    },
+    {
+      "code": "9009126000059",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*瑜",
+      "type": "reinfusion",
+      "plan": "2026-05-25",
+      "actual": "2026-05-25"
+    },
+    {
+      "code": "9009126000062",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "蔡*强",
+      "type": "apheresis",
+      "plan": "2026-03-06",
+      "actual": ""
+    },
+    {
+      "code": "9009126000063",
+      "hosp": "四川省人民医院",
+      "patient": "刘*行",
+      "type": "apheresis",
+      "plan": "2026-03-08",
+      "actual": "2026-03-08"
+    },
+    {
+      "code": "9009126000063",
+      "hosp": "四川省人民医院",
+      "patient": "刘*行",
+      "type": "reinfusion",
+      "plan": "2026-04-17",
+      "actual": "2026-04-17"
+    },
+    {
+      "code": "9009126000069",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "李*玉",
+      "type": "apheresis",
+      "plan": "2026-03-13",
+      "actual": "2026-03-13"
+    },
+    {
+      "code": "9009126000068",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "许*英",
+      "type": "apheresis",
+      "plan": "2026-03-11",
+      "actual": "2026-03-11"
+    },
+    {
+      "code": "9009126000068",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "许*英",
+      "type": "reinfusion",
+      "plan": "2026-04-14",
+      "actual": "2026-04-14"
+    },
+    {
+      "code": "9009126000067",
+      "hosp": "天津医科大学总医院",
+      "patient": "董*芹",
+      "type": "apheresis",
+      "plan": "2026-03-11",
+      "actual": "2026-03-11"
+    },
+    {
+      "code": "9009126000067",
+      "hosp": "天津医科大学总医院",
+      "patient": "董*芹",
+      "type": "reinfusion",
+      "plan": "2026-09-01",
+      "actual": "2026-09-01"
+    },
+    {
+      "code": "9009126000070",
+      "hosp": "空军军医大学西京医院",
+      "patient": "张*宁",
+      "type": "apheresis",
+      "plan": "2026-03-13",
+      "actual": "2026-03-13"
+    },
+    {
+      "code": "9009126000070",
+      "hosp": "空军军医大学西京医院",
+      "patient": "张*宁",
+      "type": "reinfusion",
+      "plan": "2026-04-13",
+      "actual": "2026-04-13"
+    },
+    {
+      "code": "9009126000071",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "侯*凤",
+      "type": "apheresis",
+      "plan": "2026-03-13",
+      "actual": "2026-03-13"
+    },
+    {
+      "code": "9009126000071",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "侯*凤",
+      "type": "reinfusion",
+      "plan": "2026-07-06",
+      "actual": "2026-07-06"
+    },
+    {
+      "code": "9009126000073",
+      "hosp": "中国医科大学附属第一医院",
+      "patient": "李*芝",
+      "type": "apheresis",
+      "plan": "2026-03-13",
+      "actual": "2026-03-13"
+    },
+    {
+      "code": "9009126000072",
+      "hosp": "中山大学附属第一医院",
+      "patient": "刘*星",
+      "type": "apheresis",
+      "plan": "2026-03-13",
+      "actual": "2026-03-13"
+    },
+    {
+      "code": "9009126000072",
+      "hosp": "中山大学附属第一医院",
+      "patient": "刘*星",
+      "type": "reinfusion",
+      "plan": "2026-04-20",
+      "actual": "2026-04-20"
+    },
+    {
+      "code": "9009126000078",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "苏*",
+      "type": "apheresis",
+      "plan": "2026-03-17",
+      "actual": "2026-03-17"
+    },
+    {
+      "code": "9009126000078",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "苏*",
+      "type": "reinfusion",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "9009126000074",
+      "hosp": "北京协和医院",
+      "patient": "李*林",
+      "type": "apheresis",
+      "plan": "2026-03-17",
+      "actual": "2026-03-17"
+    },
+    {
+      "code": "9009126000074",
+      "hosp": "北京协和医院",
+      "patient": "李*林",
+      "type": "reinfusion",
+      "plan": "2026-05-06",
+      "actual": "2026-05-06"
+    },
+    {
+      "code": "9009126000075",
+      "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
+      "patient": "张*平",
+      "type": "apheresis",
+      "plan": "2026-03-16",
+      "actual": "2026-03-16"
+    },
+    {
+      "code": "9009126000075",
+      "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
+      "patient": "张*平",
+      "type": "reinfusion",
+      "plan": "2026-05-25",
+      "actual": "2026-05-25"
+    },
+    {
+      "code": "9009126000077",
+      "hosp": "上海市同济医院",
+      "patient": "M*. J*J J*L",
+      "type": "apheresis",
+      "plan": "2026-03-16",
+      "actual": "2026-03-16"
+    },
+    {
+      "code": "9009126000077",
+      "hosp": "上海市同济医院",
+      "patient": "M*. J*J J*L",
+      "type": "reinfusion",
+      "plan": "2026-04-18",
+      "actual": "2026-04-18"
+    },
+    {
+      "code": "9009126000083",
+      "hosp": "上海市同济医院",
+      "patient": "范*珍",
+      "type": "apheresis",
+      "plan": "2026-03-30",
+      "actual": "2026-03-30"
+    },
+    {
+      "code": "9009126000083",
+      "hosp": "上海市同济医院",
+      "patient": "范*珍",
+      "type": "reinfusion",
+      "plan": "2026-06-25",
+      "actual": "2026-06-25"
+    },
+    {
+      "code": "9009126000080",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*芸",
+      "type": "apheresis",
+      "plan": "2026-03-19",
+      "actual": "2026-03-19"
+    },
+    {
+      "code": "9009126000080",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*芸",
+      "type": "reinfusion",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "9009126000079",
+      "hosp": "上海市曜影医院",
+      "patient": "R*D O*R L*R",
+      "type": "apheresis",
+      "plan": "2026-03-18",
+      "actual": "2026-03-18"
+    },
+    {
+      "code": "9009126000079",
+      "hosp": "上海市曜影医院",
+      "patient": "R*D O*R L*R",
+      "type": "reinfusion",
+      "plan": "2026-05-14",
+      "actual": "2026-05-14"
+    },
+    {
+      "code": "9009126000081",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "董*珍",
+      "type": "apheresis",
+      "plan": "2026-03-27",
+      "actual": "2026-03-27"
+    },
+    {
+      "code": "9009126000082",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*志",
+      "type": "apheresis",
+      "plan": "2026-03-20",
+      "actual": "2026-03-20"
+    },
+    {
+      "code": "9009126000082",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*志",
+      "type": "reinfusion",
+      "plan": "2026-05-25",
+      "actual": "2026-05-25"
+    },
+    {
+      "code": "9009126000084",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "岑*玲",
+      "type": "apheresis",
+      "plan": "2026-03-24",
+      "actual": "2026-03-24"
+    },
+    {
+      "code": "9009126000084",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "岑*玲",
+      "type": "reinfusion",
+      "plan": "2026-04-25",
+      "actual": "2026-04-25"
+    },
+    {
+      "code": "9009126000085",
+      "hosp": "北京协和医院",
+      "patient": "肖*宾",
+      "type": "apheresis",
+      "plan": "2026-03-26",
+      "actual": "2026-03-26"
+    },
+    {
+      "code": "9009126000085",
+      "hosp": "北京协和医院",
+      "patient": "肖*宾",
+      "type": "reinfusion",
+      "plan": "2026-05-11",
+      "actual": "2026-05-11"
+    },
+    {
+      "code": "9009126000086",
+      "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
+      "patient": "王*强",
+      "type": "apheresis",
+      "plan": "2026-03-25",
+      "actual": "2026-03-25"
+    },
+    {
+      "code": "9009126000086",
+      "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
+      "patient": "王*强",
+      "type": "reinfusion",
+      "plan": "2026-06-25",
+      "actual": "2026-06-25"
+    },
+    {
+      "code": "9009126000088",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "印*华",
+      "type": "apheresis",
+      "plan": "2026-03-27",
+      "actual": "2026-03-27"
+    },
+    {
+      "code": "9009126000088",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "印*华",
+      "type": "reinfusion",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000087",
+      "hosp": "广东省人民医院",
+      "patient": "汪*庆",
+      "type": "apheresis",
+      "plan": "2026-03-26",
+      "actual": "2026-03-26"
+    },
+    {
+      "code": "9009126000087",
+      "hosp": "广东省人民医院",
+      "patient": "汪*庆",
+      "type": "reinfusion",
+      "plan": "2026-05-21",
+      "actual": "2026-05-21"
+    },
+    {
+      "code": "9009126000089",
+      "hosp": "北京大学人民医院",
+      "patient": "高*",
+      "type": "apheresis",
+      "plan": "2026-04-02",
+      "actual": "2026-04-02"
+    },
+    {
+      "code": "9009126000089",
+      "hosp": "北京大学人民医院",
+      "patient": "高*",
+      "type": "reinfusion",
+      "plan": "2026-05-08",
+      "actual": "2026-05-08"
+    },
+    {
+      "code": "9009126000090",
+      "hosp": "北京大学第三医院",
+      "patient": "李*农",
+      "type": "apheresis",
+      "plan": "2026-03-30",
+      "actual": "2026-03-30"
+    },
+    {
+      "code": "9009126000090",
+      "hosp": "北京大学第三医院",
+      "patient": "李*农",
+      "type": "reinfusion",
+      "plan": "2026-07-09",
+      "actual": "2026-07-09"
+    },
+    {
+      "code": "9009126000092",
+      "hosp": "安徽省肿瘤医院（省立西区）",
+      "patient": "罗*",
+      "type": "apheresis",
+      "plan": "2026-03-31",
+      "actual": "2026-03-31"
+    },
+    {
+      "code": "9009126000092",
+      "hosp": "安徽省肿瘤医院（省立西区）",
+      "patient": "罗*",
+      "type": "reinfusion",
+      "plan": "2026-05-08",
+      "actual": "2026-05-08"
+    },
+    {
+      "code": "9009126000093",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "唐*文",
+      "type": "apheresis",
+      "plan": "2026-04-01",
+      "actual": "2026-04-01"
+    },
+    {
+      "code": "9009126000093",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "唐*文",
+      "type": "reinfusion",
+      "plan": "2026-08-06",
+      "actual": "2026-08-06"
+    },
+    {
+      "code": "9009126000095",
+      "hosp": "北京协和医院",
+      "patient": "吴*民",
+      "type": "apheresis",
+      "plan": "2026-04-02",
+      "actual": "2026-04-02"
+    },
+    {
+      "code": "9009126000095",
+      "hosp": "北京协和医院",
+      "patient": "吴*民",
+      "type": "reinfusion",
+      "plan": "2026-05-12",
+      "actual": "2026-05-12"
+    },
+    {
+      "code": "9009126000097",
+      "hosp": "浙江大学医学院附属邵逸夫医院",
+      "patient": "褚*美",
+      "type": "apheresis",
+      "plan": "2026-04-06",
+      "actual": "2026-04-06"
+    },
+    {
+      "code": "9009126000097",
+      "hosp": "浙江大学医学院附属邵逸夫医院",
+      "patient": "褚*美",
+      "type": "reinfusion",
+      "plan": "2026-05-11",
+      "actual": "2026-05-11"
+    },
+    {
+      "code": "9009126000096",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "陈*平",
+      "type": "apheresis",
+      "plan": "2026-04-02",
+      "actual": "2026-04-02"
+    },
+    {
+      "code": "9009126000096",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "陈*平",
+      "type": "reinfusion",
+      "plan": "2026-08-20",
+      "actual": "2026-08-20"
+    },
+    {
+      "code": "9009126000099",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "杨*凤",
+      "type": "apheresis",
+      "plan": "2026-04-03",
+      "actual": "2026-04-03"
+    },
+    {
+      "code": "9009126000099",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "杨*凤",
+      "type": "reinfusion",
+      "plan": "2026-06-17",
+      "actual": "2026-06-17"
+    },
+    {
+      "code": "9009126000119",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "孔*琴",
+      "type": "apheresis",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000101",
+      "hosp": "中山大学附属第一医院",
+      "patient": "陈*明",
+      "type": "apheresis",
+      "plan": "2026-04-04",
+      "actual": "2026-04-04"
+    },
+    {
+      "code": "9009126000101",
+      "hosp": "中山大学附属第一医院",
+      "patient": "陈*明",
+      "type": "reinfusion",
+      "plan": "2026-05-21",
+      "actual": "2026-05-21"
+    },
+    {
+      "code": "9009126000104",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*堂",
+      "type": "apheresis",
+      "plan": "2026-04-08",
+      "actual": "2026-04-08"
+    },
+    {
+      "code": "9009126000104",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*堂",
+      "type": "reinfusion",
+      "plan": "2026-07-03",
+      "actual": "2026-07-03"
+    },
+    {
+      "code": "9009126000102",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "陈*华",
+      "type": "apheresis",
+      "plan": "2026-04-08",
+      "actual": "2026-04-08"
+    },
+    {
+      "code": "9009126000102",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "陈*华",
+      "type": "reinfusion",
+      "plan": "2026-05-19",
+      "actual": "2026-05-19"
+    },
+    {
+      "code": "9009126000103",
+      "hosp": "北京协和医院",
+      "patient": "丛*",
+      "type": "apheresis",
+      "plan": "2026-04-08",
+      "actual": "2026-04-08"
+    },
+    {
+      "code": "9009126000103",
+      "hosp": "北京协和医院",
+      "patient": "丛*",
+      "type": "reinfusion",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "9009126000106",
+      "hosp": "北京大学人民医院",
+      "patient": "姚*明",
+      "type": "apheresis",
+      "plan": "2026-04-09",
+      "actual": "2026-04-09"
+    },
+    {
+      "code": "9009126000105",
+      "hosp": "北京陆道培医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2026-04-09",
+      "actual": "2026-04-09"
+    },
+    {
+      "code": "9009126000105",
+      "hosp": "北京陆道培医院",
+      "patient": "王*",
+      "type": "reinfusion",
+      "plan": "2026-08-03",
+      "actual": "2026-08-03"
+    },
+    {
+      "code": "9009126000109",
+      "hosp": "上海市曜影医院",
+      "patient": "林*仁",
+      "type": "apheresis",
+      "plan": "2026-04-13",
+      "actual": "2026-04-13"
+    },
+    {
+      "code": "9009126000109",
+      "hosp": "上海市曜影医院",
+      "patient": "林*仁",
+      "type": "reinfusion",
+      "plan": "2026-05-07",
+      "actual": "2026-05-07"
+    },
+    {
+      "code": "9009126000108",
+      "hosp": "中国人民解放军总医院第五医学中心（307医院）",
+      "patient": "Y*G M*",
+      "type": "apheresis",
+      "plan": "2026-04-13",
+      "actual": "2026-04-13"
+    },
+    {
+      "code": "9009126000108",
+      "hosp": "中国人民解放军总医院第五医学中心（307医院）",
+      "patient": "Y*G M*",
+      "type": "reinfusion",
+      "plan": "2026-06-02",
+      "actual": "2026-06-02"
+    },
+    {
+      "code": "9009126000110",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "罗*瑛",
+      "type": "apheresis",
+      "plan": "2026-04-15",
+      "actual": "2026-04-15"
+    },
+    {
+      "code": "9009126000111",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "俞*二",
+      "type": "apheresis",
+      "plan": "2026-04-15",
+      "actual": "2026-04-15"
+    },
+    {
+      "code": "9009126000113",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "杜*芳",
+      "type": "apheresis",
+      "plan": "2026-04-18",
+      "actual": "2026-04-18"
+    },
+    {
+      "code": "9009126000113",
+      "hosp": "重庆大学附属肿瘤医院",
+      "patient": "杜*芳",
+      "type": "reinfusion",
+      "plan": "2026-06-08",
+      "actual": "2026-06-08"
+    },
+    {
+      "code": "9009126000112",
+      "hosp": "中日友好医院",
+      "patient": "彭*均",
+      "type": "apheresis",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000115",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*升",
+      "type": "apheresis",
+      "plan": "2026-04-21",
+      "actual": "2026-04-21"
+    },
+    {
+      "code": "9009126000115",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*升",
+      "type": "reinfusion",
+      "plan": "2026-07-20",
+      "actual": "2026-07-20"
+    },
+    {
+      "code": "9009126000118",
+      "hosp": "南方医科大学南方医院",
+      "patient": "黄*坚",
+      "type": "apheresis",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000118",
+      "hosp": "南方医科大学南方医院",
+      "patient": "黄*坚",
+      "type": "reinfusion",
+      "plan": "2026-06-13",
+      "actual": "2026-06-13"
+    },
+    {
+      "code": "9009126000120",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "周*才",
+      "type": "apheresis",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000120",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "周*才",
+      "type": "reinfusion",
+      "plan": "2026-07-13",
+      "actual": "2026-07-13"
+    },
+    {
+      "code": "9009126000121",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "相*强",
+      "type": "apheresis",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000122",
+      "hosp": "中山大学附属第三医院",
+      "patient": "赵*玲",
+      "type": "apheresis",
+      "plan": "2026-04-24",
+      "actual": "2026-04-24"
+    },
+    {
+      "code": "9009126000122",
+      "hosp": "中山大学附属第三医院",
+      "patient": "赵*玲",
+      "type": "reinfusion",
+      "plan": "2026-07-06",
+      "actual": "2026-07-06"
+    },
+    {
+      "code": "9009126000123",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2026-04-23",
+      "actual": "2026-04-23"
+    },
+    {
+      "code": "9009126000123",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2026-06-10",
+      "actual": "2026-06-10"
+    },
+    {
+      "code": "9009126000124",
+      "hosp": "上海仁济医院",
+      "patient": "张*和",
+      "type": "apheresis",
+      "plan": "2026-04-24",
+      "actual": "2026-04-24"
+    },
+    {
+      "code": "9009126000124",
+      "hosp": "上海仁济医院",
+      "patient": "张*和",
+      "type": "reinfusion",
+      "plan": "2026-07-21",
+      "actual": "2026-07-21"
+    },
+    {
+      "code": "9009126000125",
+      "hosp": "南京鼓楼医院",
+      "patient": "江*凤",
+      "type": "apheresis",
+      "plan": "2026-04-23",
+      "actual": "2026-04-23"
+    },
+    {
+      "code": "9009126000127",
+      "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
+      "patient": "杨*田",
+      "type": "apheresis",
+      "plan": "2026-04-24",
+      "actual": "2026-04-24"
+    },
+    {
+      "code": "9009126000134",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "冯*声",
+      "type": "apheresis",
+      "plan": "2026-04-29",
+      "actual": "2026-04-29"
+    },
+    {
+      "code": "9009126000134",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "冯*声",
+      "type": "reinfusion",
+      "plan": "2026-05-30",
+      "actual": "2026-05-30"
+    },
+    {
+      "code": "9009126000132",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*光",
+      "type": "apheresis",
+      "plan": "2026-04-29",
+      "actual": "2026-04-29"
+    },
+    {
+      "code": "9009126000132",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*光",
+      "type": "reinfusion",
+      "plan": "2026-07-13",
+      "actual": "2026-07-13"
+    },
+    {
+      "code": "9009126000128",
+      "hosp": "北京高博博仁医院",
+      "patient": "K*N K*N",
+      "type": "apheresis",
+      "plan": "2026-04-27",
+      "actual": "2026-04-27"
+    },
+    {
+      "code": "9009126000128",
+      "hosp": "北京高博博仁医院",
+      "patient": "K*N K*N",
+      "type": "reinfusion",
+      "plan": "2026-06-05",
+      "actual": "2026-06-05"
+    },
+    {
+      "code": "9009126000129",
+      "hosp": "北京大学人民医院",
+      "patient": "赵*萍",
+      "type": "apheresis",
+      "plan": "2026-04-28",
+      "actual": "2026-04-28"
+    },
+    {
+      "code": "9009126000129",
+      "hosp": "北京大学人民医院",
+      "patient": "赵*萍",
+      "type": "reinfusion",
+      "plan": "2026-06-06",
+      "actual": "2026-06-06"
+    },
+    {
+      "code": "9009126000130",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*凤",
+      "type": "apheresis",
+      "plan": "2026-04-28",
+      "actual": "2026-04-28"
+    },
+    {
+      "code": "9009126000131",
+      "hosp": "中山大学附属第一医院",
+      "patient": "杨*珍",
+      "type": "apheresis",
+      "plan": "2026-04-28",
+      "actual": "2026-04-28"
+    },
+    {
+      "code": "9009126000131",
+      "hosp": "中山大学附属第一医院",
+      "patient": "杨*珍",
+      "type": "reinfusion",
+      "plan": "2026-06-03",
+      "actual": "2026-06-03"
+    },
+    {
+      "code": "9009126000133",
+      "hosp": "北京大学人民医院",
+      "patient": "英*云",
+      "type": "apheresis",
+      "plan": "2026-04-29",
+      "actual": "2026-04-29"
+    },
+    {
+      "code": "9009126000133",
+      "hosp": "北京大学人民医院",
+      "patient": "英*云",
+      "type": "reinfusion",
+      "plan": "2026-07-06",
+      "actual": "2026-07-06"
+    },
+    {
+      "code": "9009126000136",
+      "hosp": "广西医科大学附属第一医院",
+      "patient": "张*铀",
+      "type": "apheresis",
+      "plan": "2026-04-30",
+      "actual": "2026-04-30"
+    },
+    {
+      "code": "9009126000136",
+      "hosp": "广西医科大学附属第一医院",
+      "patient": "张*铀",
+      "type": "reinfusion",
+      "plan": "2026-06-18",
+      "actual": "2026-06-18"
+    },
+    {
+      "code": "9009126000138",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陈*云",
+      "type": "apheresis",
+      "plan": "2026-05-08",
+      "actual": "2026-05-08"
+    },
+    {
+      "code": "9009126000138",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陈*云",
+      "type": "reinfusion",
+      "plan": "2026-06-29",
+      "actual": "2026-06-29"
+    },
+    {
+      "code": "9009126000137",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*乐",
+      "type": "apheresis",
+      "plan": "2026-05-06",
+      "actual": "2026-05-06"
+    },
+    {
+      "code": "9009126000137",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "陈*乐",
+      "type": "reinfusion",
+      "plan": "2026-07-30",
+      "actual": "2026-07-30"
+    },
+    {
+      "code": "9009126000140",
+      "hosp": "上海市曜影医院",
+      "patient": "M*K K*T",
+      "type": "apheresis",
+      "plan": "2026-05-11",
+      "actual": "2026-05-11"
+    },
+    {
+      "code": "9009126000140",
+      "hosp": "上海市曜影医院",
+      "patient": "M*K K*T",
+      "type": "reinfusion",
+      "plan": "2026-06-22",
+      "actual": "2026-06-22"
+    },
+    {
+      "code": "9009126000139",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "冯*信",
+      "type": "apheresis",
+      "plan": "2026-05-09",
+      "actual": "2026-05-09"
+    },
+    {
+      "code": "9009126000145",
+      "hosp": "中山大学附属第三医院",
+      "patient": "池*虾",
+      "type": "apheresis",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000145",
+      "hosp": "中山大学附属第三医院",
+      "patient": "池*虾",
+      "type": "reinfusion",
+      "plan": "2026-06-30",
+      "actual": "2026-06-30"
+    },
+    {
+      "code": "9009126000144",
+      "hosp": "重庆医科大学附属第一医院",
+      "patient": "唐*",
+      "type": "apheresis",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000144",
+      "hosp": "重庆医科大学附属第一医院",
+      "patient": "唐*",
+      "type": "reinfusion",
+      "plan": "2026-07-27",
+      "actual": "2026-07-27"
+    },
+    {
+      "code": "9009126000141",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "王*兵",
+      "type": "apheresis",
+      "plan": "2026-05-14",
+      "actual": "2026-05-14"
+    },
+    {
+      "code": "9009126000141",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "王*兵",
+      "type": "reinfusion",
+      "plan": "2026-07-06",
+      "actual": "2026-07-06"
+    },
+    {
+      "code": "9009126000142",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "徐*瑞",
+      "type": "apheresis",
+      "plan": "2026-05-14",
+      "actual": "2026-05-14"
+    },
+    {
+      "code": "9009126000142",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "徐*瑞",
+      "type": "reinfusion",
+      "plan": "2026-08-10",
+      "actual": "2026-08-10"
+    },
+    {
+      "code": "9009126000143",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "毕*民",
+      "type": "apheresis",
+      "plan": "2026-05-14",
+      "actual": "2026-05-14"
+    },
+    {
+      "code": "9009126000143",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "毕*民",
+      "type": "reinfusion",
+      "plan": "2026-08-26",
+      "actual": "2026-08-26"
+    },
+    {
+      "code": "9009126000147",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "王*方",
+      "type": "apheresis",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000147",
+      "hosp": "华中科技大学同济医学院附属同济医院",
+      "patient": "王*方",
+      "type": "reinfusion",
+      "plan": "2026-06-29",
+      "actual": "2026-06-29"
+    },
+    {
+      "code": "9009126000149",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "彭*森",
+      "type": "apheresis",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000149",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "彭*森",
+      "type": "reinfusion",
+      "plan": "2026-08-24",
+      "actual": "2026-08-24"
+    },
+    {
+      "code": "9009126000151",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "田*",
+      "type": "apheresis",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "9009126000151",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "田*",
+      "type": "reinfusion",
+      "plan": "2026-08-31",
+      "actual": "2026-08-31"
+    },
+    {
+      "code": "9009126000150",
+      "hosp": "江苏省人民医院",
+      "patient": "孙*香",
+      "type": "apheresis",
+      "plan": "2026-05-15",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000150",
+      "hosp": "江苏省人民医院",
+      "patient": "孙*香",
+      "type": "reinfusion",
+      "plan": "2026-07-01",
+      "actual": "2026-07-01"
+    },
+    {
+      "code": "9009126000152",
+      "hosp": "北京大学人民医院",
+      "patient": "李*",
+      "type": "apheresis",
+      "plan": "2026-05-18",
+      "actual": "2026-05-18"
+    },
+    {
+      "code": "9009126000153",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "齐*",
+      "type": "apheresis",
+      "plan": "2026-05-20",
+      "actual": "2026-05-20"
+    },
+    {
+      "code": "9009126000153",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "齐*",
+      "type": "reinfusion",
+      "plan": "2026-08-03",
+      "actual": "2026-08-03"
+    },
+    {
+      "code": "9009126000154",
+      "hosp": "北京大学深圳医院",
+      "patient": "杨*波",
+      "type": "apheresis",
+      "plan": "2026-05-20",
+      "actual": "2026-05-20"
+    },
+    {
+      "code": "9009126000154",
+      "hosp": "北京大学深圳医院",
+      "patient": "杨*波",
+      "type": "reinfusion",
+      "plan": "2026-06-17",
+      "actual": "2026-06-17"
+    },
+    {
+      "code": "9009126000155",
+      "hosp": "北京协和医院",
+      "patient": "纪*生",
+      "type": "apheresis",
+      "plan": "2026-05-20",
+      "actual": "2026-05-20"
+    },
+    {
+      "code": "9009126000155",
+      "hosp": "北京协和医院",
+      "patient": "纪*生",
+      "type": "reinfusion",
+      "plan": "2026-06-22",
+      "actual": "2026-06-22"
+    },
+    {
+      "code": "9009126000156",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "刁*凤",
+      "type": "apheresis",
+      "plan": "2026-05-22",
+      "actual": ""
+    },
+    {
+      "code": "9009126000157",
+      "hosp": "南京鼓楼医院",
+      "patient": "束*安",
+      "type": "apheresis",
+      "plan": "2026-05-25",
+      "actual": "2026-05-25"
+    },
+    {
+      "code": "9009126000158",
+      "hosp": "大连医科大学附属第一医院",
+      "patient": "潘*宇",
+      "type": "apheresis",
+      "plan": "2026-05-27",
+      "actual": "2026-05-27"
+    },
+    {
+      "code": "9009126000158",
+      "hosp": "大连医科大学附属第一医院",
+      "patient": "潘*宇",
+      "type": "reinfusion",
+      "plan": "2026-09-03",
+      "actual": "2026-09-03"
+    },
+    {
+      "code": "9009126000159",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "龚*新",
+      "type": "apheresis",
+      "plan": "2026-05-27",
+      "actual": "2026-05-27"
+    },
+    {
+      "code": "9009126000160",
+      "hosp": "中山大学附属第一医院",
+      "patient": "蔡*那",
+      "type": "apheresis",
+      "plan": "2026-05-27",
+      "actual": "2026-05-27"
+    },
+    {
+      "code": "9009126000161",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*凤",
+      "type": "apheresis",
+      "plan": "2026-05-28",
+      "actual": "2026-05-28"
+    },
+    {
+      "code": "9009126000161",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*凤",
+      "type": "reinfusion",
+      "plan": "2026-07-29",
+      "actual": "2026-07-29"
+    },
+    {
+      "code": "9009126000162",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*光",
+      "type": "apheresis",
+      "plan": "2026-05-29",
+      "actual": "2026-05-29"
+    },
+    {
+      "code": "9009126000163",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "甄*民",
+      "type": "apheresis",
+      "plan": "2026-05-29",
+      "actual": "2026-05-29"
+    },
+    {
+      "code": "9009126000163",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "甄*民",
+      "type": "reinfusion",
+      "plan": "2026-07-06",
+      "actual": "2026-07-06"
+    },
+    {
+      "code": "9009126000164",
+      "hosp": "浙江大学医学院附属邵逸夫医院",
+      "patient": "徐*华",
+      "type": "apheresis",
+      "plan": "2026-05-29",
+      "actual": "2026-05-29"
+    },
+    {
+      "code": "9009126000165",
+      "hosp": "上海仁济医院",
+      "patient": "袁*玲",
+      "type": "apheresis",
+      "plan": "2026-06-01",
+      "actual": "2026-06-01"
+    },
+    {
+      "code": "9009126000165",
+      "hosp": "上海仁济医院",
+      "patient": "袁*玲",
+      "type": "reinfusion",
+      "plan": "2026-08-25",
+      "actual": "2026-08-25"
+    },
+    {
+      "code": "9009126000166",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "韩*芳",
+      "type": "apheresis",
+      "plan": "2026-06-01",
+      "actual": "2026-06-01"
+    },
+    {
+      "code": "9009126000166",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "韩*芳",
+      "type": "reinfusion",
+      "plan": "2026-07-08",
+      "actual": "2026-07-08"
+    },
+    {
+      "code": "9009126000167",
+      "hosp": "北京大学人民医院",
+      "patient": "左*梅",
+      "type": "apheresis",
+      "plan": "2026-06-04",
+      "actual": "2026-06-04"
+    },
+    {
+      "code": "9009126000167",
+      "hosp": "北京大学人民医院",
+      "patient": "左*梅",
+      "type": "reinfusion",
+      "plan": "2026-08-10",
+      "actual": "2026-08-10"
+    },
+    {
+      "code": "9009126000168",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "黄*琴",
+      "type": "apheresis",
+      "plan": "2026-06-05",
+      "actual": "2026-06-05"
+    },
+    {
+      "code": "9009126000169",
+      "hosp": "福建省立医院",
+      "patient": "张*灯",
+      "type": "apheresis",
+      "plan": "2026-06-09",
+      "actual": "2026-06-09"
+    },
+    {
+      "code": "9009126000169",
+      "hosp": "福建省立医院",
+      "patient": "张*灯",
+      "type": "reinfusion",
+      "plan": "2026-08-06",
+      "actual": "2026-08-06"
+    },
+    {
+      "code": "9009126000171",
+      "hosp": "福建医科大学附属第一医院",
+      "patient": "曾*",
+      "type": "apheresis",
+      "plan": "2026-06-08",
+      "actual": "2026-06-08"
+    },
+    {
+      "code": "9009126000172",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2026-06-09",
+      "actual": "2026-06-09"
+    },
+    {
+      "code": "9009126000194",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "钟*发",
+      "type": "apheresis",
+      "plan": "2026-07-07",
+      "actual": "2026-07-07"
+    },
+    {
+      "code": "9009126000174",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "潘*娜",
+      "type": "apheresis",
+      "plan": "2026-06-11",
+      "actual": "2026-06-11"
+    },
+    {
+      "code": "9009126000174",
+      "hosp": "天津医科大学肿瘤医院（空港院区）",
+      "patient": "潘*娜",
+      "type": "reinfusion",
+      "plan": "2026-07-22",
+      "actual": "2026-07-22"
+    },
+    {
+      "code": "9009126000175",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "黄*浪",
+      "type": "apheresis",
+      "plan": "2026-06-10",
+      "actual": "2026-06-10"
+    },
+    {
+      "code": "9009126000176",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "吴*君",
+      "type": "apheresis",
+      "plan": "2026-06-11",
+      "actual": "2026-06-11"
+    },
+    {
+      "code": "9009126000177",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "纪*华",
+      "type": "apheresis",
+      "plan": "2026-06-12",
+      "actual": "2026-06-12"
+    },
+    {
+      "code": "9009126000177",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "纪*华",
+      "type": "reinfusion",
+      "plan": "2026-09-07",
+      "actual": "2026-09-07"
+    },
+    {
+      "code": "9009126000178",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "钟*娥",
+      "type": "apheresis",
+      "plan": "2026-06-17",
+      "actual": "2026-06-17"
+    },
+    {
+      "code": "9009126000178",
+      "hosp": "南昌大学第一附属医院",
+      "patient": "钟*娥",
+      "type": "reinfusion",
+      "plan": "2026-07-15",
+      "actual": "2026-07-15"
+    },
+    {
+      "code": "9009126000192",
+      "hosp": "北京大学人民医院",
+      "patient": "李*红",
+      "type": "apheresis",
+      "plan": "2026-07-08",
+      "actual": "2026-07-08"
+    },
+    {
+      "code": "9009126000192",
+      "hosp": "北京大学人民医院",
+      "patient": "李*红",
+      "type": "reinfusion",
+      "plan": "2026-08-05",
+      "actual": "2026-08-05"
+    },
+    {
+      "code": "9009126000179",
+      "hosp": "北京大学人民医院",
+      "patient": "林*杰",
+      "type": "apheresis",
+      "plan": "2026-06-23",
+      "actual": "2026-06-23"
+    },
+    {
+      "code": "9009126000179",
+      "hosp": "北京大学人民医院",
+      "patient": "林*杰",
+      "type": "reinfusion",
+      "plan": "2026-08-12",
+      "actual": "2026-08-12"
+    },
+    {
+      "code": "9009126000180",
+      "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+      "patient": "胡*",
+      "type": "apheresis",
+      "plan": "2026-06-24",
+      "actual": "2026-06-24"
+    },
+    {
+      "code": "9009126000181",
+      "hosp": "上海市同济医院",
+      "patient": "M*. M*N A*N",
+      "type": "apheresis",
+      "plan": "2026-06-25",
+      "actual": "2026-06-25"
+    },
+    {
+      "code": "9009126000181",
+      "hosp": "上海市同济医院",
+      "patient": "M*. M*N A*N",
+      "type": "reinfusion",
+      "plan": "2026-08-01",
+      "actual": ""
+    },
+    {
+      "code": "9009126000182",
+      "hosp": "中山大学附属第八医院",
+      "patient": "林*娟",
+      "type": "apheresis",
+      "plan": "2026-06-25",
+      "actual": "2026-06-25"
+    },
+    {
+      "code": "9009126000184",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "罗*雨",
+      "type": "apheresis",
+      "plan": "2026-06-30",
+      "actual": "2026-06-30"
+    },
+    {
+      "code": "9009126000186",
+      "hosp": "高博医疗集团上海力泉医院",
+      "patient": "J*M A*F S*E",
+      "type": "apheresis",
+      "plan": "2026-07-03",
+      "actual": "2026-07-03"
+    },
+    {
+      "code": "9009126000186",
+      "hosp": "高博医疗集团上海力泉医院",
+      "patient": "J*M A*F S*E",
+      "type": "reinfusion",
+      "plan": "2026-08-10",
+      "actual": "2026-08-10"
+    },
+    {
+      "code": "9009126000183",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*玲",
+      "type": "apheresis",
+      "plan": "2026-06-26",
+      "actual": "2026-06-26"
+    },
+    {
+      "code": "9009126000183",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "李*玲",
+      "type": "reinfusion",
+      "plan": "2026-07-27",
+      "actual": "2026-07-27"
+    },
+    {
+      "code": "9009126000185",
+      "hosp": "南方医科大学南方医院",
+      "patient": "李*芬",
+      "type": "apheresis",
+      "plan": "2026-07-02",
+      "actual": "2026-07-02"
+    },
+    {
+      "code": "9009126000187",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "闫*芹",
+      "type": "apheresis",
+      "plan": "2026-07-01",
+      "actual": "2026-07-01"
+    },
+    {
+      "code": "9009126000187",
+      "hosp": "山东大学齐鲁医院",
+      "patient": "闫*芹",
+      "type": "reinfusion",
+      "plan": "2026-08-05",
+      "actual": "2026-08-05"
+    },
+    {
+      "code": "9009126000188",
+      "hosp": "中国人民解放军西部战区总医院",
+      "patient": "孙*辉",
+      "type": "apheresis",
+      "plan": "2026-07-02",
+      "actual": "2026-07-02"
+    },
+    {
+      "code": "9009126000189",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "郑*昌",
+      "type": "apheresis",
+      "plan": "2026-07-02",
+      "actual": "2026-07-02"
+    },
+    {
+      "code": "9009126000190",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "张*昕",
+      "type": "apheresis",
+      "plan": "2026-07-02",
+      "actual": "2026-07-02"
+    },
+    {
+      "code": "9009126000190",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "张*昕",
+      "type": "reinfusion",
+      "plan": "2026-08-25",
+      "actual": "2026-08-25"
+    },
+    {
+      "code": "9009126000193",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "华*",
+      "type": "apheresis",
+      "plan": "2026-07-07",
+      "actual": "2026-07-07"
+    },
+    {
+      "code": "9009126000193",
+      "hosp": "首都医科大学附属北京朝阳医院",
+      "patient": "华*",
+      "type": "reinfusion",
+      "plan": "2026-08-19",
+      "actual": "2026-08-19"
+    },
+    {
+      "code": "9009126000195",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "付*勇",
+      "type": "apheresis",
+      "plan": "2026-07-08",
+      "actual": "2026-07-08"
+    },
+    {
+      "code": "9009126000196",
+      "hosp": "北京大学第一医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2026-07-08",
+      "actual": "2026-07-08"
+    },
+    {
+      "code": "9009126000196",
+      "hosp": "北京大学第一医院",
+      "patient": "刘*",
+      "type": "reinfusion",
+      "plan": "2026-08-10",
+      "actual": "2026-08-10"
+    },
+    {
+      "code": "9009126000200",
+      "hosp": "北京陆道培医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2026-07-09",
+      "actual": "2026-07-09"
+    },
+    {
+      "code": "9009126000199",
+      "hosp": "南京鼓楼医院",
+      "patient": "刘*生",
+      "type": "apheresis",
+      "plan": "2026-07-09",
+      "actual": "2026-07-09"
+    },
+    {
+      "code": "9009126000198",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "V*S G*S",
+      "type": "apheresis",
+      "plan": "2026-07-09",
+      "actual": "2026-07-09"
+    },
+    {
+      "code": "9009126000201",
+      "hosp": "中国人民解放军海军特色医学中心",
+      "patient": "郁*华",
+      "type": "apheresis",
+      "plan": "2026-07-10",
+      "actual": "2026-07-10"
+    },
+    {
+      "code": "9009126000238",
+      "hosp": "上海仁济医院",
+      "patient": "S*A C*E F*Y",
+      "type": "apheresis",
+      "plan": "2026-08-19",
+      "actual": "2026-08-19"
+    },
+    {
+      "code": "9009126000204",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "窦*荣",
+      "type": "apheresis",
+      "plan": "2026-07-14",
+      "actual": "2026-07-14"
+    },
+    {
+      "code": "9009126000203",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "潘*军",
+      "type": "apheresis",
+      "plan": "2026-07-14",
+      "actual": "2026-07-14"
+    },
+    {
+      "code": "9009126000207",
+      "hosp": "上海仁济医院",
+      "patient": "徐*芳",
+      "type": "apheresis",
+      "plan": "2026-07-17",
+      "actual": "2026-07-17"
+    },
+    {
+      "code": "9009126000207",
+      "hosp": "上海仁济医院",
+      "patient": "徐*芳",
+      "type": "reinfusion",
+      "plan": "2026-08-31",
+      "actual": "2026-08-31"
+    },
+    {
+      "code": "9009126000205",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*东",
+      "type": "apheresis",
+      "plan": "2026-07-16",
+      "actual": "2026-07-16"
+    },
+    {
+      "code": "9009126000206",
+      "hosp": "西安交通大学第一附属医院",
+      "patient": "加*设",
+      "type": "apheresis",
+      "plan": "2026-07-16",
+      "actual": "2026-07-16"
+    },
+    {
+      "code": "9009126000210",
+      "hosp": "上海市曜影医院",
+      "patient": "H*N F*S D*A",
+      "type": "apheresis",
+      "plan": "2026-07-21",
+      "actual": "2026-07-21"
+    },
+    {
+      "code": "9009126000217",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "常*成",
+      "type": "apheresis",
+      "plan": "2026-07-24",
+      "actual": "2026-07-24"
+    },
+    {
+      "code": "9009126000217",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "常*成",
+      "type": "reinfusion",
+      "plan": "2026-09-11",
+      "actual": ""
+    },
+    {
+      "code": "9009126000211",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "马*",
+      "type": "apheresis",
+      "plan": "2026-07-23",
+      "actual": "2026-07-23"
+    },
+    {
+      "code": "9009126000209",
+      "hosp": "中山大学附属第一医院",
+      "patient": "王*坚",
+      "type": "apheresis",
+      "plan": "2026-07-18",
+      "actual": "2026-07-18"
+    },
+    {
+      "code": "9009126000213",
+      "hosp": "川北医学院附属医院",
+      "patient": "刘*均",
+      "type": "apheresis",
+      "plan": "2026-07-23",
+      "actual": "2026-07-23"
+    },
+    {
+      "code": "9009126000212",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "续*玲",
+      "type": "apheresis",
+      "plan": "2026-07-22",
+      "actual": "2026-07-22"
+    },
+    {
+      "code": "9009126000214",
+      "hosp": "空军军医大学西京医院",
+      "patient": "董*麟",
+      "type": "apheresis",
+      "plan": "2026-07-22",
+      "actual": "2026-07-22"
+    },
+    {
+      "code": "9009126000215",
+      "hosp": "绍兴市人民医院",
+      "patient": "戴*芬",
+      "type": "apheresis",
+      "plan": "2026-07-29",
+      "actual": "2026-07-29"
+    },
+    {
+      "code": "9009126000215",
+      "hosp": "绍兴市人民医院",
+      "patient": "戴*芬",
+      "type": "reinfusion",
+      "plan": "2026-09-07",
+      "actual": "2026-09-07"
+    },
+    {
+      "code": "9009126000218",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "傅*军",
+      "type": "apheresis",
+      "plan": "2026-07-28",
+      "actual": "2026-07-28"
+    },
+    {
+      "code": "9009126000216",
+      "hosp": "上海仁济医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2026-07-23",
+      "actual": "2026-07-23"
+    },
+    {
+      "code": "9009126000227",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "林*桂",
+      "type": "apheresis",
+      "plan": "2026-08-14",
+      "actual": "2026-08-14"
+    },
+    {
+      "code": "9009126000219",
+      "hosp": "四川大学华西医院",
+      "patient": "黄*良",
+      "type": "apheresis",
+      "plan": "2026-07-29",
+      "actual": "2026-07-29"
+    },
+    {
+      "code": "9009126000219",
+      "hosp": "四川大学华西医院",
+      "patient": "黄*良",
+      "type": "reinfusion",
+      "plan": "2026-09-10",
+      "actual": ""
+    },
+    {
+      "code": "9009126000220",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "卢*凯",
+      "type": "apheresis",
+      "plan": "2026-07-30",
+      "actual": "2026-07-30"
+    },
+    {
+      "code": "9009126000221",
+      "hosp": "南方医科大学南方医院",
+      "patient": "高*振",
+      "type": "apheresis",
+      "plan": "2026-07-31",
+      "actual": "2026-07-31"
+    },
+    {
+      "code": "9009126000222",
+      "hosp": "华中科技大学同济医学院附属协和医院",
+      "patient": "郭*艳",
+      "type": "apheresis",
+      "plan": "2026-07-31",
+      "actual": "2026-07-31"
+    },
+    {
+      "code": "9009126000223",
+      "hosp": "上海市同济医院",
+      "patient": "陈*兰",
+      "type": "apheresis",
+      "plan": "2026-08-04",
+      "actual": "2026-08-04"
+    },
+    {
+      "code": "9009126000224",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "张*娥",
+      "type": "apheresis",
+      "plan": "2026-08-07",
+      "actual": "2026-08-07"
+    },
+    {
+      "code": "9009126000225",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "史*",
+      "type": "apheresis",
+      "plan": "2026-08-06",
+      "actual": "2026-08-06"
+    },
+    {
+      "code": "9009126000226",
+      "hosp": "浙江大学医学院附属邵逸夫医院",
+      "patient": "罗*绍",
+      "type": "apheresis",
+      "plan": "2026-08-07",
+      "actual": "2026-08-07"
+    },
+    {
+      "code": "9009126000228",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "许*坤",
+      "type": "apheresis",
+      "plan": "2026-08-10",
+      "actual": "2026-08-10"
+    },
+    {
+      "code": "9009126000231",
+      "hosp": "上海市同济医院",
+      "patient": "胡*君",
+      "type": "apheresis",
+      "plan": "2026-08-12",
+      "actual": "2026-08-12"
+    },
+    {
+      "code": "9009126000230",
+      "hosp": "福建医科大学附属协和医院",
+      "patient": "白*凯",
+      "type": "apheresis",
+      "plan": "2026-08-13",
+      "actual": "2026-08-13"
+    },
+    {
+      "code": "9009126000229",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "倪*对",
+      "type": "apheresis",
+      "plan": "2026-08-12",
+      "actual": "2026-08-12"
+    },
+    {
+      "code": "9009126000232",
+      "hosp": "郑州人民医院",
+      "patient": "王*霞",
+      "type": "apheresis",
+      "plan": "2026-08-12",
+      "actual": "2026-08-12"
+    },
+    {
+      "code": "9009126000233",
+      "hosp": "北京大学人民医院",
+      "patient": "陈*茁",
+      "type": "apheresis",
+      "plan": "2026-08-14",
+      "actual": "2026-08-14"
+    },
+    {
+      "code": "9009126000234",
+      "hosp": "中山大学附属第一医院",
+      "patient": "贺*莲",
+      "type": "apheresis",
+      "plan": "2026-08-14",
+      "actual": "2026-08-14"
+    },
+    {
+      "code": "9009126000235",
+      "hosp": "中山大学附属第一医院",
+      "patient": "陈*秀",
+      "type": "apheresis",
+      "plan": "2026-08-14",
+      "actual": "2026-08-14"
+    },
+    {
+      "code": "9009126000237",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "杨*士",
+      "type": "apheresis",
+      "plan": "2026-08-19",
+      "actual": "2026-08-19"
+    },
+    {
+      "code": "9009126000239",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "曾*君",
+      "type": "apheresis",
+      "plan": "2026-08-20",
+      "actual": "2026-08-20"
+    },
+    {
+      "code": "9009126000241",
+      "hosp": "中山大学附属第一医院",
+      "patient": "胡*茹",
+      "type": "apheresis",
+      "plan": "2026-08-20",
+      "actual": "2026-08-20"
+    },
+    {
+      "code": "9009126000240",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "谌*霖",
+      "type": "apheresis",
+      "plan": "2026-08-21",
+      "actual": "2026-08-21"
+    },
+    {
+      "code": "9009126000242",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "潘*洋",
+      "type": "apheresis",
+      "plan": "2026-08-20",
+      "actual": "2026-08-20"
+    },
+    {
+      "code": "9009126000243",
+      "hosp": "空军军医大学西京医院",
+      "patient": "卢*鑫",
+      "type": "apheresis",
+      "plan": "2026-08-21",
+      "actual": "2026-08-21"
+    },
+    {
+      "code": "9009126000255",
+      "hosp": "河北医科大学第二医院（河北省第二医院）",
+      "patient": "陈*敏",
+      "type": "apheresis",
+      "plan": "2026-08-28",
+      "actual": "2026-08-28"
+    },
+    {
+      "code": "9009126000247",
+      "hosp": "北京大学人民医院",
+      "patient": "任*兰",
+      "type": "apheresis",
+      "plan": "2026-08-27",
+      "actual": "2026-08-27"
+    },
+    {
+      "code": "9009126000244",
+      "hosp": "北京协和医院",
+      "patient": "黄*珍",
+      "type": "apheresis",
+      "plan": "2026-08-31",
+      "actual": "2026-08-31"
+    },
+    {
+      "code": "9009126000246",
+      "hosp": "北京协和医院",
+      "patient": "秦*云",
+      "type": "apheresis",
+      "plan": "2026-08-26",
+      "actual": "2026-08-26"
+    },
+    {
+      "code": "9009126000248",
+      "hosp": "北京大学人民医院",
+      "patient": "闫*生",
+      "type": "apheresis",
+      "plan": "2026-08-25",
+      "actual": "2026-08-25"
+    },
+    {
+      "code": "9009126000245",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "陶*蕙",
+      "type": "apheresis",
+      "plan": "2026-08-24",
+      "actual": "2026-08-24"
+    },
+    {
+      "code": "9009126000249",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "刘*珍",
+      "type": "apheresis",
+      "plan": "2026-08-25",
+      "actual": "2026-08-25"
+    },
+    {
+      "code": "9009126000251",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "杨*燕",
+      "type": "apheresis",
+      "plan": "2026-08-26",
+      "actual": "2026-08-26"
+    },
+    {
+      "code": "9009126000252",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*勇",
+      "type": "apheresis",
+      "plan": "2026-08-27",
+      "actual": "2026-08-27"
+    },
+    {
+      "code": "9009126000253",
+      "hosp": "南方医科大学南方医院",
+      "patient": "徐*梁",
+      "type": "apheresis",
+      "plan": "2026-08-28",
+      "actual": "2026-08-28"
+    },
+    {
+      "code": "9009126000256",
+      "hosp": "北京高博博仁医院",
+      "patient": "杨*业",
+      "type": "apheresis",
+      "plan": "2026-08-28",
+      "actual": "2026-08-28"
+    },
+    {
+      "code": "9009126000258",
+      "hosp": "上海长征医院",
+      "patient": "支*林",
+      "type": "apheresis",
+      "plan": "2026-09-01",
+      "actual": "2026-09-01"
+    },
+    {
+      "code": "9009126000257",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "姜*莹",
+      "type": "apheresis",
+      "plan": "2026-08-28",
+      "actual": "2026-08-28"
+    },
+    {
+      "code": "9009126000264",
+      "hosp": "中山大学孙逸仙纪念医院",
+      "patient": "张*元",
+      "type": "apheresis",
+      "plan": "2026-09-08",
+      "actual": "2026-09-08"
+    },
+    {
+      "code": "9009126000260",
+      "hosp": "北京协和医院",
+      "patient": "王*",
+      "type": "apheresis",
+      "plan": "2026-09-03",
+      "actual": "2026-09-03"
+    },
+    {
+      "code": "9009126000259",
+      "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+      "patient": "姜*",
+      "type": "apheresis",
+      "plan": "2026-09-02",
+      "actual": "2026-09-02"
+    },
+    {
+      "code": "9009126000261",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "李*川",
+      "type": "apheresis",
+      "plan": "2026-09-04",
+      "actual": "2026-09-04"
+    },
+    {
+      "code": "9009126000262",
+      "hosp": "苏州大学附属第一医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2026-09-04",
+      "actual": "2026-09-04"
+    },
+    {
+      "code": "9009126000263",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "宋*龙",
+      "type": "apheresis",
+      "plan": "2026-09-08",
+      "actual": "2026-09-08"
+    },
+    {
+      "code": "9009126000265",
+      "hosp": "北京大学人民医院",
+      "patient": "刘*",
+      "type": "apheresis",
+      "plan": "2026-09-08",
+      "actual": "2026-09-08"
+    },
+    {
+      "code": "9009126000267",
+      "hosp": "空军军医大学西京医院",
+      "patient": "贾*珍",
+      "type": "apheresis",
+      "plan": "2026-09-09",
+      "actual": ""
+    },
+    {
+      "code": "9009126000266",
+      "hosp": "北京大学人民医院",
+      "patient": "袁*凡",
+      "type": "apheresis",
+      "plan": "2026-09-09",
+      "actual": ""
+    },
+    {
+      "code": "9009126000269",
+      "hosp": "中山大学附属第一医院",
+      "patient": "张*",
+      "type": "apheresis",
+      "plan": "2026-09-09",
+      "actual": ""
+    },
+    {
+      "code": "9009126000270",
+      "hosp": "中国医学科学院血液病医院",
+      "patient": "王*东",
+      "type": "apheresis",
+      "plan": "2026-09-09",
+      "actual": ""
+    },
+    {
+      "code": "A1D0299",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "C*Y",
+      "type": "apheresis",
+      "plan": "2024-11-27",
+      "actual": "2024-11-27"
+    },
+    {
+      "code": "A1D0299",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "C*Y",
+      "type": "reinfusion",
+      "plan": "2024-12-30",
+      "actual": "2024-12-31"
+    },
+    {
+      "code": "A1E0051",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "C*K",
+      "type": "apheresis",
+      "plan": "2025-03-12",
+      "actual": "2025-03-12"
+    },
+    {
+      "code": "A1E0051",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "C*K",
+      "type": "reinfusion",
+      "plan": "2025-04-30",
+      "actual": "2025-04-30"
+    },
+    {
+      "code": "A1E0026",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "N*C",
+      "type": "apheresis",
+      "plan": "2025-03-06",
+      "actual": "2025-03-06"
+    },
+    {
+      "code": "A1E0026",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "N*C",
+      "type": "reinfusion",
+      "plan": "2025-04-23",
+      "actual": "2025-05-08"
+    },
+    {
+      "code": "A1E0211",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "L*M",
+      "type": "apheresis",
+      "plan": "2025-09-02",
+      "actual": "2025-09-02"
+    },
+    {
+      "code": "A1E0211",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "L*M",
+      "type": "reinfusion",
+      "plan": "2025-10-22",
+      "actual": "2025-11-03"
+    },
+    {
+      "code": "A1E0223",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "T*T",
+      "type": "apheresis",
+      "plan": "2025-09-10",
+      "actual": "2025-09-10"
+    },
+    {
+      "code": "A1E0223",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "T*T",
+      "type": "reinfusion",
+      "plan": "2025-11-04",
+      "actual": "2026-02-12"
+    },
+    {
+      "code": "9009125000020",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "H*R",
+      "type": "apheresis",
+      "plan": "2025-11-20",
+      "actual": "2025-11-20"
+    },
+    {
+      "code": "9009125000020",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "H*R",
+      "type": "reinfusion",
+      "plan": "2026-01-05",
+      "actual": "2026-02-23"
+    },
+    {
+      "code": "9009126000020",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "S*M",
+      "type": "apheresis",
+      "plan": "2026-01-19",
+      "actual": "2026-01-19"
+    },
+    {
+      "code": "9009126000020",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "S*M",
+      "type": "reinfusion",
+      "plan": "2026-02-23",
+      "actual": "2026-04-08"
+    },
+    {
+      "code": "9009126000027",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "W*M",
+      "type": "apheresis",
+      "plan": "2026-01-27",
+      "actual": "2026-01-27"
+    },
+    {
+      "code": "9009126000027",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "W*M",
+      "type": "reinfusion",
+      "plan": "2026-03-16",
+      "actual": "2026-04-17"
+    },
+    {
+      "code": "9009126000029",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "W*H",
+      "type": "apheresis",
+      "plan": "2026-02-05",
+      "actual": "2026-02-05"
+    },
+    {
+      "code": "9009126000029",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "W*H",
+      "type": "reinfusion",
+      "plan": "2026-04-01",
+      "actual": "2026-04-01"
+    },
+    {
+      "code": "9009126000037",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "W*W",
+      "type": "apheresis",
+      "plan": "2026-02-04",
+      "actual": "2026-02-04"
+    },
+    {
+      "code": "9009126000037",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "W*W",
+      "type": "reinfusion",
+      "plan": "2026-04-03",
+      "actual": "2026-04-27"
+    },
+    {
+      "code": "9009126000091",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "K*, K*I Y*G A*E",
+      "type": "apheresis",
+      "plan": "2026-04-01",
+      "actual": "2026-04-01"
+    },
+    {
+      "code": "9009126000091",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "K*, K*I Y*G A*E",
+      "type": "reinfusion",
+      "plan": "2026-04-30",
+      "actual": "2026-05-15"
+    },
+    {
+      "code": "9009126000114",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "C*I B*G",
+      "type": "apheresis",
+      "plan": "2026-04-22",
+      "actual": "2026-04-22"
+    },
+    {
+      "code": "9009126000114",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "C*I B*G",
+      "type": "reinfusion",
+      "plan": "2026-05-21",
+      "actual": "2026-06-12"
+    },
+    {
+      "code": "9009126000208",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "S*U S*I N*I",
+      "type": "apheresis",
+      "plan": "2026-07-23",
+      "actual": "2026-07-23"
+    },
+    {
+      "code": "9009126000208",
+      "hosp": "玛丽医院（Queen Mary Hospital）",
+      "patient": "S*U S*I N*I",
+      "type": "reinfusion",
+      "plan": "2026-09-02",
+      "actual": "2026-09-07"
+    },
+    {
+      "code": "9009126000197",
+      "hosp": "PARKWAY CANCER CENTRE",
+      "patient": "T*n V*n M*h",
+      "type": "apheresis",
+      "plan": "2026-07-13",
+      "actual": "2026-07-13"
+    },
+    {
+      "code": "9009126000197",
+      "hosp": "PARKWAY CANCER CENTRE",
+      "patient": "T*n V*n M*h",
+      "type": "reinfusion",
+      "plan": "2026-08-18",
+      "actual": "2026-08-18"
+    }
+  ]
 };

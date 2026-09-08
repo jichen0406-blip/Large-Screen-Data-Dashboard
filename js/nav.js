@@ -13,7 +13,8 @@
         { id: 'page4.html', key: 'region1', num: 'P7', name: '辖区数据管理1' },
         { id: 'page5.html', key: 'region2', num: 'P8', name: '辖区数据管理2' },
         { id: 'page6.html', key: 'region3', num: 'P9', name: '辖区数据管理3' },
-        { id: 'page8.html', key: 'reserved', num: 'P10', name: '预留' }
+        { id: 'page10.html', key: 'cart_daily', num: 'P10', name: 'CART运营每日跟进' },
+        { id: 'page8.html', key: 'reserved', num: 'P11', name: '预留' },
     ];
     var PAGES = window.BOARD_PAGES;
     var PER = 4; // 每屏最多 4 项
@@ -38,6 +39,7 @@
         'changelog.html': '<svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>',
         'index.html': '<svg viewBox="0 0 24 24"><path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg>',
         'page9.html': '<svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>',
+        'page10.html': '<svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM16.53 11.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17l5.94-5.94z"/></svg>',
         'flow.html': '<svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>',
         'page2.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
         'page3.html': '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>',
@@ -47,19 +49,76 @@
         'page7.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>',
         'page8.html': '<svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>'
     };
-    // 左侧悬浮导航栏：白色 icon 常驻，hover 展开显示 编号+名称，当前页高亮
+    // 页面分组：左侧导航一级入口（悬停/点击展开该组页面），key 不在任何组则自动归入「其他」
+    // 新增页面若想进组，把它的 key 加进对应 keys 即可；不维护这里就显示在「其他」组里
+    var NAV_GROUPS = [
+        { label: '更新日志', iconId: 'changelog.html', keys: ['changelog'] },
+        { label: '总览', iconId: 'index.html', keys: ['index', 'flow'] },
+        { label: '每日跟进', iconId: 'page9.html', keys: ['daily30', 'cart_daily'] },
+        { label: '海外业务', iconId: 'page3.html', keys: ['sales', 'reg'] },
+        { label: '辖区管理', iconId: 'page4.html', keys: ['region1', 'region2', 'region3'] },
+        { label: '系统', iconId: 'page7.html', keys: ['reserved', 'admin'] }
+    ];
+    function groupDefs() {
+        return NAV_GROUPS.slice();
+    }
+    var sideNavClickBound = false;
+    // 左侧悬浮导航：分组图标常驻，hover 滑出该组页面（分组随权限过滤；当前页所在组高亮）
     function renderSideNav() {
         var $nav = $('#sideNav');
         if (!$nav.length) return;
+        var pages = allowedPages();
+        var groups = groupDefs();
         var html = '';
-        allowedPages().forEach(function (p) {
-            var isCur = p.id === cur;
-            html += '<a class="side-item' + (isCur ? ' cur' : '') + '" href="' + p.id + '" title="' + p.num + ' ' + p.name + '">' +
-                '<span class="side-ico">' + (NAV_ICONS[p.id] || '') + '</span>' +
-                '<span class="side-name">' + p.num + ' ' + p.name + '</span>' +
-                '</a>';
+        var seen = {};
+        groups.forEach(function (g) {
+            var inGroup = pages.filter(function (p) { return g.keys.indexOf(p.key) >= 0; });
+            inGroup.forEach(function (p) { seen[p.key] = true; });
+            if (!inGroup.length) return;
+            var hasCur = inGroup.some(function (p) { return p.id === cur; });
+            var rows = inGroup.map(function (p) {
+                var isCur = p.id === cur;
+                return '<a class="side-subitem' + (isCur ? ' cur' : '') + '" href="' + p.id + '">' +
+                    '<span class="ss-ico">' + (NAV_ICONS[p.id] || '') + '</span>' +
+                    '<span class="ss-name">' + p.name + '</span>' +
+                    (isCur ? '<em>当前</em>' : '') +
+                    '</a>';
+            }).join('');
+            html += '<div class="side-grp' + (hasCur ? ' cur' : '') + '">' +
+                '<a class="side-item' + (hasCur ? ' cur' : '') + '" href="javascript:;" title="' + g.label + '">' +
+                '<span class="side-ico">' + (NAV_ICONS[g.iconId] || '') + '</span>' +
+                '<span class="side-name">' + g.label + '</span></a>' +
+                '<div class="side-sub"><div class="side-sub-hd">' + (NAV_ICONS[g.iconId] || '') + g.label + '</div>' + rows + '</div>' +
+                '</div>';
         });
+        // 未归入任何组的页面 → 兜底「其他」组
+        var rest = pages.filter(function (p) { return !seen[p.key]; });
+        if (rest.length) {
+            var g2 = { label: '其他', iconId: 'page8.html', keys: [] };
+            var hasCur2 = rest.some(function (p) { return p.id === cur; });
+            html += '<div class="side-grp' + (hasCur2 ? ' cur' : '') + '">' +
+                '<a class="side-item' + (hasCur2 ? ' cur' : '') + '" href="javascript:;" title="其他">' +
+                '<span class="side-ico">' + (NAV_ICONS[g2.iconId] || '') + '</span>' +
+                '<span class="side-name">其他</span></a>' +
+                '<div class="side-sub"><div class="side-sub-hd">' + (NAV_ICONS[g2.iconId] || '') + '其他</div>' +
+                rest.map(function (p) {
+                    var isCur = p.id === cur;
+                    return '<a class="side-subitem' + (isCur ? ' cur' : '') + '" href="' + p.id + '">' +
+                        '<span class="ss-ico">' + (NAV_ICONS[p.id] || '') + '</span>' +
+                        '<span class="ss-name">' + p.name + '</span>' +
+                        (isCur ? '<em>当前</em>' : '') + '</a>';
+                }).join('') + '</div></div>';
+        }
         $nav.html(html);
+        // 分组图标点击：钉住/收起该组子菜单（无 hover 设备可用）；仅绑定一次
+        if (!sideNavClickBound) {
+            sideNavClickBound = true;
+            $nav.on('click', '.side-item', function () {
+                var $g = $(this).closest('.side-grp');
+                $nav.find('.side-grp.open').not($g).removeClass('open');
+                $g.toggleClass('open');
+            });
+        }
     }
     // 导航栏固定（CSS top:72px 不动），高度匹配右侧内容，至少填满可视区
     function sizeSideNav() {

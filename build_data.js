@@ -89,6 +89,8 @@ headers.forEach(function(h, i) {
   if (h.includes('生产质量') && h.includes('放行时间')) ci.qa = i;
   if (h === '支付方式') ci.pay = i;
   if (h === '单采预约时间') ci.apmt = i;
+  if (h === '计划回输时间') ci.planRe = i;
+  if (h.includes('实际回输') && h.includes('开始时间')) ci.reStart = i;
   if (h === '仓库接收单采血时间') ci.receive = i;
   if (h === '患者姓名') ci.patient = i;
   if (h === '追溯码') ci.code = i;
@@ -158,6 +160,8 @@ for (var i = 2; i < bsRows.length; i++) {
     qa: parseDt(row[ci.qa]),
     pay: String(row[ci.pay] || '').trim(),
     apmt: excelToDate(row[ci.apmt]),
+    planRe: excelToDate(row[ci.planRe]),
+    reStart: excelToDate(row[ci.reStart]),
     receive: excelToDate(row[ci.receive]),
     patient: maskName(String(row[ci.patient] || ''))
   });
@@ -765,6 +769,22 @@ records.forEach(function (r) {
   });
 });
 
+// ── 8p. CART运营每日跟进：单采/回输 双记录明细（取消/终止或未排期 不产出） ──
+// 取消/终止 = order dict 取消回输标记='1'（整单过滤）；计划时间为空的那条不生成（未排期不展示）
+// 状态灯由前端按「今天(客户端UTC+8)」实时判定，本层只给原始计划/实际时间
+var CART_DAILY = [];
+records.forEach(function (r) {
+  var d = dictInfo[r.no] || {};
+  if (d.cancel === '1') return;
+  if (r.apmt) {
+    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, type: 'apheresis', plan: r.apmt, actual: r.ap || '' });
+  }
+  if (r.planRe) {
+    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, type: 'reinfusion', plan: r.planRe, actual: r.reStart || '' });
+  }
+});
+console.log('CART_DAILY 记录数:', CART_DAILY.length);
+
 // ── 9. 输出 js/data.js（页面直接 <script> 引用） ──
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
   '/* 数据源: ' + bsFile + ' | 数据截止: ' + DP + ' */\n' +
@@ -789,7 +809,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     REGION1_KPI: REGION1_KPI,
     REGIONS: REGIONS,
     GLOBAL_REG: GLOBAL_REG,
-    FLOW: FLOW
+    FLOW: FLOW,
+    CART_DAILY: CART_DAILY
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
