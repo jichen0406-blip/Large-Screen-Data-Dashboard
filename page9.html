@@ -41,8 +41,9 @@
 	.p9-col{ flex:1; min-width:0; padding:8px 6px; border-left:1px solid rgba(255,255,255,.06); }
 	.p9-items{ list-style:none; padding:0; margin:0; font-size:13px; line-height:1.7; }
 	.p9-items li{ padding:1px 0; word-break:break-all; }
-	.p9-hn{ color:rgba(255,255,255,.82); }
-	.p9-pn{ color:rgba(255,255,255,.55); margin-left:4px; }
+	.p9-code{ font-family:Consolas,Monaco,'Courier New',monospace; color:#ffd34d; margin-right:6px; }
+	.p9-hn{ color:rgba(255,255,255,.82); margin-right:4px; }
+	.p9-pn{ color:rgba(255,255,255,.55); }
 	.p9-empty{ color:rgba(255,255,255,.28); font-style:italic; font-size:10px; }
 	.fs-body .p9-tbl-wrap{ height:100% !important; max-height:none; overflow:auto; }
 	.fs-body .p9-chart{ height:100% !important; }
@@ -108,7 +109,7 @@
 			<div class="p9-chart" id="p9chart"></div>
 		</div>
 		<div class="p9-box">
-			<div class="p9-tit">每日进展明细（医院 + 脱敏患者）<button class="map-fs" type="button" data-fs="p9list" data-title="每日进展明细">⛶</button></div>
+			<div class="p9-tit">每日进展明细（追溯码 + 医院 + 脱敏患者）<button class="map-fs" type="button" data-fs="p9list" data-title="每日进展明细">⛶</button></div>
 			<div class="p9-tbl-wrap" id="p9list"></div>
 		</div>
 	</div>
