@@ -13,6 +13,7 @@ js/Bubble.js
 
 sync_server.js
 users.js.bak
+*.bak
 # 部署前备份目录（不进 git）
 _backup*/
 _backup*

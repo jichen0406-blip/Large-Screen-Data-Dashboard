@@ -1,10 +1,10 @@
 // Page3 渲染逻辑：全球注册进度 —— 世界地图（状态着色 + 合作伙伴 icon）+ 甘特图（时间轴进度条）
-// 数据：BOARD_DATA.REG（build_data.js 生成）
+// 数据：BOARD_DATA.GLOBAL_REG（build_data.js 生成）
 $(function () {
     var B = window.BOARD_DATA;
-    if (!B || !B.REG || !B.REG.items || !B.REG.items.length) return;
-    var REG = B.REG;
-    var items = REG.items;
+    if (!B || !B.GLOBAL_REG || !B.GLOBAL_REG.items || !B.GLOBAL_REG.items.length) return;
+    var GLOBAL_REG = B.GLOBAL_REG;
+    var items = GLOBAL_REG.items;
 
     // 4 种申报状态色（深色大屏底）
     var STATUS_COLOR = {
@@ -258,10 +258,10 @@ $(function () {
         }
         axisHtml += '</div>';
 
-        // 按区域分组（保持 REG.regions 顺序；中国为本上市展示项，甘特图不体现）
+        // 按区域分组（保持 GLOBAL_REG.regions 顺序；中国为本上市展示项，甘特图不体现）
         var ganttItems = items.filter(function (it) { return it.name !== '中国'; });
         var groups = {};
-        REG.regions.forEach(function (r) { groups[r] = []; });
+        GLOBAL_REG.regions.forEach(function (r) { groups[r] = []; });
         ganttItems.forEach(function (it) {
             if (!groups[it.region]) groups[it.region] = [];
             groups[it.region].push(it);
@@ -277,7 +277,7 @@ $(function () {
             '<th class="p3r-gt-time">获批时间</th>' +
             '</tr></thead>';
         var bodyRows = '';
-        REG.regions.forEach(function (r) {
+        GLOBAL_REG.regions.forEach(function (r) {
             var list = groups[r] || [];
             if (!list.length) return;
             list.forEach(function (it, idx) {

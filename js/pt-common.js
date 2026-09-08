@@ -1,5 +1,5 @@
-// pt-common.js — Page3/Page4 共享：时间控制（P3/P4 共享 sessionStorage）+ 表格辅助 + 五行单元格渲染
-// 数据：window.BOARD_DATA.P3T
+// pt-common.js — 辖区1/2/3 页面共享：时间控制（sessionStorage pt_time）+ 表格辅助 + 五行单元格渲染
+// 数据：window.BOARD_DATA.REGIONS
 
 function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
@@ -50,10 +50,10 @@ function initPtTime(selY, selM, yearKeys, onchange) {
     var yArr = Object.keys(yearKeys).sort();
     var now = new Date();
     var defY = String(now.getFullYear()), defM = now.getMonth() + 1;
-    // 默认最新有数据月份：扫描 P3T.ND/HOSP 的 'YYYY-MM' 键，取下拉可选年份内的最大月份
+    // 默认最新有数据月份：扫描 REGIONS.ND/HOSP 的 'YYYY-MM' 键，取下拉可选年份内的最大月份
     try {
         var B = window.BOARD_DATA;
-        var bks = (B && B.P3T) ? [B.P3T.ND, B.P3T.HOSP] : [];
+        var bks = (B && B.REGIONS) ? [B.REGIONS.ND, B.REGIONS.HOSP] : [];
         var lm = null;
         bks.forEach(function (bk) {
             if (!bk) return;

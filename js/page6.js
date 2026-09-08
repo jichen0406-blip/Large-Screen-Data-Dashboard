@@ -1,14 +1,14 @@
 // Page7：辖区数据管理3 — 省份数据 / 医院数据（YTD + 同比）
 // 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
-// 数据：window.BOARD_DATA.P3T.HOSP = 'YYYY-MM' → 'AM|省份|城市|医院' → {o,r}
-//       P3T.HSLAST = '省份|城市|医院名' → 'YYYY-MM-DD'（最近一次下单，不随时间控制器变动）
+// 数据：window.BOARD_DATA.REGIONS.HOSP = 'YYYY-MM' → 'AM|省份|城市|医院' → {o,r}
+//       REGIONS.HSLAST = '省份|城市|医院名' → 'YYYY-MM-DD'（最近一次下单，不随时间控制器变动）
 $(function () {
     var B = window.BOARD_DATA;
-    if (!B || !B.P3T || !B.P3T.HOSP) return;
-    var HOSP = B.P3T.HOSP;
-    var HSLAST = B.P3T.HSLAST || {};
+    if (!B || !B.REGIONS || !B.REGIONS.HOSP) return;
+    var HOSP = B.REGIONS.HOSP;
+    var HSLAST = B.REGIONS.HSLAST || {};
     var DP = B.DP || '';
-    var AMS = B.P3T.AMS || [];
+    var AMS = B.REGIONS.AMS || [];
 
     var yearKeys = {};
     Object.keys(HOSP).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
@@ -75,7 +75,7 @@ $(function () {
         document.getElementById('p6tHS').innerHTML = h;
     }
 
-    // 省份数据：按 AM 分组（P3T.AMS 顺序），组内下单量降序；下单医院数=YTD内有下单的医院去重
+    // 省份数据：按 AM 分组（REGIONS.AMS 顺序），组内下单量降序；下单医院数=YTD内有下单的医院去重
     function renderPV(rows) {
         var provAgg = {}; // 'am|prov' → {o,r,lo,lr,hosp}
         rows.forEach(function (r) {

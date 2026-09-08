@@ -1,5 +1,5 @@
 // Page2 渲染逻辑：年份切换 + 4卡片 + 海外患者地图（热力+飞线+中国标记）+ 海外商业化地图（辐射圆点+Top10浮窗）
-// 数据：BOARD_DATA.P2（build_data.js 生成）
+// 数据：BOARD_DATA.OVERSEAS（build_data.js 生成）
 function countUp2(el, target, dur) {
     if (!el) return;
     target = parseInt(target, 10) || 0;
@@ -17,8 +17,8 @@ function countUp2(el, target, dur) {
 
 $(function () {
     var B = window.BOARD_DATA;
-    if (!B || !B.P2) return;
-    var P2 = B.P2;
+    if (!B || !B.OVERSEAS) return;
+    var OVERSEAS = B.OVERSEAS;
     var curYear = 'all';
 
     // 英文区域名 → 中文（注册地图时直接改名，避开 ECharts4 map 系列不支持 nameMap 匹配的问题）
@@ -63,7 +63,7 @@ $(function () {
 
     // 年份按钮（全部 + 数据实际年份，2027 等自动出现）
     var yearsHtml = '<span class="p2y-label">数据年份</span><div class="p2y-btns"><button type="button" class="p2y-btn active" data-y="all">全部</button>';
-    P2.YEARS.forEach(function (y) {
+    OVERSEAS.YEARS.forEach(function (y) {
         yearsHtml += '<button type="button" class="p2y-btn" data-y="' + y + '">' + y + '</button>';
     });
     yearsHtml += '</div>';
@@ -71,7 +71,7 @@ $(function () {
 
     function agg(obj) { return curYear === 'all' ? obj.all : (obj.y[curYear] || {}); }
     function cardData() {
-        return curYear === 'all' ? P2.CARD.all : (P2.CARD.y[curYear] || { npO: 0, npR: 0, dO: 0, dR: 0 });
+        return curYear === 'all' ? OVERSEAS.CARD.all : (OVERSEAS.CARD.y[curYear] || { npO: 0, npR: 0, dO: 0, dR: 0 });
     }
     function renderCards() {
         var c = cardData();
@@ -272,8 +272,8 @@ $(function () {
     }
 
     function renderMaps() {
-        var lmd = buildMapData(agg(P2.LEFT));
-        var rmd = buildMapData(agg(P2.RIGHT));
+        var lmd = buildMapData(agg(OVERSEAS.LEFT));
+        var rmd = buildMapData(agg(OVERSEAS.RIGHT));
         leftChart.setOption(mapOption(lmd, true, false), true);
         rightChart.setOption(mapOption(rmd, false, true), true);
         startAuto(rightChart, rmd);
@@ -321,7 +321,7 @@ $(function () {
         $('#' + id).html(html);
         document.getElementById(id)._dup = false;
     }
-    function renderTables() { fillTbl('p2tblL', agg(P2.LEFT)); fillTblRight('p2tblR', agg(P2.RIGHTD)); setupTblAutoScroll(); }
+    function renderTables() { fillTbl('p2tblL', agg(OVERSEAS.LEFT)); fillTblRight('p2tblR', agg(OVERSEAS.RIGHTD)); setupTblAutoScroll(); }
     // 明细表行数控制（全屏放大 30 行，普通 10 行）
     window.P2_TBL_ROWS = 10;
     window.p2SetTblRows = function (n) { window.P2_TBL_ROWS = n; renderTables(); };
@@ -420,7 +420,7 @@ $(function () {
     // Top10 浮窗（右侧海外商业化地图点击区域或散点）
     function chartPause(chart) { chart._p2paused = true; clearInterval(chart._p2timer); }
     function openTop10(zh) {
-        var top = curYear === 'all' ? P2.TOP10.all : (P2.TOP10.y[curYear] || {});
+        var top = curYear === 'all' ? OVERSEAS.TOP10.all : (OVERSEAS.TOP10.y[curYear] || {});
         var d = top[zh];
         $('#p2Title').text(zh + ' · 海外商业化');
         function fill(id, list) {
@@ -447,7 +447,7 @@ $(function () {
     leftChart.on('mouseover', function (params) {
         var zh = (params.seriesType === 'effectScatter' && params.data) ? params.data.name : (params.componentType === 'geo' ? params.name : null);
         if (!zh) return;
-        var data = (curYear === 'all' ? P2.LEFT.all : (P2.LEFT.y[curYear] || {}))[zh];
+        var data = (curYear === 'all' ? OVERSEAS.LEFT.all : (OVERSEAS.LEFT.y[curYear] || {}))[zh];
         if (!data) return;
         var evt = params.event, x = 200, y = 120;
         if (evt && evt.offsetX != null) { x = evt.offsetX; y = evt.offsetY; }
@@ -459,12 +459,12 @@ $(function () {
     rightChart.on('click', function (params) {
         var zh = (params.seriesType === 'effectScatter' && params.data) ? params.data.name : (params.componentType === 'geo' ? params.name : null);
         if (!zh) return;
-        var has = (curYear === 'all' ? P2.RIGHT.all : (P2.RIGHT.y[curYear] || {}))[zh];
+        var has = (curYear === 'all' ? OVERSEAS.RIGHT.all : (OVERSEAS.RIGHT.y[curYear] || {}))[zh];
         if (has) openTop10(zh);
     });
     $('#p2Close').on('click', function () {
         $('#p2PanelMask').hide();
-        startAuto(rightChart, buildMapData(agg(P2.RIGHT)));
+        startAuto(rightChart, buildMapData(agg(OVERSEAS.RIGHT)));
     });
     $('#p2PanelMask').on('click', function (e) { if (e.target === this) $('#p2Close').trigger('click'); });
 
@@ -475,6 +475,6 @@ $(function () {
     // 地图放大全屏时暂停右侧图轮播，关闭恢复（左侧海外导流图本身不轮播）
     $(document).on('boardfs', function (e, d) {
         if (d && d.active) { chartPause(rightChart); }
-        else { $('#p2PanelMask').hide(); startAuto(rightChart, buildMapData(agg(P2.RIGHT))); }
+        else { $('#p2PanelMask').hide(); startAuto(rightChart, buildMapData(agg(OVERSEAS.RIGHT))); }
     });
 });
