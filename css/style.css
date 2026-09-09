@@ -663,6 +663,10 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .cart-card.st-green{ border-left-color: #62c98d; background: rgba(98,201,141,.26); }
 .cc-top{ display: flex; align-items: center; gap: 5px; }
 .cc-type{ font-size: 10px; color: rgba(255,255,255,.9); background: rgba(79,227,255,.2); border: 1px solid rgba(79,227,255,.45); padding: 0 3px; border-radius: 3px; flex: none; }
+/* 日历卡片类型底色：单采 青 / 回输 紫（仅二分类，与状态灯四色无关） */
+.cc-type.t-apheresis{ background: rgba(79,227,255,.28); border-color: rgba(79,227,255,.6); color: #e8fbff; }
+.cc-type.t-reinfusion{ background: rgba(177,138,255,.28); border-color: rgba(177,138,255,.6); color: #f2ebff; }
+.cc-cos{ font-size: 10px; color: rgba(255,255,255,.8); flex: none; white-space: nowrap; }
 .cc-code{ font-size: 11px; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
 .cc-bot{ display: flex; gap: 6px; margin-top: 1px; }
 .cc-hosp{ font-size: 10px; color: rgba(255,255,255,.8); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
@@ -678,6 +682,8 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .cart-tbl-row .c-hosp, .cart-tbl-hdr .c-hosp{ flex: 1.8; min-width: 150px; }
 .cart-tbl-row .c-pat, .cart-tbl-hdr .c-pat{ flex: .7; min-width: 60px; }
 .cart-tbl-row .c-type, .cart-tbl-hdr .c-type{ flex: .5; min-width: 46px; }
+.cart-tbl-row .c-cos, .cart-tbl-hdr .c-cos{ flex: .6; min-width: 64px; }
+.cart-tbl-row .c-cos.no{ color: rgba(255,255,255,.35); }
 .cart-tbl-row .c-st, .cart-tbl-hdr .c-st{ flex: 1; min-width: 110px; }
 .cart-tbl-row .c-plan, .cart-tbl-hdr .c-plan{ flex: .8; min-width: 80px; }
 .cart-tbl-row .c-act, .cart-tbl-hdr .c-act{ flex: .8; min-width: 84px; }

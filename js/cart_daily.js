@@ -73,8 +73,8 @@
     function cardHTML(r, today) {
         var st = stateOf(r, today);
         var hit = hl && hl.code === r.code && hl.type === r.type ? ' cart-hit' : '';
-        return '<div class="cart-card st-' + st + hit + '" data-k="' + r.code + '" data-t="' + r.type + '" title="追溯码 ' + r.code + '｜' + r.hosp + '｜' + (r.patient || '·') + '">' +
-            '<div class="cc-top"><span class="cc-type">' + TYPE_LABEL[r.type] + '</span><span class="cc-code">' + (r.code || '(无码)') + '</span></div>' +
+        return '<div class="cart-card st-' + st + hit + '" data-k="' + r.code + '" data-t="' + r.type + '" title="追溯码 ' + r.code + '｜' + r.hosp + '｜' + (r.patient || '·') + '｜运营 ' + (r.cos || '-') + '">' +
+            '<div class="cc-top"><span class="cc-type t-' + r.type + '">' + TYPE_LABEL[r.type] + '</span>' + (r.cos ? '<span class="cc-cos">' + r.cos + '</span>' : '') + '<span class="cc-code">' + (r.code || '(无码)') + '</span></div>' +
             '<div class="cc-bot"><span class="cc-hosp">' + (r.hosp || '未知医院') + '</span><span class="cc-pat">' + (r.patient || '·') + '</span></div>' +
             '</div>';
     }
@@ -141,6 +141,7 @@
         { t: '医院', cls: 'c-hosp' },
         { t: '患者脱敏', cls: 'c-pat' },
         { t: '类型', cls: 'c-type' },
+        { t: 'COS', cls: 'c-cos' },
         { t: '状态', cls: 'c-st' },
         { t: '计划时间', cls: 'c-plan' },
         { t: '实际开始时间', cls: 'c-act' }
@@ -168,6 +169,7 @@
                 '<span class="c-hosp">' + (r.hosp || '未知医院') + '</span>' +
                 '<span class="c-pat">' + (r.patient || '·') + '</span>' +
                 '<span class="c-type">' + TYPE_LABEL[r.type] + '</span>' +
+                '<span class="c-cos' + (r.cos ? '' : ' no') + '">' + (r.cos || '-') + '</span>' +
                 '<span class="c-st"><i class="cart-dot" style="background:' + LK[st].color + ';box-shadow:0 0 6px ' + LK[st].color + ';"></i>' + LK[st].txt + '</span>' +
                 '<span class="c-plan">' + r.plan + '</span>' +
                 '<span class="c-act' + (r.actual ? '' : ' no') + '">' + (r.actual || '-') + '</span>' +
