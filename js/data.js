@@ -25534,6 +25534,7 @@ var BOARD_DATA = {
       "code": "A1C0001",
       "hosp": "中国医学科学院血液病医院",
       "patient": "陈*钟",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-07",
       "actual": "2023-07-07"
@@ -25542,6 +25543,7 @@ var BOARD_DATA = {
       "code": "A1C0001",
       "hosp": "中国医学科学院血液病医院",
       "patient": "陈*钟",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-08-16",
       "actual": "2023-08-21"
@@ -25550,6 +25552,7 @@ var BOARD_DATA = {
       "code": "A1C0002",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "卢*华",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-07-11",
       "actual": "2023-07-11"
@@ -25558,6 +25561,7 @@ var BOARD_DATA = {
       "code": "A1C0002",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "卢*华",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-08-08",
       "actual": "2023-08-08"
@@ -25566,6 +25570,7 @@ var BOARD_DATA = {
       "code": "A1C0003",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*俊",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-11",
       "actual": "2023-07-11"
@@ -25574,6 +25579,7 @@ var BOARD_DATA = {
       "code": "A1C0003",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*俊",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-08-11",
       "actual": "2023-08-11"
@@ -25582,6 +25588,7 @@ var BOARD_DATA = {
       "code": "A1C0004",
       "hosp": "北京大学第一医院",
       "patient": "王*平",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-07-12",
       "actual": "2023-07-12"
@@ -25590,6 +25597,7 @@ var BOARD_DATA = {
       "code": "A1C0004",
       "hosp": "北京大学第一医院",
       "patient": "王*平",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-08-07",
       "actual": "2023-08-07"
@@ -25598,6 +25606,7 @@ var BOARD_DATA = {
       "code": "A1C0005",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "曹*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-13",
       "actual": "2023-07-13"
@@ -25606,6 +25615,7 @@ var BOARD_DATA = {
       "code": "A1C0005",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "曹*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-08-14",
       "actual": "2023-08-14"
@@ -25614,6 +25624,7 @@ var BOARD_DATA = {
       "code": "A1C0006",
       "hosp": "山东大学齐鲁医院",
       "patient": "王*训",
+      "cos": "胡慧",
       "type": "apheresis",
       "plan": "2023-07-18",
       "actual": "2023-07-18"
@@ -25622,6 +25633,7 @@ var BOARD_DATA = {
       "code": "A1C0006",
       "hosp": "山东大学齐鲁医院",
       "patient": "王*训",
+      "cos": "胡慧",
       "type": "reinfusion",
       "plan": "2023-09-08",
       "actual": "2023-09-08"
@@ -25630,6 +25642,7 @@ var BOARD_DATA = {
       "code": "A1C0011",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陈*阳",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-07-28",
       "actual": "2023-07-28"
@@ -25638,6 +25651,7 @@ var BOARD_DATA = {
       "code": "A1C0011",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陈*阳",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-08-30",
       "actual": "2023-08-30"
@@ -25646,6 +25660,7 @@ var BOARD_DATA = {
       "code": "A1C0008",
       "hosp": "北京大学人民医院",
       "patient": "李*国",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-07-21",
       "actual": "2023-07-21"
@@ -25654,6 +25669,7 @@ var BOARD_DATA = {
       "code": "A1C0008",
       "hosp": "北京大学人民医院",
       "patient": "李*国",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-08-17",
       "actual": "2023-08-17"
@@ -25662,6 +25678,7 @@ var BOARD_DATA = {
       "code": "A1C0009",
       "hosp": "深圳市罗湖区人民医院（友谊路院区）",
       "patient": "王*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2023-07-21",
       "actual": "2023-07-21"
@@ -25670,6 +25687,7 @@ var BOARD_DATA = {
       "code": "A1C0009",
       "hosp": "深圳市罗湖区人民医院（友谊路院区）",
       "patient": "王*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2023-08-29",
       "actual": "2023-08-29"
@@ -25678,6 +25696,7 @@ var BOARD_DATA = {
       "code": "A1C0010",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*明",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-26",
       "actual": "2023-07-26"
@@ -25686,6 +25705,7 @@ var BOARD_DATA = {
       "code": "A1C0010",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*明",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-09-28",
       "actual": "2023-09-28"
@@ -25694,6 +25714,7 @@ var BOARD_DATA = {
       "code": "A1C0013",
       "hosp": "苏州大学附属第二医院",
       "patient": "吴*珠",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2023-07-28",
       "actual": "2023-07-28"
@@ -25702,6 +25723,7 @@ var BOARD_DATA = {
       "code": "A1C0013",
       "hosp": "苏州大学附属第二医院",
       "patient": "吴*珠",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2023-08-28",
       "actual": "2023-08-28"
@@ -25710,6 +25732,7 @@ var BOARD_DATA = {
       "code": "A1C0015",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*莲",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-07-31",
       "actual": "2023-07-31"
@@ -25718,6 +25741,7 @@ var BOARD_DATA = {
       "code": "A1C0015",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*莲",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-08-28",
       "actual": "2023-08-28"
@@ -25726,6 +25750,7 @@ var BOARD_DATA = {
       "code": "A1C0024",
       "hosp": "上海长征医院",
       "patient": "张*珍",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-08-24",
       "actual": "2023-08-24"
@@ -25734,6 +25759,7 @@ var BOARD_DATA = {
       "code": "A1C0024",
       "hosp": "上海长征医院",
       "patient": "张*珍",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-09-20",
       "actual": "2023-09-20"
@@ -25742,6 +25768,7 @@ var BOARD_DATA = {
       "code": "A1C0018",
       "hosp": "宁波大学附属人民医院",
       "patient": "施*珍",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-08-10",
       "actual": "2023-08-10"
@@ -25750,6 +25777,7 @@ var BOARD_DATA = {
       "code": "A1C0018",
       "hosp": "宁波大学附属人民医院",
       "patient": "施*珍",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2023-09-11",
       "actual": "2023-09-11"
@@ -25758,6 +25786,7 @@ var BOARD_DATA = {
       "code": "A1C0017",
       "hosp": "南方医科大学南方医院",
       "patient": "叶*秀",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-08-08",
       "actual": "2023-08-08"
@@ -25766,6 +25795,7 @@ var BOARD_DATA = {
       "code": "A1C0017",
       "hosp": "南方医科大学南方医院",
       "patient": "叶*秀",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-10-13",
       "actual": "2023-10-13"
@@ -25774,6 +25804,7 @@ var BOARD_DATA = {
       "code": "A1C0016",
       "hosp": "北京协和医院",
       "patient": "林*",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-08-08",
       "actual": "2023-08-08"
@@ -25782,6 +25813,7 @@ var BOARD_DATA = {
       "code": "A1C0016",
       "hosp": "北京协和医院",
       "patient": "林*",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2023-09-04",
       "actual": "2023-09-04"
@@ -25790,6 +25822,7 @@ var BOARD_DATA = {
       "code": "A1C0027",
       "hosp": "北京大学人民医院",
       "patient": "马*颖",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-08-30",
       "actual": "2023-08-30"
@@ -25798,6 +25831,7 @@ var BOARD_DATA = {
       "code": "A1C0027",
       "hosp": "北京大学人民医院",
       "patient": "马*颖",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-09-26",
       "actual": "2023-09-26"
@@ -25806,6 +25840,7 @@ var BOARD_DATA = {
       "code": "A1C0020",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "张*兴",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-08-21",
       "actual": "2023-08-21"
@@ -25814,6 +25849,7 @@ var BOARD_DATA = {
       "code": "A1C0020",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "张*兴",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-09-14",
       "actual": "2023-09-14"
@@ -25822,6 +25858,7 @@ var BOARD_DATA = {
       "code": "A1C0023",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "胡*君",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-08-24",
       "actual": "2023-08-24"
@@ -25830,6 +25867,7 @@ var BOARD_DATA = {
       "code": "A1C0023",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "胡*君",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-10-16",
       "actual": "2023-10-16"
@@ -25838,6 +25876,7 @@ var BOARD_DATA = {
       "code": "A1C0025",
       "hosp": "中国医学科学院血液病医院",
       "patient": "程*玲",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-08-25",
       "actual": "2023-08-25"
@@ -25846,6 +25885,7 @@ var BOARD_DATA = {
       "code": "A1C0025",
       "hosp": "中国医学科学院血液病医院",
       "patient": "程*玲",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-09-28",
       "actual": "2023-09-28"
@@ -25854,6 +25894,7 @@ var BOARD_DATA = {
       "code": "A1C0026",
       "hosp": "中国医科大学附属第一医院",
       "patient": "王*君",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2023-08-28",
       "actual": "2023-08-28"
@@ -25862,6 +25903,7 @@ var BOARD_DATA = {
       "code": "A1C0026",
       "hosp": "中国医科大学附属第一医院",
       "patient": "王*君",
+      "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2023-10-30",
       "actual": "2023-10-30"
@@ -25870,6 +25912,7 @@ var BOARD_DATA = {
       "code": "A1C0029",
       "hosp": "上海嘉会国际医院",
       "patient": "A*w J*n W*e",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-08-31",
       "actual": "2023-08-31"
@@ -25878,6 +25921,7 @@ var BOARD_DATA = {
       "code": "A1C0029",
       "hosp": "上海嘉会国际医院",
       "patient": "A*w J*n W*e",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-11-09",
       "actual": "2023-11-09"
@@ -25886,6 +25930,7 @@ var BOARD_DATA = {
       "code": "A1C0031",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "方*红",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-09-06",
       "actual": "2023-09-06"
@@ -25894,6 +25939,7 @@ var BOARD_DATA = {
       "code": "A1C0031",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "方*红",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-12-29",
       "actual": "2023-12-29"
@@ -25902,6 +25948,7 @@ var BOARD_DATA = {
       "code": "A1C0032",
       "hosp": "上海市同济医院",
       "patient": "M*n K*n",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-09-08",
       "actual": "2023-09-08"
@@ -25910,6 +25957,7 @@ var BOARD_DATA = {
       "code": "A1C0032",
       "hosp": "上海市同济医院",
       "patient": "M*n K*n",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-10-14",
       "actual": "2023-10-14"
@@ -25918,6 +25966,7 @@ var BOARD_DATA = {
       "code": "A1C0034",
       "hosp": "北京大学人民医院",
       "patient": "周*林",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-09-21",
       "actual": "2023-09-21"
@@ -25926,6 +25975,7 @@ var BOARD_DATA = {
       "code": "A1C0034",
       "hosp": "北京大学人民医院",
       "patient": "周*林",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-10-16",
       "actual": "2023-10-16"
@@ -25934,6 +25984,7 @@ var BOARD_DATA = {
       "code": "A1C0035",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*波",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-09-14",
       "actual": "2023-09-14"
@@ -25942,6 +25993,7 @@ var BOARD_DATA = {
       "code": "A1C0035",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*波",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-10-18",
       "actual": "2023-10-18"
@@ -25950,6 +26002,7 @@ var BOARD_DATA = {
       "code": "A1C0036",
       "hosp": "广西医科大学附属肿瘤医院",
       "patient": "甘*爱",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2023-09-14",
       "actual": "2023-09-14"
@@ -25958,6 +26011,7 @@ var BOARD_DATA = {
       "code": "A1C0036",
       "hosp": "广西医科大学附属肿瘤医院",
       "patient": "甘*爱",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2023-10-31",
       "actual": "2023-10-31"
@@ -25966,6 +26020,7 @@ var BOARD_DATA = {
       "code": "A1C0041",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*平",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-09-27",
       "actual": "2023-09-27"
@@ -25974,6 +26029,7 @@ var BOARD_DATA = {
       "code": "A1C0041",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*平",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-11-10",
       "actual": "2023-11-10"
@@ -25982,6 +26038,7 @@ var BOARD_DATA = {
       "code": "A1C0037",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*艳",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-09-15",
       "actual": "2023-09-15"
@@ -25990,6 +26047,7 @@ var BOARD_DATA = {
       "code": "A1C0037",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*艳",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-10-23",
       "actual": "2023-10-23"
@@ -25998,6 +26056,7 @@ var BOARD_DATA = {
       "code": "A1C0038",
       "hosp": "苏州大学附属第一医院",
       "patient": "丁*生",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2023-09-19",
       "actual": "2023-09-19"
@@ -26006,6 +26065,7 @@ var BOARD_DATA = {
       "code": "A1C0038",
       "hosp": "苏州大学附属第一医院",
       "patient": "丁*生",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2023-10-23",
       "actual": "2023-10-23"
@@ -26014,6 +26074,7 @@ var BOARD_DATA = {
       "code": "A1C0039",
       "hosp": "北京大学人民医院",
       "patient": "贾*明",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-09-21",
       "actual": "2023-09-21"
@@ -26022,6 +26083,7 @@ var BOARD_DATA = {
       "code": "A1C0039",
       "hosp": "北京大学人民医院",
       "patient": "贾*明",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-04-17",
       "actual": "2024-04-17"
@@ -26030,6 +26092,7 @@ var BOARD_DATA = {
       "code": "A1C0042",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "马*芝",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2023-09-26",
       "actual": "2023-09-26"
@@ -26038,6 +26101,7 @@ var BOARD_DATA = {
       "code": "A1C0042",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "马*芝",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2023-11-06",
       "actual": "2023-11-06"
@@ -26046,6 +26110,7 @@ var BOARD_DATA = {
       "code": "A1C0046",
       "hosp": "北京大学人民医院",
       "patient": "戴*",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-10-19",
       "actual": "2023-10-19"
@@ -26054,6 +26119,7 @@ var BOARD_DATA = {
       "code": "A1C0046",
       "hosp": "北京大学人民医院",
       "patient": "戴*",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-11-15",
       "actual": "2023-11-15"
@@ -26062,6 +26128,7 @@ var BOARD_DATA = {
       "code": "A1C0047",
       "hosp": "南方医科大学南方医院",
       "patient": "梁*贞",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-10-23",
       "actual": "2023-10-23"
@@ -26070,6 +26137,7 @@ var BOARD_DATA = {
       "code": "A1C0047",
       "hosp": "南方医科大学南方医院",
       "patient": "梁*贞",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-12-27",
       "actual": "2023-12-27"
@@ -26078,6 +26146,7 @@ var BOARD_DATA = {
       "code": "A1C0048",
       "hosp": "中山大学附属第一医院",
       "patient": "于*",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2023-10-20",
       "actual": "2023-10-20"
@@ -26086,6 +26155,7 @@ var BOARD_DATA = {
       "code": "A1C0048",
       "hosp": "中山大学附属第一医院",
       "patient": "于*",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2023-11-22",
       "actual": "2023-11-22"
@@ -26094,6 +26164,7 @@ var BOARD_DATA = {
       "code": "A1C0049",
       "hosp": "上海长征医院",
       "patient": "王*华",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-10-20",
       "actual": "2023-10-20"
@@ -26102,6 +26173,7 @@ var BOARD_DATA = {
       "code": "A1C0049",
       "hosp": "上海长征医院",
       "patient": "王*华",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-11-17",
       "actual": "2023-11-17"
@@ -26110,6 +26182,7 @@ var BOARD_DATA = {
       "code": "A1C0050",
       "hosp": "上海仁济医院",
       "patient": "薛*华",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-10-23",
       "actual": "2023-10-23"
@@ -26118,6 +26191,7 @@ var BOARD_DATA = {
       "code": "A1C0050",
       "hosp": "上海仁济医院",
       "patient": "薛*华",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-11-22",
       "actual": "2023-11-22"
@@ -26126,6 +26200,7 @@ var BOARD_DATA = {
       "code": "A1C0052",
       "hosp": "北京协和医院",
       "patient": "邓*",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-10-27",
       "actual": "2023-10-27"
@@ -26134,6 +26209,7 @@ var BOARD_DATA = {
       "code": "A1C0052",
       "hosp": "北京协和医院",
       "patient": "邓*",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2023-12-07",
       "actual": "2023-12-07"
@@ -26142,6 +26218,7 @@ var BOARD_DATA = {
       "code": "A1C0054",
       "hosp": "空军军医大学西京医院",
       "patient": "毛*成",
+      "cos": "朱梦瑄",
       "type": "apheresis",
       "plan": "2023-11-07",
       "actual": "2023-11-07"
@@ -26150,6 +26227,7 @@ var BOARD_DATA = {
       "code": "A1C0054",
       "hosp": "空军军医大学西京医院",
       "patient": "毛*成",
+      "cos": "朱梦瑄",
       "type": "reinfusion",
       "plan": "2024-05-20",
       "actual": "2024-05-20"
@@ -26158,6 +26236,7 @@ var BOARD_DATA = {
       "code": "A1C0053",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "夏*伦",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2023-11-05",
       "actual": "2023-11-05"
@@ -26166,6 +26245,7 @@ var BOARD_DATA = {
       "code": "A1C0053",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "夏*伦",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2023-12-14",
       "actual": "2023-12-14"
@@ -26174,6 +26254,7 @@ var BOARD_DATA = {
       "code": "A1C0055",
       "hosp": "中国医学科学院血液病医院",
       "patient": "黄*蓉",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-11-07",
       "actual": "2023-11-07"
@@ -26182,6 +26263,7 @@ var BOARD_DATA = {
       "code": "A1C0055",
       "hosp": "中国医学科学院血液病医院",
       "patient": "黄*蓉",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-01-24",
       "actual": "2024-01-24"
@@ -26190,6 +26272,7 @@ var BOARD_DATA = {
       "code": "A1C0060",
       "hosp": "上海嘉会国际医院",
       "patient": "汤*星",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-15",
       "actual": "2023-11-15"
@@ -26198,6 +26281,7 @@ var BOARD_DATA = {
       "code": "A1C0060",
       "hosp": "上海嘉会国际医院",
       "patient": "汤*星",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-09",
       "actual": "2024-01-09"
@@ -26206,6 +26290,7 @@ var BOARD_DATA = {
       "code": "A1D0277",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*祥",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-31",
       "actual": "2024-10-31"
@@ -26214,6 +26299,7 @@ var BOARD_DATA = {
       "code": "A1D0277",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*祥",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-03-24",
       "actual": "2025-03-24"
@@ -26222,6 +26308,7 @@ var BOARD_DATA = {
       "code": "A1C0057",
       "hosp": "北京大学第三医院",
       "patient": "时*强",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-11-10",
       "actual": "2023-11-10"
@@ -26230,6 +26317,7 @@ var BOARD_DATA = {
       "code": "A1C0057",
       "hosp": "北京大学第三医院",
       "patient": "时*强",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-03-15",
       "actual": "2024-03-15"
@@ -26238,6 +26326,7 @@ var BOARD_DATA = {
       "code": "A1C0059",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*光",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-11-16",
       "actual": "2023-11-16"
@@ -26246,6 +26335,7 @@ var BOARD_DATA = {
       "code": "A1C0059",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*光",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-11",
       "actual": "2024-03-11"
@@ -26254,6 +26344,7 @@ var BOARD_DATA = {
       "code": "A1C0062",
       "hosp": "上海市第六人民医院",
       "patient": "张*成",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-17",
       "actual": "2023-11-17"
@@ -26262,6 +26353,7 @@ var BOARD_DATA = {
       "code": "A1C0062",
       "hosp": "上海市第六人民医院",
       "patient": "张*成",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-12-28",
       "actual": "2023-12-28"
@@ -26270,6 +26362,7 @@ var BOARD_DATA = {
       "code": "A1C0065",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "周*有",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-11-16",
       "actual": "2023-11-16"
@@ -26278,6 +26371,7 @@ var BOARD_DATA = {
       "code": "A1C0065",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "周*有",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-01-18",
       "actual": "2024-01-18"
@@ -26286,6 +26380,7 @@ var BOARD_DATA = {
       "code": "A1C0064",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "孙*燕",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-11-15",
       "actual": "2023-11-15"
@@ -26294,6 +26389,7 @@ var BOARD_DATA = {
       "code": "A1C0064",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "孙*燕",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-01-15",
       "actual": "2024-01-15"
@@ -26302,6 +26398,7 @@ var BOARD_DATA = {
       "code": "A1E0079",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "范*江",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-04-16",
       "actual": "2025-04-16"
@@ -26310,6 +26407,7 @@ var BOARD_DATA = {
       "code": "A1C0070",
       "hosp": "宁波大学附属人民医院",
       "patient": "周*菊",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-11-22",
       "actual": "2023-11-22"
@@ -26318,6 +26416,7 @@ var BOARD_DATA = {
       "code": "A1C0070",
       "hosp": "宁波大学附属人民医院",
       "patient": "周*菊",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2023-12-28",
       "actual": "2023-12-28"
@@ -26326,6 +26425,7 @@ var BOARD_DATA = {
       "code": "A1C0069",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "蒋*权",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-23",
       "actual": "2023-11-23"
@@ -26334,6 +26434,7 @@ var BOARD_DATA = {
       "code": "A1C0069",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "蒋*权",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-02",
       "actual": "2024-01-02"
@@ -26342,6 +26443,7 @@ var BOARD_DATA = {
       "code": "A1C0072",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "陈*玲",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-11-24",
       "actual": "2023-11-24"
@@ -26350,6 +26452,7 @@ var BOARD_DATA = {
       "code": "A1C0072",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "陈*玲",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-12-28",
       "actual": "2023-12-28"
@@ -26358,6 +26461,7 @@ var BOARD_DATA = {
       "code": "A1C0085",
       "hosp": "上海嘉会国际医院",
       "patient": "V*R B*V",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-20",
       "actual": "2023-12-20"
@@ -26366,6 +26470,7 @@ var BOARD_DATA = {
       "code": "A1C0085",
       "hosp": "上海嘉会国际医院",
       "patient": "V*R B*V",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-25",
       "actual": "2024-01-25"
@@ -26374,6 +26479,7 @@ var BOARD_DATA = {
       "code": "A1C0073",
       "hosp": "中山大学肿瘤医院",
       "patient": "陈*",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-12-22",
       "actual": "2023-12-22"
@@ -26382,6 +26488,7 @@ var BOARD_DATA = {
       "code": "A1C0073",
       "hosp": "中山大学肿瘤医院",
       "patient": "陈*",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-02-26",
       "actual": "2024-02-26"
@@ -26390,6 +26497,7 @@ var BOARD_DATA = {
       "code": "A1C0075",
       "hosp": "上海嘉会国际医院",
       "patient": "L*U F*N C*N",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-25",
       "actual": "2023-11-25"
@@ -26398,6 +26506,7 @@ var BOARD_DATA = {
       "code": "A1C0075",
       "hosp": "上海嘉会国际医院",
       "patient": "L*U F*N C*N",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-10",
       "actual": "2024-01-10"
@@ -26406,6 +26515,7 @@ var BOARD_DATA = {
       "code": "A1C0074",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "吴*奇",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-11-25",
       "actual": "2023-11-25"
@@ -26414,6 +26524,7 @@ var BOARD_DATA = {
       "code": "A1C0074",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "吴*奇",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-01-03",
       "actual": "2024-01-03"
@@ -26422,6 +26533,7 @@ var BOARD_DATA = {
       "code": "A1C0077",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "P*E S*Y",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-11-30",
       "actual": "2023-11-30"
@@ -26430,6 +26542,7 @@ var BOARD_DATA = {
       "code": "A1C0077",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "P*E S*Y",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-03-05",
       "actual": "2024-03-05"
@@ -26438,6 +26551,7 @@ var BOARD_DATA = {
       "code": "A1C0076",
       "hosp": "宁波市第二医院",
       "patient": "张*亚",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-11-28",
       "actual": "2023-11-28"
@@ -26446,6 +26560,7 @@ var BOARD_DATA = {
       "code": "A1C0076",
       "hosp": "宁波市第二医院",
       "patient": "张*亚",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2023-12-28",
       "actual": "2023-12-28"
@@ -26454,6 +26569,7 @@ var BOARD_DATA = {
       "code": "A1C0078",
       "hosp": "北京大学人民医院",
       "patient": "毛*征",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-11-30",
       "actual": "2023-11-30"
@@ -26462,6 +26578,7 @@ var BOARD_DATA = {
       "code": "A1C0078",
       "hosp": "北京大学人民医院",
       "patient": "毛*征",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-01-16",
       "actual": "2024-01-16"
@@ -26470,6 +26587,7 @@ var BOARD_DATA = {
       "code": "A1C0079",
       "hosp": "上海长征医院",
       "patient": "任*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-12-04",
       "actual": "2023-12-04"
@@ -26478,6 +26596,7 @@ var BOARD_DATA = {
       "code": "A1C0079",
       "hosp": "上海长征医院",
       "patient": "任*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-02-24",
       "actual": "2024-02-24"
@@ -26486,6 +26605,7 @@ var BOARD_DATA = {
       "code": "A1C0082",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "郑*珠",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-05",
       "actual": "2023-12-05"
@@ -26494,6 +26614,7 @@ var BOARD_DATA = {
       "code": "A1C0082",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "郑*珠",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-03-07",
       "actual": "2024-03-07"
@@ -26502,6 +26623,7 @@ var BOARD_DATA = {
       "code": "A1D0013",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*领",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-17",
       "actual": "2024-01-17"
@@ -26510,6 +26632,7 @@ var BOARD_DATA = {
       "code": "A1D0013",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*领",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-29",
       "actual": "2024-03-29"
@@ -26518,6 +26641,7 @@ var BOARD_DATA = {
       "code": "A1C0083",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "吴*英",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-12-07",
       "actual": "2023-12-07"
@@ -26526,6 +26650,7 @@ var BOARD_DATA = {
       "code": "A1C0083",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "吴*英",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-03-18",
       "actual": "2024-03-19"
@@ -26534,6 +26659,7 @@ var BOARD_DATA = {
       "code": "A1C0084",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "王*美",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-12-07",
       "actual": "2023-12-07"
@@ -26542,6 +26668,7 @@ var BOARD_DATA = {
       "code": "A1C0084",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "王*美",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-09-23",
       "actual": "2024-09-23"
@@ -26550,6 +26677,7 @@ var BOARD_DATA = {
       "code": "A1C0088",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "邢*斌",
+      "cos": "朱梦瑄",
       "type": "apheresis",
       "plan": "2023-12-15",
       "actual": "2023-12-15"
@@ -26558,6 +26686,7 @@ var BOARD_DATA = {
       "code": "A1C0088",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "邢*斌",
+      "cos": "朱梦瑄",
       "type": "reinfusion",
       "plan": "2024-01-19",
       "actual": "2024-01-19"
@@ -26566,6 +26695,7 @@ var BOARD_DATA = {
       "code": "A1C0087",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "韦*",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-15",
       "actual": "2023-12-15"
@@ -26574,6 +26704,7 @@ var BOARD_DATA = {
       "code": "A1C0087",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "韦*",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-22",
       "actual": "2024-01-22"
@@ -26582,6 +26713,7 @@ var BOARD_DATA = {
       "code": "A1C0086",
       "hosp": "上海嘉会国际医院",
       "patient": "陈*凤",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-13",
       "actual": "2023-12-13"
@@ -26590,6 +26722,7 @@ var BOARD_DATA = {
       "code": "A1C0086",
       "hosp": "上海嘉会国际医院",
       "patient": "陈*凤",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-04-11",
       "actual": "2024-04-11"
@@ -26598,6 +26731,7 @@ var BOARD_DATA = {
       "code": "A1C0090",
       "hosp": "广州医科大学附属第五医院",
       "patient": "文*森",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2023-12-18",
       "actual": "2023-12-18"
@@ -26606,6 +26740,7 @@ var BOARD_DATA = {
       "code": "A1C0090",
       "hosp": "广州医科大学附属第五医院",
       "patient": "文*森",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2024-03-14",
       "actual": "2024-03-14"
@@ -26614,6 +26749,7 @@ var BOARD_DATA = {
       "code": "A1C0093",
       "hosp": "温州医科大学附属第一医院",
       "patient": "季*峰",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-12-20",
       "actual": "2023-12-20"
@@ -26622,6 +26758,7 @@ var BOARD_DATA = {
       "code": "A1C0093",
       "hosp": "温州医科大学附属第一医院",
       "patient": "季*峰",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-02-01",
       "actual": "2024-02-01"
@@ -26630,6 +26767,7 @@ var BOARD_DATA = {
       "code": "A1C0097",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "董*方",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-26",
       "actual": "2023-12-26"
@@ -26638,6 +26776,7 @@ var BOARD_DATA = {
       "code": "A1C0097",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "董*方",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-03-08",
       "actual": "2024-03-08"
@@ -26646,6 +26785,7 @@ var BOARD_DATA = {
       "code": "A1D0039",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "何*",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-02-22",
       "actual": "2024-02-22"
@@ -26654,6 +26794,7 @@ var BOARD_DATA = {
       "code": "A1D0039",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "何*",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-04-02",
       "actual": "2024-04-02"
@@ -26662,6 +26803,7 @@ var BOARD_DATA = {
       "code": "A1C0096",
       "hosp": "安徽省立医院南区（安徽省心血管医院）",
       "patient": "庞*",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2023-12-26",
       "actual": "2023-12-26"
@@ -26670,6 +26812,7 @@ var BOARD_DATA = {
       "code": "A1C0096",
       "hosp": "安徽省立医院南区（安徽省心血管医院）",
       "patient": "庞*",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-05-14",
       "actual": "2024-05-14"
@@ -26678,6 +26821,7 @@ var BOARD_DATA = {
       "code": "A1C0095",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "蒋*成",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-12-23",
       "actual": "2023-12-23"
@@ -26686,6 +26830,7 @@ var BOARD_DATA = {
       "code": "A1C0095",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "蒋*成",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-04-01",
       "actual": "2024-04-05"
@@ -26694,6 +26839,7 @@ var BOARD_DATA = {
       "code": "A1C0098",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*伟",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-08",
       "actual": "2024-01-08"
@@ -26702,6 +26848,7 @@ var BOARD_DATA = {
       "code": "A1C0098",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*伟",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-04-08",
       "actual": "2024-04-08"
@@ -26710,6 +26857,7 @@ var BOARD_DATA = {
       "code": "A1D0001",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "张*海",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-01-03",
       "actual": "2024-01-03"
@@ -26718,6 +26866,7 @@ var BOARD_DATA = {
       "code": "A1D0001",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "张*海",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-02-29",
       "actual": "2024-02-29"
@@ -26726,6 +26875,7 @@ var BOARD_DATA = {
       "code": "A1D0002",
       "hosp": "北京大学人民医院",
       "patient": "薛*辉",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-03",
       "actual": "2024-01-03"
@@ -26734,6 +26884,7 @@ var BOARD_DATA = {
       "code": "A1D0002",
       "hosp": "北京大学人民医院",
       "patient": "薛*辉",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-02-24",
       "actual": "2024-02-24"
@@ -26742,6 +26893,7 @@ var BOARD_DATA = {
       "code": "A1D0003",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "何*凤",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-01-11",
       "actual": "2024-01-11"
@@ -26750,6 +26902,7 @@ var BOARD_DATA = {
       "code": "A1D0003",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "何*凤",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-07-04",
       "actual": "2024-07-04"
@@ -26758,6 +26911,7 @@ var BOARD_DATA = {
       "code": "A1D0004",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "徐*华",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-06",
       "actual": "2024-01-06"
@@ -26766,6 +26920,7 @@ var BOARD_DATA = {
       "code": "A1D0004",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "徐*华",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-03-11",
       "actual": "2024-03-11"
@@ -26774,6 +26929,7 @@ var BOARD_DATA = {
       "code": "A1D0005",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "张*俊",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-06",
       "actual": "2024-01-06"
@@ -26782,6 +26938,7 @@ var BOARD_DATA = {
       "code": "A1D0005",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "张*俊",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-04-22",
       "actual": "2024-04-22"
@@ -26790,6 +26947,7 @@ var BOARD_DATA = {
       "code": "A1D0008",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "郭*萍",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-01-10",
       "actual": "2024-01-10"
@@ -26798,6 +26956,7 @@ var BOARD_DATA = {
       "code": "A1D0008",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "郭*萍",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-02-26",
       "actual": "2024-02-26"
@@ -26806,6 +26965,7 @@ var BOARD_DATA = {
       "code": "A1D0006",
       "hosp": "北京大学深圳医院",
       "patient": "杨*明",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-01-18",
       "actual": "2024-01-18"
@@ -26814,6 +26974,7 @@ var BOARD_DATA = {
       "code": "A1D0006",
       "hosp": "北京大学深圳医院",
       "patient": "杨*明",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-03-25",
       "actual": "2024-03-25"
@@ -26822,6 +26983,7 @@ var BOARD_DATA = {
       "code": "A1D0007",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*山",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-10",
       "actual": "2024-01-10"
@@ -26830,6 +26992,7 @@ var BOARD_DATA = {
       "code": "A1D0007",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*山",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-02-27",
       "actual": "2024-02-28"
@@ -26838,6 +27001,7 @@ var BOARD_DATA = {
       "code": "A1D0009",
       "hosp": "中日友好医院",
       "patient": "刘*范",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-01-10",
       "actual": "2024-01-10"
@@ -26846,6 +27010,7 @@ var BOARD_DATA = {
       "code": "A1D0010",
       "hosp": "中国医学科学院血液病医院",
       "patient": "孟*利",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-15",
       "actual": "2024-01-15"
@@ -26854,6 +27019,7 @@ var BOARD_DATA = {
       "code": "A1D0010",
       "hosp": "中国医学科学院血液病医院",
       "patient": "孟*利",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-11",
       "actual": "2024-06-11"
@@ -26862,6 +27028,7 @@ var BOARD_DATA = {
       "code": "A1D0011",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "刘*",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-01-29",
       "actual": "2024-01-29"
@@ -26870,6 +27037,7 @@ var BOARD_DATA = {
       "code": "A1D0011",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "刘*",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-05-14",
       "actual": "2024-05-14"
@@ -26878,6 +27046,7 @@ var BOARD_DATA = {
       "code": "A1D0012",
       "hosp": "宁波大学附属人民医院",
       "patient": "鱼*菊",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2024-01-16",
       "actual": "2024-01-16"
@@ -26886,6 +27055,7 @@ var BOARD_DATA = {
       "code": "A1D0012",
       "hosp": "宁波大学附属人民医院",
       "patient": "鱼*菊",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-06-06",
       "actual": "2024-06-06"
@@ -26894,6 +27064,7 @@ var BOARD_DATA = {
       "code": "A1D0015",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*忠",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-18",
       "actual": "2024-01-18"
@@ -26902,6 +27073,7 @@ var BOARD_DATA = {
       "code": "A1D0015",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*忠",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-25",
       "actual": "2024-03-25"
@@ -26910,6 +27082,7 @@ var BOARD_DATA = {
       "code": "A1D0016",
       "hosp": "苏州大学附属第一医院",
       "patient": "章*浩",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2024-01-18",
       "actual": "2024-01-18"
@@ -26918,6 +27091,7 @@ var BOARD_DATA = {
       "code": "A1D0016",
       "hosp": "苏州大学附属第一医院",
       "patient": "章*浩",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-03-11",
       "actual": "2024-03-11"
@@ -26926,6 +27100,7 @@ var BOARD_DATA = {
       "code": "A1D0018",
       "hosp": "中国医科大学附属盛京医院",
       "patient": "付*海",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-01-22",
       "actual": "2024-01-22"
@@ -26934,6 +27109,7 @@ var BOARD_DATA = {
       "code": "A1D0018",
       "hosp": "中国医科大学附属盛京医院",
       "patient": "付*海",
+      "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-03-04",
       "actual": "2024-03-04"
@@ -26942,6 +27118,7 @@ var BOARD_DATA = {
       "code": "A1D0019",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "T*s K*e",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-01-22",
       "actual": "2024-01-22"
@@ -26950,6 +27127,7 @@ var BOARD_DATA = {
       "code": "A1D0019",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "T*s K*e",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-02-26",
       "actual": "2024-02-26"
@@ -26958,6 +27136,7 @@ var BOARD_DATA = {
       "code": "A1D0021",
       "hosp": "上海长征医院",
       "patient": "于*英",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-01-23",
       "actual": "2024-01-23"
@@ -26966,6 +27145,7 @@ var BOARD_DATA = {
       "code": "A1D0021",
       "hosp": "上海长征医院",
       "patient": "于*英",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-03-28",
       "actual": "2024-03-28"
@@ -26974,6 +27154,7 @@ var BOARD_DATA = {
       "code": "A1D0024",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "温*芹",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-01-25",
       "actual": "2024-01-25"
@@ -26982,6 +27163,7 @@ var BOARD_DATA = {
       "code": "A1D0024",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "温*芹",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-05-27",
       "actual": "2024-05-27"
@@ -26990,6 +27172,7 @@ var BOARD_DATA = {
       "code": "A1D0022",
       "hosp": "苏州大学附属第一医院",
       "patient": "李*",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2024-01-25",
       "actual": "2024-01-25"
@@ -26998,6 +27181,7 @@ var BOARD_DATA = {
       "code": "A1D0022",
       "hosp": "苏州大学附属第一医院",
       "patient": "李*",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-03-29",
       "actual": "2024-03-29"
@@ -27006,6 +27190,7 @@ var BOARD_DATA = {
       "code": "A1D0023",
       "hosp": "北京大学深圳医院",
       "patient": "万*元",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-01-24",
       "actual": "2024-01-24"
@@ -27014,6 +27199,7 @@ var BOARD_DATA = {
       "code": "A1D0023",
       "hosp": "北京大学深圳医院",
       "patient": "万*元",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-03-08",
       "actual": "2024-03-08"
@@ -27022,6 +27208,7 @@ var BOARD_DATA = {
       "code": "A1D0026",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "胡*贤",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-01-24",
       "actual": "2024-01-24"
@@ -27030,6 +27217,7 @@ var BOARD_DATA = {
       "code": "A1D0026",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "胡*贤",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-03-19",
       "actual": "2024-03-19"
@@ -27038,6 +27226,7 @@ var BOARD_DATA = {
       "code": "A1D0027",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-30",
       "actual": "2024-01-30"
@@ -27046,6 +27235,7 @@ var BOARD_DATA = {
       "code": "A1D0027",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-04-12",
       "actual": "2024-04-12"
@@ -27054,6 +27244,7 @@ var BOARD_DATA = {
       "code": "A1D0028",
       "hosp": "北京大学人民医院",
       "patient": "王*红",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-30",
       "actual": "2024-01-30"
@@ -27062,6 +27253,7 @@ var BOARD_DATA = {
       "code": "A1D0028",
       "hosp": "北京大学人民医院",
       "patient": "王*红",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-03-21",
       "actual": "2024-03-21"
@@ -27070,6 +27262,7 @@ var BOARD_DATA = {
       "code": "A1D0030",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "方*兰",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-02-06",
       "actual": "2024-02-06"
@@ -27078,6 +27271,7 @@ var BOARD_DATA = {
       "code": "A1D0030",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "方*兰",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-03-15",
       "actual": "2024-03-15"
@@ -27086,6 +27280,7 @@ var BOARD_DATA = {
       "code": "A1D0032",
       "hosp": "中南大学湘雅医院",
       "patient": "董*",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-02-06",
       "actual": "2024-02-06"
@@ -27094,6 +27289,7 @@ var BOARD_DATA = {
       "code": "A1D0032",
       "hosp": "中南大学湘雅医院",
       "patient": "董*",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-03-21",
       "actual": "2024-03-21"
@@ -27102,6 +27298,7 @@ var BOARD_DATA = {
       "code": "A1D0034",
       "hosp": "苏州大学附属第一医院",
       "patient": "支*芬",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2024-02-06",
       "actual": "2024-02-06"
@@ -27110,6 +27307,7 @@ var BOARD_DATA = {
       "code": "A1D0034",
       "hosp": "苏州大学附属第一医院",
       "patient": "支*芬",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-08-01",
       "actual": "2024-08-01"
@@ -27118,6 +27316,7 @@ var BOARD_DATA = {
       "code": "A1D0035",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "李*德",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-02-08",
       "actual": "2024-02-08"
@@ -27126,6 +27325,7 @@ var BOARD_DATA = {
       "code": "A1D0035",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "李*德",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-03-14",
       "actual": "2024-03-14"
@@ -27134,6 +27334,7 @@ var BOARD_DATA = {
       "code": "9009126000236",
       "hosp": "南方医科大学南方医院",
       "patient": "李*鸣",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-08-20",
       "actual": "2026-08-20"
@@ -27142,6 +27343,7 @@ var BOARD_DATA = {
       "code": "A1D0036",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*其",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-02-09",
       "actual": "2024-02-09"
@@ -27150,6 +27352,7 @@ var BOARD_DATA = {
       "code": "A1D0036",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*其",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-20",
       "actual": "2024-03-20"
@@ -27158,6 +27361,7 @@ var BOARD_DATA = {
       "code": "A1D0038",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*柱",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-03-07",
       "actual": "2024-03-07"
@@ -27166,6 +27370,7 @@ var BOARD_DATA = {
       "code": "A1D0038",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*柱",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-04-15",
       "actual": "2024-04-15"
@@ -27174,6 +27379,7 @@ var BOARD_DATA = {
       "code": "A1D0040",
       "hosp": "中国医学科学院血液病医院",
       "patient": "姜*霞",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-02-26",
       "actual": "2024-02-26"
@@ -27182,6 +27388,7 @@ var BOARD_DATA = {
       "code": "A1D0040",
       "hosp": "中国医学科学院血液病医院",
       "patient": "姜*霞",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-14",
       "actual": "2024-05-14"
@@ -27190,6 +27397,7 @@ var BOARD_DATA = {
       "code": "A1D0042",
       "hosp": "中国医学科学院血液病医院",
       "patient": "罗*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-02-28",
       "actual": "2024-02-28"
@@ -27198,6 +27406,7 @@ var BOARD_DATA = {
       "code": "A1D0042",
       "hosp": "中国医学科学院血液病医院",
       "patient": "罗*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-22",
       "actual": "2024-05-22"
@@ -27206,6 +27415,7 @@ var BOARD_DATA = {
       "code": "A1D0043",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "I*E M*V",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-02-28",
       "actual": "2024-02-28"
@@ -27214,6 +27424,7 @@ var BOARD_DATA = {
       "code": "A1D0043",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "I*E M*V",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-04-08",
       "actual": "2024-04-08"
@@ -27222,6 +27433,7 @@ var BOARD_DATA = {
       "code": "A1D0045",
       "hosp": "北京大学第三医院",
       "patient": "刘*燕",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-04",
       "actual": "2024-03-04"
@@ -27230,6 +27442,7 @@ var BOARD_DATA = {
       "code": "A1D0045",
       "hosp": "北京大学第三医院",
       "patient": "刘*燕",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-04-23",
       "actual": "2024-04-23"
@@ -27238,6 +27451,7 @@ var BOARD_DATA = {
       "code": "A1D0046",
       "hosp": "中国医科大学附属第一医院",
       "patient": "高*利",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-03-07",
       "actual": "2024-03-07"
@@ -27246,6 +27460,7 @@ var BOARD_DATA = {
       "code": "A1D0046",
       "hosp": "中国医科大学附属第一医院",
       "patient": "高*利",
+      "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-06-07",
       "actual": "2024-06-07"
@@ -27254,6 +27469,7 @@ var BOARD_DATA = {
       "code": "A1D0047",
       "hosp": "江苏省中医院",
       "patient": "姜*星",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-03-08",
       "actual": "2024-03-08"
@@ -27262,6 +27478,7 @@ var BOARD_DATA = {
       "code": "A1D0047",
       "hosp": "江苏省中医院",
       "patient": "姜*星",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-05-06",
       "actual": "2024-05-06"
@@ -27270,6 +27487,7 @@ var BOARD_DATA = {
       "code": "A1D0049",
       "hosp": "宁波市第二医院",
       "patient": "励*英",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2024-03-12",
       "actual": "2024-03-12"
@@ -27278,6 +27496,7 @@ var BOARD_DATA = {
       "code": "A1D0049",
       "hosp": "宁波市第二医院",
       "patient": "励*英",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-06-05",
       "actual": "2024-06-05"
@@ -27286,6 +27505,7 @@ var BOARD_DATA = {
       "code": "A1D0050",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "金*永",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-03-14",
       "actual": "2024-03-14"
@@ -27294,6 +27514,7 @@ var BOARD_DATA = {
       "code": "A1D0050",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "金*永",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-08-12",
       "actual": "2024-08-12"
@@ -27302,6 +27523,7 @@ var BOARD_DATA = {
       "code": "A1D0053",
       "hosp": "河南科技大学第一附属医院",
       "patient": "孟*菊",
+      "cos": "魏芳",
       "type": "apheresis",
       "plan": "2024-03-15",
       "actual": "2024-03-15"
@@ -27310,6 +27532,7 @@ var BOARD_DATA = {
       "code": "A1D0053",
       "hosp": "河南科技大学第一附属医院",
       "patient": "孟*菊",
+      "cos": "魏芳",
       "type": "reinfusion",
       "plan": "2024-04-19",
       "actual": "2024-04-19"
@@ -27318,6 +27541,7 @@ var BOARD_DATA = {
       "code": "A1D0051",
       "hosp": "苏州大学附属第一医院",
       "patient": "魏*",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2024-03-12",
       "actual": "2024-03-12"
@@ -27326,6 +27550,7 @@ var BOARD_DATA = {
       "code": "A1D0051",
       "hosp": "苏州大学附属第一医院",
       "patient": "魏*",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-05-17",
       "actual": "2024-05-17"
@@ -27334,6 +27559,7 @@ var BOARD_DATA = {
       "code": "A1E0156",
       "hosp": "中山大学附属第一医院",
       "patient": "杨*",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-07-11",
       "actual": "2025-07-11"
@@ -27342,6 +27568,7 @@ var BOARD_DATA = {
       "code": "A1E0156",
       "hosp": "中山大学附属第一医院",
       "patient": "杨*",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-08-26",
       "actual": "2025-08-26"
@@ -27350,6 +27577,7 @@ var BOARD_DATA = {
       "code": "A1D0055",
       "hosp": "天津医科大学总医院",
       "patient": "李*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-03-14",
       "actual": "2024-03-14"
@@ -27358,6 +27586,7 @@ var BOARD_DATA = {
       "code": "A1D0055",
       "hosp": "天津医科大学总医院",
       "patient": "李*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-19",
       "actual": "2024-08-20"
@@ -27366,6 +27595,7 @@ var BOARD_DATA = {
       "code": "A1D0054",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "郑*阳",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-14",
       "actual": "2024-03-14"
@@ -27374,6 +27604,7 @@ var BOARD_DATA = {
       "code": "A1D0054",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "郑*阳",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-05-17",
       "actual": "2024-05-17"
@@ -27382,6 +27613,7 @@ var BOARD_DATA = {
       "code": "A1D0056",
       "hosp": "四川省人民医院",
       "patient": "方*成",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-03-15",
       "actual": "2024-03-15"
@@ -27390,6 +27622,7 @@ var BOARD_DATA = {
       "code": "A1D0056",
       "hosp": "四川省人民医院",
       "patient": "方*成",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2024-04-23",
       "actual": "2024-04-23"
@@ -27398,6 +27631,7 @@ var BOARD_DATA = {
       "code": "A1D0058",
       "hosp": "南方医科大学南方医院",
       "patient": "吴*锋",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-03-19",
       "actual": "2024-03-19"
@@ -27406,6 +27640,7 @@ var BOARD_DATA = {
       "code": "A1D0058",
       "hosp": "南方医科大学南方医院",
       "patient": "吴*锋",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-04-23",
       "actual": "2024-04-23"
@@ -27414,6 +27649,7 @@ var BOARD_DATA = {
       "code": "A1D0057",
       "hosp": "复旦大学附属中山医院厦门医院",
       "patient": "邱*红",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-03-20",
       "actual": "2024-03-20"
@@ -27422,6 +27658,7 @@ var BOARD_DATA = {
       "code": "A1D0057",
       "hosp": "复旦大学附属中山医院厦门医院",
       "patient": "邱*红",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-10-15",
       "actual": "2024-10-15"
@@ -27430,6 +27667,7 @@ var BOARD_DATA = {
       "code": "A1D0085",
       "hosp": "宁波市医疗中心李惠利医院（东部院区）",
       "patient": "陈*宏",
+      "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2024-04-26",
       "actual": "2024-04-26"
@@ -27438,6 +27676,7 @@ var BOARD_DATA = {
       "code": "A1D0085",
       "hosp": "宁波市医疗中心李惠利医院（东部院区）",
       "patient": "陈*宏",
+      "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-07-02",
       "actual": "2024-07-02"
@@ -27446,6 +27685,7 @@ var BOARD_DATA = {
       "code": "A1D0060",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "陈*荣",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-21",
       "actual": "2024-03-21"
@@ -27454,6 +27694,7 @@ var BOARD_DATA = {
       "code": "A1D0060",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "陈*荣",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-08-05",
       "actual": "2024-08-05"
@@ -27462,6 +27703,7 @@ var BOARD_DATA = {
       "code": "A1D0061",
       "hosp": "南方医科大学南方医院",
       "patient": "李*英",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-03-22",
       "actual": "2024-03-22"
@@ -27470,6 +27712,7 @@ var BOARD_DATA = {
       "code": "A1D0063",
       "hosp": "中国医科大学附属第一医院",
       "patient": "李*",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-03-25",
       "actual": "2024-03-25"
@@ -27478,6 +27721,7 @@ var BOARD_DATA = {
       "code": "A1D0064",
       "hosp": "南方医科大学深圳医院",
       "patient": "余*浩",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-03-25",
       "actual": "2024-03-25"
@@ -27486,6 +27730,7 @@ var BOARD_DATA = {
       "code": "A1D0064",
       "hosp": "南方医科大学深圳医院",
       "patient": "余*浩",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-11-04",
       "actual": "2024-11-04"
@@ -27494,6 +27739,7 @@ var BOARD_DATA = {
       "code": "A1D0065",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "徐*",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-26",
       "actual": "2024-03-26"
@@ -27502,6 +27748,7 @@ var BOARD_DATA = {
       "code": "A1D0065",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "徐*",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-08-26",
       "actual": "2024-08-26"
@@ -27510,6 +27757,7 @@ var BOARD_DATA = {
       "code": "A1D0310",
       "hosp": "北京大学人民医院",
       "patient": "龙*平",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-12-05",
       "actual": "2024-12-05"
@@ -27518,6 +27766,7 @@ var BOARD_DATA = {
       "code": "A1D0310",
       "hosp": "北京大学人民医院",
       "patient": "龙*平",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-08-03",
       "actual": "2025-08-03"
@@ -27526,6 +27775,7 @@ var BOARD_DATA = {
       "code": "A1D0068",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "张*怀",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-04-02",
       "actual": "2024-04-02"
@@ -27534,6 +27784,7 @@ var BOARD_DATA = {
       "code": "A1D0068",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "张*怀",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-07-22",
       "actual": "2024-07-22"
@@ -27542,6 +27793,7 @@ var BOARD_DATA = {
       "code": "A1D0069",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*升",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-03",
       "actual": "2024-04-03"
@@ -27550,6 +27802,7 @@ var BOARD_DATA = {
       "code": "A1D0069",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*升",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-20",
       "actual": "2024-05-20"
@@ -27558,6 +27811,7 @@ var BOARD_DATA = {
       "code": "A1D0070",
       "hosp": "中国医学科学院血液病医院",
       "patient": "姜*勇",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-11",
       "actual": "2024-04-11"
@@ -27566,6 +27820,7 @@ var BOARD_DATA = {
       "code": "A1D0070",
       "hosp": "中国医学科学院血液病医院",
       "patient": "姜*勇",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-22",
       "actual": "2024-05-22"
@@ -27574,6 +27829,7 @@ var BOARD_DATA = {
       "code": "A1D0071",
       "hosp": "中山大学肿瘤医院",
       "patient": "刘*庭",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-04-12",
       "actual": "2024-04-12"
@@ -27582,6 +27838,7 @@ var BOARD_DATA = {
       "code": "A1D0071",
       "hosp": "中山大学肿瘤医院",
       "patient": "刘*庭",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-08-19",
       "actual": "2024-08-19"
@@ -27590,6 +27847,7 @@ var BOARD_DATA = {
       "code": "A1D0072",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "李*午",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-04-15",
       "actual": "2024-04-15"
@@ -27598,6 +27856,7 @@ var BOARD_DATA = {
       "code": "A1D0072",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "李*午",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-05-29",
       "actual": "2024-05-29"
@@ -27606,6 +27865,7 @@ var BOARD_DATA = {
       "code": "A1D0074",
       "hosp": "天津医科大学总医院",
       "patient": "刘*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-16",
       "actual": "2024-04-16"
@@ -27614,6 +27874,7 @@ var BOARD_DATA = {
       "code": "A1D0074",
       "hosp": "天津医科大学总医院",
       "patient": "刘*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-27",
       "actual": "2024-06-27"
@@ -27622,6 +27883,7 @@ var BOARD_DATA = {
       "code": "A1D0077",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "郭*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-18",
       "actual": "2024-04-18"
@@ -27630,6 +27892,7 @@ var BOARD_DATA = {
       "code": "A1D0078",
       "hosp": "天津医科大学总医院",
       "patient": "李*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-18",
       "actual": "2024-04-18"
@@ -27638,6 +27901,7 @@ var BOARD_DATA = {
       "code": "A1D0078",
       "hosp": "天津医科大学总医院",
       "patient": "李*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-03",
       "actual": "2024-06-03"
@@ -27646,6 +27910,7 @@ var BOARD_DATA = {
       "code": "A1D0079",
       "hosp": "中国医学科学院血液病医院",
       "patient": "沈*燕",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-22",
       "actual": "2024-04-22"
@@ -27654,6 +27919,7 @@ var BOARD_DATA = {
       "code": "A1D0079",
       "hosp": "中国医学科学院血液病医院",
       "patient": "沈*燕",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-15",
       "actual": "2024-05-15"
@@ -27662,6 +27928,7 @@ var BOARD_DATA = {
       "code": "A1D0080",
       "hosp": "山西白求恩医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-22",
       "actual": "2024-04-22"
@@ -27670,6 +27937,7 @@ var BOARD_DATA = {
       "code": "A1D0081",
       "hosp": "中山大学肿瘤医院",
       "patient": "郑*琼",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-04-24",
       "actual": "2024-04-24"
@@ -27678,6 +27946,7 @@ var BOARD_DATA = {
       "code": "A1D0081",
       "hosp": "中山大学肿瘤医院",
       "patient": "郑*琼",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-05-27",
       "actual": "2024-05-27"
@@ -27686,6 +27955,7 @@ var BOARD_DATA = {
       "code": "A1D0082",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "宋*秀",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-04-23",
       "actual": "2024-04-23"
@@ -27694,6 +27964,7 @@ var BOARD_DATA = {
       "code": "A1D0082",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "宋*秀",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-09-16",
       "actual": "2024-09-16"
@@ -27702,6 +27973,7 @@ var BOARD_DATA = {
       "code": "A1D0083",
       "hosp": "中国医学科学院血液病医院",
       "patient": "班*芳",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-25",
       "actual": "2024-04-25"
@@ -27710,6 +27982,7 @@ var BOARD_DATA = {
       "code": "A1D0083",
       "hosp": "中国医学科学院血液病医院",
       "patient": "班*芳",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-28",
       "actual": "2024-06-28"
@@ -27718,6 +27991,7 @@ var BOARD_DATA = {
       "code": "A1D0086",
       "hosp": "江南大学附属医院（南院）",
       "patient": "倪*莎",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-04-26",
       "actual": "2024-04-26"
@@ -27726,6 +28000,7 @@ var BOARD_DATA = {
       "code": "A1D0086",
       "hosp": "江南大学附属医院（南院）",
       "patient": "倪*莎",
+      "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-09-09",
       "actual": "2024-09-09"
@@ -27734,6 +28009,7 @@ var BOARD_DATA = {
       "code": "A1D0084",
       "hosp": "北京大学人民医院",
       "patient": "刘*华",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-04-26",
       "actual": "2024-04-26"
@@ -27742,6 +28018,7 @@ var BOARD_DATA = {
       "code": "A1D0084",
       "hosp": "北京大学人民医院",
       "patient": "刘*华",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-05-23",
       "actual": "2024-05-23"
@@ -27750,6 +28027,7 @@ var BOARD_DATA = {
       "code": "A1D0089",
       "hosp": "中国医学科学院血液病医院",
       "patient": "侯*祥",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-07",
       "actual": "2024-05-07"
@@ -27758,6 +28036,7 @@ var BOARD_DATA = {
       "code": "A1D0089",
       "hosp": "中国医学科学院血液病医院",
       "patient": "侯*祥",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-24",
       "actual": "2024-06-24"
@@ -27766,6 +28045,7 @@ var BOARD_DATA = {
       "code": "A1D0110",
       "hosp": "广西壮族自治区人民医院",
       "patient": "农*良",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-05-29",
       "actual": "2024-05-29"
@@ -27774,6 +28054,7 @@ var BOARD_DATA = {
       "code": "A1D0110",
       "hosp": "广西壮族自治区人民医院",
       "patient": "农*良",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-07-02",
       "actual": "2024-07-02"
@@ -27782,6 +28063,7 @@ var BOARD_DATA = {
       "code": "A1D0092",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "陶*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-08",
       "actual": "2024-05-08"
@@ -27790,6 +28072,7 @@ var BOARD_DATA = {
       "code": "A1D0091",
       "hosp": "天津医科大学总医院",
       "patient": "王*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-08",
       "actual": "2024-05-08"
@@ -27798,6 +28081,7 @@ var BOARD_DATA = {
       "code": "A1D0091",
       "hosp": "天津医科大学总医院",
       "patient": "王*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-07-23",
       "actual": "2024-07-23"
@@ -27806,6 +28090,7 @@ var BOARD_DATA = {
       "code": "A1D0093",
       "hosp": "厦门大学附属中山医院",
       "patient": "杨*筑",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-05-09",
       "actual": "2024-05-09"
@@ -27814,6 +28099,7 @@ var BOARD_DATA = {
       "code": "A1D0094",
       "hosp": "北京大学人民医院",
       "patient": "薛*娜",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-05-10",
       "actual": "2024-05-10"
@@ -27822,6 +28108,7 @@ var BOARD_DATA = {
       "code": "A1D0094",
       "hosp": "北京大学人民医院",
       "patient": "薛*娜",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-06-04",
       "actual": "2024-06-04"
@@ -27830,6 +28117,7 @@ var BOARD_DATA = {
       "code": "A1D0096",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "张*艳",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-05-10",
       "actual": "2024-05-10"
@@ -27838,6 +28126,7 @@ var BOARD_DATA = {
       "code": "A1D0096",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "张*艳",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-06-27",
       "actual": "2024-06-27"
@@ -27846,6 +28135,7 @@ var BOARD_DATA = {
       "code": "A1D0097",
       "hosp": "北京大学人民医院",
       "patient": "段*友",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-05-13",
       "actual": "2024-05-13"
@@ -27854,6 +28144,7 @@ var BOARD_DATA = {
       "code": "A1D0097",
       "hosp": "北京大学人民医院",
       "patient": "段*友",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-07-15",
       "actual": "2024-07-15"
@@ -27862,6 +28153,7 @@ var BOARD_DATA = {
       "code": "A1D0098",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "王*加",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-05-15",
       "actual": "2024-05-15"
@@ -27870,6 +28162,7 @@ var BOARD_DATA = {
       "code": "A1D0098",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "王*加",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2025-06-04",
       "actual": "2025-06-04"
@@ -27878,6 +28171,7 @@ var BOARD_DATA = {
       "code": "A1D0099",
       "hosp": "北京大学人民医院",
       "patient": "杨*蒲",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-05-14",
       "actual": "2024-05-14"
@@ -27886,6 +28180,7 @@ var BOARD_DATA = {
       "code": "A1D0099",
       "hosp": "北京大学人民医院",
       "patient": "杨*蒲",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-06-07",
       "actual": "2024-06-07"
@@ -27894,6 +28189,7 @@ var BOARD_DATA = {
       "code": "A1D0100",
       "hosp": "中国医学科学院血液病医院",
       "patient": "潘*通",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-14",
       "actual": "2024-05-14"
@@ -27902,6 +28198,7 @@ var BOARD_DATA = {
       "code": "A1D0100",
       "hosp": "中国医学科学院血液病医院",
       "patient": "潘*通",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-09",
       "actual": "2025-04-09"
@@ -27910,6 +28207,7 @@ var BOARD_DATA = {
       "code": "A1D0101",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*春",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-15",
       "actual": "2024-05-15"
@@ -27918,6 +28216,7 @@ var BOARD_DATA = {
       "code": "A1D0101",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*春",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-27",
       "actual": "2024-09-27"
@@ -27926,6 +28225,7 @@ var BOARD_DATA = {
       "code": "A1D0102",
       "hosp": "中国医学科学院血液病医院",
       "patient": "徐*兴",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-16",
       "actual": "2024-05-16"
@@ -27934,6 +28234,7 @@ var BOARD_DATA = {
       "code": "A1D0102",
       "hosp": "中国医学科学院血液病医院",
       "patient": "徐*兴",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-07-09",
       "actual": "2024-07-09"
@@ -27942,6 +28243,7 @@ var BOARD_DATA = {
       "code": "A1D0104",
       "hosp": "四川大学华西医院",
       "patient": "蒲*柏",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-05-20",
       "actual": "2024-05-20"
@@ -27950,6 +28252,7 @@ var BOARD_DATA = {
       "code": "A1D0104",
       "hosp": "四川大学华西医院",
       "patient": "蒲*柏",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-03-06",
       "actual": "2025-03-06"
@@ -27958,6 +28261,7 @@ var BOARD_DATA = {
       "code": "A1E0062",
       "hosp": "南方医科大学珠江医院",
       "patient": "孔*杰",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-03-21",
       "actual": "2025-03-21"
@@ -27966,6 +28270,7 @@ var BOARD_DATA = {
       "code": "A1D0109",
       "hosp": "上海长征医院",
       "patient": "孙*根",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-05-27",
       "actual": "2024-05-27"
@@ -27974,6 +28279,7 @@ var BOARD_DATA = {
       "code": "A1D0109",
       "hosp": "上海长征医院",
       "patient": "孙*根",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-06-28",
       "actual": "2024-06-28"
@@ -27982,6 +28288,7 @@ var BOARD_DATA = {
       "code": "A1D0107",
       "hosp": "江苏省人民医院",
       "patient": "殷*强",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-05-28",
       "actual": "2024-05-28"
@@ -27990,6 +28297,7 @@ var BOARD_DATA = {
       "code": "A1D0107",
       "hosp": "江苏省人民医院",
       "patient": "殷*强",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-08-12",
       "actual": "2024-08-12"
@@ -27998,6 +28306,7 @@ var BOARD_DATA = {
       "code": "A1D0108",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*明",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-27",
       "actual": "2024-05-27"
@@ -28006,6 +28315,7 @@ var BOARD_DATA = {
       "code": "A1D0108",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*明",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-02",
       "actual": "2024-08-02"
@@ -28014,6 +28324,7 @@ var BOARD_DATA = {
       "code": "A1E0080",
       "hosp": "南方医科大学南方医院",
       "patient": "董*平",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-04-22",
       "actual": "2025-04-22"
@@ -28022,6 +28333,7 @@ var BOARD_DATA = {
       "code": "A1E0080",
       "hosp": "南方医科大学南方医院",
       "patient": "董*平",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-07-08",
       "actual": "2025-07-08"
@@ -28030,6 +28342,7 @@ var BOARD_DATA = {
       "code": "A1D0114",
       "hosp": "中国人民解放军西部战区总医院",
       "patient": "何*仙",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-06-03",
       "actual": "2024-06-03"
@@ -28038,6 +28351,7 @@ var BOARD_DATA = {
       "code": "A1D0114",
       "hosp": "中国人民解放军西部战区总医院",
       "patient": "何*仙",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2024-08-23",
       "actual": "2024-08-23"
@@ -28046,6 +28360,7 @@ var BOARD_DATA = {
       "code": "A1D0113",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "席*波",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-06-03",
       "actual": "2024-06-03"
@@ -28054,6 +28369,7 @@ var BOARD_DATA = {
       "code": "A1D0113",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "席*波",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-07-18",
       "actual": "2024-07-21"
@@ -28062,6 +28378,7 @@ var BOARD_DATA = {
       "code": "A1D0115",
       "hosp": "苏州大学附属第一医院",
       "patient": "谢*余",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2024-06-04",
       "actual": "2024-06-04"
@@ -28070,6 +28387,7 @@ var BOARD_DATA = {
       "code": "A1D0115",
       "hosp": "苏州大学附属第一医院",
       "patient": "谢*余",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-07-22",
       "actual": "2024-07-22"
@@ -28078,6 +28396,7 @@ var BOARD_DATA = {
       "code": "A1D0118",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*枫",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-06-05",
       "actual": "2024-06-05"
@@ -28086,6 +28405,7 @@ var BOARD_DATA = {
       "code": "A1D0118",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*枫",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-14",
       "actual": "2024-09-14"
@@ -28094,6 +28414,7 @@ var BOARD_DATA = {
       "code": "A1D0119",
       "hosp": "北京大学深圳医院",
       "patient": "王*平",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-06-07",
       "actual": "2024-06-07"
@@ -28102,6 +28423,7 @@ var BOARD_DATA = {
       "code": "A1D0119",
       "hosp": "北京大学深圳医院",
       "patient": "王*平",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-01-18",
       "actual": "2025-01-18"
@@ -28110,6 +28432,7 @@ var BOARD_DATA = {
       "code": "A1D0120",
       "hosp": "大连医科大学附属第二医院（钻石湾院区）",
       "patient": "潘*伟",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-06-12",
       "actual": "2024-06-12"
@@ -28118,6 +28441,7 @@ var BOARD_DATA = {
       "code": "A1D0120",
       "hosp": "大连医科大学附属第二医院（钻石湾院区）",
       "patient": "潘*伟",
+      "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-09-14",
       "actual": "2024-09-14"
@@ -28126,6 +28450,7 @@ var BOARD_DATA = {
       "code": "A1D0122",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*伟",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-12",
       "actual": "2024-06-12"
@@ -28134,6 +28459,7 @@ var BOARD_DATA = {
       "code": "A1D0122",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*伟",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-03-24",
       "actual": "2025-03-24"
@@ -28142,6 +28468,7 @@ var BOARD_DATA = {
       "code": "A1D0123",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "汪*英",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-13",
       "actual": "2024-06-13"
@@ -28150,6 +28477,7 @@ var BOARD_DATA = {
       "code": "A1D0123",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "汪*英",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-09-25",
       "actual": "2024-09-25"
@@ -28158,6 +28486,7 @@ var BOARD_DATA = {
       "code": "A1D0125",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*丽",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-13",
       "actual": "2024-06-13"
@@ -28166,6 +28495,7 @@ var BOARD_DATA = {
       "code": "A1D0127",
       "hosp": "香港大学深圳医院",
       "patient": "伍*丽",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-06-14",
       "actual": "2024-06-14"
@@ -28174,6 +28504,7 @@ var BOARD_DATA = {
       "code": "A1D0133",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "游*子",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-06-21",
       "actual": "2024-06-21"
@@ -28182,6 +28513,7 @@ var BOARD_DATA = {
       "code": "A1D0133",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "游*子",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-07-24",
       "actual": "2024-07-25"
@@ -28190,6 +28522,7 @@ var BOARD_DATA = {
       "code": "A1D0128",
       "hosp": "嘉兴市第一医院",
       "patient": "罗*忠",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-17",
       "actual": "2024-06-17"
@@ -28198,6 +28531,7 @@ var BOARD_DATA = {
       "code": "A1D0128",
       "hosp": "嘉兴市第一医院",
       "patient": "罗*忠",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-11-12",
       "actual": "2024-11-12"
@@ -28206,6 +28540,7 @@ var BOARD_DATA = {
       "code": "A1D0129",
       "hosp": "北京大学人民医院",
       "patient": "刘*",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-06-19",
       "actual": "2024-06-19"
@@ -28214,6 +28549,7 @@ var BOARD_DATA = {
       "code": "A1D0129",
       "hosp": "北京大学人民医院",
       "patient": "刘*",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-07-23",
       "actual": "2024-07-23"
@@ -28222,6 +28558,7 @@ var BOARD_DATA = {
       "code": "A1D0130",
       "hosp": "哈尔滨医科大学附属第二医院",
       "patient": "鞠*",
+      "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-06-19",
       "actual": "2024-06-19"
@@ -28230,6 +28567,7 @@ var BOARD_DATA = {
       "code": "A1D0131",
       "hosp": "北京协和医院",
       "patient": "郑*亮",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-06-19",
       "actual": "2024-06-19"
@@ -28238,6 +28576,7 @@ var BOARD_DATA = {
       "code": "A1D0131",
       "hosp": "北京协和医院",
       "patient": "郑*亮",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-07-24",
       "actual": "2024-07-24"
@@ -28246,6 +28585,7 @@ var BOARD_DATA = {
       "code": "A1D0132",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*玲",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-06-21",
       "actual": "2024-06-21"
@@ -28254,6 +28594,7 @@ var BOARD_DATA = {
       "code": "A1D0132",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*玲",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-19",
       "actual": "2024-08-19"
@@ -28262,6 +28603,7 @@ var BOARD_DATA = {
       "code": "A1D0134",
       "hosp": "广西医科大学附属肿瘤医院",
       "patient": "农*全",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-06-21",
       "actual": "2024-06-21"
@@ -28270,6 +28612,7 @@ var BOARD_DATA = {
       "code": "A1D0134",
       "hosp": "广西医科大学附属肿瘤医院",
       "patient": "农*全",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-08-18",
       "actual": "2024-08-18"
@@ -28278,6 +28621,7 @@ var BOARD_DATA = {
       "code": "A1D0135",
       "hosp": "青岛市市立医院",
       "patient": "黄*华",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-06-21",
       "actual": "2024-06-21"
@@ -28286,6 +28630,7 @@ var BOARD_DATA = {
       "code": "A1D0135",
       "hosp": "青岛市市立医院",
       "patient": "黄*华",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-07-21",
       "actual": "2025-07-21"
@@ -28294,6 +28639,7 @@ var BOARD_DATA = {
       "code": "A1D0137",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "樊*升",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-06-24",
       "actual": "2024-06-24"
@@ -28302,6 +28648,7 @@ var BOARD_DATA = {
       "code": "A1D0137",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "樊*升",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-08-06",
       "actual": "2024-08-06"
@@ -28310,6 +28657,7 @@ var BOARD_DATA = {
       "code": "A1D0138",
       "hosp": "中山大学附属第六医院（广东省胃肠肛门医院）",
       "patient": "黄*",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-06-23",
       "actual": "2024-06-23"
@@ -28318,6 +28666,7 @@ var BOARD_DATA = {
       "code": "A1D0138",
       "hosp": "中山大学附属第六医院（广东省胃肠肛门医院）",
       "patient": "黄*",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-09-15",
       "actual": "2024-09-15"
@@ -28326,6 +28675,7 @@ var BOARD_DATA = {
       "code": "A1D0142",
       "hosp": "南方医科大学南方医院",
       "patient": "胡*卓",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-06-28",
       "actual": "2024-06-28"
@@ -28334,6 +28684,7 @@ var BOARD_DATA = {
       "code": "A1D0142",
       "hosp": "南方医科大学南方医院",
       "patient": "胡*卓",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-08-06",
       "actual": "2024-08-06"
@@ -28342,6 +28693,7 @@ var BOARD_DATA = {
       "code": "A1D0140",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-06-26",
       "actual": "2024-06-26"
@@ -28350,6 +28702,7 @@ var BOARD_DATA = {
       "code": "A1D0140",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-26",
       "actual": "2024-08-26"
@@ -28358,6 +28711,7 @@ var BOARD_DATA = {
       "code": "A1D0143",
       "hosp": "北京大学人民医院",
       "patient": "宋*",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-06-27",
       "actual": "2024-06-27"
@@ -28366,6 +28720,7 @@ var BOARD_DATA = {
       "code": "A1D0143",
       "hosp": "北京大学人民医院",
       "patient": "宋*",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-08-21",
       "actual": "2024-08-21"
@@ -28374,6 +28729,7 @@ var BOARD_DATA = {
       "code": "A1D0159",
       "hosp": "上海市浦东医院",
       "patient": "钟*辉",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-19",
       "actual": "2024-07-19"
@@ -28382,6 +28738,7 @@ var BOARD_DATA = {
       "code": "A1D0159",
       "hosp": "上海市浦东医院",
       "patient": "钟*辉",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-09-11",
       "actual": "2024-09-11"
@@ -28390,6 +28747,7 @@ var BOARD_DATA = {
       "code": "A1D0145",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "江*",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-07-03",
       "actual": "2024-07-03"
@@ -28398,6 +28756,7 @@ var BOARD_DATA = {
       "code": "A1D0146",
       "hosp": "上海市同济医院",
       "patient": "王*云",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-05",
       "actual": "2024-07-05"
@@ -28406,6 +28765,7 @@ var BOARD_DATA = {
       "code": "A1D0146",
       "hosp": "上海市同济医院",
       "patient": "王*云",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-08-12",
       "actual": "2024-08-12"
@@ -28414,6 +28774,7 @@ var BOARD_DATA = {
       "code": "A1D0149",
       "hosp": "上海仁济医院",
       "patient": "於*英",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-09",
       "actual": "2024-07-09"
@@ -28422,6 +28783,7 @@ var BOARD_DATA = {
       "code": "A1D0149",
       "hosp": "上海仁济医院",
       "patient": "於*英",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-08-27",
       "actual": "2024-08-27"
@@ -28430,6 +28792,7 @@ var BOARD_DATA = {
       "code": "A1D0147",
       "hosp": "中国医学科学院血液病医院",
       "patient": "姚*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-09",
       "actual": "2024-07-09"
@@ -28438,6 +28801,7 @@ var BOARD_DATA = {
       "code": "A1D0147",
       "hosp": "中国医学科学院血液病医院",
       "patient": "姚*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-08",
       "actual": "2024-10-08"
@@ -28446,6 +28810,7 @@ var BOARD_DATA = {
       "code": "A1D0148",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "田*维",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-08",
       "actual": "2024-07-08"
@@ -28454,6 +28819,7 @@ var BOARD_DATA = {
       "code": "A1D0148",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "田*维",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-23",
       "actual": "2024-10-23"
@@ -28462,6 +28828,7 @@ var BOARD_DATA = {
       "code": "A1D0151",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*利",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-10",
       "actual": "2024-07-10"
@@ -28470,6 +28837,7 @@ var BOARD_DATA = {
       "code": "A1D0151",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*利",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-20",
       "actual": "2024-08-20"
@@ -28478,6 +28846,7 @@ var BOARD_DATA = {
       "code": "A1D0152",
       "hosp": "北京大学深圳医院",
       "patient": "罗*英",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-07-12",
       "actual": "2024-07-12"
@@ -28486,6 +28855,7 @@ var BOARD_DATA = {
       "code": "A1D0152",
       "hosp": "北京大学深圳医院",
       "patient": "罗*英",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-06-30",
       "actual": "2025-06-30"
@@ -28494,6 +28864,7 @@ var BOARD_DATA = {
       "code": "A1D0153",
       "hosp": "暨南大学附属第一医院（广州华侨医院）",
       "patient": "周*亮",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-07-12",
       "actual": "2024-07-12"
@@ -28502,6 +28873,7 @@ var BOARD_DATA = {
       "code": "A1D0153",
       "hosp": "暨南大学附属第一医院（广州华侨医院）",
       "patient": "周*亮",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-09-09",
       "actual": "2024-09-09"
@@ -28510,6 +28882,7 @@ var BOARD_DATA = {
       "code": "A1D0154",
       "hosp": "江苏省人民医院",
       "patient": "曹*竟",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-07-17",
       "actual": "2024-07-17"
@@ -28518,6 +28891,7 @@ var BOARD_DATA = {
       "code": "A1D0154",
       "hosp": "江苏省人民医院",
       "patient": "曹*竟",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-04-03",
       "actual": "2025-04-03"
@@ -28526,6 +28900,7 @@ var BOARD_DATA = {
       "code": "A1D0157",
       "hosp": "北京协和医院",
       "patient": "林*珍",
+      "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-07-18",
       "actual": "2024-07-18"
@@ -28534,6 +28909,7 @@ var BOARD_DATA = {
       "code": "A1D0157",
       "hosp": "北京协和医院",
       "patient": "林*珍",
+      "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-09-04",
       "actual": "2024-09-04"
@@ -28542,6 +28918,7 @@ var BOARD_DATA = {
       "code": "A1D0158",
       "hosp": "西安交通大学第一附属医院",
       "patient": "张*秀",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-07-19",
       "actual": "2024-07-19"
@@ -28550,6 +28927,7 @@ var BOARD_DATA = {
       "code": "A1D0158",
       "hosp": "西安交通大学第一附属医院",
       "patient": "张*秀",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-09-03",
       "actual": "2024-09-03"
@@ -28558,6 +28936,7 @@ var BOARD_DATA = {
       "code": "A1D0161",
       "hosp": "上海市曜影医院",
       "patient": "T*Y C*S S*E",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-20",
       "actual": "2024-07-20"
@@ -28566,6 +28945,7 @@ var BOARD_DATA = {
       "code": "A1D0161",
       "hosp": "上海市曜影医院",
       "patient": "T*Y C*S S*E",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-09-02",
       "actual": "2024-09-02"
@@ -28574,6 +28954,7 @@ var BOARD_DATA = {
       "code": "A1D0160",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "龚*忠",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-07-22",
       "actual": "2024-07-22"
@@ -28582,6 +28963,7 @@ var BOARD_DATA = {
       "code": "A1D0160",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "龚*忠",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2025-10-22",
       "actual": "2025-10-22"
@@ -28590,6 +28972,7 @@ var BOARD_DATA = {
       "code": "A1D0162",
       "hosp": "上海长征医院",
       "patient": "陆*宝",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-22",
       "actual": "2024-07-22"
@@ -28598,6 +28981,7 @@ var BOARD_DATA = {
       "code": "A1D0162",
       "hosp": "上海长征医院",
       "patient": "陆*宝",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-09-03",
       "actual": "2024-09-03"
@@ -28606,6 +28990,7 @@ var BOARD_DATA = {
       "code": "A1D0163",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-23",
       "actual": "2024-07-23"
@@ -28614,6 +28999,7 @@ var BOARD_DATA = {
       "code": "A1D0163",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*军",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-18",
       "actual": "2024-09-18"
@@ -28622,6 +29008,7 @@ var BOARD_DATA = {
       "code": "A1D0165",
       "hosp": "安徽省立医院南区（安徽省心血管医院）",
       "patient": "梁*秀",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-07-25",
       "actual": "2024-07-25"
@@ -28630,6 +29017,7 @@ var BOARD_DATA = {
       "code": "A1D0165",
       "hosp": "安徽省立医院南区（安徽省心血管医院）",
       "patient": "梁*秀",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-09-12",
       "actual": "2024-09-12"
@@ -28638,6 +29026,7 @@ var BOARD_DATA = {
       "code": "A1D0166",
       "hosp": "北京大学人民医院",
       "patient": "贾*国",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-07-25",
       "actual": "2024-07-25"
@@ -28646,6 +29035,7 @@ var BOARD_DATA = {
       "code": "A1D0166",
       "hosp": "北京大学人民医院",
       "patient": "贾*国",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-01",
       "actual": "2024-09-01"
@@ -28654,6 +29044,7 @@ var BOARD_DATA = {
       "code": "A1D0168",
       "hosp": "天津医科大学总医院",
       "patient": "陈*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-26",
       "actual": "2024-07-26"
@@ -28662,6 +29053,7 @@ var BOARD_DATA = {
       "code": "A1D0168",
       "hosp": "天津医科大学总医院",
       "patient": "陈*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-18",
       "actual": "2024-11-18"
@@ -28670,6 +29062,7 @@ var BOARD_DATA = {
       "code": "A1D0170",
       "hosp": "中国医学科学院血液病医院",
       "patient": "Z*G S*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-29",
       "actual": "2024-07-29"
@@ -28678,6 +29071,7 @@ var BOARD_DATA = {
       "code": "A1D0170",
       "hosp": "中国医学科学院血液病医院",
       "patient": "Z*G S*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-07",
       "actual": "2024-11-07"
@@ -28686,6 +29080,7 @@ var BOARD_DATA = {
       "code": "A1D0174",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "郭*",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-07-31",
       "actual": "2024-07-31"
@@ -28694,6 +29089,7 @@ var BOARD_DATA = {
       "code": "A1D0174",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "郭*",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-10-14",
       "actual": "2024-10-14"
@@ -28702,6 +29098,7 @@ var BOARD_DATA = {
       "code": "A1D0305",
       "hosp": "福建医科大学附属第一医院",
       "patient": "陈*莺",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-11-29",
       "actual": "2024-11-29"
@@ -28710,6 +29107,7 @@ var BOARD_DATA = {
       "code": "A1D0305",
       "hosp": "福建医科大学附属第一医院",
       "patient": "陈*莺",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-12-31",
       "actual": "2024-12-31"
@@ -28718,6 +29116,7 @@ var BOARD_DATA = {
       "code": "A1D0172",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*汉",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-31",
       "actual": "2024-07-31"
@@ -28726,6 +29125,7 @@ var BOARD_DATA = {
       "code": "A1D0172",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*汉",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-29",
       "actual": "2024-09-29"
@@ -28734,6 +29134,7 @@ var BOARD_DATA = {
       "code": "A1D0175",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郑*锋",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-01",
       "actual": "2024-08-01"
@@ -28742,6 +29143,7 @@ var BOARD_DATA = {
       "code": "A1D0175",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郑*锋",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-02",
       "actual": "2024-10-02"
@@ -28750,6 +29152,7 @@ var BOARD_DATA = {
       "code": "A1D0177",
       "hosp": "北京大学人民医院",
       "patient": "马*兴",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-07",
       "actual": "2024-08-07"
@@ -28758,6 +29161,7 @@ var BOARD_DATA = {
       "code": "A1D0177",
       "hosp": "北京大学人民医院",
       "patient": "马*兴",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-20",
       "actual": "2024-09-20"
@@ -28766,6 +29170,7 @@ var BOARD_DATA = {
       "code": "A1D0176",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "刘*萍",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-08-05",
       "actual": "2024-08-05"
@@ -28774,6 +29179,7 @@ var BOARD_DATA = {
       "code": "A1D0176",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "刘*萍",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-09-18",
       "actual": "2024-09-18"
@@ -28782,6 +29188,7 @@ var BOARD_DATA = {
       "code": "A1D0180",
       "hosp": "中南大学湘雅三医院",
       "patient": "龙*万",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-09",
       "actual": "2024-08-09"
@@ -28790,6 +29197,7 @@ var BOARD_DATA = {
       "code": "A1D0180",
       "hosp": "中南大学湘雅三医院",
       "patient": "龙*万",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-09-19",
       "actual": "2024-09-19"
@@ -28798,6 +29206,7 @@ var BOARD_DATA = {
       "code": "A1D0178",
       "hosp": "空军军医大学西京医院",
       "patient": "陈*国",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-06",
       "actual": "2024-08-06"
@@ -28806,6 +29215,7 @@ var BOARD_DATA = {
       "code": "A1D0178",
       "hosp": "空军军医大学西京医院",
       "patient": "陈*国",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-02-14",
       "actual": "2025-02-14"
@@ -28814,6 +29224,7 @@ var BOARD_DATA = {
       "code": "A1D0218",
       "hosp": "北京大学人民医院",
       "patient": "张*香",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-29",
       "actual": "2024-08-29"
@@ -28822,6 +29233,7 @@ var BOARD_DATA = {
       "code": "A1D0218",
       "hosp": "北京大学人民医院",
       "patient": "张*香",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-28",
       "actual": "2024-09-28"
@@ -28830,6 +29242,7 @@ var BOARD_DATA = {
       "code": "A1D0189",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "刘*",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-12",
       "actual": "2024-08-12"
@@ -28838,6 +29251,7 @@ var BOARD_DATA = {
       "code": "A1D0189",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "刘*",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-09-30",
       "actual": "2024-09-30"
@@ -28846,6 +29260,7 @@ var BOARD_DATA = {
       "code": "A1D0182",
       "hosp": "中山大学附属第一医院",
       "patient": "朱*宝",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-08-08",
       "actual": "2024-08-08"
@@ -28854,6 +29269,7 @@ var BOARD_DATA = {
       "code": "A1D0182",
       "hosp": "中山大学附属第一医院",
       "patient": "朱*宝",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2024-11-26",
       "actual": "2024-11-26"
@@ -28862,6 +29278,7 @@ var BOARD_DATA = {
       "code": "A1D0181",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*大",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-08",
       "actual": "2024-08-08"
@@ -28870,6 +29287,7 @@ var BOARD_DATA = {
       "code": "A1D0181",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*大",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-02-27",
       "actual": "2025-02-27"
@@ -28878,6 +29296,7 @@ var BOARD_DATA = {
       "code": "A1D0184",
       "hosp": "南方医科大学珠江医院",
       "patient": "黄*贞",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-08-09",
       "actual": "2024-08-09"
@@ -28886,6 +29305,7 @@ var BOARD_DATA = {
       "code": "A1D0184",
       "hosp": "南方医科大学珠江医院",
       "patient": "黄*贞",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2024-09-23",
       "actual": "2024-09-23"
@@ -28894,6 +29314,7 @@ var BOARD_DATA = {
       "code": "A1D0211",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-27",
       "actual": "2024-08-27"
@@ -28902,6 +29323,7 @@ var BOARD_DATA = {
       "code": "A1D0211",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-30",
       "actual": "2024-09-30"
@@ -28910,6 +29332,7 @@ var BOARD_DATA = {
       "code": "A1D0186",
       "hosp": "北京大学人民医院",
       "patient": "佟*国",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-14",
       "actual": "2024-08-14"
@@ -28918,6 +29341,7 @@ var BOARD_DATA = {
       "code": "A1D0186",
       "hosp": "北京大学人民医院",
       "patient": "佟*国",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-25",
       "actual": "2024-09-25"
@@ -28926,6 +29350,7 @@ var BOARD_DATA = {
       "code": "A1D0188",
       "hosp": "中国人民解放军总医院",
       "patient": "冯*钗",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-13",
       "actual": "2024-08-13"
@@ -28934,6 +29359,7 @@ var BOARD_DATA = {
       "code": "A1D0188",
       "hosp": "中国人民解放军总医院",
       "patient": "冯*钗",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-10-14",
       "actual": "2024-10-14"
@@ -28942,6 +29368,7 @@ var BOARD_DATA = {
       "code": "A1D0187",
       "hosp": "北京大学人民医院",
       "patient": "刘*军",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-12",
       "actual": "2024-08-12"
@@ -28950,6 +29377,7 @@ var BOARD_DATA = {
       "code": "A1D0187",
       "hosp": "北京大学人民医院",
       "patient": "刘*军",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-05",
       "actual": "2024-09-05"
@@ -28958,6 +29386,7 @@ var BOARD_DATA = {
       "code": "A1D0213",
       "hosp": "上海市第六人民医院",
       "patient": "侯*梅",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-08-30",
       "actual": "2024-08-30"
@@ -28966,6 +29395,7 @@ var BOARD_DATA = {
       "code": "A1D0213",
       "hosp": "上海市第六人民医院",
       "patient": "侯*梅",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-10-29",
       "actual": "2024-10-29"
@@ -28974,6 +29404,7 @@ var BOARD_DATA = {
       "code": "A1D0191",
       "hosp": "南昌大学第一附属医院",
       "patient": "陈*",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-08-14",
       "actual": "2024-08-14"
@@ -28982,6 +29413,7 @@ var BOARD_DATA = {
       "code": "A1D0191",
       "hosp": "南昌大学第一附属医院",
       "patient": "陈*",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-09-24",
       "actual": "2024-09-24"
@@ -28990,6 +29422,7 @@ var BOARD_DATA = {
       "code": "A1D0192",
       "hosp": "苏州大学附属第一医院",
       "patient": "胡*明",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2024-08-15",
       "actual": "2024-08-15"
@@ -28998,6 +29431,7 @@ var BOARD_DATA = {
       "code": "A1D0223",
       "hosp": "河南省肿瘤医院",
       "patient": "麻*兰",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-09-06",
       "actual": "2024-09-06"
@@ -29006,6 +29440,7 @@ var BOARD_DATA = {
       "code": "A1D0223",
       "hosp": "河南省肿瘤医院",
       "patient": "麻*兰",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-12-18",
       "actual": "2024-12-18"
@@ -29014,6 +29449,7 @@ var BOARD_DATA = {
       "code": "A1D0194",
       "hosp": "浙江省中医院",
       "patient": "干*花",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-08-15",
       "actual": "2024-08-15"
@@ -29022,6 +29458,7 @@ var BOARD_DATA = {
       "code": "A1D0194",
       "hosp": "浙江省中医院",
       "patient": "干*花",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-11-27",
       "actual": "2024-11-27"
@@ -29030,6 +29467,7 @@ var BOARD_DATA = {
       "code": "A1D0196",
       "hosp": "中国医学科学院血液病医院",
       "patient": "胡*雷",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-16",
       "actual": "2024-08-16"
@@ -29038,6 +29476,7 @@ var BOARD_DATA = {
       "code": "A1D0196",
       "hosp": "中国医学科学院血液病医院",
       "patient": "胡*雷",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-12-06",
       "actual": "2024-12-06"
@@ -29046,6 +29485,7 @@ var BOARD_DATA = {
       "code": "A1D0198",
       "hosp": "南方医科大学南方医院",
       "patient": "梁*华",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-08-16",
       "actual": "2024-08-16"
@@ -29054,6 +29494,7 @@ var BOARD_DATA = {
       "code": "A1D0198",
       "hosp": "南方医科大学南方医院",
       "patient": "梁*华",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-10-15",
       "actual": "2024-10-15"
@@ -29062,6 +29503,7 @@ var BOARD_DATA = {
       "code": "A1D0199",
       "hosp": "西安交通大学第一附属医院",
       "patient": "徐*城",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-16",
       "actual": "2024-08-16"
@@ -29070,6 +29512,7 @@ var BOARD_DATA = {
       "code": "A1D0199",
       "hosp": "西安交通大学第一附属医院",
       "patient": "徐*城",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-09-09",
       "actual": "2025-09-09"
@@ -29078,6 +29521,7 @@ var BOARD_DATA = {
       "code": "A1D0201",
       "hosp": "中国人民解放军总医院第五医学中心（307医院）",
       "patient": "任*财",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-19",
       "actual": "2024-08-19"
@@ -29086,6 +29530,7 @@ var BOARD_DATA = {
       "code": "A1D0201",
       "hosp": "中国人民解放军总医院第五医学中心（307医院）",
       "patient": "任*财",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-11-19",
       "actual": "2024-11-19"
@@ -29094,6 +29539,7 @@ var BOARD_DATA = {
       "code": "A1D0200",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*萍",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-19",
       "actual": "2024-08-19"
@@ -29102,6 +29548,7 @@ var BOARD_DATA = {
       "code": "A1D0200",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*萍",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-29",
       "actual": "2024-11-29"
@@ -29110,6 +29557,7 @@ var BOARD_DATA = {
       "code": "A1D0321",
       "hosp": "中国医学科学院血液病医院",
       "patient": "侯*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-17",
       "actual": "2024-12-17"
@@ -29118,6 +29566,7 @@ var BOARD_DATA = {
       "code": "A1D0321",
       "hosp": "中国医学科学院血液病医院",
       "patient": "侯*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-10",
       "actual": "2025-03-10"
@@ -29126,6 +29575,7 @@ var BOARD_DATA = {
       "code": "A1D0206",
       "hosp": "南昌大学第一附属医院",
       "patient": "谢*良",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-08-22",
       "actual": "2024-08-22"
@@ -29134,6 +29584,7 @@ var BOARD_DATA = {
       "code": "A1D0206",
       "hosp": "南昌大学第一附属医院",
       "patient": "谢*良",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-10-14",
       "actual": "2024-10-14"
@@ -29142,6 +29593,7 @@ var BOARD_DATA = {
       "code": "A1D0207",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "杨*原",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-22",
       "actual": "2024-08-22"
@@ -29150,6 +29602,7 @@ var BOARD_DATA = {
       "code": "A1D0207",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "杨*原",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-01-14",
       "actual": "2025-01-14"
@@ -29158,6 +29611,7 @@ var BOARD_DATA = {
       "code": "A1D0209",
       "hosp": "中国医学科学院血液病医院",
       "patient": "韩*英",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-26",
       "actual": "2024-08-26"
@@ -29166,6 +29620,7 @@ var BOARD_DATA = {
       "code": "A1D0209",
       "hosp": "中国医学科学院血液病医院",
       "patient": "韩*英",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-20",
       "actual": "2024-09-20"
@@ -29174,6 +29629,7 @@ var BOARD_DATA = {
       "code": "A1D0210",
       "hosp": "中国人民解放军海军特色医学中心",
       "patient": "陈*",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-08-26",
       "actual": "2024-08-26"
@@ -29182,6 +29638,7 @@ var BOARD_DATA = {
       "code": "A1D0210",
       "hosp": "中国人民解放军海军特色医学中心",
       "patient": "陈*",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-11-21",
       "actual": "2024-11-21"
@@ -29190,6 +29647,7 @@ var BOARD_DATA = {
       "code": "A1D0212",
       "hosp": "中国人民解放军总医院第五医学中心（307医院）",
       "patient": "徐*孝",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-09-02",
       "actual": "2024-09-02"
@@ -29198,6 +29656,7 @@ var BOARD_DATA = {
       "code": "A1D0212",
       "hosp": "中国人民解放军总医院第五医学中心（307医院）",
       "patient": "徐*孝",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-10-22",
       "actual": "2024-10-22"
@@ -29206,6 +29665,7 @@ var BOARD_DATA = {
       "code": "A1D0216",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*荣",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-29",
       "actual": "2024-08-29"
@@ -29214,6 +29674,7 @@ var BOARD_DATA = {
       "code": "A1D0216",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*荣",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-18",
       "actual": "2024-10-18"
@@ -29222,6 +29683,7 @@ var BOARD_DATA = {
       "code": "A1D0217",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-29",
       "actual": "2024-08-29"
@@ -29230,6 +29692,7 @@ var BOARD_DATA = {
       "code": "A1D0217",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-04",
       "actual": "2024-11-04"
@@ -29238,6 +29701,7 @@ var BOARD_DATA = {
       "code": "A1D0243",
       "hosp": "深圳市罗湖区人民医院（友谊路院区）",
       "patient": "邓*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-09-29",
       "actual": "2024-09-29"
@@ -29246,6 +29710,7 @@ var BOARD_DATA = {
       "code": "A1D0243",
       "hosp": "深圳市罗湖区人民医院（友谊路院区）",
       "patient": "邓*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-10-21",
       "actual": "2025-10-21"
@@ -29254,6 +29719,7 @@ var BOARD_DATA = {
       "code": "A1D0219",
       "hosp": "中山大学肿瘤医院",
       "patient": "蒙*莲",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-09-04",
       "actual": "2024-09-04"
@@ -29262,6 +29728,7 @@ var BOARD_DATA = {
       "code": "A1D0219",
       "hosp": "中山大学肿瘤医院",
       "patient": "蒙*莲",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-11-12",
       "actual": "2024-11-12"
@@ -29270,6 +29737,7 @@ var BOARD_DATA = {
       "code": "A1D0264",
       "hosp": "宁波大学附属人民医院",
       "patient": "徐*珠",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-18",
       "actual": "2024-10-18"
@@ -29278,6 +29746,7 @@ var BOARD_DATA = {
       "code": "A1D0264",
       "hosp": "宁波大学附属人民医院",
       "patient": "徐*珠",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-12-04",
       "actual": "2024-12-04"
@@ -29286,6 +29755,7 @@ var BOARD_DATA = {
       "code": "A1D0224",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "段*均",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-09-09",
       "actual": "2024-09-09"
@@ -29294,6 +29764,7 @@ var BOARD_DATA = {
       "code": "A1D0224",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "段*均",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-12-13",
       "actual": "2024-12-13"
@@ -29302,6 +29773,7 @@ var BOARD_DATA = {
       "code": "A1D0222",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "苟*民",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-09-05",
       "actual": "2024-09-05"
@@ -29310,6 +29782,7 @@ var BOARD_DATA = {
       "code": "A1D0222",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "苟*民",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-09-23",
       "actual": "2025-09-23"
@@ -29318,6 +29791,7 @@ var BOARD_DATA = {
       "code": "A1D0226",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "励*芬",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-09-11",
       "actual": "2024-09-11"
@@ -29326,6 +29800,7 @@ var BOARD_DATA = {
       "code": "A1D0226",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "励*芬",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-11-08",
       "actual": "2024-11-08"
@@ -29334,6 +29809,7 @@ var BOARD_DATA = {
       "code": "A1D0228",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "方*金",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-09-11",
       "actual": "2024-09-11"
@@ -29342,6 +29818,7 @@ var BOARD_DATA = {
       "code": "A1D0228",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "方*金",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-01-16",
       "actual": "2025-01-16"
@@ -29350,6 +29827,7 @@ var BOARD_DATA = {
       "code": "A1D0229",
       "hosp": "北京大学人民医院",
       "patient": "赵*良",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-09-12",
       "actual": "2024-09-12"
@@ -29358,6 +29836,7 @@ var BOARD_DATA = {
       "code": "A1D0229",
       "hosp": "北京大学人民医院",
       "patient": "赵*良",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-11-15",
       "actual": "2024-11-15"
@@ -29366,6 +29845,7 @@ var BOARD_DATA = {
       "code": "A1D0230",
       "hosp": "中国医学科学院血液病医院",
       "patient": "沈*芳",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-13",
       "actual": "2024-09-13"
@@ -29374,6 +29854,7 @@ var BOARD_DATA = {
       "code": "A1D0230",
       "hosp": "中国医学科学院血液病医院",
       "patient": "沈*芳",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-12-17",
       "actual": "2024-12-17"
@@ -29382,6 +29863,7 @@ var BOARD_DATA = {
       "code": "A1D0242",
       "hosp": "中国医学科学院血液病医院",
       "patient": "袁*强",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-24",
       "actual": "2024-09-24"
@@ -29390,6 +29872,7 @@ var BOARD_DATA = {
       "code": "A1D0242",
       "hosp": "中国医学科学院血液病医院",
       "patient": "袁*强",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-01",
       "actual": "2024-11-01"
@@ -29398,6 +29881,7 @@ var BOARD_DATA = {
       "code": "A1D0274",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "赵*平",
+      "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-10-24",
       "actual": "2024-10-24"
@@ -29406,6 +29890,7 @@ var BOARD_DATA = {
       "code": "A1D0274",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "赵*平",
+      "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-12-03",
       "actual": "2024-12-03"
@@ -29414,6 +29899,7 @@ var BOARD_DATA = {
       "code": "A1D0232",
       "hosp": "福建医科大学附属协和医院",
       "patient": "廖*璐",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-09-20",
       "actual": "2024-09-20"
@@ -29422,6 +29908,7 @@ var BOARD_DATA = {
       "code": "A1D0232",
       "hosp": "福建医科大学附属协和医院",
       "patient": "廖*璐",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-11-27",
       "actual": "2024-11-27"
@@ -29430,6 +29917,7 @@ var BOARD_DATA = {
       "code": "A1D0234",
       "hosp": "温州医科大学附属第一医院",
       "patient": "吕*泽",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-09-19",
       "actual": "2024-09-19"
@@ -29438,6 +29926,7 @@ var BOARD_DATA = {
       "code": "A1D0234",
       "hosp": "温州医科大学附属第一医院",
       "patient": "吕*泽",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-04-17",
       "actual": "2025-04-17"
@@ -29446,6 +29935,7 @@ var BOARD_DATA = {
       "code": "A1D0236",
       "hosp": "中国医学科学院血液病医院",
       "patient": "尚*娟",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-23",
       "actual": "2024-09-23"
@@ -29454,6 +29944,7 @@ var BOARD_DATA = {
       "code": "A1D0236",
       "hosp": "中国医学科学院血液病医院",
       "patient": "尚*娟",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-04",
       "actual": "2024-11-04"
@@ -29462,6 +29953,7 @@ var BOARD_DATA = {
       "code": "A1D0239",
       "hosp": "厦门大学附属第一医院",
       "patient": "陈*",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-09-26",
       "actual": "2024-09-26"
@@ -29470,6 +29962,7 @@ var BOARD_DATA = {
       "code": "A1D0239",
       "hosp": "厦门大学附属第一医院",
       "patient": "陈*",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-12-20",
       "actual": "2024-12-20"
@@ -29478,6 +29971,7 @@ var BOARD_DATA = {
       "code": "A1E0019",
       "hosp": "北京大学人民医院",
       "patient": "陈*民",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-02-08",
       "actual": "2025-02-08"
@@ -29486,6 +29980,7 @@ var BOARD_DATA = {
       "code": "A1E0019",
       "hosp": "北京大学人民医院",
       "patient": "陈*民",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-19",
       "actual": "2025-03-19"
@@ -29494,6 +29989,7 @@ var BOARD_DATA = {
       "code": "A1D0245",
       "hosp": "成都上锦南府医院 （四川大学华西医院上锦医院位）",
       "patient": "刘*",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-09-25",
       "actual": "2024-09-25"
@@ -29502,6 +29998,7 @@ var BOARD_DATA = {
       "code": "A1D0245",
       "hosp": "成都上锦南府医院 （四川大学华西医院上锦医院位）",
       "patient": "刘*",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-01-28",
       "actual": "2025-01-28"
@@ -29510,6 +30007,7 @@ var BOARD_DATA = {
       "code": "A1D0252",
       "hosp": "上海市同济医院",
       "patient": "刘*华",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-10-08",
       "actual": "2024-10-08"
@@ -29518,6 +30016,7 @@ var BOARD_DATA = {
       "code": "A1D0252",
       "hosp": "上海市同济医院",
       "patient": "刘*华",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-12-11",
       "actual": "2024-12-10"
@@ -29526,6 +30025,7 @@ var BOARD_DATA = {
       "code": "A1D0320",
       "hosp": "广州市第一人民医院",
       "patient": "黄*红",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-12-16",
       "actual": "2024-12-16"
@@ -29534,6 +30034,7 @@ var BOARD_DATA = {
       "code": "A1D0320",
       "hosp": "广州市第一人民医院",
       "patient": "黄*红",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-02-12",
       "actual": "2025-02-12"
@@ -29542,6 +30043,7 @@ var BOARD_DATA = {
       "code": "A1D0247",
       "hosp": "福建医科大学附属协和医院",
       "patient": "林*金",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-09-27",
       "actual": "2024-09-27"
@@ -29550,6 +30052,7 @@ var BOARD_DATA = {
       "code": "A1D0248",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杜*国",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-27",
       "actual": "2024-09-27"
@@ -29558,6 +30061,7 @@ var BOARD_DATA = {
       "code": "A1D0248",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杜*国",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-12-25",
       "actual": "2024-12-25"
@@ -29566,6 +30070,7 @@ var BOARD_DATA = {
       "code": "A1D0255",
       "hosp": "上海仁济医院",
       "patient": "卢*兰",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-10-10",
       "actual": "2024-10-10"
@@ -29574,6 +30079,7 @@ var BOARD_DATA = {
       "code": "A1D0255",
       "hosp": "上海仁济医院",
       "patient": "卢*兰",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-02-10",
       "actual": "2025-02-10"
@@ -29582,6 +30088,7 @@ var BOARD_DATA = {
       "code": "A1D0254",
       "hosp": "北京大学人民医院",
       "patient": "藏*芹",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-10-10",
       "actual": "2024-10-10"
@@ -29590,6 +30097,7 @@ var BOARD_DATA = {
       "code": "A1D0254",
       "hosp": "北京大学人民医院",
       "patient": "藏*芹",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-12-18",
       "actual": "2024-12-18"
@@ -29598,6 +30106,7 @@ var BOARD_DATA = {
       "code": "A1D0256",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*波",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-10-12",
       "actual": "2024-10-12"
@@ -29606,6 +30115,7 @@ var BOARD_DATA = {
       "code": "A1D0256",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*波",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-11",
       "actual": "2024-11-11"
@@ -29614,6 +30124,7 @@ var BOARD_DATA = {
       "code": "A1D0257",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "黄*清",
+      "cos": "洪琳",
       "type": "apheresis",
       "plan": "2024-10-16",
       "actual": "2024-10-16"
@@ -29622,6 +30133,7 @@ var BOARD_DATA = {
       "code": "A1D0257",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "黄*清",
+      "cos": "洪琳",
       "type": "reinfusion",
       "plan": "2024-12-23",
       "actual": "2024-12-23"
@@ -29630,6 +30142,7 @@ var BOARD_DATA = {
       "code": "A1D0258",
       "hosp": "中国医学科学院血液病医院",
       "patient": "徐*贤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-10-15",
       "actual": "2024-10-15"
@@ -29638,6 +30151,7 @@ var BOARD_DATA = {
       "code": "A1D0258",
       "hosp": "中国医学科学院血液病医院",
       "patient": "徐*贤",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-25",
       "actual": "2024-11-25"
@@ -29646,6 +30160,7 @@ var BOARD_DATA = {
       "code": "A1D0263",
       "hosp": "上海市同济医院",
       "patient": "刘*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-10-17",
       "actual": "2024-10-17"
@@ -29654,6 +30169,7 @@ var BOARD_DATA = {
       "code": "A1D0261",
       "hosp": "福建医科大学附属协和医院",
       "patient": "林*芳",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-10-22",
       "actual": "2024-10-22"
@@ -29662,6 +30178,7 @@ var BOARD_DATA = {
       "code": "A1D0261",
       "hosp": "福建医科大学附属协和医院",
       "patient": "林*芳",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-12-30",
       "actual": "2024-12-30"
@@ -29670,6 +30187,7 @@ var BOARD_DATA = {
       "code": "A1D0265",
       "hosp": "江苏省人民医院",
       "patient": "王*光",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-10-17",
       "actual": "2024-10-17"
@@ -29678,6 +30196,7 @@ var BOARD_DATA = {
       "code": "A1D0265",
       "hosp": "江苏省人民医院",
       "patient": "王*光",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-02-18",
       "actual": "2025-02-18"
@@ -29686,6 +30205,7 @@ var BOARD_DATA = {
       "code": "A1D0266",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*秀",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-10-29",
       "actual": "2024-10-29"
@@ -29694,6 +30214,7 @@ var BOARD_DATA = {
       "code": "A1D0266",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*秀",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-01-14",
       "actual": "2025-01-14"
@@ -29702,6 +30223,7 @@ var BOARD_DATA = {
       "code": "A1D0267",
       "hosp": "四川省人民医院",
       "patient": "黄*力",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-10-23",
       "actual": "2024-10-23"
@@ -29710,6 +30232,7 @@ var BOARD_DATA = {
       "code": "A1D0267",
       "hosp": "四川省人民医院",
       "patient": "黄*力",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2024-12-19",
       "actual": "2024-12-19"
@@ -29718,6 +30241,7 @@ var BOARD_DATA = {
       "code": "A1D0268",
       "hosp": "中国人民解放军西部战区总医院",
       "patient": "宋*",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-10-23",
       "actual": "2024-10-23"
@@ -29726,6 +30250,7 @@ var BOARD_DATA = {
       "code": "A1D0268",
       "hosp": "中国人民解放军西部战区总医院",
       "patient": "宋*",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-03-06",
       "actual": "2025-03-06"
@@ -29734,6 +30259,7 @@ var BOARD_DATA = {
       "code": "A1D0269",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "邓*福",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-22",
       "actual": "2024-10-22"
@@ -29742,6 +30268,7 @@ var BOARD_DATA = {
       "code": "A1D0269",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "邓*福",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-11-25",
       "actual": "2024-11-29"
@@ -29750,6 +30277,7 @@ var BOARD_DATA = {
       "code": "A1D0270",
       "hosp": "中国医学科学院血液病医院",
       "patient": "房*明",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-10-23",
       "actual": "2024-10-23"
@@ -29758,6 +30286,7 @@ var BOARD_DATA = {
       "code": "A1D0270",
       "hosp": "中国医学科学院血液病医院",
       "patient": "房*明",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-01-08",
       "actual": "2025-01-08"
@@ -29766,6 +30295,7 @@ var BOARD_DATA = {
       "code": "A1E0186",
       "hosp": "南京鼓楼医院",
       "patient": "周*荣",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-08-13",
       "actual": "2025-08-13"
@@ -29774,6 +30304,7 @@ var BOARD_DATA = {
       "code": "A1E0186",
       "hosp": "南京鼓楼医院",
       "patient": "周*荣",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-09-26",
       "actual": "2025-09-26"
@@ -29782,6 +30313,7 @@ var BOARD_DATA = {
       "code": "A1E0038",
       "hosp": "上海市同济医院",
       "patient": "徐*陶",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-02-25",
       "actual": "2025-02-25"
@@ -29790,6 +30322,7 @@ var BOARD_DATA = {
       "code": "A1E0038",
       "hosp": "上海市同济医院",
       "patient": "徐*陶",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-19",
       "actual": "2025-06-19"
@@ -29798,6 +30331,7 @@ var BOARD_DATA = {
       "code": "A1D0278",
       "hosp": "宁波市第二医院",
       "patient": "闻*鸿",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-30",
       "actual": "2024-10-30"
@@ -29806,6 +30340,7 @@ var BOARD_DATA = {
       "code": "A1D0278",
       "hosp": "宁波市第二医院",
       "patient": "闻*鸿",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-02-27",
       "actual": "2025-02-27"
@@ -29814,6 +30349,7 @@ var BOARD_DATA = {
       "code": "A1D0280",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "赵*萍",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-11-01",
       "actual": "2024-11-01"
@@ -29822,6 +30358,7 @@ var BOARD_DATA = {
       "code": "A1D0280",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "赵*萍",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-02-17",
       "actual": "2025-02-17"
@@ -29830,6 +30367,7 @@ var BOARD_DATA = {
       "code": "A1D0283",
       "hosp": "南方医科大学南方医院",
       "patient": "樊*好",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-11-04",
       "actual": "2024-11-04"
@@ -29838,6 +30376,7 @@ var BOARD_DATA = {
       "code": "A1D0283",
       "hosp": "南方医科大学南方医院",
       "patient": "樊*好",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-04-01",
       "actual": "2025-04-01"
@@ -29846,6 +30385,7 @@ var BOARD_DATA = {
       "code": "A1D0281",
       "hosp": "中山大学附属第一医院",
       "patient": "刘*",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-11-01",
       "actual": "2024-11-01"
@@ -29854,6 +30394,7 @@ var BOARD_DATA = {
       "code": "A1D0281",
       "hosp": "中山大学附属第一医院",
       "patient": "刘*",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-02-17",
       "actual": "2025-02-17"
@@ -29862,6 +30403,7 @@ var BOARD_DATA = {
       "code": "A1D0284",
       "hosp": "北京协和医院",
       "patient": "王*良",
+      "cos": "洪琳",
       "type": "apheresis",
       "plan": "2024-11-06",
       "actual": "2024-11-06"
@@ -29870,6 +30412,7 @@ var BOARD_DATA = {
       "code": "A1D0284",
       "hosp": "北京协和医院",
       "patient": "王*良",
+      "cos": "洪琳",
       "type": "reinfusion",
       "plan": "2025-03-24",
       "actual": "2025-03-24"
@@ -29878,6 +30421,7 @@ var BOARD_DATA = {
       "code": "A1D0300",
       "hosp": "北京大学人民医院",
       "patient": "高*明",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-11-26",
       "actual": "2024-11-26"
@@ -29886,6 +30430,7 @@ var BOARD_DATA = {
       "code": "A1D0300",
       "hosp": "北京大学人民医院",
       "patient": "高*明",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-12-30",
       "actual": "2024-12-30"
@@ -29894,6 +30439,7 @@ var BOARD_DATA = {
       "code": "A1D0286",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*芝",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-11",
       "actual": "2024-11-11"
@@ -29902,6 +30448,7 @@ var BOARD_DATA = {
       "code": "A1D0286",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*芝",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-13",
       "actual": "2025-03-13"
@@ -29910,6 +30457,7 @@ var BOARD_DATA = {
       "code": "A1D0288",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "张*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-13",
       "actual": "2024-11-13"
@@ -29918,6 +30466,7 @@ var BOARD_DATA = {
       "code": "A1D0289",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-14",
       "actual": "2024-11-14"
@@ -29926,6 +30475,7 @@ var BOARD_DATA = {
       "code": "A1D0289",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-05",
       "actual": "2025-06-05"
@@ -29934,6 +30484,7 @@ var BOARD_DATA = {
       "code": "A1D0290",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*芝",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-18",
       "actual": "2024-11-18"
@@ -29942,6 +30493,7 @@ var BOARD_DATA = {
       "code": "A1D0290",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*芝",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-01-15",
       "actual": "2025-01-15"
@@ -29950,6 +30502,7 @@ var BOARD_DATA = {
       "code": "9009125000050",
       "hosp": "北京大学人民医院",
       "patient": "田*东",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-12-23",
       "actual": "2025-12-23"
@@ -29958,6 +30511,7 @@ var BOARD_DATA = {
       "code": "A1D0291",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陈*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-11-19",
       "actual": "2024-11-19"
@@ -29966,6 +30520,7 @@ var BOARD_DATA = {
       "code": "A1D0291",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陈*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-03-26",
       "actual": "2025-03-26"
@@ -29974,6 +30529,7 @@ var BOARD_DATA = {
       "code": "A1D0294",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "杜*贤",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-11-21",
       "actual": "2024-11-21"
@@ -29982,6 +30538,7 @@ var BOARD_DATA = {
       "code": "A1D0294",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "杜*贤",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-09-26",
       "actual": "2025-09-26"
@@ -29990,6 +30547,7 @@ var BOARD_DATA = {
       "code": "A1E0037",
       "hosp": "中山大学肿瘤医院",
       "patient": "罗*禄",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-02-24",
       "actual": "2025-02-24"
@@ -29998,6 +30556,7 @@ var BOARD_DATA = {
       "code": "A1E0037",
       "hosp": "中山大学肿瘤医院",
       "patient": "罗*禄",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-04-08",
       "actual": "2025-04-08"
@@ -30006,6 +30565,7 @@ var BOARD_DATA = {
       "code": "A1D0295",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*静",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-21",
       "actual": "2024-11-21"
@@ -30014,6 +30574,7 @@ var BOARD_DATA = {
       "code": "A1D0295",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*静",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-02-17",
       "actual": "2025-02-17"
@@ -30022,6 +30583,7 @@ var BOARD_DATA = {
       "code": "A1D0301",
       "hosp": "上海市曜影医院",
       "patient": "T*R K*T G*N",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-11-27",
       "actual": "2024-11-27"
@@ -30030,6 +30592,7 @@ var BOARD_DATA = {
       "code": "A1D0301",
       "hosp": "上海市曜影医院",
       "patient": "T*R K*T G*N",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-12-31",
       "actual": "2024-12-31"
@@ -30038,6 +30601,7 @@ var BOARD_DATA = {
       "code": "A1D0298",
       "hosp": "北京协和医院",
       "patient": "白*",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-11-25",
       "actual": "2024-11-25"
@@ -30046,6 +30610,7 @@ var BOARD_DATA = {
       "code": "A1D0298",
       "hosp": "北京协和医院",
       "patient": "白*",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-12-25",
       "actual": "2024-12-25"
@@ -30054,6 +30619,7 @@ var BOARD_DATA = {
       "code": "A1E0035",
       "hosp": "中国人民解放军海军特色医学中心",
       "patient": "彭*英",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-02-26",
       "actual": "2025-02-26"
@@ -30062,6 +30628,7 @@ var BOARD_DATA = {
       "code": "A1E0035",
       "hosp": "中国人民解放军海军特色医学中心",
       "patient": "彭*英",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-06",
       "actual": "2025-06-06"
@@ -30070,6 +30637,7 @@ var BOARD_DATA = {
       "code": "9009126000038",
       "hosp": "湖州市中心医院",
       "patient": "陆*荣",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-02",
       "actual": "2026-02-02"
@@ -30078,6 +30646,7 @@ var BOARD_DATA = {
       "code": "A1E0040",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "张*书",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-04-24",
       "actual": "2025-04-24"
@@ -30086,6 +30655,7 @@ var BOARD_DATA = {
       "code": "A1E0040",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "张*书",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-06-02",
       "actual": "2025-06-02"
@@ -30094,6 +30664,7 @@ var BOARD_DATA = {
       "code": "A1D0306",
       "hosp": "中国医学科学院血液病医院",
       "patient": "沈*东",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-03",
       "actual": "2024-12-03"
@@ -30102,6 +30673,7 @@ var BOARD_DATA = {
       "code": "A1D0306",
       "hosp": "中国医学科学院血液病医院",
       "patient": "沈*东",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-30",
       "actual": "2025-05-30"
@@ -30110,6 +30682,7 @@ var BOARD_DATA = {
       "code": "A1D0308",
       "hosp": "中山大学附属第一医院",
       "patient": "孔*金",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-12-04",
       "actual": "2024-12-04"
@@ -30118,6 +30691,7 @@ var BOARD_DATA = {
       "code": "A1D0308",
       "hosp": "中山大学附属第一医院",
       "patient": "孔*金",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-04-07",
       "actual": "2025-04-07"
@@ -30126,6 +30700,7 @@ var BOARD_DATA = {
       "code": "A1D0309",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-05",
       "actual": "2024-12-05"
@@ -30134,6 +30709,7 @@ var BOARD_DATA = {
       "code": "A1D0309",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-24",
       "actual": "2025-03-24"
@@ -30142,6 +30718,7 @@ var BOARD_DATA = {
       "code": "9009126000135",
       "hosp": "宁波大学附属人民医院",
       "patient": "仲*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-29",
       "actual": "2026-04-29"
@@ -30150,6 +30727,7 @@ var BOARD_DATA = {
       "code": "9009126000135",
       "hosp": "宁波大学附属人民医院",
       "patient": "仲*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-06",
       "actual": "2026-06-06"
@@ -30158,6 +30736,7 @@ var BOARD_DATA = {
       "code": "A1D0312",
       "hosp": "浙江省中医院",
       "patient": "吕*琴",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-12-06",
       "actual": "2024-12-06"
@@ -30166,6 +30745,7 @@ var BOARD_DATA = {
       "code": "A1D0312",
       "hosp": "浙江省中医院",
       "patient": "吕*琴",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-02-27",
       "actual": "2025-02-27"
@@ -30174,6 +30754,7 @@ var BOARD_DATA = {
       "code": "A1D0313",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "刘*林",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-12-10",
       "actual": "2024-12-10"
@@ -30182,6 +30763,7 @@ var BOARD_DATA = {
       "code": "A1D0313",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "刘*林",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-25",
       "actual": "2025-03-25"
@@ -30190,6 +30772,7 @@ var BOARD_DATA = {
       "code": "A1D0315",
       "hosp": "北京大学人民医院",
       "patient": "陈*林",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-12-12",
       "actual": "2024-12-12"
@@ -30198,6 +30781,7 @@ var BOARD_DATA = {
       "code": "A1D0315",
       "hosp": "北京大学人民医院",
       "patient": "陈*林",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-10",
       "actual": "2025-03-10"
@@ -30206,6 +30790,7 @@ var BOARD_DATA = {
       "code": "A1D0317",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "韩*如",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-13",
       "actual": "2024-12-13"
@@ -30214,6 +30799,7 @@ var BOARD_DATA = {
       "code": "A1D0323",
       "hosp": "中国医学科学院血液病医院",
       "patient": "符*信",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-18",
       "actual": "2024-12-18"
@@ -30222,6 +30808,7 @@ var BOARD_DATA = {
       "code": "A1D0323",
       "hosp": "中国医学科学院血液病医院",
       "patient": "符*信",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-02-26",
       "actual": "2025-02-26"
@@ -30230,6 +30817,7 @@ var BOARD_DATA = {
       "code": "A1D0324",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "朱*明",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-12-18",
       "actual": "2024-12-18"
@@ -30238,6 +30826,7 @@ var BOARD_DATA = {
       "code": "A1D0324",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "朱*明",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-20",
       "actual": "2025-10-20"
@@ -30246,6 +30835,7 @@ var BOARD_DATA = {
       "code": "A1E0014",
       "hosp": "江苏省人民医院",
       "patient": "曹*根",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-01-23",
       "actual": "2025-01-23"
@@ -30254,6 +30844,7 @@ var BOARD_DATA = {
       "code": "A1E0014",
       "hosp": "江苏省人民医院",
       "patient": "曹*根",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-03-04",
       "actual": "2025-03-04"
@@ -30262,6 +30853,7 @@ var BOARD_DATA = {
       "code": "A1D0326",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "张*清",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-12-26",
       "actual": "2024-12-26"
@@ -30270,6 +30862,7 @@ var BOARD_DATA = {
       "code": "A1E0001",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "吕*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-01-06",
       "actual": "2025-01-06"
@@ -30278,6 +30871,7 @@ var BOARD_DATA = {
       "code": "A1E0001",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "吕*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-03-11",
       "actual": "2025-03-11"
@@ -30286,6 +30880,7 @@ var BOARD_DATA = {
       "code": "A1E0002",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*武",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-16",
       "actual": "2025-01-16"
@@ -30294,6 +30889,7 @@ var BOARD_DATA = {
       "code": "A1E0002",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*武",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-07-30",
       "actual": "2025-07-30"
@@ -30302,6 +30898,7 @@ var BOARD_DATA = {
       "code": "A1E0006",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "高*明",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-01-13",
       "actual": "2025-01-13"
@@ -30310,6 +30907,7 @@ var BOARD_DATA = {
       "code": "A1E0006",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "高*明",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-04-15",
       "actual": "2025-04-15"
@@ -30318,6 +30916,7 @@ var BOARD_DATA = {
       "code": "A1E0004",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*玲",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-10",
       "actual": "2025-01-10"
@@ -30326,6 +30925,7 @@ var BOARD_DATA = {
       "code": "A1E0004",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*玲",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-15",
       "actual": "2025-05-15"
@@ -30334,6 +30934,7 @@ var BOARD_DATA = {
       "code": "A1E0005",
       "hosp": "中国医学科学院血液病医院",
       "patient": "孙*宝",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-15",
       "actual": "2025-01-15"
@@ -30342,6 +30943,7 @@ var BOARD_DATA = {
       "code": "A1E0005",
       "hosp": "中国医学科学院血液病医院",
       "patient": "孙*宝",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-18",
       "actual": "2025-06-18"
@@ -30350,6 +30952,7 @@ var BOARD_DATA = {
       "code": "A1E0020",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "黄*秋",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-02-12",
       "actual": "2025-02-12"
@@ -30358,6 +30961,7 @@ var BOARD_DATA = {
       "code": "A1E0020",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "黄*秋",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-03-31",
       "actual": "2025-03-31"
@@ -30366,6 +30970,7 @@ var BOARD_DATA = {
       "code": "A1E0045",
       "hosp": "北京大学人民医院",
       "patient": "C*N Q*U",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-03-24",
       "actual": "2025-03-24"
@@ -30374,6 +30979,7 @@ var BOARD_DATA = {
       "code": "A1E0045",
       "hosp": "北京大学人民医院",
       "patient": "C*N Q*U",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-06-23",
       "actual": "2025-06-23"
@@ -30382,6 +30988,7 @@ var BOARD_DATA = {
       "code": "A1E0012",
       "hosp": "北京大学人民医院",
       "patient": "张*华",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-01-22",
       "actual": "2025-01-22"
@@ -30390,6 +30997,7 @@ var BOARD_DATA = {
       "code": "A1E0012",
       "hosp": "北京大学人民医院",
       "patient": "张*华",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-02",
       "actual": "2025-03-02"
@@ -30398,6 +31006,7 @@ var BOARD_DATA = {
       "code": "A1E0008",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "刘*生",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-01-14",
       "actual": "2025-01-14"
@@ -30406,6 +31015,7 @@ var BOARD_DATA = {
       "code": "A1E0008",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "刘*生",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-15",
       "actual": "2025-10-15"
@@ -30414,6 +31024,7 @@ var BOARD_DATA = {
       "code": "A1E0013",
       "hosp": "上海市同济医院",
       "patient": "谢*哥",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-01-16",
       "actual": "2025-01-16"
@@ -30422,6 +31033,7 @@ var BOARD_DATA = {
       "code": "A1E0013",
       "hosp": "上海市同济医院",
       "patient": "谢*哥",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-11",
       "actual": "2025-06-11"
@@ -30430,6 +31042,7 @@ var BOARD_DATA = {
       "code": "A1E0076",
       "hosp": "上海市同济医院",
       "patient": "陈*芬",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-04-10",
       "actual": "2025-04-10"
@@ -30438,6 +31051,7 @@ var BOARD_DATA = {
       "code": "A1E0076",
       "hosp": "上海市同济医院",
       "patient": "陈*芬",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-05-26",
       "actual": "2025-05-26"
@@ -30446,6 +31060,7 @@ var BOARD_DATA = {
       "code": "A1E0010",
       "hosp": "北京协和医院",
       "patient": "张*",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-01-16",
       "actual": "2025-01-16"
@@ -30454,6 +31069,7 @@ var BOARD_DATA = {
       "code": "A1E0010",
       "hosp": "北京协和医院",
       "patient": "张*",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-04-21",
       "actual": "2025-04-21"
@@ -30462,6 +31078,7 @@ var BOARD_DATA = {
       "code": "A1E0011",
       "hosp": "中国医学科学院血液病医院",
       "patient": "范*英",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-17",
       "actual": "2025-01-17"
@@ -30470,6 +31087,7 @@ var BOARD_DATA = {
       "code": "A1E0011",
       "hosp": "中国医学科学院血液病医院",
       "patient": "范*英",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-31",
       "actual": "2025-03-31"
@@ -30478,6 +31096,7 @@ var BOARD_DATA = {
       "code": "A1E0137",
       "hosp": "上海市同济医院",
       "patient": "陈*松",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-06-27",
       "actual": "2025-06-27"
@@ -30486,6 +31105,7 @@ var BOARD_DATA = {
       "code": "A1E0137",
       "hosp": "上海市同济医院",
       "patient": "陈*松",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-11",
       "actual": "2025-08-11"
@@ -30494,6 +31114,7 @@ var BOARD_DATA = {
       "code": "A1E0018",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "程*龙",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-02-07",
       "actual": "2025-02-07"
@@ -30502,6 +31123,7 @@ var BOARD_DATA = {
       "code": "A1E0018",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "程*龙",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-28",
       "actual": "2025-10-28"
@@ -30510,6 +31132,7 @@ var BOARD_DATA = {
       "code": "A1E0021",
       "hosp": "江苏省人民医院",
       "patient": "李*梅",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-02-10",
       "actual": "2025-02-10"
@@ -30518,6 +31141,7 @@ var BOARD_DATA = {
       "code": "A1E0021",
       "hosp": "江苏省人民医院",
       "patient": "李*梅",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-03-20",
       "actual": "2025-03-20"
@@ -30526,6 +31150,7 @@ var BOARD_DATA = {
       "code": "A1E0023",
       "hosp": "北京大学人民医院",
       "patient": "齐*平",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-02-11",
       "actual": "2025-02-11"
@@ -30534,6 +31159,7 @@ var BOARD_DATA = {
       "code": "A1E0023",
       "hosp": "北京大学人民医院",
       "patient": "齐*平",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-30",
       "actual": "2025-03-30"
@@ -30542,6 +31168,7 @@ var BOARD_DATA = {
       "code": "A1E0025",
       "hosp": "安徽省立医院南区（安徽省心血管医院）",
       "patient": "杨*荣",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-02-09",
       "actual": "2025-02-09"
@@ -30550,6 +31177,7 @@ var BOARD_DATA = {
       "code": "A1E0025",
       "hosp": "安徽省立医院南区（安徽省心血管医院）",
       "patient": "杨*荣",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-04-10",
       "actual": "2025-04-10"
@@ -30558,6 +31186,7 @@ var BOARD_DATA = {
       "code": "A1E0027",
       "hosp": "中国医学科学院血液病医院",
       "patient": "林*治",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-13",
       "actual": "2025-02-13"
@@ -30566,6 +31195,7 @@ var BOARD_DATA = {
       "code": "A1E0027",
       "hosp": "中国医学科学院血液病医院",
       "patient": "林*治",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-16",
       "actual": "2025-04-16"
@@ -30574,6 +31204,7 @@ var BOARD_DATA = {
       "code": "A1E0028",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*秀",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-14",
       "actual": "2025-02-14"
@@ -30582,6 +31213,7 @@ var BOARD_DATA = {
       "code": "A1E0028",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*秀",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-09",
       "actual": "2025-04-09"
@@ -30590,6 +31222,7 @@ var BOARD_DATA = {
       "code": "A1E0030",
       "hosp": "福建医科大学附属协和医院",
       "patient": "叶*红",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2025-02-18",
       "actual": "2025-02-18"
@@ -30598,6 +31231,7 @@ var BOARD_DATA = {
       "code": "A1E0029",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "何*群",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-02-17",
       "actual": "2025-02-17"
@@ -30606,6 +31240,7 @@ var BOARD_DATA = {
       "code": "A1E0029",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "何*群",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-04-11",
       "actual": "2025-04-11"
@@ -30614,6 +31249,7 @@ var BOARD_DATA = {
       "code": "A1E0031",
       "hosp": "中国医学科学院血液病医院",
       "patient": "肖*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-19",
       "actual": "2025-02-19"
@@ -30622,6 +31258,7 @@ var BOARD_DATA = {
       "code": "A1E0031",
       "hosp": "中国医学科学院血液病医院",
       "patient": "肖*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-15",
       "actual": "2025-04-15"
@@ -30630,6 +31267,7 @@ var BOARD_DATA = {
       "code": "A1E0032",
       "hosp": "浙江大学医学院附属邵逸夫医院",
       "patient": "孙*",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-02-20",
       "actual": "2025-02-20"
@@ -30638,6 +31276,7 @@ var BOARD_DATA = {
       "code": "A1E0032",
       "hosp": "浙江大学医学院附属邵逸夫医院",
       "patient": "孙*",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-27",
       "actual": "2025-10-27"
@@ -30646,6 +31285,7 @@ var BOARD_DATA = {
       "code": "A1E0033",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "刘*",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-02-20",
       "actual": "2025-02-20"
@@ -30654,6 +31294,7 @@ var BOARD_DATA = {
       "code": "A1E0033",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "刘*",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-03-31",
       "actual": "2025-03-31"
@@ -30662,6 +31303,7 @@ var BOARD_DATA = {
       "code": "A1E0034",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "孙*周",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-02-21",
       "actual": "2025-02-21"
@@ -30670,6 +31312,7 @@ var BOARD_DATA = {
       "code": "A1E0034",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "孙*周",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-04-02",
       "actual": "2025-04-02"
@@ -30678,6 +31321,7 @@ var BOARD_DATA = {
       "code": "A1E0068",
       "hosp": "天津医科大学总医院",
       "patient": "魏*霞",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-02",
       "actual": "2025-04-02"
@@ -30686,6 +31330,7 @@ var BOARD_DATA = {
       "code": "A1E0039",
       "hosp": "青岛市市立医院",
       "patient": "魏*暖",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-02-24",
       "actual": "2025-02-24"
@@ -30694,6 +31339,7 @@ var BOARD_DATA = {
       "code": "A1E0039",
       "hosp": "青岛市市立医院",
       "patient": "魏*暖",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2026-04-20",
       "actual": "2026-04-20"
@@ -30702,6 +31348,7 @@ var BOARD_DATA = {
       "code": "A1E0041",
       "hosp": "天津医科大学总医院",
       "patient": "翟*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-27",
       "actual": "2025-02-27"
@@ -30710,6 +31357,7 @@ var BOARD_DATA = {
       "code": "A1E0043",
       "hosp": "暨南大学附属第一医院（广州华侨医院）",
       "patient": "容*风",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-02-28",
       "actual": "2025-02-28"
@@ -30718,6 +31366,7 @@ var BOARD_DATA = {
       "code": "A1E0043",
       "hosp": "暨南大学附属第一医院（广州华侨医院）",
       "patient": "容*风",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-06-03",
       "actual": "2025-06-03"
@@ -30726,6 +31375,7 @@ var BOARD_DATA = {
       "code": "A1E0044",
       "hosp": "上海市同济医院",
       "patient": "潘*祥",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-02-28",
       "actual": "2025-02-28"
@@ -30734,6 +31384,7 @@ var BOARD_DATA = {
       "code": "A1E0044",
       "hosp": "上海市同济医院",
       "patient": "潘*祥",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-05-24",
       "actual": "2025-05-24"
@@ -30742,6 +31393,7 @@ var BOARD_DATA = {
       "code": "A1E0047",
       "hosp": "中国医学科学院血液病医院",
       "patient": "解*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-06",
       "actual": "2025-03-06"
@@ -30750,6 +31402,7 @@ var BOARD_DATA = {
       "code": "A1E0047",
       "hosp": "中国医学科学院血液病医院",
       "patient": "解*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-15",
       "actual": "2025-08-15"
@@ -30758,6 +31411,7 @@ var BOARD_DATA = {
       "code": "A1E0046",
       "hosp": "中山大学附属第一医院",
       "patient": "黄*耀",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-03-06",
       "actual": "2025-03-06"
@@ -30766,6 +31420,7 @@ var BOARD_DATA = {
       "code": "A1E0046",
       "hosp": "中山大学附属第一医院",
       "patient": "黄*耀",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-07-08",
       "actual": "2025-07-08"
@@ -30774,6 +31429,7 @@ var BOARD_DATA = {
       "code": "A1E0049",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "吴*者",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-03-07",
       "actual": "2025-03-07"
@@ -30782,6 +31438,7 @@ var BOARD_DATA = {
       "code": "A1E0048",
       "hosp": "中国医学科学院血液病医院",
       "patient": "朱*旭",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-17",
       "actual": "2025-04-17"
@@ -30790,6 +31447,7 @@ var BOARD_DATA = {
       "code": "A1E0048",
       "hosp": "中国医学科学院血液病医院",
       "patient": "朱*旭",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-16",
       "actual": "2025-05-16"
@@ -30798,6 +31456,7 @@ var BOARD_DATA = {
       "code": "A1E0050",
       "hosp": "武汉大学中南医院",
       "patient": "赵*林",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-03-11",
       "actual": "2025-03-11"
@@ -30806,6 +31465,7 @@ var BOARD_DATA = {
       "code": "A1E0050",
       "hosp": "武汉大学中南医院",
       "patient": "赵*林",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-05-20",
       "actual": "2025-05-20"
@@ -30814,6 +31474,7 @@ var BOARD_DATA = {
       "code": "A1E0053",
       "hosp": "宁波市第二医院",
       "patient": "张*亚",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-03-13",
       "actual": "2025-03-13"
@@ -30822,6 +31483,7 @@ var BOARD_DATA = {
       "code": "A1E0053",
       "hosp": "宁波市第二医院",
       "patient": "张*亚",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-05-13",
       "actual": "2025-05-14"
@@ -30830,6 +31492,7 @@ var BOARD_DATA = {
       "code": "A1E0054",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-14",
       "actual": "2025-03-14"
@@ -30838,6 +31501,7 @@ var BOARD_DATA = {
       "code": "A1E0054",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*军",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-25",
       "actual": "2025-09-25"
@@ -30846,6 +31510,7 @@ var BOARD_DATA = {
       "code": "A1E0059",
       "hosp": "福建医科大学附属协和医院",
       "patient": "叶*松",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2025-03-20",
       "actual": "2025-03-20"
@@ -30854,6 +31519,7 @@ var BOARD_DATA = {
       "code": "A1E0056",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "李*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-18",
       "actual": "2025-03-18"
@@ -30862,6 +31528,7 @@ var BOARD_DATA = {
       "code": "A1E0056",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "李*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-20",
       "actual": "2025-08-20"
@@ -30870,6 +31537,7 @@ var BOARD_DATA = {
       "code": "A1E0058",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*中",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-03-21",
       "actual": "2025-03-21"
@@ -30878,6 +31546,7 @@ var BOARD_DATA = {
       "code": "A1E0058",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*中",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-16",
       "actual": "2025-06-16"
@@ -30886,6 +31555,7 @@ var BOARD_DATA = {
       "code": "A1E0057",
       "hosp": "中国医学科学院血液病医院",
       "patient": "吴*梅",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-19",
       "actual": "2025-03-19"
@@ -30894,6 +31564,7 @@ var BOARD_DATA = {
       "code": "A1E0057",
       "hosp": "中国医学科学院血液病医院",
       "patient": "吴*梅",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-07-16",
       "actual": "2025-07-16"
@@ -30902,6 +31573,7 @@ var BOARD_DATA = {
       "code": "A1E0061",
       "hosp": "中国医学科学院血液病医院",
       "patient": "时*业",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-20",
       "actual": "2025-03-20"
@@ -30910,6 +31582,7 @@ var BOARD_DATA = {
       "code": "A1E0061",
       "hosp": "中国医学科学院血液病医院",
       "patient": "时*业",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-08",
       "actual": "2025-08-08"
@@ -30918,6 +31591,7 @@ var BOARD_DATA = {
       "code": "A1E0064",
       "hosp": "中国医学科学院血液病医院",
       "patient": "阮*富",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-25",
       "actual": "2025-03-25"
@@ -30926,6 +31600,7 @@ var BOARD_DATA = {
       "code": "A1E0064",
       "hosp": "中国医学科学院血液病医院",
       "patient": "阮*富",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-17",
       "actual": "2025-06-17"
@@ -30934,6 +31609,7 @@ var BOARD_DATA = {
       "code": "A1E0065",
       "hosp": "中国医学科学院血液病医院",
       "patient": "尹*祥",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-26",
       "actual": "2025-03-26"
@@ -30942,6 +31618,7 @@ var BOARD_DATA = {
       "code": "A1E0066",
       "hosp": "中国医学科学院血液病医院",
       "patient": "苏*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-28",
       "actual": "2025-03-28"
@@ -30950,6 +31627,7 @@ var BOARD_DATA = {
       "code": "A1E0066",
       "hosp": "中国医学科学院血液病医院",
       "patient": "苏*军",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-30",
       "actual": "2025-06-30"
@@ -30958,6 +31636,7 @@ var BOARD_DATA = {
       "code": "A1E0069",
       "hosp": "上海市同济医院",
       "patient": "凌*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-04-01",
       "actual": "2025-04-01"
@@ -30966,6 +31645,7 @@ var BOARD_DATA = {
       "code": "A1E0069",
       "hosp": "上海市同济医院",
       "patient": "凌*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-03",
       "actual": "2026-03-05"
@@ -30974,6 +31654,7 @@ var BOARD_DATA = {
       "code": "A1E0071",
       "hosp": "四川大学华西医院",
       "patient": "刘*君",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-04-08",
       "actual": "2025-04-08"
@@ -30982,6 +31663,7 @@ var BOARD_DATA = {
       "code": "A1E0071",
       "hosp": "四川大学华西医院",
       "patient": "刘*君",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-06-30",
       "actual": "2025-06-30"
@@ -30990,6 +31672,7 @@ var BOARD_DATA = {
       "code": "A1E0072",
       "hosp": "江苏省人民医院",
       "patient": "陈*",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-04-08",
       "actual": "2025-04-08"
@@ -30998,6 +31681,7 @@ var BOARD_DATA = {
       "code": "A1E0072",
       "hosp": "江苏省人民医院",
       "patient": "陈*",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-06-03",
       "actual": "2025-06-03"
@@ -31006,6 +31690,7 @@ var BOARD_DATA = {
       "code": "A1E0073",
       "hosp": "中国医学科学院血液病医院",
       "patient": "吴*斌",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-09",
       "actual": "2025-04-09"
@@ -31014,6 +31699,7 @@ var BOARD_DATA = {
       "code": "A1E0073",
       "hosp": "中国医学科学院血液病医院",
       "patient": "吴*斌",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-29",
       "actual": "2025-05-29"
@@ -31022,6 +31708,7 @@ var BOARD_DATA = {
       "code": "A1E0074",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "王*凤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-10",
       "actual": "2025-04-10"
@@ -31030,6 +31717,7 @@ var BOARD_DATA = {
       "code": "A1E0075",
       "hosp": "中国人民解放军总医院",
       "patient": "袁*献",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-04-10",
       "actual": "2025-04-10"
@@ -31038,6 +31726,7 @@ var BOARD_DATA = {
       "code": "A1E0075",
       "hosp": "中国人民解放军总医院",
       "patient": "袁*献",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-06-03",
       "actual": "2025-06-03"
@@ -31046,6 +31735,7 @@ var BOARD_DATA = {
       "code": "A1E0078",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*海",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-14",
       "actual": "2025-04-14"
@@ -31054,6 +31744,7 @@ var BOARD_DATA = {
       "code": "A1E0078",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*海",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-04",
       "actual": "2025-06-04"
@@ -31062,6 +31753,7 @@ var BOARD_DATA = {
       "code": "A1E0082",
       "hosp": "北京大学人民医院",
       "patient": "许*",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-04-23",
       "actual": "2025-04-23"
@@ -31070,6 +31762,7 @@ var BOARD_DATA = {
       "code": "A1E0082",
       "hosp": "北京大学人民医院",
       "patient": "许*",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-07-03",
       "actual": "2025-07-03"
@@ -31078,6 +31771,7 @@ var BOARD_DATA = {
       "code": "A1E0083",
       "hosp": "北京大学第一医院",
       "patient": "孙*忠",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-04-29",
       "actual": "2025-04-29"
@@ -31086,6 +31780,7 @@ var BOARD_DATA = {
       "code": "A1E0083",
       "hosp": "北京大学第一医院",
       "patient": "孙*忠",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-06-13",
       "actual": "2025-06-13"
@@ -31094,6 +31789,7 @@ var BOARD_DATA = {
       "code": "A1E0084",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "陈*云",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-30",
       "actual": "2025-04-30"
@@ -31102,6 +31798,7 @@ var BOARD_DATA = {
       "code": "A1E0084",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "陈*云",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-31",
       "actual": "2025-12-31"
@@ -31110,6 +31807,7 @@ var BOARD_DATA = {
       "code": "A1E0087",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-05-07",
       "actual": "2025-05-07"
@@ -31118,6 +31816,7 @@ var BOARD_DATA = {
       "code": "A1E0087",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-17",
       "actual": "2025-10-17"
@@ -31126,6 +31825,7 @@ var BOARD_DATA = {
       "code": "A1E0088",
       "hosp": "上海市同济医院",
       "patient": "陈*炳",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-15",
       "actual": "2025-08-15"
@@ -31134,6 +31834,7 @@ var BOARD_DATA = {
       "code": "A1E0088",
       "hosp": "上海市同济医院",
       "patient": "陈*炳",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-19",
       "actual": "2025-11-19"
@@ -31142,6 +31843,7 @@ var BOARD_DATA = {
       "code": "A1E0094",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "刘*松",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-05-15",
       "actual": "2025-05-15"
@@ -31150,6 +31852,7 @@ var BOARD_DATA = {
       "code": "A1E0094",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "刘*松",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-07-01",
       "actual": "2025-07-01"
@@ -31158,6 +31861,7 @@ var BOARD_DATA = {
       "code": "A1E0093",
       "hosp": "中国医学科学院血液病医院",
       "patient": "师*伟",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-05-14",
       "actual": "2025-05-14"
@@ -31166,6 +31870,7 @@ var BOARD_DATA = {
       "code": "A1E0093",
       "hosp": "中国医学科学院血液病医院",
       "patient": "师*伟",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-07-16",
       "actual": "2025-07-16"
@@ -31174,6 +31879,7 @@ var BOARD_DATA = {
       "code": "A1E0097",
       "hosp": "江苏省中医院",
       "patient": "阙*鸿",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-05-16",
       "actual": "2025-05-16"
@@ -31182,6 +31888,7 @@ var BOARD_DATA = {
       "code": "A1E0097",
       "hosp": "江苏省中医院",
       "patient": "阙*鸿",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-07-14",
       "actual": "2025-07-14"
@@ -31190,6 +31897,7 @@ var BOARD_DATA = {
       "code": "A1E0098",
       "hosp": "四川大学华西医院",
       "patient": "张*勇",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-05-16",
       "actual": "2025-05-16"
@@ -31198,6 +31906,7 @@ var BOARD_DATA = {
       "code": "A1E0098",
       "hosp": "四川大学华西医院",
       "patient": "张*勇",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-07-07",
       "actual": "2025-07-07"
@@ -31206,6 +31915,7 @@ var BOARD_DATA = {
       "code": "9009125000060",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "余*",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-12-26",
       "actual": "2025-12-26"
@@ -31214,6 +31924,7 @@ var BOARD_DATA = {
       "code": "9009125000060",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "余*",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2026-01-26",
       "actual": "2026-01-26"
@@ -31222,6 +31933,7 @@ var BOARD_DATA = {
       "code": "A1E0101",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "张*伟",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-05-21",
       "actual": "2025-05-21"
@@ -31230,6 +31942,7 @@ var BOARD_DATA = {
       "code": "A1E0101",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "张*伟",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-08-04",
       "actual": "2025-08-04"
@@ -31238,6 +31951,7 @@ var BOARD_DATA = {
       "code": "A1E0103",
       "hosp": "北京协和医院",
       "patient": "崔*华",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-05-22",
       "actual": "2025-05-22"
@@ -31246,6 +31960,7 @@ var BOARD_DATA = {
       "code": "A1E0103",
       "hosp": "北京协和医院",
       "patient": "崔*华",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-06-24",
       "actual": "2025-06-24"
@@ -31254,6 +31969,7 @@ var BOARD_DATA = {
       "code": "A1E0104",
       "hosp": "中国医学科学院血液病医院",
       "patient": "梁*顺",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-05-21",
       "actual": "2025-05-21"
@@ -31262,6 +31978,7 @@ var BOARD_DATA = {
       "code": "A1E0104",
       "hosp": "中国医学科学院血液病医院",
       "patient": "梁*顺",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-07-07",
       "actual": "2025-07-07"
@@ -31270,6 +31987,7 @@ var BOARD_DATA = {
       "code": "A1E0105",
       "hosp": "南京鼓楼医院",
       "patient": "万*胜",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-05-22",
       "actual": "2025-05-22"
@@ -31278,6 +31996,7 @@ var BOARD_DATA = {
       "code": "A1E0105",
       "hosp": "南京鼓楼医院",
       "patient": "万*胜",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-07-09",
       "actual": "2025-07-09"
@@ -31286,6 +32005,7 @@ var BOARD_DATA = {
       "code": "A1E0106",
       "hosp": "中国医学科学院血液病医院",
       "patient": "廖*容",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-05-23",
       "actual": "2025-05-23"
@@ -31294,6 +32014,7 @@ var BOARD_DATA = {
       "code": "A1E0106",
       "hosp": "中国医学科学院血液病医院",
       "patient": "廖*容",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-18",
       "actual": "2025-08-18"
@@ -31302,6 +32023,7 @@ var BOARD_DATA = {
       "code": "A1E0107",
       "hosp": "北京大学人民医院",
       "patient": "徐*英",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-05-27",
       "actual": "2025-05-27"
@@ -31310,6 +32032,7 @@ var BOARD_DATA = {
       "code": "A1E0108",
       "hosp": "厦门大学附属第一医院",
       "patient": "江*军",
+      "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2025-05-29",
       "actual": "2025-05-29"
@@ -31318,6 +32041,7 @@ var BOARD_DATA = {
       "code": "A1E0108",
       "hosp": "厦门大学附属第一医院",
       "patient": "江*军",
+      "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2025-07-11",
       "actual": "2025-07-11"
@@ -31326,6 +32050,7 @@ var BOARD_DATA = {
       "code": "A1E0109",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "钱*青",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-05-30",
       "actual": "2025-05-30"
@@ -31334,6 +32059,7 @@ var BOARD_DATA = {
       "code": "A1E0109",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "钱*青",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-19",
       "actual": "2025-08-21"
@@ -31342,6 +32068,7 @@ var BOARD_DATA = {
       "code": "A1E0110",
       "hosp": "上海市同济医院",
       "patient": "王*农",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-06-05",
       "actual": "2025-06-05"
@@ -31350,6 +32077,7 @@ var BOARD_DATA = {
       "code": "A1E0110",
       "hosp": "上海市同济医院",
       "patient": "王*农",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-07-22",
       "actual": "2025-07-22"
@@ -31358,6 +32086,7 @@ var BOARD_DATA = {
       "code": "A1E0126",
       "hosp": "南方医科大学南方医院",
       "patient": "王*惠",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-08-22",
       "actual": "2025-08-22"
@@ -31366,6 +32095,7 @@ var BOARD_DATA = {
       "code": "A1E0126",
       "hosp": "南方医科大学南方医院",
       "patient": "王*惠",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-10-31",
       "actual": "2025-10-31"
@@ -31374,6 +32104,7 @@ var BOARD_DATA = {
       "code": "A1E0199",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*春",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-22",
       "actual": "2025-08-22"
@@ -31382,6 +32113,7 @@ var BOARD_DATA = {
       "code": "A1E0199",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*春",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-23",
       "actual": "2025-09-23"
@@ -31390,6 +32122,7 @@ var BOARD_DATA = {
       "code": "A1E0112",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-06",
       "actual": "2025-06-06"
@@ -31398,6 +32131,7 @@ var BOARD_DATA = {
       "code": "A1E0112",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-07",
       "actual": "2025-08-07"
@@ -31406,6 +32140,7 @@ var BOARD_DATA = {
       "code": "A1E0113",
       "hosp": "吉林大学第一医院",
       "patient": "宣*瑾",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-06-13",
       "actual": "2025-06-13"
@@ -31414,6 +32149,7 @@ var BOARD_DATA = {
       "code": "A1E0122",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*福",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-06-17",
       "actual": "2025-06-17"
@@ -31422,6 +32158,7 @@ var BOARD_DATA = {
       "code": "A1E0122",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*福",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-09",
       "actual": "2025-09-09"
@@ -31430,6 +32167,7 @@ var BOARD_DATA = {
       "code": "A1E0117",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "童*珍",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-06-11",
       "actual": "2025-06-11"
@@ -31438,6 +32176,7 @@ var BOARD_DATA = {
       "code": "A1E0117",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "童*珍",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-01-05",
       "actual": "2026-01-05"
@@ -31446,6 +32185,7 @@ var BOARD_DATA = {
       "code": "A1E0118",
       "hosp": "中国医学科学院血液病医院",
       "patient": "满*坤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-13",
       "actual": "2025-06-13"
@@ -31454,6 +32194,7 @@ var BOARD_DATA = {
       "code": "A1E0118",
       "hosp": "中国医学科学院血液病医院",
       "patient": "满*坤",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-11",
       "actual": "2025-12-11"
@@ -31462,6 +32203,7 @@ var BOARD_DATA = {
       "code": "A1E0121",
       "hosp": "北京大学人民医院",
       "patient": "张*明",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-06-17",
       "actual": "2025-06-17"
@@ -31470,6 +32212,7 @@ var BOARD_DATA = {
       "code": "A1E0121",
       "hosp": "北京大学人民医院",
       "patient": "张*明",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-09-07",
       "actual": "2025-09-07"
@@ -31478,6 +32221,7 @@ var BOARD_DATA = {
       "code": "A1E0120",
       "hosp": "中山大学附属第一医院",
       "patient": "曾*文",
+      "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-06-13",
       "actual": "2025-06-13"
@@ -31486,6 +32230,7 @@ var BOARD_DATA = {
       "code": "A1E0120",
       "hosp": "中山大学附属第一医院",
       "patient": "曾*文",
+      "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-07-30",
       "actual": "2025-07-30"
@@ -31494,6 +32239,7 @@ var BOARD_DATA = {
       "code": "A1E0124",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*营",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-16",
       "actual": "2025-06-16"
@@ -31502,6 +32248,7 @@ var BOARD_DATA = {
       "code": "A1E0124",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*营",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-22",
       "actual": "2025-09-22"
@@ -31510,6 +32257,7 @@ var BOARD_DATA = {
       "code": "A1E0127",
       "hosp": "南方医科大学南方医院",
       "patient": "王*珠",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-06-17",
       "actual": "2025-06-17"
@@ -31518,6 +32266,7 @@ var BOARD_DATA = {
       "code": "A1E0127",
       "hosp": "南方医科大学南方医院",
       "patient": "王*珠",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-09-01",
       "actual": "2025-09-01"
@@ -31526,6 +32275,7 @@ var BOARD_DATA = {
       "code": "A1E0125",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "吴*连",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-06-20",
       "actual": "2025-06-20"
@@ -31534,6 +32284,7 @@ var BOARD_DATA = {
       "code": "A1E0125",
       "hosp": "浙江大学医学院附属第二医院",
       "patient": "吴*连",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-08-05",
       "actual": "2025-08-05"
@@ -31542,6 +32293,7 @@ var BOARD_DATA = {
       "code": "A1E0128",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "李*永",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-06-18",
       "actual": "2025-06-18"
@@ -31550,6 +32302,7 @@ var BOARD_DATA = {
       "code": "A1E0128",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "李*永",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-10-05",
       "actual": "2025-10-05"
@@ -31558,6 +32311,7 @@ var BOARD_DATA = {
       "code": "A1E0129",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*芳",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-19",
       "actual": "2025-06-19"
@@ -31566,6 +32320,7 @@ var BOARD_DATA = {
       "code": "A1E0130",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*明",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-20",
       "actual": "2025-06-20"
@@ -31574,6 +32329,7 @@ var BOARD_DATA = {
       "code": "A1E0130",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*明",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-12",
       "actual": "2025-08-12"
@@ -31582,6 +32338,7 @@ var BOARD_DATA = {
       "code": "A1E0132",
       "hosp": "中国医学科学院血液病医院",
       "patient": "洪*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-30",
       "actual": "2025-06-30"
@@ -31590,6 +32347,7 @@ var BOARD_DATA = {
       "code": "A1E0132",
       "hosp": "中国医学科学院血液病医院",
       "patient": "洪*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-04",
       "actual": "2025-09-04"
@@ -31598,6 +32356,7 @@ var BOARD_DATA = {
       "code": "A1E0136",
       "hosp": "北京协和医院",
       "patient": "陈*德",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-06-26",
       "actual": "2025-06-26"
@@ -31606,6 +32365,7 @@ var BOARD_DATA = {
       "code": "A1E0136",
       "hosp": "北京协和医院",
       "patient": "陈*德",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-08-13",
       "actual": "2025-08-13"
@@ -31614,6 +32374,7 @@ var BOARD_DATA = {
       "code": "A1E0135",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*红",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-27",
       "actual": "2025-06-27"
@@ -31622,6 +32383,7 @@ var BOARD_DATA = {
       "code": "A1E0135",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*红",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-08",
       "actual": "2025-08-08"
@@ -31630,6 +32392,7 @@ var BOARD_DATA = {
       "code": "9009126000250",
       "hosp": "南京鼓楼医院",
       "patient": "秦*忠",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2026-08-25",
       "actual": "2026-08-25"
@@ -31638,6 +32401,7 @@ var BOARD_DATA = {
       "code": "A1E0141",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "孙*勤",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-02",
       "actual": "2025-07-02"
@@ -31646,6 +32410,7 @@ var BOARD_DATA = {
       "code": "A1E0141",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "孙*勤",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-25",
       "actual": "2025-08-25"
@@ -31654,6 +32419,7 @@ var BOARD_DATA = {
       "code": "A1E0139",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "朱*成",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-03",
       "actual": "2025-07-03"
@@ -31662,6 +32428,7 @@ var BOARD_DATA = {
       "code": "A1E0139",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "朱*成",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-16",
       "actual": "2026-03-16"
@@ -31670,6 +32437,7 @@ var BOARD_DATA = {
       "code": "A1E0149",
       "hosp": "上海第四人民医院",
       "patient": "忻*敏",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-10",
       "actual": "2025-07-10"
@@ -31678,6 +32446,7 @@ var BOARD_DATA = {
       "code": "A1E0149",
       "hosp": "上海第四人民医院",
       "patient": "忻*敏",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-16",
       "actual": "2025-09-16"
@@ -31686,6 +32455,7 @@ var BOARD_DATA = {
       "code": "A1E0143",
       "hosp": "上海市同济医院",
       "patient": "陈*儒",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-04",
       "actual": "2025-07-04"
@@ -31694,6 +32464,7 @@ var BOARD_DATA = {
       "code": "A1E0143",
       "hosp": "上海市同济医院",
       "patient": "陈*儒",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-23",
       "actual": "2025-08-23"
@@ -31702,6 +32473,7 @@ var BOARD_DATA = {
       "code": "A1E0140",
       "hosp": "中国医学科学院血液病医院",
       "patient": "解*庆",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-02",
       "actual": "2025-07-02"
@@ -31710,6 +32482,7 @@ var BOARD_DATA = {
       "code": "A1E0140",
       "hosp": "中国医学科学院血液病医院",
       "patient": "解*庆",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-22",
       "actual": "2025-10-22"
@@ -31718,6 +32491,7 @@ var BOARD_DATA = {
       "code": "A1E0144",
       "hosp": "高博医疗集团上海力泉医院",
       "patient": "张*勤",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-07",
       "actual": "2025-07-07"
@@ -31726,6 +32500,7 @@ var BOARD_DATA = {
       "code": "A1E0144",
       "hosp": "高博医疗集团上海力泉医院",
       "patient": "张*勤",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-23",
       "actual": "2025-09-23"
@@ -31734,6 +32509,7 @@ var BOARD_DATA = {
       "code": "A1E0151",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "龚*芳",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-14",
       "actual": "2025-07-14"
@@ -31742,6 +32518,7 @@ var BOARD_DATA = {
       "code": "A1E0151",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "龚*芳",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-19",
       "actual": "2025-08-19"
@@ -31750,6 +32527,7 @@ var BOARD_DATA = {
       "code": "A1E0148",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "李*强",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-07-07",
       "actual": "2025-07-07"
@@ -31758,6 +32536,7 @@ var BOARD_DATA = {
       "code": "A1E0148",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "李*强",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-08-25",
       "actual": "2025-08-25"
@@ -31766,6 +32545,7 @@ var BOARD_DATA = {
       "code": "A1E0150",
       "hosp": "南京鼓楼医院",
       "patient": "李*龙",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-07-10",
       "actual": "2025-07-10"
@@ -31774,6 +32554,7 @@ var BOARD_DATA = {
       "code": "A1E0150",
       "hosp": "南京鼓楼医院",
       "patient": "李*龙",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2026-01-16",
       "actual": "2026-01-16"
@@ -31782,6 +32563,7 @@ var BOARD_DATA = {
       "code": "A1E0153",
       "hosp": "北京大学人民医院",
       "patient": "薛*娜",
+      "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-07-11",
       "actual": "2025-07-11"
@@ -31790,6 +32572,7 @@ var BOARD_DATA = {
       "code": "A1E0153",
       "hosp": "北京大学人民医院",
       "patient": "薛*娜",
+      "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-09-14",
       "actual": "2025-09-14"
@@ -31798,6 +32581,7 @@ var BOARD_DATA = {
       "code": "A1E0152",
       "hosp": "山东第一医科大学第一附属医院（山东省千佛山医院）",
       "patient": "鞠*艳",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-07-16",
       "actual": "2025-07-16"
@@ -31806,6 +32590,7 @@ var BOARD_DATA = {
       "code": "A1E0152",
       "hosp": "山东第一医科大学第一附属医院（山东省千佛山医院）",
       "patient": "鞠*艳",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-09-08",
       "actual": "2025-09-08"
@@ -31814,6 +32599,7 @@ var BOARD_DATA = {
       "code": "A1E0154",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "周*津",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-07-10",
       "actual": "2025-07-10"
@@ -31822,6 +32608,7 @@ var BOARD_DATA = {
       "code": "A1E0154",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "周*津",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-27",
       "actual": "2026-03-27"
@@ -31830,6 +32617,7 @@ var BOARD_DATA = {
       "code": "A1E0155",
       "hosp": "北京大学深圳医院",
       "patient": "张*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-07-11",
       "actual": "2025-07-11"
@@ -31838,6 +32626,7 @@ var BOARD_DATA = {
       "code": "A1E0155",
       "hosp": "北京大学深圳医院",
       "patient": "张*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-09-23",
       "actual": "2025-09-23"
@@ -31846,6 +32635,7 @@ var BOARD_DATA = {
       "code": "A1E0157",
       "hosp": "中国医学科学院血液病医院",
       "patient": "单*红",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-16",
       "actual": "2025-07-16"
@@ -31854,6 +32644,7 @@ var BOARD_DATA = {
       "code": "A1E0157",
       "hosp": "中国医学科学院血液病医院",
       "patient": "单*红",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-24",
       "actual": "2025-09-24"
@@ -31862,6 +32653,7 @@ var BOARD_DATA = {
       "code": "A1E0158",
       "hosp": "南京鼓楼医院",
       "patient": "姜*琴",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-07-16",
       "actual": "2025-07-16"
@@ -31870,6 +32662,7 @@ var BOARD_DATA = {
       "code": "A1E0159",
       "hosp": "上海长海医院",
       "patient": "王*霞",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-17",
       "actual": "2025-07-17"
@@ -31878,6 +32671,7 @@ var BOARD_DATA = {
       "code": "A1E0160",
       "hosp": "中国医学科学院血液病医院",
       "patient": "魏*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-17",
       "actual": "2025-07-17"
@@ -31886,6 +32680,7 @@ var BOARD_DATA = {
       "code": "A1E0160",
       "hosp": "中国医学科学院血液病医院",
       "patient": "魏*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-27",
       "actual": "2025-10-27"
@@ -31894,6 +32689,7 @@ var BOARD_DATA = {
       "code": "A1E0193",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "李*生",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-13",
       "actual": "2025-08-13"
@@ -31902,6 +32698,7 @@ var BOARD_DATA = {
       "code": "A1E0193",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "李*生",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-22",
       "actual": "2025-10-22"
@@ -31910,6 +32707,7 @@ var BOARD_DATA = {
       "code": "A1E0164",
       "hosp": "福建医科大学附属第一医院",
       "patient": "翁*华",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-07-22",
       "actual": "2025-07-22"
@@ -31918,6 +32716,7 @@ var BOARD_DATA = {
       "code": "A1E0164",
       "hosp": "福建医科大学附属第一医院",
       "patient": "翁*华",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-11-25",
       "actual": "2025-11-25"
@@ -31926,6 +32725,7 @@ var BOARD_DATA = {
       "code": "A1E0166",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "陈*萍",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-07-29",
       "actual": "2025-07-29"
@@ -31934,6 +32734,7 @@ var BOARD_DATA = {
       "code": "A1E0166",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "陈*萍",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-12-02",
       "actual": "2025-12-02"
@@ -31942,6 +32743,7 @@ var BOARD_DATA = {
       "code": "A1E0173",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "罗*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-31",
       "actual": "2025-07-31"
@@ -31950,6 +32752,7 @@ var BOARD_DATA = {
       "code": "A1E0173",
       "hosp": "上海复旦大学附属中山医院",
       "patient": "罗*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-24",
       "actual": "2025-09-24"
@@ -31958,6 +32761,7 @@ var BOARD_DATA = {
       "code": "A1E0165",
       "hosp": "南方医科大学珠江医院",
       "patient": "毕*章",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-07-24",
       "actual": "2025-07-24"
@@ -31966,6 +32770,7 @@ var BOARD_DATA = {
       "code": "A1E0165",
       "hosp": "南方医科大学珠江医院",
       "patient": "毕*章",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-09-11",
       "actual": "2025-09-11"
@@ -31974,6 +32779,7 @@ var BOARD_DATA = {
       "code": "A1E0171",
       "hosp": "广西壮族自治区人民医院",
       "patient": "赖*珍",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-07-31",
       "actual": "2025-07-31"
@@ -31982,6 +32788,7 @@ var BOARD_DATA = {
       "code": "A1E0171",
       "hosp": "广西壮族自治区人民医院",
       "patient": "赖*珍",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-09-15",
       "actual": "2025-09-15"
@@ -31990,6 +32797,7 @@ var BOARD_DATA = {
       "code": "A1E0172",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "高*云",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-01",
       "actual": "2025-08-01"
@@ -31998,6 +32806,7 @@ var BOARD_DATA = {
       "code": "A1E0172",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "高*云",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-11-22",
       "actual": "2025-11-22"
@@ -32006,6 +32815,7 @@ var BOARD_DATA = {
       "code": "A1E0169",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郭*访",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-31",
       "actual": "2025-07-31"
@@ -32014,6 +32824,7 @@ var BOARD_DATA = {
       "code": "A1E0169",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郭*访",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-30",
       "actual": "2025-10-30"
@@ -32022,6 +32833,7 @@ var BOARD_DATA = {
       "code": "9009125000029",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*国",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-28",
       "actual": "2025-11-28"
@@ -32030,6 +32842,7 @@ var BOARD_DATA = {
       "code": "9009125000029",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*国",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-19",
       "actual": "2026-05-19"
@@ -32038,6 +32851,7 @@ var BOARD_DATA = {
       "code": "A1E0174",
       "hosp": "吉林大学第一医院",
       "patient": "李*航",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-08-05",
       "actual": "2025-08-05"
@@ -32046,6 +32860,7 @@ var BOARD_DATA = {
       "code": "A1E0174",
       "hosp": "吉林大学第一医院",
       "patient": "李*航",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-09-19",
       "actual": "2025-09-19"
@@ -32054,6 +32869,7 @@ var BOARD_DATA = {
       "code": "A1E0215",
       "hosp": "上海交通大学医学院附属同仁医院",
       "patient": "张*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-29",
       "actual": "2025-08-29"
@@ -32062,6 +32878,7 @@ var BOARD_DATA = {
       "code": "A1E0177",
       "hosp": "北京大学人民医院",
       "patient": "齐*臣",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-08",
       "actual": "2025-08-08"
@@ -32070,6 +32887,7 @@ var BOARD_DATA = {
       "code": "A1E0177",
       "hosp": "北京大学人民医院",
       "patient": "齐*臣",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-12-24",
       "actual": "2025-12-24"
@@ -32078,6 +32896,7 @@ var BOARD_DATA = {
       "code": "A1E0175",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "王*",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-01",
       "actual": "2025-08-01"
@@ -32086,6 +32905,7 @@ var BOARD_DATA = {
       "code": "A1E0175",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "王*",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2026-01-20",
       "actual": "2026-01-20"
@@ -32094,6 +32914,7 @@ var BOARD_DATA = {
       "code": "A1E0176",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "黄*初",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-04",
       "actual": "2025-08-04"
@@ -32102,6 +32923,7 @@ var BOARD_DATA = {
       "code": "A1E0176",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "黄*初",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-09-05",
       "actual": "2025-09-05"
@@ -32110,6 +32932,7 @@ var BOARD_DATA = {
       "code": "A1E0243",
       "hosp": "上海市曜影医院",
       "patient": "A*L S*N C*A",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-24",
       "actual": "2025-09-24"
@@ -32118,6 +32941,7 @@ var BOARD_DATA = {
       "code": "A1E0243",
       "hosp": "上海市曜影医院",
       "patient": "A*L S*N C*A",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-24",
       "actual": "2025-11-24"
@@ -32126,6 +32950,7 @@ var BOARD_DATA = {
       "code": "A1E0179",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "尹*锋",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-04",
       "actual": "2025-08-04"
@@ -32134,6 +32959,7 @@ var BOARD_DATA = {
       "code": "A1E0179",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "尹*锋",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-14",
       "actual": "2025-10-14"
@@ -32142,6 +32968,7 @@ var BOARD_DATA = {
       "code": "A1E0210",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-27",
       "actual": "2025-08-27"
@@ -32150,6 +32977,7 @@ var BOARD_DATA = {
       "code": "A1E0210",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-05",
       "actual": "2026-01-05"
@@ -32158,6 +32986,7 @@ var BOARD_DATA = {
       "code": "A1E0181",
       "hosp": "南方医科大学珠江医院",
       "patient": "叶*棠",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-08-06",
       "actual": "2025-08-06"
@@ -32166,6 +32995,7 @@ var BOARD_DATA = {
       "code": "A1E0181",
       "hosp": "南方医科大学珠江医院",
       "patient": "叶*棠",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-24",
       "actual": "2025-11-24"
@@ -32174,6 +33004,7 @@ var BOARD_DATA = {
       "code": "A1E0182",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "张*",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-07",
       "actual": "2025-08-07"
@@ -32182,6 +33013,7 @@ var BOARD_DATA = {
       "code": "A1E0182",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "张*",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-17",
       "actual": "2025-10-17"
@@ -32190,6 +33022,7 @@ var BOARD_DATA = {
       "code": "A1E0183",
       "hosp": "中山大学附属第一医院",
       "patient": "王*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-08-07",
       "actual": "2025-08-07"
@@ -32198,6 +33031,7 @@ var BOARD_DATA = {
       "code": "A1E0183",
       "hosp": "中山大学附属第一医院",
       "patient": "王*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-19",
       "actual": "2025-11-19"
@@ -32206,6 +33040,7 @@ var BOARD_DATA = {
       "code": "A1E0184",
       "hosp": "四川省人民医院",
       "patient": "王*",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-08",
       "actual": "2025-08-08"
@@ -32214,6 +33049,7 @@ var BOARD_DATA = {
       "code": "A1E0184",
       "hosp": "四川省人民医院",
       "patient": "王*",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-10-27",
       "actual": "2025-10-27"
@@ -32222,6 +33058,7 @@ var BOARD_DATA = {
       "code": "A1E0188",
       "hosp": "福建医科大学附属协和医院",
       "patient": "陈*缘",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-11",
       "actual": "2025-08-11"
@@ -32230,6 +33067,7 @@ var BOARD_DATA = {
       "code": "A1E0188",
       "hosp": "福建医科大学附属协和医院",
       "patient": "陈*缘",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-20",
       "actual": "2025-10-20"
@@ -32238,6 +33076,7 @@ var BOARD_DATA = {
       "code": "A1E0189",
       "hosp": "南方医科大学南方医院",
       "patient": "何*光",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-08-11",
       "actual": "2025-08-11"
@@ -32246,6 +33085,7 @@ var BOARD_DATA = {
       "code": "A1E0189",
       "hosp": "南方医科大学南方医院",
       "patient": "何*光",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-10-22",
       "actual": "2025-10-22"
@@ -32254,6 +33094,7 @@ var BOARD_DATA = {
       "code": "A1E0191",
       "hosp": "南京鼓楼医院",
       "patient": "朱*妹",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-08-12",
       "actual": "2025-08-12"
@@ -32262,6 +33103,7 @@ var BOARD_DATA = {
       "code": "A1E0192",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "任*石",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-26",
       "actual": "2025-08-26"
@@ -32270,6 +33112,7 @@ var BOARD_DATA = {
       "code": "A1E0192",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "任*石",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-20",
       "actual": "2025-10-20"
@@ -32278,6 +33121,7 @@ var BOARD_DATA = {
       "code": "A1E0194",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "李*",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-13",
       "actual": "2025-08-13"
@@ -32286,6 +33130,7 @@ var BOARD_DATA = {
       "code": "A1E0194",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "李*",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-06",
       "actual": "2025-10-06"
@@ -32294,6 +33139,7 @@ var BOARD_DATA = {
       "code": "A1E0196",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杜*荣",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-14",
       "actual": "2025-08-14"
@@ -32302,6 +33148,7 @@ var BOARD_DATA = {
       "code": "A1E0196",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杜*荣",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-11-13",
       "actual": "2025-11-13"
@@ -32310,6 +33157,7 @@ var BOARD_DATA = {
       "code": "A1E0197",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "高*龙",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-15",
       "actual": "2025-08-15"
@@ -32318,6 +33166,7 @@ var BOARD_DATA = {
       "code": "A1E0197",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "高*龙",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-18",
       "actual": "2025-11-18"
@@ -32326,6 +33175,7 @@ var BOARD_DATA = {
       "code": "A1E0201",
       "hosp": "复旦大学附属中山医院厦门医院",
       "patient": "陈*荣",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-21",
       "actual": "2025-08-21"
@@ -32334,6 +33184,7 @@ var BOARD_DATA = {
       "code": "A1E0201",
       "hosp": "复旦大学附属中山医院厦门医院",
       "patient": "陈*荣",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-20",
       "actual": "2025-10-20"
@@ -32342,6 +33193,7 @@ var BOARD_DATA = {
       "code": "A1E0202",
       "hosp": "复旦大学附属中山医院厦门医院",
       "patient": "林*质",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-26",
       "actual": "2025-08-26"
@@ -32350,6 +33202,7 @@ var BOARD_DATA = {
       "code": "A1E0200",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*刚",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-20",
       "actual": "2025-08-20"
@@ -32358,6 +33211,7 @@ var BOARD_DATA = {
       "code": "A1E0200",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*刚",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-19",
       "actual": "2026-01-19"
@@ -32366,6 +33220,7 @@ var BOARD_DATA = {
       "code": "A1E0203",
       "hosp": "四川大学华西医院",
       "patient": "张*功",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-22",
       "actual": "2025-08-22"
@@ -32374,6 +33229,7 @@ var BOARD_DATA = {
       "code": "A1E0203",
       "hosp": "四川大学华西医院",
       "patient": "张*功",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-11-03",
       "actual": "2025-11-03"
@@ -32382,6 +33238,7 @@ var BOARD_DATA = {
       "code": "A1E0205",
       "hosp": "西藏自治区人民政府驻成都办事处医院",
       "patient": "柳*琪",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-26",
       "actual": "2025-08-26"
@@ -32390,6 +33247,7 @@ var BOARD_DATA = {
       "code": "A1E0205",
       "hosp": "西藏自治区人民政府驻成都办事处医院",
       "patient": "柳*琪",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-10-21",
       "actual": "2025-10-21"
@@ -32398,6 +33256,7 @@ var BOARD_DATA = {
       "code": "A1E0206",
       "hosp": "广西壮族自治区人民医院",
       "patient": "陈*华",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-08-22",
       "actual": "2025-08-22"
@@ -32406,6 +33265,7 @@ var BOARD_DATA = {
       "code": "A1E0206",
       "hosp": "广西壮族自治区人民医院",
       "patient": "陈*华",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-10-21",
       "actual": "2025-10-21"
@@ -32414,6 +33274,7 @@ var BOARD_DATA = {
       "code": "A1E0204",
       "hosp": "中国医学科学院血液病医院",
       "patient": "连*鱼",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-22",
       "actual": "2025-08-22"
@@ -32422,6 +33283,7 @@ var BOARD_DATA = {
       "code": "A1E0204",
       "hosp": "中国医学科学院血液病医院",
       "patient": "连*鱼",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-22",
       "actual": "2025-12-22"
@@ -32430,6 +33292,7 @@ var BOARD_DATA = {
       "code": "A1E0207",
       "hosp": "中国医学科学院血液病医院",
       "patient": "栗*仙",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-25",
       "actual": "2025-08-25"
@@ -32438,6 +33301,7 @@ var BOARD_DATA = {
       "code": "A1E0207",
       "hosp": "中国医学科学院血液病医院",
       "patient": "栗*仙",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-29",
       "actual": "2025-10-29"
@@ -32446,6 +33310,7 @@ var BOARD_DATA = {
       "code": "A1E0208",
       "hosp": "北京协和医院",
       "patient": "邵*华",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-27",
       "actual": "2025-08-27"
@@ -32454,6 +33319,7 @@ var BOARD_DATA = {
       "code": "A1E0208",
       "hosp": "北京协和医院",
       "patient": "邵*华",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-11-03",
       "actual": "2025-11-03"
@@ -32462,6 +33328,7 @@ var BOARD_DATA = {
       "code": "A1E0212",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "傅*利",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-28",
       "actual": "2025-08-28"
@@ -32470,6 +33337,7 @@ var BOARD_DATA = {
       "code": "A1E0212",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "傅*利",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-11-17",
       "actual": "2025-11-17"
@@ -32478,6 +33346,7 @@ var BOARD_DATA = {
       "code": "A1E0213",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-17",
       "actual": "2025-09-17"
@@ -32486,6 +33355,7 @@ var BOARD_DATA = {
       "code": "A1E0213",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-03",
       "actual": "2026-04-03"
@@ -32494,6 +33364,7 @@ var BOARD_DATA = {
       "code": "A1E0214",
       "hosp": "上海市同济医院",
       "patient": "陆*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-28",
       "actual": "2025-08-28"
@@ -32502,6 +33373,7 @@ var BOARD_DATA = {
       "code": "A1E0214",
       "hosp": "上海市同济医院",
       "patient": "陆*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-09",
       "actual": "2025-11-09"
@@ -32510,6 +33382,7 @@ var BOARD_DATA = {
       "code": "A1E0216",
       "hosp": "上海市曜影医院",
       "patient": "M*L J*N B*S",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-01",
       "actual": "2025-09-01"
@@ -32518,6 +33391,7 @@ var BOARD_DATA = {
       "code": "A1E0216",
       "hosp": "上海市曜影医院",
       "patient": "M*L J*N B*S",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-20",
       "actual": "2026-01-20"
@@ -32526,6 +33400,7 @@ var BOARD_DATA = {
       "code": "A1E0217",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "赵*英",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-31",
       "actual": "2025-08-31"
@@ -32534,6 +33409,7 @@ var BOARD_DATA = {
       "code": "A1E0217",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "赵*英",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-11-14",
       "actual": "2025-11-14"
@@ -32542,6 +33418,7 @@ var BOARD_DATA = {
       "code": "A1E0218",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "段*想",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-09-01",
       "actual": "2025-09-01"
@@ -32550,6 +33427,7 @@ var BOARD_DATA = {
       "code": "A1E0218",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "段*想",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-12-01",
       "actual": "2025-12-01"
@@ -32558,6 +33436,7 @@ var BOARD_DATA = {
       "code": "9009126000268",
       "hosp": "北京大学人民医院",
       "patient": "赵*培",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2026-09-10",
       "actual": ""
@@ -32566,6 +33445,7 @@ var BOARD_DATA = {
       "code": "A1E0220",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "田*",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-09-08",
       "actual": "2025-09-08"
@@ -32574,6 +33454,7 @@ var BOARD_DATA = {
       "code": "A1E0220",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "田*",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-11-12",
       "actual": "2025-11-12"
@@ -32582,6 +33463,7 @@ var BOARD_DATA = {
       "code": "A1E0221",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "盛*鸣",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-09-05",
       "actual": "2025-09-05"
@@ -32590,6 +33472,7 @@ var BOARD_DATA = {
       "code": "A1E0222",
       "hosp": "中山大学附属第一医院",
       "patient": "许*鹏",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-09-05",
       "actual": "2025-09-05"
@@ -32598,6 +33481,7 @@ var BOARD_DATA = {
       "code": "A1E0222",
       "hosp": "中山大学附属第一医院",
       "patient": "许*鹏",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-18",
       "actual": "2025-11-18"
@@ -32606,6 +33490,7 @@ var BOARD_DATA = {
       "code": "A1E0227",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "许*开",
+      "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-09-11",
       "actual": "2025-09-11"
@@ -32614,6 +33499,7 @@ var BOARD_DATA = {
       "code": "A1E0227",
       "hosp": "陆军军医大学第二附属医院(新桥医院)",
       "patient": "许*开",
+      "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-11-28",
       "actual": "2025-11-28"
@@ -32622,6 +33508,7 @@ var BOARD_DATA = {
       "code": "A1E0226",
       "hosp": "中山大学附属第一医院",
       "patient": "麦*光",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-09-09",
       "actual": "2025-09-09"
@@ -32630,6 +33517,7 @@ var BOARD_DATA = {
       "code": "A1E0226",
       "hosp": "中山大学附属第一医院",
       "patient": "麦*光",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-03-10",
       "actual": "2026-03-10"
@@ -32638,6 +33526,7 @@ var BOARD_DATA = {
       "code": "A1E0224",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*婷",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-10",
       "actual": "2025-09-10"
@@ -32646,6 +33535,7 @@ var BOARD_DATA = {
       "code": "A1E0224",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*婷",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-08",
       "actual": "2025-12-08"
@@ -32654,6 +33544,7 @@ var BOARD_DATA = {
       "code": "A1E0225",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "郭*生",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-09-08",
       "actual": "2025-09-08"
@@ -32662,6 +33553,7 @@ var BOARD_DATA = {
       "code": "A1E0225",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "郭*生",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-11-26",
       "actual": "2025-11-26"
@@ -32670,6 +33562,7 @@ var BOARD_DATA = {
       "code": "A1E0231",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "于*芬",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-12",
       "actual": "2025-09-12"
@@ -32678,6 +33571,7 @@ var BOARD_DATA = {
       "code": "A1E0231",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "于*芬",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-27",
       "actual": "2025-11-27"
@@ -32686,6 +33580,7 @@ var BOARD_DATA = {
       "code": "A1E0228",
       "hosp": "中国医学科学院血液病医院",
       "patient": "孙*霄",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-12",
       "actual": "2025-09-12"
@@ -32694,6 +33589,7 @@ var BOARD_DATA = {
       "code": "A1E0228",
       "hosp": "中国医学科学院血液病医院",
       "patient": "孙*霄",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-15",
       "actual": "2025-12-15"
@@ -32702,6 +33598,7 @@ var BOARD_DATA = {
       "code": "A1E0229",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "王*海",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-11",
       "actual": "2025-09-11"
@@ -32710,6 +33607,7 @@ var BOARD_DATA = {
       "code": "A1E0230",
       "hosp": "江苏省人民医院",
       "patient": "王*双",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-09-12",
       "actual": "2025-09-12"
@@ -32718,6 +33616,7 @@ var BOARD_DATA = {
       "code": "A1E0230",
       "hosp": "江苏省人民医院",
       "patient": "王*双",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-10-24",
       "actual": "2025-10-24"
@@ -32726,6 +33625,7 @@ var BOARD_DATA = {
       "code": "A1E0233",
       "hosp": "上海市曜影医院",
       "patient": "I*n T*T",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-22",
       "actual": "2025-09-22"
@@ -32734,6 +33634,7 @@ var BOARD_DATA = {
       "code": "A1E0233",
       "hosp": "上海市曜影医院",
       "patient": "I*n T*T",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-10-28",
       "actual": "2025-10-28"
@@ -32742,6 +33643,7 @@ var BOARD_DATA = {
       "code": "A1E0235",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "王*",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-09-15",
       "actual": "2025-09-15"
@@ -32750,6 +33652,7 @@ var BOARD_DATA = {
       "code": "A1E0235",
       "hosp": "西安交通大学第二附属医院（西北医院）",
       "patient": "王*",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-10-29",
       "actual": "2025-10-29"
@@ -32758,6 +33661,7 @@ var BOARD_DATA = {
       "code": "A1E0237",
       "hosp": "上海市同济医院",
       "patient": "朱*琴",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-17",
       "actual": "2025-09-17"
@@ -32766,6 +33670,7 @@ var BOARD_DATA = {
       "code": "A1E0237",
       "hosp": "上海市同济医院",
       "patient": "朱*琴",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-29",
       "actual": "2026-05-29"
@@ -32774,6 +33679,7 @@ var BOARD_DATA = {
       "code": "A1E0234",
       "hosp": "上海市曜影医院",
       "patient": "潘*曙",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-16",
       "actual": "2025-09-16"
@@ -32782,6 +33688,7 @@ var BOARD_DATA = {
       "code": "A1E0234",
       "hosp": "上海市曜影医院",
       "patient": "潘*曙",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-10",
       "actual": "2026-03-10"
@@ -32790,6 +33697,7 @@ var BOARD_DATA = {
       "code": "A1E0238",
       "hosp": "中山大学附属第一医院",
       "patient": "徐*城",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-09-19",
       "actual": "2025-09-19"
@@ -32798,6 +33706,7 @@ var BOARD_DATA = {
       "code": "A1E0238",
       "hosp": "中山大学附属第一医院",
       "patient": "徐*城",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-25",
       "actual": "2025-11-25"
@@ -32806,6 +33715,7 @@ var BOARD_DATA = {
       "code": "A1E0248",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "张*忠",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-13",
       "actual": "2025-10-13"
@@ -32814,6 +33724,7 @@ var BOARD_DATA = {
       "code": "A1E0248",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "张*忠",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-27",
       "actual": "2026-04-27"
@@ -32822,6 +33733,7 @@ var BOARD_DATA = {
       "code": "A1E0240",
       "hosp": "中山大学附属第一医院",
       "patient": "马*香",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-10-02",
       "actual": "2025-10-02"
@@ -32830,6 +33742,7 @@ var BOARD_DATA = {
       "code": "A1E0240",
       "hosp": "中山大学附属第一医院",
       "patient": "马*香",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-22",
       "actual": "2025-12-22"
@@ -32838,6 +33751,7 @@ var BOARD_DATA = {
       "code": "A1E0241",
       "hosp": "天津医科大学总医院",
       "patient": "杨*恩",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-23",
       "actual": "2025-09-23"
@@ -32846,6 +33760,7 @@ var BOARD_DATA = {
       "code": "A1E0241",
       "hosp": "天津医科大学总医院",
       "patient": "杨*恩",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-11-17",
       "actual": "2025-11-17"
@@ -32854,6 +33769,7 @@ var BOARD_DATA = {
       "code": "A1E0244",
       "hosp": "上海交通大学医学院附属第九人民医院",
       "patient": "陈*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-25",
       "actual": "2025-09-25"
@@ -32862,6 +33778,7 @@ var BOARD_DATA = {
       "code": "A1E0244",
       "hosp": "上海交通大学医学院附属第九人民医院",
       "patient": "陈*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-27",
       "actual": "2025-11-27"
@@ -32870,6 +33787,7 @@ var BOARD_DATA = {
       "code": "A1E0246",
       "hosp": "中国人民解放军总医院",
       "patient": "郭*里",
+      "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-09-28",
       "actual": "2025-09-28"
@@ -32878,6 +33796,7 @@ var BOARD_DATA = {
       "code": "A1E0246",
       "hosp": "中国人民解放军总医院",
       "patient": "郭*里",
+      "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-12-09",
       "actual": "2025-12-09"
@@ -32886,6 +33805,7 @@ var BOARD_DATA = {
       "code": "A1E0247",
       "hosp": "上海市同济医院",
       "patient": "K*E C*A C*N S*G",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-10-06",
       "actual": "2025-10-06"
@@ -32894,6 +33814,7 @@ var BOARD_DATA = {
       "code": "A1E0247",
       "hosp": "上海市同济医院",
       "patient": "K*E C*A C*N S*G",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-26",
       "actual": "2025-11-26"
@@ -32902,6 +33823,7 @@ var BOARD_DATA = {
       "code": "A1E0249",
       "hosp": "中国医学科学院血液病医院",
       "patient": "边*生",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-10",
       "actual": "2025-10-10"
@@ -32910,6 +33832,7 @@ var BOARD_DATA = {
       "code": "A1E0249",
       "hosp": "中国医学科学院血液病医院",
       "patient": "边*生",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-27",
       "actual": "2026-01-27"
@@ -32918,6 +33841,7 @@ var BOARD_DATA = {
       "code": "A1E0250",
       "hosp": "北京大学人民医院",
       "patient": "张*桂",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-10-21",
       "actual": "2025-10-21"
@@ -32926,6 +33850,7 @@ var BOARD_DATA = {
       "code": "A1E0250",
       "hosp": "北京大学人民医院",
       "patient": "张*桂",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2025-12-10",
       "actual": "2025-12-10"
@@ -32934,6 +33859,7 @@ var BOARD_DATA = {
       "code": "A1E0251",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*涛",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-11",
       "actual": "2025-10-11"
@@ -32942,6 +33868,7 @@ var BOARD_DATA = {
       "code": "A1E0251",
       "hosp": "中国医学科学院血液病医院",
       "patient": "于*涛",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-05",
       "actual": "2026-03-05"
@@ -32950,6 +33877,7 @@ var BOARD_DATA = {
       "code": "A1E0253",
       "hosp": "上海市曜影医院",
       "patient": "M*. B*N V*M",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-10-20",
       "actual": "2025-10-20"
@@ -32958,6 +33886,7 @@ var BOARD_DATA = {
       "code": "A1E0253",
       "hosp": "上海市曜影医院",
       "patient": "M*. B*N V*M",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-26",
       "actual": "2025-11-26"
@@ -32966,6 +33895,7 @@ var BOARD_DATA = {
       "code": "A1E0258",
       "hosp": "南方医科大学南方医院",
       "patient": "谢*妹",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-10-22",
       "actual": "2025-10-22"
@@ -32974,6 +33904,7 @@ var BOARD_DATA = {
       "code": "A1E0258",
       "hosp": "南方医科大学南方医院",
       "patient": "谢*妹",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-08",
       "actual": "2025-12-08"
@@ -32982,6 +33913,7 @@ var BOARD_DATA = {
       "code": "A1E0254",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-16",
       "actual": "2025-10-16"
@@ -32990,6 +33922,7 @@ var BOARD_DATA = {
       "code": "A1E0254",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-12",
       "actual": "2026-03-12"
@@ -32998,6 +33931,7 @@ var BOARD_DATA = {
       "code": "A1E0255",
       "hosp": "中山大学附属第一医院",
       "patient": "韩*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-10-16",
       "actual": "2025-10-16"
@@ -33006,6 +33940,7 @@ var BOARD_DATA = {
       "code": "A1E0255",
       "hosp": "中山大学附属第一医院",
       "patient": "韩*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-02",
       "actual": "2025-12-02"
@@ -33014,6 +33949,7 @@ var BOARD_DATA = {
       "code": "A1E0256",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*英",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-17",
       "actual": "2025-10-17"
@@ -33022,6 +33958,7 @@ var BOARD_DATA = {
       "code": "A1E0256",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*英",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-29",
       "actual": "2025-12-29"
@@ -33030,6 +33967,7 @@ var BOARD_DATA = {
       "code": "A1E0257",
       "hosp": "宁波大学附属人民医院",
       "patient": "包*虎",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-10-21",
       "actual": "2025-10-21"
@@ -33038,6 +33976,7 @@ var BOARD_DATA = {
       "code": "A1E0259",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "杨*姿",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-10-23",
       "actual": "2025-10-23"
@@ -33046,6 +33985,7 @@ var BOARD_DATA = {
       "code": "A1E0259",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "杨*姿",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -33054,6 +33994,7 @@ var BOARD_DATA = {
       "code": "A1E0260",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "龚*昌",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-10-22",
       "actual": "2025-10-22"
@@ -33062,6 +34003,7 @@ var BOARD_DATA = {
       "code": "A1E0260",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "龚*昌",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-12-12",
       "actual": "2025-12-12"
@@ -33070,6 +34012,7 @@ var BOARD_DATA = {
       "code": "A1E0261",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "孙*金",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-10-24",
       "actual": "2025-10-24"
@@ -33078,6 +34021,7 @@ var BOARD_DATA = {
       "code": "A1E0261",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "孙*金",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2025-12-22",
       "actual": "2025-12-22"
@@ -33086,6 +34030,7 @@ var BOARD_DATA = {
       "code": "A1E0262",
       "hosp": "苏州大学附属第一医院",
       "patient": "张*春",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2025-10-24",
       "actual": "2025-10-24"
@@ -33094,6 +34039,7 @@ var BOARD_DATA = {
       "code": "9009125000002",
       "hosp": "上海长征医院",
       "patient": "陈*芬",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-10-30",
       "actual": "2025-10-30"
@@ -33102,6 +34048,7 @@ var BOARD_DATA = {
       "code": "9009125000002",
       "hosp": "上海长征医院",
       "patient": "陈*芬",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-24",
       "actual": "2025-12-24"
@@ -33110,6 +34057,7 @@ var BOARD_DATA = {
       "code": "A1E0263",
       "hosp": "中山大学肿瘤医院",
       "patient": "符*道",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-10-27",
       "actual": "2025-10-27"
@@ -33118,6 +34066,7 @@ var BOARD_DATA = {
       "code": "A1E0263",
       "hosp": "中山大学肿瘤医院",
       "patient": "符*道",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-01-28",
       "actual": "2026-01-28"
@@ -33126,6 +34075,7 @@ var BOARD_DATA = {
       "code": "A1E0264",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*枝",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-10-28",
       "actual": "2025-10-28"
@@ -33134,6 +34084,7 @@ var BOARD_DATA = {
       "code": "A1E0264",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*枝",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-01-27",
       "actual": "2026-01-27"
@@ -33142,6 +34093,7 @@ var BOARD_DATA = {
       "code": "9009125000001",
       "hosp": "山东大学齐鲁医院",
       "patient": "郑*涛",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-30",
       "actual": "2025-10-30"
@@ -33150,6 +34102,7 @@ var BOARD_DATA = {
       "code": "9009125000001",
       "hosp": "山东大学齐鲁医院",
       "patient": "郑*涛",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-29",
       "actual": "2025-12-29"
@@ -33158,6 +34111,7 @@ var BOARD_DATA = {
       "code": "9009125000006",
       "hosp": "上海仁济医院",
       "patient": "朱*平",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-05",
       "actual": "2025-11-05"
@@ -33166,6 +34120,7 @@ var BOARD_DATA = {
       "code": "9009125000006",
       "hosp": "上海仁济医院",
       "patient": "朱*平",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-15",
       "actual": "2025-12-15"
@@ -33174,6 +34129,7 @@ var BOARD_DATA = {
       "code": "9009125000004",
       "hosp": "大连医科大学附属第二医院（钻石湾院区）",
       "patient": "潘*强",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-11-05",
       "actual": "2025-11-05"
@@ -33182,6 +34138,7 @@ var BOARD_DATA = {
       "code": "9009125000004",
       "hosp": "大连医科大学附属第二医院（钻石湾院区）",
       "patient": "潘*强",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2026-01-12",
       "actual": "2026-01-12"
@@ -33190,6 +34147,7 @@ var BOARD_DATA = {
       "code": "9009125000003",
       "hosp": "上海长征医院",
       "patient": "钱*忠",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-03",
       "actual": "2025-11-03"
@@ -33198,6 +34156,7 @@ var BOARD_DATA = {
       "code": "9009125000003",
       "hosp": "上海长征医院",
       "patient": "钱*忠",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-17",
       "actual": "2025-12-17"
@@ -33206,6 +34165,7 @@ var BOARD_DATA = {
       "code": "9009125000005",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "张*美",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-11-04",
       "actual": "2025-11-04"
@@ -33214,6 +34174,7 @@ var BOARD_DATA = {
       "code": "9009125000005",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "张*美",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-15",
       "actual": "2026-04-15"
@@ -33222,6 +34183,7 @@ var BOARD_DATA = {
       "code": "9009125000007",
       "hosp": "江苏省人民医院",
       "patient": "姚*东",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-11-05",
       "actual": "2025-11-05"
@@ -33230,6 +34192,7 @@ var BOARD_DATA = {
       "code": "9009125000007",
       "hosp": "江苏省人民医院",
       "patient": "姚*东",
+      "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2026-01-24",
       "actual": "2026-01-24"
@@ -33238,6 +34201,7 @@ var BOARD_DATA = {
       "code": "9009125000009",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "卿*盛",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-11-07",
       "actual": "2025-11-07"
@@ -33246,6 +34210,7 @@ var BOARD_DATA = {
       "code": "9009125000009",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "卿*盛",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-08",
       "actual": "2025-12-08"
@@ -33254,6 +34219,7 @@ var BOARD_DATA = {
       "code": "9009125000010",
       "hosp": "成都上锦南府医院 （四川大学华西医院上锦医院位）",
       "patient": "黄*琼",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-11",
       "actual": "2025-11-11"
@@ -33262,6 +34228,7 @@ var BOARD_DATA = {
       "code": "9009125000011",
       "hosp": "四川大学华西医院",
       "patient": "何*",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-11",
       "actual": "2025-11-11"
@@ -33270,6 +34237,7 @@ var BOARD_DATA = {
       "code": "9009125000012",
       "hosp": "四川大学华西医院",
       "patient": "杨*文",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-12",
       "actual": "2025-11-12"
@@ -33278,6 +34246,7 @@ var BOARD_DATA = {
       "code": "9009125000012",
       "hosp": "四川大学华西医院",
       "patient": "杨*文",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-12-26",
       "actual": "2025-12-26"
@@ -33286,6 +34255,7 @@ var BOARD_DATA = {
       "code": "9009125000013",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-12",
       "actual": "2025-11-12"
@@ -33294,6 +34264,7 @@ var BOARD_DATA = {
       "code": "9009125000013",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-11",
       "actual": "2026-05-11"
@@ -33302,6 +34273,7 @@ var BOARD_DATA = {
       "code": "9009125000016",
       "hosp": "中山大学附属第一医院",
       "patient": "黄*玲",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-11-12",
       "actual": "2025-11-12"
@@ -33310,6 +34282,7 @@ var BOARD_DATA = {
       "code": "9009125000016",
       "hosp": "中山大学附属第一医院",
       "patient": "黄*玲",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-02-03",
       "actual": "2026-02-03"
@@ -33318,6 +34291,7 @@ var BOARD_DATA = {
       "code": "9009125000017",
       "hosp": "上海市曜影医院",
       "patient": "徐*城",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-17",
       "actual": "2025-11-17"
@@ -33326,6 +34300,7 @@ var BOARD_DATA = {
       "code": "9009125000017",
       "hosp": "上海市曜影医院",
       "patient": "徐*城",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-29",
       "actual": "2025-12-29"
@@ -33334,6 +34309,7 @@ var BOARD_DATA = {
       "code": "9009125000021",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "金*娥",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-18",
       "actual": "2025-11-18"
@@ -33342,6 +34318,7 @@ var BOARD_DATA = {
       "code": "9009125000021",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "金*娥",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-30",
       "actual": "2025-12-30"
@@ -33350,6 +34327,7 @@ var BOARD_DATA = {
       "code": "9009125000018",
       "hosp": "中国人民解放军西部战区空军医院",
       "patient": "韩*容",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-17",
       "actual": "2025-11-17"
@@ -33358,6 +34336,7 @@ var BOARD_DATA = {
       "code": "9009125000018",
       "hosp": "中国人民解放军西部战区空军医院",
       "patient": "韩*容",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-12-25",
       "actual": "2025-12-25"
@@ -33366,6 +34345,7 @@ var BOARD_DATA = {
       "code": "9009125000019",
       "hosp": "中国人民解放军西部战区空军医院",
       "patient": "阮*彬",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-18",
       "actual": "2025-11-18"
@@ -33374,6 +34354,7 @@ var BOARD_DATA = {
       "code": "9009125000019",
       "hosp": "中国人民解放军西部战区空军医院",
       "patient": "阮*彬",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-12-18",
       "actual": "2025-12-18"
@@ -33382,6 +34363,7 @@ var BOARD_DATA = {
       "code": "9009125000022",
       "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
       "patient": "赵*魁",
+      "cos": "顾美琴",
       "type": "apheresis",
       "plan": "2025-11-19",
       "actual": "2025-11-19"
@@ -33390,6 +34372,7 @@ var BOARD_DATA = {
       "code": "9009125000022",
       "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
       "patient": "赵*魁",
+      "cos": "顾美琴",
       "type": "reinfusion",
       "plan": "2025-12-15",
       "actual": "2025-12-15"
@@ -33398,6 +34381,7 @@ var BOARD_DATA = {
       "code": "9009125000023",
       "hosp": "吉林大学第一医院",
       "patient": "刘*",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-11-20",
       "actual": "2025-11-20"
@@ -33406,6 +34390,7 @@ var BOARD_DATA = {
       "code": "9009125000023",
       "hosp": "吉林大学第一医院",
       "patient": "刘*",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-12-31",
       "actual": "2026-01-09"
@@ -33414,6 +34399,7 @@ var BOARD_DATA = {
       "code": "9009125000027",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "张*清",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-11-24",
       "actual": "2025-11-24"
@@ -33422,6 +34408,7 @@ var BOARD_DATA = {
       "code": "9009125000027",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "张*清",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-12-22",
       "actual": "2025-12-22"
@@ -33430,6 +34417,7 @@ var BOARD_DATA = {
       "code": "9009125000026",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*明",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-24",
       "actual": "2025-11-24"
@@ -33438,6 +34426,7 @@ var BOARD_DATA = {
       "code": "9009125000026",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*明",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-12",
       "actual": "2026-01-12"
@@ -33446,6 +34435,7 @@ var BOARD_DATA = {
       "code": "9009125000025",
       "hosp": "暨南大学附属第一医院（广州华侨医院）",
       "patient": "刘*刚",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-11-21",
       "actual": "2025-11-21"
@@ -33454,6 +34444,7 @@ var BOARD_DATA = {
       "code": "9009125000025",
       "hosp": "暨南大学附属第一医院（广州华侨医院）",
       "patient": "刘*刚",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-29",
       "actual": "2025-12-29"
@@ -33462,6 +34453,7 @@ var BOARD_DATA = {
       "code": "9009125000031",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "张*廷",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-12-13",
       "actual": "2025-12-13"
@@ -33470,6 +34462,7 @@ var BOARD_DATA = {
       "code": "9009125000031",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "张*廷",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-01-16",
       "actual": "2026-01-16"
@@ -33478,6 +34471,7 @@ var BOARD_DATA = {
       "code": "9009125000028",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-26",
       "actual": "2025-11-26"
@@ -33486,6 +34480,7 @@ var BOARD_DATA = {
       "code": "9009125000028",
       "hosp": "中国医学科学院血液病医院",
       "patient": "马*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-19",
       "actual": "2026-08-19"
@@ -33494,6 +34489,7 @@ var BOARD_DATA = {
       "code": "9009125000035",
       "hosp": "上海市曜影医院",
       "patient": "M*O Y*N S*N C*W",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-02",
       "actual": "2025-12-02"
@@ -33502,6 +34498,7 @@ var BOARD_DATA = {
       "code": "9009125000035",
       "hosp": "上海市曜影医院",
       "patient": "M*O Y*N S*N C*W",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-20",
       "actual": "2026-01-20"
@@ -33510,6 +34507,7 @@ var BOARD_DATA = {
       "code": "9009125000030",
       "hosp": "山东大学齐鲁医院",
       "patient": "王*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-27",
       "actual": "2025-11-27"
@@ -33518,6 +34516,7 @@ var BOARD_DATA = {
       "code": "9009125000030",
       "hosp": "山东大学齐鲁医院",
       "patient": "王*军",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-23",
       "actual": "2025-12-23"
@@ -33526,6 +34525,7 @@ var BOARD_DATA = {
       "code": "9009125000034",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "王*仁",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-12-30",
       "actual": "2025-12-30"
@@ -33534,6 +34534,7 @@ var BOARD_DATA = {
       "code": "9009125000034",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "王*仁",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-17",
       "actual": "2026-02-17"
@@ -33542,6 +34543,7 @@ var BOARD_DATA = {
       "code": "9009125000033",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "陈*清",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-11-29",
       "actual": "2025-11-29"
@@ -33550,6 +34552,7 @@ var BOARD_DATA = {
       "code": "9009125000033",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "陈*清",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2025-12-31",
       "actual": "2025-12-31"
@@ -33558,6 +34561,7 @@ var BOARD_DATA = {
       "code": "9009125000036",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*然",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-04",
       "actual": "2025-12-04"
@@ -33566,6 +34570,7 @@ var BOARD_DATA = {
       "code": "9009125000036",
       "hosp": "中国医学科学院血液病医院",
       "patient": "周*然",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-05",
       "actual": "2026-01-05"
@@ -33574,6 +34579,7 @@ var BOARD_DATA = {
       "code": "9009125000037",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "舒*榜",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-04",
       "actual": "2025-12-04"
@@ -33582,6 +34588,7 @@ var BOARD_DATA = {
       "code": "9009125000037",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "舒*榜",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-25",
       "actual": "2026-03-25"
@@ -33590,6 +34597,7 @@ var BOARD_DATA = {
       "code": "9009125000038",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*梅",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-08",
       "actual": "2025-12-08"
@@ -33598,6 +34606,7 @@ var BOARD_DATA = {
       "code": "9009125000038",
       "hosp": "中国医学科学院血液病医院",
       "patient": "赵*梅",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-26",
       "actual": "2026-01-26"
@@ -33606,6 +34615,7 @@ var BOARD_DATA = {
       "code": "9009125000039",
       "hosp": "上海市同济医院",
       "patient": "叶*雄",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-11",
       "actual": "2025-12-11"
@@ -33614,6 +34624,7 @@ var BOARD_DATA = {
       "code": "9009125000039",
       "hosp": "上海市同济医院",
       "patient": "叶*雄",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-04",
       "actual": "2026-02-04"
@@ -33622,6 +34633,7 @@ var BOARD_DATA = {
       "code": "9009125000052",
       "hosp": "上海仁济医院",
       "patient": "杜*珊",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-23",
       "actual": "2025-12-23"
@@ -33630,6 +34642,7 @@ var BOARD_DATA = {
       "code": "9009125000040",
       "hosp": "南方医科大学南方医院",
       "patient": "姜*妹",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-12-10",
       "actual": "2025-12-10"
@@ -33638,6 +34651,7 @@ var BOARD_DATA = {
       "code": "9009125000040",
       "hosp": "南方医科大学南方医院",
       "patient": "姜*妹",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-03-30",
       "actual": "2026-03-30"
@@ -33646,6 +34660,7 @@ var BOARD_DATA = {
       "code": "9009125000041",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*花",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-10",
       "actual": "2025-12-10"
@@ -33654,6 +34669,7 @@ var BOARD_DATA = {
       "code": "9009125000041",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*花",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-06-03",
       "actual": "2026-06-03"
@@ -33662,6 +34678,7 @@ var BOARD_DATA = {
       "code": "9009125000043",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "芮*生",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-16",
       "actual": "2025-12-16"
@@ -33670,6 +34687,7 @@ var BOARD_DATA = {
       "code": "9009125000043",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "芮*生",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-04",
       "actual": "2026-02-04"
@@ -33678,6 +34696,7 @@ var BOARD_DATA = {
       "code": "9009125000042",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "黄*荣",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-12-15",
       "actual": "2025-12-15"
@@ -33686,6 +34705,7 @@ var BOARD_DATA = {
       "code": "9009125000042",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "黄*荣",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-06",
       "actual": "2026-04-06"
@@ -33694,6 +34714,7 @@ var BOARD_DATA = {
       "code": "9009125000044",
       "hosp": "上海长征医院",
       "patient": "陈*海",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-18",
       "actual": "2025-12-18"
@@ -33702,6 +34723,7 @@ var BOARD_DATA = {
       "code": "9009125000044",
       "hosp": "上海长征医院",
       "patient": "陈*海",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-19",
       "actual": "2026-01-19"
@@ -33710,6 +34732,7 @@ var BOARD_DATA = {
       "code": "9009125000045",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "彭*华",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-12-19",
       "actual": "2025-12-19"
@@ -33718,6 +34741,7 @@ var BOARD_DATA = {
       "code": "9009125000045",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "彭*华",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-01-19",
       "actual": "2026-01-19"
@@ -33726,6 +34750,7 @@ var BOARD_DATA = {
       "code": "9009125000047",
       "hosp": "上海长征医院",
       "patient": "宫*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-19",
       "actual": "2025-12-19"
@@ -33734,6 +34759,7 @@ var BOARD_DATA = {
       "code": "9009125000047",
       "hosp": "上海长征医院",
       "patient": "宫*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-11",
       "actual": "2026-02-11"
@@ -33742,6 +34768,7 @@ var BOARD_DATA = {
       "code": "9009125000051",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "黄*方",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-02-06",
       "actual": "2026-02-06"
@@ -33750,6 +34777,7 @@ var BOARD_DATA = {
       "code": "9009125000048",
       "hosp": "中山大学附属第一医院",
       "patient": "高*辉",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-12-19",
       "actual": "2025-12-19"
@@ -33758,6 +34786,7 @@ var BOARD_DATA = {
       "code": "9009125000048",
       "hosp": "中山大学附属第一医院",
       "patient": "高*辉",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-03-11",
       "actual": "2026-03-11"
@@ -33766,6 +34795,7 @@ var BOARD_DATA = {
       "code": "9009125000049",
       "hosp": "中山大学附属第一医院",
       "patient": "黄*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-12-20",
       "actual": "2025-12-20"
@@ -33774,6 +34804,7 @@ var BOARD_DATA = {
       "code": "9009125000049",
       "hosp": "中山大学附属第一医院",
       "patient": "黄*",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-01-20",
       "actual": "2026-01-20"
@@ -33782,6 +34813,7 @@ var BOARD_DATA = {
       "code": "9009125000062",
       "hosp": "大连医科大学附属第一医院",
       "patient": "吕*贵",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-12-29",
       "actual": "2025-12-29"
@@ -33790,6 +34822,7 @@ var BOARD_DATA = {
       "code": "9009125000062",
       "hosp": "大连医科大学附属第一医院",
       "patient": "吕*贵",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2026-02-02",
       "actual": "2026-02-02"
@@ -33798,6 +34831,7 @@ var BOARD_DATA = {
       "code": "9009125000059",
       "hosp": "福建医科大学附属协和医院",
       "patient": "张*妹",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-12-29",
       "actual": "2025-12-29"
@@ -33806,6 +34840,7 @@ var BOARD_DATA = {
       "code": "9009125000059",
       "hosp": "福建医科大学附属协和医院",
       "patient": "张*妹",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-01-30",
       "actual": "2026-01-30"
@@ -33814,6 +34849,7 @@ var BOARD_DATA = {
       "code": "9009125000053",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*祥",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-24",
       "actual": "2025-12-24"
@@ -33822,6 +34858,7 @@ var BOARD_DATA = {
       "code": "9009125000053",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*祥",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-02",
       "actual": "2026-03-02"
@@ -33830,6 +34867,7 @@ var BOARD_DATA = {
       "code": "9009125000056",
       "hosp": "中山大学肿瘤医院",
       "patient": "张*",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-12-25",
       "actual": "2025-12-25"
@@ -33838,6 +34876,7 @@ var BOARD_DATA = {
       "code": "9009125000054",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*卿",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-25",
       "actual": "2025-12-25"
@@ -33846,6 +34885,7 @@ var BOARD_DATA = {
       "code": "9009125000054",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*卿",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-15",
       "actual": "2026-04-15"
@@ -33854,6 +34894,7 @@ var BOARD_DATA = {
       "code": "9009125000055",
       "hosp": "四川省人民医院",
       "patient": "班*书",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-12-25",
       "actual": "2025-12-25"
@@ -33862,6 +34903,7 @@ var BOARD_DATA = {
       "code": "9009125000055",
       "hosp": "四川省人民医院",
       "patient": "班*书",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-01-29",
       "actual": "2026-01-29"
@@ -33870,6 +34912,7 @@ var BOARD_DATA = {
       "code": "9009125000058",
       "hosp": "天津医科大学总医院",
       "patient": "姜*芝",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-25",
       "actual": "2025-12-25"
@@ -33878,6 +34921,7 @@ var BOARD_DATA = {
       "code": "9009125000061",
       "hosp": "上海市同济医院",
       "patient": "陆*梅",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-26",
       "actual": "2025-12-26"
@@ -33886,6 +34930,7 @@ var BOARD_DATA = {
       "code": "9009125000063",
       "hosp": "上海仁济医院",
       "patient": "王*华",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-30",
       "actual": "2025-12-30"
@@ -33894,6 +34939,7 @@ var BOARD_DATA = {
       "code": "9009125000063",
       "hosp": "上海仁济医院",
       "patient": "王*华",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-31",
       "actual": "2026-01-31"
@@ -33902,6 +34948,7 @@ var BOARD_DATA = {
       "code": "9009125000065",
       "hosp": "北京协和医院",
       "patient": "刘*芬",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-04",
       "actual": "2026-01-04"
@@ -33910,6 +34957,7 @@ var BOARD_DATA = {
       "code": "9009125000065",
       "hosp": "北京协和医院",
       "patient": "刘*芬",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-03",
       "actual": "2026-02-03"
@@ -33918,6 +34966,7 @@ var BOARD_DATA = {
       "code": "9009125000064",
       "hosp": "北京大学人民医院",
       "patient": "杜*恒",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-01",
       "actual": ""
@@ -33926,6 +34975,7 @@ var BOARD_DATA = {
       "code": "9009126000002",
       "hosp": "北京大学人民医院",
       "patient": "闫*平",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-05",
       "actual": "2026-01-05"
@@ -33934,6 +34984,7 @@ var BOARD_DATA = {
       "code": "9009126000002",
       "hosp": "北京大学人民医院",
       "patient": "闫*平",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-25",
       "actual": "2026-02-25"
@@ -33942,6 +34993,7 @@ var BOARD_DATA = {
       "code": "9009126000001",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*福",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-05",
       "actual": "2026-01-05"
@@ -33950,6 +35002,7 @@ var BOARD_DATA = {
       "code": "9009126000001",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*福",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-09",
       "actual": "2026-04-09"
@@ -33958,6 +35011,7 @@ var BOARD_DATA = {
       "code": "9009126000003",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郄*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-07",
       "actual": "2026-01-07"
@@ -33966,6 +35020,7 @@ var BOARD_DATA = {
       "code": "9009126000003",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郄*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-05",
       "actual": "2026-03-05"
@@ -33974,6 +35029,7 @@ var BOARD_DATA = {
       "code": "9009126000004",
       "hosp": "西安交通大学第一附属医院",
       "patient": "武*海",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-01-07",
       "actual": "2026-01-07"
@@ -33982,6 +35038,7 @@ var BOARD_DATA = {
       "code": "9009126000004",
       "hosp": "西安交通大学第一附属医院",
       "patient": "武*海",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-02-09",
       "actual": "2026-02-09"
@@ -33990,6 +35047,7 @@ var BOARD_DATA = {
       "code": "9009126000005",
       "hosp": "北京陆道培医院",
       "patient": "陈*祥",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-08",
       "actual": "2026-01-08"
@@ -33998,6 +35056,7 @@ var BOARD_DATA = {
       "code": "9009126000005",
       "hosp": "北京陆道培医院",
       "patient": "陈*祥",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-01-29",
       "actual": "2026-01-29"
@@ -34006,6 +35065,7 @@ var BOARD_DATA = {
       "code": "9009126000006",
       "hosp": "南京鼓楼医院",
       "patient": "严*玉",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2026-01-08",
       "actual": "2026-01-08"
@@ -34014,6 +35074,7 @@ var BOARD_DATA = {
       "code": "9009126000007",
       "hosp": "南方医科大学南方医院",
       "patient": "杨*营",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-01-09",
       "actual": "2026-01-09"
@@ -34022,6 +35083,7 @@ var BOARD_DATA = {
       "code": "9009126000007",
       "hosp": "南方医科大学南方医院",
       "patient": "杨*营",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-03-04",
       "actual": "2026-03-04"
@@ -34030,6 +35092,7 @@ var BOARD_DATA = {
       "code": "9009126000008",
       "hosp": "上海市第十人民医院（同济大学附属第十人民医院）",
       "patient": "欧*仁",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-14",
       "actual": "2026-01-14"
@@ -34038,6 +35101,7 @@ var BOARD_DATA = {
       "code": "9009126000008",
       "hosp": "上海市第十人民医院（同济大学附属第十人民医院）",
       "patient": "欧*仁",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-10",
       "actual": "2026-03-10"
@@ -34046,6 +35110,7 @@ var BOARD_DATA = {
       "code": "9009126000010",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "包*娅",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-14",
       "actual": "2026-01-14"
@@ -34054,6 +35119,7 @@ var BOARD_DATA = {
       "code": "9009126000010",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "包*娅",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-31",
       "actual": "2026-03-31"
@@ -34062,6 +35128,7 @@ var BOARD_DATA = {
       "code": "9009126000014",
       "hosp": "上海市同济医院",
       "patient": "M*S V*A I*M",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-14",
       "actual": "2026-01-14"
@@ -34070,6 +35137,7 @@ var BOARD_DATA = {
       "code": "9009126000013",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "黄*浩",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-01-14",
       "actual": "2026-01-14"
@@ -34078,6 +35146,7 @@ var BOARD_DATA = {
       "code": "9009126000013",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "黄*浩",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-03-05",
       "actual": "2026-03-05"
@@ -34086,6 +35155,7 @@ var BOARD_DATA = {
       "code": "9009126000012",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "戴*珠",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-14",
       "actual": "2026-01-14"
@@ -34094,6 +35164,7 @@ var BOARD_DATA = {
       "code": "9009126000012",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "戴*珠",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-02-10",
       "actual": "2026-02-10"
@@ -34102,6 +35173,7 @@ var BOARD_DATA = {
       "code": "9009126000015",
       "hosp": "上海市曜影医院",
       "patient": "A*O L*N E*A",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-14",
       "actual": "2026-01-14"
@@ -34110,6 +35182,7 @@ var BOARD_DATA = {
       "code": "9009126000015",
       "hosp": "上海市曜影医院",
       "patient": "A*O L*N E*A",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-24",
       "actual": "2026-02-24"
@@ -34118,6 +35191,7 @@ var BOARD_DATA = {
       "code": "9009126000016",
       "hosp": "中国医学科学院血液病医院",
       "patient": "陈*媚",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-16",
       "actual": "2026-01-16"
@@ -34126,6 +35200,7 @@ var BOARD_DATA = {
       "code": "9009126000016",
       "hosp": "中国医学科学院血液病医院",
       "patient": "陈*媚",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-30",
       "actual": "2026-04-30"
@@ -34134,6 +35209,7 @@ var BOARD_DATA = {
       "code": "9009126000018",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陶*华",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-16",
       "actual": "2026-01-16"
@@ -34142,6 +35218,7 @@ var BOARD_DATA = {
       "code": "9009126000018",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陶*华",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-06-03",
       "actual": "2026-06-04"
@@ -34150,6 +35227,7 @@ var BOARD_DATA = {
       "code": "9009126000021",
       "hosp": "北京和睦家医院",
       "patient": "S*H K*R K*A",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-20",
       "actual": "2026-01-20"
@@ -34158,6 +35236,7 @@ var BOARD_DATA = {
       "code": "9009126000021",
       "hosp": "北京和睦家医院",
       "patient": "S*H K*R K*A",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-25",
       "actual": "2026-02-25"
@@ -34166,6 +35245,7 @@ var BOARD_DATA = {
       "code": "9009126000022",
       "hosp": "中国医学科学院血液病医院",
       "patient": "高*雄",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-21",
       "actual": "2026-01-21"
@@ -34174,6 +35254,7 @@ var BOARD_DATA = {
       "code": "9009126000022",
       "hosp": "中国医学科学院血液病医院",
       "patient": "高*雄",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -34182,6 +35263,7 @@ var BOARD_DATA = {
       "code": "9009126000028",
       "hosp": "上海市曜影医院",
       "patient": "A*E I*N I*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-27",
       "actual": ""
@@ -34190,6 +35272,7 @@ var BOARD_DATA = {
       "code": "9009126000024",
       "hosp": "中国医学科学院血液病医院",
       "patient": "顾*强",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-22",
       "actual": "2026-01-22"
@@ -34198,6 +35281,7 @@ var BOARD_DATA = {
       "code": "9009126000024",
       "hosp": "中国医学科学院血液病医院",
       "patient": "顾*强",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-06-08",
       "actual": "2026-06-08"
@@ -34206,6 +35290,7 @@ var BOARD_DATA = {
       "code": "9009126000025",
       "hosp": "北京大学人民医院",
       "patient": "辛*桥",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-23",
       "actual": "2026-01-23"
@@ -34214,6 +35299,7 @@ var BOARD_DATA = {
       "code": "9009126000025",
       "hosp": "北京大学人民医院",
       "patient": "辛*桥",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-21",
       "actual": "2026-02-21"
@@ -34222,6 +35308,7 @@ var BOARD_DATA = {
       "code": "9009126000032",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "A*N K*A",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-28",
       "actual": "2026-01-28"
@@ -34230,6 +35317,7 @@ var BOARD_DATA = {
       "code": "9009126000030",
       "hosp": "中国医科大学附属第一医院",
       "patient": "宁*仁",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2026-01-28",
       "actual": "2026-01-28"
@@ -34238,6 +35326,7 @@ var BOARD_DATA = {
       "code": "9009126000030",
       "hosp": "中国医科大学附属第一医院",
       "patient": "宁*仁",
+      "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2026-04-20",
       "actual": "2026-04-20"
@@ -34246,6 +35335,7 @@ var BOARD_DATA = {
       "code": "9009126000026",
       "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
       "patient": "张*池",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-01-25",
       "actual": "2026-01-25"
@@ -34254,6 +35344,7 @@ var BOARD_DATA = {
       "code": "9009126000026",
       "hosp": "华中科技大学协和深圳医院（深圳市南山区人民医院）",
       "patient": "张*池",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-04-27",
       "actual": "2026-04-27"
@@ -34262,6 +35353,7 @@ var BOARD_DATA = {
       "code": "9009126000031",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "张*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-28",
       "actual": "2026-01-28"
@@ -34270,6 +35362,7 @@ var BOARD_DATA = {
       "code": "9009126000031",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "张*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-06",
       "actual": "2026-05-06"
@@ -34278,6 +35371,7 @@ var BOARD_DATA = {
       "code": "9009126000033",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "马*霞",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-29",
       "actual": "2026-01-29"
@@ -34286,6 +35380,7 @@ var BOARD_DATA = {
       "code": "9009126000033",
       "hosp": "首都医科大学附属复兴医院",
       "patient": "马*霞",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-04-13",
       "actual": "2026-04-13"
@@ -34294,6 +35389,7 @@ var BOARD_DATA = {
       "code": "9009126000034",
       "hosp": "中国医学科学院血液病医院",
       "patient": "渠*安",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-30",
       "actual": "2026-01-30"
@@ -34302,6 +35398,7 @@ var BOARD_DATA = {
       "code": "9009126000034",
       "hosp": "中国医学科学院血液病医院",
       "patient": "渠*安",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -34310,6 +35407,7 @@ var BOARD_DATA = {
       "code": "9009126000035",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "付*",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-29",
       "actual": "2026-01-29"
@@ -34318,6 +35416,7 @@ var BOARD_DATA = {
       "code": "9009126000040",
       "hosp": "福建省立医院",
       "patient": "方*清",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-05",
       "actual": "2026-02-05"
@@ -34326,6 +35425,7 @@ var BOARD_DATA = {
       "code": "9009126000040",
       "hosp": "福建省立医院",
       "patient": "方*清",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-27",
       "actual": "2026-03-27"
@@ -34334,6 +35434,7 @@ var BOARD_DATA = {
       "code": "9009126000039",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "李*驹",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-04",
       "actual": "2026-02-04"
@@ -34342,6 +35443,7 @@ var BOARD_DATA = {
       "code": "9009126000039",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "李*驹",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-08-24",
       "actual": "2026-08-24"
@@ -34350,6 +35452,7 @@ var BOARD_DATA = {
       "code": "9009126000041",
       "hosp": "中国医学科学院血液病医院",
       "patient": "董*秀",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-02-05",
       "actual": "2026-02-05"
@@ -34358,6 +35461,7 @@ var BOARD_DATA = {
       "code": "9009126000041",
       "hosp": "中国医学科学院血液病医院",
       "patient": "董*秀",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-09",
       "actual": "2026-07-09"
@@ -34366,6 +35470,7 @@ var BOARD_DATA = {
       "code": "9009126000042",
       "hosp": "南京鼓楼医院",
       "patient": "王*琪",
+      "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2026-02-06",
       "actual": "2026-02-06"
@@ -34374,6 +35479,7 @@ var BOARD_DATA = {
       "code": "9009126000043",
       "hosp": "北京大学第一医院",
       "patient": "范*东",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-07",
       "actual": "2026-02-07"
@@ -34382,6 +35488,7 @@ var BOARD_DATA = {
       "code": "9009126000043",
       "hosp": "北京大学第一医院",
       "patient": "范*东",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-03-31",
       "actual": "2026-03-31"
@@ -34390,6 +35497,7 @@ var BOARD_DATA = {
       "code": "9009126000044",
       "hosp": "厦门大学附属第一医院",
       "patient": "王*玉",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-24",
       "actual": "2026-02-24"
@@ -34398,6 +35506,7 @@ var BOARD_DATA = {
       "code": "9009126000044",
       "hosp": "厦门大学附属第一医院",
       "patient": "王*玉",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-31",
       "actual": "2026-04-01"
@@ -34406,6 +35515,7 @@ var BOARD_DATA = {
       "code": "9009126000046",
       "hosp": "佛山市第一人民医院",
       "patient": "李*仪",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-02-25",
       "actual": "2026-02-25"
@@ -34414,6 +35524,7 @@ var BOARD_DATA = {
       "code": "9009126000046",
       "hosp": "佛山市第一人民医院",
       "patient": "李*仪",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-05-13",
       "actual": "2026-05-13"
@@ -34422,6 +35533,7 @@ var BOARD_DATA = {
       "code": "9009126000048",
       "hosp": "北京大学人民医院",
       "patient": "张*勋",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-27",
       "actual": "2026-02-27"
@@ -34430,6 +35542,7 @@ var BOARD_DATA = {
       "code": "9009126000047",
       "hosp": "中国人民解放军总医院",
       "patient": "李*华",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-24",
       "actual": "2026-02-24"
@@ -34438,6 +35551,7 @@ var BOARD_DATA = {
       "code": "9009126000049",
       "hosp": "上海市曜影医院",
       "patient": "王*风",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-02-26",
       "actual": "2026-02-26"
@@ -34446,6 +35560,7 @@ var BOARD_DATA = {
       "code": "9009126000049",
       "hosp": "上海市曜影医院",
       "patient": "王*风",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-04-14",
       "actual": "2026-04-14"
@@ -34454,6 +35569,7 @@ var BOARD_DATA = {
       "code": "9009126000050",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "蔡*军",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-28",
       "actual": "2026-02-28"
@@ -34462,6 +35578,7 @@ var BOARD_DATA = {
       "code": "9009126000050",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "蔡*军",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-28",
       "actual": "2026-07-28"
@@ -34470,6 +35587,7 @@ var BOARD_DATA = {
       "code": "9009126000051",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*海",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-02-28",
       "actual": "2026-02-28"
@@ -34478,6 +35596,7 @@ var BOARD_DATA = {
       "code": "9009126000051",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*海",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-13",
       "actual": "2026-07-13"
@@ -34486,6 +35605,7 @@ var BOARD_DATA = {
       "code": "9009126000054",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "王*全",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-03-03",
       "actual": "2026-03-03"
@@ -34494,6 +35614,7 @@ var BOARD_DATA = {
       "code": "9009126000054",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "王*全",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-03-31",
       "actual": "2026-03-31"
@@ -34502,6 +35623,7 @@ var BOARD_DATA = {
       "code": "9009126000053",
       "hosp": "中山大学附属第一医院",
       "patient": "许*华",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-03",
       "actual": "2026-03-03"
@@ -34510,6 +35632,7 @@ var BOARD_DATA = {
       "code": "9009126000055",
       "hosp": "福建医科大学附属协和医院",
       "patient": "吴*华",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-03",
       "actual": "2026-03-03"
@@ -34518,6 +35641,7 @@ var BOARD_DATA = {
       "code": "9009126000056",
       "hosp": "北京大学深圳医院",
       "patient": "刘*农",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-03",
       "actual": "2026-03-03"
@@ -34526,6 +35650,7 @@ var BOARD_DATA = {
       "code": "9009126000057",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "杨*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-05",
       "actual": "2026-03-05"
@@ -34534,6 +35659,7 @@ var BOARD_DATA = {
       "code": "9009126000057",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "杨*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-06",
       "actual": "2026-05-06"
@@ -34542,6 +35668,7 @@ var BOARD_DATA = {
       "code": "9009126000060",
       "hosp": "南方医科大学南方医院",
       "patient": "彭*霞",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-03-06",
       "actual": "2026-03-06"
@@ -34550,6 +35677,7 @@ var BOARD_DATA = {
       "code": "9009126000060",
       "hosp": "南方医科大学南方医院",
       "patient": "彭*霞",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-05-06",
       "actual": "2026-05-06"
@@ -34558,6 +35686,7 @@ var BOARD_DATA = {
       "code": "9009126000146",
       "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
       "patient": "王*秀",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -34566,6 +35695,7 @@ var BOARD_DATA = {
       "code": "9009126000146",
       "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
       "patient": "王*秀",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-06-17",
       "actual": "2026-06-17"
@@ -34574,6 +35704,7 @@ var BOARD_DATA = {
       "code": "9009126000064",
       "hosp": "厦门大学附属第一医院",
       "patient": "李*生",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-10",
       "actual": "2026-03-10"
@@ -34582,6 +35713,7 @@ var BOARD_DATA = {
       "code": "9009126000064",
       "hosp": "厦门大学附属第一医院",
       "patient": "李*生",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -34590,6 +35722,7 @@ var BOARD_DATA = {
       "code": "9009126000059",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*瑜",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-03-05",
       "actual": "2026-03-05"
@@ -34598,6 +35731,7 @@ var BOARD_DATA = {
       "code": "9009126000059",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*瑜",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-05-25",
       "actual": "2026-05-25"
@@ -34606,6 +35740,7 @@ var BOARD_DATA = {
       "code": "9009126000062",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "蔡*强",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-06",
       "actual": ""
@@ -34614,6 +35749,7 @@ var BOARD_DATA = {
       "code": "9009126000063",
       "hosp": "四川省人民医院",
       "patient": "刘*行",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-03-08",
       "actual": "2026-03-08"
@@ -34622,6 +35758,7 @@ var BOARD_DATA = {
       "code": "9009126000063",
       "hosp": "四川省人民医院",
       "patient": "刘*行",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-04-17",
       "actual": "2026-04-17"
@@ -34630,6 +35767,7 @@ var BOARD_DATA = {
       "code": "9009126000069",
       "hosp": "中国医科大学附属第一医院",
       "patient": "李*玉",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2026-03-13",
       "actual": "2026-03-13"
@@ -34638,6 +35776,7 @@ var BOARD_DATA = {
       "code": "9009126000068",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "许*英",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-11",
       "actual": "2026-03-11"
@@ -34646,6 +35785,7 @@ var BOARD_DATA = {
       "code": "9009126000068",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "许*英",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-04-14",
       "actual": "2026-04-14"
@@ -34654,6 +35794,7 @@ var BOARD_DATA = {
       "code": "9009126000067",
       "hosp": "天津医科大学总医院",
       "patient": "董*芹",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-11",
       "actual": "2026-03-11"
@@ -34662,6 +35803,7 @@ var BOARD_DATA = {
       "code": "9009126000067",
       "hosp": "天津医科大学总医院",
       "patient": "董*芹",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-01",
       "actual": "2026-09-01"
@@ -34670,6 +35812,7 @@ var BOARD_DATA = {
       "code": "9009126000070",
       "hosp": "空军军医大学西京医院",
       "patient": "张*宁",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-03-13",
       "actual": "2026-03-13"
@@ -34678,6 +35821,7 @@ var BOARD_DATA = {
       "code": "9009126000070",
       "hosp": "空军军医大学西京医院",
       "patient": "张*宁",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-04-13",
       "actual": "2026-04-13"
@@ -34686,6 +35830,7 @@ var BOARD_DATA = {
       "code": "9009126000071",
       "hosp": "中国医学科学院血液病医院",
       "patient": "侯*凤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-13",
       "actual": "2026-03-13"
@@ -34694,6 +35839,7 @@ var BOARD_DATA = {
       "code": "9009126000071",
       "hosp": "中国医学科学院血液病医院",
       "patient": "侯*凤",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-06",
       "actual": "2026-07-06"
@@ -34702,6 +35848,7 @@ var BOARD_DATA = {
       "code": "9009126000073",
       "hosp": "中国医科大学附属第一医院",
       "patient": "李*芝",
+      "cos": "成无忧",
       "type": "apheresis",
       "plan": "2026-03-13",
       "actual": "2026-03-13"
@@ -34710,6 +35857,7 @@ var BOARD_DATA = {
       "code": "9009126000072",
       "hosp": "中山大学附属第一医院",
       "patient": "刘*星",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-13",
       "actual": "2026-03-13"
@@ -34718,6 +35866,7 @@ var BOARD_DATA = {
       "code": "9009126000072",
       "hosp": "中山大学附属第一医院",
       "patient": "刘*星",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-04-20",
       "actual": "2026-04-20"
@@ -34726,6 +35875,7 @@ var BOARD_DATA = {
       "code": "9009126000078",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "苏*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-17",
       "actual": "2026-03-17"
@@ -34734,6 +35884,7 @@ var BOARD_DATA = {
       "code": "9009126000078",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "苏*",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -34742,6 +35893,7 @@ var BOARD_DATA = {
       "code": "9009126000074",
       "hosp": "北京协和医院",
       "patient": "李*林",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-17",
       "actual": "2026-03-17"
@@ -34750,6 +35902,7 @@ var BOARD_DATA = {
       "code": "9009126000074",
       "hosp": "北京协和医院",
       "patient": "李*林",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-06",
       "actual": "2026-05-06"
@@ -34758,6 +35911,7 @@ var BOARD_DATA = {
       "code": "9009126000075",
       "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
       "patient": "张*平",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-03-16",
       "actual": "2026-03-16"
@@ -34766,6 +35920,7 @@ var BOARD_DATA = {
       "code": "9009126000075",
       "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
       "patient": "张*平",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-05-25",
       "actual": "2026-05-25"
@@ -34774,6 +35929,7 @@ var BOARD_DATA = {
       "code": "9009126000077",
       "hosp": "上海市同济医院",
       "patient": "M*. J*J J*L",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-16",
       "actual": "2026-03-16"
@@ -34782,6 +35938,7 @@ var BOARD_DATA = {
       "code": "9009126000077",
       "hosp": "上海市同济医院",
       "patient": "M*. J*J J*L",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-04-18",
       "actual": "2026-04-18"
@@ -34790,6 +35947,7 @@ var BOARD_DATA = {
       "code": "9009126000083",
       "hosp": "上海市同济医院",
       "patient": "范*珍",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-30",
       "actual": "2026-03-30"
@@ -34798,6 +35956,7 @@ var BOARD_DATA = {
       "code": "9009126000083",
       "hosp": "上海市同济医院",
       "patient": "范*珍",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-25",
       "actual": "2026-06-25"
@@ -34806,6 +35965,7 @@ var BOARD_DATA = {
       "code": "9009126000080",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*芸",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-19",
       "actual": "2026-03-19"
@@ -34814,6 +35974,7 @@ var BOARD_DATA = {
       "code": "9009126000080",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*芸",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -34822,6 +35983,7 @@ var BOARD_DATA = {
       "code": "9009126000079",
       "hosp": "上海市曜影医院",
       "patient": "R*D O*R L*R",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-18",
       "actual": "2026-03-18"
@@ -34830,6 +35992,7 @@ var BOARD_DATA = {
       "code": "9009126000079",
       "hosp": "上海市曜影医院",
       "patient": "R*D O*R L*R",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-14",
       "actual": "2026-05-14"
@@ -34838,6 +36001,7 @@ var BOARD_DATA = {
       "code": "9009126000081",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "董*珍",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-03-27",
       "actual": "2026-03-27"
@@ -34846,6 +36010,7 @@ var BOARD_DATA = {
       "code": "9009126000082",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*志",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-20",
       "actual": "2026-03-20"
@@ -34854,6 +36019,7 @@ var BOARD_DATA = {
       "code": "9009126000082",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*志",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-25",
       "actual": "2026-05-25"
@@ -34862,6 +36028,7 @@ var BOARD_DATA = {
       "code": "9009126000084",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "岑*玲",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-24",
       "actual": "2026-03-24"
@@ -34870,6 +36037,7 @@ var BOARD_DATA = {
       "code": "9009126000084",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "岑*玲",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-25",
       "actual": "2026-04-25"
@@ -34878,6 +36046,7 @@ var BOARD_DATA = {
       "code": "9009126000085",
       "hosp": "北京协和医院",
       "patient": "肖*宾",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-26",
       "actual": "2026-03-26"
@@ -34886,6 +36055,7 @@ var BOARD_DATA = {
       "code": "9009126000085",
       "hosp": "北京协和医院",
       "patient": "肖*宾",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-11",
       "actual": "2026-05-11"
@@ -34894,6 +36064,7 @@ var BOARD_DATA = {
       "code": "9009126000086",
       "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
       "patient": "王*强",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-25",
       "actual": "2026-03-25"
@@ -34902,6 +36073,7 @@ var BOARD_DATA = {
       "code": "9009126000086",
       "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
       "patient": "王*强",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-06-25",
       "actual": "2026-06-25"
@@ -34910,6 +36082,7 @@ var BOARD_DATA = {
       "code": "9009126000088",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "印*华",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-27",
       "actual": "2026-03-27"
@@ -34918,6 +36091,7 @@ var BOARD_DATA = {
       "code": "9009126000088",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "印*华",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -34926,6 +36100,7 @@ var BOARD_DATA = {
       "code": "9009126000087",
       "hosp": "广东省人民医院",
       "patient": "汪*庆",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-26",
       "actual": "2026-03-26"
@@ -34934,6 +36109,7 @@ var BOARD_DATA = {
       "code": "9009126000087",
       "hosp": "广东省人民医院",
       "patient": "汪*庆",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-05-21",
       "actual": "2026-05-21"
@@ -34942,6 +36118,7 @@ var BOARD_DATA = {
       "code": "9009126000089",
       "hosp": "北京大学人民医院",
       "patient": "高*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-02",
       "actual": "2026-04-02"
@@ -34950,6 +36127,7 @@ var BOARD_DATA = {
       "code": "9009126000089",
       "hosp": "北京大学人民医院",
       "patient": "高*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-08",
       "actual": "2026-05-08"
@@ -34958,6 +36136,7 @@ var BOARD_DATA = {
       "code": "9009126000090",
       "hosp": "北京大学第三医院",
       "patient": "李*农",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-30",
       "actual": "2026-03-30"
@@ -34966,6 +36145,7 @@ var BOARD_DATA = {
       "code": "9009126000090",
       "hosp": "北京大学第三医院",
       "patient": "李*农",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-09",
       "actual": "2026-07-09"
@@ -34974,6 +36154,7 @@ var BOARD_DATA = {
       "code": "9009126000092",
       "hosp": "安徽省肿瘤医院（省立西区）",
       "patient": "罗*",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-03-31",
       "actual": "2026-03-31"
@@ -34982,6 +36163,7 @@ var BOARD_DATA = {
       "code": "9009126000092",
       "hosp": "安徽省肿瘤医院（省立西区）",
       "patient": "罗*",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-05-08",
       "actual": "2026-05-08"
@@ -34990,6 +36172,7 @@ var BOARD_DATA = {
       "code": "9009126000093",
       "hosp": "苏州大学附属第一医院",
       "patient": "唐*文",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-01",
       "actual": "2026-04-01"
@@ -34998,6 +36181,7 @@ var BOARD_DATA = {
       "code": "9009126000093",
       "hosp": "苏州大学附属第一医院",
       "patient": "唐*文",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-08-06",
       "actual": "2026-08-06"
@@ -35006,6 +36190,7 @@ var BOARD_DATA = {
       "code": "9009126000095",
       "hosp": "北京协和医院",
       "patient": "吴*民",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-02",
       "actual": "2026-04-02"
@@ -35014,6 +36199,7 @@ var BOARD_DATA = {
       "code": "9009126000095",
       "hosp": "北京协和医院",
       "patient": "吴*民",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-12",
       "actual": "2026-05-12"
@@ -35022,6 +36208,7 @@ var BOARD_DATA = {
       "code": "9009126000097",
       "hosp": "浙江大学医学院附属邵逸夫医院",
       "patient": "褚*美",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-04-06",
       "actual": "2026-04-06"
@@ -35030,6 +36217,7 @@ var BOARD_DATA = {
       "code": "9009126000097",
       "hosp": "浙江大学医学院附属邵逸夫医院",
       "patient": "褚*美",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-05-11",
       "actual": "2026-05-11"
@@ -35038,6 +36226,7 @@ var BOARD_DATA = {
       "code": "9009126000096",
       "hosp": "中国医学科学院血液病医院",
       "patient": "陈*平",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-02",
       "actual": "2026-04-02"
@@ -35046,6 +36235,7 @@ var BOARD_DATA = {
       "code": "9009126000096",
       "hosp": "中国医学科学院血液病医院",
       "patient": "陈*平",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-20",
       "actual": "2026-08-20"
@@ -35054,6 +36244,7 @@ var BOARD_DATA = {
       "code": "9009126000099",
       "hosp": "苏州大学附属第一医院",
       "patient": "杨*凤",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-03",
       "actual": "2026-04-03"
@@ -35062,6 +36253,7 @@ var BOARD_DATA = {
       "code": "9009126000099",
       "hosp": "苏州大学附属第一医院",
       "patient": "杨*凤",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-06-17",
       "actual": "2026-06-17"
@@ -35070,6 +36262,7 @@ var BOARD_DATA = {
       "code": "9009126000119",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "孔*琴",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -35078,6 +36271,7 @@ var BOARD_DATA = {
       "code": "9009126000101",
       "hosp": "中山大学附属第一医院",
       "patient": "陈*明",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-04",
       "actual": "2026-04-04"
@@ -35086,6 +36280,7 @@ var BOARD_DATA = {
       "code": "9009126000101",
       "hosp": "中山大学附属第一医院",
       "patient": "陈*明",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-05-21",
       "actual": "2026-05-21"
@@ -35094,6 +36289,7 @@ var BOARD_DATA = {
       "code": "9009126000104",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*堂",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-08",
       "actual": "2026-04-08"
@@ -35102,6 +36298,7 @@ var BOARD_DATA = {
       "code": "9009126000104",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*堂",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-03",
       "actual": "2026-07-03"
@@ -35110,6 +36307,7 @@ var BOARD_DATA = {
       "code": "9009126000102",
       "hosp": "中山大学肿瘤医院",
       "patient": "陈*华",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-04-08",
       "actual": "2026-04-08"
@@ -35118,6 +36316,7 @@ var BOARD_DATA = {
       "code": "9009126000102",
       "hosp": "中山大学肿瘤医院",
       "patient": "陈*华",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-05-19",
       "actual": "2026-05-19"
@@ -35126,6 +36325,7 @@ var BOARD_DATA = {
       "code": "9009126000103",
       "hosp": "北京协和医院",
       "patient": "丛*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-08",
       "actual": "2026-04-08"
@@ -35134,6 +36334,7 @@ var BOARD_DATA = {
       "code": "9009126000103",
       "hosp": "北京协和医院",
       "patient": "丛*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -35142,6 +36343,7 @@ var BOARD_DATA = {
       "code": "9009126000106",
       "hosp": "北京大学人民医院",
       "patient": "姚*明",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-09",
       "actual": "2026-04-09"
@@ -35150,6 +36352,7 @@ var BOARD_DATA = {
       "code": "9009126000105",
       "hosp": "北京陆道培医院",
       "patient": "王*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-09",
       "actual": "2026-04-09"
@@ -35158,6 +36361,7 @@ var BOARD_DATA = {
       "code": "9009126000105",
       "hosp": "北京陆道培医院",
       "patient": "王*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-03",
       "actual": "2026-08-03"
@@ -35166,6 +36370,7 @@ var BOARD_DATA = {
       "code": "9009126000109",
       "hosp": "上海市曜影医院",
       "patient": "林*仁",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-13",
       "actual": "2026-04-13"
@@ -35174,6 +36379,7 @@ var BOARD_DATA = {
       "code": "9009126000109",
       "hosp": "上海市曜影医院",
       "patient": "林*仁",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-07",
       "actual": "2026-05-07"
@@ -35182,6 +36388,7 @@ var BOARD_DATA = {
       "code": "9009126000108",
       "hosp": "中国人民解放军总医院第五医学中心（307医院）",
       "patient": "Y*G M*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-13",
       "actual": "2026-04-13"
@@ -35190,6 +36397,7 @@ var BOARD_DATA = {
       "code": "9009126000108",
       "hosp": "中国人民解放军总医院第五医学中心（307医院）",
       "patient": "Y*G M*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-02",
       "actual": "2026-06-02"
@@ -35198,6 +36406,7 @@ var BOARD_DATA = {
       "code": "9009126000110",
       "hosp": "中山大学肿瘤医院",
       "patient": "罗*瑛",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-04-15",
       "actual": "2026-04-15"
@@ -35206,6 +36415,7 @@ var BOARD_DATA = {
       "code": "9009126000111",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "俞*二",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-15",
       "actual": "2026-04-15"
@@ -35214,6 +36424,7 @@ var BOARD_DATA = {
       "code": "9009126000113",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "杜*芳",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-04-18",
       "actual": "2026-04-18"
@@ -35222,6 +36433,7 @@ var BOARD_DATA = {
       "code": "9009126000113",
       "hosp": "重庆大学附属肿瘤医院",
       "patient": "杜*芳",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-06-08",
       "actual": "2026-06-08"
@@ -35230,6 +36442,7 @@ var BOARD_DATA = {
       "code": "9009126000112",
       "hosp": "中日友好医院",
       "patient": "彭*均",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -35238,6 +36451,7 @@ var BOARD_DATA = {
       "code": "9009126000115",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*升",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-21",
       "actual": "2026-04-21"
@@ -35246,6 +36460,7 @@ var BOARD_DATA = {
       "code": "9009126000115",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*升",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-20",
       "actual": "2026-07-20"
@@ -35254,6 +36469,7 @@ var BOARD_DATA = {
       "code": "9009126000118",
       "hosp": "南方医科大学南方医院",
       "patient": "黄*坚",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -35262,6 +36478,7 @@ var BOARD_DATA = {
       "code": "9009126000118",
       "hosp": "南方医科大学南方医院",
       "patient": "黄*坚",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-13",
       "actual": "2026-06-13"
@@ -35270,6 +36487,7 @@ var BOARD_DATA = {
       "code": "9009126000120",
       "hosp": "苏州大学附属第一医院",
       "patient": "周*才",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -35278,6 +36496,7 @@ var BOARD_DATA = {
       "code": "9009126000120",
       "hosp": "苏州大学附属第一医院",
       "patient": "周*才",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-07-13",
       "actual": "2026-07-13"
@@ -35286,6 +36505,7 @@ var BOARD_DATA = {
       "code": "9009126000121",
       "hosp": "中国医学科学院血液病医院",
       "patient": "相*强",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -35294,6 +36514,7 @@ var BOARD_DATA = {
       "code": "9009126000122",
       "hosp": "中山大学附属第三医院",
       "patient": "赵*玲",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-04-24",
       "actual": "2026-04-24"
@@ -35302,6 +36523,7 @@ var BOARD_DATA = {
       "code": "9009126000122",
       "hosp": "中山大学附属第三医院",
       "patient": "赵*玲",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-07-06",
       "actual": "2026-07-06"
@@ -35310,6 +36532,7 @@ var BOARD_DATA = {
       "code": "9009126000123",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-23",
       "actual": "2026-04-23"
@@ -35318,6 +36541,7 @@ var BOARD_DATA = {
       "code": "9009126000123",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-06-10",
       "actual": "2026-06-10"
@@ -35326,6 +36550,7 @@ var BOARD_DATA = {
       "code": "9009126000124",
       "hosp": "上海仁济医院",
       "patient": "张*和",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-24",
       "actual": "2026-04-24"
@@ -35334,6 +36559,7 @@ var BOARD_DATA = {
       "code": "9009126000124",
       "hosp": "上海仁济医院",
       "patient": "张*和",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-07-21",
       "actual": "2026-07-21"
@@ -35342,6 +36568,7 @@ var BOARD_DATA = {
       "code": "9009126000125",
       "hosp": "南京鼓楼医院",
       "patient": "江*凤",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-23",
       "actual": "2026-04-23"
@@ -35350,6 +36577,7 @@ var BOARD_DATA = {
       "code": "9009126000127",
       "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
       "patient": "杨*田",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-04-24",
       "actual": "2026-04-24"
@@ -35358,6 +36586,7 @@ var BOARD_DATA = {
       "code": "9009126000134",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "冯*声",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-04-29",
       "actual": "2026-04-29"
@@ -35366,6 +36595,7 @@ var BOARD_DATA = {
       "code": "9009126000134",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "冯*声",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-05-30",
       "actual": "2026-05-30"
@@ -35374,6 +36604,7 @@ var BOARD_DATA = {
       "code": "9009126000132",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*光",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-29",
       "actual": "2026-04-29"
@@ -35382,6 +36613,7 @@ var BOARD_DATA = {
       "code": "9009126000132",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*光",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-13",
       "actual": "2026-07-13"
@@ -35390,6 +36622,7 @@ var BOARD_DATA = {
       "code": "9009126000128",
       "hosp": "北京高博博仁医院",
       "patient": "K*N K*N",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-27",
       "actual": "2026-04-27"
@@ -35398,6 +36631,7 @@ var BOARD_DATA = {
       "code": "9009126000128",
       "hosp": "北京高博博仁医院",
       "patient": "K*N K*N",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-05",
       "actual": "2026-06-05"
@@ -35406,6 +36640,7 @@ var BOARD_DATA = {
       "code": "9009126000129",
       "hosp": "北京大学人民医院",
       "patient": "赵*萍",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-28",
       "actual": "2026-04-28"
@@ -35414,6 +36649,7 @@ var BOARD_DATA = {
       "code": "9009126000129",
       "hosp": "北京大学人民医院",
       "patient": "赵*萍",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-06",
       "actual": "2026-06-06"
@@ -35422,6 +36658,7 @@ var BOARD_DATA = {
       "code": "9009126000130",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*凤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-28",
       "actual": "2026-04-28"
@@ -35430,6 +36667,7 @@ var BOARD_DATA = {
       "code": "9009126000131",
       "hosp": "中山大学附属第一医院",
       "patient": "杨*珍",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-28",
       "actual": "2026-04-28"
@@ -35438,6 +36676,7 @@ var BOARD_DATA = {
       "code": "9009126000131",
       "hosp": "中山大学附属第一医院",
       "patient": "杨*珍",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-03",
       "actual": "2026-06-03"
@@ -35446,6 +36685,7 @@ var BOARD_DATA = {
       "code": "9009126000133",
       "hosp": "北京大学人民医院",
       "patient": "英*云",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-29",
       "actual": "2026-04-29"
@@ -35454,6 +36694,7 @@ var BOARD_DATA = {
       "code": "9009126000133",
       "hosp": "北京大学人民医院",
       "patient": "英*云",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-06",
       "actual": "2026-07-06"
@@ -35462,6 +36703,7 @@ var BOARD_DATA = {
       "code": "9009126000136",
       "hosp": "广西医科大学附属第一医院",
       "patient": "张*铀",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-30",
       "actual": "2026-04-30"
@@ -35470,6 +36712,7 @@ var BOARD_DATA = {
       "code": "9009126000136",
       "hosp": "广西医科大学附属第一医院",
       "patient": "张*铀",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-18",
       "actual": "2026-06-18"
@@ -35478,6 +36721,7 @@ var BOARD_DATA = {
       "code": "9009126000138",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陈*云",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-05-08",
       "actual": "2026-05-08"
@@ -35486,6 +36730,7 @@ var BOARD_DATA = {
       "code": "9009126000138",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陈*云",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-29",
       "actual": "2026-06-29"
@@ -35494,6 +36739,7 @@ var BOARD_DATA = {
       "code": "9009126000137",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*乐",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-05-06",
       "actual": "2026-05-06"
@@ -35502,6 +36748,7 @@ var BOARD_DATA = {
       "code": "9009126000137",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "陈*乐",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-07-30",
       "actual": "2026-07-30"
@@ -35510,6 +36757,7 @@ var BOARD_DATA = {
       "code": "9009126000140",
       "hosp": "上海市曜影医院",
       "patient": "M*K K*T",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-05-11",
       "actual": "2026-05-11"
@@ -35518,6 +36766,7 @@ var BOARD_DATA = {
       "code": "9009126000140",
       "hosp": "上海市曜影医院",
       "patient": "M*K K*T",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-22",
       "actual": "2026-06-22"
@@ -35526,6 +36775,7 @@ var BOARD_DATA = {
       "code": "9009126000139",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "冯*信",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-05-09",
       "actual": "2026-05-09"
@@ -35534,6 +36784,7 @@ var BOARD_DATA = {
       "code": "9009126000145",
       "hosp": "中山大学附属第三医院",
       "patient": "池*虾",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -35542,6 +36793,7 @@ var BOARD_DATA = {
       "code": "9009126000145",
       "hosp": "中山大学附属第三医院",
       "patient": "池*虾",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-06-30",
       "actual": "2026-06-30"
@@ -35550,6 +36802,7 @@ var BOARD_DATA = {
       "code": "9009126000144",
       "hosp": "重庆医科大学附属第一医院",
       "patient": "唐*",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -35558,6 +36811,7 @@ var BOARD_DATA = {
       "code": "9009126000144",
       "hosp": "重庆医科大学附属第一医院",
       "patient": "唐*",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-07-27",
       "actual": "2026-07-27"
@@ -35566,6 +36820,7 @@ var BOARD_DATA = {
       "code": "9009126000141",
       "hosp": "西安交通大学第一附属医院",
       "patient": "王*兵",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-05-14",
       "actual": "2026-05-14"
@@ -35574,6 +36829,7 @@ var BOARD_DATA = {
       "code": "9009126000141",
       "hosp": "西安交通大学第一附属医院",
       "patient": "王*兵",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-07-06",
       "actual": "2026-07-06"
@@ -35582,6 +36838,7 @@ var BOARD_DATA = {
       "code": "9009126000142",
       "hosp": "中国医学科学院血液病医院",
       "patient": "徐*瑞",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-14",
       "actual": "2026-05-14"
@@ -35590,6 +36847,7 @@ var BOARD_DATA = {
       "code": "9009126000142",
       "hosp": "中国医学科学院血液病医院",
       "patient": "徐*瑞",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-10",
       "actual": "2026-08-10"
@@ -35598,6 +36856,7 @@ var BOARD_DATA = {
       "code": "9009126000143",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "毕*民",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-05-14",
       "actual": "2026-05-14"
@@ -35606,6 +36865,7 @@ var BOARD_DATA = {
       "code": "9009126000143",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "毕*民",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-08-26",
       "actual": "2026-08-26"
@@ -35614,6 +36874,7 @@ var BOARD_DATA = {
       "code": "9009126000147",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "王*方",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -35622,6 +36883,7 @@ var BOARD_DATA = {
       "code": "9009126000147",
       "hosp": "华中科技大学同济医学院附属同济医院",
       "patient": "王*方",
+      "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-06-29",
       "actual": "2026-06-29"
@@ -35630,6 +36892,7 @@ var BOARD_DATA = {
       "code": "9009126000149",
       "hosp": "中国医学科学院血液病医院",
       "patient": "彭*森",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -35638,6 +36901,7 @@ var BOARD_DATA = {
       "code": "9009126000149",
       "hosp": "中国医学科学院血液病医院",
       "patient": "彭*森",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-24",
       "actual": "2026-08-24"
@@ -35646,6 +36910,7 @@ var BOARD_DATA = {
       "code": "9009126000151",
       "hosp": "中国医学科学院血液病医院",
       "patient": "田*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -35654,6 +36919,7 @@ var BOARD_DATA = {
       "code": "9009126000151",
       "hosp": "中国医学科学院血液病医院",
       "patient": "田*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-31",
       "actual": "2026-08-31"
@@ -35662,6 +36928,7 @@ var BOARD_DATA = {
       "code": "9009126000150",
       "hosp": "江苏省人民医院",
       "patient": "孙*香",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-05-15",
       "actual": "2026-05-15"
@@ -35670,6 +36937,7 @@ var BOARD_DATA = {
       "code": "9009126000150",
       "hosp": "江苏省人民医院",
       "patient": "孙*香",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-07-01",
       "actual": "2026-07-01"
@@ -35678,6 +36946,7 @@ var BOARD_DATA = {
       "code": "9009126000152",
       "hosp": "北京大学人民医院",
       "patient": "李*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-18",
       "actual": "2026-05-18"
@@ -35686,6 +36955,7 @@ var BOARD_DATA = {
       "code": "9009126000153",
       "hosp": "中国医学科学院血液病医院",
       "patient": "齐*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-20",
       "actual": "2026-05-20"
@@ -35694,6 +36964,7 @@ var BOARD_DATA = {
       "code": "9009126000153",
       "hosp": "中国医学科学院血液病医院",
       "patient": "齐*",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-03",
       "actual": "2026-08-03"
@@ -35702,6 +36973,7 @@ var BOARD_DATA = {
       "code": "9009126000154",
       "hosp": "北京大学深圳医院",
       "patient": "杨*波",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-05-20",
       "actual": "2026-05-20"
@@ -35710,6 +36982,7 @@ var BOARD_DATA = {
       "code": "9009126000154",
       "hosp": "北京大学深圳医院",
       "patient": "杨*波",
+      "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-17",
       "actual": "2026-06-17"
@@ -35718,6 +36991,7 @@ var BOARD_DATA = {
       "code": "9009126000155",
       "hosp": "北京协和医院",
       "patient": "纪*生",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-20",
       "actual": "2026-05-20"
@@ -35726,6 +37000,7 @@ var BOARD_DATA = {
       "code": "9009126000155",
       "hosp": "北京协和医院",
       "patient": "纪*生",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-22",
       "actual": "2026-06-22"
@@ -35734,6 +37009,7 @@ var BOARD_DATA = {
       "code": "9009126000156",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "刁*凤",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-22",
       "actual": ""
@@ -35742,6 +37018,7 @@ var BOARD_DATA = {
       "code": "9009126000157",
       "hosp": "南京鼓楼医院",
       "patient": "束*安",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-05-25",
       "actual": "2026-05-25"
@@ -35750,6 +37027,7 @@ var BOARD_DATA = {
       "code": "9009126000158",
       "hosp": "大连医科大学附属第一医院",
       "patient": "潘*宇",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-27",
       "actual": "2026-05-27"
@@ -35758,6 +37036,7 @@ var BOARD_DATA = {
       "code": "9009126000158",
       "hosp": "大连医科大学附属第一医院",
       "patient": "潘*宇",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-03",
       "actual": "2026-09-03"
@@ -35766,6 +37045,7 @@ var BOARD_DATA = {
       "code": "9009126000159",
       "hosp": "中国医学科学院血液病医院",
       "patient": "龚*新",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-27",
       "actual": "2026-05-27"
@@ -35774,6 +37054,7 @@ var BOARD_DATA = {
       "code": "9009126000160",
       "hosp": "中山大学附属第一医院",
       "patient": "蔡*那",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-05-27",
       "actual": "2026-05-27"
@@ -35782,6 +37063,7 @@ var BOARD_DATA = {
       "code": "9009126000161",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*凤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-28",
       "actual": "2026-05-28"
@@ -35790,6 +37072,7 @@ var BOARD_DATA = {
       "code": "9009126000161",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*凤",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-29",
       "actual": "2026-07-29"
@@ -35798,6 +37081,7 @@ var BOARD_DATA = {
       "code": "9009126000162",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*光",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-29",
       "actual": "2026-05-29"
@@ -35806,6 +37090,7 @@ var BOARD_DATA = {
       "code": "9009126000163",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "甄*民",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-29",
       "actual": "2026-05-29"
@@ -35814,6 +37099,7 @@ var BOARD_DATA = {
       "code": "9009126000163",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "甄*民",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-06",
       "actual": "2026-07-06"
@@ -35822,6 +37108,7 @@ var BOARD_DATA = {
       "code": "9009126000164",
       "hosp": "浙江大学医学院附属邵逸夫医院",
       "patient": "徐*华",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-05-29",
       "actual": "2026-05-29"
@@ -35830,6 +37117,7 @@ var BOARD_DATA = {
       "code": "9009126000165",
       "hosp": "上海仁济医院",
       "patient": "袁*玲",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-06-01",
       "actual": "2026-06-01"
@@ -35838,6 +37126,7 @@ var BOARD_DATA = {
       "code": "9009126000165",
       "hosp": "上海仁济医院",
       "patient": "袁*玲",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-25",
       "actual": "2026-08-25"
@@ -35846,6 +37135,7 @@ var BOARD_DATA = {
       "code": "9009126000166",
       "hosp": "南昌大学第一附属医院",
       "patient": "韩*芳",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-01",
       "actual": "2026-06-01"
@@ -35854,6 +37144,7 @@ var BOARD_DATA = {
       "code": "9009126000166",
       "hosp": "南昌大学第一附属医院",
       "patient": "韩*芳",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-07-08",
       "actual": "2026-07-08"
@@ -35862,6 +37153,7 @@ var BOARD_DATA = {
       "code": "9009126000167",
       "hosp": "北京大学人民医院",
       "patient": "左*梅",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-06-04",
       "actual": "2026-06-04"
@@ -35870,6 +37162,7 @@ var BOARD_DATA = {
       "code": "9009126000167",
       "hosp": "北京大学人民医院",
       "patient": "左*梅",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-10",
       "actual": "2026-08-10"
@@ -35878,6 +37171,7 @@ var BOARD_DATA = {
       "code": "9009126000168",
       "hosp": "中国医学科学院血液病医院",
       "patient": "黄*琴",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-05",
       "actual": "2026-06-05"
@@ -35886,6 +37180,7 @@ var BOARD_DATA = {
       "code": "9009126000169",
       "hosp": "福建省立医院",
       "patient": "张*灯",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-09",
       "actual": "2026-06-09"
@@ -35894,6 +37189,7 @@ var BOARD_DATA = {
       "code": "9009126000169",
       "hosp": "福建省立医院",
       "patient": "张*灯",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-08-06",
       "actual": "2026-08-06"
@@ -35902,6 +37198,7 @@ var BOARD_DATA = {
       "code": "9009126000171",
       "hosp": "福建医科大学附属第一医院",
       "patient": "曾*",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-08",
       "actual": "2026-06-08"
@@ -35910,6 +37207,7 @@ var BOARD_DATA = {
       "code": "9009126000172",
       "hosp": "山东大学齐鲁医院",
       "patient": "张*",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-06-09",
       "actual": "2026-06-09"
@@ -35918,6 +37216,7 @@ var BOARD_DATA = {
       "code": "9009126000194",
       "hosp": "中国医学科学院血液病医院",
       "patient": "钟*发",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-07",
       "actual": "2026-07-07"
@@ -35926,6 +37225,7 @@ var BOARD_DATA = {
       "code": "9009126000174",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "潘*娜",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-11",
       "actual": "2026-06-11"
@@ -35934,6 +37234,7 @@ var BOARD_DATA = {
       "code": "9009126000174",
       "hosp": "天津医科大学肿瘤医院（空港院区）",
       "patient": "潘*娜",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-22",
       "actual": "2026-07-22"
@@ -35942,6 +37243,7 @@ var BOARD_DATA = {
       "code": "9009126000175",
       "hosp": "中国医学科学院血液病医院",
       "patient": "黄*浪",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-10",
       "actual": "2026-06-10"
@@ -35950,6 +37252,7 @@ var BOARD_DATA = {
       "code": "9009126000176",
       "hosp": "中国医学科学院血液病医院",
       "patient": "吴*君",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-11",
       "actual": "2026-06-11"
@@ -35958,6 +37261,7 @@ var BOARD_DATA = {
       "code": "9009126000177",
       "hosp": "中国医学科学院血液病医院",
       "patient": "纪*华",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-12",
       "actual": "2026-06-12"
@@ -35966,6 +37270,7 @@ var BOARD_DATA = {
       "code": "9009126000177",
       "hosp": "中国医学科学院血液病医院",
       "patient": "纪*华",
+      "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-07",
       "actual": "2026-09-07"
@@ -35974,6 +37279,7 @@ var BOARD_DATA = {
       "code": "9009126000178",
       "hosp": "南昌大学第一附属医院",
       "patient": "钟*娥",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-17",
       "actual": "2026-06-17"
@@ -35982,6 +37288,7 @@ var BOARD_DATA = {
       "code": "9009126000178",
       "hosp": "南昌大学第一附属医院",
       "patient": "钟*娥",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-07-15",
       "actual": "2026-07-15"
@@ -35990,6 +37297,7 @@ var BOARD_DATA = {
       "code": "9009126000192",
       "hosp": "北京大学人民医院",
       "patient": "李*红",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-08",
       "actual": "2026-07-08"
@@ -35998,6 +37306,7 @@ var BOARD_DATA = {
       "code": "9009126000192",
       "hosp": "北京大学人民医院",
       "patient": "李*红",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-05",
       "actual": "2026-08-05"
@@ -36006,6 +37315,7 @@ var BOARD_DATA = {
       "code": "9009126000179",
       "hosp": "北京大学人民医院",
       "patient": "林*杰",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-06-23",
       "actual": "2026-06-23"
@@ -36014,6 +37324,7 @@ var BOARD_DATA = {
       "code": "9009126000179",
       "hosp": "北京大学人民医院",
       "patient": "林*杰",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-12",
       "actual": "2026-08-12"
@@ -36022,6 +37333,7 @@ var BOARD_DATA = {
       "code": "9009126000180",
       "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
       "patient": "胡*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-06-24",
       "actual": "2026-06-24"
@@ -36030,6 +37342,7 @@ var BOARD_DATA = {
       "code": "9009126000181",
       "hosp": "上海市同济医院",
       "patient": "M*. M*N A*N",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-06-25",
       "actual": "2026-06-25"
@@ -36038,6 +37351,7 @@ var BOARD_DATA = {
       "code": "9009126000181",
       "hosp": "上海市同济医院",
       "patient": "M*. M*N A*N",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-01",
       "actual": ""
@@ -36046,6 +37360,7 @@ var BOARD_DATA = {
       "code": "9009126000182",
       "hosp": "中山大学附属第八医院",
       "patient": "林*娟",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-06-25",
       "actual": "2026-06-25"
@@ -36054,6 +37369,7 @@ var BOARD_DATA = {
       "code": "9009126000184",
       "hosp": "中国医学科学院血液病医院",
       "patient": "罗*雨",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-30",
       "actual": "2026-06-30"
@@ -36062,6 +37378,7 @@ var BOARD_DATA = {
       "code": "9009126000186",
       "hosp": "高博医疗集团上海力泉医院",
       "patient": "J*M A*F S*E",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-03",
       "actual": "2026-07-03"
@@ -36070,6 +37387,7 @@ var BOARD_DATA = {
       "code": "9009126000186",
       "hosp": "高博医疗集团上海力泉医院",
       "patient": "J*M A*F S*E",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-10",
       "actual": "2026-08-10"
@@ -36078,6 +37396,7 @@ var BOARD_DATA = {
       "code": "9009126000183",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*玲",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-06-26",
       "actual": "2026-06-26"
@@ -36086,6 +37405,7 @@ var BOARD_DATA = {
       "code": "9009126000183",
       "hosp": "中山大学肿瘤医院",
       "patient": "李*玲",
+      "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-07-27",
       "actual": "2026-07-27"
@@ -36094,6 +37414,7 @@ var BOARD_DATA = {
       "code": "9009126000185",
       "hosp": "南方医科大学南方医院",
       "patient": "李*芬",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-07-02",
       "actual": "2026-07-02"
@@ -36102,6 +37423,7 @@ var BOARD_DATA = {
       "code": "9009126000187",
       "hosp": "山东大学齐鲁医院",
       "patient": "闫*芹",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-07-01",
       "actual": "2026-07-01"
@@ -36110,6 +37432,7 @@ var BOARD_DATA = {
       "code": "9009126000187",
       "hosp": "山东大学齐鲁医院",
       "patient": "闫*芹",
+      "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-08-05",
       "actual": "2026-08-05"
@@ -36118,6 +37441,7 @@ var BOARD_DATA = {
       "code": "9009126000188",
       "hosp": "中国人民解放军西部战区总医院",
       "patient": "孙*辉",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-07-02",
       "actual": "2026-07-02"
@@ -36126,6 +37450,7 @@ var BOARD_DATA = {
       "code": "9009126000189",
       "hosp": "中国医学科学院血液病医院",
       "patient": "郑*昌",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-02",
       "actual": "2026-07-02"
@@ -36134,6 +37459,7 @@ var BOARD_DATA = {
       "code": "9009126000190",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "张*昕",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-02",
       "actual": "2026-07-02"
@@ -36142,6 +37468,7 @@ var BOARD_DATA = {
       "code": "9009126000190",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "张*昕",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-25",
       "actual": "2026-08-25"
@@ -36150,6 +37477,7 @@ var BOARD_DATA = {
       "code": "9009126000193",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "华*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-07",
       "actual": "2026-07-07"
@@ -36158,6 +37486,7 @@ var BOARD_DATA = {
       "code": "9009126000193",
       "hosp": "首都医科大学附属北京朝阳医院",
       "patient": "华*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-19",
       "actual": "2026-08-19"
@@ -36166,6 +37495,7 @@ var BOARD_DATA = {
       "code": "9009126000195",
       "hosp": "中国医学科学院血液病医院",
       "patient": "付*勇",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-08",
       "actual": "2026-07-08"
@@ -36174,6 +37504,7 @@ var BOARD_DATA = {
       "code": "9009126000196",
       "hosp": "北京大学第一医院",
       "patient": "刘*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-08",
       "actual": "2026-07-08"
@@ -36182,6 +37513,7 @@ var BOARD_DATA = {
       "code": "9009126000196",
       "hosp": "北京大学第一医院",
       "patient": "刘*",
+      "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-10",
       "actual": "2026-08-10"
@@ -36190,6 +37522,7 @@ var BOARD_DATA = {
       "code": "9009126000200",
       "hosp": "北京陆道培医院",
       "patient": "王*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-09",
       "actual": "2026-07-09"
@@ -36198,6 +37531,7 @@ var BOARD_DATA = {
       "code": "9009126000199",
       "hosp": "南京鼓楼医院",
       "patient": "刘*生",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-07-09",
       "actual": "2026-07-09"
@@ -36206,6 +37540,7 @@ var BOARD_DATA = {
       "code": "9009126000198",
       "hosp": "中国医学科学院血液病医院",
       "patient": "V*S G*S",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-09",
       "actual": "2026-07-09"
@@ -36214,6 +37549,7 @@ var BOARD_DATA = {
       "code": "9009126000201",
       "hosp": "中国人民解放军海军特色医学中心",
       "patient": "郁*华",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-10",
       "actual": "2026-07-10"
@@ -36222,6 +37558,7 @@ var BOARD_DATA = {
       "code": "9009126000238",
       "hosp": "上海仁济医院",
       "patient": "S*A C*E F*Y",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-19",
       "actual": "2026-08-19"
@@ -36230,6 +37567,7 @@ var BOARD_DATA = {
       "code": "9009126000204",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "窦*荣",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-14",
       "actual": "2026-07-14"
@@ -36238,6 +37576,7 @@ var BOARD_DATA = {
       "code": "9009126000203",
       "hosp": "中国医学科学院血液病医院",
       "patient": "潘*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-14",
       "actual": "2026-07-14"
@@ -36246,6 +37585,7 @@ var BOARD_DATA = {
       "code": "9009126000207",
       "hosp": "上海仁济医院",
       "patient": "徐*芳",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-17",
       "actual": "2026-07-17"
@@ -36254,6 +37594,7 @@ var BOARD_DATA = {
       "code": "9009126000207",
       "hosp": "上海仁济医院",
       "patient": "徐*芳",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-31",
       "actual": "2026-08-31"
@@ -36262,6 +37603,7 @@ var BOARD_DATA = {
       "code": "9009126000205",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*东",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-16",
       "actual": "2026-07-16"
@@ -36270,6 +37612,7 @@ var BOARD_DATA = {
       "code": "9009126000206",
       "hosp": "西安交通大学第一附属医院",
       "patient": "加*设",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-16",
       "actual": "2026-07-16"
@@ -36278,6 +37621,7 @@ var BOARD_DATA = {
       "code": "9009126000210",
       "hosp": "上海市曜影医院",
       "patient": "H*N F*S D*A",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-21",
       "actual": "2026-07-21"
@@ -36286,6 +37630,7 @@ var BOARD_DATA = {
       "code": "9009126000217",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "常*成",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-24",
       "actual": "2026-07-24"
@@ -36294,6 +37639,7 @@ var BOARD_DATA = {
       "code": "9009126000217",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "常*成",
+      "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-09-11",
       "actual": ""
@@ -36302,6 +37648,7 @@ var BOARD_DATA = {
       "code": "9009126000211",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "马*",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-23",
       "actual": "2026-07-23"
@@ -36310,6 +37657,7 @@ var BOARD_DATA = {
       "code": "9009126000209",
       "hosp": "中山大学附属第一医院",
       "patient": "王*坚",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-07-18",
       "actual": "2026-07-18"
@@ -36318,6 +37666,7 @@ var BOARD_DATA = {
       "code": "9009126000213",
       "hosp": "川北医学院附属医院",
       "patient": "刘*均",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-07-23",
       "actual": "2026-07-23"
@@ -36326,6 +37675,7 @@ var BOARD_DATA = {
       "code": "9009126000212",
       "hosp": "中国医学科学院血液病医院",
       "patient": "续*玲",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-22",
       "actual": "2026-07-22"
@@ -36334,6 +37684,7 @@ var BOARD_DATA = {
       "code": "9009126000214",
       "hosp": "空军军医大学西京医院",
       "patient": "董*麟",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-22",
       "actual": "2026-07-22"
@@ -36342,6 +37693,7 @@ var BOARD_DATA = {
       "code": "9009126000215",
       "hosp": "绍兴市人民医院",
       "patient": "戴*芬",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-07-29",
       "actual": "2026-07-29"
@@ -36350,6 +37702,7 @@ var BOARD_DATA = {
       "code": "9009126000215",
       "hosp": "绍兴市人民医院",
       "patient": "戴*芬",
+      "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-09-07",
       "actual": "2026-09-07"
@@ -36358,6 +37711,7 @@ var BOARD_DATA = {
       "code": "9009126000218",
       "hosp": "中国医学科学院血液病医院",
       "patient": "傅*军",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-28",
       "actual": "2026-07-28"
@@ -36366,6 +37720,7 @@ var BOARD_DATA = {
       "code": "9009126000216",
       "hosp": "上海仁济医院",
       "patient": "王*",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-23",
       "actual": "2026-07-23"
@@ -36374,6 +37729,7 @@ var BOARD_DATA = {
       "code": "9009126000227",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "林*桂",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-14",
       "actual": "2026-08-14"
@@ -36382,6 +37738,7 @@ var BOARD_DATA = {
       "code": "9009126000219",
       "hosp": "四川大学华西医院",
       "patient": "黄*良",
+      "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-07-29",
       "actual": "2026-07-29"
@@ -36390,6 +37747,7 @@ var BOARD_DATA = {
       "code": "9009126000219",
       "hosp": "四川大学华西医院",
       "patient": "黄*良",
+      "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-09-10",
       "actual": ""
@@ -36398,6 +37756,7 @@ var BOARD_DATA = {
       "code": "9009126000220",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "卢*凯",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-30",
       "actual": "2026-07-30"
@@ -36406,6 +37765,7 @@ var BOARD_DATA = {
       "code": "9009126000221",
       "hosp": "南方医科大学南方医院",
       "patient": "高*振",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-07-31",
       "actual": "2026-07-31"
@@ -36414,6 +37774,7 @@ var BOARD_DATA = {
       "code": "9009126000222",
       "hosp": "华中科技大学同济医学院附属协和医院",
       "patient": "郭*艳",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-31",
       "actual": "2026-07-31"
@@ -36422,6 +37783,7 @@ var BOARD_DATA = {
       "code": "9009126000223",
       "hosp": "上海市同济医院",
       "patient": "陈*兰",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-04",
       "actual": "2026-08-04"
@@ -36430,6 +37792,7 @@ var BOARD_DATA = {
       "code": "9009126000224",
       "hosp": "中国医学科学院血液病医院",
       "patient": "张*娥",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-07",
       "actual": "2026-08-07"
@@ -36438,6 +37801,7 @@ var BOARD_DATA = {
       "code": "9009126000225",
       "hosp": "苏州大学附属第一医院",
       "patient": "史*",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-08-06",
       "actual": "2026-08-06"
@@ -36446,6 +37810,7 @@ var BOARD_DATA = {
       "code": "9009126000226",
       "hosp": "浙江大学医学院附属邵逸夫医院",
       "patient": "罗*绍",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-08-07",
       "actual": "2026-08-07"
@@ -36454,6 +37819,7 @@ var BOARD_DATA = {
       "code": "9009126000228",
       "hosp": "中国医学科学院血液病医院",
       "patient": "许*坤",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-10",
       "actual": "2026-08-10"
@@ -36462,6 +37828,7 @@ var BOARD_DATA = {
       "code": "9009126000231",
       "hosp": "上海市同济医院",
       "patient": "胡*君",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-12",
       "actual": "2026-08-12"
@@ -36470,6 +37837,7 @@ var BOARD_DATA = {
       "code": "9009126000230",
       "hosp": "福建医科大学附属协和医院",
       "patient": "白*凯",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-08-13",
       "actual": "2026-08-13"
@@ -36478,6 +37846,7 @@ var BOARD_DATA = {
       "code": "9009126000229",
       "hosp": "中国医学科学院血液病医院",
       "patient": "倪*对",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-12",
       "actual": "2026-08-12"
@@ -36486,6 +37855,7 @@ var BOARD_DATA = {
       "code": "9009126000232",
       "hosp": "郑州人民医院",
       "patient": "王*霞",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-08-12",
       "actual": "2026-08-12"
@@ -36494,6 +37864,7 @@ var BOARD_DATA = {
       "code": "9009126000233",
       "hosp": "北京大学人民医院",
       "patient": "陈*茁",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-14",
       "actual": "2026-08-14"
@@ -36502,6 +37873,7 @@ var BOARD_DATA = {
       "code": "9009126000234",
       "hosp": "中山大学附属第一医院",
       "patient": "贺*莲",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-14",
       "actual": "2026-08-14"
@@ -36510,6 +37882,7 @@ var BOARD_DATA = {
       "code": "9009126000235",
       "hosp": "中山大学附属第一医院",
       "patient": "陈*秀",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-14",
       "actual": "2026-08-14"
@@ -36518,6 +37891,7 @@ var BOARD_DATA = {
       "code": "9009126000237",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "杨*士",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-19",
       "actual": "2026-08-19"
@@ -36526,6 +37900,7 @@ var BOARD_DATA = {
       "code": "9009126000239",
       "hosp": "中山大学肿瘤医院",
       "patient": "曾*君",
+      "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-08-20",
       "actual": "2026-08-20"
@@ -36534,6 +37909,7 @@ var BOARD_DATA = {
       "code": "9009126000241",
       "hosp": "中山大学附属第一医院",
       "patient": "胡*茹",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-20",
       "actual": "2026-08-20"
@@ -36542,6 +37918,7 @@ var BOARD_DATA = {
       "code": "9009126000240",
       "hosp": "中国医学科学院血液病医院",
       "patient": "谌*霖",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-21",
       "actual": "2026-08-21"
@@ -36550,6 +37927,7 @@ var BOARD_DATA = {
       "code": "9009126000242",
       "hosp": "苏州大学附属第一医院",
       "patient": "潘*洋",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-08-20",
       "actual": "2026-08-20"
@@ -36558,6 +37936,7 @@ var BOARD_DATA = {
       "code": "9009126000243",
       "hosp": "空军军医大学西京医院",
       "patient": "卢*鑫",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-08-21",
       "actual": "2026-08-21"
@@ -36566,6 +37945,7 @@ var BOARD_DATA = {
       "code": "9009126000255",
       "hosp": "河北医科大学第二医院（河北省第二医院）",
       "patient": "陈*敏",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-28",
       "actual": "2026-08-28"
@@ -36574,6 +37954,7 @@ var BOARD_DATA = {
       "code": "9009126000247",
       "hosp": "北京大学人民医院",
       "patient": "任*兰",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-27",
       "actual": "2026-08-27"
@@ -36582,6 +37963,7 @@ var BOARD_DATA = {
       "code": "9009126000244",
       "hosp": "北京协和医院",
       "patient": "黄*珍",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-31",
       "actual": "2026-08-31"
@@ -36590,6 +37972,7 @@ var BOARD_DATA = {
       "code": "9009126000246",
       "hosp": "北京协和医院",
       "patient": "秦*云",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-26",
       "actual": "2026-08-26"
@@ -36598,6 +37981,7 @@ var BOARD_DATA = {
       "code": "9009126000248",
       "hosp": "北京大学人民医院",
       "patient": "闫*生",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-25",
       "actual": "2026-08-25"
@@ -36606,6 +37990,7 @@ var BOARD_DATA = {
       "code": "9009126000245",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "陶*蕙",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-24",
       "actual": "2026-08-24"
@@ -36614,6 +37999,7 @@ var BOARD_DATA = {
       "code": "9009126000249",
       "hosp": "中国医学科学院血液病医院",
       "patient": "刘*珍",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-25",
       "actual": "2026-08-25"
@@ -36622,6 +38008,7 @@ var BOARD_DATA = {
       "code": "9009126000251",
       "hosp": "中国医学科学院血液病医院",
       "patient": "杨*燕",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-26",
       "actual": "2026-08-26"
@@ -36630,6 +38017,7 @@ var BOARD_DATA = {
       "code": "9009126000252",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*勇",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-27",
       "actual": "2026-08-27"
@@ -36638,6 +38026,7 @@ var BOARD_DATA = {
       "code": "9009126000253",
       "hosp": "南方医科大学南方医院",
       "patient": "徐*梁",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-28",
       "actual": "2026-08-28"
@@ -36646,6 +38035,7 @@ var BOARD_DATA = {
       "code": "9009126000256",
       "hosp": "北京高博博仁医院",
       "patient": "杨*业",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-28",
       "actual": "2026-08-28"
@@ -36654,6 +38044,7 @@ var BOARD_DATA = {
       "code": "9009126000258",
       "hosp": "上海长征医院",
       "patient": "支*林",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-09-01",
       "actual": "2026-09-01"
@@ -36662,6 +38053,7 @@ var BOARD_DATA = {
       "code": "9009126000257",
       "hosp": "上海交通大学医学院附属瑞金医院",
       "patient": "姜*莹",
+      "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-28",
       "actual": "2026-08-28"
@@ -36670,6 +38062,7 @@ var BOARD_DATA = {
       "code": "9009126000264",
       "hosp": "中山大学孙逸仙纪念医院",
       "patient": "张*元",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-08",
       "actual": "2026-09-08"
@@ -36678,6 +38071,7 @@ var BOARD_DATA = {
       "code": "9009126000260",
       "hosp": "北京协和医院",
       "patient": "王*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-03",
       "actual": "2026-09-03"
@@ -36686,6 +38080,7 @@ var BOARD_DATA = {
       "code": "9009126000259",
       "hosp": "浙江大学医学院附属第一医院（余杭院区）",
       "patient": "姜*",
+      "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-09-02",
       "actual": "2026-09-02"
@@ -36694,6 +38089,7 @@ var BOARD_DATA = {
       "code": "9009126000261",
       "hosp": "中国医学科学院血液病医院",
       "patient": "李*川",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-04",
       "actual": "2026-09-04"
@@ -36702,6 +38098,7 @@ var BOARD_DATA = {
       "code": "9009126000262",
       "hosp": "苏州大学附属第一医院",
       "patient": "张*",
+      "cos": "金银",
       "type": "apheresis",
       "plan": "2026-09-04",
       "actual": "2026-09-04"
@@ -36710,6 +38107,7 @@ var BOARD_DATA = {
       "code": "9009126000263",
       "hosp": "中国医学科学院血液病医院",
       "patient": "宋*龙",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-08",
       "actual": "2026-09-08"
@@ -36718,6 +38116,7 @@ var BOARD_DATA = {
       "code": "9009126000265",
       "hosp": "北京大学人民医院",
       "patient": "刘*",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-08",
       "actual": "2026-09-08"
@@ -36726,6 +38125,7 @@ var BOARD_DATA = {
       "code": "9009126000267",
       "hosp": "空军军医大学西京医院",
       "patient": "贾*珍",
+      "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-09-09",
       "actual": "2026-09-09"
@@ -36734,6 +38134,7 @@ var BOARD_DATA = {
       "code": "9009126000266",
       "hosp": "北京大学人民医院",
       "patient": "袁*凡",
+      "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-09",
       "actual": "2026-09-09"
@@ -36742,6 +38143,7 @@ var BOARD_DATA = {
       "code": "9009126000269",
       "hosp": "中山大学附属第一医院",
       "patient": "张*",
+      "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-09",
       "actual": "2026-09-09"
@@ -36750,6 +38152,7 @@ var BOARD_DATA = {
       "code": "9009126000270",
       "hosp": "中国医学科学院血液病医院",
       "patient": "王*东",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-09",
       "actual": "2026-09-09"
@@ -36758,6 +38161,7 @@ var BOARD_DATA = {
       "code": "9009126000271",
       "hosp": "中国医学科学院血液病医院",
       "patient": "韩*",
+      "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-10",
       "actual": ""
@@ -36766,6 +38170,7 @@ var BOARD_DATA = {
       "code": "A1D0299",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*Y",
+      "cos": "",
       "type": "apheresis",
       "plan": "2024-11-27",
       "actual": "2024-11-27"
@@ -36774,6 +38179,7 @@ var BOARD_DATA = {
       "code": "A1D0299",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*Y",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2024-12-30",
       "actual": "2024-12-31"
@@ -36782,6 +38188,7 @@ var BOARD_DATA = {
       "code": "A1E0051",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*K",
+      "cos": "",
       "type": "apheresis",
       "plan": "2025-03-12",
       "actual": "2025-03-12"
@@ -36790,6 +38197,7 @@ var BOARD_DATA = {
       "code": "A1E0051",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*K",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2025-04-30",
       "actual": "2025-04-30"
@@ -36798,6 +38206,7 @@ var BOARD_DATA = {
       "code": "A1E0026",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "N*C",
+      "cos": "",
       "type": "apheresis",
       "plan": "2025-03-06",
       "actual": "2025-03-06"
@@ -36806,6 +38215,7 @@ var BOARD_DATA = {
       "code": "A1E0026",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "N*C",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2025-04-23",
       "actual": "2025-05-08"
@@ -36814,6 +38224,7 @@ var BOARD_DATA = {
       "code": "A1E0211",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "L*M",
+      "cos": "",
       "type": "apheresis",
       "plan": "2025-09-02",
       "actual": "2025-09-02"
@@ -36822,6 +38233,7 @@ var BOARD_DATA = {
       "code": "A1E0211",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "L*M",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2025-10-22",
       "actual": "2025-11-03"
@@ -36830,6 +38242,7 @@ var BOARD_DATA = {
       "code": "A1E0223",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "T*T",
+      "cos": "",
       "type": "apheresis",
       "plan": "2025-09-10",
       "actual": "2025-09-10"
@@ -36838,6 +38251,7 @@ var BOARD_DATA = {
       "code": "A1E0223",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "T*T",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2025-11-04",
       "actual": "2026-02-12"
@@ -36846,6 +38260,7 @@ var BOARD_DATA = {
       "code": "9009125000020",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "H*R",
+      "cos": "",
       "type": "apheresis",
       "plan": "2025-11-20",
       "actual": "2025-11-20"
@@ -36854,6 +38269,7 @@ var BOARD_DATA = {
       "code": "9009125000020",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "H*R",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-01-05",
       "actual": "2026-02-23"
@@ -36862,6 +38278,7 @@ var BOARD_DATA = {
       "code": "9009126000020",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "S*M",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-01-19",
       "actual": "2026-01-19"
@@ -36870,6 +38287,7 @@ var BOARD_DATA = {
       "code": "9009126000020",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "S*M",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-02-23",
       "actual": "2026-04-08"
@@ -36878,6 +38296,7 @@ var BOARD_DATA = {
       "code": "9009126000027",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "W*M",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-01-27",
       "actual": "2026-01-27"
@@ -36886,6 +38305,7 @@ var BOARD_DATA = {
       "code": "9009126000027",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "W*M",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-03-16",
       "actual": "2026-04-17"
@@ -36894,6 +38314,7 @@ var BOARD_DATA = {
       "code": "9009126000029",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "W*H",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-02-05",
       "actual": "2026-02-05"
@@ -36902,6 +38323,7 @@ var BOARD_DATA = {
       "code": "9009126000029",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "W*H",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-04-01",
       "actual": "2026-04-01"
@@ -36910,6 +38332,7 @@ var BOARD_DATA = {
       "code": "9009126000037",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "W*W",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-02-04",
       "actual": "2026-02-04"
@@ -36918,6 +38341,7 @@ var BOARD_DATA = {
       "code": "9009126000037",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "W*W",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-04-03",
       "actual": "2026-04-27"
@@ -36926,6 +38350,7 @@ var BOARD_DATA = {
       "code": "9009126000091",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "K*, K*I Y*G A*E",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-04-01",
       "actual": "2026-04-01"
@@ -36934,6 +38359,7 @@ var BOARD_DATA = {
       "code": "9009126000091",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "K*, K*I Y*G A*E",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-04-30",
       "actual": "2026-05-15"
@@ -36942,6 +38368,7 @@ var BOARD_DATA = {
       "code": "9009126000114",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*I B*G",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-04-22",
       "actual": "2026-04-22"
@@ -36950,6 +38377,7 @@ var BOARD_DATA = {
       "code": "9009126000114",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*I B*G",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-05-21",
       "actual": "2026-06-12"
@@ -36958,6 +38386,7 @@ var BOARD_DATA = {
       "code": "9009126000208",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "S*U S*I N*I",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-07-23",
       "actual": "2026-07-23"
@@ -36966,6 +38395,7 @@ var BOARD_DATA = {
       "code": "9009126000208",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "S*U S*I N*I",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-09-02",
       "actual": "2026-09-07"
@@ -36974,6 +38404,7 @@ var BOARD_DATA = {
       "code": "9009126000197",
       "hosp": "PARKWAY CANCER CENTRE",
       "patient": "T*n V*n M*h",
+      "cos": "",
       "type": "apheresis",
       "plan": "2026-07-13",
       "actual": "2026-07-13"
@@ -36982,6 +38413,7 @@ var BOARD_DATA = {
       "code": "9009126000197",
       "hosp": "PARKWAY CANCER CENTRE",
       "patient": "T*n V*n M*h",
+      "cos": "",
       "type": "reinfusion",
       "plan": "2026-08-18",
       "actual": "2026-08-18"

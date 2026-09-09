@@ -94,6 +94,7 @@ headers.forEach(function(h, i) {
   if (h === '仓库接收单采血时间') ci.receive = i;
   if (h === '患者姓名') ci.patient = i;
   if (h === '追溯码') ci.code = i;
+  if (h === 'COS') ci.cos = i;
 });
 console.log('关键列索引:', JSON.stringify(ci));
 
@@ -163,7 +164,8 @@ for (var i = 2; i < bsRows.length; i++) {
     planRe: excelToDate(row[ci.planRe]),
     reStart: excelToDate(row[ci.reStart]),
     receive: excelToDate(row[ci.receive]),
-    patient: maskName(String(row[ci.patient] || ''))
+    patient: maskName(String(row[ci.patient] || '')),
+    cos: String(row[ci.cos] || '').trim()
   });
 }
 
@@ -777,10 +779,10 @@ records.forEach(function (r) {
   var d = dictInfo[r.no] || {};
   if (d.cancel === '1') return;
   if (r.apmt) {
-    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, type: 'apheresis', plan: r.apmt, actual: r.ap || '' });
+    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, cos: r.cos, type: 'apheresis', plan: r.apmt, actual: r.ap || '' });
   }
   if (r.planRe) {
-    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, type: 'reinfusion', plan: r.planRe, actual: r.reStart || '' });
+    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, cos: r.cos, type: 'reinfusion', plan: r.planRe, actual: r.reStart || '' });
   }
 });
 console.log('CART_DAILY 记录数:', CART_DAILY.length);
