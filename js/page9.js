@@ -1,4 +1,4 @@
-// page9.js — P3 过去30天福可苏订单每日进展跟进：顶部 4 线趋势图 + 每日明细表（追溯码 + 医院 + 脱敏患者，表头锁定）
+// page9.js — 订单进展每日跟进（key daily30）：顶部 4 线趋势图 + 每日明细表（追溯码 + 医院 + 脱敏患者，表头锁定）
 (function () {
     var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
     if (!B || !B.DAILY30) return;

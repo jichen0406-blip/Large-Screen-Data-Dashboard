@@ -635,7 +635,7 @@ records.forEach(function (r) {
   if (r.re) { var k2 = r.re.slice(0, 7); ptInit(k2); addP3(k2, d, 'r', attribP3(r, d, true)); }
 });
 
-// ── 8l2. Page7 辖区数据管理3：医院/省份 月度明细（仅国内 DOM；AM 归属同 REGIONS） ──
+// ── 8l2. 省份&医院数据（key region3）：医院/省份 月度明细（仅国内 DOM；AM 归属同 REGIONS） ──
 // 键：'YYYY-MM' → 'AM|省份|城市|医院' → {o, r}；下单/回输分别按订单归属AM统计
 var ptHOSP = {}; // REGIONS.HOSP
 function hpInit(k) { if (!ptHOSP[k]) ptHOSP[k] = {}; }
@@ -671,7 +671,15 @@ records.forEach(function (r) {
   var hk = r.prov + '|' + (r.city || '') + '|' + r.hosp;
   if (!ptHSLast[hk] || r.od > ptHSLast[hk]) ptHSLast[hk] = r.od;
 });
-var REGIONS = { AMS: REGION_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, ATTAIN: ptREG, OV: ptOV, HOSP: ptHOSP, HSLAST: ptHSLast };
+// ── 8l4. 医院 COE 分类：按医院实体（省份|城市|医院名）→ SCOE/COE/RCOE/Others（源自 masterdata COE 列，经 coeCat 归一） ──
+// 仅国内 DOM；同一医院取首条非空（COE 属医院主数据属性，理论上 1:1）
+var ptCoeHosp = {}; // REGIONS.COEHOSP
+records.forEach(function (r) {
+  if (!r.prov || !r.hosp) return;
+  var hk = r.prov + '|' + (r.city || '') + '|' + r.hosp;
+  if (!ptCoeHosp[hk]) ptCoeHosp[hk] = coeCat(r.coe);
+});
+var REGIONS = { AMS: REGION_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, ATTAIN: ptREG, OV: ptOV, HOSP: ptHOSP, HSLAST: ptHSLast, COEHOSP: ptCoeHosp };
 
 // ── 8m. Page3 全球注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
 var regPath = path.join(rawDir, '注册项目数据.xlsx');

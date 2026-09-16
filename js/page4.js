@@ -1,4 +1,4 @@
-// Page3：辖区数据管理1 — KPI 目标达成（公司目标）+ 国内&海外月度表 1/2（公司DOM&OB目标）
+// page4.js — 目标数据管理（key region1）：KPI 目标达成（公司目标）+ 国内&海外月度表 1/2（公司DOM&OB目标）
 // 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
 $(function () {
     var B = window.BOARD_DATA;

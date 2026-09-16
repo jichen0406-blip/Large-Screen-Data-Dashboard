@@ -14,6 +14,7 @@
     }
 
     var TYPE_LABEL = { apheresis: '单采', reinfusion: '回输' };
+    var TYPE_ICON = { apheresis: '🧬', reinfusion: '💉' };
     // 排序/颜色约定：红→灰→黄→绿（order 越小越靠前）
     var LIGHTS = [
         { k: 'red',    order: 0, color: '#ff4d4f', txt: '逾期未执行' },
@@ -41,7 +42,7 @@
     // 当前状态
     var selY = parseInt(DEF_YM.slice(0, 4), 10);
     var selM = parseInt(DEF_YM.slice(5, 7), 10);
-    var selLights = { red: true, gray: true, yellow: false, green: false }; // 默认只看 逾期未执行(红)+待执行(灰)
+    var selLights = { red: true, gray: true, yellow: true, green: true }; // 默认四个状态全选
     var hl = null; // 搜索命中高亮 {code, type, plan}
     var focus = null; // 搜索聚焦：非空时日历/表格仅显示该订单记录 {code, type}
     var msg = '';
@@ -164,11 +165,11 @@
         recs.forEach(function (r, i) {
             var st = stateOf(r, today);
             var hit = hl && hl.code === r.code && hl.type === r.type ? ' cart-hit' : '';
-            rows += '<div class="cart-tbl-row' + hit + '" data-i="' + i + '">' +
+            rows += '<div class="cart-tbl-row' + hit + '" data-i="' + i + '" data-t="' + r.type + '">' +
                 '<span class="c-code" title="' + r.code + '">' + (r.code || '(无码)') + '</span>' +
                 '<span class="c-hosp">' + (r.hosp || '未知医院') + '</span>' +
                 '<span class="c-pat">' + (r.patient || '·') + '</span>' +
-                '<span class="c-type">' + TYPE_LABEL[r.type] + '</span>' +
+                '<span class="c-type"><i class="c-type-ico">' + TYPE_ICON[r.type] + '</i>' + TYPE_LABEL[r.type] + '</span>' +
                 '<span class="c-cos' + (r.cos ? '' : ' no') + '">' + (r.cos || '-') + '</span>' +
                 '<span class="c-st"><i class="cart-dot" style="background:' + LK[st].color + ';box-shadow:0 0 6px ' + LK[st].color + ';"></i>' + LK[st].txt + '</span>' +
                 '<span class="c-plan">' + r.plan + '</span>' +
@@ -192,7 +193,7 @@
         var rows = document.querySelectorAll('#p10tbl .cart-tbl-row');
         for (var i = 0; i < rows.length; i++) {
             var r = rows[i];
-            if (r.querySelector('.c-code').textContent === (hl.code || '(无码)') && r.querySelector('.c-type').textContent === TYPE_LABEL[hl.type]) {
+            if (r.getAttribute('data-t') === hl.type && r.querySelector('.c-code').textContent === (hl.code || '(无码)')) {
                 r.scrollIntoView({ block: 'center' });
                 break;
             }

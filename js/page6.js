@@ -1,14 +1,24 @@
-// Page7：辖区数据管理3 — 省份数据 / 医院数据（YTD + 同比）
+// page6.js — 省份&医院数据（key region3）：省份数据 / 医院数据（YTD + 同比；医院表含 COE 列/分类排序/筛选/搜索/汇总）
 // 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
 // 数据：window.BOARD_DATA.REGIONS.HOSP = 'YYYY-MM' → 'AM|省份|城市|医院' → {o,r}
-//       REGIONS.HSLAST = '省份|城市|医院名' → 'YYYY-MM-DD'（最近一次下单，不随时间控制器变动）
+//       REGIONS.HSLAST  = '省份|城市|医院名' → 'YYYY-MM-DD'（最近一次下单，不随时间控制器变动）
+//       REGIONS.COEHOSP = '省份|城市|医院名' → 'SCOE|COE|RCOE|Others'（医院 COE 分类）
 $(function () {
     var B = window.BOARD_DATA;
     if (!B || !B.REGIONS || !B.REGIONS.HOSP) return;
     var HOSP = B.REGIONS.HOSP;
     var HSLAST = B.REGIONS.HSLAST || {};
+    var COEHOSP = B.REGIONS.COEHOSP || {};
     var DP = B.DP || '';
     var AMS = B.REGIONS.AMS || [];
+
+    // ── 医院表筛选状态：COE 多选（默认全选）+ 医院名模糊搜索（实时） ──
+    var COE_CATS = ['SCOE', 'COE', 'RCOE', 'Others'];
+    var selCoe = {}; COE_CATS.forEach(function (c) { selCoe[c] = true; });
+    var hsQuery = '';
+
+    function coeOf(r) { return COEHOSP[r.prov + '|' + r.city + '|' + r.hosp] || 'Others'; }
+    function coeRank(c) { var i = COE_CATS.indexOf(c); return i < 0 ? COE_CATS.length : i; }
 
     var yearKeys = {};
     Object.keys(HOSP).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
@@ -33,18 +43,22 @@ $(function () {
         return acc;
     }
 
-    function renderTables() {
+    // 当前时间窗内、有下单或回输的医院行（拆开 hospital key）
+    function currentRows() {
         var y = parseInt($('#p6y').val(), 10), m = parseInt($('#p6m').val(), 10);
-        var acc = accumulate(y, m);
-        // 仅保留当前窗口有下单或回输的医院（拆开 hospital key）
-        var rows = [];
+        var acc = accumulate(y, m), rows = [];
         Object.keys(acc).forEach(function (key) {
             var v = acc[key];
             if (!(v.o > 0 || v.r > 0)) return;
             var p = key.split('|');
             rows.push({ am: p[0], prov: p[1], city: p[2], hosp: p[3], o: v.o, r: v.r, lo: v.lo, lr: v.lr });
         });
-        renderHS(rows);
+        return rows;
+    }
+
+    function renderTables() {
+        var rows = currentRows();
+        renderHS(rows.slice()); // 传副本：renderHS 内部排序/加字段不影响省份表
         renderPV(rows);
     }
 
@@ -54,19 +68,48 @@ $(function () {
         return Math.round((new Date(dp) - new Date(d)) / 86400000);
     }
 
-    // 医院数据：按下单量降序；末尾「最近一次下单日期 / 下单空窗期」按医院实体合并，不随时间控制器变动
+    // COE 筛选药丸（多选；至少保留一个）
+    function renderCoeLights() {
+        var h = '';
+        COE_CATS.forEach(function (c) {
+            h += '<button type="button" class="cart-light' + (selCoe[c] ? ' on' : '') + '" data-coe="' + c + '">' + c + '</button>';
+        });
+        $('#p6coeLights').html(h);
+    }
+
+    // 医院数据：先按 COE 分类（SCOE→COE→RCOE→Others），分类内按下单量降序
+    // 受 COE 筛选 + 医院名模糊搜索影响；表上方汇总当前可见行的 YTD下单/YTD回输
     function renderHS(rows) {
-        rows.sort(function (a, b) { return b.o - a.o; });
+        rows.forEach(function (r) { r.coe = coeOf(r); });
+        var visible = rows.filter(function (r) {
+            if (!selCoe[r.coe]) return false;
+            if (hsQuery && r.hosp.toLowerCase().indexOf(hsQuery) < 0) return false;
+            return true;
+        });
+        visible.sort(function (a, b) {
+            var d = coeRank(a.coe) - coeRank(b.coe);
+            if (d) return d;
+            if (b.o !== a.o) return b.o - a.o;
+            return a.hosp < b.hosp ? -1 : 1;
+        });
+
+        // 汇总（仅 YTD下单 / YTD回输）
+        var sumO = 0, sumR = 0;
+        visible.forEach(function (r) { sumO += r.o; sumR += r.r; });
+        $('#p6hsSum').html('<span class="p6-sum-lbl">当前可见 ' + visible.length + ' 家</span>' +
+            '<span class="p6-sum-item">YTD下单 <b>' + sumO + '</b></span>' +
+            '<span class="p6-sum-item">YTD回输 <b>' + sumR + '</b></span>');
+
         var h = '<table class="pt"><thead><tr>' +
-            '<th>AM</th><th>省份</th><th>城市</th><th>医院名称</th>' +
+            '<th>AM</th><th>省份</th><th>城市</th><th>医院名称</th><th>COE</th>' +
             '<th>YTD下单</th><th>下单同比</th><th>YTD回输</th><th>回输同比</th>' +
             '<th>最近一次下单日期</th><th>下单空窗期</th>' +
             '</tr></thead><tbody>';
-        rows.forEach(function (r) {
+        visible.forEach(function (r) {
             var ld = HSLAST[r.prov + '|' + r.city + '|' + r.hosp];
             var gap = gapDays(DP, ld);
             h += '<tr><td>' + r.am + '</td><td>' + r.prov + '</td><td>' + (r.city || '--') + '</td>' +
-                '<td class="pt-lbl">' + r.hosp + '</td>' +
+                '<td class="pt-lbl">' + r.hosp + '</td><td class="p6-coe p6-coe-' + r.coe.toLowerCase() + '">' + r.coe + '</td>' +
                 '<td>' + (r.o > 0 ? r.o : '') + '</td><td>' + yoyStr(r.o, r.lo) + '</td>' +
                 '<td>' + (r.r > 0 ? r.r : '') + '</td><td>' + yoyStr(r.r, r.lr) + '</td>' +
                 '<td>' + (ld || '--') + '</td><td>' + (gap === null ? '--' : (gap > 90 ? '<span class="pt-gap-red">' + gap + '天</span>' : gap + '天')) + '</td></tr>';
@@ -112,5 +155,27 @@ $(function () {
         document.getElementById('p6tPV').innerHTML = h;
     }
 
+    // ── 事件：COE 药丸多选、医院名实时模糊搜索、清空 ──
+    function refreshHS() { renderHS(currentRows()); }
+    $('#p6coeLights').on('click', '.cart-light', function () {
+        var c = $(this).data('coe');
+        var next = !selCoe[c];
+        var onCnt = COE_CATS.filter(function (x) { return selCoe[x]; }).length;
+        if (!next && onCnt <= 1) return; // 至少保留一个
+        selCoe[c] = next;
+        renderCoeLights();
+        refreshHS();
+    });
+    $('#p6hsSearch').on('input', function () {
+        hsQuery = String(this.value || '').trim().toLowerCase();
+        refreshHS();
+    });
+    $('#p6hsClear').on('click', function () {
+        $('#p6hsSearch').val('');
+        hsQuery = '';
+        refreshHS();
+    });
+
+    renderCoeLights();
     updateAll();
 });

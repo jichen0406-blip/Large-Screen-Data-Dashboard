@@ -1,4 +1,4 @@
-// Page4：辖区数据管理2 — 辖区达成 3/4（挑战目标）+ 患者渠道销量 5
+// page5.js — AM下单&回输数据（key region2）：辖区达成 3/4（挑战目标）+ 患者渠道销量 5
 // 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
 $(function () {
     var B = window.BOARD_DATA;

@@ -681,7 +681,9 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .cart-tbl-row .c-code, .cart-tbl-hdr .c-code{ flex: 1.1; min-width: 90px; }
 .cart-tbl-row .c-hosp, .cart-tbl-hdr .c-hosp{ flex: 1.8; min-width: 150px; }
 .cart-tbl-row .c-pat, .cart-tbl-hdr .c-pat{ flex: .7; min-width: 60px; }
-.cart-tbl-row .c-type, .cart-tbl-hdr .c-type{ flex: .5; min-width: 46px; }
+.cart-tbl-row .c-type, .cart-tbl-hdr .c-type{ flex: .55; min-width: 58px; }
+/* 类型图标（单采 🧬 / 回输 💉） */
+.c-type-ico{ font-style: normal; margin-right: 4px; }
 .cart-tbl-row .c-cos, .cart-tbl-hdr .c-cos{ flex: .6; min-width: 64px; }
 .cart-tbl-row .c-cos.no{ color: rgba(255,255,255,.35); }
 .cart-tbl-row .c-st, .cart-tbl-hdr .c-st{ flex: 1; min-width: 110px; }
