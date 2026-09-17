@@ -699,3 +699,44 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .fs-body .cart-grid{ flex: 1; align-content: flex-start; }
 .fs-body .cart-day{ height: auto; }
 .fs-body .cd-body{ max-height: none; }
+
+/* ── 异常订单管理（长期未单采 / 长期未转生产 / 长期未回输） ── */
+/* 严重度配色：1 最轻（绿） → 6 最重（红），卡片与分类列共用 */
+.sev-1{ --sv:#62c98d; } .sev-2{ --sv:#4fe3ff; } .sev-3{ --sv:#ffd666; }
+.sev-4{ --sv:#ffb800; } .sev-5{ --sv:#ff8c42; } .sev-6{ --sv:#ff4d4f; }
+/* 顶部 AI 总结 */
+.abn-ai{ border:1px solid rgba(7,118,181,.5); box-shadow:inset 0 0 10px rgba(7,118,181,.4), 0 0 14px rgba(47,137,207,.2); background:rgba(2,24,61,.35); border-radius:8px; padding:10px 14px; margin:8px 0 10px; }
+.abn-ai-hd{ display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.abn-ai-tag{ font-size:12px; color:#02234d; background:linear-gradient(135deg,#4fe3ff,#62c98d); border-radius:4px; padding:1px 8px; font-weight:700; letter-spacing:1px; }
+.abn-ai-time{ font-size:12px; color:rgba(255,255,255,.5); }
+.abn-ai-txt{ font-size:14px; line-height:1.8; color:rgba(255,255,255,.9); letter-spacing:.3px; }
+.abn-ai-empty{ color:rgba(255,255,255,.35); }
+/* 卡片式汇总 */
+.abn-cards{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:10px; }
+.abn-card{ flex:1 1 0; min-width:110px; border:1px solid rgba(47,137,207,.45); border-left:3px solid var(--sv,#4fe3ff); background:rgba(2,24,61,.4); border-radius:6px; padding:8px 12px; }
+.abn-card-all{ --sv:#daf9ff; }
+.abn-card-zero{ opacity:.45; }
+.abn-card-b{ font-size:12px; color:rgba(255,255,255,.65); letter-spacing:1px; }
+.abn-card-n{ font-size:24px; font-weight:700; color:var(--sv,#4fe3ff); line-height:1.3; }
+.abn-card-s{ font-size:11px; color:rgba(255,255,255,.5); white-space:nowrap; }
+/* 控制区（沿用 .pt-time 容器，两行布局） */
+.abn-ctl{ flex-direction:column; align-items:stretch; gap:8px; }
+.abn-ctl-row{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.abn-lab{ font-size:13px; color:#daf9ff; white-space:nowrap; }
+.abn-inp{ height:30px; width:150px; padding:0 9px; background:rgba(2,24,61,.8); border:1px solid rgba(47,137,207,.7); border-radius:6px; color:#fff; font-size:13px; outline:none; }
+.abn-inp-wide{ width:190px; }
+.abn-inp::placeholder{ color:rgba(255,255,255,.3); }
+.abn-sel{ height:30px; }
+.abn-cnt{ margin-left:auto; font-size:13px; color:#daf9ff; }
+.abn-cnt b{ color:#4fe3ff; font-size:15px; }
+/* 明细表 */
+.abn-tbl th, .abn-tbl td{ white-space:nowrap; }
+.abn-tbl .abn-txt{ max-width:220px; overflow:hidden; text-overflow:ellipsis; }
+.abn-empty{ text-align:center; padding:30px; color:rgba(255,255,255,.4); }
+.abn-dur{ font-weight:700; color:#ffd666; }
+.abn-blank{ color:rgba(255,255,255,.3); }
+.abn-st{ font-size:12px; padding:1px 6px; border-radius:4px; border:1px solid; }
+.abn-st-full{ color:#4fe3ff; border-color:rgba(79,227,255,.6); background:rgba(79,227,255,.12); }
+.abn-st-cryo{ color:#b18aff; border-color:rgba(177,138,255,.6); background:rgba(177,138,255,.12); }
+.abn-bkt{ font-size:12px; font-weight:700; color:var(--sv,#4fe3ff); border:1px solid var(--sv,#4fe3ff); border-radius:4px; padding:1px 6px; }
+.abn-risk{ font-size:12px; font-weight:700; }

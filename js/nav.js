@@ -13,9 +13,12 @@
         { id: 'page4.html', key: 'region1', num: 'P7', name: '目标数据管理' },
         { id: 'page5.html', key: 'region2', num: 'P8', name: 'AM下单&回输数据' },
         { id: 'page6.html', key: 'region3', num: 'P9', name: '省份&医院数据' },
-        { id: 'page10.html', key: 'cart_daily', num: 'P10', name: 'CART运营每日跟进' },
-        { id: 'page11.html', key: 'overdue', num: 'P11', name: '逾期未执行汇总' },
-        { id: 'page8.html', key: 'reserved', num: 'P12', name: '预留' },
+        { id: 'page12.html', key: 'abn_nosample', num: 'P10', name: '长期未单采订单' },
+        { id: 'page13.html', key: 'abn_noproduction', num: 'P11', name: '长期未转生产' },
+        { id: 'page14.html', key: 'abn_noreinfusion', num: 'P12', name: '长期未回输订单' },
+        { id: 'page10.html', key: 'cart_daily', num: 'P13', name: 'CART运营每日跟进' },
+        { id: 'page11.html', key: 'overdue', num: 'P14', name: '逾期未执行汇总' },
+        { id: 'page8.html', key: 'reserved', num: 'P15', name: '预留' },
     ];
     var PAGES = window.BOARD_PAGES;
     var PER = 4; // 每屏最多 4 项
@@ -42,6 +45,9 @@
         'page9.html': '<svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg>',
         'page10.html': '<svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM16.53 11.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17l5.94-5.94z"/></svg>',
         'page11.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>',
+        'page12.html': '<svg viewBox="0 0 24 24"><path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.64 2.35 5.66 2.35 4.1-.79 5.66-2.35 2.34-3.67 2.34-5.67S19.22 9.56 17.66 8z"/></svg>',
+        'page13.html': '<svg viewBox="0 0 24 24"><path d="M18 22l-.01-6L14 12l3.99-4.01L18 2H6l.01 5.99L10 12l-3.99 4L6 22h12z"/></svg>',
+        'page14.html': '<svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>',
         'flow.html': '<svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>',
         'page2.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
         'page3.html': '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>',
@@ -59,8 +65,9 @@
         { label: '每日跟进', iconId: 'page9.html', keys: ['daily30', 'cart_daily', 'overdue'] },
         { label: '海外业务', iconId: 'page3.html', keys: ['sales', 'reg'] },
         { label: '辖区管理', iconId: 'page4.html', keys: ['region1', 'region2', 'region3'] },
-        { label: '系统', iconId: 'page7.html', keys: ['admin'] },
-        { label: '彩蛋', iconId: 'page8.html', keys: ['reserved'] }
+        { label: '异常订单管理', iconId: 'page11.html', keys: ['abn_nosample', 'abn_noproduction', 'abn_noreinfusion'] },
+        { label: '彩蛋', iconId: 'page8.html', keys: ['reserved'] },
+        { label: '系统', iconId: 'page7.html', keys: ['admin'] }
     ];
     function groupDefs() {
         return NAV_GROUPS.slice();

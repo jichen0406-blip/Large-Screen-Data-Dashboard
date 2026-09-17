@@ -17,3 +17,9 @@ users.js.bak
 # 部署前备份目录（不进 git）
 _backup*/
 _backup*
+
+# DeepSeek API 密钥（共享文件在 D:\VS Code\deepseek_api_key.txt；此处为兼容兜底）
+deepseek_api_key.txt
+
+# 异常订单 AI 摘要本地缓存（不入库）
+.abn_ai_cache.json

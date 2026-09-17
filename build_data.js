@@ -72,7 +72,7 @@ function parseDt(v) {
 var masterMap = {};
 mdRows.forEach(function(r) {
   var c = String(r['细胞追溯系统代码'] || '').trim();
-  if (c) masterMap[c] = { name: String(r['标准医院名称'] || '').trim(), prov: String(r['省份'] || '').trim(), city: String(r['城市'] || '').trim(), coe: String(r['COE'] || '').trim() };
+  if (c) masterMap[c] = { name: String(r['标准医院名称'] || '').trim(), prov: String(r['省份'] || '').trim(), city: String(r['城市'] || '').trim(), coe: String(r['COE'] || '').trim(), area: String(r['Area'] || '').trim() };
 });
 console.log('Master 记录数:', Object.keys(masterMap).length);
 
@@ -155,6 +155,7 @@ for (var i = 2; i < bsRows.length; i++) {
     prov: prov,
     city: city,
     coe: m ? m.coe : '',
+    area: m ? m.area : '',
     od: excelToDate(row[ci.od]),
     re: parseDt(row[ci.re]),
     ap: parseDt(row[ci.ap]),
@@ -795,7 +796,226 @@ records.forEach(function (r) {
 });
 console.log('CART_DAILY 记录数:', CART_DAILY.length);
 
-// ── 9. 输出 js/data.js（页面直接 <script> 引用） ──
+// ── 8q. 异常订单管理：三类异常订单（从 bs_order + order dict 重算；人工字段取自 异常订单管理.xlsx） ──
+// 长期未单采 = 有单 且 无实际单采开始；长期未转生产 = 已单采 且 无质量放行；长期未回输 = 已放行 且 无实际回输开始
+// 三者均剔除取消/终止单（order dict 取消回输标记='1'）；按流程阶段递进，天然互斥不重叠
+var ABN_SHEET_CFG = {
+  nosample:     { sheet: '长期未单采订单',   cols: ['长期未单采原因', '如何尽快预约单采（行动计划）', '预估单采时间'] },
+  noproduction: { sheet: '冻存长期未转生产', cols: ['长期未转生产原因', '如何尽快转生产（行动计划）', '预估生产时间'] },
+  noreinfusion: { sheet: '长期未回输订单',   cols: ['具体原因', '如何争取加快回输（行动计划）', '预估回输时间'] }
+};
+var abnManual = {}; // key → { 合同号 → {reason, action, planTime} }
+(function () {
+  var abnPath = path.join(rawDir, '异常订单管理.xlsx');
+  if (!fs.existsSync(abnPath)) abnPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '异常订单管理.xlsx');
+  if (!fs.existsSync(abnPath)) { console.warn('⚠️ 未找到 异常订单管理.xlsx，人工字段将留空'); return; }
+  try {
+    var abnWb = XLSX.readFile(abnPath);
+    Object.keys(ABN_SHEET_CFG).forEach(function (k) {
+      var cfg = ABN_SHEET_CFG[k], map = {};
+      try {
+        XLSX.utils.sheet_to_json(abnWb.Sheets[cfg.sheet], { defval: '' }).forEach(function (raw) {
+          var r = {}; // 该 sheet 表头带首尾空格，先归一化列名
+          Object.keys(raw).forEach(function (k) { r[String(k).trim()] = raw[k]; });
+          var no = String(r['合同号'] || '').trim();
+          if (!no) return;
+          map[no] = {
+            reason: String(r[cfg.cols[0]] || '').trim(),
+            action: String(r[cfg.cols[1]] || '').trim(),
+            planTime: String(r[cfg.cols[2]] || '').trim()
+          };
+        });
+      } catch (e) { console.warn('⚠️ 读取 sheet「' + cfg.sheet + '」失败: ' + e.message); }
+      abnManual[k] = map;
+    });
+    console.log('异常订单管理人工字段:', Object.keys(abnManual).map(function (k) { return k + '=' + Object.keys(abnManual[k]).length; }).join(' / '));
+  } catch (e) { console.warn('⚠️ 读取 异常订单管理.xlsx 失败:', e.message); }
+})();
+['nosample', 'noproduction', 'noreinfusion'].forEach(function (k) { if (!abnManual[k]) abnManual[k] = {}; });
+
+// 时长分档（左闭右开 [a,b)）与过期阈值（月）
+var ABN_BUCKETS = {
+  nosample:     [[0, 1], [1, 2], [2, 3], [3, 6], [6, 12], [12, Infinity]],
+  noproduction: [[0, 6], [6, 12], [12, 24], [24, Infinity]],
+  noreinfusion: [[0, 3], [3, 6], [6, Infinity]]
+};
+var ABN_EXPIRE = { noproduction: 12, noreinfusion: 6 };
+function abnLabel(a, b) { return b === Infinity ? ('≥' + a + ' 月') : (a === 0 ? ('0~' + b + ' 月') : (a + '~' + b + ' 月')); }
+function abnBucketOf(m, key) {
+  var bs = ABN_BUCKETS[key];
+  for (var i = 0; i < bs.length; i++) if (m >= bs[i][0] && m < bs[i][1]) return abnLabel(bs[i][0], bs[i][1]);
+  var last = bs[bs.length - 1];
+  return abnLabel(last[0], last[1]);
+}
+function abnMonths(d) {
+  if (!d) return null;
+  var t1 = new Date(String(d).slice(0, 10).replace(/-/g, '/'));
+  if (isNaN(t1.getTime())) return null;
+  var t0 = new Date(DP.replace(/-/g, '/'));
+  return Math.round(((t0 - t1) / 86400000) / 30 * 10) / 10;
+}
+function abnRisk(m, key) {
+  var th = ABN_EXPIRE[key];
+  if (!th || m === null) return '';
+  if (m >= th) return '已过期';
+  if (m >= th - 1) return '即将过期';
+  return '未过期';
+}
+var ABN_SPECS = [
+  { key: 'nosample',     pred: function (r) { return !r.ap; },               base: function (r) { return r.od; } },
+  { key: 'noproduction', pred: function (r) { return !!r.ap && !r.qa; },     base: function (r) { return r.receive; } },
+  { key: 'noreinfusion', pred: function (r) { return !!r.qa && !r.reStart; }, base: function (r) { return r.qa; } }
+];
+var ABN_MGMT = { UPDATED: UPDATED, summaryAt: '', pages: {} };
+ABN_SPECS.forEach(function (spec) {
+  var rows = [];
+  records.forEach(function (r) {
+    var d = dictInfo[r.no] || {};
+    if (d.cancel === '1') return;            // 剔除取消/终止单
+    if (!spec.pred(r)) return;
+    var months = abnMonths(spec.base(r));
+    if (months === null) return;             // 基准时间缺失，无法算时长
+    var info = mdByName[r.hosp];
+    var am = amClean[d.am] || d.am || (info && info.am) || '';
+    var man = abnManual[spec.key][r.no] || {};
+    rows.push({
+      code: r.code, no: r.no, ym: r.od ? r.od.slice(0, 7) : '',
+      patient: r.patient, area: r.area || '', am: am, prov: r.prov, city: r.city, hosp: r.hosp,
+      status: (String(r.pay || '').indexOf('择期') >= 0 || !!d.modZq) ? '冻存' : '全流程',
+      baseTime: spec.base(r), months: months, planRe: r.planRe || '',
+      bucket: abnBucketOf(months, spec.key),
+      risk: abnRisk(months, spec.key),
+      reason: man.reason || '', action: man.action || '', planTime: man.planTime || ''
+    });
+  });
+  rows.sort(function (a, b) { return b.months - a.months; });
+  ABN_MGMT.pages[spec.key] = { rows: rows };
+});
+console.log('异常订单（重算）: 未单采=' + ABN_MGMT.pages.nosample.rows.length +
+  ' 未转生产=' + ABN_MGMT.pages.noproduction.rows.length +
+  ' 未回输=' + ABN_MGMT.pages.noreinfusion.rows.length);
+
+
+// ── 9. 异常订单管理 AI 摘要（构建时调 DeepSeek；数据未变走缓存不重复调用） ──
+var ABN_CACHE_FILE = path.join(__dirname, '.abn_ai_cache.json');
+var ABN_PAGE_NAME = { nosample: '长期未单采订单', noproduction: '长期未转生产', noreinfusion: '长期未回输订单' };
+function sha1(s) { return require('crypto').createHash('sha1').update(s).digest('hex'); }
+function abnFingerprint(rows) {
+  return sha1(rows.map(function (r) { return [r.no, r.months, r.status, r.reason, r.action, r.planTime].join('~'); }).join('|'));
+}
+// 喂给 LLM 的统计文本（不传订单级明细，避免泄露敏感信息）
+function abnStatsText(key, rows) {
+  var buckets = ABN_BUCKETS[key], lines = [], total = rows.length;
+  lines.push('总单数：' + total);
+  buckets.forEach(function (b) {
+    var lb = abnLabel(b[0], b[1]);
+    var inB = rows.filter(function (r) { return r.bucket === lb; });
+    var oldest = inB.length ? Math.max.apply(null, inB.map(function (r) { return r.months; })) : 0;
+    lines.push(lb + '：' + inB.length + ' 单' + (inB.length ? '（最久 ' + oldest + ' 月）' : ''));
+  });
+  if (ABN_EXPIRE[key]) {
+    var risk = {};
+    rows.forEach(function (r) { risk[r.risk] = (risk[r.risk] || 0) + 1; });
+    lines.push('风险：' + Object.keys(risk).map(function (k) { return k + ' ' + risk[k] + ' 单'; }).join('，'));
+  }
+  var st = {}; rows.forEach(function (r) { st[r.status] = (st[r.status] || 0) + 1; });
+  lines.push('订单状态：' + Object.keys(st).map(function (k) { return k + ' ' + st[k] + ' 单'; }).join('，'));
+  var ar = {}; rows.forEach(function (r) { if (r.area) ar[r.area] = (ar[r.area] || 0) + 1; });
+  lines.push('Region：' + Object.keys(ar).sort().map(function (k) { return k + ' ' + ar[k] + ' 单'; }).join('，'));
+  var am = {}; rows.forEach(function (r) { if (r.am) am[r.am] = (am[r.am] || 0) + 1; });
+  lines.push('AM 单数 Top5：' + Object.keys(am).sort(function (a, b) { return am[b] - am[a]; }).slice(0, 5).map(function (k) { return k + ' ' + am[k]; }).join('，'));
+  var rs = {}; rows.forEach(function (r) { if (r.reason) rs[r.reason] = (rs[r.reason] || 0) + 1; });
+  var topR = Object.keys(rs).sort(function (a, b) { return rs[b] - rs[a]; }).slice(0, 5);
+  lines.push('主要原因 Top5：' + (topR.length ? topR.map(function (k) { return k + '（' + rs[k] + '）'; }).join('；') : '（无人工填写）'));
+  var noReason = rows.filter(function (r) { return !r.reason; }).length;
+  lines.push('未填写原因单数：' + noReason);
+  return lines.join('\n');
+}
+// 取 DeepSeek 密钥：优先环境变量，其次「共享密钥文件」——放在两个项目共同的上级目录
+// 正式/测试共用一份：D:\VS Code\deepseek_api_key.txt（不属任何仓库，不会提交）
+var DEEPSEEK_KEY_FILES = [
+  path.join(__dirname, '..', 'deepseek_api_key.txt'),  // 共享（推荐）
+  path.join(__dirname, 'deepseek_api_key.txt')         // 兼容：项目根同名文件
+];
+function readDeepseekKey() {
+  if (process.env.DEEPSEEK_API_KEY) return String(process.env.DEEPSEEK_API_KEY).trim();
+  for (var i = 0; i < DEEPSEEK_KEY_FILES.length; i++) {
+    try {
+      if (fs.existsSync(DEEPSEEK_KEY_FILES[i])) {
+        var s = fs.readFileSync(DEEPSEEK_KEY_FILES[i], 'utf-8').split(/\r?\n/)[0].trim();
+        if (s) return s;
+      }
+    } catch (e) {}
+  }
+  return '';
+}
+async function deepseekSummary(key, pageName, rows) {
+  var apiKey = readDeepseekKey();
+  if (!apiKey) {
+    console.error('\n✗ 未找到 DeepSeek API 密钥，无法生成「' + pageName + '」的 AI 摘要。');
+    console.error('  请把密钥写入共享文件（一行，只要密钥本身）：' + DEEPSEEK_KEY_FILES[0]);
+    console.error('  或设置环境变量 DEEPSEEK_API_KEY。');
+    process.exit(1);
+  }
+  var prompt = '以下是「' + pageName + '」的数据统计（数据截止 ' + DP + '）：\n\n' + abnStatsText(key, rows) +
+    '\n\n请写一段面向业务负责人的总结：说明总体规模、最集中的时长分档与原因、是否有需要立即处理的高风险订单（过期/即将过期），以及跟进建议。';
+  var resp;
+  try {
+    resp = await fetch('https://api.deepseek.com/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
+      body: JSON.stringify({
+        model: 'deepseek-chat',
+        messages: [
+          { role: 'system', content: '你是医药商业运营的数据分析助手。只输出一段简体中文总结，120 字以内，不要 Markdown、不要列表、不要标题。' },
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0.3,
+        max_tokens: 400
+      })
+    });
+  } catch (e) {
+    console.error('\n✗ 调用 DeepSeek 失败（网络异常）：「' + pageName + '」— ' + e.message);
+    process.exit(1);
+  }
+  if (!resp.ok) {
+    var body = '';
+    try { body = await resp.text(); } catch (e) {}
+    console.error('\n✗ 调用 DeepSeek 失败：「' + pageName + '」HTTP ' + resp.status + ' ' + body.slice(0, 200));
+    process.exit(1);
+  }
+  var j = await resp.json();
+  var txt = (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content || '').trim();
+  if (!txt) { console.error('\n✗ DeepSeek 返回空摘要：「' + pageName + '」'); process.exit(1); }
+  return txt;
+}
+async function buildAbnSummaries() {
+  var cache = {};
+  try { cache = JSON.parse(fs.readFileSync(ABN_CACHE_FILE, 'utf-8')) || {}; } catch (e) { cache = {}; }
+  var next = {};
+  for (var i = 0; i < ABN_SPECS.length; i++) {
+    var key = ABN_SPECS[i].key, rows = ABN_MGMT.pages[key].rows;
+    var fp = abnFingerprint(rows);
+    if (cache[key] && cache[key].fp === fp && cache[key].summary) {
+      ABN_MGMT.pages[key].summary = cache[key].summary;
+      next[key] = cache[key];
+      console.log('AI 摘要（缓存命中，未调用 LLM）:', ABN_PAGE_NAME[key]);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', ABN_PAGE_NAME[key], '…');
+      var s = await deepseekSummary(key, ABN_PAGE_NAME[key], rows);
+      ABN_MGMT.pages[key].summary = s;
+      next[key] = { fp: fp, summary: s, at: DP };
+      console.log('  ✓ ' + s.slice(0, 40) + (s.length > 40 ? '…' : ''));
+    }
+  }
+  try { fs.writeFileSync(ABN_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
+  ABN_MGMT.summaryAt = DP;
+}
+
+// ── 10. 输出 js/data.js（页面直接 <script> 引用） ──
+(async function () {
+await buildAbnSummaries();
+
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
   '/* 数据源: ' + bsFile + ' | 数据截止: ' + DP + ' */\n' +
   'var BOARD_DATA = ' + JSON.stringify({
@@ -820,7 +1040,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     REGIONS: REGIONS,
     GLOBAL_REG: GLOBAL_REG,
     FLOW: FLOW,
-    CART_DAILY: CART_DAILY
+    CART_DAILY: CART_DAILY,
+    ABN_MGMT: ABN_MGMT
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
@@ -843,3 +1064,7 @@ Object.keys(cityMap).sort(function(a, b) { return (cityMap[b].o + cityMap[b].r) 
   console.log('  ' + c + ': 下单 ' + cityMap[c].o + ' / 回输 ' + cityMap[c].r);
 });
 console.log('\n✅ 输出文件:', outPath);
+})().catch(function (e) {
+  console.error('\n✗ 构建失败：' + (e && e.stack ? e.stack : e));
+  process.exit(1);
+});
