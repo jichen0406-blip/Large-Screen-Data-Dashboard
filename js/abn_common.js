@@ -101,6 +101,7 @@
             '<span class="abn-lab">合同号</span><input type="text" id="abnFNo" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
             '<span class="abn-lab">AM</span><input type="text" id="abnFAm" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
             '<span class="abn-lab">医院名称</span><input type="text" id="abnFHosp" class="abn-inp abn-inp-wide" placeholder="模糊搜索" autocomplete="off">' +
+            '<button type="button" class="cart-btn" id="abnExport">导出 Excel</button>' +
             '<button type="button" class="cart-btn ghost" id="abnClear">清空</button>' +
             '</div><div class="abn-ctl-row">' +
             '<span class="abn-lab">分类</span><select id="abnFBucket" class="pt-sel abn-sel"><option value="">全部</option>' +
@@ -118,43 +119,53 @@
     }
     function statusIcon(s) { return s === '冻存' ? '❄ ' : '▶ '; }
 
+    // ── 明细表列定义（页面渲染与 Excel 导出的唯一来源，保证两者永不漂移） ──
+    // 每列：t 表头 / v(r) 取值（导出用纯文本）/ html(r) 可选，单元格富文本 / txt 长文本列 / lbl 主字段列
+    function tableCols() {
+        var cols = [
+            { t: '细胞追溯码', v: function (r) { return r.code || '--'; } },
+            { t: '合同号', v: function (r) { return r.no || '--'; } },
+            { t: '订单月', v: function (r) { return r.ym || '--'; } },
+            { t: '患者名称', v: function (r) { return r.patient || '--'; } },
+            { t: 'Region', v: function (r) { return r.area || '--'; } },
+            { t: 'AM', v: function (r) { return r.am || '--'; } },
+            { t: '省份', v: function (r) { return r.prov || '--'; } },
+            { t: '城市', v: function (r) { return r.city || '--'; } },
+            { t: '医院名称', v: function (r) { return r.hosp || '未知医院'; }, lbl: true },
+            {
+                t: '订单状态', v: function (r) { return r.status; },
+                html: function (r) { return '<span class="abn-st abn-st-' + (r.status === '冻存' ? 'cryo' : 'full') + '">' + statusIcon(r.status) + esc(r.status) + '</span>'; }
+            },
+            { t: CFG.baseLabel, v: function (r) { return r.baseTime || '--'; } }
+        ];
+        if (CFG.extraLabel) cols.push({ t: CFG.extraLabel, v: function (r) { return r.planRe || '--'; } });
+        cols.push({ t: CFG.durLabel, v: function (r) { return r.months; }, cls: 'abn-dur' });
+        cols.push({
+            t: '分类', v: function (r) { return r.bucket; },
+            html: function (r) { return '<span class="abn-bkt sev-' + (SEV[r.bucket] || 1) + '">' + esc(r.bucket) + '</span>'; }
+        });
+        if (CFG.risk) cols.push({ t: '风险提示', v: function (r) { return r.risk || '--'; }, html: function (r) { return renderRisk(r.risk); } });
+        cols.push({ t: CFG.colTitle, v: function (r) { return r.reason || '--'; }, txt: true });
+        cols.push({ t: CFG.actTitle, v: function (r) { return r.action || '--'; }, txt: true });
+        cols.push({ t: CFG.planTitle, v: function (r) { return r.planTime || '--'; }, txt: true });
+        return cols;
+    }
+
     // ── 明细表 ──
     function renderTable() {
         var rows = rowsVisible();
         var cnt = document.getElementById('abnCnt');
         if (cnt) cnt.innerHTML = '共 <b>' + rows.length + '</b> 条';
-        var th = ['细胞追溯码', '合同号', '订单月', '患者名称', 'Region', 'AM', '省份', '城市', '医院名称', '订单状态',
-            CFG.baseLabel];
-        if (CFG.extraLabel) th.push(CFG.extraLabel);
-        th.push(CFG.durLabel, '分类');
-        if (CFG.risk) th.push('风险提示');
-        th.push(CFG.colTitle, CFG.actTitle, CFG.planTitle);
-
-        var h = '<table class="pt abn-tbl"><thead><tr>' + th.map(function (t) { return '<th>' + esc(t) + '</th>'; }).join('') + '</tr></thead><tbody>';
+        var cols = tableCols();
+        var h = '<table class="pt abn-tbl"><thead><tr>' + cols.map(function (c) { return '<th>' + esc(c.t) + '</th>'; }).join('') + '</tr></thead><tbody>';
         if (!rows.length) {
-            h += '<tr><td colspan="' + th.length + '" class="abn-empty">无符合条件的记录</td></tr>';
+            h += '<tr><td colspan="' + cols.length + '" class="abn-empty">无符合条件的记录</td></tr>';
         } else {
             rows.forEach(function (r) {
-                h += '<tr>' +
-                    '<td>' + esc(r.code || '--') + '</td>' +
-                    '<td>' + esc(r.no) + '</td>' +
-                    '<td>' + esc(r.ym || '--') + '</td>' +
-                    '<td>' + esc(r.patient || '--') + '</td>' +
-                    '<td>' + esc(r.area || '--') + '</td>' +
-                    '<td>' + esc(r.am || '--') + '</td>' +
-                    '<td>' + esc(r.prov || '--') + '</td>' +
-                    '<td>' + esc(r.city || '--') + '</td>' +
-                    '<td class="pt-lbl">' + esc(r.hosp || '未知医院') + '</td>' +
-                    '<td><span class="abn-st abn-st-' + (r.status === '冻存' ? 'cryo' : 'full') + '">' + statusIcon(r.status) + esc(r.status) + '</span></td>' +
-                    '<td>' + esc(r.baseTime || '--') + '</td>' +
-                    (CFG.extraLabel ? '<td>' + esc(r.planRe || '--') + '</td>' : '') +
-                    '<td class="abn-dur">' + r.months + '</td>' +
-                    '<td><span class="abn-bkt sev-' + (SEV[r.bucket] || 1) + '">' + esc(r.bucket) + '</span></td>' +
-                    (CFG.risk ? '<td>' + renderRisk(r.risk) + '</td>' : '') +
-                    '<td class="abn-txt" title="' + esc(r.reason) + '">' + (r.reason ? esc(r.reason) : '<span class="abn-blank">--</span>') + '</td>' +
-                    '<td class="abn-txt" title="' + esc(r.action) + '">' + (r.action ? esc(r.action) : '<span class="abn-blank">--</span>') + '</td>' +
-                    '<td class="abn-txt" title="' + esc(r.planTime) + '">' + (r.planTime ? esc(r.planTime) : '<span class="abn-blank">--</span>') + '</td>' +
-                    '</tr>';
+                h += '<tr>' + cols.map(function (c) {
+                    var cls = c.lbl ? ' class="pt-lbl"' : (c.cls ? ' class="' + c.cls + '"' : (c.txt ? ' class="abn-txt" title="' + esc(c.v(r)) + '"' : ''));
+                    return '<td' + cls + '>' + (c.html ? c.html(r) : esc(c.v(r))) + '</td>';
+                }).join('') + '</tr>';
             });
         }
         h += '</tbody></table>';
@@ -164,6 +175,39 @@
         if (!v) return '<span class="abn-blank">--</span>';
         var m = RISK_MAP[v] || { color: '#9aa0a6', ico: '' };
         return '<span class="abn-risk" style="color:' + m.color + '">' + m.ico + ' ' + esc(v) + '</span>';
+    }
+
+    // ── 导出当前筛选结果为 .xlsx（列与页面表格完全一致） ──
+    function pad2(n) { return (n < 10 ? '0' : '') + n; }
+    function todayStr() {
+        var d = new Date(Date.now() + 8 * 3600000); // 北京时间
+        return d.getUTCFullYear() + '-' + pad2(d.getUTCMonth() + 1) + '-' + pad2(d.getUTCDate());
+    }
+    function pageTitle() {
+        return String(document.title || '').split('·').pop().trim() || '异常订单';
+    }
+    function colWidth(c) {
+        if (c.txt) return 40;                       // 原因 / 行动计划 / 预估时间
+        if (c.t === '医院名称') return 34;
+        if (c.t === CFG.durLabel) return 16;
+        if (c.t === '细胞追溯码') return 16;
+        if (c.t === CFG.colTitle || c.t === CFG.actTitle || c.t === CFG.planTitle) return 40;
+        if (c.t === '合同号' || c.t === '患者名称') return 12;
+        return 10;
+    }
+    function exportExcel() {
+        if (typeof XLSX === 'undefined') { alert('导出库未加载（js/xlsx.full.min.js），无法导出。'); return; }
+        var rows = rowsVisible();
+        if (!rows.length) { alert('当前无可导出的记录。'); return; }
+        var cols = tableCols();
+        var aoa = [cols.map(function (c) { return c.t; })];
+        rows.forEach(function (r) { aoa.push(cols.map(function (c) { return c.v(r); })); });
+        var ws = XLSX.utils.aoa_to_sheet(aoa);
+        ws['!cols'] = cols.map(function (c) { return { wch: colWidth(c) }; });
+        var wb = XLSX.utils.book_new();
+        var name = pageTitle().slice(0, 31);
+        XLSX.utils.book_append_sheet(wb, ws, name);
+        XLSX.writeFile(wb, name + '_' + todayStr() + '.xlsx');
     }
 
     function renderAll() { renderCards(); renderTable(); }
@@ -188,6 +232,7 @@
             if (!next && onCnt <= 1) return;
             f.risk[v] = next; $(this).toggleClass('on', next); renderTable();
         });
+        $('#abnExport').on('click', exportExcel);
         $('#abnClear').on('click', function () {
             f.code = f.no = f.am = f.hosp = ''; f.bucket = '';
             ['abnFCode', 'abnFNo', 'abnFAm', 'abnFHosp'].forEach(function (id) { $('#' + id).val(''); });
