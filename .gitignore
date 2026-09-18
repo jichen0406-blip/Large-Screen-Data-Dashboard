@@ -4,15 +4,25 @@ rawdata/
 node_modules/
 .DS_Store
 *.log
+# 导出/交付文件（本地生成，不进 git）
+*.xlsx
 # 模板遗留未引用的文件（如确认不需要可删除）
 js/44.json
 js/area_echarts.js
 js/Bubble.js
 
-# 异常订单 AI 摘要本地缓存（含生成结果，不入库）
+sync_server.js
+users.js.bak
+*.bak
+# 部署前备份目录（不进 git）
+_backup*/
+_backup*
+
+# DeepSeek API 密钥（共享文件在 D:\VS Code\deepseek_api_key.txt；此处为兼容兜底）
+deepseek_api_key.txt
+
+# 异常订单 AI 摘要本地缓存（不入库）
 .abn_ai_cache.json
 
-# DeepSeek API 密钥（本地文件，不入库）
-deepseek_api_key.txt
 # AI 摘要缓存（含异常订单管理 + 省份&医院数据，不入库）
 .ai_summary_cache.json
