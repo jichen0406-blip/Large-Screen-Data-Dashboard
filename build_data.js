@@ -881,7 +881,9 @@ ABN_SPECS.forEach(function (spec) {
     rows.push({
       code: r.code, no: r.no, ym: r.od ? r.od.slice(0, 7) : '',
       patient: r.patient, area: r.area || '', am: am, prov: r.prov, city: r.city, hosp: r.hosp,
-      status: (String(r.pay || '').indexOf('择期') >= 0 || !!d.modZq) ? '冻存' : '全流程',
+      // 冻存判定与「福可苏全流程跟进」页同口径（js/page_flow.js:49）：择期且**未恢复生产**才算冻存；
+      // 已「恢复生产」的择期单已走生产流程，属全流程（取消单上面已剔除）
+      status: ((String(r.pay || '').indexOf('择期') >= 0 || !!d.modZq) && !d.resume) ? '冻存' : '全流程',
       baseTime: spec.base(r), months: months, planRe: r.planRe || '',
       bucket: abnBucketOf(months, spec.key),
       risk: abnRisk(months, spec.key),
@@ -896,8 +898,82 @@ console.log('异常订单（重算）: 未单采=' + ABN_MGMT.pages.nosample.row
   ' 未回输=' + ABN_MGMT.pages.noreinfusion.rows.length);
 
 
-// ── 9. 异常订单管理 AI 摘要（构建时调 DeepSeek；数据未变走缓存不重复调用） ──
-var ABN_CACHE_FILE = path.join(__dirname, '.abn_ai_cache.json');
+// ── 8r. 省份&医院数据页 AI 摘要的统计口径（与前端 page6.js 的 accumulate 一致：当年 1 月～最新数据月 YTD，仅国内 DOM） ──
+var R3_YM = ''; // 最新有数据的月（前端默认月同源）
+Object.keys(REGIONS.HOSP).forEach(function (k) { if (k > R3_YM) R3_YM = k; });
+var R3_Y = R3_YM.slice(0, 4), R3_M = parseInt(R3_YM.slice(5, 7), 10);
+var r3Acc = {}, r3LastYear = {};
+(function () {
+  function p2(n) { return (n < 10 ? '0' : '') + n; }
+  for (var i = 1; i <= R3_M; i++) {
+    var b = REGIONS.HOSP[R3_Y + '-' + p2(i)], lb = REGIONS.HOSP[(R3_Y - 1) + '-' + p2(i)];
+    if (b) Object.keys(b).forEach(function (k) { var v = r3Acc[k] || (r3Acc[k] = { o: 0, r: 0 }); v.o += b[k].o || 0; v.r += b[k].r || 0; });
+    if (lb) Object.keys(lb).forEach(function (k) { var v = r3LastYear[k] || (r3LastYear[k] = { o: 0, r: 0 }); v.o += lb[k].o || 0; v.r += lb[k].r || 0; });
+  }
+})();
+function r3RowsAcc() {
+  var rows = [];
+  Object.keys(r3Acc).forEach(function (k) {
+    var v = r3Acc[k]; if (!(v.o > 0 || v.r > 0)) return;
+    var p = k.split('|');
+    rows.push({ am: p[0], prov: p[1], city: p[2], hosp: p[3], o: v.o, r: v.r });
+  });
+  return rows;
+}
+function r3ProvinceStatsText() {
+  var rows = r3RowsAcc(), agg = {};
+  rows.forEach(function (r) {
+    var pk = r.am + '|' + r.prov;
+    var g = agg[pk] || (agg[pk] = { o: 0, r: 0, hosp: {} });
+    g.o += r.o; g.r += r.r; if (r.o > 0) g.hosp[r.hosp] = true;
+  });
+  var ly = {};
+  Object.keys(r3LastYear).forEach(function (k) {
+    var p = k.split('|'), pk = p[0] + '|' + p[1];
+    ly[pk] = (ly[pk] || 0) + (r3LastYear[k].o || 0);
+  });
+  var list = Object.keys(agg).map(function (pk) {
+    var p = pk.split('|'), g = agg[pk], lo = ly[pk] || 0;
+    return { pk: pk, label: p[0] + ' · ' + p[1], o: g.o, r: g.r, n: Object.keys(g.hosp).length, lo: lo, d: g.o - lo };
+  });
+  var L = [];
+  L.push('统计口径：' + R3_Y + ' 年 1–' + R3_M + ' 月累计（YTD），仅国内医院；表格行「AM · 省份」共 ' + list.length + ' 个');
+  L.push('下单 Top6：' + list.slice().sort(function (a, b) { return b.o - a.o; }).slice(0, 6)
+    .map(function (x) { return x.label + '（下单 ' + x.o + ' / 回输 ' + x.r + ' / 医院 ' + x.n + ' 家）'; }).join('；'));
+  L.push('回输 Top5：' + list.slice().sort(function (a, b) { return b.r - a.r; }).slice(0, 5)
+    .map(function (x) { return x.label + '（回输 ' + x.r + '）'; }).join('；'));
+  var totO = list.reduce(function (s, x) { return s + x.o; }, 0);
+  var totR = list.reduce(function (s, x) { return s + x.r; }, 0);
+  var hospSet = {}; rows.forEach(function (r) { if (r.o > 0) hospSet[r.hosp] = true; });
+  L.push('合计：下单 ' + totO + '，回输 ' + totR + '；YTD 有下单的医院（去重）' + Object.keys(hospSet).length + ' 家');
+  var up = list.filter(function (x) { return x.d > 0; }).sort(function (a, b) { return b.d - a.d; }).slice(0, 3);
+  var dn = list.filter(function (x) { return x.d < 0; }).sort(function (a, b) { return a.d - b.d; }).slice(0, 3);
+  L.push('同比去年（下单）上升最多：' + (up.length ? up.map(function (x) { return x.label + ' +' + x.d; }).join('；') : '无'));
+  L.push('同比下降最多：' + (dn.length ? dn.map(function (x) { return x.label + ' ' + x.d; }).join('；') : '无'));
+  return L.join('\n');
+}
+function r3HospitalStatsText() {
+  var rows = r3RowsAcc(), COEHOSP = REGIONS.COEHOSP || {};
+  var L = [];
+  L.push('统计口径：' + R3_Y + ' 年 1–' + R3_M + ' 月累计（YTD），仅国内医院；YTD 内有下单或回输的医院共 ' + rows.length + ' 家');
+  var coe = {}; rows.forEach(function (r) { var c = COEHOSP[r.prov + '|' + r.city + '|' + r.hosp] || 'Others'; coe[c] = (coe[c] || 0) + 1; });
+  L.push('COE 分层（按医院数）：' + ['SCOE', 'COE', 'RCOE', 'Others'].map(function (c) { return c + ' ' + (coe[c] || 0) + ' 家'; }).join('，'));
+  L.push('下单 Top8 医院：' + rows.slice().sort(function (a, b) { return b.o - a.o; }).slice(0, 8)
+    .map(function (x) { return x.hosp + '（' + x.prov + '，下单 ' + x.o + ' / 回输 ' + x.r + '）'; }).join('；'));
+  var dpD = new Date(DP.replace(/-/g, '/'));
+  var gaps = rows.map(function (r) {
+    var ld = REGIONS.HSLAST[r.prov + '|' + r.city + '|' + r.hosp];
+    if (!ld) return null;
+    return { hosp: r.hosp, gap: Math.round((dpD - new Date(String(ld).replace(/-/g, '/'))) / 86400000) };
+  }).filter(function (x) { return x && x.gap > 90; }).sort(function (a, b) { return b.gap - a.gap; });
+  L.push('「最近一次下单」距今 >90 天的医院：' + gaps.length + ' 家' + (gaps.length ? '，最久 ' + gaps[0].hosp + '（' + gaps[0].gap + ' 天）' : ''));
+  return L.join('\n');
+}
+var REGION3_AI = { at: R3_YM, province: { summary: '' }, hospital: { summary: '' } };
+
+// ── 9. AI 摘要（构建时调 DeepSeek；数据未变走缓存不重复调用） ──
+// 覆盖：异常订单管理三页 + 省份&医院数据页两张表
+var AI_CACHE_FILE = path.join(__dirname, '.ai_summary_cache.json');
 var ABN_PAGE_NAME = { nosample: '长期未单采订单', noproduction: '长期未转生产', noreinfusion: '长期未回输订单' };
 function sha1(s) { return require('crypto').createHash('sha1').update(s).digest('hex'); }
 function abnFingerprint(rows) {
@@ -949,7 +1025,7 @@ function readDeepseekKey() {
   }
   return '';
 }
-async function deepseekSummary(key, pageName, rows) {
+async function deepseekSummary(pageName, statsText, ask) {
   var apiKey = readDeepseekKey();
   if (!apiKey) {
     console.error('\n✗ 未找到 DeepSeek API 密钥，无法生成「' + pageName + '」的 AI 摘要。');
@@ -957,8 +1033,8 @@ async function deepseekSummary(key, pageName, rows) {
     console.error('  或设置环境变量 DEEPSEEK_API_KEY。');
     process.exit(1);
   }
-  var prompt = '以下是「' + pageName + '」的数据统计（数据截止 ' + DP + '）：\n\n' + abnStatsText(key, rows) +
-    '\n\n请写一段面向业务负责人的总结：说明总体规模、最集中的时长分档与原因、是否有需要立即处理的高风险订单（过期/即将过期），以及跟进建议。';
+  var prompt = '以下是「' + pageName + '」的数据统计（数据截止 ' + DP + '）：\n\n' + statsText +
+    '\n\n' + (ask || '请写一段面向业务负责人的总结：说明总体规模、最集中的分档与原因、是否有需要立即处理的高风险项，以及跟进建议。');
   var resp;
   try {
     resp = await fetch('https://api.deepseek.com/chat/completions', {
@@ -989,10 +1065,12 @@ async function deepseekSummary(key, pageName, rows) {
   if (!txt) { console.error('\n✗ DeepSeek 返回空摘要：「' + pageName + '」'); process.exit(1); }
   return txt;
 }
-async function buildAbnSummaries() {
+async function buildSummaries() {
   var cache = {};
-  try { cache = JSON.parse(fs.readFileSync(ABN_CACHE_FILE, 'utf-8')) || {}; } catch (e) { cache = {}; }
+  try { cache = JSON.parse(fs.readFileSync(AI_CACHE_FILE, 'utf-8')) || {}; } catch (e) { cache = {}; }
   var next = {};
+
+  // 1) 异常订单管理三页
   for (var i = 0; i < ABN_SPECS.length; i++) {
     var key = ABN_SPECS[i].key, rows = ABN_MGMT.pages[key].rows;
     var fp = abnFingerprint(rows);
@@ -1002,19 +1080,43 @@ async function buildAbnSummaries() {
       console.log('AI 摘要（缓存命中，未调用 LLM）:', ABN_PAGE_NAME[key]);
     } else {
       console.log('AI 摘要（调用 DeepSeek）:', ABN_PAGE_NAME[key], '…');
-      var s = await deepseekSummary(key, ABN_PAGE_NAME[key], rows);
+      var s = await deepseekSummary(ABN_PAGE_NAME[key], abnStatsText(key, rows),
+        '请写一段面向业务负责人的总结：说明总体规模、最集中的时长分档与原因、是否有需要立即处理的高风险订单（过期/即将过期），以及跟进建议。');
       ABN_MGMT.pages[key].summary = s;
       next[key] = { fp: fp, summary: s, at: DP };
       console.log('  ✓ ' + s.slice(0, 40) + (s.length > 40 ? '…' : ''));
     }
   }
-  try { fs.writeFileSync(ABN_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
+
+  // 2) 省份&医院数据页（两张表各一段；口径为「最新数据月」所在年的 1..M 月累计）
+  var r3 = [
+    { k: 'r3_province', name: '省份数据', slot: REGION3_AI.province, text: r3ProvinceStatsText(),
+      ask: '请写一段面向业务负责人的总结：说明省份整体表现、头部省份集中度、同比增减明显的省份，以及关注建议。' },
+    { k: 'r3_hospital', name: '医院数据', slot: REGION3_AI.hospital, text: r3HospitalStatsText(),
+      ask: '请写一段面向业务负责人的总结：说明覆盖医院规模、COE 分层结构、头部医院表现，以及长期未下单（空窗期长）的医院情况与跟进建议。' }
+  ];
+  for (var j = 0; j < r3.length; j++) {
+    var it = r3[j], fp2 = sha1(it.text);
+    if (cache[it.k] && cache[it.k].fp === fp2 && cache[it.k].summary) {
+      it.slot.summary = cache[it.k].summary;
+      next[it.k] = cache[it.k];
+      console.log('AI 摘要（缓存命中，未调用 LLM）:', it.name);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', it.name, '…');
+      var s2 = await deepseekSummary(it.name, it.text, it.ask);
+      it.slot.summary = s2;
+      next[it.k] = { fp: fp2, summary: s2, at: R3_YM };
+      console.log('  ✓ ' + s2.slice(0, 40) + (s2.length > 40 ? '…' : ''));
+    }
+  }
+
+  try { fs.writeFileSync(AI_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
   ABN_MGMT.summaryAt = DP;
 }
 
 // ── 10. 输出 js/data.js（页面直接 <script> 引用） ──
 (async function () {
-await buildAbnSummaries();
+await buildSummaries();
 
 var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */\n' +
   '/* 数据源: ' + bsFile + ' | 数据截止: ' + DP + ' */\n' +
@@ -1041,7 +1143,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     GLOBAL_REG: GLOBAL_REG,
     FLOW: FLOW,
     CART_DAILY: CART_DAILY,
-    ABN_MGMT: ABN_MGMT
+    ABN_MGMT: ABN_MGMT,
+    REGION3_AI: REGION3_AI
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');

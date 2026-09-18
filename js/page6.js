@@ -155,6 +155,24 @@ $(function () {
         document.getElementById('p6tPV').innerHTML = h;
     }
 
+    // ── 表格下方 AI 总结（构建时快照，不随年月/筛选变化） ──
+    function renderAI() {
+        var R = B.REGION3_AI;
+        if (!R) return;
+        var ym = String(R.at || '');
+        var scope = ym ? ('截至 ' + ym + '（当年 1–' + parseInt(ym.slice(5, 7), 10) + ' 月累计）') : '';
+        function box(elId, slot) {
+            var el = document.getElementById(elId);
+            if (!el) return;
+            var s = (slot && slot.summary) || '';
+            el.innerHTML = '<div class="p6-ai-hd"><span class="p6-ai-tag">AI 总结</span>' +
+                (scope ? '<span class="p6-ai-time">' + scope + '</span>' : '') + '</div>' +
+                '<div class="p6-ai-txt' + (s ? '' : ' p6-ai-empty') + '">' + (s || '暂无总结（构建时未生成）') + '</div>';
+        }
+        box('p6aiPV', R.province);
+        box('p6aiHS', R.hospital);
+    }
+
     // ── 事件：COE 药丸多选、医院名实时模糊搜索、清空 ──
     function refreshHS() { renderHS(currentRows()); }
     $('#p6coeLights').on('click', '.cart-light', function () {
@@ -177,5 +195,6 @@ $(function () {
     });
 
     renderCoeLights();
+    renderAI();
     updateAll();
 });
