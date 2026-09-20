@@ -14,11 +14,12 @@ $(function () {
 
     // 无颜色段（完全透明，仅占堆叠高度）
     var NO_COLOR = 'rgba(0,0,0,0)';
+    // 统一色板（js/palette.js）
     var COLORS = {
-        order: '#4fc3f7',
-        zqNo: '#ffb74d', zqExp: '#ff8a65', zqOk: '#aed581',
-        b3: '#ef5350', b4: '#4dd0e1', b5: '#f06292', b6: '#b39ddb', b7: '#ffd54f', b8: '#e57373',
-        b9: '#4db6ac', b10Fail: '#ff7043', b10Dead: '#90a4ae', b11: '#81c784', b12: '#7986cb', b13: '#64b5f6'
+        order: boardColor(0),
+        zqNo: boardColor(1), zqExp: boardColor(2), zqOk: boardColor(3),
+        b3: boardColor(4), b4: boardColor(5), b5: boardColor(6), b6: boardColor(7), b7: boardColor(8), b8: boardColor(9),
+        b9: boardColor(10), b10Fail: boardColor(11), b10Dead: boardColor(12), b11: boardColor(13), b12: boardColor(2), b13: boardColor(0)
     };
 
     // ── 时间范围控制器（起始/结束 年月下拉） ──

@@ -84,7 +84,7 @@ $(function () {
     // 热力色阶
     function hexToRgb(h) { var n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
     function rampColor(v, max) {
-        var ramp = ['#1f7fd4', '#26a5e0', '#2fe0f0', '#7bed9f', '#ffeb7b'];
+        var ramp = boardRamp(5);
         var t = max > 0 ? v / max : 0;
         var pos = Math.min(ramp.length - 1, t * (ramp.length - 1));
         var i = Math.floor(pos), f = pos - i;
@@ -133,7 +133,7 @@ $(function () {
                 rippleEffect: { show: true, brushType: 'stroke', scale: 3, period: 3 },
                 zlevel: 3,
                 label: { normal: { show: true, formatter: '{b}', fontSize: 9, color: 'rgba(255,255,255,.85)', position: 'right' }, emphasis: { show: true, fontSize: 11 } },
-                itemStyle: { normal: { color: '#00d4ff' } }
+                itemStyle: { normal: { color: boardColor(1) } }
             });
         } else {
             // 不可见散点：仅作 visualMap 图例锚点（热力色在 regions 里已手算），不显示
@@ -161,7 +161,7 @@ $(function () {
                 series.push({
                     name: '飞线', type: 'lines', coordinateSystem: 'geo', zlevel: 2,
                     effect: { show: true, period: 7, constantSpeed: 50, trailLength: 0, symbol: 'image://images/plane-white.png', symbolSize: 16, color: '#fff' },
-                    lineStyle: { normal: { color: '#22c1e3', width: 1, opacity: 0.5, curveness: 0.25 } },
+                    lineStyle: { normal: { color: boardColor(1), width: 1, opacity: 0.5, curveness: 0.25 } },
                     data: linesData
                 });
             }
@@ -188,7 +188,7 @@ $(function () {
                     symbol: 'image://images/logo-deer-cn-white.png',
                     symbolSize: 52,
                     label: { normal: { show: false }, emphasis: { show: false } },
-                    itemStyle: { normal: { color: '#00d4ff' } }
+                    itemStyle: { normal: { color: boardColor(1) } }
                 });
             }
         }
@@ -228,7 +228,7 @@ $(function () {
                 type: 'continuous', min: 0, max: max || 1, seriesIndex: 0,
                 left: 12, bottom: 12, itemWidth: 12, itemHeight: 90,
                 text: ['高', '低'], textStyle: { color: 'rgba(255,255,255,.7)', fontSize: 10 },
-                inRange: { color: ['#1f7fd4', '#26a5e0', '#2fe0f0', '#7bed9f', '#ffeb7b'] }
+                inRange: { color: boardRamp(5) }
             };
         }
         return option;

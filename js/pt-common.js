@@ -9,6 +9,13 @@ function mVal(bucket, y, mo, ent, fld) {
     return (b && b[ent] && b[ent][fld]) || 0;
 }
 function pct2(a, t) { return (t && t > 0) ? Math.round(a / t * 100) + '%' : '--'; }
+// 达成率（Act%）按档着色：<80% 红 / ≥100% 绿 / 中间 黄
+function pctHTML(a, t) {
+    if (!(t > 0)) return '--';
+    var v = Math.round(a / t * 100);
+    var cls = v < 80 ? 'pt-pct-red' : (v >= 100 ? 'pt-pct-green' : 'pt-pct-yellow');
+    return '<span class="' + cls + '">' + v + '%</span>';
+}
 function yoyStr(c, l) {
     if (!(l > 0)) return '<span class="pt-ny">--</span>';
     var v = (c - l) / l * 100;
@@ -20,7 +27,7 @@ function ptCell(mt, i, m, t, a, l) {
     var c = '--';
     if (mt === 'Tar') c = t > 0 ? t : '--';
     else if (mt === 'Act') c = (i <= m && a > 0) ? a : '';
-    else if (mt === 'Act%') c = (i <= m) ? pct2(a, t) : '';
+    else if (mt === 'Act%') c = (i <= m) ? pctHTML(a, t) : '';
     else if (mt === 'LY') c = l > 0 ? l : '--';
     else c = (i <= m) ? yoyStr(a, l) : '';
     return '<td' + (i === m ? ' class="pt-cur"' : '') + '>' + c + '</td>';
@@ -29,7 +36,7 @@ function ptYtdCell(mt, yt, ya, yl) {
     var yc = '--';
     if (mt === 'Tar') yc = yt > 0 ? yt : '--';
     else if (mt === 'Act') yc = ya > 0 ? ya : '';
-    else if (mt === 'Act%') yc = pct2(ya, yt);
+    else if (mt === 'Act%') yc = pctHTML(ya, yt);
     else if (mt === 'LY') yc = yl > 0 ? yl : '--';
     else yc = yoyStr(ya, yl);
     return '<td class="pt-ytd">' + yc + '</td>';

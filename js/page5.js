@@ -1,21 +1,11 @@
-// page5.js — AM下单&回输数据（key region2）：辖区达成 3/4（挑战目标）+ 患者渠道销量 5
+// page5.js — AM下单&回输数据（key region2）：辖区下单/回输达成（挑战目标）
 // 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
 $(function () {
     var B = window.BOARD_DATA;
     if (!B || !B.REGIONS) return;
     var REGIONS = B.REGIONS;
-    var CHAL = REGIONS.CHAL || {}, ATTAIN = REGIONS.ATTAIN || {}, OV = REGIONS.OV || {};
+    var CHAL = REGIONS.CHAL || {}, ATTAIN = REGIONS.ATTAIN || {};
     var AMS = REGIONS.AMS || [];
-
-    // 表5 渠道（下单/回输共用，仅 fld 不同）
-    var CH_ITEMS = [
-        { label: '国内医生导流', key: 'docRef' },
-        { label: 'OB导流', key: 'obRef' },
-        { label: '香港商业化', key: 'hk' },
-        { label: '新加坡商业化', key: 'sg' },
-        { label: '沙特NPP', key: 'ksa' },
-        { label: 'Total', key: 'total', total: true }
-    ];
 
     var yearKeys = {};
     Object.keys(REGIONS.ND || {}).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
@@ -76,39 +66,9 @@ $(function () {
         renderEntTable(elId, title, ATTAIN, regEnts(fld));
     }
 
-    // 5 患者渠道销量（仅达成，白字，Total 蓝色行；首列类型合并区分下单/回输）
-    function renderOV(elId) {
-        var y = parseInt($('#p5y').val(), 10), m = parseInt($('#p5m').val(), 10);
-        var groups = [
-            { type: '下单', fld: 'o', items: CH_ITEMS },
-            { type: '回输', fld: 'r', items: CH_ITEMS }
-        ];
-        var h = '<table class="pt pt-ov"><thead><tr><th class="pt-type">类型</th><th class="pt-lbl">渠道</th>';
-        for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th></tr></thead><tbody>';
-        groups.forEach(function (g) {
-            g.items.forEach(function (it, idx) {
-                h += '<tr class="' + (it.total ? 'pt-total-row' : '') + '">' +
-                    (idx === 0 ? '<td class="pt-type" rowspan="' + g.items.length + '">' + g.type + '</td>' : '') +
-                    '<td class="pt-lbl">' + it.label + '</td>';
-                var ya = 0;
-                for (var i = 1; i <= 12; i++) {
-                    if (i > m) { h += '<td></td>'; continue; }
-                    var a = mVal(OV, y, i, it.key, g.fld);
-                    ya += a;
-                    h += '<td' + (i === m ? ' class="pt-cur"' : '') + '>' + (a > 0 ? a : '') + '</td>';
-                }
-                h += '<td class="pt-ytd">' + (ya > 0 ? ya : '') + '</td></tr>';
-            });
-        });
-        h += '</tbody></table>';
-        document.getElementById(elId).innerHTML = h;
-    }
-
     function renderTables() {
         renderREG('p5t61', '3. 辖区下单达成', 'o');
         renderREG('p5t62', '4. 辖区回输达成', 'r');
-        renderOV('p5t43');
     }
 
     updateAll();

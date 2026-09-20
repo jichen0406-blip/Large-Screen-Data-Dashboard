@@ -7,13 +7,14 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/palette.js"></script>
 <script type="text/javascript" src="js/pt-common.js"></script>
 <script type="text/javascript" src="js/page6.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<style>
 	/* 两列等高：行内拉伸 + 列内纵向 flex，表格自适应填充剩余高度（替换原先写死的 600/508） */
 	.p6-row { align-items: stretch; }
-	#p6PVcol, #p6HScol { display: flex; flex-direction: column; height: 700px; }
+	#p6PVcol, #p6HScol { display: flex; flex-direction: column; }
 	#p6tPV, #p6tHS { flex: 1; min-height: 0; max-height: none; }
 	/* 右侧医院表字段更多，比左侧省份表更宽 */
 	#p6PVcol { flex: 0.7; }
@@ -96,12 +97,12 @@
 		}
 		</script>
 	</div>
-	<div class="mainbox">
+	<div class="mainbox page-fill">
 		<div class="pt-time">
 			<span class="pt-time-tit">时间控制</span>
 			<select id="p6y" class="pt-sel" title="年份"></select>
 			<select id="p6m" class="pt-sel" title="月份"></select>
-			<span class="pt-time-note">时间控制 辖区1/2/3 共享；下单按合同创建日期 / 回输按实际回输结束时间；同比按完整月</span>
+			<span class="pt-time-note">下单按合同创建日期 / 回输按实际回输结束时间；同比按完整月</span>
 		</div>
 		<div class="pt-tables">
 			<div class="pt-tbl-row p6-row">

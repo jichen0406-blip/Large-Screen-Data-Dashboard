@@ -173,7 +173,7 @@ function echarts_31() {
     var coeOd = (B31 && B31.COE && B31.COE.O) ? B31.COE.O : {};
     var coeRd = (B31 && B31.COE && B31.COE.R) ? B31.COE.R : {};
     var ABN = (B31 && B31.ABN) ? B31.ABN : { pbmc: 0, first: 0, second: 0 };
-    var COE_COLORS = { SCOE: '#62c98d', COE: '#2f89cf', RCOE: '#4cb9cf', Others: '#e0c828' };
+    var COE_COLORS = window.BOARD_COE_COLORS || { SCOE: '#62c98d', COE: '#2f89cf', RCOE: '#4cb9cf', Others: '#e0c828' };
     function coePie(cats, title) {
         var order = ['SCOE', 'COE', 'RCOE', 'Others'];
         var data = order.map(function(k) { return { value: cats[k] || 0, name: k }; });
@@ -217,12 +217,12 @@ function echarts_31() {
         yAxis: { type: 'value', show: false, max: function (v) { return Math.max(3, Math.ceil(v.max * 1.25)); } },
         xAxis: [{
             type: 'category', axisTick: { show: false }, axisLine: { show: false }, axisLabel: { show: false },
-            data: ['异常订单']
+            data: ['生产异常订单']
         }],
         series: [
-            { name: 'PBMC失败', type: 'bar', barWidth: '12%', itemStyle: { normal: { color: '#ffc53d', barBorderRadius: 50 } }, zlevel: 2, barGap: '200%', data: [ABN.pbmc], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
-            { name: '第一次失败', type: 'bar', itemStyle: { normal: { color: '#fa8c16', barBorderRadius: 50 } }, zlevel: 2, barWidth: '12%', data: [ABN.first], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
-            { name: '二次失败', type: 'bar', itemStyle: { normal: { color: '#f5222d', barBorderRadius: 50 } }, zlevel: 2, barWidth: '12%', data: [ABN.second], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } }
+            { name: 'PBMC失败', type: 'bar', barWidth: '12%', itemStyle: { normal: { color: boardColor(4), barBorderRadius: 50 } }, zlevel: 2, barGap: '200%', data: [ABN.pbmc], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
+            { name: '第一次失败', type: 'bar', itemStyle: { normal: { color: boardColor(7), barBorderRadius: 50 } }, zlevel: 2, barWidth: '12%', data: [ABN.first], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } },
+            { name: '二次失败', type: 'bar', itemStyle: { normal: { color: boardColor(8), barBorderRadius: 50 } }, zlevel: 2, barWidth: '12%', data: [ABN.second], label: { formatter: '{c}单', show: true, position: 'top', textStyle: { fontSize: 11, color: '#fff' } } }
         ]
     };
     myChart3.setOption(option3);

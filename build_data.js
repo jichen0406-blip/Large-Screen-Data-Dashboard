@@ -592,7 +592,7 @@ try {
   dictRows.slice(1).forEach(function (dr) {
     var no = String(dr[1] || '').trim();
     if (!no) return;
-    dictInfo[no] = { am: String(dr[3] || '').trim(), ram: String(dr[27] || '').trim(), rhc: String(dr[25] || '').trim(), rhn: String(dr[26] || '').trim(), flow: String(dr[21] || '').trim(), cancel: String(dr[6] || '').trim(), resume: excelToDate(dr[13]), note: String(dr[10] || '').trim(), modZq: String(dr[15] || '').trim() };
+    dictInfo[no] = { am: String(dr[3] || '').trim(), ram: String(dr[27] || '').trim(), rhc: String(dr[25] || '').trim(), rhn: String(dr[26] || '').trim(), flow: String(dr[21] || '').trim(), cancel: String(dr[6] || '').trim(), cancelMonth: (/^\d{6}$/.test(String(dr[18] || '').trim()) ? String(dr[18]).trim().slice(0, 4) + '-' + String(dr[18]).trim().slice(4, 6) : ''), resume: excelToDate(dr[13]), note: String(dr[10] || '').trim(), modZq: String(dr[15] || '').trim() };
   });
 } catch (e) { console.error('⚠️ 读取 order dict(AM) 失败:', e.message); }
 var OV_AM = { HK_AM1: 'HK', SG_AM: 'SG', KSA_AM: 'KSA' }; // 海外AM兜底 → 对应地区
@@ -681,6 +681,125 @@ records.forEach(function (r) {
   if (!ptCoeHosp[hk]) ptCoeHosp[hk] = coeCat(r.coe);
 });
 var REGIONS = { AMS: REGION_AMS, CHAL: CHAL, COMP: COMP, ND: ptND, ATTAIN: ptREG, OV: ptOV, HOSP: ptHOSP, HSLAST: ptHSLast, COEHOSP: ptCoeHosp };
+
+// ── 8s. COE 分类页（SCOE/COE/RCOE）：masterdata 全量医院名单 + 逐月下单/回输（跨 AM 聚合自 REGIONS.HOSP） ──
+// 名单取 masterdata 该分类的**全部**医院（即使本期无数据也保留行，前端显示 0）；逐月数据仅国内 DOM
+var COE_CATS = ['SCOE', 'COE', 'RCOE'];
+var COE_PAGES = { at: '', cats: COE_CATS, pages: {}, totals: {} };
+(function () {
+  function z12() { var a = []; for (var i = 0; i < 12; i++) a.push(0); return a; }
+  var YEAR_LIST = [];
+  (function () { var ys = {}; Object.keys(REGIONS.HOSP).forEach(function (ym) { ys[ym.slice(0, 4)] = true; }); YEAR_LIST = Object.keys(ys).sort(); })();
+  COE_PAGES.at = Object.keys(REGIONS.HOSP).sort().pop() || '';
+
+  // 1) masterdata 全量名单（按 省份|城市|医院名 去重）
+  var uni = {};
+  mdRows.forEach(function (r) {
+    var cat = String(r['COE'] || '').trim();
+    if (COE_CATS.indexOf(cat) < 0) return;
+    var nm = String(r['标准医院名称'] || '').trim();
+    if (!nm) return;
+    var pv = String(r['省份'] || '').trim(), ct = String(r['城市'] || '').trim();
+    (uni[cat] = uni[cat] || {})[pv + '|' + ct + '|' + nm] = { am: String(r['AM'] || '').trim(), prov: pv, city: ct, hosp: nm };
+  });
+
+  // 2) 逐年逐月：HOSP 去掉 AM 前缀聚合到 '省份|城市|医院'
+  var byHosp = {};
+  Object.keys(REGIONS.HOSP).forEach(function (ym) {
+    var bucket = REGIONS.HOSP[ym];
+    Object.keys(bucket).forEach(function (k) {
+      var p = k.split('|'), hk = p[1] + '|' + (p[2] || '') + '|' + p[3];
+      var t = byHosp[hk] || (byHosp[hk] = {}), v = t[ym] || (t[ym] = { o: 0, r: 0 });
+      v.o += bucket[k].o || 0; v.r += bucket[k].r || 0;
+    });
+  });
+
+  // 3) 每分类：医院 + 逐年 {o:[12], r:[12]}
+  COE_CATS.forEach(function (cat) {
+    var list = [];
+    Object.keys(uni[cat] || {}).forEach(function (k) {
+      var h = uni[cat][k], m = byHosp[k] || {}, ys = {};
+      YEAR_LIST.forEach(function (y) {
+        var o = z12(), r2 = z12(), any = false;
+        for (var i = 1; i <= 12; i++) {
+          var v = m[y + '-' + (i < 10 ? '0' : '') + i];
+          if (v) { o[i - 1] = v.o || 0; r2[i - 1] = v.r || 0; if (o[i - 1] || r2[i - 1]) any = true; }
+        }
+        if (any) ys[y] = { o: o, r: r2 };
+      });
+      list.push({ am: h.am, prov: h.prov, city: h.city, hosp: h.hosp, years: ys });
+    });
+    COE_PAGES.pages[cat] = { hospitals: list };
+  });
+
+  // 4) totals：四类（含 Others）逐年逐月 —— 贡献比例的分母
+  var T = {};
+  YEAR_LIST.forEach(function (y) {
+    T[y] = {};
+    ['SCOE', 'COE', 'RCOE', 'Others'].forEach(function (c) { T[y][c] = { o: z12(), r: z12() }; });
+  });
+  Object.keys(REGIONS.HOSP).forEach(function (ym) {
+    var y = ym.slice(0, 4), mi = parseInt(ym.slice(5, 7), 10) - 1;
+    if (!T[y] || mi < 0 || mi > 11) return;
+    var bucket = REGIONS.HOSP[ym];
+    Object.keys(bucket).forEach(function (k) {
+      var p = k.split('|'), hk = p[1] + '|' + (p[2] || '') + '|' + p[3];
+      var cat = REGIONS.COEHOSP[hk] || 'Others';
+      if (!T[y][cat]) cat = 'Others';
+      T[y][cat].o[mi] += bucket[k].o || 0;
+      T[y][cat].r[mi] += bucket[k].r || 0;
+    });
+  });
+  COE_PAGES.totals = T;
+})();
+console.log('COE_PAGES: ' + COE_CATS.map(function (c) { return c + '=' + COE_PAGES.pages[c].hospitals.length + '家'; }).join(' / ') + ' | 最新月=' + COE_PAGES.at);
+
+// ── 8t. 取消订单管理：取消单的阶段 / 取消月 / AM / 医院（来源 order dict 取消回输=1 + 取消回输月 col18） ──
+// 阶段**独立判定**（不沿用 page_flow.js 的 used[] 顺序刨除漏斗——它先把「择期」整单占位，会漏掉部分取消单）
+var CANCEL_STAGES = ['单采预约前取消', '单采前取消', '单采后取消', '生产中取消', '生产完成取消回输'];
+function cancelStageOf(note) {
+  note = String(note || '');
+  if (note.indexOf('单采预约前取消') >= 0) return CANCEL_STAGES[0]; // 必须先于「单采前取消」判定
+  if (note.indexOf('单采前取消') >= 0) return CANCEL_STAGES[1];
+  if (note.indexOf('单采后取消') >= 0) return CANCEL_STAGES[2];
+  if (note.indexOf('生产中取消') >= 0) return CANCEL_STAGES[3];
+  if (note.indexOf('生产完成取消回输') >= 0) return CANCEL_STAGES[4];
+  return '其他';
+}
+var CANCEL_MGMT = { at: '', stages: CANCEL_STAGES, years: [], cancels: [], totals: {} };
+(function () {
+  var byYear = {}, byYearAm = {}, all = 0, byHosp = {}, cmMax = '';
+  records.forEach(function (r) {
+    var d = dictInfo[r.no] || {};
+    var oy = r.od ? r.od.slice(0, 4) : '';
+    var amv = amClean[d.am] || d.am || ''; // AM 用 masterdata Sheet3（离职AM清洗）映射后统计
+    // 分母：全部订单（按下单年 / 按 AM / 按医院）
+    all++;
+    if (oy) {
+      byYear[oy] = (byYear[oy] || 0) + 1;
+      if (amv) { if (!byYearAm[oy]) byYearAm[oy] = {}; byYearAm[oy][amv] = (byYearAm[oy][amv] || 0) + 1; }
+    }
+    if (r.prov && r.hosp) { var hk = r.prov + '|' + (r.city || '') + '|' + r.hosp; byHosp[hk] = (byHosp[hk] || 0) + 1; }
+    // 分子：取消单
+    if (d.cancel !== '1') return;
+    var cm = d.cancelMonth || '';
+    if (cm && cm > cmMax) cmMax = cm;
+    CANCEL_MGMT.cancels.push({
+      no: r.no, cm: cm, stage: cancelStageOf(d.note),
+      am: amv, prov: r.prov || '', city: r.city || '', hosp: r.hosp || '',
+      oy: oy, sameYear: !!(cm && oy && cm.slice(0, 4) === oy)
+    });
+  });
+  CANCEL_MGMT.totals = { byYear: byYear, byYearAm: byYearAm, all: all, byHosp: byHosp };
+  CANCEL_MGMT.at = cmMax;
+  var ys = {}; Object.keys(byYear).forEach(function (y) { ys[y] = true; }); CANCEL_MGMT.years = Object.keys(ys).sort();
+})();
+console.log('CANCEL_MGMT: 取消单 ' + CANCEL_MGMT.cancels.length + ' | ' +
+  CANCEL_STAGES.map(function (s) { return s + '=' + CANCEL_MGMT.cancels.filter(function (c) { return c.stage === s; }).length; }).join(' ') +
+  ' | 其他=' + CANCEL_MGMT.cancels.filter(function (c) { return c.stage === '其他'; }).length +
+  ' | 最新取消月=' + CANCEL_MGMT.at + ' | 全量订单=' + CANCEL_MGMT.totals.all);
+
+
 
 // ── 8m. Page3 全球注册进度：注册项目数据.xlsx（世界地图 + 甘特图） ──
 var regPath = path.join(rawDir, '注册项目数据.xlsx');
@@ -969,7 +1088,64 @@ function r3HospitalStatsText() {
   L.push('「最近一次下单」距今 >90 天的医院：' + gaps.length + ' 家' + (gaps.length ? '，最久 ' + gaps[0].hosp + '（' + gaps[0].gap + ' 天）' : ''));
   return L.join('\n');
 }
+// COE 分类页：喂给 LLM 的统计文本（YTD = 最新数据月所在年的 1..M 月）
+function coeStatsText(cat) {
+  var P = COE_PAGES.pages[cat], at = COE_PAGES.at;
+  var y = at.slice(0, 4), M = parseInt(at.slice(5, 7), 10);
+  function ytd(a) { var s = 0; for (var i = 0; i < M; i++) s += (a && a[i]) || 0; return s; }
+  var rows = P.hospitals.map(function (h) {
+    var cur = h.years[y] || {}, ly = h.years[String(parseInt(y, 10) - 1)] || {};
+    return { hosp: h.hosp, prov: h.prov, am: h.am, o: ytd(cur.o), r: ytd(cur.r), lo: ytd(ly.o) };
+  });
+  var T = COE_PAGES.totals[y] || {}, allO = 0, allR = 0, catO = 0, catR = 0;
+  ['SCOE', 'COE', 'RCOE', 'Others'].forEach(function (c) {
+    var t = T[c] || {};
+    allO += ytd(t.o); allR += ytd(t.r);
+    if (c === cat) { catO = ytd(t.o); catR = ytd(t.r); }
+  });
+  var L = [];
+  L.push('统计口径：' + y + ' 年 1–' + M + ' 月累计（YTD），仅国内医院');
+  L.push('分类 ' + cat + '：主数据全量医院 ' + rows.length + ' 家');
+  L.push('该分类 YTD：下单 ' + catO + '（占全盘 ' + (allO ? (catO / allO * 100).toFixed(1) : 0) + '%），回输 ' + catR + '（占全盘 ' + (allR ? (catR / allR * 100).toFixed(1) : 0) + '%）');
+  L.push('名单内医院 YTD 合计：下单 ' + rows.reduce(function (s, x) { return s + x.o; }, 0) + '，回输 ' + rows.reduce(function (s, x) { return s + x.r; }, 0));
+  L.push('下单 Top5 医院：' + rows.slice().sort(function (a, b) { return b.o - a.o; }).slice(0, 5)
+    .map(function (x) { return x.hosp + '（' + x.prov + '，下单 ' + x.o + ' / 回输 ' + x.r + '）'; }).join('；'));
+  L.push('YTD 无任何下单/回输的医院：' + rows.filter(function (x) { return !x.o && !x.r; }).length + ' 家');
+  var up = rows.filter(function (x) { return x.o - x.lo > 0; }).sort(function (a, b) { return (b.o - b.lo) - (a.o - a.lo); }).slice(0, 3);
+  var dn = rows.filter(function (x) { return x.o - x.lo < 0; }).sort(function (a, b) { return (a.o - a.lo) - (b.o - b.lo); }).slice(0, 3);
+  L.push('同比去年（下单）上升最多：' + (up.length ? up.map(function (x) { return x.hosp + ' +' + (x.o - x.lo); }).join('；') : '无'));
+  L.push('同比下降最多：' + (dn.length ? dn.map(function (x) { return x.hosp + ' ' + (x.o - x.lo); }).join('；') : '无'));
+  return L.join('\n');
+}
+
 var REGION3_AI = { at: R3_YM, province: { summary: '' }, hospital: { summary: '' } };
+
+// 取消订单-医院页：喂给 LLM 的统计文本（全量口径，分母 = 该医院自身总单量）
+function pctOf(a, t) { return t > 0 ? (a / t * 100).toFixed(1) + '%' : '--'; }
+function cancelHospStatsText() {
+  var C = CANCEL_MGMT, tot = {};
+  C.cancels.forEach(function (c) {
+    if (!c.hosp) return;
+    var k = c.prov + '|' + c.city + '|' + c.hosp;
+    var o = tot[k] || (tot[k] = { hosp: c.hosp, prov: c.prov, n: 0 });
+    o.n++;
+  });
+  var list = Object.keys(tot).map(function (k) { var o = tot[k]; o.all = C.totals.byHosp[k] || 0; return o; })
+    .sort(function (a, b) { return b.n - a.n; });
+  function cnt(stage) { return C.cancels.filter(function (c) { return c.stage === stage; }).length; }
+  var noCost = cnt(CANCEL_STAGES[0]) + cnt(CANCEL_STAGES[1]);
+  var L = [];
+  L.push('统计口径：全部订单 ' + C.totals.all + ' 单中的取消单 ' + C.cancels.length + ' 单；比例分母为**该医院自身总单量**（非全量）');
+  L.push('阶段分布：' + C.stages.map(function (s) { return s + ' ' + cnt(s) + ' 单'; }).join('，'));
+  L.push('有取消的医院共 ' + list.length + ' 家；无成本取消（单采预约前+单采前）合计 ' + noCost + ' 单，生产完成取消回输 ' + cnt(CANCEL_STAGES[4]) + ' 单');
+  L.push('取消单 Top8 医院：' + list.slice(0, 8).map(function (x) {
+    return x.hosp + '（' + x.prov + '，取消 ' + x.n + ' / 总单 ' + x.all + ' = ' + pctOf(x.n, x.all) + '）';
+  }).join('；'));
+  var hi = list.filter(function (x) { return x.all >= 5; })
+    .sort(function (a, b) { return (b.n / b.all) - (a.n / a.all); }).slice(0, 5);
+  L.push('取消率偏高（总单≥5 家）Top5：' + (hi.length ? hi.map(function (x) { return x.hosp + ' ' + pctOf(x.n, x.all); }).join('；') : '无'));
+  return L.join('\n');
+}
 
 // ── 9. AI 摘要（构建时调 DeepSeek；数据未变走缓存不重复调用） ──
 // 覆盖：异常订单管理三页 + 省份&医院数据页两张表
@@ -1110,6 +1286,48 @@ async function buildSummaries() {
     }
   }
 
+  // 3) COE 分类页（SCOE / COE / RCOE）
+  var coeItems = COE_CATS.map(function (c) {
+    return {
+      k: 'coe_' + c.toLowerCase(), name: c + ' 医院数据', slot: COE_PAGES.pages[c], text: coeStatsText(c),
+      ask: '请写一段面向业务负责人的总结：说明该 COE 分类的整体规模与占全盘比例、头部医院集中度、同比增减明显的医院，以及名单内长期无单医院的关注建议。'
+    };
+  });
+  for (var n = 0; n < coeItems.length; n++) {
+    var ci = coeItems[n], fp3 = sha1(ci.text);
+    if (cache[ci.k] && cache[ci.k].fp === fp3 && cache[ci.k].summary) {
+      ci.slot.summary = cache[ci.k].summary;
+      next[ci.k] = cache[ci.k];
+      console.log('AI 摘要（缓存命中，未调用 LLM）:', ci.name);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', ci.name, '…');
+      var s3 = await deepseekSummary(ci.name, ci.text, ci.ask);
+      ci.slot.summary = s3;
+      next[ci.k] = { fp: fp3, summary: s3, at: COE_PAGES.at };
+      console.log('  ✓ ' + s3.slice(0, 40) + (s3.length > 40 ? '…' : ''));
+    }
+  }
+
+  // 4) 取消订单管理 - 医院页
+  var chItems = [{
+    k: 'cancel_hosp', name: '取消订单-医院页', slot: CANCEL_MGMT, text: cancelHospStatsText(),
+    ask: '请写一段面向业务负责人的总结：说明取消单的整体规模与阶段结构、取消集中的医院、取消率明显偏高的医院，以及无成本取消（未产生生产成本）与生产完成后取消的占比，并给出跟进建议。'
+  }];
+  for (var q = 0; q < chItems.length; q++) {
+    var ci2 = chItems[q], fp4 = sha1(ci2.text);
+    if (cache[ci2.k] && cache[ci2.k].fp === fp4 && cache[ci2.k].summary) {
+      ci2.slot.summary = cache[ci2.k].summary;
+      next[ci2.k] = cache[ci2.k];
+      console.log('AI 摘要（缓存命中，未调用 LLM）:', ci2.name);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', ci2.name, '…');
+      var s4 = await deepseekSummary(ci2.name, ci2.text, ci2.ask);
+      ci2.slot.summary = s4;
+      next[ci2.k] = { fp: fp4, summary: s4, at: CANCEL_MGMT.at };
+      console.log('  ✓ ' + s4.slice(0, 40) + (s4.length > 40 ? '…' : ''));
+    }
+  }
+
   try { fs.writeFileSync(AI_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
   ABN_MGMT.summaryAt = DP;
 }
@@ -1144,7 +1362,9 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     FLOW: FLOW,
     CART_DAILY: CART_DAILY,
     ABN_MGMT: ABN_MGMT,
-    REGION3_AI: REGION3_AI
+    REGION3_AI: REGION3_AI,
+    COE_PAGES: COE_PAGES,
+    CANCEL_MGMT: CANCEL_MGMT
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');

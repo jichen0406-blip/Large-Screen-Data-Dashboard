@@ -7,12 +7,13 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/palette.js"></script>
 <script type="text/javascript" src="js/xlsx.full.min.js"></script>
 <script type="text/javascript" src="js/abn_common.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<style>
 	/* 本页字段较多，允许横向滚动 */
-	#abnTbl{ max-height: calc(100vh - 430px); min-height: 320px; }
+	#abnTbl{ min-height: 320px; }
 	.abn-tbl{ min-width: 1800px; }
 	</style>
 	<script>window.PAGE_KEY='abn_noproduction';</script>
@@ -70,7 +71,7 @@
 		}
 		</script>
 	</div>
-	<div class="mainbox">
+	<div class="mainbox page-fill">
 		<div class="abn-ai" id="abnAI"></div>
 		<div class="abn-cards" id="abnCards"></div>
 		<div class="pt-time abn-ctl" id="abnCtl"></div>

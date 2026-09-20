@@ -179,7 +179,7 @@ $(function () {
                     },
                     itemStyle: {
                         normal: {
-                            color: '#ffeb7b'
+                            color: boardColor(4)
                         }
                     }
                 }
@@ -322,7 +322,7 @@ $(function () {
                         normal: { show: false },
                         emphasis: { show: false }
                     },
-                    itemStyle: { normal: { color: '#ffeb7b' } }
+                    itemStyle: { normal: { color: boardColor(4) } }
                 }]
             };
         }
