@@ -15,8 +15,7 @@
 	/* P9 过去30天订单每日进展：图表 + 每日明细表（表头锁定） */
 	.p9-box{ border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 8px rgba(7,118,181,.3), 0 0 10px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:8px 12px 12px; }
 	.p9-box + .p9-box{ margin-top:16px; }
-	.p9-tit{ font-size:16px; color:#4fe3ff; letter-spacing:2px; padding:8px 0; border-bottom:1px solid rgba(47,137,207,.5); margin-bottom:8px; display:flex; align-items:center; }
-	.p9-tit .map-fs{ position:static; margin-left:auto; width:26px; height:26px; line-height:24px; }
+	/* .p9-tit 已并入全站统一的 .sec-head（见 css/style.css） */
 	.p9-ico{ font-style:normal; margin-right:5px; font-size:15px; vertical-align:-1px; }
 	.p9-chart{ height:270px; }
 	/* 整页一屏：明细表吃掉剩余高度 */
@@ -110,11 +109,11 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="p9-box">
-			<div class="p9-tit">过去30天 下单 / 回输 / 单采 / 放行 趋势<button class="map-fs" type="button" data-fs="p9chart" data-title="过去30天趋势">⛶</button></div>
-			<div class="p9-chart" id="p9chart"></div>
+			<div class="sec-head">过去30天 下单 / 回输 / 单采 / 放行 趋势<button class="map-fs" type="button" data-fs="last30dTrendChart" data-title="过去30天趋势">⛶</button></div>
+			<div class="p9-chart" id="last30dTrendChart"></div>
 		</div>
 		<div class="p9-box">
-			<div class="p9-tit">每日进展明细（追溯码 + 医院 + 脱敏患者）<button class="map-fs" type="button" data-fs="p9list" data-title="每日进展明细">⛶</button></div>
+			<div class="sec-head">每日进展明细（追溯码 + 医院 + 脱敏患者）<button class="map-fs" type="button" data-fs="p9list" data-title="每日进展明细">⛶</button></div>
 			<div class="p9-tbl-wrap" id="p9list"></div>
 		</div>
 	</div>

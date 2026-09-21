@@ -33,29 +33,7 @@
       return { o: o, r: r, allO: allO, allR: allR };
     }
 
-    // ── 迷你趋势图：1 月～所选月折线 + 最小二乘拟合线（内联 SVG，不依赖 echarts） ──
-    // 只纳入「已到月份」：未来月份无数据，若按 0 参与拟合会让所有斜率人为下降
-    function spark(arr, m, w, h) {
-      var vals = (arr || []).slice(0, Math.max(1, Math.min(12, m)));
-      var n = vals.length;
-      var mx = Math.max.apply(null, vals.concat([1]));
-      function X(i) { return n > 1 ? (i / (n - 1)) * (w - 2) + 1 : w / 2; }
-      function Y(v) { return h - 2 - ((v || 0) / mx) * (h - 4); }
-      function clip(v) { return Math.min(mx, Math.max(0, v)); }
-      var pts = vals.map(function (v, i) { return X(i).toFixed(1) + ',' + Y(v).toFixed(1); }).join(' ');
-      var out = '<svg class="coe-spark" viewBox="0 0 ' + w + ' ' + h + '" width="' + w + '" height="' + h + '" aria-hidden="true">' +
-        '<polyline points="' + pts + '" fill="none" stroke="#4fe3ff" stroke-width="1.4" stroke-linejoin="round"/>';
-      if (n > 1) {
-        var sx = 0, sy = 0, sxx = 0, sxy = 0;
-        for (var i = 0; i < n; i++) { sx += i; sy += vals[i]; sxx += i * i; sxy += i * vals[i]; }
-        var den = n * sxx - sx * sx;
-        var b = den ? (n * sxy - sx * sy) / den : 0;
-        var a = (sy - b * sx) / n;
-        var fit = X(0).toFixed(1) + ',' + Y(clip(a)).toFixed(1) + ' ' + X(n - 1).toFixed(1) + ',' + Y(clip(a + b * (n - 1))).toFixed(1);
-        out += '<polyline points="' + fit + '" fill="none" stroke="' + (b >= 0 ? '#62c98d' : '#ff8c42') + '" stroke-width="1.4" stroke-dasharray="3 2"/>';
-      }
-      return out + '</svg>';
-    }
+    // 迷你趋势图 spark(arr, m, w, h) 已提取到 js/pt-common.js（全局共享，见 §12 命名规范）
 
     // ── 顶部卡片：下单/回输 总计 + 各自占全盘贡献占比（4 张，YTD） ──
     function renderCards(y, m) {
@@ -63,13 +41,13 @@
       if (!el) return;
       var t = catTotals(y, m);
       function kpi(label, val, cls) {
-        return '<div class="p4-kpi"><span>' + label + '</span><p class="' + cls + '">' + val + '</p></div>';
+        return '<div class="kpi-card ' + cls + '"><div class="kc-label">' + label + '</div><div class="kc-val">' + val + '</div></div>';
       }
       el.innerHTML =
-        kpi('下单总计', t.o, 'coe-o') +
-        kpi('回输总计', t.r, 'coe-r') +
-        kpi('下单贡献占比', pct2(t.o, t.allO), 'coe-o') +
-        kpi('回输贡献占比', pct2(t.r, t.allR), 'coe-r');
+        kpi('下单总计', t.o, 'run') +
+        kpi('回输总计', t.r, 'ok') +
+        kpi('下单贡献占比', pct2(t.o, t.allO), 'run') +
+        kpi('回输贡献占比', pct2(t.r, t.allR), 'ok');
     }
 
     // ── AI 总结（构建时快照，不随年月变化） ──
@@ -78,9 +56,9 @@
       if (!el) return;
       var s = PAGE.summary || '';
       var at = C.at ? ('截至 ' + C.at + '（当年 1–' + parseInt(C.at.slice(5, 7), 10) + ' 月累计）') : '';
-      el.innerHTML = '<div class="coe-ai-hd"><span class="coe-ai-tag">AI 总结</span>' +
-        (at ? '<span class="coe-ai-time">' + at + '</span>' : '') + '</div>' +
-        '<div class="coe-ai-txt' + (s ? '' : ' coe-ai-empty') + '">' + (s ? esc(s) : '暂无总结（构建时未生成）') + '</div>';
+      el.innerHTML = '<div class="ib-hd"><span class="ib-tag">AI 总结</span>' +
+        (at ? '<span class="ib-time">' + at + '</span>' : '') + '</div>' +
+        '<div class="ib-txt' + (s ? '' : ' ib-empty') + '">' + (s ? esc(s) : '暂无总结（构建时未生成）') + '</div>';
     }
 
     // ── 搜索栏：AM / 城市 / 医院名称 模糊搜索 ──

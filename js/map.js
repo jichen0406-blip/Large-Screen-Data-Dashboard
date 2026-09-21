@@ -3,7 +3,7 @@ $(function () {
     map();
     function map() {
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('map'));
+        var myChart = echarts.init(document.getElementById('chinaMap'));
 
         // ═══ 数据源：js/data.js 中的 BOARD_DATA（由 build_data.js 每日生成） ═══
         var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
@@ -349,7 +349,7 @@ $(function () {
             renderProvRank(null, null);
             $('#provTitle').text(name);
             $('#provStats').text('');
-            $('#provChart').empty();
+            $('#provPanelChart').empty();
             $('#provLoading').text('加载中…').show();
             $('#provPanel').show();
             function renderGeo(geo) {
@@ -375,7 +375,7 @@ $(function () {
                 );
                 echarts.registerMap('provCity', geo);
                 if (provChart) provChart.dispose();
-                provChart = echarts.init(document.getElementById('provChart'));
+                provChart = echarts.init(document.getElementById('provPanelChart'));
                 provChart.setOption(buildProvOption(pts));
                 setTimeout(function () { if (provChart) provChart.resize(); }, 60);
             }

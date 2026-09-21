@@ -159,15 +159,15 @@ function monthlyTrend() {
         myChart.setOption(option);
         window.addEventListener("resize", function () { myChart.resize(); });
     }
-    build('echart6', B.MONTH.O, B.MONTH.OLY);
-    build('echart4', B.MONTH.R, B.MONTH.RLY, '#62c98d');
+    build('orderMonthlyTrendChart', B.MONTH.O, B.MONTH.OLY);
+    build('reinfusionMonthlyTrendChart', B.MONTH.R, B.MONTH.RLY, '#62c98d');
 }
 
 // ── 标题8/9：YTD异常订单柱状图 + COE医院销量占比饼图 ──
 function echarts_31() {
-    var myChart3 = echarts.init(document.getElementById('fb03'));
-    var myChart4 = echarts.init(document.getElementById('fb04'));
-    var myChart5 = echarts.init(document.getElementById('myd1'));
+    var myChart3 = echarts.init(document.getElementById('coeOrderPie'));
+    var myChart4 = echarts.init(document.getElementById('coeReinfusionPie'));
+    var myChart5 = echarts.init(document.getElementById('abnOrderChart'));
 
     var B31 = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
     var coeOd = (B31 && B31.COE && B31.COE.O) ? B31.COE.O : {};

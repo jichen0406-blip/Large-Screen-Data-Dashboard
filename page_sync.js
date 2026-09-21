@@ -172,7 +172,7 @@ function pageHTML(o) {
     '\t\t<div class="pt-tables">\n' +
     '\t\t\t<div class="pt-tbl-row">\n' +
     '\t\t\t\t<div class="pt-tbl-col pt-tbl-full">\n' +
-    '\t\t\t\t\t<div class="pt-tbl-tit">' + o.name + ' <span class="pt-tbl-tag">占位</span></div>\n' +
+    '\t\t\t\t\t<div class="sec-head">' + o.name + ' <span class="sub">占位</span></div>\n' +
     '\t\t\t\t\t<div class="pt-tbl-wrap" id="' + o.id.replace('.html', '') + 'Tbl">（新页面占位：在此填充图表/表格，样式前缀建议 ' + o.id.replace('.html', '') + '-* 或 pt-*；页面已套用整页一屏规则 .page-fill，见项目文档 §10.4）</div>\n' +
     '\t\t\t\t</div>\n' +
     '\t\t\t</div>\n' +

@@ -24,8 +24,8 @@
     var C_YEARS = (function () { var ys = {}; C.cancels.forEach(function (c) { if (c.cm) ys[c.cm.slice(0, 4)] = true; }); return Object.keys(ys).sort(); })();
 
     function kpi(label, val, sub) {
-      return '<div class="p4-kpi"><span>' + label + '</span><p>' + val + '</p>' +
-        (sub ? '<i class="cancel-sub">' + sub + '</i>' : '') + '</div>';
+      return '<div class="kpi-card run"><div class="kc-label">' + label + '</div><div class="kc-val">' + val + '</div>' +
+        (sub ? '<div class="kc-sub">' + sub + '</div>' : '') + '</div>';
     }
     // 纵轴上限：柱顶带标签，最大值要留白（否则顶格裁切标签）
     function niceMax(m) {
@@ -76,7 +76,7 @@
           var d = cs.filter(function (c) { return parseInt(c.cm.slice(5, 7), 10) === i; });
           byM.push(d);
         }
-        var e1 = document.getElementById('cyChart1');
+        var e1 = document.getElementById('cancelYtdMonthlyChart');
         if (ch1) ch1.dispose();
         ch1 = echarts.init(e1);
         var series1 = ST.map(function (s) {
@@ -112,7 +112,7 @@
           o.st[c.stage] = (o.st[c.stage] || 0) + 1;
         });
         var ams = Object.keys(amAgg).sort(function (a, b) { return amAgg[b].n - amAgg[a].n; });
-        var e2 = document.getElementById('cyChart2');
+        var e2 = document.getElementById('cancelYtdAmChart');
         if (ch2) ch2.dispose();
         ch2 = echarts.init(e2);
         ch2.setOption({
@@ -125,7 +125,7 @@
             return {
               name: s, type: 'bar', stack: 'a', barWidth: '56%', itemStyle: { color: SCOLOR[s] },
               data: ams.map(function (a) { return amAgg[a].st[s] || 0; }),
-              label: k === 0 ? { show: true, position: 'top', color: '#daf9ff', fontSize: 11, formatter: function (p) { return amAgg[ams[p.dataIndex]].n; } } : { show: false }
+              label: k === ST.length - 1 ? { show: true, position: 'top', color: '#daf9ff', fontSize: 11, formatter: function (p) { return amAgg[ams[p.dataIndex]].n; } } : { show: false }
             };
           })
         });
@@ -158,21 +158,39 @@
         kpi('生产完成取消比例', pct(fin, all), fin + ' 单');
       document.getElementById('caTip').innerHTML = TIP_TEXT;
 
-      var e1 = document.getElementById('caChart1'), e2 = document.getElementById('caChart2'), e3 = document.getElementById('caChart3');
+      var e1 = document.getElementById('cancelAllYearChart'), e2 = document.getElementById('cancelAllStagePie'), e3 = document.getElementById('cancelAllAmPie');
       var c1 = echarts.init(e1), c2 = echarts.init(e2), c3 = echarts.init(e3);
       var yrs = C.years || [];
       var yrN = yrs.map(function (y) { return cs.filter(function (c) { return c.cm.slice(0, 4) === y; }).length; });
+      var yrDenom = C.totals.byYear || {};
       c1.setOption({
         backgroundColor: 'transparent',
-        grid: { left: 40, right: 16, top: 24, bottom: 24 },
-        tooltip: { trigger: 'axis' },
+        grid: { left: 40, right: 16, top: 34, bottom: 24 },
+        tooltip: {
+          trigger: 'axis',
+          formatter: function (ps) {
+            var i = ps[0].dataIndex;
+            return yrs[i] + ' 年<br/>取消单 <b>' + yrN[i] + '</b> 单<br/>取消比例 <b>' +
+              pct(yrN[i], yrDenom[yrs[i]] || 0) + '</b>（占当年下单 ' + (yrDenom[yrs[i]] || 0) + ' 单）';
+          }
+        },
         xAxis: { type: 'category', data: yrs, axisLabel: { color: 'rgba(255,255,255,.6)' }, axisLine: { lineStyle: { color: 'rgba(255,255,255,.2)' } } },
         yAxis: { type: 'value', minInterval: 1, max: niceMax(Math.max.apply(null, yrN)), axisLabel: { color: 'rgba(255,255,255,.55)' }, splitLine: { lineStyle: { color: 'rgba(255,255,255,.08)' } } },
-        series: [{
-          type: 'bar', barWidth: '46%', itemStyle: { color: PALETTE[1] },
-          data: yrN,
-          label: { show: true, position: 'top', color: '#daf9ff', fontSize: 11 }
-        }]
+        series: [
+          {
+            name: '取消单', type: 'bar', barWidth: '46%', itemStyle: { color: PALETTE[1] },
+            data: yrN,
+            label: { show: true, position: 'inside', color: '#0b1f3a', fontSize: 12, fontWeight: 700 }
+          },
+          {
+            name: '趋势', type: 'line', data: yrN, smooth: true, symbol: 'circle', symbolSize: 7,
+            itemStyle: { color: '#9fe8ff' }, lineStyle: { color: '#9fe8ff', width: 1.6, type: 'dashed' },
+            label: {
+              show: true, position: 'top', distance: 8, color: '#daf9ff', fontSize: 11,
+              formatter: function (p) { return pct(yrN[p.dataIndex], yrDenom[yrs[p.dataIndex]] || 0); }
+            }
+          }
+        ]
       });
       function pie(el, list) {
         el.setOption({
@@ -204,9 +222,9 @@
         var el = document.getElementById('chAI');
         var s = C.summary || '';
         var at = C.at ? ('截至 ' + C.at + '（按取消月）') : '';
-        el.innerHTML = '<div class="cancel-ai-hd"><span class="cancel-ai-tag">AI 总结</span>' +
-          (at ? '<span class="cancel-ai-time">' + at + '</span>' : '') + '</div>' +
-          '<div class="cancel-ai-txt' + (s ? '' : ' empty') + '">' + (s ? esc(s) : '暂无总结（构建时未生成）') + '</div>';
+        el.innerHTML = '<div class="ib-hd"><span class="ib-tag">AI 总结</span>' +
+          (at ? '<span class="ib-time">' + at + '</span>' : '') + '</div>' +
+          '<div class="ib-txt' + (s ? '' : ' ib-empty') + '">' + (s ? esc(s) : '暂无总结（构建时未生成）') + '</div>';
       })();
 
       (function renderSearch() {

@@ -28,20 +28,22 @@ $(function () {
         ];
         var h = '<table class="pt pt-ov"><thead><tr><th class="pt-type">类型</th><th class="pt-lbl">渠道</th>';
         for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th></tr></thead><tbody>';
+        h += '<th class="pt-ytd">YTD</th><th>趋势图</th></tr></thead><tbody>';
         groups.forEach(function (g) {
             g.items.forEach(function (it, idx) {
                 h += '<tr class="' + (it.total ? 'pt-total-row' : '') + '">' +
                     (idx === 0 ? '<td class="pt-type" rowspan="' + g.items.length + '">' + g.type + '</td>' : '') +
                     '<td class="pt-lbl">' + it.label + '</td>';
-                var ya = 0;
+                var ya = 0, series = [];
                 for (var i = 1; i <= 12; i++) {
-                    if (i > m) { h += '<td></td>'; continue; }
                     var a = mVal(OV, y, i, it.key, g.fld);
+                    series.push(a);
+                    if (i > m) { h += '<td></td>'; continue; }
                     ya += a;
                     h += '<td' + (i === m ? ' class="pt-cur"' : '') + '>' + (a > 0 ? a : '') + '</td>';
                 }
-                h += '<td class="pt-ytd">' + (ya > 0 ? ya : '') + '</td></tr>';
+                h += '<td class="pt-ytd">' + (ya > 0 ? ya : '') + '</td>' +
+                    '<td class="pt-spark">' + spark(series, m) + '</td></tr>';
             });
         });
         h += '</tbody></table>';

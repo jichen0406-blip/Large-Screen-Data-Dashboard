@@ -76,18 +76,18 @@
 			<select id="cyM" class="pt-sel" title="月份"></select>
 			<span class="pt-time-note">按「取消月」统计；分母 = 当年下单订单数；无成本取消 = 单采预约前 + 单采前（这 2 个阶段尚未单采，不产生 COGS）</span>
 		</div>
-		<div class="cancel-cards" id="cyCards"></div>
+		<div class="kpi-grid" id="cyCards"></div>
 		<div class="cancel-tip" id="cyTip"></div>
 		<div class="pt-tables">
 			<div class="pt-tbl-row">
 				<div class="pt-tbl-col">
-					<div class="pt-tbl-tit">每月取消订单（按阶段堆积）<span class="pt-tbl-tag">柱顶为当月总数</span></div>
-					<div class="cancel-chart" id="cyChart1"></div>
+					<div class="sec-head">每月取消订单（按阶段堆积）<span class="sub">柱顶为当月总数</span></div>
+					<div class="cancel-chart" id="cancelYtdMonthlyChart"></div>
 				</div>
 				<div class="pt-tbl-col">
-					<div class="pt-tbl-tit">按 AM 取消（按阶段堆积）<span class="pt-tbl-tag">右侧为取消比例</span></div>
+					<div class="sec-head">AM YTD取消订单<span class="sub">右侧为取消比例</span></div>
 					<div class="cancel-amrow">
-						<div class="cancel-chart" id="cyChart2"></div>
+						<div class="cancel-chart" id="cancelYtdAmChart"></div>
 						<div class="cancel-note" id="cyAmNote"></div>
 					</div>
 				</div>

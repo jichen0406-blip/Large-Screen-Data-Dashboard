@@ -69,8 +69,8 @@
         if (!el) return;
         var s = PAGE.summary || '';
         el.innerHTML = s
-            ? '<div class="abn-ai-hd"><span class="abn-ai-tag">AI 总结</span><span class="abn-ai-time">数据截止 ' + esc(B.ABN_MGMT.summaryAt || B.DP || '') + '</span></div><div class="abn-ai-txt">' + esc(s) + '</div>'
-            : '<div class="abn-ai-hd"><span class="abn-ai-tag">AI 总结</span></div><div class="abn-ai-txt abn-ai-empty">暂无总结（构建时未生成）</div>';
+            ? '<div class="ib-hd"><span class="ib-tag">AI 总结</span><span class="ib-time">数据截止 ' + esc(B.ABN_MGMT.summaryAt || B.DP || '') + '</span></div><div class="ib-txt">' + esc(s) + '</div>'
+            : '<div class="ib-hd"><span class="ib-tag">AI 总结</span></div><div class="ib-txt ib-empty">暂无总结（构建时未生成）</div>';
     }
 
     // ── 卡片式汇总（按时长分档）──
@@ -80,14 +80,14 @@
         var total = DATA.length;
         var maxM = {}; DATA.forEach(function (r) { if (!(r.bucket in maxM) || r.months > maxM[r.bucket]) maxM[r.bucket] = r.months; });
         var cnt = {}; DATA.forEach(function (r) { cnt[r.bucket] = (cnt[r.bucket] || 0) + 1; });
-        var h = '<div class="abn-card abn-card-all"><div class="abn-card-b">全部</div><div class="abn-card-n">' + total + '</div><div class="abn-card-s">100% · 最久 ' + (total ? Math.max.apply(null, DATA.map(function (r) { return r.months; })) : 0) + ' 月</div></div>';
+        var h = '<div class="kpi-card kpi-card-all"><div class="kc-label">全部</div><div class="kc-val">' + total + '</div><div class="kc-sub">100% · 最久 ' + (total ? Math.max.apply(null, DATA.map(function (r) { return r.months; })) : 0) + ' 月</div></div>';
         CFG.buckets.forEach(function (b) {
             var n = cnt[b] || 0;
             var pct = total ? Math.round(n / total * 100) : 0;
-            h += '<div class="abn-card sev-' + (SEV[b] || 1) + (n ? '' : ' abn-card-zero') + '">' +
-                '<div class="abn-card-b">' + esc(b) + '</div>' +
-                '<div class="abn-card-n">' + n + '</div>' +
-                '<div class="abn-card-s">' + pct + '% · 最久 ' + (n ? maxM[b] : 0) + ' 月</div></div>';
+            h += '<div class="kpi-card sev-' + (SEV[b] || 1) + (n ? '' : ' dim') + '">' +
+                '<div class="kc-label">' + esc(b) + '</div>' +
+                '<div class="kc-val">' + n + '</div>' +
+                '<div class="kc-sub">' + pct + '% · 最久 ' + (n ? maxM[b] : 0) + ' 月</div></div>';
         });
         el.innerHTML = h;
     }

@@ -62,9 +62,9 @@ $(function () {
         ];
         var h = '<table class="pt"><thead><tr><th class="pt-lbl">' + name + '</th>';
         for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th></tr></thead><tbody>';
+        h += '<th class="pt-ytd">YTD</th><th>趋势图</th></tr></thead><tbody>';
         gs.forEach(function (g) {
-            h += '<tr class="pt-grp"><td class="pt-lbl" colspan="14">' + g.label + '</td></tr>';
+            h += '<tr class="pt-grp"><td class="pt-lbl" colspan="15">' + g.label + '</td></tr>';
             ['Tar', 'Act', 'Act%', 'LY', 'YOY'].forEach(function (mt) {
                 var row = ptMetricRowHTML(mt, m, function (i) {
                     var t, a, l;

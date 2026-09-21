@@ -34,13 +34,8 @@
 	.p6-coe-coe { color: #4fe3ff; }
 	.p6-coe-rcoe { color: #ffb800; }
 	.p6-coe-others { color: rgba(255,255,255,.6); }
-	/* 表格下方 AI 总结框（宽度随所在列容器；固定高度保证左右两框等高，文字过长内部滚动；内容为构建时快照，不随年月/筛选变化） */
-	.p6-ai { flex: none; height: 120px; display: flex; flex-direction: column; overflow: hidden; margin-top: 8px; border: 1px solid rgba(7,118,181,.5); background: rgba(2,24,61,.35); border-radius: 6px; padding: 8px 10px; }
-	.p6-ai-hd { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; flex: none; }
-	.p6-ai-tag { font-size: 11px; font-weight: 700; color: #02234d; background: linear-gradient(135deg, #4fe3ff, #62c98d); border-radius: 4px; padding: 1px 7px; letter-spacing: 1px; }
-	.p6-ai-time { font-size: 11px; color: rgba(255,255,255,.5); }
-	.p6-ai-txt { flex: 1; min-height: 0; overflow-y: auto; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,.88); scrollbar-width: thin; scrollbar-color: rgba(112,187,252,.5) rgba(255,255,255,.06); }
-	.p6-ai-empty { color: rgba(255,255,255,.35); }
+	/* 表格下方 AI 总结框：统一用 .insight-bar（见 css/style.css），此处只保留本页定高（保证左右两框等高、文字过长内部滚动） */
+	#p6aiPV, #p6aiHS { height: 120px; }
 	</style>
 	<script>window.PAGE_KEY='region3';</script>
 	<script type="text/javascript" src="js/users.js"></script>
@@ -107,12 +102,12 @@
 		<div class="pt-tables">
 			<div class="pt-tbl-row p6-row">
 				<div class="pt-tbl-col" id="p6PVcol">
-					<div class="pt-tbl-tit">省份数据 <span class="pt-tbl-tag">下单医院数去重</span><button class="map-fs" type="button" data-fs="p6tPV" data-title="省份数据">⛶</button></div>
+					<div class="sec-head">省份数据 <span class="sub">下单医院数去重</span><button class="map-fs" type="button" data-fs="p6tPV" data-title="省份数据">⛶</button></div>
 					<div class="pt-tbl-wrap" id="p6tPV"></div>
-					<div class="p6-ai" id="p6aiPV"></div>
+					<div class="insight-bar" id="p6aiPV"></div>
 				</div>
 				<div class="pt-tbl-col" id="p6HScol">
-					<div class="pt-tbl-tit">医院数据 <span class="pt-tbl-tag">按 COE 分类 · 组内按下单量降序</span><button class="map-fs" type="button" data-fs="p6tHS" data-title="医院数据">⛶</button></div>
+					<div class="sec-head">医院数据 <span class="sub">按 COE 分类 · 组内按下单量降序</span><button class="map-fs" type="button" data-fs="p6tHS" data-title="医院数据">⛶</button></div>
 					<div class="p6-hs-ctl">
 						<div class="cart-lights" id="p6coeLights"></div>
 						<div class="cart-search">
@@ -122,7 +117,7 @@
 					</div>
 					<div class="p6-hs-sum" id="p6hsSum"></div>
 					<div class="pt-tbl-wrap" id="p6tHS"></div>
-					<div class="p6-ai" id="p6aiHS"></div>
+					<div class="insight-bar" id="p6aiHS"></div>
 				</div>
 			</div>
 		</div>

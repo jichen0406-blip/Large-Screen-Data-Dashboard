@@ -146,7 +146,7 @@ $(function () {
         return option;
     }
 
-    var mapChart = echarts.init(document.getElementById('p3rmap'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
+    var mapChart = echarts.init(document.getElementById('globalRegMap'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
     mapChart.setOption(buildMap());
 
     // hover 国家区域 → 触发对应散点的 tooltip（自营散点完全透明，靠 geo 区域 hover 唤起）
@@ -312,7 +312,7 @@ $(function () {
             });
         });
 
-        $('#p3rgantt').html('<table class="p3r-gt">' + head + '<tbody>' + bodyRows + '</tbody></table>');
+        $('#approvalGantt').html('<table class="p3r-gt">' + head + '<tbody>' + bodyRows + '</tbody></table>');
     }
     renderGantt();
 

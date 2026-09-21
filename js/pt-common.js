@@ -22,6 +22,32 @@ function yoyStr(c, l) {
     return v >= 0 ? '<span class="pt-yu">+' + v.toFixed(0) + '%</span>' : '<span class="pt-yd">' + v.toFixed(0) + '%</span>';
 }
 
+// ── 迷你趋势图：1 月～所选月折线 + 最小二乘拟合线（内联 SVG，不依赖 echarts） ──
+// 只纳入「已到月份」：未来月份无数据，若按 0 参与拟合会让所有斜率人为下降
+// arr = 该行 1..12 月数值；m = 所选月；w/h = 画布尺寸（默认 90×24）
+function spark(arr, m, w, h) {
+    w = w || 90; h = h || 24;
+    var vals = (arr || []).slice(0, Math.max(1, Math.min(12, m)));
+    var n = vals.length;
+    var mx = Math.max.apply(null, vals.concat([1]));
+    function X(i) { return n > 1 ? (i / (n - 1)) * (w - 2) + 1 : w / 2; }
+    function Y(v) { return h - 2 - ((v || 0) / mx) * (h - 4); }
+    function clip(v) { return Math.min(mx, Math.max(0, v)); }
+    var pts = vals.map(function (v, i) { return X(i).toFixed(1) + ',' + Y(v).toFixed(1); }).join(' ');
+    var out = '<svg class="spark" viewBox="0 0 ' + w + ' ' + h + '" width="' + w + '" height="' + h + '" aria-hidden="true">' +
+        '<polyline points="' + pts + '" fill="none" stroke="#4fe3ff" stroke-width="1.4" stroke-linejoin="round"/>';
+    if (n > 1) {
+        var sx = 0, sy = 0, sxx = 0, sxy = 0;
+        for (var i = 0; i < n; i++) { sx += i; sy += vals[i]; sxx += i * i; sxy += i * vals[i]; }
+        var den = n * sxx - sx * sx;
+        var b = den ? (n * sxy - sx * sy) / den : 0;
+        var a = (sy - b * sx) / n;
+        var fit = X(0).toFixed(1) + ',' + Y(clip(a)).toFixed(1) + ' ' + X(n - 1).toFixed(1) + ',' + Y(clip(a + b * (n - 1))).toFixed(1);
+        out += '<polyline points="' + fit + '" fill="none" stroke="' + (b >= 0 ? '#62c98d' : '#ff8c42') + '" stroke-width="1.4" stroke-dasharray="3 2"/>';
+    }
+    return out + '</svg>';
+}
+
 // 五行单元格（Tar/Act/Act%/LY/YOY）：未来月（>所选月）仅 Act/Act%/YOY 留空，Tar/LY 显示全月
 function ptCell(mt, i, m, t, a, l) {
     var c = '--';
@@ -42,14 +68,19 @@ function ptYtdCell(mt, yt, ya, yl) {
     return '<td class="pt-ytd">' + yc + '</td>';
 }
 // 五行整行：calcMonth(i) 返回 {t,a,l}；yt/ya/yl 为该行累计（传入初始 0）
+// 末列「趋势图」：目标/实际/去年三行画迷你折线（同 SCOE 页），其余指标行留空占位
 function ptMetricRowHTML(mt, m, calcMonth, yt, ya, yl) {
     var h = '<tr class="pt-mtr"><td class="pt-lbl">' + mt + '</td>';
+    var hasSpark = (mt === 'Tar' || mt === 'Act' || mt === 'LY');
+    var series = [];
     for (var i = 1; i <= 12; i++) {
         var v = calcMonth(i);
         if (i <= m) { yt += v.t; ya += v.a; yl += v.l; }
         h += ptCell(mt, i, m, v.t, v.a, v.l);
+        if (hasSpark) series.push(mt === 'Tar' ? v.t : (mt === 'Act' ? v.a : v.l));
     }
-    return { h: h + ptYtdCell(mt, yt, ya, yl) + '</tr>', yt: yt, ya: ya, yl: yl };
+    var sp = hasSpark ? '<td class="pt-spark">' + spark(series, m) + '</td>' : '<td class="pt-spark"></td>';
+    return { h: h + ptYtdCell(mt, yt, ya, yl) + sp + '</tr>', yt: yt, ya: ya, yl: yl };
 }
 
 // 时间控制：构建年月选项、读共享 sessionStorage（无保存值时默认「最新有数据的月份」，辖区1/2/3 一致）、onchange 保存并回调

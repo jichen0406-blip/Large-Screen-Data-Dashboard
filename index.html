@@ -78,7 +78,7 @@ var t = null;
 		<ul class="clearfix nav1">
 			<li style="width: 22%">
 				<div class="box">
-					<div class="tit">Top 30下单医院<button class="map-fs" type="button" data-fs="tbl1body" data-title="Top 30下单医院">⛶</button></div>
+					<div class="sec-head">Top 30下单医院<button class="map-fs" type="button" data-fs="tbl1body" data-title="Top 30下单医院">⛶</button></div>
 					<div class="boxnav" style="height: 225px;">
 						<div class="tbl-scroll" id="tbl1body">
 							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -91,7 +91,7 @@ var t = null;
 					</div>
 				</div>
 				<div class="box">
-					<div class="tit">Top 30回输医院<button class="map-fs" type="button" data-fs="tbl3body" data-title="Top 30回输医院">⛶</button></div>
+					<div class="sec-head">Top 30回输医院<button class="map-fs" type="button" data-fs="tbl3body" data-title="Top 30回输医院">⛶</button></div>
 					<div class="boxnav" style="height: 225px;">
 						<div class="tbl-scroll" id="tbl3body">
 							<table class="table1 top-table" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -123,8 +123,8 @@ var t = null;
 								<li><div><span>MTD放行</span><p id="mtdq">--</p></div></li>
 							</ul>
 						</div>
-						<div class="map" id="map"><div class="radar-sweep"></div></div>
-						<button class="map-fs" type="button" data-fs="map" data-fs2="provPanel" data-title="中国地图">⛶</button>
+						<div class="map" id="chinaMap"><div class="radar-sweep"></div></div>
+						<button class="map-fs" type="button" data-fs="chinaMap" data-fs2="provPanel" data-title="中国地图">⛶</button>
 						<div class="prov-panel" id="provPanel">
 							<div class="prov-head">
 								<span class="prov-title" id="provTitle">--</span>
@@ -133,7 +133,7 @@ var t = null;
 							</div>
 							<div class="prov-loading" id="provLoading">加载中…</div>
 							<div class="prov-body">
-								<div class="prov-chart-wrap" id="provChart"></div>
+								<div class="prov-chart-wrap" id="provPanelChart"></div>
 								<div class="prov-rank">
 									<div class="prov-rank-tit">Top 5 下单医院</div>
 									<ul class="prov-rank-list" id="provRank"></ul>
@@ -147,7 +147,7 @@ var t = null;
 			</li>
 			<li style="width: 22%">
 				<div class="box">
-					<div class="tit">当月下单 & 回输<button class="map-fs" type="button" data-fs="last7List" data-title="当月下单 & 回输">⛶</button></div>
+					<div class="sec-head">当月下单 & 回输<button class="map-fs" type="button" data-fs="last7List" data-title="当月下单 & 回输">⛶</button></div>
 					<div class="boxnav" style="height: 505px;">
 						<div class="sev-scroll" id="last7List"></div>
 					</div>
@@ -157,15 +157,15 @@ var t = null;
 		<div class="box" style="padding: 20px 0;">
 			<ul class="clearfix nav2">
 				<li style="width:25%">
-					<div class="tit01">下单月度趋势<button class="map-fs" type="button" data-fs="echart6" data-title="下单月度趋势">⛶</button></div>
-					<div class="chart-box"><div class="ftechart" id="echart6"></div></div>
+					<div class="sec-head">下单月度趋势<button class="map-fs" type="button" data-fs="orderMonthlyTrendChart" data-title="下单月度趋势">⛶</button></div>
+					<div class="chart-box"><div class="ftechart" id="orderMonthlyTrendChart"></div></div>
 				</li>
 				<li style="width:25%">
-					<div class="tit01">回输月度趋势<button class="map-fs" type="button" data-fs="echart4" data-title="回输月度趋势">⛶</button></div>
-					<div class="chart-box"><div class="ftechart" id="echart4"></div></div>
+					<div class="sec-head">回输月度趋势<button class="map-fs" type="button" data-fs="reinfusionMonthlyTrendChart" data-title="回输月度趋势">⛶</button></div>
+					<div class="chart-box"><div class="ftechart" id="reinfusionMonthlyTrendChart"></div></div>
 				</li>
 				<li style="width:25%">
-					<div class="tit01">YTD生产异常订单<button class="map-fs" type="button" data-fs="abnBox" data-title="YTD生产异常订单">⛶</button></div>
+					<div class="sec-head">YTD生产异常订单<button class="map-fs" type="button" data-fs="abnBox" data-title="YTD生产异常订单">⛶</button></div>
 					<div class="nav2-chart" id="abnBox" style="flex: 1; min-height: 0; display: flex;">
 						
 						<div style="flex: 1; min-width:0" class="wancheng">
@@ -173,15 +173,15 @@ var t = null;
 								<h3 class="abn-num"><span id="abnNum">--</span><i>单</i></h3>
 							</div>
 						</div>
-						<div style="flex: 2; min-width:0" id="myd1"></div>
+						<div style="flex: 2; min-width:0" id="abnOrderChart"></div>
 					</div>
 				</li>
 				<li style="width:25%">
-					<div class="tit01">COE医院销量占比<button class="map-fs" type="button" data-fs="coeBox" data-title="COE医院销量占比">⛶</button></div>
+					<div class="sec-head">COE医院销量占比<button class="map-fs" type="button" data-fs="coeBox" data-title="COE医院销量占比">⛶</button></div>
 					<div class="nav2-chart" id="coeBox" style="flex: 1; min-height: 0; display: flex;">
 						
-						<div style="flex: 1; min-width:0" id="fb03"></div>
-						<div style="flex: 1; min-width:0" id="fb04"></div>
+						<div style="flex: 1; min-width:0" id="coeOrderPie"></div>
+						<div style="flex: 1; min-width:0" id="coeReinfusionPie"></div>
 					</div>
 				</li>
 			</ul>

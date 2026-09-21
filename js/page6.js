@@ -165,9 +165,9 @@ $(function () {
             var el = document.getElementById(elId);
             if (!el) return;
             var s = (slot && slot.summary) || '';
-            el.innerHTML = '<div class="p6-ai-hd"><span class="p6-ai-tag">AI 总结</span>' +
-                (scope ? '<span class="p6-ai-time">' + scope + '</span>' : '') + '</div>' +
-                '<div class="p6-ai-txt' + (s ? '' : ' p6-ai-empty') + '">' + (s || '暂无总结（构建时未生成）') + '</div>';
+            el.innerHTML = '<div class="ib-hd"><span class="ib-tag">AI 总结</span>' +
+                (scope ? '<span class="ib-time">' + scope + '</span>' : '') + '</div>' +
+                '<div class="ib-txt' + (s ? '' : ' ib-empty') + '">' + (s || '暂无总结（构建时未生成）') + '</div>';
         }
         box('p6aiPV', R.province);
         box('p6aiHS', R.hospital);

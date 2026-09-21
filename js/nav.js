@@ -10,7 +10,7 @@
         { id: 'flow.html', key: 'flow', num: 'P4', name: '福可苏全流程跟进' },
         { id: 'page2.html', key: 'sales', num: 'P5', name: '海外/商业化' },
         { id: 'page3.html', key: 'reg', num: 'P6', name: '全球注册进度' },
-        { id: 'page18.html', key: 'channels', num: 'P7', name: '患者渠道销量' },
+        { id: 'page18.html', key: 'channels', num: 'P7', name: '海外患者渠道销量' },
         { id: 'page4.html', key: 'region1', num: 'P8', name: '目标数据管理' },
         { id: 'page5.html', key: 'region2', num: 'P9', name: 'AM下单&回输数据' },
         { id: 'page6.html', key: 'region3', num: 'P10', name: '省份&医院数据' },

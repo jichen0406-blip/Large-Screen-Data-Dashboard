@@ -28,7 +28,7 @@
 
     // 1. 顶部 4 线趋势图（下单/回输/单采/质量放行 × 过去30天）
     function renderChart() {
-        var el = document.getElementById('p9chart');
+        var el = document.getElementById('last30dTrendChart');
         if (!el || typeof echarts === 'undefined') return;
         var days = B.DAILY30.map(function (d) { return d.date.slice(5); });
         var chart = echarts.init(el);

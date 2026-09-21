@@ -41,9 +41,8 @@ $(function () {
     }
     function isZqCand(x) { return (x.pay || '').indexOf('择期') >= 0 || !!(x.modZq); }
 
-    // ── 漏斗计算（顺序刨除） ──
-    function compute() {
-        var s = $start.val(), e = $end.val();
+    // ── 漏斗计算（顺序刨除）；s/e 为下单年月区间 ──
+    function compute(s, e) {
         var pool = ORDERS.filter(function (o) { return o.od && o.od.slice(0, 7) >= s && o.od.slice(0, 7) <= e; });
 
         // 择期生产：支付方式含"择期" 或 申请修改为择期（modZq 非空）；恢复生产时间空且未取消回输才算
@@ -103,16 +102,16 @@ $(function () {
             layers: [colored(d.zq.no, COLORS.zqNo), colored(d.zq.exp, COLORS.zqExp), colored(d.zq.ok, COLORS.zqOk), noColor(T - zq)],
             tip: [['没单采', d.zq.no, COLORS.zqNo], ['过期', d.zq.exp, COLORS.zqExp], ['已单采', d.zq.ok, COLORS.zqOk]] });
         var seq = [
-            { k: 'b3', name: '单采预约前取消', color: COLORS.b3, tip: '单采预约前取消' },
+            { k: 'b3', name: '单采预约前取消', color: COLORS.b3, tip: '单采预约前取消', cancel: true },
             { k: 'b4', name: '预约单采中', color: COLORS.b4, tip: '预约单采中' },
-            { k: 'b5', name: '单采前取消', color: COLORS.b5, tip: '单采前取消' },
+            { k: 'b5', name: '单采前取消', color: COLORS.b5, tip: '单采前取消', cancel: true },
             { k: 'b6', name: '等待单采', color: COLORS.b6, tip: '等待单采' },
             { k: 'b7', name: '单采中', color: COLORS.b7, tip: '单采中' },
-            { k: 'b8', name: '单采后取消', color: COLORS.b8, tip: '单采后取消' },
+            { k: 'b8', name: '单采后取消', color: COLORS.b8, tip: '单采后取消', cancel: true },
             { k: 'b9', name: '排期/生产中', color: COLORS.b9, tip: '排期/生产中' },
-            { k: 'b10', name: '生产中取消', subs: [['生产失败', d.b10Fail, COLORS.b10Fail], ['患者死亡', d.b10Dead, COLORS.b10Dead]] },
+            { k: 'b10', name: '生产中取消', subs: [['生产失败', d.b10Fail, COLORS.b10Fail], ['患者死亡', d.b10Dead, COLORS.b10Dead]], cancel: true },
             { k: 'b11', name: '质量放行', color: COLORS.b11, tip: '质量放行' },
-            { k: 'b12', name: '生产完成取消回输', color: COLORS.b12, tip: '生产完成取消回输' },
+            { k: 'b12', name: '生产完成取消回输', color: COLORS.b12, tip: '生产完成取消回输', cancel: true },
             { k: 'b13', name: '回输', color: COLORS.b13, tip: '回输' }
         ];
         var cum = zq;
@@ -120,11 +119,11 @@ $(function () {
             var v = d[s.k];
             var rest = T - cum - v;
             if (s.subs) {
-                cols.push({ name: s.name, before: cum, rest: rest,
+                cols.push({ name: s.name, before: cum, rest: rest, cancel: !!s.cancel,
                     layers: [noColor(cum), colored(s.subs[0][1], s.subs[0][2]), colored(s.subs[1][1], s.subs[1][2]), noColor(rest)],
                     tip: s.subs });
             } else {
-                cols.push({ name: s.name, before: cum, rest: rest,
+                cols.push({ name: s.name, before: cum, rest: rest, cancel: !!s.cancel,
                     layers: [noColor(cum), colored(v, s.color), noColor(0), noColor(rest)],
                     tip: [[s.tip, v, s.color]] });
             }
@@ -136,7 +135,7 @@ $(function () {
     // ── 渲染 ──
     var chart = echarts.init(document.getElementById('flowChart'));
     function render() {
-        var d = compute();
+        var d = compute($start.val(), $end.val());
         var cols = buildCols(d);
         var T = d.total;
         var xData = cols.map(function (c) { return c.name; });
@@ -149,7 +148,12 @@ $(function () {
                     var isC = !!ly.c;
                     return {
                         value: ly.v,
-                        itemStyle: { color: isC ? ly.c : NO_COLOR, borderColor: isC ? 'rgba(2,24,61,0.5)' : 'transparent', borderWidth: isC ? 1 : 0 },
+                        itemStyle: {
+                            color: isC ? ly.c : NO_COLOR,
+                            borderColor: isC ? (c.cancel ? '#ff4d4f' : 'rgba(2,24,61,0.5)') : 'transparent',
+                            borderWidth: isC ? (c.cancel ? 1.5 : 1) : 0,
+                            borderType: c.cancel ? 'dashed' : 'solid'
+                        },
                         emphasis: isC ? { itemStyle: { borderColor: '#4fe3ff', borderWidth: 1.5 } } : { itemStyle: {} },
                         label: {
                             show: isC && ly.v > 0, position: 'inside',
@@ -162,7 +166,7 @@ $(function () {
         }
         chart.setOption({
             backgroundColor: 'transparent',
-            grid: { left: 20, right: 20, top: 34, bottom: 64, containLabel: true },
+            grid: { left: 20, right: 20, top: 34, bottom: 8, containLabel: true },
             tooltip: {
                 trigger: 'axis', axisPointer: { type: 'shadow', shadowStyle: { color: 'rgba(47,137,207,0.12)' } },
                 backgroundColor: 'rgba(2,24,61,0.95)', borderColor: 'rgba(47,137,207,0.8)',
@@ -201,6 +205,24 @@ $(function () {
         } else { $e.hide(); }
     }
 
+    // ── 底部统计文本框（固定全量口径，不随「下单日期」筛选联动） ──
+    function renderSummary() {
+        var d = compute(MIN_M, MAX_M);
+        var aph = d.b7 + d.b8 + d.b9 + d.b10 + d.b11 + d.b12 + d.b13;  // 完成单采：单采中及之后
+        var prod = d.b11 + d.b12 + d.b13;                              // 药品生产完成
+        var canc = d.b3 + d.b5 + d.b8 + d.b10 + d.b12;                 // 5 个取消阶段
+        var el = document.getElementById('flowSummary');
+        if (!el) return;
+        el.innerHTML =
+            '<div class="ib-hd"><span class="ib-tag">全流程概览</span><span class="ib-time">数据截止 ' + DP + ' · 全量口径</span></div>' +
+            '<div class="ib-txt">截止最新，总计完成 <b>' + d.total + '</b> 张处方，现有择期生产订单 <b>' + d.zq.n + '</b> 张。' +
+            '全流程订单中，<b>' + aph + '</b> 个患者完成单采（单采中 + 单采后取消 + 排期/生产中 + 生产中取消 + 质量放行 + 生产完成取消回输 + 回输），' +
+            '<b>' + prod + '</b> 个患者药品生产完成（质量放行 + 生产完成取消回输 + 回输），<b>' + d.b13 + '</b> 个患者完成回输。' +
+            '总计 <b>' + canc + '</b> 例订单取消。</div>';
+    }
+
     render();
+    renderSummary();
+    window.addEventListener('resize', function () { chart.resize(); });
     window.addEventListener('resize', function () { chart.resize(); });
 });

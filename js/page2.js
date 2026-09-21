@@ -234,8 +234,8 @@ $(function () {
         return option;
     }
 
-    var leftChart = echarts.init(document.getElementById('p2mapL'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
-    var rightChart = echarts.init(document.getElementById('p2mapR'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
+    var leftChart = echarts.init(document.getElementById('overseaPatientMap'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
+    var rightChart = echarts.init(document.getElementById('overseaBizMap'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
 
     // 轮播（按纬度北→南），tooltip 卡片展示该区域下单/回输
     function startAuto(chart, md) {
@@ -440,7 +440,7 @@ $(function () {
     var tipEl = null;
     function hideClickTip() { if (tipEl) tipEl.hide(); }
     function showClickTip(zh, o, r, x, y) {
-        if (!tipEl) tipEl = $('<div class="p2-click-tip" id="p2ClickTip"></div>').appendTo($('#p2mapL').parent());
+        if (!tipEl) tipEl = $('<div class="p2-click-tip" id="p2ClickTip"></div>').appendTo($('#overseaPatientMap').parent());
         tipEl.html('<div class="p2ct-name">' + zh + '</div><div>下单：<span style="color:#2f89cf;font-weight:700">' + o + '</span> 单</div><div>回输：<span style="color:#62c98d;font-weight:700">' + r + '</span> 单</div>');
         tipEl.css({ left: (x + 14) + 'px', top: (y + 14) + 'px' }).show();
     }

@@ -50,7 +50,7 @@ $(function () {
         if (!el || fsEl) return;
         var fid = $(this).data('fs');
         if (window.p2SetTblRows && el.querySelector('tbody')) window.p2SetTblRows(30);
-        var isChart = (fid === 'echart6' || fid === 'echart4' || fid === 'abnBox' || fid === 'coeBox');
+        var isChart = (fid === 'orderMonthlyTrendChart' || fid === 'reinfusionMonthlyTrendChart' || fid === 'abnBox' || fid === 'coeBox');
         fsEl = el;
         el._fsHome = el.parentNode;
         var exId = $(this).data('fs2');

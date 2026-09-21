@@ -69,18 +69,20 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="p2-cards" id="p2cards">
-			<div class="p2-card"><span>NPP / 商业化 下单</span><p id="p2npO">--</p></div>
-			<div class="p2-card"><span>NPP / 商业化 回输</span><p id="p2npR">--</p></div>
-			<div class="p2-card"><span>国内导流 下单</span><p id="p2dO">--</p></div>
-			<div class="p2-card"><span>国内导流 回输</span><p id="p2dR">--</p></div>
+			<div class="kpi-grid">
+				<div class="kpi-card run"><div class="kc-label">NPP / 商业化 下单</div><div class="kc-val" id="p2npO">--</div></div>
+				<div class="kpi-card run"><div class="kc-label">NPP / 商业化 回输</div><div class="kc-val" id="p2npR">--</div></div>
+				<div class="kpi-card run"><div class="kc-label">国内导流 下单</div><div class="kc-val" id="p2dO">--</div></div>
+				<div class="kpi-card run"><div class="kc-label">国内导流 回输</div><div class="kc-val" id="p2dR">--</div></div>
+			</div>
 			<div class="p2-years" id="p2years"></div>
 		</div>
 		<ul class="clearfix nav1">
 			<li style="width: 50%">
 				<div class="box">
-					<div class="tit">海外患者（含导流以及海外商业化）<button class="map-fs" type="button" data-fs="p2mapL" data-title="海外患者（含导流以及海外商业化）">⛶</button></div>
+					<div class="sec-head">海外患者（含导流以及海外商业化）<button class="map-fs" type="button" data-fs="overseaPatientMap" data-title="海外患者（含导流以及海外商业化）">⛶</button></div>
 					<div class="boxnav" style="height: 405px; position: relative">
-						<div class="p2-map" id="p2mapL"></div>
+						<div class="p2-map" id="overseaPatientMap"></div>
 					</div>
 					<div class="p2-tbl-bar"><button class="map-fs" type="button" data-fs="tblwrapL" data-title="海外患者 明细">⛶</button></div>
 					<div class="p2-tbl-wrap" id="tblwrapL">
@@ -93,9 +95,9 @@
 			</li>
 			<li style="width: 50%">
 				<div class="box">
-					<div class="tit">海外商业化<button class="map-fs" type="button" data-fs="p2mapR" data-title="海外商业化">⛶</button></div>
+					<div class="sec-head">海外商业化<button class="map-fs" type="button" data-fs="overseaBizMap" data-title="海外商业化">⛶</button></div>
 					<div class="boxnav" style="height: 405px; position: relative">
-						<div class="p2-map" id="p2mapR"></div>
+						<div class="p2-map" id="overseaBizMap"></div>
 					</div>
 					<div class="p2-tbl-bar"><button class="map-fs" type="button" data-fs="tblwrapR" data-title="海外商业化 明细">⛶</button></div>
 					<div class="p2-tbl-wrap" id="tblwrapR">
