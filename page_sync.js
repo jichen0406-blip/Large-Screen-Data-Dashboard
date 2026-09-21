@@ -100,7 +100,10 @@ function scanResidualP(doc) {
     if (inMark) return;
     if (/num:\s*'P\d+/.test(line)) return;
     var m = line.match(/\bP\d{1,2}\b/g);
-    if (m) out.push(line.trim().slice(0, 60));
+    if (!m) return;
+    // 并列/区间写法（P1/P2…、P1、P2、P1~P3、P1-P3）是讲「序号」概念本身的说明文字，不是页面引用
+    if (/\bP\d{1,2}\s*[/、,，~～-]\s*P\d{1,2}/.test(line)) return;
+    out.push(line.trim().slice(0, 60));
   });
   return out;
 }
