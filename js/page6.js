@@ -118,38 +118,30 @@ $(function () {
         document.getElementById('p6tHS').innerHTML = h;
     }
 
-    // 省份数据：按 AM 分组（REGIONS.AMS 顺序），组内下单量降序；下单医院数=YTD内有下单的医院去重
+    // 省份数据：一个省一行（跨 AM 合并），AM 作为列展示（多 AM 用「、」连接）；按下单量降序
     function renderPV(rows) {
-        var provAgg = {}; // 'am|prov' → {o,r,lo,lr,hosp}
+        var provAgg = {}; // prov → {o,r,lo,lr,hosp,ams}
         rows.forEach(function (r) {
-            var pk = r.am + '|' + r.prov;
-            var g = provAgg[pk] || (provAgg[pk] = { o: 0, r: 0, lo: 0, lr: 0, hosp: {} });
+            var g = provAgg[r.prov] || (provAgg[r.prov] = { o: 0, r: 0, lo: 0, lr: 0, hosp: {}, ams: {} });
             g.o += r.o; g.r += r.r; g.lo += r.lo; g.lr += r.lr;
-            if (r.o > 0) g.hosp[r.hosp] = true; // 下单医院数去重
+            g.ams[r.am] = true;
+            if (r.o > 0) g.hosp[r.city + '|' + r.hosp] = true; // 下单医院数去重（按医院实体）
         });
-        var groups = {};
-        Object.keys(provAgg).forEach(function (pk) {
-            var p = pk.split('|');
-            var am = p[0], prov = p[1], g = provAgg[pk];
-            if (!groups[am]) groups[am] = [];
-            groups[am].push({ prov: prov, o: g.o, r: g.r, lo: g.lo, lr: g.lr, n: Object.keys(g.hosp).length });
-        });
-        var amOrder = [];
-        AMS.forEach(function (a) { if (groups[a]) amOrder.push(a); });
-        Object.keys(groups).forEach(function (a) { if (amOrder.indexOf(a) < 0) amOrder.push(a); });
+        var list = Object.keys(provAgg).map(function (prov) {
+            var g = provAgg[prov];
+            var ams = AMS.filter(function (a) { return g.ams[a]; });
+            Object.keys(g.ams).forEach(function (a) { if (ams.indexOf(a) < 0) ams.push(a); });
+            return { prov: prov, ams: ams.join('、'), o: g.o, r: g.r, lo: g.lo, lr: g.lr, n: Object.keys(g.hosp).length };
+        }).sort(function (a, b) { return b.o - a.o || a.prov.localeCompare(b.prov, 'zh'); });
 
         var h = '<table class="pt"><thead><tr>' +
             '<th>AM</th><th>省份名称</th><th>下单医院数</th>' +
             '<th>YTD下单</th><th>下单同比</th><th>YTD回输</th><th>回输同比</th>' +
             '</tr></thead><tbody>';
-        amOrder.forEach(function (am) {
-            var list = groups[am].sort(function (a, b) { return b.o - a.o; });
-            h += '<tr class="pt-grp"><td class="pt-lbl" colspan="7">AM · ' + am + '</td></tr>';
-            list.forEach(function (g) {
-                h += '<tr><td></td><td class="pt-lbl">' + g.prov + '</td><td>' + (g.n > 0 ? g.n : '') + '</td>' +
-                    '<td>' + (g.o > 0 ? g.o : '') + '</td><td>' + yoyStr(g.o, g.lo) + '</td>' +
-                    '<td>' + (g.r > 0 ? g.r : '') + '</td><td>' + yoyStr(g.r, g.lr) + '</td></tr>';
-            });
+        list.forEach(function (g) {
+            h += '<tr><td>' + g.ams + '</td><td class="pt-lbl">' + g.prov + '</td><td>' + (g.n > 0 ? g.n : '') + '</td>' +
+                '<td>' + (g.o > 0 ? g.o : '') + '</td><td>' + yoyStr(g.o, g.lo) + '</td>' +
+                '<td>' + (g.r > 0 ? g.r : '') + '</td><td>' + yoyStr(g.r, g.lr) + '</td></tr>';
         });
         h += '</tbody></table>';
         document.getElementById('p6tPV').innerHTML = h;

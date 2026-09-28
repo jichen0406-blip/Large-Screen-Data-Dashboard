@@ -1042,28 +1042,30 @@ function r3RowsAcc() {
 function r3ProvinceStatsText() {
   var rows = r3RowsAcc(), agg = {};
   rows.forEach(function (r) {
-    var pk = r.am + '|' + r.prov;
-    var g = agg[pk] || (agg[pk] = { o: 0, r: 0, hosp: {} });
-    g.o += r.o; g.r += r.r; if (r.o > 0) g.hosp[r.hosp] = true;
+    var g = agg[r.prov] || (agg[r.prov] = { o: 0, r: 0, hosp: {}, ams: {} });
+    g.o += r.o; g.r += r.r; g.ams[r.am] = true;
+    if (r.o > 0) g.hosp[r.city + '|' + r.hosp] = true;
   });
   var ly = {};
   Object.keys(r3LastYear).forEach(function (k) {
-    var p = k.split('|'), pk = p[0] + '|' + p[1];
-    ly[pk] = (ly[pk] || 0) + (r3LastYear[k].o || 0);
+    var prov = k.split('|')[1];
+    ly[prov] = (ly[prov] || 0) + (r3LastYear[k].o || 0);
   });
-  var list = Object.keys(agg).map(function (pk) {
-    var p = pk.split('|'), g = agg[pk], lo = ly[pk] || 0;
-    return { pk: pk, label: p[0] + ' · ' + p[1], o: g.o, r: g.r, n: Object.keys(g.hosp).length, lo: lo, d: g.o - lo };
+  var list = Object.keys(agg).map(function (prov) {
+    var g = agg[prov], lo = ly[prov] || 0;
+    var ams = (REGIONS.AMS || []).filter(function (a) { return g.ams[a]; });
+    Object.keys(g.ams).forEach(function (a) { if (ams.indexOf(a) < 0) ams.push(a); });
+    return { pk: prov, label: ams.join('、') + ' · ' + prov, o: g.o, r: g.r, n: Object.keys(g.hosp).length, lo: lo, d: g.o - lo };
   });
   var L = [];
-  L.push('统计口径：' + R3_Y + ' 年 1–' + R3_M + ' 月累计（YTD），仅国内医院；表格行「AM · 省份」共 ' + list.length + ' 个');
+  L.push('统计口径：' + R3_Y + ' 年 1–' + R3_M + ' 月累计（YTD），仅国内医院；按省份统计，共 ' + list.length + ' 个省份');
   L.push('下单 Top6：' + list.slice().sort(function (a, b) { return b.o - a.o; }).slice(0, 6)
     .map(function (x) { return x.label + '（下单 ' + x.o + ' / 回输 ' + x.r + ' / 医院 ' + x.n + ' 家）'; }).join('；'));
   L.push('回输 Top5：' + list.slice().sort(function (a, b) { return b.r - a.r; }).slice(0, 5)
     .map(function (x) { return x.label + '（回输 ' + x.r + '）'; }).join('；'));
   var totO = list.reduce(function (s, x) { return s + x.o; }, 0);
   var totR = list.reduce(function (s, x) { return s + x.r; }, 0);
-  var hospSet = {}; rows.forEach(function (r) { if (r.o > 0) hospSet[r.hosp] = true; });
+  var hospSet = {}; rows.forEach(function (r) { if (r.o > 0) hospSet[r.city + '|' + r.hosp] = true; });
   L.push('合计：下单 ' + totO + '，回输 ' + totR + '；YTD 有下单的医院（去重）' + Object.keys(hospSet).length + ' 家');
   var up = list.filter(function (x) { return x.d > 0; }).sort(function (a, b) { return b.d - a.d; }).slice(0, 3);
   var dn = list.filter(function (x) { return x.d < 0; }).sort(function (a, b) { return a.d - b.d; }).slice(0, 3);
