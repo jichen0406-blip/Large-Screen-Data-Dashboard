@@ -92,7 +92,7 @@
 			<div class="pt-tbl-row">
 				<div class="pt-tbl-col pt-tbl-full">
 					<div class="sec-head">逾期未执行汇总 <span class="ov-count" id="ovCount"></span><span class="sub">计划时间 新 → 旧</span><button class="map-fs" type="button" data-fs="ovtbl" data-title="逾期未执行汇总">⛶</button></div>
-					<div class="pt-tbl-wrap" id="ovtbl"></div>
+					<div class="pt-tbl-wrap" id="ovtbl" data-xls-skip></div>
 				</div>
 			</div>
 		</div>
@@ -138,6 +138,7 @@
 		$('#ovUpd').text((B && B.UPDATED) ? B.UPDATED : '--');
 	});
 	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
 	<script type="text/javascript" src="js/fs.js"></script>
 	<!-- 左侧悬浮导航栏 -->
 	<div class="side-nav" id="sideNav"></div>

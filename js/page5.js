@@ -37,7 +37,7 @@ $(function () {
         var ly = y - 1;
         var h = '<table class="pt"><thead><tr><th class="pt-lbl">' + title + '</th>';
         for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th><th>趋势图</th></tr></thead><tbody>';
+        h += '<th class="pt-ytd">YTD</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
         ents.forEach(function (e) {
             h += '<tr class="pt-grp' + (e.cls ? ' pt-grp-' + e.cls : '') + '"><td class="pt-lbl" colspan="15">' + e.label + '</td></tr>';
             ['Tar', 'Act', 'Act%', 'LY', 'YOY'].forEach(function (mt) {

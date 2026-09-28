@@ -110,7 +110,7 @@
         '</colgroup><thead><tr>' +
         '<th>AM</th><th>省份</th><th>城市</th><th>医院名称</th><th>分类</th><th class="pt-ytd">YTD</th>';
       for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-      h += '<th>趋势图</th><th>同比%</th></tr></thead><tbody>';
+      h += '<th data-xls-skip>趋势图</th><th>同比%</th></tr></thead><tbody>';
 
       if (!rows.length) {
         h += '<tr><td colspan="20" class="coe-empty">' + (total ? '无符合筛选条件的医院' : '该分类下暂无医院') + '</td></tr>';

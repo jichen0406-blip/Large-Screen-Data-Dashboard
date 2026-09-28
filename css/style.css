@@ -379,6 +379,17 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .sec-head .sub{ font-size:11px; color:rgba(255,255,255,.5); border:1px solid rgba(47,137,207,.5); padding:1px 6px; border-radius:4px; letter-spacing:1px; }
 .sec-head .line{ flex:1; height:1px; background:linear-gradient(to right, rgba(47,137,207,.5), rgba(47,137,207,0)); }
 .sec-head .map-fs{ position:static; margin-left:auto; flex:none; transform:none; width:26px; height:26px; line-height:24px; }
+/* 表格导出按钮（项目文档 §14）：图标小按钮，紧贴 ⛶ 左侧，与 ⛶ 同尺寸同调性 */
+.xls-btn{ flex:none; width:26px; height:26px; padding:0; display:flex; align-items:center; justify-content:center;
+  border-radius:6px; cursor:pointer; background:rgba(47,137,207,.18); border:1px solid rgba(47,137,207,.55); color:rgba(255,255,255,.7); }
+.xls-btn svg{ width:14px; height:14px; fill:currentColor; display:block; }
+.xls-btn:hover{ border-color:#4ba6e0; color:#fff; background:rgba(47,137,207,.32); }
+.sec-head .xls-btn{ margin-left:auto; }
+.sec-head .xls-btn + .map-fs{ margin-left:8px; }
+.admin-tabbar .xls-btn{ width:30px; height:30px; }
+@media (max-width:768px){
+  .sec-head .xls-btn, .p2-tbl-bar .xls-btn{ width:24px; height:24px; }
+}
 .pt-tbl-wrap{ overflow:auto; max-height:480px; }
 .pt-tbl-wrap::-webkit-scrollbar{ height:6px; }
 .pt-tbl-wrap::-webkit-scrollbar-thumb{ background:rgba(47,137,207,.5); border-radius:3px; }
@@ -599,6 +610,7 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .clg-item:last-child::before{ display: none; }
 .clg-txt{ flex: 1; min-width: 0; padding-left: 30px; color: rgba(255,255,255,.85); font-size: 14px; line-height: 1.7; letter-spacing: .5px; }
 .clg-line + .clg-line{ margin-top: 5px; }
+.clg-txt strong{ color: #4fe3ff; font-weight: 600; }
 .clg-dot{ position: absolute; left: 0; top: 22px; width: 9px; height: 9px; border-radius: 50%; background: #37d67a; box-shadow: 0 0 6px rgba(55,214,122,.6); }
 .clg-date{ flex: none; width: 100px; margin-left: 20px; color: #4fe3ff; font-weight: 700; font-size: 13px; letter-spacing: 1px; line-height: 1.7; text-align: right; }
 /* 右下角装饰球体（复用登录页 qiu 浮动动画，大小与登录页一致、保持比例不变形） */

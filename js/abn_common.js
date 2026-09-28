@@ -101,7 +101,6 @@
             '<span class="abn-lab">合同号</span><input type="text" id="abnFNo" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
             '<span class="abn-lab">AM</span><input type="text" id="abnFAm" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
             '<span class="abn-lab">医院名称</span><input type="text" id="abnFHosp" class="abn-inp abn-inp-wide" placeholder="模糊搜索" autocomplete="off">' +
-            '<button type="button" class="cart-btn" id="abnExport">导出 Excel</button>' +
             '<button type="button" class="cart-btn ghost" id="abnClear">清空</button>' +
             '</div><div class="abn-ctl-row">' +
             '<span class="abn-lab">分类</span><select id="abnFBucket" class="pt-sel abn-sel"><option value="">全部</option>' +
@@ -178,11 +177,7 @@
     }
 
     // ── 导出当前筛选结果为 .xlsx（列与页面表格完全一致） ──
-    function pad2(n) { return (n < 10 ? '0' : '') + n; }
-    function todayStr() {
-        var d = new Date(Date.now() + 8 * 3600000); // 北京时间
-        return d.getUTCFullYear() + '-' + pad2(d.getUTCMonth() + 1) + '-' + pad2(d.getUTCDate());
-    }
+    // 按钮位置、SheetJS 懒加载、文件名规范统一由 js/excel_export.js 提供（项目文档 §14）
     function pageTitle() {
         return String(document.title || '').split('·').pop().trim() || '异常订单';
     }
@@ -196,19 +191,17 @@
         return 10;
     }
     function exportExcel() {
-        if (typeof XLSX === 'undefined') { alert('导出库未加载（js/xlsx.full.min.js），无法导出。'); return; }
         var rows = rowsVisible();
         if (!rows.length) { alert('当前无可导出的记录。'); return; }
         var cols = tableCols();
         var aoa = [cols.map(function (c) { return c.t; })];
         rows.forEach(function (r) { aoa.push(cols.map(function (c) { return c.v(r); })); });
-        var ws = XLSX.utils.aoa_to_sheet(aoa);
-        ws['!cols'] = cols.map(function (c) { return { wch: colWidth(c) }; });
-        var wb = XLSX.utils.book_new();
-        var name = pageTitle().slice(0, 31);
-        XLSX.utils.book_append_sheet(wb, ws, name);
-        XLSX.writeFile(wb, name + '_' + todayStr() + '.xlsx');
+        var tn = pageTitle(), pn = BoardXLS.pageName();
+        BoardXLS.exportAoa(aoa, (pn === tn ? tn : pn + '_' + tn),
+            { cols: cols.map(function (c) { return { wch: colWidth(c) }; }), sheet: tn });
     }
+    // 本文件在 <head> 里、早于 js/excel_export.js 加载，故走全局挂载点注册（模块加载时合并）
+    (window.BOARD_XLS_CUSTOM = window.BOARD_XLS_CUSTOM || {})['abnTbl'] = exportExcel;
 
     function renderAll() { renderCards(); renderTable(); }
 
@@ -232,7 +225,6 @@
             if (!next && onCnt <= 1) return;
             f.risk[v] = next; $(this).toggleClass('on', next); renderTable();
         });
-        $('#abnExport').on('click', exportExcel);
         $('#abnClear').on('click', function () {
             f.code = f.no = f.am = f.hosp = ''; f.bucket = '';
             ['abnFCode', 'abnFNo', 'abnFAm', 'abnFHosp'].forEach(function (id) { $('#' + id).val(''); });

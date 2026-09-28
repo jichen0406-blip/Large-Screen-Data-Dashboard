@@ -28,7 +28,7 @@ $(function () {
         ];
         var h = '<table class="pt pt-ov"><thead><tr><th class="pt-type">类型</th><th class="pt-lbl">渠道</th>';
         for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th><th>趋势图</th></tr></thead><tbody>';
+        h += '<th class="pt-ytd">YTD</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
         groups.forEach(function (g) {
             g.items.forEach(function (it, idx) {
                 h += '<tr class="' + (it.total ? 'pt-total-row' : '') + '">' +

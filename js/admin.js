@@ -28,6 +28,8 @@ $(function () {
         var h = localNote + '<div class="admin-tabbar">' +
             '<span class="admin-tab' + (curTab === 'users' ? ' on' : '') + '" data-tab="users">用户管理</span>' +
             '<span class="admin-tab' + (curTab === 'pages' ? ' on' : '') + '" data-tab="pages">页面权限管理</span>' +
+            '<button type="button" class="xls-btn" data-xls-btn="adminBody" data-xls-title="' +
+            (curTab === 'users' ? '用户管理' : '页面权限管理') + '">导出</button>' +
             '<button type="button" class="admin-gen" id="adminGenBtn">生成配置</button>' +
             '<span class="admin-msg" id="adminMsg"></span>' +
             '</div>';
@@ -50,7 +52,7 @@ $(function () {
                 '<option value="user"' + (u.role === 'user' ? ' selected' : '') + '>用户</option>' +
                 '</select></td>' +
                 '<td>' + (u.enabled ? '<span class="admin-ok">启用</span>' : '<span class="admin-off">禁用</span>') + '</td>' +
-                '<td><button type="button" class="admin-btn" data-act="pwd" data-u="' + n + '">重置密码</button>' + ck +
+                '<td data-xls-skip><button type="button" class="admin-btn" data-act="pwd" data-u="' + n + '">重置密码</button>' + ck +
                 (isSuper ? '' : '<button type="button" class="admin-btn danger" data-act="del" data-u="' + n + '">删除</button>') +
                 '</td></tr>';
         }).join('');
@@ -72,7 +74,8 @@ $(function () {
             var boxes = users.map(function (n) {
                 return '<label class="admin-ck"><input type="checkbox" value="' + n + '" data-pg="' + p.key + '"' + (sel.indexOf(n) >= 0 ? ' checked' : '') + '>' + n + '</label>';
             }).join('');
-            return '<tr><td>' + p.num + ' ' + p.name + '</td><td class="admin-ckwrap">' + (boxes || '<span class="admin-off">（无用户）</span>') + '</td></tr>';
+            return '<tr><td>' + p.num + ' ' + p.name + '</td><td class="admin-ckwrap">' + (boxes || '<span class="admin-off">（无用户）</span>') +
+                '<span data-xls-text style="display:none">' + (sel.join(' ') || '（无）') + '</span></td></tr>';
         }).join('');
         document.getElementById('adminBody').innerHTML =
             '<div class="admin-hint">每页勾选可访问的用户（勾选即保存、实时生效；管理员自动全部，无需配置）。新建页面后此列表自动出现新页。</div>' +

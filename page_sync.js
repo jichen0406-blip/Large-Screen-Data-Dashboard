@@ -176,7 +176,7 @@ function pageHTML(o) {
     '\t\t\t<div class="pt-tbl-row">\n' +
     '\t\t\t\t<div class="pt-tbl-col pt-tbl-full">\n' +
     '\t\t\t\t\t<div class="sec-head">' + o.name + ' <span class="sub">占位</span></div>\n' +
-    '\t\t\t\t\t<div class="pt-tbl-wrap" id="' + o.id.replace('.html', '') + 'Tbl">（新页面占位：在此填充图表/表格，样式前缀建议 ' + o.id.replace('.html', '') + '-* 或 pt-*；页面已套用整页一屏规则 .page-fill，见项目文档 §10.4）</div>\n' +
+    '\t\t\t\t\t<div class="pt-tbl-wrap" id="' + o.id.replace('.html', '') + 'Tbl">（新页面占位：在此填充图表/表格，样式前缀建议 ' + o.id.replace('.html', '') + '-* 或 pt-*；页面已套用整页一屏规则 .page-fill，见项目文档 §10.4。放真 &lt;table&gt; 后右上角会自动出现「导出」按钮，见 §14）</div>\n' +
     '\t\t\t\t</div>\n' +
     '\t\t\t</div>\n' +
     '\t\t</div>\n' +
@@ -199,6 +199,7 @@ function pageHTML(o) {
     '\t\t$(\'#dataUpd\').text((B && B.UPDATED) ? (\'数据更新时间 \' + B.UPDATED) : \'数据更新时间 --\');\n' +
     '\t});\n' +
     '\t</script>\n' +
+    '\t<script type="text/javascript" src="js/excel_export.js"></script>\n' +
     '\t<script type="text/javascript" src="js/fs.js"></script>\n' +
     '\t<!-- 左侧悬浮导航栏 -->\n' +
     '\t<div class="side-nav" id="sideNav"></div>\n' +

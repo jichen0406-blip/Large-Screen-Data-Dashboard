@@ -79,7 +79,7 @@
 			</div>
 		</div>
 		<div class="box">
-			<div class="sec-head">申报进度 · 甘特图<button class="map-fs" type="button" data-fs="approvalGantt" data-title="申报进度 · 甘特图">⛶</button></div>
+			<div class="sec-head" data-xls="approvalGantt" data-xls-title="申报进度 · 甘特图">申报进度 · 甘特图<button class="map-fs" type="button" data-fs="approvalGantt" data-title="申报进度 · 甘特图">⛶</button></div>
 			<div class="boxnav p3r-ganttbox">
 				<div class="p3r-gantt" id="approvalGantt"></div>
 			</div>
@@ -126,6 +126,7 @@
 		$('#p3Upd').text((B && B.UPDATED) ? B.UPDATED : '--');
 	});
 	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
 	<script type="text/javascript" src="js/fs.js"></script>
 	<!-- 左侧悬浮导航栏 -->
 	<div class="side-nav" id="sideNav"></div>
