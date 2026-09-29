@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>福可苏业绩总览 · 医院销量散点图</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/pt-common.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/page22.js"></script>
+<link rel="stylesheet" href="css/style.css">
+	<style>
+	/* 整页一屏：图区靠 .page-fill 的纵向 flex 吃掉剩余高度（见 css/style.css .page-fill） */
+	.p22-box { position: relative; flex: 1; min-height: 0; margin-bottom: 10px; }
+	.p22-chart { width: 100%; height: 100%; }
+	/* 控制栏：项多了换行，说明独占一行 */
+	.p22-time { flex-wrap: wrap; row-gap: 8px; }
+	.p22-time .pt-time-note { flex-basis: 100%; margin-left: 0; }
+	.p22-lab { font-size: 13px; color: #daf9ff; letter-spacing: 1px; white-space: nowrap; }
+	.p22-inp { height: 32px; width: 210px; padding: 0 10px; background: rgba(2,24,61,.8); border: 1px solid rgba(47,137,207,.7); border-radius: 6px; color: #fff; font-size: 13px; outline: none; }
+	.p22-inp::placeholder { color: rgba(255,255,255,.3); }
+	.p22-cnt { font-size: 12px; color: rgba(255,255,255,.6); white-space: nowrap; }
+	.p22-cnt b { color: #4fe3ff; font-size: 14px; margin: 0 2px; }
+	/* 说明行里的「点击角标」提示要显眼一点 */
+	.p22-time .pt-time-note b { color: #4fe3ff; font-weight: 700; }
+	/* 同比配色说明（在控制栏说明行里） */
+	.p22-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin: 0 4px; vertical-align: -1px; }
+	.p22-dot.k-up { background: #14e144; }
+	.p22-dot.k-dn { background: #ff6316; }
+	.p22-dot.k-na { background: #9aa0a6; }
+	/* 四象限医院数角标：底板 + 象限图标 + 数字（四角，不遮挡数据）；可点击看明细 */
+	.p22-q { position: absolute; display: flex; align-items: center; gap: 6px; padding: 4px 10px;
+		border-radius: 6px; font-size: 12px; color: rgba(255,255,255,.72); white-space: nowrap;
+		background: rgba(2,24,61,.8); border: 1px solid rgba(47,137,207,.55);
+		box-shadow: 0 0 12px rgba(47,137,207,.3), inset 0 0 12px rgba(7,118,181,.3);
+		cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+	.p22-q:hover { border-color: #4fe3ff; box-shadow: 0 0 16px rgba(79,227,255,.55); }
+	.p22-q svg { width: 13px; height: 13px; display: block; color: #0a4a7a; flex: none; }
+	/* icon 用纯白底圆片，深蓝图形，白底上更清晰 */
+	.p22-q .p22-ico { width: 20px; height: 20px; border-radius: 50%; background: #fff;
+		display: flex; align-items: center; justify-content: center; flex: none; }
+	.p22-q b { color: #4fe3ff; font-size: 16px; font-weight: 700; }
+	.p22-q em { font-style: normal; color: rgba(255,255,255,.5); }
+	.p22-q-lt { left: 8px; top: 6px; }
+	.p22-q-rt { right: 8px; top: 6px; }
+	.p22-q-lb { left: 8px; bottom: 6px; }
+	.p22-q-rb { right: 8px; bottom: 6px; }
+	/* 象限明细浮窗（复用 .menu-mask / .menu-panel 外壳） */
+	.p22-pop-panel { width: min(920px, 92vw); }
+	.p22-pop-sub { font-size: 13px; font-weight: 400; color: rgba(255,255,255,.6); letter-spacing: 0; }
+	/* 上内边距必须为 0：表格首行 sticky 表头贴住滚动容器顶边，否则滚动时行内容会在表头之上露出来 */
+	.p22-pop-body { max-height: 60vh; overflow: auto; padding: 0 14px 12px; background: rgba(2,20,55,.6);
+		scrollbar-width: thin; scrollbar-color: rgba(112,187,252,.5) rgba(255,255,255,.06); }
+	.p22-pop-empty { text-align: center; padding: 34px 0; color: rgba(255,255,255,.45); font-size: 13px; }
+	/* 轴名：跟着轴线实际位置走（按平均值在轴上的比例算），所以不用 ECharts 自带轴名 */
+	.p22-ax { position: absolute; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+		color: rgba(218,249,255,.8); white-space: nowrap; pointer-events: none; }
+	</style>
+	<script>window.PAGE_KEY='region4';</script>
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
+</head>
+<body>
+	<div class="login-mask" id="loginMask">
+		<div class="login-body">
+			<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
+			<div class="login-center">
+				<div class="login-shuzibg"></div>
+				<div class="login-title">
+					<img class="login-logo" src="images/logo-white.png" alt="驯鹿生物">
+					<p class="login-title-main">驯鹿生物大数据监控平台</p>
+					<p class="login-title-sub">登录页</p>
+				</div>
+				<div class="login-card">
+					<div class="login-welcome">欢迎登录系统!</div>
+					<div class="login-input">
+						<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+						<input type="text" id="loginUser" placeholder="请输入账号" autocomplete="off">
+					</div>
+					<div class="login-input">
+						<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+						<input type="password" id="loginPwd" placeholder="密码" autocomplete="off">
+					</div>
+					<label class="login-remember"><input type="checkbox" id="loginRemember"><span>记住密码</span></label>
+					<div class="login-err" id="loginErr"></div>
+					<div class="login-btn" id="loginBtn"><span>登 录</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="login-bolang"></div>
+	</div>
+	<div class="head clearfix">
+		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
+		<div class="head-left">
+			<div class="update" id="dataUpd">数据更新时间 --</div>
+			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
+		</div>
+		<div class="tm-wrap">
+			<div class="time" id="showTime">--</div>
+			<div class="weather" id="weather">上海 --</div>
+		</div>
+		<script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
+	</div>
+	<div class="mainbox page-fill">
+		<div class="pt-time p22-time">
+			<span class="pt-time-tit">时间控制</span>
+			<select id="p22y" class="pt-sel" title="年份"></select>
+			<select id="p22m" class="pt-sel" title="月份"></select>
+			<span class="p22-lab">医院搜索</span>
+			<input type="text" id="p22Search" class="p22-inp" placeholder="医院名称" autocomplete="off">
+			<button type="button" class="cart-btn ghost" id="p22Clear">清空</button>
+			<span class="p22-lab">医院类型</span>
+			<select id="p22tier" class="pt-sel" title="按 SCOE / COE / RCOE / Others 筛选">
+				<option value="__all" selected>全部类型</option>
+				<option value="SCOE">SCOE</option>
+				<option value="COE">COE</option>
+				<option value="RCOE">RCOE</option>
+				<option value="Others">Others</option>
+			</select>
+			<span class="p22-lab">下单 AM</span>
+			<select id="p22AM" class="pt-sel" title="按下单 AM 筛选"></select>
+			<span class="p22-lab">坐标</span>
+			<select id="p22scale" class="pt-sel" title="坐标类型">
+				<option value="linear" selected>线性</option>
+				<option value="log">对数</option>
+			</select>
+			<span class="p22-cnt" id="p22Cnt"></span>
+			<span class="p22-cnt" id="p22Avg"></span>
+			<span class="pt-time-note"><i class="p22-dot k-up"></i>下单同比正增长　<i class="p22-dot k-dn"></i>负增长　<i class="p22-dot k-na"></i>无同比　｜　筛选只过滤散点，坐标轴与两条轴线不动　｜　<b>点击四角角标看该象限的医院明细</b></span>
+		</div>
+		<div class="p22-box">
+			<div class="p22-chart" id="p22Chart"></div>
+			<div class="p22-ax" id="p22axY">YTD平均下单 --</div>
+			<div class="p22-ax" id="p22axX">YTD平均回输 --</div>
+			<div class="p22-q p22-q-lt" id="p22qLT" data-q="lt" title="点击看该象限医院明细"></div>
+			<div class="p22-q p22-q-rt" id="p22qRT" data-q="rt" title="点击看该象限医院明细"></div>
+			<div class="p22-q p22-q-lb" id="p22qLB" data-q="lb" title="点击看该象限医院明细"></div>
+			<div class="p22-q p22-q-rb" id="p22qRB" data-q="rb" title="点击看该象限医院明细"></div>
+		</div>
+	</div>
+	<!-- 象限医院明细浮窗 -->
+	<div class="menu-mask" id="p22Pop" style="display:none;">
+		<div class="menu-panel p22-pop-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit" id="p22PopTit">--</span>
+				<button class="menu-close" id="p22PopClose" type="button">×</button>
+			</div>
+			<div class="p22-pop-body" id="p22PopBody"></div>
+		</div>
+	</div>
+	<!-- 网页导航菜单 -->
+	<div class="menu-mask" id="menuMask" style="display:none;">
+		<div class="menu-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit">网页导航</span>
+				<button class="menu-close" id="menuClose" type="button">×</button>
+			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
+		</div>
+	</div>
+
+	<script>
+	// 当天上海天气与温度
+	(function () {
+		var wEl = document.getElementById('weather');
+		var WSYM = {0:'☀',1:'☀',2:'⛅',3:'☁',45:'☁',48:'☁',51:'☔',53:'☔',55:'☔',56:'☔',57:'☔',61:'☔',63:'☔☔',65:'☔☔☔',66:'☔☔',67:'☔☔',71:'❄',73:'❄',75:'❄',77:'❄',80:'☔',81:'☔☔',82:'☔☔☔',85:'❄',86:'❄',95:'⛈',96:'⛈',99:'⛈'};
+		fetch('https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&current=temperature_2m,weather_code&timezone=Asia%2FShanghai')
+			.then(function (r) { return r.json(); })
+			.then(function (d) {
+				var t = Math.round(d.current.temperature_2m);
+				wEl.innerHTML = '上海 ' + (WSYM[d.current.weather_code] || '--') + ' ' + t + '℃';
+			})
+			.catch(function () { wEl.innerHTML = '上海 --'; });
+	})();
+	</script>
+	<script>
+	// 数据更新时间
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		$('#dataUpd').text((B && B.UPDATED) ? ('数据更新时间 ' + B.UPDATED) : '数据更新时间 --');
+	});
+	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
+	<script type="text/javascript" src="js/fs.js"></script>
+	<!-- 左侧悬浮导航栏 -->
+	<div class="side-nav" id="sideNav"></div>
+</body>
+</html>
