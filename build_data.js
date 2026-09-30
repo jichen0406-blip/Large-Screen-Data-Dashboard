@@ -80,7 +80,7 @@ console.log('Master 记录数:', Object.keys(masterMap).length);
 var headers = bsRows[1];
 var ci = {};
 headers.forEach(function(h, i) {
-  h = String(h || '').replace(/\n/g, '');
+  h = String(h || '').replace(/[\r\n]/g, '');
   if (h === '医疗机构编码') ci.org = i;
   if (h === '医疗机构名称') ci.orgName = i;
   if (h.includes('合同创建') && h.includes('日期')) ci.od = i;
