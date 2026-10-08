@@ -918,6 +918,24 @@ console.log('CART_DAILY 记录数:', CART_DAILY.length);
 // ── 8q. 异常订单管理：三类异常订单（从 bs_order + order dict 重算；人工字段取自 异常订单管理.xlsx） ──
 // 长期未单采 = 有单 且 无实际单采开始；长期未转生产 = 已单采 且 无质量放行；长期未回输 = 已放行 且 无实际回输开始
 // 三者均剔除取消/终止单（order dict 取消回输标记='1'）；按流程阶段递进，天然互斥不重叠
+// 预估时间列归一化：源表同一列混用三种写法，统一成 YYYY-MM-DD / YYYY-MM
+//   ① Excel 日期单元格（导出成裸序列号，如 46289）      → 2026-09-24
+//   ② 手输小数日期（11.28 / 9.16 / 10.25 / 9.26 / 9.28） → 当年 11-28 / 09-16 / …
+//   ③ 手输「年.月」（2026.9）                           → 2026-09
+//   其它文本（"待定" / "10月" / "9月底" / "不回输"）原样保留
+// ② 的年份取当年 Y：预估时间是前瞻性的，实测真日期单元格也全在当年（与订单年份无关）
+function abnPlanTime(v) {
+  if (typeof v === 'number' && isFinite(v)) {
+    if (Number.isInteger(v) && v >= 30000 && v <= 80000) return excelToDate(v);
+    var p = String(v).split('.'); // 用字符串拆，避开浮点（9.16 不能按数学取余）
+    if (p.length === 2) {
+      var a = parseInt(p[0], 10), b = parseInt(p[1], 10);
+      if (a >= 1900 && b >= 1 && b <= 12) return a + '-' + String(b).padStart(2, '0');
+      if (a >= 1 && a <= 12 && b >= 1 && b <= 31) return Y + '-' + String(a).padStart(2, '0') + '-' + String(b).padStart(2, '0');
+    }
+  }
+  return String(v == null ? '' : v).trim();
+}
 var ABN_SHEET_CFG = {
   nosample:     { sheet: '长期未单采订单',   cols: ['长期未单采原因', '如何尽快预约单采（行动计划）', '预估单采时间'] },
   noproduction: { sheet: '冻存长期未转生产', cols: ['长期未转生产原因', '如何尽快转生产（行动计划）', '预估生产时间'] },
@@ -941,7 +959,7 @@ var abnManual = {}; // key → { 合同号 → {reason, action, planTime} }
           map[no] = {
             reason: String(r[cfg.cols[0]] || '').trim(),
             action: String(r[cfg.cols[1]] || '').trim(),
-            planTime: String(r[cfg.cols[2]] || '').trim()
+            planTime: abnPlanTime(r[cfg.cols[2]])
           };
         });
       } catch (e) { console.warn('⚠️ 读取 sheet「' + cfg.sheet + '」失败: ' + e.message); }
