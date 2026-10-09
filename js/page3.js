@@ -6,8 +6,9 @@ $(function () {
     var GLOBAL_REG = B.GLOBAL_REG;
     var items = GLOBAL_REG.items;
 
-    // 4 种申报状态色（深色大屏底）
+    // 5 种申报状态色（深色大屏底），按阶段从早到晚排列
     var STATUS_COLOR = {
+        'clinical': '#9b8fd6',  // 临床研究 = 紫
         'planned': '#5b7fae',   // 计划中 = 灰蓝
         'submitted': '#ffb800', // 已提交 = 金黄
         'review': '#ff7a45',    // 评审中 = 橙
@@ -198,7 +199,7 @@ $(function () {
 
     // 图例（状态色 + 合作伙伴）
     function renderLegend() {
-        var order = [['approved', '已获批'], ['review', '评审中'], ['submitted', '已提交'], ['planned', '计划中']];
+        var order = [['approved', '已获批'], ['review', '评审中'], ['submitted', '已提交'], ['planned', '计划中'], ['clinical', '临床研究']];
         var html = '';
         order.forEach(function (o) {
             html += '<span class="p3r-lg"><i style="background:' + STATUS_COLOR[o[0]] + '"></i>' + o[1] + '</span>';
@@ -228,7 +229,7 @@ $(function () {
     renderRight();
 
     // ============ Dashboard2：甘特图 ============
-    // 时间条均分 4 段=4 阶段（计划中/已提交/评审中/已获批）：从 2025 到获批时间（无获批拉 2028 底）；
+    // 时间条按 PHASES 均分（临床研究/计划中/已提交/评审中/已获批）：从 2025 到获批时间（无获批拉 2028 底）；
     // 三色标记：已完成段绿、当前进行中段橙、未开始段灰（已获批全部绿）。
     // 表头季度刻度 2025Q1~2028Q4；左列固定（含申报状态、申报路径），获批时间最右侧固定列。
     function renderGantt() {
@@ -239,8 +240,8 @@ $(function () {
             var t = (ts < AXIS_START) ? AXIS_START : ((ts > AXIS_END) ? AXIS_END : ts);
             return ((t - AXIS_START) / SPAN * 100).toFixed(2);
         }
-        var CUR_SEG = { planned: 0, submitted: 1, review: 2, approved: 3 };
-        var PHASES = ['计划中', '已提交', '评审中', '已获批'];
+        var CUR_SEG = { clinical: 0, planned: 1, submitted: 2, review: 3, approved: 4 };
+        var PHASES = ['临床研究', '计划中', '已提交', '评审中', '已获批'];
 
         // 表头时间轴：两行刻度（年份 2025~2028 + 季度 Q1~Q4）
         var axisHtml = '<div class="p3r-gt-axis">';
@@ -283,11 +284,11 @@ $(function () {
             list.forEach(function (it, idx) {
                 var isTbd = !it.approvalTs;
                 var endTs = isTbd ? AXIS_END : new Date(it.approvalTs).getTime();
-                // 时间条均分 4 段：已完成绿、当前进行中橙、未开始灰；已获批全部绿
+                // 时间条按 PHASES 均分：已完成绿、当前进行中橙、未开始灰；已获批全部绿
                 var segs = '';
-                for (var s = 0; s < 4; s++) {
-                    var sStart = AXIS_START + (endTs - AXIS_START) * s / 4;
-                    var sEnd = AXIS_START + (endTs - AXIS_START) * (s + 1) / 4;
+                for (var s = 0; s < PHASES.length; s++) {
+                    var sStart = AXIS_START + (endTs - AXIS_START) * s / PHASES.length;
+                    var sEnd = AXIS_START + (endTs - AXIS_START) * (s + 1) / PHASES.length;
                     var cls;
                     if (it.status === 'approved') cls = 'done';
                     else cls = (s < CUR_SEG[it.status]) ? 'done' : (s === CUR_SEG[it.status] ? 'current' : 'pending');

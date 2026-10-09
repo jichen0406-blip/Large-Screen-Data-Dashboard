@@ -819,8 +819,8 @@ try {
     else if (h === '申报路径/资格认定') rci.path = i;
     else if (h === '预估获批时间') rci.approval = i;
   });
-  var STATUS_MAP = { '已获批': 'approved', 'NDA申请已提交': 'submitted', '评审中': 'review', 'NDA申报计划中': 'planned' };
-  var STATUS_LABEL = { 'approved': '已获批', 'submitted': '已提交', 'review': '评审中', 'planned': '计划中' };
+  var STATUS_MAP = { '已获批': 'approved', 'NDA申请已提交': 'submitted', '评审中': 'review', 'NDA申报计划中': 'planned', '开展临床研究': 'clinical' };
+  var STATUS_LABEL = { 'approved': '已获批', 'submitted': '已提交', 'review': '评审中', 'planned': '计划中', 'clinical': '临床研究' };
   var GEO_NAME = {
     '中国澳门': '澳门', '中国香港': '香港', '新加坡': 'Singapore', '马来西亚': 'Malaysia',
     '泰国': 'Thailand', '越南': 'Vietnam', '印尼': 'Indonesia', '沙特阿拉伯': 'Saudi Arabia',
