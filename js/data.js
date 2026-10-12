@@ -1,20 +1,20 @@
 /* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */
-/* 数据源: bs_order - 2026-10-10T170050.077.xlsx | 数据截止: 2026-10-10 */
+/* 数据源: bs_order - 2026-10-12T165444.446.xlsx | 数据截止: 2026-10-12 */
 var BOARD_DATA = {
-  "UPDATED": "2026-10-10 17:00:59",
-  "DP": "2026-10-10",
+  "UPDATED": "2026-10-12 16:54:53",
+  "DP": "2026-10-12",
   "Y": "2026",
   "YTD": {
-    "O": 323,
-    "R": 205,
-    "A": 298,
-    "Q": 233
+    "O": 325,
+    "R": 207,
+    "A": 299,
+    "Q": 235
   },
   "MTD": {
-    "O": 14,
-    "R": 3,
-    "A": 12,
-    "Q": 8
+    "O": 16,
+    "R": 5,
+    "A": 13,
+    "Q": 10
   },
   "MONTH": {
     "O": [
@@ -27,7 +27,7 @@ var BOARD_DATA = {
       34,
       34,
       47,
-      14,
+      16,
       0,
       0
     ],
@@ -41,7 +41,7 @@ var BOARD_DATA = {
       22,
       22,
       22,
-      3,
+      5,
       0,
       0
     ],
@@ -79,10 +79,10 @@ var BOARD_DATA = {
       "o": 45,
       "r": 26,
       "a": 43,
-      "q": 33
+      "q": 34
     },
     "浙江省": {
-      "o": 27,
+      "o": 28,
       "r": 16,
       "a": 21,
       "q": 16
@@ -118,16 +118,16 @@ var BOARD_DATA = {
       "q": 10
     },
     "天津市": {
-      "o": 58,
-      "r": 44,
+      "o": 59,
+      "r": 45,
       "a": 56,
       "q": 52
     },
     "北京市": {
       "o": 50,
-      "r": 35,
+      "r": 36,
       "a": 49,
-      "q": 40
+      "q": 41
     },
     "辽宁省": {
       "o": 4,
@@ -144,7 +144,7 @@ var BOARD_DATA = {
     "湖北省": {
       "o": 12,
       "r": 5,
-      "a": 10,
+      "a": 11,
       "q": 6
     },
     "四川省": {
@@ -213,7 +213,7 @@ var BOARD_DATA = {
       "o": 33,
       "r": 21,
       "a": 31,
-      "q": 27
+      "q": 28
     },
     "湖州市": {
       "o": 1,
@@ -252,7 +252,7 @@ var BOARD_DATA = {
       "q": 5
     },
     "杭州市": {
-      "o": 20,
+      "o": 21,
       "r": 13,
       "a": 16,
       "q": 13
@@ -264,16 +264,16 @@ var BOARD_DATA = {
       "q": 3
     },
     "天津市": {
-      "o": 58,
-      "r": 44,
+      "o": 59,
+      "r": 45,
       "a": 56,
       "q": 52
     },
     "北京市": {
       "o": 50,
-      "r": 35,
+      "r": 36,
       "a": 49,
-      "q": 40
+      "q": 41
     },
     "大连市": {
       "o": 1,
@@ -290,7 +290,7 @@ var BOARD_DATA = {
     "武汉市": {
       "o": 12,
       "r": 5,
-      "a": 10,
+      "a": 11,
       "q": 6
     },
     "成都市": {
@@ -435,8 +435,8 @@ var BOARD_DATA = {
   "TOP_O": [
     {
       "name": "中国医学科学院血液病医院",
-      "v": 55,
-      "yoy": 12.244897959183673
+      "v": 56,
+      "yoy": 14.285714285714285
     },
     {
       "name": "北京大学人民医院",
@@ -445,8 +445,8 @@ var BOARD_DATA = {
     },
     {
       "name": "浙江大学医学院附属第一医院（余杭院区）",
-      "v": 16,
-      "yoy": -23.809523809523807
+      "v": 17,
+      "yoy": -19.047619047619047
     },
     {
       "name": "上海交通大学医学院附属瑞金医院",
@@ -587,8 +587,8 @@ var BOARD_DATA = {
   "TOP_R": [
     {
       "name": "中国医学科学院血液病医院",
-      "v": 41,
-      "yoy": -2.380952380952381
+      "v": 42,
+      "yoy": 0
     },
     {
       "name": "浙江大学医学院附属第一医院（余杭院区）",
@@ -597,8 +597,8 @@ var BOARD_DATA = {
     },
     {
       "name": "北京大学人民医院",
-      "v": 10,
-      "yoy": 11.11111111111111
+      "v": 11,
+      "yoy": 22.22222222222222
     },
     {
       "name": "上海交通大学医学院附属瑞金医院",
@@ -858,73 +858,38 @@ var BOARD_DATA = {
       "date": "2026-10-10",
       "orders": [],
       "reinfusion": []
-    }
-  ],
-  "DAILY30": [
+    },
     {
-      "date": "2026-09-11",
-      "orders": [
-        {
-          "code": "9009126000278",
-          "hosp": "浙江大学医学院附属第一医院（余杭院区）",
-          "name": "王*万"
-        }
-      ],
+      "date": "2026-10-11",
+      "orders": [],
       "reinfusion": [
         {
-          "code": "9009126000217",
-          "hosp": "上海交通大学医学院附属瑞金医院",
-          "name": "常*成"
-        }
-      ],
-      "apheresis": [
-        {
-          "code": "9009126000273",
-          "hosp": "北京大学第一医院",
-          "name": "周*峰"
-        },
-        {
-          "code": "9009126000274",
-          "hosp": "北京大学第一医院",
-          "name": "吕*珍"
-        },
-        {
-          "code": "9009126000276",
-          "hosp": "中山大学附属第一医院",
-          "name": "梁*霞"
-        }
-      ],
-      "release": [
-        {
-          "code": "9009126000239",
-          "hosp": "中山大学肿瘤医院",
-          "name": "曾*君"
-        },
-        {
-          "code": "9009126000241",
-          "hosp": "中山大学附属第一医院",
-          "name": "胡*茹"
-        },
-        {
-          "code": "9009126000242",
-          "hosp": "苏州大学附属第一医院",
-          "name": "潘*洋"
+          "name": "北京大学人民医院",
+          "v": 1
         }
       ]
     },
     {
-      "date": "2026-09-12",
-      "orders": [],
-      "reinfusion": [],
-      "apheresis": [
+      "date": "2026-10-12",
+      "orders": [
         {
-          "code": "9009126000277",
-          "hosp": "空军军医大学西京医院",
-          "name": "贾*珍"
+          "name": "浙江大学医学院附属第一医院（余杭院区）",
+          "v": 1
+        },
+        {
+          "name": "中国医学科学院血液病医院",
+          "v": 1
         }
       ],
-      "release": []
-    },
+      "reinfusion": [
+        {
+          "name": "中国医学科学院血液病医院",
+          "v": 1
+        }
+      ]
+    }
+  ],
+  "DAILY30": [
     {
       "date": "2026-09-13",
       "orders": [],
@@ -1669,7 +1634,7 @@ var BOARD_DATA = {
           "name": "丁*美"
         },
         {
-          "code": "",
+          "code": "9009126000317",
           "hosp": "中山大学肿瘤医院",
           "name": "龚*玲"
         }
@@ -1797,6 +1762,60 @@ var BOARD_DATA = {
           "name": "刘*"
         }
       ],
+      "release": [
+        {
+          "code": "9009126000244",
+          "hosp": "北京协和医院",
+          "name": "黄*珍"
+        },
+        {
+          "code": "9009126000286",
+          "hosp": "中山大学附属第一医院",
+          "name": "黎*钧"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "orders": [],
+      "reinfusion": [
+        {
+          "code": "9009126000265",
+          "hosp": "北京大学人民医院",
+          "name": "刘*"
+        }
+      ],
+      "apheresis": [
+        {
+          "code": "9009126000313",
+          "hosp": "华中科技大学同济医学院附属同济医院",
+          "name": "孔*琴"
+        }
+      ],
+      "release": []
+    },
+    {
+      "date": "2026-10-12",
+      "orders": [
+        {
+          "code": "",
+          "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+          "name": "沈*娥"
+        },
+        {
+          "code": "",
+          "hosp": "中国医学科学院血液病医院",
+          "name": "王*"
+        }
+      ],
+      "reinfusion": [
+        {
+          "code": "9009126000249",
+          "hosp": "中国医学科学院血液病医院",
+          "name": "刘*珍"
+        }
+      ],
+      "apheresis": [],
       "release": []
     }
   ],
@@ -1832,8 +1851,8 @@ var BOARD_DATA = {
       "天津市": [
         {
           "name": "中国医学科学院血液病医院",
-          "v": 55,
-          "yoy": 12.244897959183673
+          "v": 56,
+          "yoy": 14.285714285714285
         },
         {
           "name": "天津医科大学肿瘤医院（空港院区）",
@@ -1937,8 +1956,8 @@ var BOARD_DATA = {
       "浙江省": [
         {
           "name": "浙江大学医学院附属第一医院（余杭院区）",
-          "v": 16,
-          "yoy": -23.809523809523807
+          "v": 17,
+          "yoy": -19.047619047619047
         },
         {
           "name": "温州医科大学附属台州医院（浙江省台州医院）",
@@ -2246,8 +2265,8 @@ var BOARD_DATA = {
       "天津市": [
         {
           "name": "中国医学科学院血液病医院",
-          "v": 41,
-          "yoy": -2.380952380952381
+          "v": 42,
+          "yoy": 0
         },
         {
           "name": "天津医科大学肿瘤医院（空港院区）",
@@ -2263,8 +2282,8 @@ var BOARD_DATA = {
       "北京市": [
         {
           "name": "北京大学人民医院",
-          "v": 10,
-          "yoy": 11.11111111111111
+          "v": 11,
+          "yoy": 22.22222222222222
         },
         {
           "name": "首都医科大学附属北京朝阳医院",
@@ -2413,13 +2432,13 @@ var BOARD_DATA = {
   },
   "COE": {
     "O": {
-      "SCOE": 107,
+      "SCOE": 109,
       "COE": 80,
       "RCOE": 44,
       "Others": 92
     },
     "R": {
-      "SCOE": 72,
+      "SCOE": 74,
       "COE": 45,
       "RCOE": 24,
       "Others": 64
@@ -3582,7 +3601,7 @@ var BOARD_DATA = {
       "2026-07": 34,
       "2026-08": 34,
       "2026-09": 47,
-      "2026-10": 14
+      "2026-10": 16
     },
     "MONTH_R": {
       "2023-08": 10,
@@ -3619,7 +3638,7 @@ var BOARD_DATA = {
       "2025-12": 31,
       "2025-11": 24,
       "2026-01": 25,
-      "2026-10": 3,
+      "2026-10": 5,
       "2026-05": 30,
       "2026-02": 15,
       "2026-08": 22,
@@ -4762,8 +4781,8 @@ var BOARD_DATA = {
       },
       "2026-10": {
         "dom": {
-          "o": 14,
-          "r": 3
+          "o": 16,
+          "r": 5
         },
         "ov": {
           "o": 0,
@@ -6300,20 +6319,20 @@ var BOARD_DATA = {
           "r": 1
         },
         "国内": {
-          "o": 14,
-          "r": 3
+          "o": 16,
+          "r": 5
         },
         "total": {
-          "o": 14,
-          "r": 3
+          "o": 16,
+          "r": 5
         },
         "赵蕊": {
-          "o": 3,
-          "r": 1
+          "o": 4,
+          "r": 2
         },
         "崔珺": {
           "o": 1,
-          "r": 1
+          "r": 2
         },
         "高威龙": {
           "o": 3,
@@ -6324,7 +6343,7 @@ var BOARD_DATA = {
           "r": 0
         },
         "董硕": {
-          "o": 3,
+          "o": 4,
           "r": 0
         }
       },
@@ -11276,12 +11295,12 @@ var BOARD_DATA = {
           "r": 1
         },
         "赵蕊|天津市|天津市|中国医学科学院血液病医院": {
-          "o": 2,
-          "r": 1
+          "o": 3,
+          "r": 2
         },
         "崔珺|北京市|北京市|北京大学人民医院": {
           "o": 1,
-          "r": 1
+          "r": 2
         },
         "高威龙|上海市|上海市|上海第四人民医院": {
           "o": 1,
@@ -11307,15 +11326,19 @@ var BOARD_DATA = {
           "o": 1,
           "r": 0
         },
-        "董硕|浙江省|宁波市|宁波大学附属人民医院": {
-          "o": 1,
-          "r": 0
-        },
         "兰明金|广东省|广州市|中山大学肿瘤医院": {
           "o": 1,
           "r": 0
         },
+        "董硕|浙江省|宁波市|宁波大学附属人民医院": {
+          "o": 1,
+          "r": 0
+        },
         "董硕|福建省|福州市|福建医科大学附属协和医院": {
+          "o": 1,
+          "r": 0
+        },
+        "董硕|浙江省|杭州市|浙江大学医学院附属第一医院（余杭院区）": {
           "o": 1,
           "r": 0
         }
@@ -11734,8 +11757,8 @@ var BOARD_DATA = {
       }
     },
     "HSLAST": {
-      "天津市|天津市|中国医学科学院血液病医院": "2026-10-09",
-      "浙江省|杭州市|浙江大学医学院附属第一医院（余杭院区）": "2026-09-11",
+      "天津市|天津市|中国医学科学院血液病医院": "2026-10-12",
+      "浙江省|杭州市|浙江大学医学院附属第一医院（余杭院区）": "2026-10-12",
       "北京市|北京市|北京大学第一医院": "2026-09-09",
       "天津市|天津市|天津医科大学肿瘤医院（空港院区）": "2026-10-08",
       "山东省|济南市|山东大学齐鲁医院": "2026-10-09",
@@ -12016,7 +12039,7 @@ var BOARD_DATA = {
     }
   },
   "GLOBAL_REG": {
-    "updated": "2026-10-09 14:50:53",
+    "updated": "2026-10-12 15:27:04",
     "regions": [
       "港澳台",
       "东南亚",
@@ -12034,7 +12057,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "approved",
         "statusLabel": "已获批",
-        "path": "",
+        "path": "/",
         "approvalTxt": "2025.03",
         "approvalTs": "2025-03-01"
       },
@@ -12045,7 +12068,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "approved",
         "statusLabel": "已获批",
-        "path": "",
+        "path": "1+ mechanism",
         "approvalTxt": "2025.11",
         "approvalTs": "2025-11-01"
       },
@@ -12056,7 +12079,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "approved",
         "statusLabel": "已获批",
-        "path": "",
+        "path": "Full evaluation route",
         "approvalTxt": "2026.6.18",
         "approvalTs": null
       },
@@ -12067,7 +12090,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "review",
         "statusLabel": "评审中",
-        "path": "",
+        "path": "1. 已授予Conditional Registration，争取priority review\r\n2. 2026.7 NDA申请受理",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12078,7 +12101,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "submitted",
         "statusLabel": "已提交",
-        "path": "",
+        "path": "1. 争取Conditional Registration 和 priority review\r\n2. 2026.8 NDA申请已提交",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12089,7 +12112,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "submitted",
         "statusLabel": "已提交",
-        "path": "",
+        "path": "1. 争取 priority review (High-Tech)\r\n2. 2026.8 NDA申请已提交",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12100,7 +12123,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "planned",
         "statusLabel": "计划中",
-        "path": "",
+        "path": "争取以新加坡为参考国，申请简化审评路径",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12111,7 +12134,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "review",
         "statusLabel": "评审中",
-        "path": "",
+        "path": "ODD, Priority review",
         "approvalTxt": "2026 Q4",
         "approvalTs": "2026-12-01"
       },
@@ -12122,7 +12145,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "review",
         "statusLabel": "评审中",
-        "path": "",
+        "path": "争取Fast track",
         "approvalTxt": "2027 Q1",
         "approvalTs": "2027-03-01"
       },
@@ -12133,7 +12156,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "planned",
         "statusLabel": "计划中",
-        "path": "",
+        "path": "预计2026.9提交, 争取Fast track",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12144,7 +12167,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "clinical",
         "statusLabel": "临床研究",
-        "path": "",
+        "path": "开展小样本量临床桥接",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12155,7 +12178,7 @@ var BOARD_DATA = {
         "mode": "授权合作伙伴",
         "status": "review",
         "statusLabel": "评审中",
-        "path": "",
+        "path": "ODD, Priority review",
         "approvalTxt": "2027 Q1",
         "approvalTs": "2027-03-01"
       },
@@ -12188,7 +12211,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "review",
         "statusLabel": "评审中",
-        "path": "",
+        "path": "1. Full evaluation route\r\n2. NDA申请已受理",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -12199,7 +12222,7 @@ var BOARD_DATA = {
         "mode": "自营",
         "status": "submitted",
         "statusLabel": "已提交",
-        "path": "",
+        "path": "1. NOC/c\r\n2. 2026.9.18 NDA申请已递交",
         "approvalTxt": "",
         "approvalTs": null
       },
@@ -22337,7 +22360,7 @@ var BOARD_DATA = {
         "od": "2026-04-02",
         "pay": "常规生产-分段支付",
         "apmt": "2026-10-11",
-        "receive": null,
+        "receive": "2026-10-12",
         "qa": null,
         "re": null,
         "cancel": "",
@@ -23414,7 +23437,7 @@ var BOARD_DATA = {
       {
         "no": "XL26U85",
         "od": "2026-06-29",
-        "pay": "择期生产-分段支付",
+        "pay": "常规生产-全款支付",
         "apmt": "2026-07-02",
         "receive": "2026-07-03",
         "qa": "2026-08-31",
@@ -24093,7 +24116,7 @@ var BOARD_DATA = {
         "pay": "择期生产-分段支付",
         "apmt": "2026-08-31",
         "receive": "2026-09-01",
-        "qa": null,
+        "qa": "2026-10-10",
         "re": null,
         "cancel": "",
         "resume": "2026-09-17",
@@ -24146,7 +24169,7 @@ var BOARD_DATA = {
         "apmt": "2026-08-25",
         "receive": "2026-08-25",
         "qa": "2026-09-16",
-        "re": null,
+        "re": "2026-10-12",
         "cancel": "",
         "resume": "",
         "note": "",
@@ -24328,7 +24351,7 @@ var BOARD_DATA = {
         "apmt": "2026-09-08",
         "receive": "2026-09-09",
         "qa": "2026-10-07",
-        "re": null,
+        "re": "2026-10-11",
         "cancel": "",
         "resume": "",
         "note": "",
@@ -24600,7 +24623,7 @@ var BOARD_DATA = {
         "pay": "常规生产-分段支付",
         "apmt": "2026-09-18",
         "receive": "2026-09-19",
-        "qa": null,
+        "qa": "2026-10-10",
         "re": null,
         "cancel": "",
         "resume": "",
@@ -24937,7 +24960,7 @@ var BOARD_DATA = {
         "od": "2026-10-09",
         "pay": "常规生产-分段支付",
         "apmt": "2026-10-10",
-        "receive": null,
+        "receive": "2026-10-10",
         "qa": null,
         "re": null,
         "cancel": "",
@@ -24947,6 +24970,19 @@ var BOARD_DATA = {
       },
       {
         "no": "XL26S60",
+        "od": "2026-10-08",
+        "pay": "常规生产-分段支付",
+        "apmt": "2026-10-13",
+        "receive": null,
+        "qa": null,
+        "re": null,
+        "cancel": "",
+        "resume": "",
+        "note": "",
+        "modZq": ""
+      },
+      {
+        "no": "XL26G46",
         "od": "2026-10-08",
         "pay": "常规生产-分段支付",
         "apmt": "2026-10-13",
@@ -26584,8 +26620,8 @@ var BOARD_DATA = {
         "modZq": ""
       },
       {
-        "no": "XL26G46",
-        "od": "2026-10-08",
+        "no": "XL26U82",
+        "od": "2026-10-09",
         "pay": "常规生产-分段支付",
         "apmt": null,
         "receive": null,
@@ -26597,8 +26633,21 @@ var BOARD_DATA = {
         "modZq": ""
       },
       {
-        "no": "XL26U82",
-        "od": "2026-10-09",
+        "no": "XL26K05",
+        "od": "2026-10-12",
+        "pay": "常规生产-分段支付",
+        "apmt": null,
+        "receive": null,
+        "qa": null,
+        "re": null,
+        "cancel": "",
+        "resume": "",
+        "note": "",
+        "modZq": ""
+      },
+      {
+        "no": "XL26R32",
+        "od": "2026-10-12",
         "pay": "常规生产-分段支付",
         "apmt": null,
         "receive": null,
@@ -37465,7 +37514,7 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-10-11",
-      "actual": ""
+      "actual": "2026-10-11"
     },
     {
       "code": "9009126000101",
@@ -38827,6 +38876,15 @@ var BOARD_DATA = {
       "actual": "2026-07-14"
     },
     {
+      "code": "9009126000204",
+      "hosp": "上海交通大学医学院附属瑞金医院",
+      "patient": "窦*荣",
+      "cos": "倪慧芝",
+      "type": "reinfusion",
+      "plan": "2026-10-14",
+      "actual": ""
+    },
+    {
       "code": "9009126000203",
       "hosp": "中国医学科学院血液病医院",
       "patient": "潘*军",
@@ -39337,7 +39395,7 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-12",
-      "actual": ""
+      "actual": "2026-10-12"
     },
     {
       "code": "9009126000251",
@@ -39381,7 +39439,7 @@ var BOARD_DATA = {
       "patient": "杨*业",
       "cos": "徐梦希",
       "type": "reinfusion",
-      "plan": "2026-10-15",
+      "plan": "2026-10-14",
       "actual": ""
     },
     {
@@ -39472,7 +39530,7 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-11",
-      "actual": ""
+      "actual": "2026-10-11"
     },
     {
       "code": "9009126000277",
@@ -39907,6 +39965,15 @@ var BOARD_DATA = {
       "actual": ""
     },
     {
+      "code": "9009126000317",
+      "hosp": "中山大学肿瘤医院",
+      "patient": "龚*玲",
+      "cos": "付苗",
+      "type": "apheresis",
+      "plan": "2026-10-13",
+      "actual": ""
+    },
+    {
       "code": "A1D0299",
       "hosp": "玛丽医院（Queen Mary Hospital）",
       "patient": "C*Y",
@@ -40160,8 +40227,8 @@ var BOARD_DATA = {
     }
   ],
   "ABN_MGMT": {
-    "UPDATED": "2026-10-10 17:00:59",
-    "summaryAt": "2026-10-10",
+    "UPDATED": "2026-10-12 16:54:53",
+    "summaryAt": "2026-10-12",
     "pages": {
       "nosample": {
         "rows": [
@@ -40177,7 +40244,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "全流程",
             "baseTime": "2023-12-27",
-            "months": 33.9,
+            "months": 34,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40197,7 +40264,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2024-09-01",
-            "months": 25.6,
+            "months": 25.7,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40217,7 +40284,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2024-09-01",
-            "months": 25.6,
+            "months": 25.7,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40237,7 +40304,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2025-01-09",
-            "months": 21.3,
+            "months": 21.4,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40257,7 +40324,7 @@ var BOARD_DATA = {
             "hosp": "吉林大学第一医院",
             "status": "冻存",
             "baseTime": "2025-04-11",
-            "months": 18.2,
+            "months": 18.3,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40277,7 +40344,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2025-05-21",
-            "months": 16.9,
+            "months": 17,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40297,7 +40364,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "冻存",
             "baseTime": "2025-06-25",
-            "months": 15.7,
+            "months": 15.8,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40317,7 +40384,7 @@ var BOARD_DATA = {
             "hosp": "宁波大学附属人民医院",
             "status": "全流程",
             "baseTime": "2025-07-29",
-            "months": 14.6,
+            "months": 14.7,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40337,7 +40404,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2025-08-22",
-            "months": 13.8,
+            "months": 13.9,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -40377,7 +40444,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-01-01",
-            "months": 9.4,
+            "months": 9.5,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -40417,7 +40484,7 @@ var BOARD_DATA = {
             "hosp": "上海市曜影医院",
             "status": "全流程",
             "baseTime": "2026-01-22",
-            "months": 8.7,
+            "months": 8.8,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -40457,7 +40524,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-01-28",
-            "months": 8.5,
+            "months": 8.6,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -40497,7 +40564,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2026-03-05",
-            "months": 7.3,
+            "months": 7.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -40526,26 +40593,6 @@ var BOARD_DATA = {
             "planTime": "10月单"
           },
           {
-            "code": "9009126000313",
-            "no": "XL26J50",
-            "ym": "2026-04",
-            "patient": "孔*琴",
-            "area": "North",
-            "am": "龚卉",
-            "prov": "湖北省",
-            "city": "武汉市",
-            "hosp": "华中科技大学同济医学院附属同济医院",
-            "status": "全流程",
-            "baseTime": "2026-04-02",
-            "months": 6.4,
-            "planRe": "",
-            "bucket": "6~12 月",
-            "risk": "",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000156",
             "no": "XL26F33",
             "ym": "2026-05",
@@ -40557,7 +40604,7 @@ var BOARD_DATA = {
             "hosp": "首都医科大学附属北京朝阳医院",
             "status": "全流程",
             "baseTime": "2026-05-18",
-            "months": 4.8,
+            "months": 4.9,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -40597,7 +40644,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2026-07-08",
-            "months": 3.1,
+            "months": 3.2,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -40617,7 +40664,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第二医院",
             "status": "全流程",
             "baseTime": "2026-07-29",
-            "months": 2.4,
+            "months": 2.5,
             "planRe": "",
             "bucket": "2~3 月",
             "risk": "",
@@ -40637,7 +40684,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-07-30",
-            "months": 2.4,
+            "months": 2.5,
             "planRe": "",
             "bucket": "2~3 月",
             "risk": "",
@@ -40657,7 +40704,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-07-30",
-            "months": 2.4,
+            "months": 2.5,
             "planRe": "",
             "bucket": "2~3 月",
             "risk": "",
@@ -40677,9 +40724,9 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-08-13",
-            "months": 1.9,
+            "months": 2,
             "planRe": "",
-            "bucket": "1~2 月",
+            "bucket": "2~3 月",
             "risk": "",
             "reason": "等保险 大化疗中",
             "action": "患者等保险",
@@ -40697,7 +40744,7 @@ var BOARD_DATA = {
             "hosp": "华中科技大学同济医学院附属协和医院",
             "status": "冻存",
             "baseTime": "2026-09-10",
-            "months": 1,
+            "months": 1.1,
             "planRe": "",
             "bucket": "1~2 月",
             "risk": "",
@@ -40717,7 +40764,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2026-09-09",
-            "months": 1,
+            "months": 1.1,
             "planRe": "",
             "bucket": "1~2 月",
             "risk": "",
@@ -40737,7 +40784,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-09-15",
-            "months": 0.8,
+            "months": 0.9,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -40757,7 +40804,7 @@ var BOARD_DATA = {
             "hosp": "温州医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-09-24",
-            "months": 0.5,
+            "months": 0.6,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -40777,7 +40824,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -40797,7 +40844,7 @@ var BOARD_DATA = {
             "hosp": "中山大学肿瘤医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -40846,6 +40893,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "",
+            "no": "XL26Y98",
+            "ym": "2026-10",
+            "patient": "夏*",
+            "area": "South",
+            "am": "董硕",
+            "prov": "浙江省",
+            "city": "宁波市",
+            "hosp": "宁波大学附属人民医院",
+            "status": "全流程",
+            "baseTime": "2026-10-06",
+            "months": 0.2,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000316",
             "no": "XL26S60",
             "ym": "2026-10",
@@ -40866,27 +40933,7 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "",
-            "no": "XL26Y98",
-            "ym": "2026-10",
-            "patient": "夏*",
-            "area": "South",
-            "am": "董硕",
-            "prov": "浙江省",
-            "city": "宁波市",
-            "hosp": "宁波大学附属人民医院",
-            "status": "全流程",
-            "baseTime": "2026-10-06",
-            "months": 0.1,
-            "planRe": "",
-            "bucket": "0~1 月",
-            "risk": "",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "",
+            "code": "9009126000317",
             "no": "XL26G46",
             "ym": "2026-10",
             "patient": "龚*玲",
@@ -40917,6 +40964,46 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属协和医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "",
+            "no": "XL26K05",
+            "ym": "2026-10",
+            "patient": "沈*娥",
+            "area": "South",
+            "am": "董硕",
+            "prov": "浙江省",
+            "city": "杭州市",
+            "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+            "status": "全流程",
+            "baseTime": "2026-10-12",
+            "months": 0,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "",
+            "no": "XL26R32",
+            "ym": "2026-10",
+            "patient": "王*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "全流程",
+            "baseTime": "2026-10-12",
             "months": 0,
             "planRe": "",
             "bucket": "0~1 月",
@@ -40926,7 +41013,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "当前长期未单采订单共38单，其中≥12月10单、6~12月9单，超半数积压超半年，最久达33.9月，风险较高。原因以患者未回院为主，另有13单未填原因。建议优先清理超12月订单，补录原因并明确责任人跟进。"
+        "summary": "当前长期未单采订单共39单，其中0~1月12单、≥12月10单最为集中，最长已达34个月，冻存14单需重点关注。主要原因多为患者未回院或未达报销线，且有14单未填原因。建议优先排查超12月及冻存订单，明确责任人与跟进计划，补录原因并推动尽快处理。"
       },
       "noproduction": {
         "rows": [
@@ -40982,7 +41069,7 @@ var BOARD_DATA = {
             "hosp": "中国医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2024-03-26",
-            "months": 30.9,
+            "months": 31,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41022,7 +41109,7 @@ var BOARD_DATA = {
             "hosp": "山西白求恩医院",
             "status": "冻存",
             "baseTime": "2024-04-23",
-            "months": 30,
+            "months": 30.1,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41042,7 +41129,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2024-05-08",
-            "months": 29.5,
+            "months": 29.6,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41062,7 +41149,7 @@ var BOARD_DATA = {
             "hosp": "厦门大学附属中山医院",
             "status": "冻存",
             "baseTime": "2024-05-10",
-            "months": 29.4,
+            "months": 29.5,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41082,7 +41169,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2024-06-13",
-            "months": 28.3,
+            "months": 28.4,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41102,7 +41189,7 @@ var BOARD_DATA = {
             "hosp": "香港大学深圳医院",
             "status": "冻存",
             "baseTime": "2024-06-15",
-            "months": 28.2,
+            "months": 28.3,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41142,7 +41229,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2024-07-03",
-            "months": 27.6,
+            "months": 27.7,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41162,7 +41249,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "冻存",
             "baseTime": "2024-08-15",
-            "months": 26.2,
+            "months": 26.3,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41202,7 +41289,7 @@ var BOARD_DATA = {
             "hosp": "上海市同济医院",
             "status": "冻存",
             "baseTime": "2024-10-17",
-            "months": 24.1,
+            "months": 24.2,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -41222,7 +41309,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2024-11-13",
-            "months": 23.2,
+            "months": 23.3,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41242,7 +41329,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2024-12-13",
-            "months": 22.2,
+            "months": 22.3,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41322,7 +41409,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "冻存",
             "baseTime": "2025-03-07",
-            "months": 19.4,
+            "months": 19.5,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41342,7 +41429,7 @@ var BOARD_DATA = {
             "hosp": "南方医科大学珠江医院",
             "status": "冻存",
             "baseTime": "2025-03-22",
-            "months": 18.9,
+            "months": 19,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41382,7 +41469,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学总医院",
             "status": "冻存",
             "baseTime": "2025-04-03",
-            "months": 18.5,
+            "months": 18.6,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41402,7 +41489,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2025-04-11",
-            "months": 18.2,
+            "months": 18.3,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41442,7 +41529,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2025-05-27",
-            "months": 16.7,
+            "months": 16.8,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41462,7 +41549,7 @@ var BOARD_DATA = {
             "hosp": "吉林大学第一医院",
             "status": "冻存",
             "baseTime": "2025-06-14",
-            "months": 16.1,
+            "months": 16.2,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41482,7 +41569,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2025-06-19",
-            "months": 15.9,
+            "months": 16,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41502,7 +41589,7 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2025-07-16",
-            "months": 15,
+            "months": 15.1,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41522,7 +41609,7 @@ var BOARD_DATA = {
             "hosp": "上海长海医院",
             "status": "冻存",
             "baseTime": "2025-07-17",
-            "months": 15,
+            "months": 15.1,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41542,7 +41629,7 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2025-08-12",
-            "months": 14.1,
+            "months": 14.2,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41582,7 +41669,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2025-09-05",
-            "months": 13.3,
+            "months": 13.4,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -41602,7 +41689,7 @@ var BOARD_DATA = {
             "hosp": "宁波大学附属人民医院",
             "status": "全流程",
             "baseTime": "2025-10-21",
-            "months": 11.8,
+            "months": 11.9,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "即将过期",
@@ -41622,7 +41709,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "冻存",
             "baseTime": "2025-10-24",
-            "months": 11.7,
+            "months": 11.8,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "即将过期",
@@ -41682,7 +41769,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "全流程",
             "baseTime": "2025-12-23",
-            "months": 9.7,
+            "months": 9.8,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41702,7 +41789,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "冻存",
             "baseTime": "2025-12-23",
-            "months": 9.7,
+            "months": 9.8,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41722,7 +41809,7 @@ var BOARD_DATA = {
             "hosp": "中山大学肿瘤医院",
             "status": "全流程",
             "baseTime": "2025-12-26",
-            "months": 9.6,
+            "months": 9.7,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41742,7 +41829,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学总医院",
             "status": "冻存",
             "baseTime": "2025-12-26",
-            "months": 9.6,
+            "months": 9.7,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41822,7 +41909,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "冻存",
             "baseTime": "2026-01-28",
-            "months": 8.5,
+            "months": 8.6,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41862,7 +41949,7 @@ var BOARD_DATA = {
             "hosp": "湖州市中心医院",
             "status": "冻存",
             "baseTime": "2026-02-02",
-            "months": 8.3,
+            "months": 8.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41882,7 +41969,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-02-06",
-            "months": 8.2,
+            "months": 8.3,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41902,11 +41989,31 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2026-02-06",
-            "months": 8.2,
+            "months": 8.3,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
             "reason": "等待患者近期的疗效评估，MRD阳性即可转生产",
+            "action": "持续跟进",
+            "planTime": "待定"
+          },
+          {
+            "code": "9009126000048",
+            "no": "XL26L28",
+            "ym": "2026-02",
+            "patient": "张*勋",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京大学人民医院",
+            "status": "冻存",
+            "baseTime": "2026-02-27",
+            "months": 7.6,
+            "planRe": "",
+            "bucket": "6~12 月",
+            "risk": "未过期",
+            "reason": "7月中旬评估后病情稳定继续冻存",
             "action": "持续跟进",
             "planTime": "待定"
           },
@@ -41931,26 +42038,6 @@ var BOARD_DATA = {
             "planTime": "10月"
           },
           {
-            "code": "9009126000048",
-            "no": "XL26L28",
-            "ym": "2026-02",
-            "patient": "张*勋",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京大学人民医院",
-            "status": "冻存",
-            "baseTime": "2026-02-27",
-            "months": 7.5,
-            "planRe": "",
-            "bucket": "6~12 月",
-            "risk": "未过期",
-            "reason": "7月中旬评估后病情稳定继续冻存",
-            "action": "持续跟进",
-            "planTime": "待定"
-          },
-          {
             "code": "9009126000055",
             "no": "XL26B67",
             "ym": "2026-02",
@@ -41962,7 +42049,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属协和医院",
             "status": "冻存",
             "baseTime": "2026-03-04",
-            "months": 7.3,
+            "months": 7.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -41982,7 +42069,7 @@ var BOARD_DATA = {
             "hosp": "北京大学深圳医院",
             "status": "冻存",
             "baseTime": "2026-03-04",
-            "months": 7.3,
+            "months": 7.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -42002,7 +42089,7 @@ var BOARD_DATA = {
             "hosp": "中国医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-03-14",
-            "months": 7,
+            "months": 7.1,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -42022,7 +42109,7 @@ var BOARD_DATA = {
             "hosp": "中国医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-03-14",
-            "months": 7,
+            "months": 7.1,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -42062,7 +42149,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-04-10",
-            "months": 6.1,
+            "months": 6.2,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -42082,9 +42169,9 @@ var BOARD_DATA = {
             "hosp": "中山大学肿瘤医院",
             "status": "冻存",
             "baseTime": "2026-04-16",
-            "months": 5.9,
+            "months": 6,
             "planRe": "",
-            "bucket": "0~6 月",
+            "bucket": "6~12 月",
             "risk": "未过期",
             "reason": "目前在做治疗2个疗程后转",
             "action": "跟进患者治疗情况",
@@ -42102,7 +42189,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-04-22",
-            "months": 5.7,
+            "months": 5.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42142,7 +42229,7 @@ var BOARD_DATA = {
             "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
             "status": "冻存",
             "baseTime": "2026-04-24",
-            "months": 5.6,
+            "months": 5.7,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42162,7 +42249,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-05-18",
-            "months": 4.8,
+            "months": 4.9,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42222,7 +42309,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-06-09",
-            "months": 4.1,
+            "months": 4.2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42242,7 +42329,7 @@ var BOARD_DATA = {
             "hosp": "山东大学齐鲁医院",
             "status": "冻存",
             "baseTime": "2026-06-09",
-            "months": 4.1,
+            "months": 4.2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42262,7 +42349,7 @@ var BOARD_DATA = {
             "hosp": "南方医科大学南方医院",
             "status": "全流程",
             "baseTime": "2026-07-03",
-            "months": 3.3,
+            "months": 3.4,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42282,7 +42369,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-07-02",
-            "months": 3.3,
+            "months": 3.4,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42311,6 +42398,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000199",
+            "no": "XL26H69",
+            "ym": "2026-07",
+            "patient": "刘*生",
+            "area": "North",
+            "am": "赵俊兴",
+            "prov": "江苏省",
+            "city": "南京市",
+            "hosp": "南京鼓楼医院",
+            "status": "冻存",
+            "baseTime": "2026-07-09",
+            "months": 3.2,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "线数未达到",
+            "action": "寻找复发证据",
+            "planTime": "11月份"
+          },
+          {
             "code": "9009126000200",
             "no": "XL26Q79",
             "ym": "2026-06",
@@ -42329,26 +42436,6 @@ var BOARD_DATA = {
             "reason": "长期冻存单",
             "action": "持续跟进",
             "planTime": "待定"
-          },
-          {
-            "code": "9009126000199",
-            "no": "XL26H69",
-            "ym": "2026-07",
-            "patient": "刘*生",
-            "area": "North",
-            "am": "赵俊兴",
-            "prov": "江苏省",
-            "city": "南京市",
-            "hosp": "南京鼓楼医院",
-            "status": "冻存",
-            "baseTime": "2026-07-09",
-            "months": 3.1,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "线数未达到",
-            "action": "寻找复发证据",
-            "planTime": "11月份"
           },
           {
             "code": "9009126000201",
@@ -42382,7 +42469,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-07-15",
-            "months": 2.9,
+            "months": 3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42402,7 +42489,7 @@ var BOARD_DATA = {
             "hosp": "上海市曜影医院",
             "status": "全流程",
             "baseTime": "2026-07-21",
-            "months": 2.7,
+            "months": 2.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42422,7 +42509,7 @@ var BOARD_DATA = {
             "hosp": "川北医学院附属医院",
             "status": "冻存",
             "baseTime": "2026-07-24",
-            "months": 2.6,
+            "months": 2.7,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42442,7 +42529,7 @@ var BOARD_DATA = {
             "hosp": "空军军医大学西京医院",
             "status": "冻存",
             "baseTime": "2026-07-23",
-            "months": 2.6,
+            "months": 2.7,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42462,7 +42549,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "冻存",
             "baseTime": "2026-07-23",
-            "months": 2.6,
+            "months": 2.7,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42482,13 +42569,33 @@ var BOARD_DATA = {
             "hosp": "华中科技大学同济医学院附属协和医院",
             "status": "全流程",
             "baseTime": "2026-07-30",
-            "months": 2.4,
+            "months": 2.5,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
             "reason": "",
             "action": "",
             "planTime": ""
+          },
+          {
+            "code": "9009126000221",
+            "no": "XL26P63",
+            "ym": "2026-07",
+            "patient": "高*振",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "广州市",
+            "hosp": "南方医科大学南方医院",
+            "status": "冻存",
+            "baseTime": "2026-08-01",
+            "months": 2.4,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "早线患者，目前稳定状态",
+            "action": "目前主任在沟通转生产，计划本月转",
+            "planTime": "9月"
           },
           {
             "code": "9009126000222",
@@ -42511,26 +42618,6 @@ var BOARD_DATA = {
             "planTime": "待定"
           },
           {
-            "code": "9009126000221",
-            "no": "XL26P63",
-            "ym": "2026-07",
-            "patient": "高*振",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "广州市",
-            "hosp": "南方医科大学南方医院",
-            "status": "冻存",
-            "baseTime": "2026-08-01",
-            "months": 2.3,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "早线患者，目前稳定状态",
-            "action": "目前主任在沟通转生产，计划本月转",
-            "planTime": "9月"
-          },
-          {
             "code": "9009126000223",
             "no": "XL26F70",
             "ym": "2026-08",
@@ -42542,7 +42629,27 @@ var BOARD_DATA = {
             "hosp": "上海市同济医院",
             "status": "全流程",
             "baseTime": "2026-08-04",
-            "months": 2.2,
+            "months": 2.3,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "早线病人CR中",
+            "action": "密切跟进疾病情况提前沟通洗脱期",
+            "planTime": "2026-10-12"
+          },
+          {
+            "code": "9009126000227",
+            "no": "XL26N04",
+            "ym": "2026-07",
+            "patient": "林*桂",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海交通大学医学院附属瑞金医院",
+            "status": "全流程",
+            "baseTime": "2026-08-14",
+            "months": 2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42571,26 +42678,6 @@ var BOARD_DATA = {
             "planTime": "2026-10-12"
           },
           {
-            "code": "9009126000227",
-            "no": "XL26N04",
-            "ym": "2026-07",
-            "patient": "林*桂",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海交通大学医学院附属瑞金医院",
-            "status": "全流程",
-            "baseTime": "2026-08-14",
-            "months": 1.9,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "早线病人CR中",
-            "action": "密切跟进疾病情况提前沟通洗脱期",
-            "planTime": "2026-10-12"
-          },
-          {
             "code": "9009126000230",
             "no": "XL26U19",
             "ym": "2026-08",
@@ -42602,7 +42689,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属协和医院",
             "status": "冻存",
             "baseTime": "2026-08-14",
-            "months": 1.9,
+            "months": 2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42631,6 +42718,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000237",
+            "no": "XL26Z73",
+            "ym": "2026-08",
+            "patient": "杨*士",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海交通大学医学院附属瑞金医院",
+            "status": "冻存",
+            "baseTime": "2026-08-19",
+            "months": 1.8,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "早线病人CR中",
+            "action": "密切跟进疾病情况提前沟通洗脱期",
+            "planTime": "2026-11-15"
+          },
+          {
             "code": "9009126000236",
             "no": "XL24S05",
             "ym": "2024-01",
@@ -42651,26 +42758,6 @@ var BOARD_DATA = {
             "planTime": "10月"
           },
           {
-            "code": "9009126000237",
-            "no": "XL26Z73",
-            "ym": "2026-08",
-            "patient": "杨*士",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海交通大学医学院附属瑞金医院",
-            "status": "冻存",
-            "baseTime": "2026-08-19",
-            "months": 1.7,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "早线病人CR中",
-            "action": "密切跟进疾病情况提前沟通洗脱期",
-            "planTime": "2026-11-15"
-          },
-          {
             "code": "9009126000248",
             "no": "XL26X21",
             "ym": "2026-08",
@@ -42682,7 +42769,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-08-26",
-            "months": 1.5,
+            "months": 1.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42702,33 +42789,13 @@ var BOARD_DATA = {
             "hosp": "河北医科大学第二医院（河北省第二医院）",
             "status": "全流程",
             "baseTime": "2026-08-29",
-            "months": 1.4,
+            "months": 1.5,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
             "reason": "早线病人，计划移植+car-t",
             "action": "及时跟进患者诱导治疗情况",
             "planTime": "10月份"
-          },
-          {
-            "code": "9009126000244",
-            "no": "XL26N28",
-            "ym": "2026-08",
-            "patient": "黄*珍",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京协和医院",
-            "status": "全流程",
-            "baseTime": "2026-09-01",
-            "months": 1.3,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "等保险",
-            "action": "帮忙递交保险资料",
-            "planTime": "10月"
           },
           {
             "code": "9009126000258",
@@ -42742,7 +42809,7 @@ var BOARD_DATA = {
             "hosp": "上海长征医院",
             "status": "冻存",
             "baseTime": "2026-09-01",
-            "months": 1.3,
+            "months": 1.4,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42762,7 +42829,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2026-09-03",
-            "months": 1.2,
+            "months": 1.3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42782,7 +42849,27 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-09-04",
-            "months": 1.2,
+            "months": 1.3,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000271",
+            "no": "XL26R63",
+            "ym": "2026-09",
+            "patient": "韩*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "冻存",
+            "baseTime": "2026-09-10",
+            "months": 1.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42811,26 +42898,6 @@ var BOARD_DATA = {
             "planTime": "待定"
           },
           {
-            "code": "9009126000271",
-            "no": "XL26R63",
-            "ym": "2026-09",
-            "patient": "韩*",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "中国医学科学院血液病医院",
-            "status": "冻存",
-            "baseTime": "2026-09-10",
-            "months": 1,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000273",
             "no": "XL26G31",
             "ym": "2026-09",
@@ -42842,7 +42909,7 @@ var BOARD_DATA = {
             "hosp": "北京大学第一医院",
             "status": "冻存",
             "baseTime": "2026-09-12",
-            "months": 0.9,
+            "months": 1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42863,6 +42930,66 @@ var BOARD_DATA = {
             "status": "全流程",
             "baseTime": "2026-09-14",
             "months": 0.9,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000280",
+            "no": "XL26R50",
+            "ym": "2026-09",
+            "patient": "刘*",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京大学人民医院",
+            "status": "全流程",
+            "baseTime": "2026-09-18",
+            "months": 0.8,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000283",
+            "no": "XL26D15",
+            "ym": "2026-09",
+            "patient": "王*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "黑龙江省",
+            "city": "哈尔滨市",
+            "hosp": "哈尔滨市第一医院（哈尔滨血研所）",
+            "status": "冻存",
+            "baseTime": "2026-09-19",
+            "months": 0.8,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000282",
+            "no": "XL26S43",
+            "ym": "2026-09",
+            "patient": "吴*",
+            "area": "South",
+            "am": "李磊",
+            "prov": "四川省",
+            "city": "成都市",
+            "hosp": "中国人民解放军西部战区总医院",
+            "status": "全流程",
+            "baseTime": "2026-09-19",
+            "months": 0.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -42911,86 +43038,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000280",
-            "no": "XL26R50",
-            "ym": "2026-09",
-            "patient": "刘*",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京大学人民医院",
-            "status": "全流程",
-            "baseTime": "2026-09-18",
-            "months": 0.7,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000283",
-            "no": "XL26D15",
-            "ym": "2026-09",
-            "patient": "王*",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "黑龙江省",
-            "city": "哈尔滨市",
-            "hosp": "哈尔滨市第一医院（哈尔滨血研所）",
-            "status": "冻存",
-            "baseTime": "2026-09-19",
-            "months": 0.7,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000282",
-            "no": "XL26S43",
-            "ym": "2026-09",
-            "patient": "吴*",
-            "area": "South",
-            "am": "李磊",
-            "prov": "四川省",
-            "city": "成都市",
-            "hosp": "中国人民解放军西部战区总医院",
-            "status": "全流程",
-            "baseTime": "2026-09-19",
-            "months": 0.7,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000286",
-            "no": "XL26E21",
-            "ym": "2026-09",
-            "patient": "黎*钧",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "广州市",
-            "hosp": "中山大学附属第一医院",
-            "status": "全流程",
-            "baseTime": "2026-09-19",
-            "months": 0.7,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000287",
             "no": "XL26T88",
             "ym": "2026-09",
@@ -43002,6 +43049,86 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "全流程",
             "baseTime": "2026-09-18",
+            "months": 0.8,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000279",
+            "no": "XL26F28",
+            "ym": "2026-09",
+            "patient": "丁*娟",
+            "area": "South",
+            "am": "董硕",
+            "prov": "浙江省",
+            "city": "杭州市",
+            "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+            "status": "全流程",
+            "baseTime": "2026-09-21",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000285",
+            "no": "XL26M27",
+            "ym": "2026-09",
+            "patient": "吴*锐",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "深圳市",
+            "hosp": "北京大学深圳医院",
+            "status": "全流程",
+            "baseTime": "2026-09-22",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000288",
+            "no": "XL26N35",
+            "ym": "2026-09",
+            "patient": "黄*彪",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "深圳市",
+            "hosp": "北京大学深圳医院",
+            "status": "全流程",
+            "baseTime": "2026-09-22",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000289",
+            "no": "XL26V88",
+            "ym": "2026-09",
+            "patient": "鲁*波",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京大学人民医院",
+            "status": "全流程",
+            "baseTime": "2026-09-22",
             "months": 0.7,
             "planRe": "",
             "bucket": "0~6 月",
@@ -43031,66 +43158,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000279",
-            "no": "XL26F28",
-            "ym": "2026-09",
-            "patient": "丁*娟",
-            "area": "South",
-            "am": "董硕",
-            "prov": "浙江省",
-            "city": "杭州市",
-            "hosp": "浙江大学医学院附属第一医院（余杭院区）",
-            "status": "全流程",
-            "baseTime": "2026-09-21",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000285",
-            "no": "XL26M27",
-            "ym": "2026-09",
-            "patient": "吴*锐",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "深圳市",
-            "hosp": "北京大学深圳医院",
-            "status": "全流程",
-            "baseTime": "2026-09-22",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000288",
-            "no": "XL26N35",
-            "ym": "2026-09",
-            "patient": "黄*彪",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "深圳市",
-            "hosp": "北京大学深圳医院",
-            "status": "全流程",
-            "baseTime": "2026-09-22",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000291",
             "no": "XL26P87",
             "ym": "2026-09",
@@ -43111,17 +43178,17 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000289",
-            "no": "XL26V88",
-            "ym": "2026-09",
-            "patient": "鲁*波",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京大学人民医院",
+            "code": "9009126000294",
+            "no": "XL26V59",
+            "ym": "2026-08",
+            "patient": "袁*心",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "广州市",
+            "hosp": "广州医科大学附属肿瘤医院",
             "status": "全流程",
-            "baseTime": "2026-09-22",
+            "baseTime": "2026-09-24",
             "months": 0.6,
             "planRe": "",
             "bucket": "0~6 月",
@@ -43142,6 +43209,26 @@ var BOARD_DATA = {
             "hosp": "暨南大学附属第一医院（广州华侨医院）",
             "status": "全流程",
             "baseTime": "2026-09-23",
+            "months": 0.6,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000300",
+            "no": "XL26D17",
+            "ym": "2026-09",
+            "patient": "M*K R*D L*H",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海仁济医院",
+            "status": "全流程",
+            "baseTime": "2026-09-24",
             "months": 0.6,
             "planRe": "",
             "bucket": "0~6 月",
@@ -43191,46 +43278,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000294",
-            "no": "XL26V59",
-            "ym": "2026-08",
-            "patient": "袁*心",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "广州市",
-            "hosp": "广州医科大学附属肿瘤医院",
-            "status": "全流程",
-            "baseTime": "2026-09-24",
-            "months": 0.5,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000300",
-            "no": "XL26D17",
-            "ym": "2026-09",
-            "patient": "M*K R*D L*H",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海仁济医院",
-            "status": "全流程",
-            "baseTime": "2026-09-24",
-            "months": 0.5,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000295",
             "no": "XL26T33",
             "ym": "2026-09",
@@ -43242,7 +43289,7 @@ var BOARD_DATA = {
             "hosp": "四川大学华西医院",
             "status": "全流程",
             "baseTime": "2026-09-25",
-            "months": 0.5,
+            "months": 0.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43262,7 +43309,7 @@ var BOARD_DATA = {
             "hosp": "空军军医大学西京医院",
             "status": "全流程",
             "baseTime": "2026-09-24",
-            "months": 0.5,
+            "months": 0.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43322,7 +43369,7 @@ var BOARD_DATA = {
             "hosp": "上海嘉会国际医院",
             "status": "全流程",
             "baseTime": "2026-09-30",
-            "months": 0.3,
+            "months": 0.4,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43342,7 +43389,7 @@ var BOARD_DATA = {
             "hosp": "上海第四人民医院",
             "status": "全流程",
             "baseTime": "2026-10-04",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43362,7 +43409,7 @@ var BOARD_DATA = {
             "hosp": "惠州市第一人民医院",
             "status": "冻存",
             "baseTime": "2026-10-03",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43382,7 +43429,7 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2026-10-03",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43442,7 +43489,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43462,7 +43509,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43482,7 +43529,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "全流程",
             "baseTime": "2026-10-10",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43502,7 +43549,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43522,7 +43569,7 @@ var BOARD_DATA = {
             "hosp": "惠州市第一人民医院",
             "status": "全流程",
             "baseTime": "2026-10-10",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43542,6 +43589,46 @@ var BOARD_DATA = {
             "hosp": "山东大学齐鲁医院",
             "status": "全流程",
             "baseTime": "2026-10-10",
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000314",
+            "no": "XL26D83",
+            "ym": "2026-10",
+            "patient": "刘*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000313",
+            "no": "XL26J50",
+            "ym": "2026-04",
+            "patient": "孔*琴",
+            "area": "North",
+            "am": "龚卉",
+            "prov": "湖北省",
+            "city": "武汉市",
+            "hosp": "华中科技大学同济医学院附属同济医院",
+            "status": "全流程",
+            "baseTime": "2026-10-12",
             "months": 0,
             "planRe": "",
             "bucket": "0~6 月",
@@ -43551,7 +43638,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未转生产共131单，超半数集中在0~6月，最久33.5月。主因是早线病人CR中、等进展及病情稳定，45单未填原因。已过期33单、即将过期4单，需立即处理。建议优先清理过期订单，补录原因，并重点跟进赵蕊、高威龙等AM名下订单。"
+        "summary": "当前长期未转生产共131单，主要集中在0~6月（73单），主因是早线病人CR中、等进展及疾病稳定等，46单未填原因。已过期33单、即将过期4单，需立即处理。建议优先清理过期订单，补录原因，并重点跟进赵蕊、高威龙等AM名下订单。"
       },
       "noreinfusion": {
         "rows": [
@@ -43567,7 +43654,7 @@ var BOARD_DATA = {
             "hosp": "复旦大学附属中山医院厦门医院",
             "status": "全流程",
             "baseTime": "2025-10-11",
-            "months": 12.1,
+            "months": 12.2,
             "planRe": "",
             "bucket": "≥6 月",
             "risk": "已过期",
@@ -43587,7 +43674,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-03-20",
-            "months": 6.8,
+            "months": 6.9,
             "planRe": "",
             "bucket": "≥6 月",
             "risk": "已过期",
@@ -43607,7 +43694,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-06-03",
-            "months": 4.3,
+            "months": 4.4,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -43667,7 +43754,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-06-26",
-            "months": 3.5,
+            "months": 3.6,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -43687,7 +43774,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-06-30",
-            "months": 3.4,
+            "months": 3.5,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -43707,7 +43794,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-07-02",
-            "months": 3.3,
+            "months": 3.4,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -43727,7 +43814,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-07-20",
-            "months": 2.7,
+            "months": 2.8,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -43767,8 +43854,8 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-08-04",
-            "months": 2.2,
-            "planRe": "",
+            "months": 2.3,
+            "planRe": "2026-10-14",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "桥接治疗中",
@@ -43827,7 +43914,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-08-26",
-            "months": 1.5,
+            "months": 1.6,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -43847,7 +43934,7 @@ var BOARD_DATA = {
             "hosp": "中国人民解放军西部战区总医院",
             "status": "全流程",
             "baseTime": "2026-08-31",
-            "months": 1.3,
+            "months": 1.4,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -43867,7 +43954,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-08-31",
-            "months": 1.3,
+            "months": 1.4,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -43887,13 +43974,33 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属邵逸夫医院",
             "status": "全流程",
             "baseTime": "2026-09-01",
-            "months": 1.3,
+            "months": 1.4,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "肿瘤符合高，血象差",
             "action": "已经联系血研所会诊，需要控制病情再回输，否则有危险",
             "planTime": "2026-09"
+          },
+          {
+            "code": "9009126000218",
+            "no": "XL26W97",
+            "ym": "2026-07",
+            "patient": "傅*军",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "全流程",
+            "baseTime": "2026-09-04",
+            "months": 1.3,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
           },
           {
             "code": "9009126000228",
@@ -43916,26 +44023,6 @@ var BOARD_DATA = {
             "planTime": "10月"
           },
           {
-            "code": "9009126000218",
-            "no": "XL26W97",
-            "ym": "2026-07",
-            "patient": "傅*军",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "中国医学科学院血液病医院",
-            "status": "全流程",
-            "baseTime": "2026-09-04",
-            "months": 1.2,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000229",
             "no": "XL26C35",
             "ym": "2026-08",
@@ -43947,7 +44034,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-07",
-            "months": 1.1,
+            "months": 1.2,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -43967,7 +44054,7 @@ var BOARD_DATA = {
             "hosp": "中山大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-09-07",
-            "months": 1.1,
+            "months": 1.2,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44036,26 +44123,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000249",
-            "no": "XL26L04",
-            "ym": "2026-08",
-            "patient": "刘*珍",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "中国医学科学院血液病医院",
-            "status": "全流程",
-            "baseTime": "2026-09-16",
-            "months": 0.8,
-            "planRe": "2026-10-12",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000251",
             "no": "XL26M99",
             "ym": "2026-08",
@@ -44087,7 +44154,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-18",
-            "months": 0.7,
+            "months": 0.8,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44107,7 +44174,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-09-21",
-            "months": 0.6,
+            "months": 0.7,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44127,6 +44194,46 @@ var BOARD_DATA = {
             "hosp": "南方医科大学南方医院",
             "status": "全流程",
             "baseTime": "2026-09-23",
+            "months": 0.6,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000256",
+            "no": "XL26B99",
+            "ym": "2026-08",
+            "patient": "杨*业",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京高博博仁医院",
+            "status": "全流程",
+            "baseTime": "2026-09-24",
+            "months": 0.6,
+            "planRe": "2026-10-14",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000257",
+            "no": "XL26E92",
+            "ym": "2026-08",
+            "patient": "姜*莹",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海交通大学医学院附属瑞金医院",
+            "status": "全流程",
+            "baseTime": "2026-09-24",
             "months": 0.6,
             "planRe": "",
             "bucket": "0~3 月",
@@ -44156,46 +44263,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000256",
-            "no": "XL26B99",
-            "ym": "2026-08",
-            "patient": "杨*业",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京高博博仁医院",
-            "status": "全流程",
-            "baseTime": "2026-09-24",
-            "months": 0.5,
-            "planRe": "2026-10-15",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000257",
-            "no": "XL26E92",
-            "ym": "2026-08",
-            "patient": "姜*莹",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海交通大学医学院附属瑞金医院",
-            "status": "全流程",
-            "baseTime": "2026-09-24",
-            "months": 0.5,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000162",
             "no": "XL26C72",
             "ym": "2026-05",
@@ -44207,7 +44274,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44227,7 +44294,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44247,7 +44314,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44267,7 +44334,7 @@ var BOARD_DATA = {
             "hosp": "中山大学孙逸仙纪念医院",
             "status": "全流程",
             "baseTime": "2026-09-30",
-            "months": 0.3,
+            "months": 0.4,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44287,28 +44354,8 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-30",
-            "months": 0.3,
+            "months": 0.4,
             "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000265",
-            "no": "XL26D40",
-            "ym": "2026-09",
-            "patient": "刘*",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京大学人民医院",
-            "status": "全流程",
-            "baseTime": "2026-10-07",
-            "months": 0.1,
-            "planRe": "2026-10-11",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "",
@@ -44327,6 +44374,46 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "全流程",
             "baseTime": "2026-10-07",
+            "months": 0.2,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000244",
+            "no": "XL26N28",
+            "ym": "2026-08",
+            "patient": "黄*珍",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京协和医院",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000277",
+            "no": "XL26X86",
+            "ym": "2026-09",
+            "patient": "贾*珍",
+            "area": "North",
+            "am": "龚卉",
+            "prov": "陕西省",
+            "city": "西安市",
+            "hosp": "空军军医大学西京医院",
+            "status": "全流程",
+            "baseTime": "2026-10-09",
             "months": 0.1,
             "planRe": "",
             "bucket": "0~3 月",
@@ -44436,18 +44523,18 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000277",
-            "no": "XL26X86",
+            "code": "9009126000286",
+            "no": "XL26E21",
             "ym": "2026-09",
-            "patient": "贾*珍",
-            "area": "North",
-            "am": "龚卉",
-            "prov": "陕西省",
-            "city": "西安市",
-            "hosp": "空军军医大学西京医院",
+            "patient": "黎*钧",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "广州市",
+            "hosp": "中山大学附属第一医院",
             "status": "全流程",
-            "baseTime": "2026-10-09",
-            "months": 0,
+            "baseTime": "2026-10-10",
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -44456,17 +44543,17 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未回输订单共45单，其中0~3月37单最集中，North区28单、赵蕊18单最多，28单未填原因。已过期2单需立即处理，另有1单接近过期。建议优先清理过期及临期订单，督促补录原因，并重点跟进赵蕊及North区。"
+        "summary": "当前长期未回输订单共45单，主要集中在0~3月（37单），North区27单、赵蕊17单最多。已过期2单，另有1单临近过期，需立即处理。28单未填原因，建议优先跟进高风险订单，补全原因并加强3月以上订单预警。"
       }
     }
   },
   "REGION3_AI": {
     "at": "2026-10",
     "province": {
-      "summary": "2026年1–10月21省累计下单315、回输195，覆盖医院81家，回输转化约62%。头部集中度高，天津、北京、上海、广东四省贡献下单超六成，赵蕊天津回输44居首。同比北京增23、广东增17，浙江降9需关注。建议巩固头部省份，排查浙江下滑原因，并提升江苏等回输转化偏低省份。"
+      "summary": "1–10月21省累计下单317、回输197，覆盖医院81家。天津、北京、上海、广东贡献主要下单与回输，头部集中度高。北京同比增23、广东增17，增长突出；浙江降8、吉林降6，需关注。建议稳固头部省份，排查下滑原因并加大潜力医院覆盖。"
     },
     "hospital": {
-      "summary": "1–10月国内84家医院有下单或回输，COE体系含SCOE 4家、COE 12家、RCOE 14家，Others 54家。中国医学科学院血液病医院以55单41回输领跑，北大人民、浙一余杭、瑞金等头部表现突出。42家医院超90天未下单，最久青岛立医院596天，建议分层激活沉睡医院，优先跟进高潜空窗客户。"
+      "summary": "2026年1–10月国内有下单或回输医院共84家，其中SCOE 4家、COE 12家、RCOE 14家，Others 54家，头部集中度较高。中国医学科学院血液病医院以下单56、回输42领先，前八家贡献主要业务量。但43家医院超90天未下单，最久达598天，存在明显流失风险。建议优先分层跟进长期空窗医院，重点激活COE及潜力Others，防止存量客户持续下滑。"
     }
   },
   "COE_PAGES": {
@@ -44586,7 +44673,7 @@ var BOARD_DATA = {
                   5,
                   7,
                   6,
-                  2,
+                  3,
                   0,
                   0
                 ],
@@ -44600,7 +44687,7 @@ var BOARD_DATA = {
                   7,
                   6,
                   4,
-                  1,
+                  2,
                   0,
                   0
                 ]
@@ -44714,7 +44801,7 @@ var BOARD_DATA = {
                   1,
                   1,
                   3,
-                  0,
+                  1,
                   0,
                   0
                 ],
@@ -44984,7 +45071,7 @@ var BOARD_DATA = {
                   1,
                   3,
                   1,
-                  1,
+                  2,
                   0,
                   0
                 ]
@@ -44992,7 +45079,7 @@ var BOARD_DATA = {
             }
           }
         ],
-        "summary": "2026年1–10月SCOE医院共4家，下单107、回输72，分别占全盘34.0%和36.9%，规模集中。中国医学科学院血液病医院下单55、回输41，头部集中度极高。北京大学人民医院、瑞金医院同比各增6单以上，余杭院区降5单需关注。名单内无长期无单医院，建议维持现有覆盖并跟进下滑院区。"
+        "summary": "2026年1-10月SCOE医院共4家，下单109、回输74，分别占全盘34.4%和37.6%，规模集中。中国医学科学院血液病医院下单56、回输42，头部集中度极高。北京大学人民医院同比增10、血研所增7、瑞金增6，余杭院区降4。名单内无长期无单医院，暂无清退风险，建议持续关注余杭院区下滑。"
       },
       "COE": {
         "hospitals": [
@@ -46503,7 +46590,7 @@ var BOARD_DATA = {
             }
           }
         ],
-        "summary": "COE医院共12家，YTD下单80、回输45，占全盘约四分之一，规模稳定。头部集中度高，苏大附一、中山一院下单并列第一，协和回输表现突出。同比苏大附一增9、协和与中山一院各增5；天津总医院等下滑明显。名单内无零单医院，建议持续关注下滑医院并巩固头部产出。"
+        "summary": "2026年1–10月COE医院共12家，下单80、回输45，占全盘约25.2%和22.8%，无零单医院。头部集中度高，苏大附一、中山一院各下单14，协和、同济协和、中山肿瘤紧随。同比苏大附一增9、协和与中山一院各增5；天津医大总医院降4、新桥降3需关注。建议重点跟进高下单低回输医院转化，并排查下滑医院原因。"
       },
       "RCOE": {
         "hospitals": [
@@ -48376,7 +48463,7 @@ var BOARD_DATA = {
             }
           }
         ],
-        "summary": "RCOE 医院共16家，YTD下单44、回输24，占全盘14.0%和12.3%，规模有限但头部集中：仁济、鼓楼、齐鲁、南方、同济五院贡献下单34。仁济同比增7、齐鲁增5，而江苏省人民医院和吉林大学第一医院各降6，需重点跟进。另有2家医院全年无单，建议核查准入或需求，避免资源空转。"
+        "summary": "RCOE 主数据全量医院共16家，YTD下单44、回输24，占全盘约13.9%和12.2%，规模仍偏小。头部集中度高，上海仁济、南京鼓楼、齐鲁、南方医院、武汉同济居前，仁济增长最猛。江苏省人民医院、吉林大学第一医院同比下滑明显，需重点复盘。另有2家医院长期无单，建议排查准入或需求问题，尽快激活。"
       }
     },
     "totals": {
@@ -48758,7 +48845,7 @@ var BOARD_DATA = {
             9,
             14,
             15,
-            3,
+            5,
             0,
             0
           ],
@@ -48772,7 +48859,7 @@ var BOARD_DATA = {
             9,
             11,
             7,
-            2,
+            4,
             0,
             0
           ]
@@ -51598,7 +51685,7 @@ var BOARD_DATA = {
         "2023": 124,
         "2024": 327,
         "2025": 340,
-        "2026": 323
+        "2026": 325
       },
       "byYearAm": {
         "2023": {
@@ -51645,10 +51732,10 @@ var BOARD_DATA = {
           "SG_AM": 1
         }
       },
-      "all": 1114,
+      "all": 1116,
       "byHosp": {
-        "天津市|天津市|中国医学科学院血液病医院": 181,
-        "浙江省|杭州市|浙江大学医学院附属第一医院（余杭院区）": 76,
+        "天津市|天津市|中国医学科学院血液病医院": 182,
+        "浙江省|杭州市|浙江大学医学院附属第一医院（余杭院区）": 77,
         "北京市|北京市|北京大学第一医院": 6,
         "天津市|天津市|天津医科大学肿瘤医院（空港院区）": 19,
         "山东省|济南市|山东大学齐鲁医院": 10,
@@ -51788,6 +51875,6 @@ var BOARD_DATA = {
         "江苏省|南通市|南通大学附属医院": 1
       }
     },
-    "summary": "全部1114单中取消246单，其中单采预约前及单采前取消117单，属无成本取消；生产完成取消回输47单，成本损失较大。取消集中于浙大一院余杭、苏州大学附属第一医院等，江苏省人民医院、华西医院等取消率超五成。建议重点跟进高取消率医院，核查取消原因，压降生产后取消。"
+    "summary": "全部1116单中取消246单，单采预约前98单、单采前19单，无成本取消共117单占47.6%；单采后33单、生产中49单、生产完成回输47单。取消集中于浙大一院余杭、苏州大学附属第一医院等，江苏省人民医院、华西、吉大一院、南京鼓楼、宁波大学附属人民医院取消率超四成。建议优先核查高取消率医院原因，强化预约前确认与生产前冻结机制，降低无成本及生产后取消损失。"
   }
 };
