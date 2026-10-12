@@ -1035,6 +1035,88 @@ console.log('异常订单（重算）: 未单采=' + ABN_MGMT.pages.nosample.row
   ' 未回输=' + ABN_MGMT.pages.noreinfusion.rows.length);
 
 
+// ── 8u. 订单生产运营管理（3 页）：生产等待期 / 产品生产周期 / 回输等待期 ──
+// 数据源：pbs_d1（D1执行时间，按追溯码 join）+ bs order（receive/qa/re）+ order dict（resume 恢复生产时间，按合同号 join）
+// 本层输出原始日期 + 三段天数，三页共用同一份数组，各自按需筛选（不做任何过滤）
+var PROD_OPS = { at: '', ai: {}, aiAt: '', rows: [] };
+(function () {
+  // pbs_d1：表头不在首行、列可能带偏移 → 按「列名」在前 10 行里找表头，不写死列索引
+  // 同一追溯码出现多次时取**最新**时间（时间同格式，字符串比较即时序）
+  var pbsPath = path.join(rawDir, 'pbs_d1.xlsx');
+  if (!fs.existsSync(pbsPath)) pbsPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'pbs_d1.xlsx');
+  var pbsMap = {}, pbsHit = 0, pbsBlank = 0;
+  try {
+    var pbsWb = XLSX.readFile(pbsPath);
+    var pbsArr = XLSX.utils.sheet_to_json(pbsWb.Sheets[pbsWb.SheetNames[0]], { header: 1, defval: '' });
+    var pbsC = {}, pbsHdr = -1, hi;
+    for (hi = 0; hi < Math.min(pbsArr.length, 10); hi++) {
+      var cand = (pbsArr[hi] || []).map(function (x) { return String(x == null ? '' : x).replace(/[\r\n\s]/g, ''); });
+      if (cand.indexOf('追溯码') >= 0 && cand.indexOf('D1执行时间') >= 0) {
+        cand.forEach(function (h, i) { if (h === '追溯码') pbsC.code = i; if (h === 'D1执行时间') pbsC.d1 = i; });
+        pbsHdr = hi; break;
+      }
+    }
+    if (pbsHdr < 0) console.warn('⚠️ pbs_d1.xlsx 未找到「追溯码 / D1执行时间」表头行，D1 数据留空');
+    else {
+      for (var pi = pbsHdr + 1; pi < pbsArr.length; pi++) {
+        var pr = pbsArr[pi]; if (!pr) continue;
+        var pk = String(pr[pbsC.code] == null ? '' : pr[pbsC.code]).trim();
+        if (!pk) { pbsBlank++; continue; }
+        var pv = String(pr[pbsC.d1] == null ? '' : pr[pbsC.d1]).trim().slice(0, 10); // 源值是「YYYY-MM-DD HH:mm:ss」
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(pv)) continue;
+        pbsHit++;
+        if (!pbsMap[pk] || pv > pbsMap[pk]) pbsMap[pk] = pv;
+      }
+    }
+  } catch (e) { console.warn('⚠️ 读取 pbs_d1.xlsx 失败:', e.message); }
+
+  // 天数差：用斜杠解析本地时间，避免 ISO 的 UTC 偏移（同 abnMonths）
+  function days(a, b) {
+    if (!a || !b) return null;
+    var t1 = new Date(String(a).slice(0, 10).replace(/-/g, '/')).getTime();
+    var t2 = new Date(String(b).slice(0, 10).replace(/-/g, '/')).getTime();
+    if (isNaN(t1) || isNaN(t2)) return null;
+    return Math.round((t2 - t1) / 86400000);
+  }
+
+  var neg = { w: 0, c: 0, r: 0 }, at = '';
+  records.forEach(function (r) {
+    var d = dictInfo[r.no] || {};
+    var info = mdByName[r.hosp];                   // 下单 AM = masterdata Sheet1 的 AM 列（用户指定口径，非 order dict）
+    var d1 = pbsMap[r.code] || '';
+    var resume = d.resume || '';
+    // 生产等待期起点：有恢复生产时间优先用，否则退回仓库接收单采血时间
+    var start = resume || r.receive || '';
+    // w=生产等待期（起点→D1） c=产品生产周期（D1→放行） rw=回输等待期（放行→回输结束）
+    var w = (d1 && start) ? days(start, d1) : null;
+    var c = (d1 && r.qa) ? days(d1, r.qa) : null;
+    var rw = (r.qa && r.re) ? days(r.qa, r.re) : null;
+    if (w !== null && w < 0) neg.w++;
+    if (c !== null && c < 0) neg.c++;
+    if (rw !== null && rw < 0) neg.r++;
+    if (d1 > at) at = d1;
+    PROD_OPS.rows.push({
+      no: r.no, code: r.code || '',
+      hosp: r.hosp, prov: r.prov || '', city: r.city || '',
+      coe: coeCat(r.coe), ov: (info && info.reg && info.reg !== 'DOM') ? 1 : 0, am: (info ? info.am : '') || '',
+      od: r.od || '', d1: d1, receive: r.receive || '', resume: resume, qa: r.qa || '', re: r.re || '',
+      w: w, c: c, rw: rw
+    });
+  });
+  PROD_OPS.at = at;
+  function cnt(f) { return PROD_OPS.rows.filter(f).length; }
+  console.log('PROD_OPS: 订单=' + PROD_OPS.rows.length +
+    ' pbs_d1命中=' + pbsHit + ' 空码=' + pbsBlank +
+    ' | 有D1=' + cnt(function (x) { return !!x.d1; }) +
+    ' 有resume=' + cnt(function (x) { return !!x.resume; }) +
+    ' 有qa=' + cnt(function (x) { return !!x.qa; }) +
+    ' 有re=' + cnt(function (x) { return !!x.re; }));
+  console.log('PROD_OPS 可统计单数: 生产等待期=' + cnt(function (x) { return x.w !== null; }) +
+    ' 产品生产周期=' + cnt(function (x) { return x.c !== null; }) +
+    ' 回输等待期=' + cnt(function (x) { return x.rw !== null; }) +
+    ' | 负数时长: 等待期=' + neg.w + ' 生产周期=' + neg.c + ' 回输等待期=' + neg.r);
+})();
+
 // ── 8r. 省份&医院数据页 AI 摘要的统计口径（与前端 page6.js 的 accumulate 一致：当年 1 月～最新数据月 YTD，仅国内 DOM） ──
 var R3_YM = ''; // 最新有数据的月（前端默认月同源）
 Object.keys(REGIONS.HOSP).forEach(function (k) { if (k > R3_YM) R3_YM = k; });
@@ -1261,6 +1343,55 @@ async function deepseekSummary(pageName, statsText, ask) {
   if (!txt) { console.error('\n✗ DeepSeek 返回空摘要：「' + pageName + '」'); process.exit(1); }
   return txt;
 }
+// ── 订单生产运营管理三页：喂给 LLM 的统计文本（不传订单级明细） ──
+var PROD_OPS_PAGES = {
+  prod_wait:  { name: '生产等待期管理',   metric: 'w',  tf: 'd1', desc: '生产等待期 = D1执行时间 − 起点（有恢复生产时间优先，否则仓库接收单采血时间）' },
+  prod_cycle: { name: '产品生产周期管理', metric: 'c',  tf: 'qa', desc: '产品生产周期 = 生产质量放行时间 − D1执行时间' },
+  reinf_wait: { name: '回输等待期管理',   metric: 'rw', tf: 're', desc: '回输等待期 = 实际回输结束时间 − 生产质量放行时间' }
+};
+function shiftYM(ym, d) {
+  var y = parseInt(ym.slice(0, 4), 10), m = parseInt(ym.slice(5, 7), 10) + d;
+  while (m <= 0) { m += 12; y--; }
+  while (m > 12) { m -= 12; y++; }
+  return y + '-' + (m < 10 ? '0' : '') + m;
+}
+function prodOpsStatsText(k) {
+  var cfg = PROD_OPS_PAGES[k], F = cfg.metric, TF = cfg.tf;
+  var rows = PROD_OPS.rows.filter(function (r) { return r[F] !== null && r[F] !== undefined; });
+  function avg(rs) { if (!rs.length) return 0; var s = 0; rs.forEach(function (r) { s += r[F]; }); return s / rs.length; }
+  function group(rs, f) {
+    var by = {}; rs.forEach(function (r) { var key = f(r); if (!key) return; (by[key] = by[key] || []).push(r); });
+    return by;
+  }
+  var lines = [];
+  lines.push('口径：' + cfg.desc + '；仅统计该段时长可算的订单，共 ' + rows.length + ' 单');
+  if (!rows.length) return lines.join('\n');
+  var vs = rows.map(function (r) { return r[F]; }).sort(function (a, b) { return a - b; });
+  lines.push('全量平均 ' + avg(rows).toFixed(1) + ' 天，中位数 ' + vs[Math.floor(vs.length / 2)] + ' 天，最短 ' + vs[0] + ' 天，最长 ' + vs[vs.length - 1] + ' 天');
+  var BK = [[0, 7], [7, 14], [14, 30], [30, 60], [60, Infinity]];
+  lines.push('时长分档：' + BK.map(function (b) {
+    var n = vs.filter(function (v) { return v >= b[0] && v < b[1]; }).length;
+    return (b[1] === Infinity ? '≥' + b[0] + '天' : b[0] + '~' + b[1] + '天') + ' ' + n + ' 单(' + (n / vs.length * 100).toFixed(0) + '%)';
+  }).join('，'));
+  var yrs = group(rows, function (r) { return String(r[TF] || '').slice(0, 4); });
+  lines.push('逐年平均：' + Object.keys(yrs).sort().map(function (y) { return y + ' ' + avg(yrs[y]).toFixed(1) + ' 天(' + yrs[y].length + ' 单)'; }).join('，'));
+  var coes = group(rows, function (r) { return r.coe; });
+  lines.push('按医院类型平均：' + ['SCOE', 'COE', 'RCOE', 'Others'].filter(function (c) { return coes[c]; })
+    .map(function (c) { return c + ' ' + avg(coes[c]).toFixed(1) + ' 天(' + coes[c].length + ' 单)'; }).join('，'));
+  var ams = group(rows, function (r) { return r.am; });
+  lines.push('各 AM 平均时长(高→低)：' + Object.keys(ams).map(function (a) { return { a: a, n: ams[a].length, v: avg(ams[a]) }; })
+    .sort(function (x, y) { return y.v - x.v; })
+    .map(function (x) { return x.a + ' ' + x.v.toFixed(1) + ' 天/' + x.n + ' 单'; }).join('，'));
+  var yms = rows.map(function (r) { return String(r[TF] || '').slice(0, 7); }).filter(Boolean).sort();
+  if (yms.length) {
+    var cut = shiftYM(yms[yms.length - 1], -5);
+    var recent = rows.filter(function (r) { return String(r[TF] || '').slice(0, 7) >= cut; });
+    var older = rows.filter(function (r) { return String(r[TF] || '').slice(0, 7) < cut; });
+    lines.push('近 6 个月（' + cut + ' 起）平均 ' + avg(recent).toFixed(1) + ' 天(' + recent.length + ' 单)；更早平均 ' + avg(older).toFixed(1) + ' 天(' + older.length + ' 单)');
+  }
+  return lines.join('\n');
+}
+
 async function buildSummaries() {
   var cache = {};
   try { cache = JSON.parse(fs.readFileSync(AI_CACHE_FILE, 'utf-8')) || {}; } catch (e) { cache = {}; }
@@ -1348,6 +1479,25 @@ async function buildSummaries() {
     }
   }
 
+  // 5) 订单生产运营管理三页（生产等待期 / 产品生产周期 / 回输等待期）
+  var poKeys = Object.keys(PROD_OPS_PAGES);
+  for (var w = 0; w < poKeys.length; w++) {
+    var pk = poKeys[w], pItem = PROD_OPS_PAGES[pk], pText = prodOpsStatsText(pk), fp5 = sha1(pText);
+    if (cache[pk] && cache[pk].fp === fp5 && cache[pk].summary) {
+      PROD_OPS.ai[pk] = cache[pk].summary;
+      next[pk] = cache[pk];
+      console.log('AI 摘要（缓存命中，未调用 LLM）:', pItem.name);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', pItem.name, '…');
+      var s5 = await deepseekSummary(pItem.name, pText,
+        '请写一段面向业务负责人的总结：说明该环节整体耗时水平、最集中的时长分档、耗时明显偏长的年份/医院类型/AM，以及流程改进与跟进建议。控制在 150 字以内，不要罗列所有数字。');
+      PROD_OPS.ai[pk] = s5;
+      next[pk] = { fp: fp5, summary: s5, at: DP };
+      console.log('  ✓ ' + s5.slice(0, 40) + (s5.length > 40 ? '…' : ''));
+    }
+  }
+  PROD_OPS.aiAt = DP;
+
   try { fs.writeFileSync(AI_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
   ABN_MGMT.summaryAt = DP;
 }
@@ -1382,6 +1532,7 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     FLOW: FLOW,
     CART_DAILY: CART_DAILY,
     ABN_MGMT: ABN_MGMT,
+    PROD_OPS: PROD_OPS,
     REGION3_AI: REGION3_AI,
     COE_PAGES: COE_PAGES,
     CANCEL_MGMT: CANCEL_MGMT
