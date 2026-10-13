@@ -118,7 +118,7 @@
 				<option value="log">对数</option>
 			</select>
 			<span class="po-cnt" id="poCnt"></span>
-			<span class="pt-time-note">生产等待期 = D1执行时间 − 起点；<b>起点 = 恢复生产时间</b>（order dict 有则优先），否则仓库接收单采血时间。<b>仅统计有 D1 执行时间的订单</b>。时间筛选按 D1执行时间；筛选只作用于两张图，<b>表格始终为全量</b>，不随筛选变化。</span>
+			<span class="pt-time-note">生产等待期 = <b>首次</b> D1执行时间 − 起点（同一追溯码有多次 D1 时取最早，返工占用的间隔不计）；<b>起点 = 恢复生产时间</b>（order dict 有则优先），否则仓库接收单采血时间。<b>仅统计有 D1 执行时间的订单</b>。时间筛选按 D1执行时间；筛选只作用于两张图，<b>表格始终为全量</b>，不随筛选变化。</span>
 		</div>
 		<div class="pt-tables po-top-area">
 			<div class="pt-tbl-row">

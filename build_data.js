@@ -1041,13 +1041,31 @@ console.log('异常订单（重算）: 未单采=' + ABN_MGMT.pages.nosample.row
 var PROD_OPS = { at: '', ai: {}, aiAt: '', rows: [] };
 (function () {
   // pbs_d1：表头不在首行、列可能带偏移 → 按「列名」在前 10 行里找表头，不写死列索引
-  // 同一追溯码出现多次时取**最新**时间（时间同格式，字符串比较即时序）
+  // 一个追溯码可能有多条 D1（首次生产批 C + 返工批 CR）→ **两条都留**：
+  //   生产等待期用**最早**的（等待只算到首次开始生产）、产品生产周期用**最晚**的（只算最后一次实际生产）
+  //   这样「返工占用的那段间隔」不会抬高任何一个 KPI
   var pbsPath = path.join(rawDir, 'pbs_d1.xlsx');
   if (!fs.existsSync(pbsPath)) pbsPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'pbs_d1.xlsx');
-  var pbsMap = {}, pbsHit = 0, pbsBlank = 0;
+  var pbsMap = {}, pbsHit = 0, pbsBlank = 0, pbsMulti = 0;
   try {
     var pbsWb = XLSX.readFile(pbsPath);
-    var pbsArr = XLSX.utils.sheet_to_json(pbsWb.Sheets[pbsWb.SheetNames[0]], { header: 1, defval: '' });
+    var pbsWs = pbsWb.Sheets[pbsWb.SheetNames[0]];
+    // 展开合并单元格：Excel 合并区只有左上角存值，其余读出来是空
+    // （pbs_d1 的「追溯码」列把同一次单采的「生产批 C」与「返工批 CR」两行**纵向合并**，
+    //   不展开则 CR 行的追溯码读成空、整行被丢掉，D1 就取不到「最新」的那次 —— 如 A1D0315）
+    var pbsMerged = 0;
+    (pbsWs['!merges'] || []).forEach(function (m) {
+      var anchor = pbsWs[XLSX.utils.encode_cell(m.s)];
+      if (!anchor || anchor.v === undefined || anchor.v === '') return;
+      for (var R = m.s.r; R <= m.e.r; R++) {
+        for (var C = m.s.c; C <= m.e.c; C++) {
+          if (R === m.s.r && C === m.s.c) continue;
+          var ad = XLSX.utils.encode_cell({ r: R, c: C });
+          if (!pbsWs[ad] || pbsWs[ad].v === undefined || pbsWs[ad].v === '') { pbsWs[ad] = { t: anchor.t, v: anchor.v }; pbsMerged++; }
+        }
+      }
+    });
+    var pbsArr = XLSX.utils.sheet_to_json(pbsWs, { header: 1, defval: '' });
     var pbsC = {}, pbsHdr = -1, hi;
     for (hi = 0; hi < Math.min(pbsArr.length, 10); hi++) {
       var cand = (pbsArr[hi] || []).map(function (x) { return String(x == null ? '' : x).replace(/[\r\n\s]/g, ''); });
@@ -1065,7 +1083,13 @@ var PROD_OPS = { at: '', ai: {}, aiAt: '', rows: [] };
         var pv = String(pr[pbsC.d1] == null ? '' : pr[pbsC.d1]).trim().slice(0, 10); // 源值是「YYYY-MM-DD HH:mm:ss」
         if (!/^\d{4}-\d{2}-\d{2}$/.test(pv)) continue;
         pbsHit++;
-        if (!pbsMap[pk] || pv > pbsMap[pk]) pbsMap[pk] = pv;
+        var cur = pbsMap[pk];
+        if (!cur) pbsMap[pk] = { min: pv, max: pv, n: 1 };
+        else {
+          cur.n++;
+          if (pv < cur.min) cur.min = pv;
+          if (pv > cur.max) cur.max = pv;
+        }
       }
     }
   } catch (e) { console.warn('⚠️ 读取 pbs_d1.xlsx 失败:', e.message); }
@@ -1083,30 +1107,34 @@ var PROD_OPS = { at: '', ai: {}, aiAt: '', rows: [] };
   records.forEach(function (r) {
     var d = dictInfo[r.no] || {};
     var info = mdByName[r.hosp];                   // 下单 AM = masterdata Sheet1 的 AM 列（用户指定口径，非 order dict）
-    var d1 = pbsMap[r.code] || '';
+    var dd = pbsMap[r.code] || null;
+    var d1 = dd ? dd.min : '';                     // 生产等待期：取**最早**的 D1（等待只算到首次开始生产）
+    var d1last = dd ? dd.max : '';                 // 产品生产周期：取**最晚**的 D1（只算最后一次实际生产）
     var resume = d.resume || '';
     // 生产等待期起点：有恢复生产时间优先用，否则退回仓库接收单采血时间
     var start = resume || r.receive || '';
-    // w=生产等待期（起点→D1） c=产品生产周期（D1→放行） rw=回输等待期（放行→回输结束）
+    // w=生产等待期（起点→最早D1） c=产品生产周期（最晚D1→放行） rw=回输等待期（放行→回输结束）
     var w = (d1 && start) ? days(start, d1) : null;
-    var c = (d1 && r.qa) ? days(d1, r.qa) : null;
+    var c = (d1last && r.qa) ? days(d1last, r.qa) : null;
     var rw = (r.qa && r.re) ? days(r.qa, r.re) : null;
     if (w !== null && w < 0) neg.w++;
     if (c !== null && c < 0) neg.c++;
     if (rw !== null && rw < 0) neg.r++;
-    if (d1 > at) at = d1;
+    if (d1last > at) at = d1last;
+    if (dd && dd.n > 1) pbsMulti++;
     PROD_OPS.rows.push({
       no: r.no, code: r.code || '',
       hosp: r.hosp, prov: r.prov || '', city: r.city || '',
       coe: coeCat(r.coe), ov: (info && info.reg && info.reg !== 'DOM') ? 1 : 0, am: (info ? info.am : '') || '',
-      od: r.od || '', d1: d1, receive: r.receive || '', resume: resume, qa: r.qa || '', re: r.re || '',
+      od: r.od || '', d1: d1, d1last: d1last, d1n: dd ? dd.n : 0,
+      receive: r.receive || '', resume: resume, qa: r.qa || '', re: r.re || '',
       w: w, c: c, rw: rw
     });
   });
   PROD_OPS.at = at;
   function cnt(f) { return PROD_OPS.rows.filter(f).length; }
   console.log('PROD_OPS: 订单=' + PROD_OPS.rows.length +
-    ' pbs_d1命中=' + pbsHit + ' 空码=' + pbsBlank +
+    ' pbs_d1命中=' + pbsHit + ' 空码=' + pbsBlank + ' 展开合并=' + pbsMerged + ' 多D1订单=' + pbsMulti +
     ' | 有D1=' + cnt(function (x) { return !!x.d1; }) +
     ' 有resume=' + cnt(function (x) { return !!x.resume; }) +
     ' 有qa=' + cnt(function (x) { return !!x.qa; }) +
