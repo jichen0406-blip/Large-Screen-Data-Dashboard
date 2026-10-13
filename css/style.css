@@ -354,7 +354,6 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .p4-col{ flex:1; min-width:0; }
 .sec-num{ margin-left:10px; color:#fff; font-size:12px; letter-spacing:1px; }
 .p4-grp{ margin-bottom:6px; }
-.p4-grp-tit{ font-size:13px; color:rgba(255,255,255,.8); margin-bottom:4px; padding-left:8px; border-left:3px solid #2f89cf; }
 /* page4 卡片：统一用 .kpi-grid / .kpi-card（见文件内「统一组件」），此处只保留本页排布 + 圆形图标 + 居中排版 */
 .p4-kpis .kpi-grid{ flex-wrap:nowrap; margin:0 0 8px; }
 .p4-kpis .kpi-card{ padding:5px 8px; text-align:center; }

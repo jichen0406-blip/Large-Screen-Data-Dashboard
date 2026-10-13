@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 	<style>
 	/* 单张全宽明细表，尽量占满可视高度 */
-	#ovtbl { min-height: 320px; }
+	/* 不加固定 min-height：id 级尺寸会压过 .page-fill 的 flex 链，缩放时表格会溢出容器下边框（§10.4） */
 	.ov-count { font-size: 13px; color: #daf9ff; margin-left: 6px; }
 	.ov-count b { color: #4fe3ff; font-size: 15px; }
 	.pt-time .cart-lights { margin-left: 0; }

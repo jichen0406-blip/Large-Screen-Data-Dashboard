@@ -9,11 +9,26 @@
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
 <script type="text/javascript" src="js/pt-common.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
 <script type="text/javascript" src="js/coe_common.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<style>
-	/* 本页列数较多，允许横向滚动 */
-	#coeTbl{ min-height: 320px; } /* 高度由 .page-fill 自适应 */
+	/* 2026-10-13：4 张卡片占半宽 + 右侧 YTD 贡献折线图；搜索控件并入时间控制行。
+	   注意：**不要给表格 id 设 min-height / max-height / height** —— id 级尺寸会压过 .page-fill
+	   的 flex 链（.pt-tables → .pt-tbl-row → .pt-tbl-col → .pt-tbl-wrap 逐级 flex），
+	   浏览器缩放或窗口变矮时可用高度小于该固定值，表格就会溢出容器下边框（§10.4）。 */
+	.coe-time{ flex-wrap: wrap; row-gap: 8px; margin-bottom: 0; }
+	.coe-time .coe-search{ margin: 0; flex: 0 0 auto; }
+	/* 模块纵向间距统一 12px：筛选→卡片区 / 卡片区→AI 总结 / AI 总结→表格；省下的高度全给表格 */
+	.coe-mid{ display: flex; gap: 12px; margin: 12px 0 0; flex: 0 0 auto; min-height: 150px; }
+	.coe-mid-l{ flex: 0 0 50%; min-width: 0; display: flex; flex-direction: column; }
+	.coe-mid-l .kpi-grid{ flex: 1; margin: 0; display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 10px; }
+	.coe-mid-l .kpi-card{ display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+	.coe-mid-r{ flex: 1 1 50%; min-width: 0; }
+	.coe-mid-r .sec-head{ margin-bottom: 4px; }
+	.coe-chart{ flex: 1; min-height: 120px; min-width: 0; }
+	#coeAI{ margin: 12px 0 0; }
+	.page-fill .pt-tables{ margin-top: 12px; margin-bottom: 12px; }
 	</style>
 	<script>window.PAGE_KEY='coe_rcoe';</script>
 	<script type="text/javascript" src="js/users.js"></script>
@@ -71,15 +86,23 @@
 		</script>
 	</div>
 	<div class="mainbox page-fill">
-		<div class="pt-time">
+		<div class="pt-time coe-time">
 			<span class="pt-time-tit">时间控制</span>
 			<select id="coeY" class="pt-sel" title="年份"></select>
 			<select id="coeM" class="pt-sel" title="月份"></select>
+			<div class="coe-search" id="coeSearch"></div>
 			<span class="pt-time-note">YTD = 当年 1 月～所选月累计；贡献比例分母为全盘（含 Others）</span>
 		</div>
-		<div class="kpi-grid" id="coeCards"></div>
+		<div class="coe-mid">
+			<div class="coe-mid-l">
+				<div class="kpi-grid" id="coeCards"></div>
+			</div>
+			<div class="pt-tbl-col coe-mid-r">
+				<div class="sec-head">YTD 贡献占比<span class="sub">横轴年份 · 各点均截至所选月</span></div>
+				<div class="coe-chart" id="coeContrib"></div>
+			</div>
+		</div>
 		<div class="insight-bar" id="coeAI"></div>
-		<div class="coe-search" id="coeSearch"></div>
 		<div class="pt-tables">
 			<div class="pt-tbl-row">
 				<div class="pt-tbl-col pt-tbl-full">

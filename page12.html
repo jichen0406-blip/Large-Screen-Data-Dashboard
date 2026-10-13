@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/style.css">
 	<style>
 	/* 本页字段较多，允许横向滚动 */
-	#abnTbl{ min-height: 320px; }
+	/* 不加固定 min-height：id 级尺寸会压过 .page-fill 的 flex 链，窗口变矮/缩放时表格会溢出容器下边框（§10.4） */
 	.abn-tbl{ min-width: 1800px; }
 	</style>
 	<script>window.PAGE_KEY='abn_nosample';</script>

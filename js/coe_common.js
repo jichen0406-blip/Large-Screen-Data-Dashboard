@@ -50,6 +50,75 @@
         kpi('回输贡献占比', pct2(t.r, t.allR), 'ok');
     }
 
+    // ── YTD 贡献折线图：横轴年份（按数据自适应），两条线 = 下单 / 回输贡献占比 ──
+    // 口径与卡片完全一致：该分类 YTD ÷ 全盘（含 Others）YTD；各年都截至同一个「所选月」
+    // 不受 AM/城市/医院搜索影响（搜索只过滤下方明细表）
+    var ORDER_C = (window.BOARD_SEMANTIC && BOARD_SEMANTIC.order) || '#2f89cf';
+    var REINF_C = (window.BOARD_SEMANTIC && BOARD_SEMANTIC.reinfuse) || '#62c98d';
+    var CONTRIB_YEARS = Object.keys(TOT).sort();
+    var contribChart = null;
+    function pct1(v) { return Math.round(v * 1000) / 10; }   // 0.1 位百分比
+    function renderContrib(m) {
+      var el = document.getElementById('coeContrib');
+      if (!el || !window.echarts || !CONTRIB_YEARS.length) return;
+      if (!contribChart) contribChart = echarts.init(el, null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
+      var oPct = [], rPct = [];
+      CONTRIB_YEARS.forEach(function (y) {
+        var t = catTotals(y, m);
+        // 该年截至所选月还没有任何数据（如 2023 年 1~6 月）→ 置 null 断线，不画成 0%
+        oPct.push(t.allO > 0 ? pct1(t.o / t.allO) : null);
+        rPct.push(t.allR > 0 ? pct1(t.r / t.allR) : null);
+      });
+      contribChart.setOption({
+        backgroundColor: 'transparent',
+        animationDuration: 350,
+        grid: { left: 6, right: 16, top: 32, bottom: 2, containLabel: true },
+        legend: {
+          left: 'center', top: 0, itemWidth: 14, itemHeight: 9, itemGap: 18,
+          textStyle: { color: '#cfe8ff', fontSize: 12 },
+          data: ['YTD下单贡献', 'YTD回输贡献']
+        },
+        tooltip: {
+          trigger: 'axis',
+          backgroundColor: 'rgba(2,24,61,.95)', borderColor: 'rgba(47,137,207,.8)',
+          textStyle: { color: '#daf9ff', fontSize: 12 },
+          formatter: function (ps) {
+            if (!ps || !ps.length) return '';
+            var h = '<b>' + ps[0].axisValue + '</b> 年 · YTD 1–' + m + ' 月累计';
+            ps.forEach(function (p) {
+              h += '<br/>' + p.marker + p.seriesName + '：<b>' +
+                ((p.value === null || p.value === undefined) ? '--' : p.value + '%') + '</b>';
+            });
+            return h;
+          }
+        },
+        xAxis: {
+          type: 'category', data: CONTRIB_YEARS, boundaryGap: true,
+          axisLine: { lineStyle: { color: 'rgba(112,187,252,.5)' } },
+          axisTick: { show: false },
+          axisLabel: { color: '#9fc6e8', fontSize: 11 }
+        },
+        yAxis: {
+          type: 'value', min: 0,
+          axisLine: { show: false }, axisTick: { show: false },
+          splitLine: { lineStyle: { color: 'rgba(112,187,252,.15)' } },
+          axisLabel: { color: '#9fc6e8', fontSize: 11, formatter: '{value}%' }
+        },
+        series: [
+          {
+            name: 'YTD下单贡献', type: 'line', data: oPct, connectNulls: false,
+            symbol: 'circle', symbolSize: 7,
+            lineStyle: { width: 2, color: ORDER_C }, itemStyle: { color: ORDER_C }
+          },
+          {
+            name: 'YTD回输贡献', type: 'line', data: rPct, connectNulls: false,
+            symbol: 'circle', symbolSize: 7,
+            lineStyle: { width: 2, color: REINF_C }, itemStyle: { color: REINF_C }
+          }
+        ]
+      }, true);
+    }
+
     // ── AI 总结（构建时快照，不随年月变化） ──
     function renderAI() {
       var el = document.getElementById('coeAI');
@@ -149,6 +218,7 @@
       var y = curY(), m = curM();
       if (!y) return;
       renderCards(y, m);
+      renderContrib(m);
       renderTable(y, m);
     }
 
@@ -156,5 +226,6 @@
     renderAI();
     renderSearch();
     render();
+    window.addEventListener('resize', function () { if (contribChart) contribChart.resize(); });
   });
 })();
