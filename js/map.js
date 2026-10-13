@@ -167,6 +167,8 @@ $(function () {
                     symbolSize: function (val) {
                         return Math.max(8, Math.min(38, Math.round(val[2] * 0.45)));
                     },
+                    // 高亮时（轮播 highlight / 鼠标悬停）不再额外画城市名：
+                    // 浮窗标题里已经有，且黄色标签会盖住圆点（label 继承系列色 = 黄色）
                     label: {
                         normal: {
                             formatter: '{b}',
@@ -174,7 +176,7 @@ $(function () {
                             show: false
                         },
                         emphasis: {
-                            show: true
+                            show: false
                         }
                     },
                     itemStyle: {
@@ -231,9 +233,12 @@ $(function () {
         }
         function startAuto() { if (panelOpen) return; paused = false; if (!playTimer) playTimer = setInterval(showNextCity, 5000); }
         function stopAuto() { paused = true; clearInterval(playTimer); playTimer = null; clearTimeout(tipTimer); hideCityTip(); }
-        // 登录后才启动地图轮播：未登录时只挂全局启动函数，由登录脚本密码校验通过后调用
+        // 登录后才启动地图轮播。账号系统升级后认证状态存在 sessionStorage['board_user']，
+        // 且 auth.js 在「新登录」与「已有会话」两条路径都会触发 boardlogin（同 nav.js / admin.js 的用法）；
+        // 原先判断的 board_authed 是单密码时代的旧键，升级后已无人写入 → 轮播自 2026-08-24 起静默失效
         window.startBoardAuto = function () { startAuto(); showNextCity(); };
-        if (sessionStorage.getItem('board_authed') === '1') window.startBoardAuto();
+        $(document).on('boardlogin', function () { startAuto(); showNextCity(); });
+        if (sessionStorage.getItem('board_user')) window.startBoardAuto();
         $('#map').on('mouseenter', stopAuto).on('mouseleave', startAuto);
         // 地图放大全屏时暂停轮播，关闭恢复
         $(document).on('boardfs', function (e, d) { if (d && d.active) stopAuto(); else startAuto(); });

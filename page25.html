@@ -37,6 +37,14 @@
 	/* 全屏：图表铺满整屏（fs.js 默认等比缩放，对宽扁图表几乎不变大） */
 	.fs-body .po-chart { position: static !important; left: auto !important; top: auto !important;
 		margin: 0 !important; width: 100% !important; height: 100% !important; }
+	/* 散点明细浮窗（复用 .menu-mask 外壳，标准见项目文档 §9.4） */
+	.po-pop-panel { width: min(1000px, 92vw); }
+	.po-pop-sub { font-size: 13px; font-weight: 400; color: rgba(255,255,255,.6); letter-spacing: 0; }
+	/* 上内边距必须为 0：否则 sticky 表头被钉在内边距之下，滚动时行内容会从缝隙里越过表头（§9.5） */
+	.po-pop-body { max-height: 60vh; overflow: auto; padding: 0 14px 12px; background: rgba(2,20,55,.6);
+		scrollbar-width: thin; scrollbar-color: rgba(112,187,252,.5) rgba(255,255,255,.06); }
+	.po-pop-empty { text-align: center; padding: 34px 0; color: rgba(255,255,255,.45); font-size: 13px; }
+	.po-pop-hint { font-size: 12px; color: rgba(255,255,255,.45); }
 	</style>
 	<script>window.PAGE_KEY='reinf_wait';</script>
 	<script type="text/javascript" src="js/users.js"></script>
@@ -134,7 +142,7 @@
 		<div class="pt-tables po-chart-area">
 			<div class="pt-tbl-row">
 				<div class="pt-tbl-col pt-tbl-full">
-					<div class="sec-head" data-xls="poScatter">回输等待期天数分布<span class="sub">圆点大小 = 该天数的单数 · 虚线 = 筛选后平均</span><button class="map-fs" type="button" data-fs="poScatter" data-title="回输等待期天数分布">⛶</button></div>
+					<div class="sec-head" data-xls="poScatter">回输等待期天数分布<span class="sub">圆点大小 = 该天数的单数 · 虚线 = 筛选后平均 · 点圆圈看明细</span><button class="map-fs" type="button" data-fs="poScatter" data-title="回输等待期天数分布">⛶</button></div>
 					<div class="po-chart" id="poScatter"></div>
 				</div>
 			</div>
@@ -144,6 +152,16 @@
 					<div class="po-chart" id="poBar"></div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<!-- 散点圆圈明细浮窗 -->
+	<div class="menu-mask" id="poPop" style="display:none;">
+		<div class="menu-panel po-pop-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit" id="poPopTit">--</span>
+				<button class="menu-close" id="poPopClose" type="button">×</button>
+			</div>
+			<div class="po-pop-body" id="poPopBody"></div>
 		</div>
 	</div>
 	<!-- 图表放大全屏 -->
@@ -178,7 +196,8 @@
 		metric: 'rw', timeField: 're',
 		metricLabel: '回输等待期',
 		xName: '回输等待期（天）', yName: '平均等待（天）',
-		exportBase: '回输等待期管理'
+		exportBase: '回输等待期管理',
+		popCols: [{"t":"合同号","v":"no"},{"t":"细胞追溯码","v":"code"},{"t":"医院名称","v":"hosp"},{"t":"患者姓名","v":"patient"},{"t":"生产质量放行时间","v":"qa"},{"t":"实际回输结束时间","v":"re"}]
 	};
 	</script>
 	<script type="text/javascript" src="js/prod_ops.js"></script>

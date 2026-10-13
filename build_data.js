@@ -1128,6 +1128,7 @@ var PROD_OPS = { at: '', ai: {}, aiAt: '', rows: [] };
       coe: coeCat(r.coe), ov: (info && info.reg && info.reg !== 'DOM') ? 1 : 0, am: (info ? info.am : '') || '',
       od: r.od || '', d1: d1, d1last: d1last, d1n: dd ? dd.n : 0,
       receive: r.receive || '', resume: resume, qa: r.qa || '', re: r.re || '',
+      patient: r.patient || '',
       w: w, c: c, rw: rw
     });
   });

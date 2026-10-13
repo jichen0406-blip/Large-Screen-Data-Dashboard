@@ -157,6 +157,47 @@
         }, true);
     }
 
+    // ── 散点点圆圈 → 该天数的订单明细浮窗（§9.4 浮层标准：× / 点遮罩 / Esc 三种关闭；内容随当前筛选） ──
+    function popCell(r, v) {
+        if (v === 'start') {          // 生产等待期的起点：恢复生产时间优先，否则仓库接收单采血时间
+            if (r.resume) return r.resume + '（恢复生产）';
+            if (r.receive) return r.receive + '（入库）';
+            return '--';
+        }
+        var x = r[v];
+        return (x === null || x === undefined || x === '') ? '--' : x;
+    }
+    function openPop(days) {
+        var cols = CFG.popCols || [];
+        var rows = visibleRows().filter(function (r) { return r[F] === days; });
+        rows.sort(function (a, b) { return a.no < b.no ? -1 : (a.no > b.no ? 1 : 0); });
+        $('#poPopTit').html(esc(CFG.metricLabel) + ' ' + days + ' 天' +
+            '<span class="po-pop-sub">　' + rows.length + ' 单 · 当前筛选口径</span>');
+        if (!rows.length) {
+            $('#poPopBody').html('<div class="po-pop-empty">该天数当前没有订单</div>');
+        } else {
+            var h = '<table class="pt"><thead><tr>' +
+                cols.map(function (c) { return '<th>' + esc(c.t) + '</th>'; }).join('') +
+                '</tr></thead><tbody>';
+            rows.forEach(function (r) {
+                h += '<tr>' + cols.map(function (c) {
+                    var lbl = (c.v === 'no' || c.v === 'code' || c.v === 'hosp') ? ' class="pt-lbl"' : '';
+                    return '<td' + lbl + '>' + esc(popCell(r, c.v)) + '</td>';
+                }).join('') + '</tr>';
+            });
+            $('#poPopBody').html(h + '</tbody></table>');
+        }
+        $('#poPop').show();
+    }
+    function closePop() { $('#poPop').hide(); }
+    scatterChart.on('click', function (p) {
+        if (!p || !p.value) return;
+        openPop(p.value[0]);
+    });
+    $('#poPopClose').on('click', closePop);
+    $('#poPop').on('click', function (e) { if (e.target === this) closePop(); });
+    $(document).on('keydown', function (e) { if (e.key === 'Escape') closePop(); });
+
     // ── 块4 柱状图：横轴=时间源所在月，纵轴=该月平均时长 ──
     var barChart = echarts.init(document.getElementById('poBar'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
     function renderBar(vis) {
@@ -208,6 +249,7 @@
 
     // ── 重绘 ──
     function redraw() {
+        closePop();                 // 筛选/口径变化后旧明细不再有效（§9.4：浮窗内容随筛选）
         var vis = visibleRows();
         $('#poCnt').html('参与统计 <b>' + vis.length + '</b> 单');
         renderScatter(vis);
