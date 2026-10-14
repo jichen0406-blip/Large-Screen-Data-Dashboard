@@ -40,6 +40,28 @@
 
     function defPage() { return localStorage.getItem('board_default') || 'index.html'; }
     function isKnown(id) { for (var i = 0; i < PAGES.length; i++) if (PAGES[i].id === id) return true; return false; }
+
+    // 表头当前页名芯片（§4.1 表头标准）：由 nav.js 统一注入到「数据更新时间」右侧，
+    // 各页无需单独写。查的是 allowedPages()（= BOARD_PAGES 按权限过滤 + 管理员才有的
+    // 「后台管理 P0」），所以后台管理页也有芯片；非看板页（如 mock）自动跳过。
+    function renderHeadPage() {
+        var host = document.querySelector('.head-left');
+        if (!host) return;
+        var old = host.querySelector('.head-page');
+        if (old) old.parentNode.removeChild(old);   // 可重复调用（登录后按权限重算）
+        var list = allowedPages();
+        if (!list.length) list = PAGES;
+        var pg = null;
+        for (var i = 0; i < list.length; i++) if (list[i].id === cur) { pg = list[i]; break; }
+        if (!pg) return;
+        var el = document.createElement('span');
+        el.className = 'head-page';
+        // 图标用该页在导航里的同一个 svg（NAV_ICONS），保证表头与左侧导航观感一致
+        el.innerHTML = (NAV_ICONS[pg.id] || '') + '<span class="hp-name">' + pg.name + '</span>';
+        var upd = host.querySelector('.update');
+        if (upd) host.insertBefore(el, upd.nextSibling);
+        else host.appendChild(el);
+    }
     // 按当前登录用户权限过滤可见页面（按 key 匹配）；administrator 额外显示「管理」入口
     function allowedPages() {
         var auth = window.BoardAuth;
@@ -168,8 +190,9 @@
     $(function () {
         renderSideNav();
         sizeSideNav();
-        // 登录成功后按权限重渲染导航（隐藏无权限页、管理员显示管理入口）
-        $(document).on('boardlogin', function () { renderSideNav(); sizeSideNav(); render(); });
+        renderHeadPage();
+        // 登录成功后按权限重渲染导航（隐藏无权限页、管理员显示管理入口）+ 重算表头页名芯片
+        $(document).on('boardlogin', function () { renderSideNav(); sizeSideNav(); renderHeadPage(); render(); });
         $(window).on('resize', sizeSideNav);
         // mainbox 尺寸变化（如表格异步填充、折叠展开）时同步导航栏高度
         var $mb = $('.mainbox');

@@ -31,6 +31,13 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 /* ── 表头左侧：数据更新时间 + 功能导航按钮 ── */
 .head .head-left{ position: absolute; left: -15px; line-height: 57.6px; transform: translateY(-40px); white-space: nowrap; padding-left: 5px; }
 .head .head-left .update{ position: static; left: auto; transform: none; line-height: 57.6px; display: inline; margin-right: 12px; }
+/* 表头当前页名（§4.1 表头标准）：ICON + 页面名，带渐变底色；由 nav.js 自动注入到「数据更新时间」右侧 */
+.head .head-left .head-page{ position: static; display: inline-flex; align-items: center; gap: 6px; vertical-align: middle;
+	line-height: 1.35; padding: 3px 12px 4px;
+	background: linear-gradient(180deg, rgba(47,137,207,.06), rgba(79,227,255,.20));
+	color: #daf9ff; font-size: 13px; letter-spacing: 1px; white-space: nowrap; }
+.head .head-left .head-page svg{ width: 15px; height: 15px; flex: none; fill: #4fe3ff; filter: drop-shadow(0 0 4px rgba(79,227,255,.65)); }
+.head .head-left .head-page .hp-name{ font-weight: 700; }
 .menu-btn{ height: 34px; padding: 0 16px 0 12px; background: linear-gradient(135deg, rgba(47,137,207,.28), rgba(0,180,255,.38)); border: 1px solid rgba(47,137,207,.9); border-radius: 17px; color: #e8fbff; font-size: 14px; letter-spacing: 1px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; vertical-align: middle; box-shadow: 0 0 12px rgba(47,137,207,.55), inset 0 0 8px rgba(47,137,207,.3); }
 .menu-btn i{ font-style: normal; font-size: 17px; line-height: 1; color: #4fe3ff; text-shadow: 0 0 8px rgba(79,227,255,.8); }
 .menu-btn:hover{ border-color: #4ba6e0; color: #fff; box-shadow: 0 0 20px rgba(79,227,255,.8); }
