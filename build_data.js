@@ -1531,6 +1531,178 @@ async function buildSummaries() {
   ABN_MGMT.summaryAt = DP;
 }
 
+// ── 8v. China Solution 业务页：海外收入统计（收入/成本按汇率折人民币）+ Target 目标 ──
+// 口径（2026-10-20 与用户确认）：
+//   ① 只取 大类 === 'China Solution'，业务类型 ∈ 慢病毒载体/一体化设备/试剂检测盒；抗体不纳入
+//   ② 收入/成本按「到款年份」的汇率折人民币再转万元；该年无汇率 → 回落最新年份
+//   ③ 一体化设备「收入是利润」：收入 = (金额 − 成本) × 汇率；成本为空则利润 = 金额
+//   ④ 国家为空的行照常保留（前端表格显示「未填国家」），只是不上地图
+var CS_TYPES = ['慢病毒载体', '一体化设备', '试剂检测盒'];
+var CS_GEO = {
+  '中国': 'China', '中国香港': '香港', '中国澳门': '澳门', '中国台湾': '台湾',
+  '新加坡': 'Singapore', '马来西亚': 'Malaysia', '泰国': 'Thailand', '越南': 'Vietnam',
+  '印尼': 'Indonesia', '印度尼西亚': 'Indonesia', '菲律宾': 'Philippines',
+  '沙特阿拉伯': 'Saudi Arabia', '沙特': 'Saudi Arabia', '阿联酋': 'United Arab Emirates',
+  '科威特': 'Kuwait', '卡塔尔': 'Qatar', '阿曼': 'Oman', '巴林': 'Bahrain',
+  '日本': 'Japan', '韩国': 'Korea', '印度': 'India', '巴基斯坦': 'Pakistan',
+  '俄罗斯': 'Russia', '乌克兰': 'Ukraine', '哈萨克斯坦': 'Kazakhstan',
+  '巴西': 'Brazil', '阿根廷': 'Argentina', '智利': 'Chile', '秘鲁': 'Peru',
+  '墨西哥': 'Mexico', '哥伦比亚': 'Colombia', '美国': 'United States',
+  '澳大利亚': 'Australia', '新西兰': 'New Zealand', '加拿大': 'Canada',
+  '英国': 'United Kingdom', '法国': 'France', '德国': 'Germany', '意大利': 'Italy',
+  '西班牙': 'Spain', '荷兰': 'Netherlands', '比利时': 'Belgium', '瑞士': 'Switzerland',
+  '瑞典': 'Sweden', '波兰': 'Poland', '土耳其': 'Turkey', '以色列': 'Israel',
+  '埃及': 'Egypt', '南非': 'South Africa', '尼日利亚': 'Nigeria', '肯尼亚': 'Kenya'
+};
+var CS_BIZ = { at: '', file: '', source: '', years: [], types: CS_TYPES, target: {}, rows: [] };
+try {
+  function csWan(v) { return v == null ? null : Math.round(v / 100) / 100; }   // 元 → 万元（2 位）
+  function csNum(v) {
+    if (v === '' || v == null) return null;
+    if (typeof v === 'number') return isFinite(v) ? v : null;
+    var s = String(v).replace(/[,，\s ]/g, '');
+    var n = parseFloat(s);
+    return isFinite(n) ? n : null;
+  }
+  // 到款日期是文本（2022.10.25 / 2026.4 / 2026-4-14）→ 'YYYY-MM'
+  function csYM(v) {
+    if (v == null || v === '') return '';
+    if (typeof v === 'number') {
+      var d0 = (typeof excelToDate === 'function') ? excelToDate(v) : null;
+      if (!d0) return '';
+      return String(d0.getFullYear()) + '-' + String(d0.getMonth() + 1).padStart(2, '0');
+    }
+    var m = String(v).trim().match(/(\d{4})\D+(\d{1,2})/);
+    if (!m) return '';
+    var mo = parseInt(m[2], 10);
+    if (!(mo >= 1 && mo <= 12)) return '';
+    return m[1] + '-' + String(mo).padStart(2, '0');
+  }
+
+  // ① 收入表：rawdata 下最新的「海外收入统计-*.xlsx」（排除 Excel 临时文件）
+  var csFile = fs.readdirSync(rawDir).filter(function (f) {
+    return f.indexOf('海外收入统计') === 0 && /\.xlsx$/i.test(f) && f.indexOf('~$') < 0;
+  }).sort().pop();
+  if (!csFile) throw new Error('rawdata 下未找到 海外收入统计-*.xlsx');
+  CS_BIZ.file = csFile;
+  CS_BIZ.source = '海外收入统计 ' + csFile;
+  CS_BIZ.at = fmtDT(fs.statSync(path.join(rawDir, csFile)).mtime);
+
+  // ② 汇率表：Year | 货币 | 货币E | 折算
+  var fxByYear = {}, fxYears = [];
+  var fxPath = path.join(rawDir, '货币折算.xlsx');
+  if (fs.existsSync(fxPath)) {
+    var fxAoa = XLSX.utils.sheet_to_json(XLSX.readFile(fxPath).Sheets['Sheet1'], { header: 1, defval: '' });
+    var fxH = (fxAoa[0] || []).map(function (h) { return String(h).replace(/[\r\n\s]/g, ''); });
+    var fY = fxH.indexOf('Year'), fC = fxH.indexOf('货币E'), fR = fxH.indexOf('折算');
+    for (var fi = 1; fi < fxAoa.length; fi++) {
+      var fr = fxAoa[fi] || [];
+      var fyear = String(fr[fY] || '').trim();
+      var fcode = String(fr[fC] || '').trim().toUpperCase();
+      var frate = parseFloat(String(fr[fR]).replace(/[,，\s]/g, ''));
+      if (!fyear || !fcode || !isFinite(frate)) continue;
+      (fxByYear[fyear] || (fxByYear[fyear] = {}))[fcode] = frate;
+      if (fxYears.indexOf(fyear) < 0) fxYears.push(fyear);
+    }
+    fxYears.sort();
+  } else {
+    console.warn('⚠️ 未找到 货币折算.xlsx，汇率全部按 1 处理');
+  }
+  var fxLatest = fxYears.length ? fxByYear[fxYears[fxYears.length - 1]] : {};
+  function fxRate(code, year) {
+    var t = fxByYear[year] || fxLatest;               // 该年无汇率 → 回落最新年份
+    if (t[code] != null) return t[code];
+    if (fxLatest[code] != null) return fxLatest[code];
+    console.warn('⚠️ 无 ' + code + ' 汇率，按 1 处理');
+    return 1;
+  }
+
+  // ③ 收入明细：DATA 表第 1 行是「填写说明」，真表头在第 2 行
+  var csAoa = XLSX.utils.sheet_to_json(XLSX.readFile(path.join(rawDir, csFile)).Sheets['DATA'], { header: 1, defval: '' });
+  var csHi = -1;
+  for (var hk = 0; hk < Math.min(6, csAoa.length); hk++) {
+    if (!csAoa[hk]) continue;
+    var hjoin = csAoa[hk].map(function (v) { return String(v).replace(/[\r\n\s]/g, ''); }).join('|');
+    if (hjoin.indexOf('到款日期') >= 0 && hjoin.indexOf('业务类型') >= 0 && hjoin.indexOf('大类') >= 0) { csHi = hk; break; }
+  }
+  if (csHi < 0) throw new Error('DATA 表未找到表头行（需含 到款日期/业务类型/大类）');
+  var csH = csAoa[csHi].map(function (h) { return String(h).replace(/[\r\n\s]/g, ''); });
+  var cI = {
+    date: csH.indexOf('到款日期'), cust: csH.indexOf('客户名称'), biz: csH.indexOf('业务类型'),
+    cat: csH.indexOf('大类'), amt: csH.indexOf('金额'), cur: csH.indexOf('货币'),
+    cost: csH.indexOf('成本金额'), ctry: csH.indexOf('国家')
+  };
+  var csSkip = { cat: 0, biz: 0, date: 0, amt: 0 };
+  for (var ci = csHi + 1; ci < csAoa.length; ci++) {
+    var cr = csAoa[ci];
+    if (!cr || !cr.length) continue;
+    if (String(cr[cI.cat] || '').trim() !== 'China Solution') { csSkip.cat++; continue; }
+    var cBiz = String(cr[cI.biz] || '').trim();
+    if (cBiz === '试剂盒检测') cBiz = '试剂检测盒';        // 与筛选器统一命名
+    if (CS_TYPES.indexOf(cBiz) < 0) { csSkip.biz++; continue; }   // 抗体等不纳入
+    var cYm = csYM(cr[cI.date]);
+    if (!cYm) { csSkip.date++; console.warn('⚠️ 到款日期无法解析，已跳过：' + cr[cI.date] + ' / ' + cr[cI.cust]); continue; }
+    var cAmt = csNum(cr[cI.amt]);
+    if (cAmt == null) { csSkip.amt++; console.warn('⚠️ 金额无法解析，已跳过：' + cr[cI.cust]); continue; }
+    var cCur = String(cr[cI.cur] || '').trim().toUpperCase() || 'CNY';
+    var cRate = fxRate(cCur, cYm.slice(0, 4));
+    var cRev = cAmt * cRate;
+    var cCostRaw = csNum(cr[cI.cost]);
+    var cCost = cCostRaw == null ? null : cCostRaw * cRate;
+    var isDev = (cBiz === '一体化设备');
+    // 一体化设备：收入是利润（金额 − 成本）
+    var cEff = isDev ? cRev - (cCost == null ? 0 : cCost) : cRev;
+    var cCtry = String(cr[cI.ctry] || '').trim();
+    CS_BIZ.rows.push({
+      ym: cYm, year: cYm.slice(0, 4), country: cCtry, geo: CS_GEO[cCtry] || '',
+      cust: String(cr[cI.cust] || '').replace(/[\r\n\t]/g, '').trim(),
+      type: cBiz, cur: cCur, rate: cRate,
+      amtWan: csWan(cAmt),                      // 原币金额（万元）
+      revWan: csWan(cRev),                      // 收入（人民币，万元）
+      costWan: csWan(cCost),                    // 成本（人民币，万元），空则 null
+      profit: isDev,
+      effWan: csWan(cEff)                       // 卡片 / 地图口径（设备类=利润）
+    });
+  }
+
+  // ④ 目标：Target.xlsx 的 'China solution' sheet（YM | 分类 | 目标（万元））
+  if (tgtWb && tgtWb.Sheets['China solution']) {
+    var tgAoa = XLSX.utils.sheet_to_json(tgtWb.Sheets['China solution'], { header: 1, defval: '' });
+    for (var ti = 0; ti < tgAoa.length; ti++) {
+      var tr = tgAoa[ti] || [];
+      var tYm = String(tr[0] || '').trim();
+      if (!/^\d{6}$/.test(tYm)) continue;
+      var tCat = String(tr[1] || '').trim();
+      if (tCat === '试剂盒检测') tCat = '试剂检测盒';
+      if (CS_TYPES.indexOf(tCat) < 0) continue;
+      var tVal = parseFloat(String(tr[2]).replace(/[,，\s]/g, ''));
+      if (!isFinite(tVal)) continue;
+      var tKey = tYm.slice(0, 4) + '-' + tYm.slice(4, 6);
+      (CS_BIZ.target[tKey] || (CS_BIZ.target[tKey] = {}))[tCat] = tVal;
+    }
+  } else {
+    console.warn('⚠️ Target.xlsx 缺少 China solution 工作表');
+  }
+
+  // ⑤ 排序 + 可选年份
+  CS_BIZ.rows.sort(function (a, b) { return a.ym < b.ym ? 1 : (a.ym > b.ym ? -1 : 0); });
+  var csYears = {};
+  CS_BIZ.rows.forEach(function (r) { csYears[r.year] = true; });
+  Object.keys(CS_BIZ.target).forEach(function (k) { csYears[k.slice(0, 4)] = true; });
+  CS_BIZ.years = Object.keys(csYears).sort();
+  console.log('China Solution 记录:', CS_BIZ.rows.length,
+    '| 目标月份:', Object.keys(CS_BIZ.target).length,
+    '| 汇率年份:', fxYears.join('/') || '(无)',
+    '| 跳过: 非CS ' + csSkip.cat + ' / 非本页业务 ' + csSkip.biz);
+  CS_BIZ.rows.forEach(function (r) {
+    console.log('   ' + r.ym + '  ' + r.type + '  ' + (r.country || '（未填国家）') + '  ' +
+      r.cust + '  ' + r.amtWan + '万' + r.cur + ' → 收入 ' + r.revWan + '万' +
+      (r.costWan == null ? '' : ' / 成本 ' + r.costWan + '万') + (r.profit ? '（设备，卡片取利润 ' + r.effWan + '万）' : ''));
+  });
+} catch (e) {
+  console.error('⚠️ 读取 China Solution 数据失败:', e.message);
+}
+
 // ── 10. 输出 js/data.js（页面直接 <script> 引用） ──
 (async function () {
 await buildSummaries();
@@ -1564,7 +1736,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     PROD_OPS: PROD_OPS,
     REGION3_AI: REGION3_AI,
     COE_PAGES: COE_PAGES,
-    CANCEL_MGMT: CANCEL_MGMT
+    CANCEL_MGMT: CANCEL_MGMT,
+    CS_BIZ: CS_BIZ
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');

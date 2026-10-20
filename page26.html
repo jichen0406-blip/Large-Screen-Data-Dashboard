@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>福可苏业绩总览 · China Solution 业务</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/world-data.js"></script>
+<script type="text/javascript" src="js/page26.js"></script>
+<link rel="stylesheet" href="css/style.css">
+	<style>
+	/* 卡片沿用统一组件 .kpi-grid / .kpi-card / .kc-label / .kc-val / .kc-sub（见 style.css「统一组件」） */
+	/* 不加固定 min-height：id 级尺寸会压过 .page-fill 的 flex 链，窗口变矮/缩放时表格会溢出容器下边框（§10.4） */
+	.cs-bar{ display:flex; align-items:center; gap:12px; margin:14px 0 0; padding:10px 16px; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.4), 0 0 14px rgba(47,137,207,.2); background: rgba(2,24,61,.3); flex-wrap:wrap; flex:0 0 auto; }
+	.cs-bar-tit{ font-size:15px; color:#daf9ff; letter-spacing:2px; white-space:nowrap; }
+	.cs-sep{ color:rgba(159,232,255,.75); font-size:14px; }
+	.cs-types{ display:flex; gap:8px; flex-wrap:wrap; }
+	.cs-chip{ height:30px; padding:0 14px; display:inline-flex; align-items:center; gap:6px; border:1px solid rgba(47,137,207,.55); border-radius:15px; background:rgba(2,24,61,.7); color:rgba(223,244,255,.8); font-size:13px; cursor:pointer; user-select:none; transition:.15s; }
+	.cs-chip:hover{ border-color:rgba(79,227,255,.9); color:#fff; }
+	.cs-chip.on{ background:linear-gradient(180deg, rgba(47,137,207,.95), rgba(24,88,150,.95)); border-color:#7ee3ff; color:#fff; box-shadow:0 0 12px rgba(47,137,207,.55); }
+	.cs-chip i{ width:8px; height:8px; border-radius:50%; display:inline-block; }
+	.cs-bar .pt-time-note{ margin-left:auto; font-size:12px; color:rgba(255,255,255,.5); white-space:nowrap; }
+	.cs-kpigrid{ flex:0 0 auto; margin:10px 0 0; flex-wrap:nowrap; }
+	.cs-kpigrid .kpi-card{ padding:9px 14px; }
+	.cs-kpigrid .kc-val{ font-size:26px; }
+	.cs-kpigrid .kc-val small{ font-size:13px; font-weight:400; color:rgba(159,232,255,.75); margin-left:3px; }
+	/* 主体：左地图 3 / 右表格 2 */
+	.cs-body{ flex:1; min-height:0; display:flex; gap:12px; margin:10px 0 10px; }
+	.cs-mapbox{ flex:3 1 0; min-width:0; min-height:0; display:flex; flex-direction:column; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 12px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:6px 12px 8px; }
+	.cs-tblbox{ flex:2 1 0; min-width:0; min-height:0; display:flex; flex-direction:column; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 10px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:8px 12px 10px; }
+	.cs-tblbox .pt-tbl-wrap{ flex:1; min-height:0; max-height:none; }
+	.cs-mapshell{ position:relative; flex:1; min-height:0; display:flex; flex-direction:column; }
+	.cs-map{ flex:1; min-height:0; }
+	/* 全屏：图表被移进 .fs-body 后失去 flex 上下文，必须显式给高度，否则 resize 成 0×0 一片空白 */
+	.fs-body .cs-map, .fs-body .cs-tblbox{ width:100%; height:100%; }
+	.fs-body .cs-tblbox{ display:flex; flex-direction:column; }
+	.fs-body .cs-tblbox .pt-tbl-wrap{ flex:1; min-height:0; }
+	.cs-legend{ position:absolute; right:10px; bottom:6px; display:flex; align-items:center; gap:8px; font-size:11px; color:rgba(223,244,255,.75); }
+	.cs-legend-bar{ width:84px; height:8px; border-radius:4px; background:linear-gradient(90deg,#123a63,#2f89cf,#7ee3ff); }
+	.cs-ico-legend{ position:absolute; left:8px; bottom:4px; display:flex; flex-wrap:wrap; gap:14px; font-size:11px; color:rgba(223,244,255,.88); }
+	.cs-ico-item{ display:inline-flex; align-items:center; gap:5px; white-space:nowrap; }
+	.cs-ico-item svg{ display:block; flex:none; }
+	.cs-ico-item em{ font-style:normal; letter-spacing:.5px; }
+	.cs-empty{ display:flex; align-items:center; justify-content:center; height:100%; color:rgba(255,255,255,.45); font-size:13px; letter-spacing:1px; }
+	.cs-num{ font-variant-numeric:tabular-nums; }
+	.cs-ctry-none{ color:rgba(255,255,255,.45); }
+	.cs-tag{ display:inline-block; padding:1px 7px; border-radius:9px; font-size:12px; white-space:nowrap; }
+	.cs-tblbox table.pt{ min-width:0; font-size:12px; }
+	.cs-tblbox table.pt th, .cs-tblbox table.pt td{ padding:3px 3px; }
+	.cs-cust{ display:block; max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+	</style>
+	<script>window.PAGE_KEY='cs_biz';</script>
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
+</head>
+<body>
+	<div class="login-mask" id="loginMask">
+	<div class="login-body">
+		<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
+		<div class="login-center">
+			<div class="login-shuzibg"></div>
+			<div class="login-title">
+				<img class="login-logo" src="images/logo-white.png" alt="驯鹿生物">
+				<p class="login-title-main">驯鹿生物大数据监控平台</p>
+				<p class="login-title-sub">登录页</p>
+			</div>
+			<div class="login-card">
+				<div class="login-welcome">欢迎登录系统!</div>
+				<div class="login-input">
+					<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+					<input type="text" id="loginUser" placeholder="请输入账号" value="administrator" autocomplete="off">
+				</div>
+				<div class="login-input">
+					<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+					<input type="password" id="loginPwd" placeholder="密码" autocomplete="off">
+				</div>
+				<label class="login-remember"><input type="checkbox" id="loginRemember"><span>记住密码</span></label>
+				<div class="login-err" id="loginErr"></div>
+				<div class="login-btn" id="loginBtn"><span>登 录</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="login-bolang"></div>
+</div><div class="head clearfix">
+		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
+		<div class="head-left">
+			<div class="update">数据更新时间 <span id="csUpd">--</span></div>
+			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
+		</div>
+		<div class="tm-wrap">
+			<div class="time" id="showTime">--</div>
+			<div class="weather" id="weather">上海 --</div>
+		</div>
+		<script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
+	</div>
+	<div class="mainbox page-fill">
+		<div class="cs-bar">
+			<span class="cs-bar-tit">时间区间</span>
+			<select id="csY1" class="pt-sel" title="起始年"></select>
+			<select id="csM1" class="pt-sel" title="起始月"></select>
+			<span class="cs-sep">~</span>
+			<select id="csY2" class="pt-sel" title="结束年"></select>
+			<select id="csM2" class="pt-sel" title="结束月"></select>
+			<span class="cs-sep">|</span>
+			<span class="cs-bar-tit">业务类型</span>
+			<div class="cs-types" id="csTypes"></div>
+			<span class="pt-time-note" id="csNote"></span>
+		</div>
+		<div class="kpi-grid cs-kpigrid" id="csKpi"></div>
+		<div class="cs-body">
+			<div class="cs-mapbox">
+				<div class="sec-head">全球分布 <span class="sub" id="csMapSub">颜色越亮 = 收入越高（万元）</span><button class="map-fs" type="button" data-fs="csMap" data-title="China Solution · 全球分布">⛶</button></div>
+				<div class="cs-mapshell">
+					<div class="cs-map" id="csMap"></div>
+					<div class="cs-ico-legend" id="csIcoLegend"></div>
+					<div class="cs-legend" id="csLegend"><span>低</span><span class="cs-legend-bar"></span><span>高</span><span id="csLegendMax"></span></div>
+				</div>
+			</div>
+			<div class="cs-tblbox">
+				<div class="sec-head" data-xls="csTbl" data-xls-title="China Solution 收入明细">收入明细 <span class="sub" id="csTblSub">单位万元 · 按到款月汇率折人民币</span><button class="map-fs" type="button" data-fs="csTbl" data-title="China Solution 收入明细">⛶</button></div>
+				<div class="pt-tbl-wrap" id="csTbl"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 地图放大全屏 -->
+	<div class="fs-mask" id="fsMask" style="display:none;">
+		<div class="fs-head">
+			<span class="fs-title" id="fsTitle">--</span>
+			<button class="fs-close" id="fsClose" type="button">×</button>
+		</div>
+		<div class="fs-body" id="fsBody"></div>
+	</div>
+	<!-- 网页导航菜单 -->
+	<div class="menu-mask" id="menuMask" style="display:none;">
+		<div class="menu-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit">网页导航</span>
+				<button class="menu-close" id="menuClose" type="button">×</button>
+			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
+		</div>
+	</div>
+
+	<script>
+	// 当天上海天气与温度
+	(function () {
+		var wEl = document.getElementById('weather');
+		var WSYM = {0:'☀',1:'☀',2:'⛅',3:'☁',45:'☁',48:'☁',51:'☔',53:'☔',55:'☔',56:'☔',57:'☔',61:'☔',63:'☔☔',65:'☔☔☔',66:'☔☔',67:'☔☔',71:'❄',73:'❄',75:'❄',77:'❄',80:'☔',81:'☔☔',82:'☔☔☔',85:'❄',86:'❄',95:'⛈',96:'⛈',99:'⛈'};
+		fetch('https://api.open-meteo.com/v1/forecast?latitude=31.23&longitude=121.47&current=temperature_2m,weather_code&timezone=Asia%2FShanghai')
+			.then(function (r) { return r.json(); })
+			.then(function (d) {
+				var t = Math.round(d.current.temperature_2m);
+				wEl.innerHTML = '上海 ' + (WSYM[d.current.weather_code] || '--') + ' ' + t + '℃';
+			})
+			.catch(function () { wEl.innerHTML = '上海 --'; });
+	})();
+	</script>
+	<script>
+	// 数据更新时间（取收入表文件时间）
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		var CS = B && B.CS_BIZ;
+		$('#csUpd').text((CS && CS.at) ? CS.at : ((B && B.UPDATED) ? B.UPDATED : '--'));
+	});
+	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
+	<script type="text/javascript" src="js/fs.js"></script>
+	<!-- 左侧悬浮导航栏 -->
+	<div class="side-nav" id="sideNav"></div>
+</body>
+</html>
