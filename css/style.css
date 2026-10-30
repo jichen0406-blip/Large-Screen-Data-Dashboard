@@ -891,3 +891,41 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 
 /* ── flow 页底部统计概览 ── */
 .flow-main .flow-sum{ height:88px; margin-top:8px; }
+
+/* ── 卡片行 + 右侧 AI 总结（取消订单两页） ── */
+.cancel-kpirow{ display:flex; gap:12px; align-items:stretch; }
+.cancel-kpirow .kpi-grid{ flex:0 0 60%; margin:0; }
+.cancel-kpirow .insight-bar{ flex:1; min-width:0; margin:0; }
+/* 全量取消订单：图表行压缩，给下方 AI 总结让空间 */
+.page-fill .pt-tables.ca-charts{ flex:0 0 58%; min-height:0; }
+
+/* 全量取消订单：AI 总结撑满图表下方剩余空间 */
+.page-fill > #caAI{ flex:1; min-height:0; }
+
+/* ── AI 总结固定高度：文本超出内部滚动，不再把区块撑高 ── */
+.ins-kpirow{ height:104px; }
+.nm-kpirow{ height:104px; }
+.pa-kpirow{ flex:0 0 104px; height:104px; }
+.cancel-kpirow{ height:104px; }
+.ins-kpirow .insight-bar, .nm-kpirow .insight-bar, .pa-kpirow .insight-bar, .cancel-kpirow .insight-bar{ height:100%; min-height:0; overflow:hidden; }
+.ins-kpirow .ib-txt, .nm-kpirow .ib-txt, .pa-kpirow .ib-txt, .cancel-kpirow .ib-txt{ overflow-y:auto; }
+/* 卡片再压窄 */
+.ins-kpirow .ins-kpigrid{ flex:0 0 55%; }
+.nm-kpirow .nm-kpigrid{ flex:0 0 55%; }
+.pa-kpirow .pa-cards{ flex:0 0 55%; }
+.cancel-kpirow .kpi-grid{ flex:0 0 55%; }
+
+/* ── AI 总结展开/收起 ── */
+.ins-kpirow, .nm-kpirow, .pa-kpirow, .cancel-kpirow{ position:relative; }
+.ib-toggle{ margin-left:auto; height:20px; padding:0 8px; border:1px solid rgba(47,137,207,.6); border-radius:4px; background:rgba(47,137,207,.18); color:#9fe8ff; font-size:11px; cursor:pointer; line-height:1; }
+.ib-toggle:hover{ background:rgba(47,137,207,.4); color:#fff; }
+.insight-bar.expanded{ position:absolute; right:0; top:0; width:45%; height:auto !important; max-height:320px; z-index:60; box-shadow:0 10px 34px rgba(0,0,0,.6); background:rgba(2,24,61,.98); }
+
+/* ── 全站等比缩小 20%（对 body 施加 zoom，布局按缩放后的宽度重新计算，不会溢出） ── */
+body{ zoom: .8; }
+
+/* 缩放后补偿视口高度，使内容仍铺满整屏 */
+body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
+
+/* 非 .page-fill 的主区（如全球注册进度 .p3-main）同样补偿高度 */
+.mainbox{ min-height: calc(125vh - 108px); }

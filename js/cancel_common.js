@@ -291,3 +291,23 @@
     else if (KEY === 'cancel_hosp') pageHosp();
   });
 })();
+
+// ── AI 总结（构建时生成，见 build_data.js buildSummaries） ──
+$(function () {
+    var el = document.getElementById('cyAI') || document.getElementById('caAI');
+    if (!el) return;
+    var s = (window.BOARD_DATA && window.BOARD_DATA.CANCEL_MGMT && window.BOARD_DATA.CANCEL_MGMT.ai || {})[(window.PAGE_KEY === 'cancel_all' ? 'all' : 'ytd')] || '';
+    if (!s) {
+        el.innerHTML = '<div class="ib-hd"><span class="ib-tag">AI 总结</span></div><div class="ib-txt ib-empty">暂无总结（构建时未生成）</div>';
+        return;
+    }
+    el.innerHTML = '<div class="ib-hd"><span class="ib-tag">AI 总结</span><span class="ib-time">数据截止 ' + (window.BOARD_DATA.CANCEL_MGMT.aiAt || '') + '</span><button class="ib-toggle" type="button">展开</button></div>' +
+        '<div class="ib-txt">' + String(s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</div>';
+});
+
+// 展开/收起 AI 总结
+$(document).on('click', '.ib-toggle', function () {
+    var bar = $(this).closest('.insight-bar');
+    bar.toggleClass('expanded');
+    $(this).text(bar.hasClass('expanded') ? '收起' : '展开');
+});

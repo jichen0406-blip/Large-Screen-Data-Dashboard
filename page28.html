@@ -19,7 +19,9 @@
 	.ins-bar-tit{ font-size:15px; color:#daf9ff; letter-spacing:2px; white-space:nowrap; }
 	.ins-sep{ color:rgba(159,232,255,.75); font-size:14px; }
 	.ins-bar .pt-time-note{ margin-left:auto; font-size:12px; color:rgba(255,255,255,.5); white-space:nowrap; }
-	.ins-kpigrid{ flex:0 0 auto; margin:10px 0 0; flex-wrap:nowrap; }
+	.ins-kpirow{ flex:0 0 auto; display:flex; gap:12px; margin:10px 0 0; align-items:stretch; }
+	.ins-kpirow .ins-kpigrid{ flex:0 0 60%; margin:0; }
+	.ins-kpirow .insight-bar{ flex:1; min-width:0; margin:0; }
 	.ins-kpigrid .kpi-card{ padding:9px 14px; }
 	.ins-kpigrid .kc-val{ font-size:26px; }
 	.ins-kpigrid .kc-val small{ font-size:13px; font-weight:400; color:rgba(159,232,255,.75); margin-left:3px; }
@@ -123,7 +125,10 @@
 			<select id="insAM" class="pt-sel" title="AM"></select>
 			<span class="pt-time-note">按「下单」口径归属月份与 AM</span>
 		</div>
-		<div class="kpi-grid ins-kpigrid" id="insKpi"></div>
+		<div class="ins-kpirow">
+			<div class="kpi-grid ins-kpigrid" id="insKpi"></div>
+			<div class="insight-bar" id="insAI"></div>
+		</div>
 		<div class="ins-body">
 		<div class="ins-mapbox">
 			<div class="sec-head">商保渗透地图 <span class="sub">圆大小 = 订单数</span><button class="map-fs" type="button" data-fs="insMap" data-title="商保渗透地图">⛶</button></div>

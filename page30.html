@@ -16,7 +16,9 @@
 	.pa-bar-tit{ font-size:15px; color:#daf9ff; letter-spacing:2px; white-space:nowrap; }
 	.pa-sep{ color:rgba(159,232,255,.75); font-size:14px; }
 	.pa-bar .pt-time-note{ margin-left:auto; font-size:12px; color:rgba(255,255,255,.5); white-space:nowrap; }
-	.pa-cards{ flex:1 1 0; min-height:0; display:flex; gap:12px; margin:10px 0 0; }
+	.pa-kpirow{ flex:1 1 0; min-height:0; display:flex; gap:12px; margin:10px 0 0; align-items:stretch; }
+	.pa-kpirow .pa-cards{ flex:0 0 55%; min-height:0; margin:0; display:flex; gap:12px; }
+	.pa-kpirow .insight-bar{ flex:1; min-width:0; margin:0; }
 	.pa-cards .kpi-card{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; justify-content:center; padding:10px 16px; }
 	.pa-cards .kc-label{ font-size:14px; }
 	.pa-cards .kc-val{ font-size:28px; }
@@ -105,7 +107,10 @@
 			<select id="paAM" class="pt-sel" title="AM"></select>
 			<span class="pt-time-note" id="paSub"></span>
 		</div>
-		<div class="pa-cards" id="paCards"></div>
+		<div class="pa-kpirow">
+			<div class="pa-cards" id="paCards"></div>
+			<div class="insight-bar" id="paAI"></div>
+		</div>
 		<div class="pa-charts">
 			<div class="pa-chartbox">
 				<div class="sec-head">PBMC 分选失败 <span class="sub">按月</span><button class="map-fs" type="button" data-fs="paChart0" data-title="PBMC 分选失败 · 月度趋势">⛶</button></div>

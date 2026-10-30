@@ -1526,6 +1526,143 @@ async function buildSummaries() {
     }
   }
   PROD_OPS.aiAt = DP;
+// 7) 惠民保 / 商保 / 名称统计（3 段）
+  var INS_ALL = INSURANCE, INS_TOT = 0;
+  Object.keys(INS_ALL.denom).forEach(function (k) { INS_TOT += INS_ALL.denom[k]; });
+  function insStatsText(fld, label) {
+    var n = 0, prov = {}, name = {};
+    INS_ALL.rows.forEach(function (r) {
+      if (!r[fld] || !r[fld].length) return;
+      n++;
+      prov[r.prov] = (prov[r.prov] || 0) + 1;
+      r[fld].forEach(function (x) { name[x] = (name[x] || 0) + 1; });
+    });
+    var topP = Object.keys(prov).sort(function (a, b) { return prov[b] - prov[a]; }).slice(0, 5);
+    var topN = Object.keys(name).sort(function (a, b) { return name[b] - name[a]; }).slice(0, 5);
+    return label + '：全量订单 ' + INS_TOT + ' 单，' + label + '订单 ' + n + ' 单，占比 ' +
+      (INS_TOT ? (n / INS_TOT * 100).toFixed(1) : '0') + '%。\n省份 Top5：' +
+      (topP.length ? topP.map(function (k) { return k + ' ' + prov[k] + ' 单'; }).join('、') : '无') +
+      '。\n' + label + '名称 Top5：' +
+      (topN.length ? topN.map(function (k) { return k + ' ' + name[k] + ' 单'; }).join('、') : '无') + '。';
+  }
+  function nameStatsText() {
+    var hb = {}, bx = {}, nh = 0, nb = 0;
+    INS_ALL.rows.forEach(function (r) {
+      if (r.hb && r.hb.length) { nh++; r.hb.forEach(function (x) { hb[x] = (hb[x] || 0) + 1; }); }
+      if (r.bx && r.bx.length) { nb++; r.bx.forEach(function (x) { bx[x] = (bx[x] || 0) + 1; }); }
+    });
+    var all = [];
+    Object.keys(hb).forEach(function (k) { all.push({ n: k, t: '惠民保', v: hb[k] }); });
+    Object.keys(bx).forEach(function (k) { all.push({ n: k, t: '商保', v: bx[k] }); });
+    all.sort(function (a, b) { return b.v - a.v; });
+    return '惠民保名称 ' + Object.keys(hb).length + ' 个（' + nh + ' 单），商保名称 ' +
+      Object.keys(bx).length + ' 个（' + nb + ' 单）。\nTop10：' +
+      all.slice(0, 10).map(function (x) { return x.t + '·' + x.n + ' ' + x.v + ' 单'; }).join('、') + '。';
+  }
+  var INS_AI = [
+    { k: 'ins_hb', name: '惠民保管理', text: insStatsText('hb', '惠民保'), fld: 'hb',
+      ask: '请写一段面向业务负责人的总结：说明惠民保的渗透水平（订单占比）、区域集中度与主力险种，并指出可提升的方向。控制在 120 字以内，不要罗列所有数字。' },
+    { k: 'ins_bx', name: '商保管理', text: insStatsText('bx', '商保'), fld: 'bx',
+      ask: '请写一段面向业务负责人的总结：说明商保的渗透水平（订单占比）、区域集中度与主力险种，并指出可提升的方向。控制在 120 字以内，不要罗列所有数字。' },
+    { k: 'ins_name', name: '惠民保 & 商保名称统计', text: nameStatsText(), fld: 'name',
+      ask: '请写一段面向业务负责人的总结：说明两类险种的名称集中度与长尾特征，指出值得加码或整合的名称，控制在 120 字以内。' }
+  ];
+  INSURANCE.ai = INSURANCE.ai || {};
+  for (var ia = 0; ia < INS_AI.length; ia++) {
+    var iaItem = INS_AI[ia];
+    var iaFp = 'v1_' + iaItem.k + '_' + INS_TOT + '_' + INSURANCE.rows.length;
+    if (cache[iaItem.k] && cache[iaItem.k].fp === iaFp && cache[iaItem.k].summary) {
+      INSURANCE.ai[iaItem.fld] = cache[iaItem.k].summary;
+      next[iaItem.k] = cache[iaItem.k];
+      console.log('AI 摘要（缓存命中）:', iaItem.name);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', iaItem.name, '…');
+      var iaS = await deepseekSummary(iaItem.name, iaItem.text, iaItem.ask);
+      INSURANCE.ai[iaItem.fld] = iaS;
+      next[iaItem.k] = { fp: iaFp, summary: iaS, at: DP };
+      console.log('  ✓ ' + iaS.slice(0, 40) + (iaS.length > 40 ? '…' : ''));
+    }
+  }
+  INSURANCE.aiAt = DP;
+
+  // 8) 生产异常订单（1 段）
+  (function () {
+    var c = [0, 0, 0], mon = {}, peakM = '', peakV = 0;
+    PROD_ABN.rows.forEach(function (r) {
+      var i = PROD_ABN.cats.indexOf(r.cat);
+      if (i >= 0) c[i]++;
+      mon[r.ym] = (mon[r.ym] || 0) + 1;
+    });
+    Object.keys(mon).forEach(function (k) { if (mon[k] > peakV) { peakV = mon[k]; peakM = k; } });
+    PROD_ABN.aiText = '生产异常累计 ' + PROD_ABN.rows.length + ' 条：' +
+      PROD_ABN.cats.map(function (x, i) { return x + ' ' + c[i] + ' 条'; }).join('、') +
+      '。峰值月份 ' + (peakM || '—') + '（' + peakV + ' 条）。涉及医院 ' +
+      Object.keys(PROD_ABN.rows.reduce(function (o, r) { o[r.hosp] = 1; return o; }, {})).length + ' 家。';
+  })();
+  var paFp = 'v1_pabn_' + PROD_ABN.rows.length;
+  if (cache['pabn_sum'] && cache['pabn_sum'].fp === paFp && cache['pabn_sum'].summary) {
+    PROD_ABN.ai = cache['pabn_sum'].summary;
+    next['pabn_sum'] = cache['pabn_sum'];
+    console.log('AI 摘要（缓存命中）: 生产异常订单管理');
+  } else {
+    console.log('AI 摘要（调用 DeepSeek）: 生产异常订单管理 …');
+    PROD_ABN.ai = await deepseekSummary('生产异常订单管理', PROD_ABN.aiText,
+      '请写一段面向业务负责人的总结：说明三类生产异常的规模与结构、最集中的类型与时段、涉及的机构面，以及改善重点。控制在 120 字以内，不要罗列所有数字。');
+    next['pabn_sum'] = { fp: paFp, summary: PROD_ABN.ai, at: DP };
+    console.log('  ✓ ' + PROD_ABN.ai.slice(0, 40) + (PROD_ABN.ai.length > 40 ? '…' : ''));
+  }
+  PROD_ABN.aiAt = DP;
+
+  // 9) 取消订单（YTD + 全量，2 段）
+  (function () {
+    var C = CANCEL_MGMT.cancels, st = {}, am = {}, yr = {};
+    C.forEach(function (c) {
+      st[c.stage] = (st[c.stage] || 0) + 1;
+      am[c.am || '未知'] = (am[c.am || '未知'] || 0) + 1;
+      yr[c.cm.slice(0, 4)] = (yr[c.cm.slice(0, 4)] || 0) + 1;
+    });
+    var stTop = Object.keys(st).sort(function (a, b) { return st[b] - st[a]; });
+    var amTop = Object.keys(am).sort(function (a, b) { return am[b] - am[a]; }).slice(0, 5);
+    CANCEL_MGMT.aiText = {
+      all: '全量取消 ' + C.length + ' 单，分布于 ' + Object.keys(yr).length + ' 个年份（' +
+        Object.keys(yr).sort().map(function (y) { return y + ' ' + yr[y] + ' 单'; }).join('、') + '）。\n阶段分布：' +
+        stTop.map(function (k) { return k + ' ' + st[k] + ' 单'; }).join('、') + '。\nAM Top5：' +
+        amTop.map(function (k) { return k + ' ' + am[k] + ' 单'; }).join('、') + '。',
+      ytd: (function () {
+        var y = String(DP.slice(0, 4));
+        var cy = C.filter(function (c) { return c.cm.slice(0, 4) === y; });
+        var s2 = {};
+        cy.forEach(function (c) { s2[c.stage] = (s2[c.stage] || 0) + 1; });
+        return y + ' 年取消 ' + cy.length + ' 单。阶段分布：' +
+          Object.keys(s2).sort(function (a, b) { return s2[b] - s2[a]; }).map(function (k) { return k + ' ' + s2[k] + ' 单'; }).join('、') + '。';
+      })()
+    };
+  })();
+  var caFpAll = 'v1_cancel_all_' + CANCEL_MGMT.cancels.length;
+  var caFpYtd = 'v1_cancel_ytd_' + CANCEL_MGMT.cancels.filter(function (c) { return c.cm.slice(0, 4) === String(DP.slice(0, 4)); }).length;
+  CANCEL_MGMT.ai = CANCEL_MGMT.ai || {};
+  var CA_AI = [
+    { k: 'cancel_ytd', fld: 'ytd', name: 'YTD取消订单管理', fp: caFpYtd, text: CANCEL_MGMT.aiText.ytd,
+      ask: '请写一段面向业务负责人的总结：说明当年取消规模与阶段结构，指出高成本取消（生产中、生产完成取消回输）占比与需重点跟进的环节，控制在 120 字以内。' },
+    { k: 'cancel_all', fld: 'all', name: '全量取消订单管理', fp: caFpAll, text: CANCEL_MGMT.aiText.all,
+      ask: '请写一段面向业务负责人的总结：说明历年取消的规模趋势与阶段性特征、最集中的取消阶段与辖区，并给出治理建议，控制在 120 字以内。' }
+  ];
+  for (var cb = 0; cb < CA_AI.length; cb++) {
+    var cbItem = CA_AI[cb];
+    if (cache[cbItem.k] && cache[cbItem.k].fp === cbItem.fp && cache[cbItem.k].summary) {
+      CANCEL_MGMT.ai[cbItem.fld] = cache[cbItem.k].summary;
+      next[cbItem.k] = cache[cbItem.k];
+      console.log('AI 摘要（缓存命中）:', cbItem.name);
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）:', cbItem.name, '…');
+      var cbS = await deepseekSummary(cbItem.name, cbItem.text, cbItem.ask);
+      CANCEL_MGMT.ai[cbItem.fld] = cbS;
+      next[cbItem.k] = { fp: cbItem.fp, summary: cbS, at: DP };
+      console.log('  ✓ ' + cbS.slice(0, 40) + (cbS.length > 40 ? '…' : ''));
+    }
+  }
+  CANCEL_MGMT.aiAt = DP;
+
 
   try { fs.writeFileSync(AI_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
   ABN_MGMT.summaryAt = DP;
