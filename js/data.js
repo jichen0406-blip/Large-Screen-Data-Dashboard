@@ -1,8 +1,8 @@
 /* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */
-/* 数据源: bs_order - 2026-10-29T171139.824.xlsx | 数据截止: 2026-10-29 */
+/* 数据源: bs_order - 2026-10-29T171139.824.xlsx | 数据截止: 2026-10-30 */
 var BOARD_DATA = {
   "UPDATED": "2026-10-29 17:11:48",
-  "DP": "2026-10-29",
+  "DP": "2026-10-30",
   "Y": "2026",
   "YTD": {
     "O": 364,
@@ -1228,39 +1228,14 @@ var BOARD_DATA = {
           "v": 1
         }
       ]
+    },
+    {
+      "date": "2026-10-30",
+      "orders": [],
+      "reinfusion": []
     }
   ],
   "DAILY30": [
-    {
-      "date": "2026-09-30",
-      "orders": [
-        {
-          "code": "9009126000304",
-          "hosp": "惠州市第一人民医院",
-          "name": "张*胜"
-        }
-      ],
-      "reinfusion": [
-        {
-          "code": "9009126000130",
-          "hosp": "中国医学科学院血液病医院",
-          "name": "王*凤"
-        }
-      ],
-      "apheresis": [],
-      "release": [
-        {
-          "code": "9009126000264",
-          "hosp": "中山大学孙逸仙纪念医院",
-          "name": "张*元"
-        },
-        {
-          "code": "9009126000263",
-          "hosp": "中国医学科学院血液病医院",
-          "name": "宋*龙"
-        }
-      ]
-    },
     {
       "date": "2026-10-01",
       "orders": [
@@ -2271,6 +2246,13 @@ var BOARD_DATA = {
           "name": "N*i A*g"
         }
       ],
+      "release": []
+    },
+    {
+      "date": "2026-10-30",
+      "orders": [],
+      "reinfusion": [],
+      "apheresis": [],
       "release": []
     }
   ],
@@ -41813,7 +41795,7 @@ var BOARD_DATA = {
   ],
   "ABN_MGMT": {
     "UPDATED": "2026-10-29 17:11:48",
-    "summaryAt": "2026-10-29",
+    "summaryAt": "2026-10-30",
     "pages": {
       "nosample": {
         "rows": [
@@ -41889,7 +41871,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2025-01-09",
-            "months": 21.9,
+            "months": 22,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41929,7 +41911,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2025-05-21",
-            "months": 17.5,
+            "months": 17.6,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41969,7 +41951,7 @@ var BOARD_DATA = {
             "hosp": "宁波大学附属人民医院",
             "status": "全流程",
             "baseTime": "2025-07-29",
-            "months": 15.2,
+            "months": 15.3,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41989,7 +41971,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2025-08-22",
-            "months": 14.4,
+            "months": 14.5,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -42029,7 +42011,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-01-01",
-            "months": 10,
+            "months": 10.1,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -42069,7 +42051,7 @@ var BOARD_DATA = {
             "hosp": "上海市曜影医院",
             "status": "全流程",
             "baseTime": "2026-01-22",
-            "months": 9.3,
+            "months": 9.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -42109,7 +42091,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-01-28",
-            "months": 9.1,
+            "months": 9.2,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -42149,7 +42131,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2026-03-05",
-            "months": 7.9,
+            "months": 8,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "",
@@ -42269,7 +42251,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-07-30",
-            "months": 3,
+            "months": 3.1,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -42289,7 +42271,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-07-30",
-            "months": 3,
+            "months": 3.1,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -42318,6 +42300,26 @@ var BOARD_DATA = {
             "planTime": "11月"
           },
           {
+            "code": "9009126000275",
+            "no": "XL26U26",
+            "ym": "2026-09",
+            "patient": "付*",
+            "area": "North",
+            "am": "龚卉",
+            "prov": "湖北省",
+            "city": "武汉市",
+            "hosp": "华中科技大学同济医学院附属协和医院",
+            "status": "冻存",
+            "baseTime": "2026-09-10",
+            "months": 1.7,
+            "planRe": "",
+            "bucket": "1~2 月",
+            "risk": "",
+            "reason": "肾功能不全，透析治疗评估后再择期单采。",
+            "action": "密切随访",
+            "planTime": "10月底"
+          },
+          {
             "code": "",
             "no": "XL26P09",
             "ym": "2026-09",
@@ -42336,26 +42338,6 @@ var BOARD_DATA = {
             "reason": "患者保险申请中",
             "action": "协助申请资料准备",
             "planTime": "10月"
-          },
-          {
-            "code": "9009126000275",
-            "no": "XL26U26",
-            "ym": "2026-09",
-            "patient": "付*",
-            "area": "North",
-            "am": "龚卉",
-            "prov": "湖北省",
-            "city": "武汉市",
-            "hosp": "华中科技大学同济医学院附属协和医院",
-            "status": "冻存",
-            "baseTime": "2026-09-10",
-            "months": 1.6,
-            "planRe": "",
-            "bucket": "1~2 月",
-            "risk": "",
-            "reason": "肾功能不全，透析治疗评估后再择期单采。",
-            "action": "密切随访",
-            "planTime": "10月底"
           },
           {
             "code": "9009126000290",
@@ -42409,7 +42391,7 @@ var BOARD_DATA = {
             "hosp": "中山大学肿瘤医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 1,
+            "months": 1.1,
             "planRe": "",
             "bucket": "1~2 月",
             "risk": "",
@@ -42549,7 +42531,7 @@ var BOARD_DATA = {
             "hosp": "首都医科大学附属北京朝阳医院",
             "status": "全流程",
             "baseTime": "2026-10-16",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42649,7 +42631,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-10-22",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42670,6 +42652,26 @@ var BOARD_DATA = {
             "status": "全流程",
             "baseTime": "2026-10-23",
             "months": 0.2,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000346",
+            "no": "XL26L66",
+            "ym": "2026-10",
+            "patient": "史*芝",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京协和医院",
+            "status": "全流程",
+            "baseTime": "2026-10-28",
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42758,18 +42760,38 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000346",
-            "no": "XL26L66",
+            "code": "",
+            "no": "XL26B37",
             "ym": "2026-10",
-            "patient": "史*芝",
+            "patient": "张*铭",
             "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京协和医院",
+            "am": "赵俊兴",
+            "prov": "江苏省",
+            "city": "苏州市",
+            "hosp": "苏州大学附属第一医院",
+            "status": "冻存",
+            "baseTime": "2026-10-28",
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "",
+            "no": "XL26Y65",
+            "ym": "2026-10",
+            "patient": "顾*新",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海市静安区闸北中心医院",
             "status": "全流程",
             "baseTime": "2026-10-28",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42799,46 +42821,6 @@ var BOARD_DATA = {
           },
           {
             "code": "",
-            "no": "XL26B37",
-            "ym": "2026-10",
-            "patient": "张*铭",
-            "area": "North",
-            "am": "赵俊兴",
-            "prov": "江苏省",
-            "city": "苏州市",
-            "hosp": "苏州大学附属第一医院",
-            "status": "冻存",
-            "baseTime": "2026-10-28",
-            "months": 0,
-            "planRe": "",
-            "bucket": "0~1 月",
-            "risk": "",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "",
-            "no": "XL26Y65",
-            "ym": "2026-10",
-            "patient": "顾*新",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海市静安区闸北中心医院",
-            "status": "全流程",
-            "baseTime": "2026-10-28",
-            "months": 0,
-            "planRe": "",
-            "bucket": "0~1 月",
-            "risk": "",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "",
             "no": "XL26X09",
             "ym": "2026-10",
             "patient": "M*. P*T J*G",
@@ -42858,7 +42840,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未单采共52单，0~1月占20单最集中，其次≥12月有10单、最久34.6月，属高风险需优先核查。19单未填原因，建议先补录原因，重点跟进超6月及冻存订单，明确回院与洗脱计划。"
+        "summary": "长期未单采共52单，0~1月20单最集中，≥12月10单最久达34.6月，属高风险需立即核查；19单未填原因。建议优先清理超12月订单，补录原因，按AM董硕等跟进，并关注冻存18单。"
       },
       "noproduction": {
         "rows": [
@@ -42954,7 +42936,7 @@ var BOARD_DATA = {
             "hosp": "山西白求恩医院",
             "status": "冻存",
             "baseTime": "2024-04-23",
-            "months": 30.6,
+            "months": 30.7,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -42974,7 +42956,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2024-05-08",
-            "months": 30.1,
+            "months": 30.2,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -43014,7 +42996,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2024-06-13",
-            "months": 28.9,
+            "months": 29,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -43094,7 +43076,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "冻存",
             "baseTime": "2024-08-15",
-            "months": 26.8,
+            "months": 26.9,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -43134,7 +43116,7 @@ var BOARD_DATA = {
             "hosp": "上海市同济医院",
             "status": "冻存",
             "baseTime": "2024-10-17",
-            "months": 24.7,
+            "months": 24.8,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -43154,7 +43136,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2024-11-13",
-            "months": 23.8,
+            "months": 23.9,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43174,7 +43156,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2024-12-13",
-            "months": 22.8,
+            "months": 22.9,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43254,7 +43236,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "冻存",
             "baseTime": "2025-03-07",
-            "months": 20,
+            "months": 20.1,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43274,7 +43256,7 @@ var BOARD_DATA = {
             "hosp": "南方医科大学珠江医院",
             "status": "冻存",
             "baseTime": "2025-03-22",
-            "months": 19.5,
+            "months": 19.6,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43314,7 +43296,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学总医院",
             "status": "冻存",
             "baseTime": "2025-04-03",
-            "months": 19.1,
+            "months": 19.2,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43374,7 +43356,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2025-05-27",
-            "months": 17.3,
+            "months": 17.4,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43394,7 +43376,7 @@ var BOARD_DATA = {
             "hosp": "吉林大学第一医院",
             "status": "冻存",
             "baseTime": "2025-06-14",
-            "months": 16.7,
+            "months": 16.8,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43454,7 +43436,7 @@ var BOARD_DATA = {
             "hosp": "上海长海医院",
             "status": "冻存",
             "baseTime": "2025-07-17",
-            "months": 15.6,
+            "months": 15.7,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43534,7 +43516,7 @@ var BOARD_DATA = {
             "hosp": "宁波大学附属人民医院",
             "status": "全流程",
             "baseTime": "2025-10-21",
-            "months": 12.4,
+            "months": 12.5,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43554,7 +43536,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "冻存",
             "baseTime": "2025-10-24",
-            "months": 12.3,
+            "months": 12.4,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43614,7 +43596,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "全流程",
             "baseTime": "2025-12-23",
-            "months": 10.3,
+            "months": 10.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43634,7 +43616,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "全流程",
             "baseTime": "2025-12-23",
-            "months": 10.3,
+            "months": 10.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43654,7 +43636,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学总医院",
             "status": "冻存",
             "baseTime": "2025-12-26",
-            "months": 10.2,
+            "months": 10.3,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43734,7 +43716,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "冻存",
             "baseTime": "2026-01-28",
-            "months": 9.1,
+            "months": 9.2,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43794,7 +43776,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-02-06",
-            "months": 8.8,
+            "months": 8.9,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43814,11 +43796,31 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2026-02-06",
-            "months": 8.8,
+            "months": 8.9,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
             "reason": "等待患者近期的疗效评估，MRD阳性即可转生产",
+            "action": "持续跟进",
+            "planTime": "待定"
+          },
+          {
+            "code": "9009126000048",
+            "no": "XL26L28",
+            "ym": "2026-02",
+            "patient": "张*勋",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京大学人民医院",
+            "status": "冻存",
+            "baseTime": "2026-02-27",
+            "months": 8.2,
+            "planRe": "",
+            "bucket": "6~12 月",
+            "risk": "未过期",
+            "reason": "9月中旬评估后病情稳定继续冻存",
             "action": "持续跟进",
             "planTime": "待定"
           },
@@ -43841,26 +43843,6 @@ var BOARD_DATA = {
             "reason": "现役公职人员，暂时不方便长期住院回输",
             "action": "已会诊半年内生产",
             "planTime": "10月"
-          },
-          {
-            "code": "9009126000048",
-            "no": "XL26L28",
-            "ym": "2026-02",
-            "patient": "张*勋",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京大学人民医院",
-            "status": "冻存",
-            "baseTime": "2026-02-27",
-            "months": 8.1,
-            "planRe": "",
-            "bucket": "6~12 月",
-            "risk": "未过期",
-            "reason": "9月中旬评估后病情稳定继续冻存",
-            "action": "持续跟进",
-            "planTime": "待定"
           },
           {
             "code": "9009126000055",
@@ -43914,7 +43896,7 @@ var BOARD_DATA = {
             "hosp": "中国医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-03-14",
-            "months": 7.6,
+            "months": 7.7,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43934,7 +43916,7 @@ var BOARD_DATA = {
             "hosp": "中国医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-03-14",
-            "months": 7.6,
+            "months": 7.7,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43974,7 +43956,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-04-10",
-            "months": 6.7,
+            "months": 6.8,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43994,7 +43976,7 @@ var BOARD_DATA = {
             "hosp": "中山大学肿瘤医院",
             "status": "冻存",
             "baseTime": "2026-04-16",
-            "months": 6.5,
+            "months": 6.6,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -44014,7 +43996,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-04-22",
-            "months": 6.3,
+            "months": 6.4,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -44134,7 +44116,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-06-09",
-            "months": 4.7,
+            "months": 4.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44154,7 +44136,7 @@ var BOARD_DATA = {
             "hosp": "山东大学齐鲁医院",
             "status": "冻存",
             "baseTime": "2026-06-09",
-            "months": 4.7,
+            "months": 4.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44203,6 +44185,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000199",
+            "no": "XL26H69",
+            "ym": "2026-07",
+            "patient": "刘*生",
+            "area": "North",
+            "am": "赵俊兴",
+            "prov": "江苏省",
+            "city": "南京市",
+            "hosp": "南京鼓楼医院",
+            "status": "冻存",
+            "baseTime": "2026-07-09",
+            "months": 3.8,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "线数未达到",
+            "action": "寻找复发证据",
+            "planTime": "11月份"
+          },
+          {
             "code": "9009126000200",
             "no": "XL26Q79",
             "ym": "2026-06",
@@ -44221,26 +44223,6 @@ var BOARD_DATA = {
             "reason": "长期冻存单",
             "action": "持续跟进",
             "planTime": "待定"
-          },
-          {
-            "code": "9009126000199",
-            "no": "XL26H69",
-            "ym": "2026-07",
-            "patient": "刘*生",
-            "area": "North",
-            "am": "赵俊兴",
-            "prov": "江苏省",
-            "city": "南京市",
-            "hosp": "南京鼓楼医院",
-            "status": "冻存",
-            "baseTime": "2026-07-09",
-            "months": 3.7,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "线数未达到",
-            "action": "寻找复发证据",
-            "planTime": "11月份"
           },
           {
             "code": "9009126000201",
@@ -44274,7 +44256,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-07-15",
-            "months": 3.5,
+            "months": 3.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44294,13 +44276,33 @@ var BOARD_DATA = {
             "hosp": "上海市曜影医院",
             "status": "全流程",
             "baseTime": "2026-07-21",
-            "months": 3.3,
+            "months": 3.4,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
             "reason": "",
             "action": "",
             "planTime": ""
+          },
+          {
+            "code": "9009126000213",
+            "no": "XL26Y33",
+            "ym": "2026-06",
+            "patient": "刘*均",
+            "area": "South",
+            "am": "李磊",
+            "prov": "四川省",
+            "city": "南充市",
+            "hosp": "川北医学院附属医院",
+            "status": "冻存",
+            "baseTime": "2026-07-24",
+            "months": 3.3,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "跟进采淋，但第一次没采够，等待二次采淋",
+            "action": "定期跟进",
+            "planTime": "10月"
           },
           {
             "code": "9009126000214",
@@ -44343,26 +44345,6 @@ var BOARD_DATA = {
             "planTime": "2026-10-12"
           },
           {
-            "code": "9009126000213",
-            "no": "XL26Y33",
-            "ym": "2026-06",
-            "patient": "刘*均",
-            "area": "South",
-            "am": "李磊",
-            "prov": "四川省",
-            "city": "南充市",
-            "hosp": "川北医学院附属医院",
-            "status": "冻存",
-            "baseTime": "2026-07-24",
-            "months": 3.2,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "跟进采淋，但第一次没采够，等待二次采淋",
-            "action": "定期跟进",
-            "planTime": "10月"
-          },
-          {
             "code": "9009126000220",
             "no": "XL26N75",
             "ym": "2026-07",
@@ -44374,7 +44356,7 @@ var BOARD_DATA = {
             "hosp": "华中科技大学同济医学院附属协和医院",
             "status": "全流程",
             "baseTime": "2026-07-30",
-            "months": 3,
+            "months": 3.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44443,6 +44425,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000227",
+            "no": "XL26N04",
+            "ym": "2026-07",
+            "patient": "林*桂",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海交通大学医学院附属瑞金医院",
+            "status": "全流程",
+            "baseTime": "2026-08-14",
+            "months": 2.6,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000231",
             "no": "XL26P38",
             "ym": "2026-08",
@@ -44463,26 +44465,6 @@ var BOARD_DATA = {
             "planTime": "2026-10-12"
           },
           {
-            "code": "9009126000227",
-            "no": "XL26N04",
-            "ym": "2026-07",
-            "patient": "林*桂",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海交通大学医学院附属瑞金医院",
-            "status": "全流程",
-            "baseTime": "2026-08-14",
-            "months": 2.5,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000230",
             "no": "XL26U19",
             "ym": "2026-08",
@@ -44494,7 +44476,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属协和医院",
             "status": "冻存",
             "baseTime": "2026-08-14",
-            "months": 2.5,
+            "months": 2.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44554,7 +44536,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-08-26",
-            "months": 2.1,
+            "months": 2.2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44574,7 +44556,7 @@ var BOARD_DATA = {
             "hosp": "上海长征医院",
             "status": "冻存",
             "baseTime": "2026-09-01",
-            "months": 1.9,
+            "months": 2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44603,6 +44585,26 @@ var BOARD_DATA = {
             "planTime": "10月"
           },
           {
+            "code": "9009126000271",
+            "no": "XL26R63",
+            "ym": "2026-09",
+            "patient": "韩*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "冻存",
+            "baseTime": "2026-09-10",
+            "months": 1.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "已制备",
+            "action": "及时跟进患者治疗情况",
+            "planTime": ""
+          },
+          {
             "code": "9009126000268",
             "no": "XL25E69",
             "ym": "2025-09",
@@ -44621,26 +44623,6 @@ var BOARD_DATA = {
             "reason": "疾病稳定",
             "action": "持续跟进",
             "planTime": "待定"
-          },
-          {
-            "code": "9009126000271",
-            "no": "XL26R63",
-            "ym": "2026-09",
-            "patient": "韩*",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "中国医学科学院血液病医院",
-            "status": "冻存",
-            "baseTime": "2026-09-10",
-            "months": 1.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "已制备",
-            "action": "及时跟进患者治疗情况",
-            "planTime": ""
           },
           {
             "code": "9009126000273",
@@ -44683,6 +44665,46 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000283",
+            "no": "XL26D15",
+            "ym": "2026-09",
+            "patient": "王*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "黑龙江省",
+            "city": "哈尔滨市",
+            "hosp": "哈尔滨市第一医院（哈尔滨血研所）",
+            "status": "冻存",
+            "baseTime": "2026-09-19",
+            "months": 1.4,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "等桥接",
+            "action": "及时跟进患者治疗情况",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000282",
+            "no": "XL26S43",
+            "ym": "2026-09",
+            "patient": "吴*",
+            "area": "South",
+            "am": "李磊",
+            "prov": "四川省",
+            "city": "成都市",
+            "hosp": "中国人民解放军西部战区总医院",
+            "status": "全流程",
+            "baseTime": "2026-09-19",
+            "months": 1.4,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000284",
             "no": "XL26X42",
             "ym": "2026-09",
@@ -44703,37 +44725,17 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000283",
-            "no": "XL26D15",
+            "code": "9009126000288",
+            "no": "XL26N35",
             "ym": "2026-09",
-            "patient": "王*",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "黑龙江省",
-            "city": "哈尔滨市",
-            "hosp": "哈尔滨市第一医院（哈尔滨血研所）",
-            "status": "冻存",
-            "baseTime": "2026-09-19",
-            "months": 1.3,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "等桥接",
-            "action": "及时跟进患者治疗情况",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000282",
-            "no": "XL26S43",
-            "ym": "2026-09",
-            "patient": "吴*",
+            "patient": "黄*彪",
             "area": "South",
-            "am": "李磊",
-            "prov": "四川省",
-            "city": "成都市",
-            "hosp": "中国人民解放军西部战区总医院",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "深圳市",
+            "hosp": "北京大学深圳医院",
             "status": "全流程",
-            "baseTime": "2026-09-19",
+            "baseTime": "2026-09-22",
             "months": 1.3,
             "planRe": "",
             "bucket": "0~6 月",
@@ -44755,26 +44757,6 @@ var BOARD_DATA = {
             "status": "冻存",
             "baseTime": "2026-09-20",
             "months": 1.3,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000288",
-            "no": "XL26N35",
-            "ym": "2026-09",
-            "patient": "黄*彪",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "深圳市",
-            "hosp": "北京大学深圳医院",
-            "status": "全流程",
-            "baseTime": "2026-09-22",
-            "months": 1.2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44883,6 +44865,26 @@ var BOARD_DATA = {
             "planTime": "12月"
           },
           {
+            "code": "9009126000303",
+            "no": "XL26G64",
+            "ym": "2026-10",
+            "patient": "张*秀",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海第四人民医院",
+            "status": "全流程",
+            "baseTime": "2026-10-04",
+            "months": 0.9,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000304",
             "no": "XL26J71",
             "ym": "2026-09",
@@ -44915,26 +44917,6 @@ var BOARD_DATA = {
             "status": "冻存",
             "baseTime": "2026-10-03",
             "months": 0.9,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000303",
-            "no": "XL26G64",
-            "ym": "2026-10",
-            "patient": "张*秀",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海第四人民医院",
-            "status": "全流程",
-            "baseTime": "2026-10-04",
-            "months": 0.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45023,6 +45005,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000310",
+            "no": "XL26L89",
+            "ym": "2026-10",
+            "patient": "郭*发",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "天津医科大学肿瘤医院（空港院区）",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000309",
             "no": "XL26L52",
             "ym": "2026-10",
@@ -45034,6 +45036,66 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000311",
+            "no": "XL26D08",
+            "ym": "2026-10",
+            "patient": "廖*香",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "惠州市",
+            "hosp": "惠州市第一人民医院",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000315",
+            "no": "XL26U04",
+            "ym": "2026-10",
+            "patient": "周*明",
+            "area": "North",
+            "am": "赵俊兴",
+            "prov": "山东省",
+            "city": "济南市",
+            "hosp": "山东大学齐鲁医院",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000314",
+            "no": "XL26D83",
+            "ym": "2026-10",
+            "patient": "刘*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
             "months": 0.7,
             "planRe": "",
             "bucket": "0~6 月",
@@ -45063,86 +45125,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000310",
-            "no": "XL26L89",
-            "ym": "2026-10",
-            "patient": "郭*发",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "天津医科大学肿瘤医院（空港院区）",
-            "status": "全流程",
-            "baseTime": "2026-10-10",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000311",
-            "no": "XL26D08",
-            "ym": "2026-10",
-            "patient": "廖*香",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "惠州市",
-            "hosp": "惠州市第一人民医院",
-            "status": "全流程",
-            "baseTime": "2026-10-10",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000315",
-            "no": "XL26U04",
-            "ym": "2026-10",
-            "patient": "周*明",
-            "area": "North",
-            "am": "赵俊兴",
-            "prov": "山东省",
-            "city": "济南市",
-            "hosp": "山东大学齐鲁医院",
-            "status": "全流程",
-            "baseTime": "2026-10-10",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000314",
-            "no": "XL26D83",
-            "ym": "2026-10",
-            "patient": "刘*",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "中国医学科学院血液病医院",
-            "status": "全流程",
-            "baseTime": "2026-10-10",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000316",
             "no": "XL26S60",
             "ym": "2026-10",
@@ -45154,7 +45136,7 @@ var BOARD_DATA = {
             "hosp": "湖州市第一人民医院（湖州师范大学附属第一医院）",
             "status": "冻存",
             "baseTime": "2026-10-13",
-            "months": 0.5,
+            "months": 0.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45243,6 +45225,46 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000320",
+            "no": "XL26R32",
+            "ym": "2026-10",
+            "patient": "王*",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "中国医学科学院血液病医院",
+            "status": "全流程",
+            "baseTime": "2026-10-16",
+            "months": 0.5,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000323",
+            "no": "XL26B15",
+            "ym": "2026-10",
+            "patient": "崔*有",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京协和医院",
+            "status": "全流程",
+            "baseTime": "2026-10-16",
+            "months": 0.5,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000321",
             "no": "XL26X59",
             "ym": "2026-10",
@@ -45263,37 +45285,17 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000320",
-            "no": "XL26R32",
+            "code": "9009126000326",
+            "no": "XL26P81",
             "ym": "2026-10",
-            "patient": "王*",
+            "patient": "高*堂",
             "area": "North",
             "am": "赵蕊",
             "prov": "天津市",
             "city": "天津市",
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
-            "baseTime": "2026-10-16",
-            "months": 0.4,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000323",
-            "no": "XL26B15",
-            "ym": "2026-10",
-            "patient": "崔*有",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京协和医院",
-            "status": "全流程",
-            "baseTime": "2026-10-16",
+            "baseTime": "2026-10-19",
             "months": 0.4,
             "planRe": "",
             "bucket": "0~6 月",
@@ -45355,26 +45357,6 @@ var BOARD_DATA = {
             "status": "全流程",
             "baseTime": "2026-10-17",
             "months": 0.4,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000326",
-            "no": "XL26P81",
-            "ym": "2026-10",
-            "patient": "高*堂",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "中国医学科学院血液病医院",
-            "status": "全流程",
-            "baseTime": "2026-10-19",
-            "months": 0.3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45563,26 +45545,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000341",
-            "no": "XL26E16",
-            "ym": "2026-10",
-            "patient": "邓*明",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "广州市",
-            "hosp": "南方医科大学珠江医院",
-            "status": "全流程",
-            "baseTime": "2026-10-29",
-            "months": 0,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000344",
             "no": "XL26E24",
             "ym": "2026-10",
@@ -45594,7 +45556,7 @@ var BOARD_DATA = {
             "hosp": "上海新道培血液病医院",
             "status": "冻存",
             "baseTime": "2026-10-28",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45614,6 +45576,26 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-10-28",
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000341",
+            "no": "XL26E16",
+            "ym": "2026-10",
+            "patient": "邓*明",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "广州市",
+            "hosp": "南方医科大学珠江医院",
+            "status": "全流程",
+            "baseTime": "2026-10-29",
             "months": 0,
             "planRe": "",
             "bucket": "0~6 月",
@@ -45623,7 +45605,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未转生产共138单，0~6月78单最集中，主因早线病人CR中及等进展等，53单未填原因。已过期35单、即将过期2单，需立即处理。建议优先清理过期及临期订单，补录未填原因，并重点跟进赵蕊、高威龙等AM名下订单。"
+        "summary": "长期未转生产共138单，0~6月78单最集中，主因早线病人CR中及等待进展等；已过期35单、即将过期2单，需立即处理。建议优先清理过期及即将过期订单，补录53单缺失原因，并重点跟进赵蕊、高威龙等AM名下订单。"
       },
       "noreinfusion": {
         "rows": [
@@ -45659,7 +45641,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-03-20",
-            "months": 7.4,
+            "months": 7.5,
             "planRe": "",
             "bucket": "≥6 月",
             "risk": "已过期",
@@ -45679,10 +45661,10 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-06-03",
-            "months": 4.9,
+            "months": 5,
             "planRe": "",
             "bucket": "3~6 月",
-            "risk": "未过期",
+            "risk": "即将过期",
             "reason": "已死亡",
             "action": "",
             "planTime": "0"
@@ -45739,7 +45721,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-06-30",
-            "months": 4,
+            "months": 4.1,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -45839,7 +45821,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属邵逸夫医院",
             "status": "全流程",
             "baseTime": "2026-09-01",
-            "months": 1.9,
+            "months": 2,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -45859,7 +45841,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-04",
-            "months": 1.8,
+            "months": 1.9,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -45879,7 +45861,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-07",
-            "months": 1.7,
+            "months": 1.8,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -45899,7 +45881,7 @@ var BOARD_DATA = {
             "hosp": "中山大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-09-07",
-            "months": 1.7,
+            "months": 1.8,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46019,7 +46001,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 1,
+            "months": 1.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46039,7 +46021,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-28",
-            "months": 1,
+            "months": 1.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46159,6 +46141,26 @@ var BOARD_DATA = {
             "hosp": "中山大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-10-10",
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000262",
+            "no": "XL26J55",
+            "ym": "2026-09",
+            "patient": "张*",
+            "area": "North",
+            "am": "赵俊兴",
+            "prov": "江苏省",
+            "city": "苏州市",
+            "hosp": "苏州大学附属第一医院",
+            "status": "全流程",
+            "baseTime": "2026-10-13",
             "months": 0.6,
             "planRe": "",
             "bucket": "0~3 月",
@@ -46188,26 +46190,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000262",
-            "no": "XL26J55",
-            "ym": "2026-09",
-            "patient": "张*",
-            "area": "North",
-            "am": "赵俊兴",
-            "prov": "江苏省",
-            "city": "苏州市",
-            "hosp": "苏州大学附属第一医院",
-            "status": "全流程",
-            "baseTime": "2026-10-13",
-            "months": 0.5,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000281",
             "no": "XL26X19",
             "ym": "2026-09",
@@ -46219,8 +46201,28 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-10-16",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "2026-11-02",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000285",
+            "no": "XL26M27",
+            "ym": "2026-09",
+            "patient": "吴*锐",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "深圳市",
+            "hosp": "北京大学深圳医院",
+            "status": "全流程",
+            "baseTime": "2026-10-19",
+            "months": 0.4,
+            "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "",
@@ -46248,26 +46250,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000285",
-            "no": "XL26M27",
-            "ym": "2026-09",
-            "patient": "吴*锐",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "深圳市",
-            "hosp": "北京大学深圳医院",
-            "status": "全流程",
-            "baseTime": "2026-10-19",
-            "months": 0.3,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000185",
             "no": "XL26V73",
             "ym": "2026-06",
@@ -46279,7 +46261,7 @@ var BOARD_DATA = {
             "hosp": "南方医科大学南方医院",
             "status": "全流程",
             "baseTime": "2026-10-22",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "2026-10-31",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46299,7 +46281,27 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2026-10-22",
-            "months": 0.2,
+            "months": 0.3,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000255",
+            "no": "XL26Q35",
+            "ym": "2026-08",
+            "patient": "陈*敏",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "河北省",
+            "city": "石家庄市",
+            "hosp": "河北医科大学第二医院（河北省第二医院）",
+            "status": "全流程",
+            "baseTime": "2026-10-28",
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46368,26 +46370,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000255",
-            "no": "XL26Q35",
-            "ym": "2026-08",
-            "patient": "陈*敏",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "河北省",
-            "city": "石家庄市",
-            "hosp": "河北医科大学第二医院（河北省第二医院）",
-            "status": "全流程",
-            "baseTime": "2026-10-28",
-            "months": 0,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000299",
             "no": "XL26W29",
             "ym": "2026-09",
@@ -46399,7 +46381,7 @@ var BOARD_DATA = {
             "hosp": "空军军医大学西京医院",
             "status": "全流程",
             "baseTime": "2026-10-28",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46408,7 +46390,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未回输订单共39单，30单集中在0~3月，3~6月7单，≥6月仅2单但最久达12.8月。已过期2单需立即处理，另有临近过期订单。17单未填原因，建议优先清理过期及即将过期单，补录原因，并重点跟进赵蕊、兰明金名下订单。"
+        "summary": "长期未回输订单共39单，30单集中在0~3月，主因疗后回输及桥接治疗，17单未填原因。已过期2单、即将过期1单需立即处理，建议优先核实高风险订单并补齐原因、加强AM跟进。"
       }
     }
   },
@@ -46419,7 +46401,7 @@ var BOARD_DATA = {
       "prod_cycle": "生产周期整体约18天，几乎全部集中在14~30天档，2023年略高，医院类型差异不大；SG_AM、HK_AM1及赵俊兴耗时偏高但样本少。建议聚焦超30天个案复盘，核查长尾原因，并对高耗时AM加强跟进与流程优化。",
       "reinf_wait": "回输等待期全量平均32.5天、中位数21天，14~30天档最集中。耗时逐年上升，2026年达38天；SCOE医院及赵蕊、董硕等AM明显偏长。建议重点跟进SCOE与高耗时AM，排查排期与协调瓶颈，设定分档时限目标并月度监控。"
     },
-    "aiAt": "2026-10-29",
+    "aiAt": "2026-10-30",
     "rows": [
       {
         "no": "XL23A97",
@@ -71839,7 +71821,7 @@ var BOARD_DATA = {
       "summary": "1–10月21省累计下单355、回输219，覆盖医院87家，回输率约62%。头部集中度高，天津、北京、上海、广东下单合计227单、占64%，回输156单、占71%。北京、广东同比分别增30、21单，增长突出；浙江、吉林各降6单需关注。建议巩固头部省份，复盘浙江、吉林下滑原因并制定提升措施。"
     },
     "hospital": {
-      "summary": "2026年1–10月共覆盖90家国内医院，其中SCOE 4家、COE 12家、RCOE 14家、Others 60家。中国医学科学院血液病医院下单62、回输48，明显领先。39家医院超90天未下单，最久达364天，建议优先排查原因并安排跟进。"
+      "summary": "2026年1–10月国内有下单或回输医院90家，SCOE 4家、COE 12家、RCOE 14家、Others 60家。中国医学科学院血液病医院以下单62、回输48居首，头部集中明显。39家医院超90天未下单，最久365天，建议分层跟进：头部稳供，空窗医院排查原因并激活。"
     }
   },
   "COE_PAGES": {
@@ -79276,6 +79258,6269 @@ var BOARD_DATA = {
         "costWan": null,
         "profit": false,
         "effWan": 10
+      }
+    ]
+  },
+  "INSURANCE": {
+    "at": "2026-10-30 14:44:12",
+    "months": [
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10"
+    ],
+    "denom": {
+      "2023-07|兰明金|广东省|深圳市": 1,
+      "2023-07|董硕|浙江省|宁波市": 1,
+      "2023-07|赵俊兴|山东省|济南市": 1,
+      "2023-07|赵俊兴|江苏省|苏州市": 2,
+      "2023-07|兰明金|广东省|广州市": 1,
+      "2023-07|董硕|浙江省|杭州市": 2,
+      "2023-07|高威龙|上海市|上海市": 2,
+      "2023-07|崔珺|北京市|北京市": 3,
+      "2023-07|赵蕊|天津市|天津市": 5,
+      "2023-08|高威龙|上海市|上海市": 3,
+      "2023-08|崔珺|北京市|北京市": 1,
+      "2023-08|兰明金|广东省|广州市": 1,
+      "2023-08|董硕|浙江省|杭州市": 1,
+      "2023-08|龚卉|湖北省|武汉市": 1,
+      "2023-08|赵蕊|天津市|天津市": 1,
+      "2023-08|赵蕊|辽宁省|沈阳市": 1,
+      "2023-09|兰明金|广东省|广州市": 1,
+      "2023-09|董硕|浙江省|杭州市": 1,
+      "2023-09|高威龙|上海市|上海市": 3,
+      "2023-09|兰明金|广东省|深圳市": 1,
+      "2023-09|崔珺|北京市|北京市": 3,
+      "2023-09|赵蕊|天津市|天津市": 3,
+      "2023-09|兰明金|广西壮族自治区|南宁市": 1,
+      "2023-09|赵俊兴|江苏省|苏州市": 2,
+      "2023-09|龚卉|湖北省|武汉市": 1,
+      "2023-09|赵蕊|山西省|太原市": 1,
+      "2023-09|龚卉|河南省|郑州市": 1,
+      "2023-10|赵俊兴|江苏省|南京市": 1,
+      "2023-10|高威龙|上海市|上海市": 2,
+      "2023-10|崔珺|北京市|北京市": 3,
+      "2023-10|兰明金|广东省|广州市": 2,
+      "2023-10|赵蕊|天津市|天津市": 2,
+      "2023-10|董硕|浙江省|杭州市": 1,
+      "2023-10|李磊|重庆市|重庆市": 1,
+      "2023-11|龚卉|陕西省|西安市": 2,
+      "2023-10|龚卉|陕西省|西安市": 1,
+      "2023-11|董硕|浙江省|杭州市": 7,
+      "2023-11|崔珺|北京市|北京市": 3,
+      "2023-11|高威龙|上海市|上海市": 7,
+      "2023-11|兰明金|广东省|广州市": 2,
+      "2023-11|董硕|浙江省|宁波市": 3,
+      "2023-11|赵蕊|天津市|天津市": 4,
+      "2023-11|兰明金|广东省|湛江市": 1,
+      "2023-11|龚卉|湖北省|武汉市": 1,
+      "2023-11|赵蕊|辽宁省|沈阳市": 1,
+      "2023-11|赵俊兴|江苏省|南京市": 1,
+      "2023-12|高威龙|上海市|上海市": 5,
+      "2023-12|董硕|浙江省|杭州市": 3,
+      "2023-12|李磊|四川省|成都市": 2,
+      "2023-12|李磊|重庆市|重庆市": 2,
+      "2023-12|赵俊兴|山东省|济南市": 1,
+      "2023-12|兰明金|广东省|广州市": 1,
+      "2023-12|赵蕊|天津市|天津市": 4,
+      "2023-12|董硕|浙江省|温州市": 1,
+      "2023-12|赵俊兴|安徽省|合肥市": 1,
+      "2023-12|赵蕊|江苏省|无锡市": 1,
+      "2023-12|龚卉|湖南省|长沙市": 1,
+      "2023-12|赵俊兴|江苏省|南京市": 1,
+      "2023-12|赵俊兴|江苏省|苏州市": 1,
+      "2023-12|崔珺|北京市|北京市": 5,
+      "2023-12|龚卉|湖北省|荆州市": 1,
+      "2023-12|董硕|浙江省|宁波市": 1,
+      "2023-12|赵蕊|辽宁省|沈阳市": 1,
+      "2023-12|龚卉|河南省|郑州市": 1,
+      "2023-12|兰明金|广东省|深圳市": 1,
+      "2024-01|崔珺|北京市|北京市": 4,
+      "2024-01|赵蕊|天津市|天津市": 4,
+      "2024-01|兰明金|广东省|广州市": 5,
+      "2024-01|赵俊兴|江苏省|苏州市": 2,
+      "2024-01|赵蕊|辽宁省|沈阳市": 1,
+      "2024-01|龚卉|湖北省|武汉市": 1,
+      "2024-01|李磊|四川省|成都市": 1,
+      "2024-01|高威龙|上海市|上海市": 1,
+      "2024-01|董硕|江西省|南昌市": 1,
+      "2024-01|兰明金|广东省|深圳市": 2,
+      "2024-01|董硕|浙江省|杭州市": 2,
+      "2024-01|赵俊兴|江苏省|南京市": 1,
+      "2024-02|崔珺|北京市|北京市": 2,
+      "2024-02|龚卉|陕西省|西安市": 2,
+      "2024-02|赵蕊|天津市|天津市": 3,
+      "2024-02|赵俊兴|江苏省|苏州市": 1,
+      "2024-02|高威龙|上海市|上海市": 2,
+      "2024-02|龚卉|河南省|洛阳市": 1,
+      "2024-03|赵俊兴|江苏省|南京市": 1,
+      "2024-03|赵蕊|天津市|天津市": 2,
+      "2024-03|董硕|浙江省|宁波市": 2,
+      "2024-03|董硕|浙江省|杭州市": 1,
+      "2024-03|董硕|福建省|厦门市": 1,
+      "2024-03|赵俊兴|江苏省|苏州市": 1,
+      "2024-03|兰明金|广东省|广州市": 4,
+      "2024-03|崔珺|北京市|北京市": 4,
+      "2024-03|李磊|四川省|成都市": 2,
+      "2024-03|赵蕊|辽宁省|沈阳市": 1,
+      "2024-03|兰明金|广东省|深圳市": 1,
+      "2024-03|兰明金|广西壮族自治区|南宁市": 1,
+      "2024-03|李磊|重庆市|重庆市": 1,
+      "2024-04|赵蕊|天津市|天津市": 10,
+      "2024-04|兰明金|广东省|广州市": 5,
+      "2024-04|龚卉|湖北省|武汉市": 1,
+      "2024-04|高威龙|上海市|上海市": 2,
+      "2024-04|董硕|浙江省|杭州市": 2,
+      "2024-04|赵蕊|江苏省|无锡市": 1,
+      "2024-04|崔珺|北京市|北京市": 2,
+      "2024-04|兰明金|广东省|深圳市": 1,
+      "2024-05|赵蕊|天津市|天津市": 6,
+      "2024-05|董硕|福建省|厦门市": 1,
+      "2024-05|崔珺|北京市|北京市": 4,
+      "2024-05|董硕|浙江省|杭州市": 4,
+      "2024-05|崔珺|山东省|青岛市": 1,
+      "2024-05|龚卉|湖南省|长沙市": 1,
+      "2024-05|兰明金|广东省|广州市": 4,
+      "2024-05|高威龙|上海市|上海市": 2,
+      "2024-05|赵俊兴|江苏省|南京市": 1,
+      "2024-05|李磊|四川省|成都市": 2,
+      "2024-05|董硕|福建省|福州市": 1,
+      "2024-05|赵蕊|辽宁省|沈阳市": 1,
+      "2024-05|龚卉|湖北省|武汉市": 1,
+      "2024-05|赵俊兴|安徽省|合肥市": 1,
+      "2024-06|赵俊兴|江苏省|苏州市": 2,
+      "2024-06|赵蕊|天津市|天津市": 5,
+      "2024-06|赵蕊|辽宁省|大连市": 1,
+      "2024-06|赵俊兴|江苏省|南京市": 2,
+      "2024-06|兰明金|广东省|深圳市": 2,
+      "2024-06|董硕|浙江省|杭州市": 2,
+      "2024-06|龚卉|湖北省|武汉市": 2,
+      "2024-06|崔珺|北京市|北京市": 4,
+      "2024-06|高威龙|上海市|上海市": 2,
+      "2024-06|兰明金|广东省|惠州市": 1,
+      "2024-06|董硕|浙江省|嘉兴市": 1,
+      "2024-06|赵蕊|黑龙江省|哈尔滨市": 1,
+      "2024-06|兰明金|广西壮族自治区|南宁市": 1,
+      "2024-06|崔珺|山东省|青岛市": 1,
+      "2024-06|兰明金|广东省|广州市": 2,
+      "2024-06|龚卉|陕西省|西安市": 1,
+      "2024-06|赵俊兴|江苏省|南通市": 1,
+      "2024-07|董硕|浙江省|杭州市": 2,
+      "2024-07|赵蕊|天津市|天津市": 8,
+      "2024-07|高威龙|上海市|上海市": 6,
+      "2024-07|龚卉|陕西省|西安市": 2,
+      "2024-07|兰明金|广东省|深圳市": 1,
+      "2024-07|赵俊兴|江苏省|南京市": 1,
+      "2024-07|兰明金|广东省|广州市": 1,
+      "2024-07|崔珺|北京市|北京市": 6,
+      "2024-07|董硕|福建省|福州市": 1,
+      "2024-07|赵蕊|辽宁省|沈阳市": 1,
+      "2024-07|赵蕊|辽宁省|大连市": 1,
+      "2024-07|赵俊兴|安徽省|合肥市": 1,
+      "2024-07|李磊|重庆市|重庆市": 1,
+      "2024-07|龚卉|湖南省|长沙市": 1,
+      "2024-07|赵俊兴|江苏省|苏州市": 2,
+      "2024-07|龚卉|河南省|郑州市": 1,
+      "2024-08|高威龙|上海市|上海市": 3,
+      "2024-08|崔珺|北京市|北京市": 6,
+      "2024-08|龚卉|湖北省|武汉市": 1,
+      "2024-08|兰明金|广东省|广州市": 4,
+      "2024-08|赵蕊|天津市|天津市": 12,
+      "2024-08|兰明金|广东省|深圳市": 1,
+      "2024-08|董硕|江西省|南昌市": 3,
+      "2024-08|董硕|浙江省|杭州市": 4,
+      "2024-08|李磊|四川省|成都市": 2,
+      "2024-08|赵俊兴|江苏省|苏州市": 1,
+      "2024-08|龚卉|陕西省|西安市": 1,
+      "2024-08|赵俊兴|江苏省|常州市": 1,
+      "2024-08|董硕|福建省|福州市": 1,
+      "2024-08|董硕|浙江省|宁波市": 1,
+      "2024-09|赵蕊|天津市|天津市": 7,
+      "2024-09|赵俊兴|江苏省|南京市": 4,
+      "2024-09|赵俊兴|安徽省|合肥市": 1,
+      "2024-09|董硕|福建省|厦门市": 2,
+      "2024-09|高威龙|上海市|上海市": 8,
+      "2024-09|董硕|浙江省|宁波市": 4,
+      "2024-09|李磊|重庆市|重庆市": 3,
+      "2024-09|董硕|浙江省|温州市": 1,
+      "2024-09|崔珺|北京市|北京市": 5,
+      "2024-09|李磊|四川省|成都市": 1,
+      "2024-09|董硕|浙江省|杭州市": 2,
+      "2024-09|龚卉|陕西省|西安市": 1,
+      "2024-09|兰明金|广东省|广州市": 2,
+      "2024-09|赵俊兴|江苏省|苏州市": 1,
+      "2024-10|崔珺|北京市|北京市": 3,
+      "2024-10|赵蕊|天津市|天津市": 4,
+      "2024-10|董硕|福建省|福州市": 1,
+      "2024-10|赵俊兴|江苏省|南京市": 3,
+      "2024-10|兰明金|广东省|广州市": 4,
+      "2024-10|李磊|四川省|成都市": 2,
+      "2024-10|董硕|浙江省|杭州市": 2,
+      "2024-10|高威龙|上海市|上海市": 1,
+      "2024-10|李磊|重庆市|重庆市": 1,
+      "2024-11|崔珺|北京市|北京市": 3,
+      "2024-11|赵蕊|天津市|天津市": 5,
+      "2024-11|高威龙|上海市|上海市": 5,
+      "2024-11|崔珺|山东省|青岛市": 1,
+      "2024-11|龚卉|湖北省|武汉市": 1,
+      "2024-11|董硕|浙江省|杭州市": 3,
+      "2024-11|兰明金|香港|香港": 1,
+      "2024-11|董硕|浙江省|湖州市": 1,
+      "2024-11|兰明金|广东省|广州市": 2,
+      "2024-11|兰明金|广西壮族自治区|南宁市": 1,
+      "2024-11|赵俊兴|江苏省|苏州市": 1,
+      "2024-12|兰明金|广东省|广州市": 3,
+      "2024-12|赵蕊|天津市|天津市": 3,
+      "2024-12|董硕|浙江省|宁波市": 1,
+      "2024-12|董硕|浙江省|杭州市": 3,
+      "2024-12|崔珺|北京市|北京市": 2,
+      "2024-12|赵俊兴|江苏省|南京市": 2,
+      "2024-12|高威龙|上海市|上海市": 2,
+      "2024-12|赵蕊|吉林省|长春市": 1,
+      "2024-12|李磊|四川省|成都市": 1,
+      "2025-01|董硕|浙江省|杭州市": 2,
+      "2024-12|兰明金|广东省|深圳市": 1,
+      "2024-12|董硕|福建省|厦门市": 1,
+      "2025-01|赵蕊|天津市|天津市": 7,
+      "2025-01|董硕|福建省|福州市": 1,
+      "2025-01|赵蕊|吉林省|长春市": 1,
+      "2025-01|赵俊兴|江苏省|南京市": 2,
+      "2025-01|崔珺|北京市|北京市": 3,
+      "2025-01|赵俊兴|安徽省|合肥市": 1,
+      "2025-01|赵俊兴|江苏省|苏州市": 1,
+      "2025-01|龚卉|湖北省|武汉市": 1,
+      "2025-01|高威龙|上海市|上海市": 2,
+      "2025-01|董硕|浙江省|宁波市": 1,
+      "2025-01|兰明金|广东省|广州市": 1,
+      "2025-01|李磊|重庆市|重庆市": 1,
+      "2025-01|兰明金|香港|香港": 1,
+      "2025-02|兰明金|香港|香港": 1,
+      "2025-02|崔珺|北京市|北京市": 1,
+      "2025-02|赵蕊|天津市|天津市": 4,
+      "2025-02|兰明金|广东省|广州市": 2,
+      "2025-02|董硕|福建省|福州市": 1,
+      "2025-02|董硕|浙江省|杭州市": 3,
+      "2025-02|龚卉|湖北省|武汉市": 1,
+      "2025-02|李磊|重庆市|重庆市": 1,
+      "2025-02|赵俊兴|江苏省|苏州市": 1,
+      "2025-02|崔珺|山东省|青岛市": 1,
+      "2025-02|李磊|四川省|成都市": 1,
+      "2025-02|赵俊兴|安徽省|合肥市": 1,
+      "2025-03|赵蕊|天津市|天津市": 10,
+      "2025-03|兰明金|广东省|广州市": 1,
+      "2025-03|龚卉|湖北省|武汉市": 1,
+      "2025-03|董硕|浙江省|宁波市": 2,
+      "2025-03|兰明金|广西壮族自治区|南宁市": 2,
+      "2025-03|董硕|福建省|福州市": 1,
+      "2025-03|高威龙|上海市|上海市": 3,
+      "2025-03|董硕|浙江省|杭州市": 3,
+      "2025-03|赵俊兴|江苏省|南京市": 2,
+      "2025-03|赵俊兴|江苏省|常州市": 1,
+      "2025-03|龚卉|湖南省|长沙市": 1,
+      "2025-04|赵蕊|吉林省|长春市": 1,
+      "2025-04|赵俊兴|江苏省|南京市": 2,
+      "2025-04|赵蕊|天津市|天津市": 5,
+      "2025-04|崔珺|北京市|北京市": 3,
+      "2025-04|董硕|浙江省|杭州市": 2,
+      "2025-04|兰明金|广东省|广州市": 1,
+      "2025-04|李磊|重庆市|重庆市": 1,
+      "2025-05|赵蕊|天津市|天津市": 5,
+      "2025-04|高威龙|上海市|上海市": 3,
+      "2025-04|HK_AM1|香港|香港": 1,
+      "2025-04|董硕|江西省|南昌市": 1,
+      "2025-04|兰明金|广东省|深圳市": 1,
+      "2025-04|李磊|四川省|成都市": 1,
+      "2025-05|李磊|四川省|成都市": 2,
+      "2025-05|李磊|重庆市|重庆市": 2,
+      "2025-05|兰明金|广东省|深圳市": 1,
+      "2025-05|兰明金|广西壮族自治区|南宁市": 1,
+      "2025-05|董硕|浙江省|杭州市": 2,
+      "2025-05|崔珺|北京市|北京市": 2,
+      "2025-05|兰明金|广东省|广州市": 3,
+      "2025-05|高威龙|上海市|上海市": 4,
+      "2025-05|赵俊兴|江苏省|南京市": 1,
+      "2025-05|董硕|福建省|厦门市": 1,
+      "2025-05|龚卉|陕西省|西安市": 1,
+      "2025-06|赵蕊|天津市|天津市": 8,
+      "2025-06|高威龙|上海市|上海市": 10,
+      "2025-06|赵蕊|吉林省|长春市": 2,
+      "2025-06|兰明金|广西壮族自治区|南宁市": 2,
+      "2025-06|董硕|浙江省|杭州市": 5,
+      "2025-06|崔珺|北京市|北京市": 3,
+      "2025-06|兰明金|广东省|广州市": 2,
+      "2025-06|赵俊兴|江苏省|南京市": 3,
+      "2025-06|董硕|福建省|厦门市": 1,
+      "2025-06|李磊|四川省|成都市": 1,
+      "2025-06|赵俊兴|江苏省|苏州市": 2,
+      "2025-06|龚卉|陕西省|西安市": 1,
+      "2025-06|龚卉|湖北省|武汉市": 1,
+      "2025-06|HK_AM1|香港|香港": 1,
+      "2025-07|赵蕊|天津市|天津市": 6,
+      "2025-07|高威龙|上海市|上海市": 6,
+      "2025-07|董硕|浙江省|杭州市": 2,
+      "2025-07|赵俊兴|江苏省|南京市": 4,
+      "2025-07|崔珺|北京市|北京市": 4,
+      "2025-07|赵蕊|山东省|济南市": 1,
+      "2025-07|兰明金|广东省|深圳市": 1,
+      "2025-07|董硕|福建省|福州市": 2,
+      "2025-07|兰明金|广东省|广州市": 3,
+      "2025-07|龚卉|陕西省|西安市": 1,
+      "2025-07|龚卉|湖北省|武汉市": 1,
+      "2025-07|兰明金|广西壮族自治区|南宁市": 1,
+      "2025-07|李磊|重庆市|重庆市": 1,
+      "2025-07|赵蕊|吉林省|长春市": 1,
+      "2025-07|李磊|四川省|成都市": 1,
+      "2025-07|董硕|浙江省|宁波市": 1,
+      "2025-08|崔珺|北京市|北京市": 5,
+      "2025-08|赵蕊|天津市|天津市": 6,
+      "2025-08|兰明金|广东省|广州市": 3,
+      "2025-08|龚卉|湖北省|武汉市": 1,
+      "2025-08|董硕|福建省|福州市": 1,
+      "2025-08|赵俊兴|江苏省|南京市": 4,
+      "2025-08|高威龙|上海市|上海市": 6,
+      "2025-08|赵蕊|吉林省|长春市": 1,
+      "2025-08|董硕|福建省|厦门市": 2,
+      "2025-08|李磊|四川省|成都市": 1,
+      "2025-08|兰明金|广东省|深圳市": 1,
+      "2025-08|董硕|浙江省|杭州市": 3,
+      "2025-08|HK_AM1|香港|香港": 1,
+      "2025-09|崔珺|北京市|北京市": 4,
+      "2025-09|董硕|浙江省|杭州市": 5,
+      "2025-09|兰明金|广东省|广州市": 4,
+      "2025-09|李磊|重庆市|重庆市": 1,
+      "2025-09|赵蕊|天津市|天津市": 4,
+      "2025-09|高威龙|上海市|上海市": 7,
+      "2025-09|赵俊兴|江苏省|南京市": 1,
+      "2025-09|龚卉|陕西省|西安市": 1,
+      "2025-09|李磊|四川省|成都市": 1,
+      "2025-09|董硕|浙江省|宁波市": 1,
+      "2025-10|崔珺|北京市|北京市": 2,
+      "2025-10|赵蕊|天津市|天津市": 4,
+      "2025-10|高威龙|上海市|上海市": 5,
+      "2025-10|兰明金|广东省|广州市": 4,
+      "2025-10|董硕|浙江省|宁波市": 1,
+      "2025-10|董硕|浙江省|杭州市": 3,
+      "2025-10|李磊|四川省|成都市": 1,
+      "2025-10|赵俊兴|江苏省|苏州市": 1,
+      "2025-10|赵蕊|山东省|济南市": 1,
+      "2025-10|赵蕊|辽宁省|大连市": 1,
+      "2025-10|赵俊兴|江苏省|南京市": 1,
+      "2025-11|董硕|浙江省|杭州市": 2,
+      "2025-11|赵俊兴|江苏省|南京市": 1,
+      "2025-11|兰明金|广东省|深圳市": 2,
+      "2025-11|HK_AM1|香港|香港": 2,
+      "2025-11|李磊|四川省|成都市": 4,
+      "2025-11|兰明金|广西壮族自治区|南宁市": 1,
+      "2025-11|高威龙|上海市|上海市": 4,
+      "2025-11|赵蕊|天津市|天津市": 3,
+      "2025-11|兰明金|广东省|广州市": 3,
+      "2025-11|赵蕊|吉林省|长春市": 1,
+      "2025-11|龚卉|湖北省|武汉市": 1,
+      "2025-11|崔珺|北京市|北京市": 3,
+      "2025-11|赵蕊|山东省|济南市": 1,
+      "2025-11|赵俊兴|江苏省|苏州市": 1,
+      "2025-12|赵蕊|天津市|天津市": 6,
+      "2025-12|高威龙|上海市|上海市": 11,
+      "2025-12|兰明金|广东省|广州市": 4,
+      "2025-12|董硕|浙江省|杭州市": 2,
+      "2025-12|龚卉|湖北省|武汉市": 1,
+      "2025-12|董硕|福建省|福州市": 1,
+      "2025-12|李磊|四川省|成都市": 1,
+      "2025-12|赵蕊|辽宁省|大连市": 1,
+      "2025-12|崔珺|北京市|北京市": 1,
+      "2026-01|崔珺|北京市|北京市": 6,
+      "2026-01|赵蕊|天津市|天津市": 7,
+      "2026-01|龚卉|陕西省|西安市": 1,
+      "2026-01|赵俊兴|江苏省|南京市": 1,
+      "2026-01|兰明金|广东省|广州市": 1,
+      "2026-01|高威龙|上海市|上海市": 7,
+      "2026-01|李磊|四川省|成都市": 1,
+      "2026-01|李磊|重庆市|重庆市": 1,
+      "2026-01|董硕|浙江省|杭州市": 5,
+      "2026-01|HK_AM1|香港|香港": 4,
+      "2026-01|兰明金|广东省|东莞市": 1,
+      "2026-01|赵俊兴|山东省|济南市": 1,
+      "2026-01|赵蕊|辽宁省|沈阳市": 1,
+      "2026-01|兰明金|广东省|深圳市": 1,
+      "2026-01|赵俊兴|江苏省|苏州市": 1,
+      "2026-01|龚卉|湖北省|武汉市": 1,
+      "2026-02|董硕|福建省|福州市": 2,
+      "2026-02|董硕|浙江省|杭州市": 2,
+      "2026-02|赵蕊|天津市|天津市": 2,
+      "2026-02|赵俊兴|江苏省|南京市": 1,
+      "2026-02|崔珺|北京市|北京市": 4,
+      "2026-02|董硕|福建省|厦门市": 1,
+      "2026-02|高威龙|上海市|上海市": 3,
+      "2026-02|兰明金|广东省|佛山市": 1,
+      "2026-02|龚卉|湖北省|武汉市": 1,
+      "2026-02|兰明金|广东省|广州市": 1,
+      "2026-03|兰明金|广东省|深圳市": 2,
+      "2026-03|崔珺|北京市|北京市": 6,
+      "2026-03|兰明金|广东省|广州市": 5,
+      "2026-03|李磊|重庆市|重庆市": 2,
+      "2026-03|赵俊兴|江苏省|苏州市": 3,
+      "2026-03|董硕|福建省|厦门市": 1,
+      "2026-03|董硕|浙江省|杭州市": 3,
+      "2026-03|李磊|四川省|成都市": 1,
+      "2026-03|赵蕊|辽宁省|沈阳市": 2,
+      "2026-03|赵蕊|天津市|天津市": 5,
+      "2026-03|龚卉|陕西省|西安市": 1,
+      "2026-03|高威龙|上海市|上海市": 6,
+      "2026-03|龚卉|湖北省|武汉市": 1,
+      "2026-03|董硕|浙江省|温州市": 1,
+      "2026-03|赵俊兴|安徽省|合肥市": 1,
+      "2026-03|董硕|浙江省|台州市": 1,
+      "2026-03|HK_AM1|香港|香港": 1,
+      "2026-04|崔珺|北京市|北京市": 8,
+      "2026-04|李磊|云南省|昆明市": 1,
+      "2026-04|董硕|江西省|南昌市": 1,
+      "2026-04|兰明金|广东省|广州市": 6,
+      "2026-04|龚卉|湖北省|武汉市": 2,
+      "2026-04|赵蕊|天津市|天津市": 6,
+      "2026-04|高威龙|上海市|上海市": 5,
+      "2026-04|李磊|重庆市|重庆市": 1,
+      "2026-04|HK_AM1|香港|香港": 1,
+      "2026-04|李磊|四川省|成都市": 1,
+      "2026-04|赵俊兴|江苏省|苏州市": 1,
+      "2026-04|赵俊兴|江苏省|南京市": 1,
+      "2026-04|董硕|浙江省|台州市": 1,
+      "2026-04|兰明金|广西壮族自治区|南宁市": 1,
+      "2026-05|董硕|浙江省|杭州市": 3,
+      "2026-05|高威龙|上海市|上海市": 3,
+      "2026-05|兰明金|广东省|广州市": 2,
+      "2026-05|李磊|重庆市|重庆市": 1,
+      "2026-05|龚卉|陕西省|西安市": 1,
+      "2026-05|赵蕊|天津市|天津市": 8,
+      "2026-05|龚卉|湖北省|武汉市": 2,
+      "2026-05|崔珺|北京市|北京市": 5,
+      "2026-05|赵俊兴|江苏省|南京市": 2,
+      "2026-05|兰明金|广东省|深圳市": 1,
+      "2026-05|赵蕊|辽宁省|大连市": 1,
+      "2026-05|董硕|江西省|南昌市": 1,
+      "2026-06|崔珺|北京市|北京市": 3,
+      "2026-06|赵蕊|天津市|天津市": 9,
+      "2026-06|董硕|福建省|福州市": 2,
+      "2026-06|赵俊兴|山东省|济南市": 2,
+      "2026-06|董硕|江西省|南昌市": 1,
+      "2026-06|兰明金|广东省|广州市": 2,
+      "2026-06|李磊|四川省|南充市": 1,
+      "2026-06|兰明金|广东省|深圳市": 2,
+      "2026-06|高威龙|上海市|上海市": 2,
+      "2026-06|赵俊兴|江苏省|南京市": 1,
+      "2026-06|董硕|浙江省|绍兴市": 1,
+      "2026-06|龚卉|湖北省|武汉市": 1,
+      "2026-06|李磊|四川省|成都市": 1,
+      "2026-07|崔珺|北京市|北京市": 4,
+      "2026-07|赵俊兴|江苏省|无锡市": 1,
+      "2026-07|赵蕊|天津市|天津市": 5,
+      "2026-07|赵俊兴|江苏省|南京市": 1,
+      "2026-07|高威龙|上海市|上海市": 8,
+      "2026-07|HK_AM1|香港|香港": 1,
+      "2026-07|SG_AM|未知|未知": 1,
+      "2026-07|董硕|浙江省|杭州市": 3,
+      "2026-07|龚卉|陕西省|西安市": 2,
+      "2026-07|兰明金|广东省|广州市": 3,
+      "2026-07|李磊|四川省|成都市": 1,
+      "2026-07|龚卉|湖北省|武汉市": 2,
+      "2026-07|赵俊兴|江苏省|苏州市": 2,
+      "2026-08|高威龙|上海市|上海市": 6,
+      "2026-08|赵蕊|天津市|天津市": 7,
+      "2026-08|赵俊兴|江苏省|苏州市": 3,
+      "2026-08|董硕|福建省|福州市": 1,
+      "2026-08|龚卉|河南省|郑州市": 1,
+      "2026-08|崔珺|北京市|北京市": 7,
+      "2026-08|兰明金|广东省|广州市": 6,
+      "2026-08|龚卉|陕西省|西安市": 1,
+      "2026-08|赵蕊|河北省|石家庄市": 1,
+      "2026-08|董硕|浙江省|杭州市": 1,
+      "2026-09|赵蕊|天津市|天津市": 6,
+      "2026-09|赵俊兴|江苏省|苏州市": 4,
+      "2026-09|兰明金|广东省|广州市": 6,
+      "2026-09|崔珺|北京市|北京市": 6,
+      "2026-09|龚卉|陕西省|西安市": 2,
+      "2026-09|龚卉|湖北省|武汉市": 2,
+      "2026-09|董硕|浙江省|杭州市": 3,
+      "2026-09|高威龙|上海市|上海市": 5,
+      "2026-09|赵蕊|黑龙江省|哈尔滨市": 1,
+      "2026-09|李磊|四川省|成都市": 3,
+      "2026-09|兰明金|广东省|深圳市": 2,
+      "2026-09|赵俊兴|山东省|济南市": 2,
+      "2026-09|李磊|重庆市|重庆市": 1,
+      "2026-09|龚卉|河南省|郑州市": 1,
+      "2026-09|董硕|浙江省|温州市": 1,
+      "2026-09|董硕|福建省|福州市": 1,
+      "2026-10|高威龙|上海市|上海市": 6,
+      "2026-09|兰明金|广东省|惠州市": 1,
+      "2026-10|赵俊兴|江苏省|南京市": 1,
+      "2026-10|崔珺|北京市|北京市": 6,
+      "2026-10|董硕|浙江省|宁波市": 1,
+      "2026-10|赵蕊|天津市|天津市": 11,
+      "2026-10|兰明金|广东省|惠州市": 1,
+      "2026-10|赵俊兴|山东省|济南市": 1,
+      "2026-10|董硕|浙江省|湖州市": 1,
+      "2026-10|兰明金|广东省|广州市": 5,
+      "2026-10|董硕|福建省|福州市": 2,
+      "2026-10|董硕|江西省|南昌市": 1,
+      "2026-10|董硕|福建省|厦门市": 1,
+      "2026-10|董硕|浙江省|杭州市": 1,
+      "2026-10|龚卉|湖北省|武汉市": 2,
+      "2026-10|赵俊兴|山东省|青岛市": 1,
+      "2026-10|李磊|重庆市|重庆市": 1,
+      "2026-10|赵蕊|辽宁省|沈阳市": 1,
+      "2026-10|HK_AM1|香港|香港": 1
+    },
+    "rows": [
+      {
+        "ym": "2023-07",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [
+          "深圳惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "discovery"
+        ]
+      },
+      {
+        "ym": "2023-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "天安人寿百万医疗"
+        ]
+      },
+      {
+        "ym": "2023-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "天安人寿百万医疗"
+        ]
+      },
+      {
+        "ym": "2023-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "太平洋保险"
+        ]
+      },
+      {
+        "ym": "2023-08",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "好医保",
+          "可能会用不上早鸟券）"
+        ]
+      },
+      {
+        "ym": "2023-08",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2023-08",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "太平人寿e保2019"
+        ]
+      },
+      {
+        "ym": "2023-08",
+        "am": "赵蕊",
+        "prov": "辽宁省",
+        "city": "沈阳市",
+        "hb": [],
+        "bx": [
+          "太平人寿超e保2021"
+        ]
+      },
+      {
+        "ym": "2023-09",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [],
+        "bx": [
+          "中国人寿康悦c款"
+        ]
+      },
+      {
+        "ym": "2023-09",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "新华保险"
+        ]
+      },
+      {
+        "ym": "2023-09",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "众安保险"
+        ]
+      },
+      {
+        "ym": "2023-10",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "太平人寿超e保2021"
+        ]
+      },
+      {
+        "ym": "2023-10",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "龙江惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "龚卉",
+        "prov": "陕西省",
+        "city": "西安市",
+        "hb": [
+          "全民健康保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-10",
+        "am": "龚卉",
+        "prov": "陕西省",
+        "city": "西安市",
+        "hb": [
+          "全民健康保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2023-11",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "泰康"
+        ]
+      },
+      {
+        "ym": "2023-11",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2023-11",
+        "am": "龚卉",
+        "prov": "陕西省",
+        "city": "西安市",
+        "hb": [
+          "全民健康保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-11",
+        "am": "赵蕊",
+        "prov": "辽宁省",
+        "city": "沈阳市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2023-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-12",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-12",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "惠军保",
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-12",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "老兵防癌抗癌专属保险卡"
+        ]
+      },
+      {
+        "ym": "2023-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2023-12",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2023-12",
+        "am": "龚卉",
+        "prov": "河南省",
+        "city": "郑州市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-01",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵蕊",
+        "prov": "辽宁省",
+        "city": "沈阳市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-01",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "Morgan Price International Healthcare Ltd"
+        ]
+      },
+      {
+        "ym": "2024-01",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保",
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-02",
+        "am": "龚卉",
+        "prov": "陕西省",
+        "city": "西安市",
+        "hb": [
+          "全民健康保"
+        ],
+        "bx": [
+          "泰康百万医疗"
+        ]
+      },
+      {
+        "ym": "2024-02",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "晋康保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-02",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-02",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "泰康百万医疗"
+        ]
+      },
+      {
+        "ym": "2024-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "city": "南宁市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2024-03",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-03",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-04",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-04",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "太平e生保"
+        ]
+      },
+      {
+        "ym": "2024-04",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-04",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-04",
+        "am": "赵蕊",
+        "prov": "江苏省",
+        "city": "无锡市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-04",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2024-04",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-04",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2024-05",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-05",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "崔珺",
+        "prov": "山东省",
+        "city": "青岛市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "龚卉",
+        "prov": "湖南省",
+        "city": "长沙市",
+        "hb": [],
+        "bx": [
+          "泰康尊享2021"
+        ]
+      },
+      {
+        "ym": "2024-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保",
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-05",
+        "am": "赵俊兴",
+        "prov": "安徽省",
+        "city": "合肥市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保",
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-06",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "惠州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-06",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南通市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "中国人寿"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [],
+        "bx": [
+          "众安保险"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [],
+        "bx": [
+          "职工大病保障医疗"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [],
+        "bx": [
+          "太平洋乐享百万"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安一家保"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "未知商保"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵俊兴",
+        "prov": "安徽省",
+        "city": "合肥市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [],
+        "bx": [
+          "太平洋安享100%"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "甜惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "常州市",
+        "hb": [],
+        "bx": [
+          "未知商保"
+        ]
+      },
+      {
+        "ym": "2024-08",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安百万医疗"
+        ]
+      },
+      {
+        "ym": "2024-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵俊兴",
+        "prov": "安徽省",
+        "city": "合肥市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "晋康保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "晋康保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [],
+        "bx": [
+          "友邦保险"
+        ]
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "龙江惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-10",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-11",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-11",
+        "am": "崔珺",
+        "prov": "山东省",
+        "city": "青岛市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-11",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": [
+          "友邦保险"
+        ]
+      },
+      {
+        "ym": "2024-11",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-11",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-11",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2024-12",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2024-12",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠厦保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-01",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "未知商保"
+        ]
+      },
+      {
+        "ym": "2025-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-01",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-01",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-01",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2025-02",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "华夏保险"
+        ]
+      },
+      {
+        "ym": "2025-02",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-02",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "渝快保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-02",
+        "am": "崔珺",
+        "prov": "山东省",
+        "city": "青岛市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-02",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "平安人寿-悦享人生险"
+        ]
+      },
+      {
+        "ym": "2025-03",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-03",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [],
+        "bx": [
+          "平安保险"
+        ]
+      },
+      {
+        "ym": "2025-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "常州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [],
+        "bx": [
+          "平安保险"
+        ]
+      },
+      {
+        "ym": "2025-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-03",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "city": "南宁市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-04",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "冀惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-04",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "太平洋百万医疗"
+        ]
+      },
+      {
+        "ym": "2025-04",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-04",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-04",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2025-04",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2025-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-04",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "华农财险"
+        ]
+      },
+      {
+        "ym": "2025-05",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-05",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [
+          "渝快保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠厦保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [],
+        "bx": [
+          "泰康"
+        ]
+      },
+      {
+        "ym": "2025-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-05",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [
+          "渝快保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "city": "南宁市",
+        "hb": [
+          "昆明春城惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [],
+        "bx": [
+          "未知商保"
+        ]
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "city": "南宁市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保",
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2025-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "未知商保"
+        ]
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵蕊",
+        "prov": "山东省",
+        "city": "济南市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [],
+        "bx": [
+          "友邦保险"
+        ]
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保",
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2025-07",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "龚卉",
+        "prov": "陕西省",
+        "city": "西安市",
+        "hb": [
+          "惠秦保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [
+          "福汉康"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "city": "南宁市",
+        "hb": [
+          "广西惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保",
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [],
+        "bx": [
+          "友邦保险"
+        ]
+      },
+      {
+        "ym": "2025-07",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "福汉康"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [
+          "福汉康"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠厦保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠厦保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [
+          "晋惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [
+          "深圳惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "友邦保险"
+        ]
+      },
+      {
+        "ym": "2025-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2025-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "平安保险"
+        ]
+      },
+      {
+        "ym": "2025-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "职工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "宁波市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "平安保险"
+        ]
+      },
+      {
+        "ym": "2025-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号",
+          "惠工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保",
+          "惠工保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-11",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-11",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-11",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2025-11",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-11",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-11",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "泰康"
+        ]
+      },
+      {
+        "ym": "2025-11",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "众安保险"
+        ]
+      },
+      {
+        "ym": "2025-11",
+        "am": "赵蕊",
+        "prov": "山东省",
+        "city": "济南市",
+        "hb": [
+          "临沂惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-11",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "安徽惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "赵蕊",
+        "prov": "辽宁省",
+        "city": "大连市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2025-12",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "内蒙惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2026-01",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-02",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-02",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2026-02",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-02",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-02",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-02",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2026-03",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [],
+        "bx": [
+          "平安保险"
+        ]
+      },
+      {
+        "ym": "2026-03",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "赵蕊",
+        "prov": "辽宁省",
+        "city": "沈阳市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2026-03",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-03",
+        "am": "赵蕊",
+        "prov": "辽宁省",
+        "city": "沈阳市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2026-03",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [
+          "渝快保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [],
+        "bx": [
+          "英大人寿"
+        ]
+      },
+      {
+        "ym": "2026-04",
+        "am": "李磊",
+        "prov": "云南省",
+        "city": "昆明市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-04",
+        "am": "董硕",
+        "prov": "江西省",
+        "city": "南昌市",
+        "hb": [
+          "赣惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "华夏保险"
+        ]
+      },
+      {
+        "ym": "2026-04",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "蒙惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [],
+        "bx": [
+          "平安保险"
+        ]
+      },
+      {
+        "ym": "2026-04",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [
+          "惠蓉保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "台州市",
+        "hb": [],
+        "bx": [
+          "新华保险"
+        ]
+      },
+      {
+        "ym": "2026-04",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "太平洋保险"
+        ]
+      },
+      {
+        "ym": "2026-05",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2026-05",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "深圳市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2026-05",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-05",
+        "am": "董硕",
+        "prov": "江西省",
+        "city": "南昌市",
+        "hb": [
+          "赣惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-06",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-06",
+        "am": "董硕",
+        "prov": "江西省",
+        "city": "南昌市",
+        "hb": [
+          "江西惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-06",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "宁波甬宁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [],
+        "bx": [
+          "未知商保"
+        ]
+      },
+      {
+        "ym": "2026-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "绍兴市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2026-06",
+        "am": "赵俊兴",
+        "prov": "山东省",
+        "city": "济南市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-06",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "众安百万医疗"
+        ]
+      },
+      {
+        "ym": "2026-07",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-07",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "蒙惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "无锡市",
+        "hb": [
+          "医惠锡城"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-07",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-07",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "city": "武汉市",
+        "hb": [],
+        "bx": [
+          "中国人寿"
+        ]
+      },
+      {
+        "ym": "2026-07",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "好医保"
+        ]
+      },
+      {
+        "ym": "2026-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [],
+        "bx": [
+          "太平洋保险"
+        ]
+      },
+      {
+        "ym": "2026-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保",
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "龚卉",
+        "prov": "河南省",
+        "city": "郑州市",
+        "hb": [],
+        "bx": [
+          "太平洋保险"
+        ]
+      },
+      {
+        "ym": "2026-08",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "山西惠民保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "苏惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "江苏医惠保1号"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [],
+        "bx": [
+          "众安百万医疗"
+        ]
+      },
+      {
+        "ym": "2026-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "杭州市",
+        "hb": [
+          "西湖益联保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [],
+        "bx": [
+          "太平洋保险"
+        ]
+      },
+      {
+        "ym": "2026-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "赵俊兴",
+        "prov": "山东省",
+        "city": "济南市",
+        "hb": [
+          "齐鲁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "李磊",
+        "prov": "重庆市",
+        "city": "重庆市",
+        "hb": [
+          "渝快保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "苏州市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "赵俊兴",
+        "prov": "山东省",
+        "city": "济南市",
+        "hb": [
+          "齐鲁保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "city": "温州市",
+        "hb": [],
+        "bx": [
+          "众安保险"
+        ]
+      },
+      {
+        "ym": "2026-09",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-09",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "广州市",
+        "hb": [],
+        "bx": [
+          "友邦保险"
+        ]
+      },
+      {
+        "ym": "2026-09",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "李磊",
+        "prov": "四川省",
+        "city": "成都市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2026-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "惠军保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-09",
+        "am": "兰明金",
+        "prov": "广东省",
+        "city": "惠州市",
+        "hb": [],
+        "bx": [
+          "平安e生保"
+        ]
+      },
+      {
+        "ym": "2026-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "city": "南京市",
+        "hb": [
+          "南京宁惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-10",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "city": "天津市",
+        "hb": [],
+        "bx": [
+          "人保"
+        ]
+      },
+      {
+        "ym": "2026-10",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "厦门市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "崔珺",
+        "prov": "北京市",
+        "city": "北京市",
+        "hb": [
+          "北京普惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "董硕",
+        "prov": "福建省",
+        "city": "福州市",
+        "hb": [
+          "惠闽保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      },
+      {
+        "ym": "2026-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "city": "上海市",
+        "hb": [
+          "沪惠保"
+        ],
+        "bx": []
+      }
+    ],
+    "amList": [
+      "HK_AM1",
+      "SG_AM",
+      "兰明金",
+      "崔珺",
+      "李磊",
+      "董硕",
+      "赵俊兴",
+      "赵蕊",
+      "高威龙",
+      "龚卉"
+    ],
+    "unmapped": {
+      "hb": [],
+      "bx": []
+    }
+  },
+  "PROD_ABN": {
+    "at": "2026-10-30 13:38:37",
+    "cats": [
+      "PBMC 分选失败",
+      "第一次生产失败",
+      "二次生产失败"
+    ],
+    "months": [
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "monthly": {
+      "2023-08": [
+        0,
+        1,
+        0
+      ],
+      "2023-09": [
+        1,
+        3,
+        1
+      ],
+      "2023-10": [
+        0,
+        1,
+        1
+      ],
+      "2023-11": [
+        0,
+        0,
+        1
+      ],
+      "2023-12": [
+        0,
+        1,
+        1
+      ],
+      "2024-01": [
+        1,
+        3,
+        0
+      ],
+      "2024-02": [
+        0,
+        2,
+        1
+      ],
+      "2024-03": [
+        0,
+        1,
+        0
+      ],
+      "2024-04": [
+        0,
+        1,
+        0
+      ],
+      "2024-05": [
+        0,
+        1,
+        0
+      ],
+      "2024-06": [
+        1,
+        0,
+        1
+      ],
+      "2024-07": [
+        1,
+        3,
+        0
+      ],
+      "2024-08": [
+        2,
+        1,
+        1
+      ],
+      "2024-09": [
+        3,
+        2,
+        1
+      ],
+      "2024-10": [
+        0,
+        4,
+        2
+      ],
+      "2024-11": [
+        0,
+        8,
+        0
+      ],
+      "2024-12": [
+        1,
+        3,
+        3
+      ],
+      "2025-01": [
+        1,
+        2,
+        1
+      ],
+      "2025-02": [
+        0,
+        6,
+        0
+      ],
+      "2025-03": [
+        0,
+        2,
+        0
+      ],
+      "2025-04": [
+        1,
+        1,
+        0
+      ],
+      "2025-05": [
+        1,
+        1,
+        0
+      ],
+      "2025-06": [
+        4,
+        3,
+        0
+      ],
+      "2025-07": [
+        2,
+        2,
+        0
+      ],
+      "2025-08": [
+        2,
+        2,
+        3
+      ],
+      "2025-09": [
+        0,
+        0,
+        1
+      ],
+      "2025-10": [
+        0,
+        1,
+        0
+      ],
+      "2025-11": [
+        0,
+        0,
+        0
+      ],
+      "2025-12": [
+        0,
+        0,
+        0
+      ],
+      "2026-01": [
+        0,
+        2,
+        0
+      ],
+      "2026-02": [
+        1,
+        0,
+        0
+      ],
+      "2026-03": [
+        1,
+        2,
+        0
+      ],
+      "2026-04": [
+        0,
+        2,
+        1
+      ],
+      "2026-05": [
+        0,
+        1,
+        0
+      ],
+      "2026-06": [
+        0,
+        1,
+        0
+      ],
+      "2026-07": [
+        0,
+        0,
+        1
+      ],
+      "2026-08": [
+        0,
+        3,
+        1
+      ],
+      "2026-09": [
+        1,
+        2,
+        0
+      ]
+    },
+    "rows": [
+      {
+        "ym": "2023-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海长征医院",
+        "no": "XL23P37",
+        "code": "A1C0014",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足",
+        "patient": "张*珍"
+      },
+      {
+        "ym": "2023-09",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "北京大学人民医院",
+        "no": "XL23R43",
+        "code": "A1C0019",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "马*颖"
+      },
+      {
+        "ym": "2023-09",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "hosp": "华中科技大学同济医学院附属同济医院",
+        "no": "XL23M04",
+        "code": "A1C0028",
+        "cat": "第一次生产失败",
+        "note": "CD3+CAR+细胞比例检测结果为9.8%，不符合质量标准",
+        "patient": "王*"
+      },
+      {
+        "ym": "2023-09",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "hosp": "华中科技大学同济医学院附属同济医院",
+        "no": "XL23M04",
+        "code": "A1C0028",
+        "cat": "二次生产失败",
+        "note": "A1C0028CR批作为生产检验调查批次生产至day9",
+        "patient": "王*"
+      },
+      {
+        "ym": "2023-09",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "hosp": "广西医科大学附属肿瘤医院",
+        "no": "XL23M44",
+        "code": "A1C0036",
+        "cat": "第一次生产失败",
+        "note": "活率49%，不符合质量标准≥70%",
+        "patient": "甘*爱"
+      },
+      {
+        "ym": "2023-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "苏州大学附属第一医院",
+        "no": "XL23T73",
+        "code": "A1C0040",
+        "cat": "第一次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "蒋*芝"
+      },
+      {
+        "ym": "2023-10",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "hosp": "华中科技大学同济医学院附属同济医院",
+        "no": "XL23M04",
+        "code": "A1C0044",
+        "cat": "二次生产失败",
+        "note": "CD3+CAR+细胞比例检测结果为8.6%，不符合质量标准",
+        "patient": "王*"
+      },
+      {
+        "ym": "2023-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL23S37",
+        "code": "A1C0043",
+        "cat": "第一次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "凌*谷"
+      },
+      {
+        "ym": "2023-11",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "苏州大学附属第一医院",
+        "no": "XL23T73",
+        "code": "A1C0051",
+        "cat": "二次生产失败",
+        "note": "D11细胞数不足",
+        "patient": "蒋*芝"
+      },
+      {
+        "ym": "2023-12",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL23S37",
+        "code": "A1C0063",
+        "cat": "二次生产失败",
+        "note": "DAY5活细胞总数低于标准，终止生产",
+        "patient": "凌*谷"
+      },
+      {
+        "ym": "2023-12",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "广东医科大学附属医院",
+        "no": "XL23B16",
+        "code": "A1C0080",
+        "cat": "第一次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "邹*明"
+      },
+      {
+        "ym": "2024-01",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "中山大学肿瘤医院",
+        "no": "XL23B92",
+        "code": "A1C0073",
+        "cat": "第一次生产失败",
+        "note": "CD3+CAR+细胞含量检验结果为69%，不符合质量标准70%~130%",
+        "patient": "陈*"
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL23Q06",
+        "code": "A1C0081",
+        "cat": "第一次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "刘*领"
+      },
+      {
+        "ym": "2024-01",
+        "am": "李磊",
+        "prov": "重庆市",
+        "hosp": "陆军军医大学第二附属医院(新桥医院)",
+        "no": "XL23T47",
+        "code": "A1C0094",
+        "cat": "第一次生产失败",
+        "note": "活率69%，不符合质量标准≥70%",
+        "patient": "何*"
+      },
+      {
+        "ym": "2024-01",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL23B13",
+        "code": "A1D0017",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "李*芳"
+      },
+      {
+        "ym": "2024-02",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "首都医科大学附属复兴医院",
+        "no": "XL24H46",
+        "code": "A1D0004",
+        "cat": "第一次生产失败",
+        "note": "DAY3慢病毒转导换液时间超出制检规程22±2h，直接启动二次生产",
+        "patient": "徐*华"
+      },
+      {
+        "ym": "2024-02",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL23B13",
+        "code": "A1D0029",
+        "cat": "二次生产失败",
+        "note": "活率69%，不符合质量标准≥70%",
+        "patient": "李*芳"
+      },
+      {
+        "ym": "2024-02",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海长征医院",
+        "no": "XL24K49",
+        "code": "A1D0021",
+        "cat": "第一次生产失败",
+        "note": "活率69%，不符合质量标准≥70%",
+        "patient": "于*英"
+      },
+      {
+        "ym": "2024-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市同济医院",
+        "no": "XL24K08",
+        "code": "A1D0044",
+        "cat": "第一次生产失败",
+        "note": "活率68%，不符合质量标准≥70%",
+        "patient": "何*红"
+      },
+      {
+        "ym": "2024-04",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "宁波市医疗中心李惠利医院（东部院区）",
+        "no": "XL24E06",
+        "code": "A1D0059",
+        "cat": "第一次生产失败",
+        "note": "CAR+细胞比例低于标准，产品未能收获",
+        "patient": "陈*宏"
+      },
+      {
+        "ym": "2024-05",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "hosp": "广西壮族自治区人民医院",
+        "no": "XL24G49",
+        "code": "A1D0090",
+        "cat": "第一次生产失败",
+        "note": "活率69%，不符合质量标准≥70%",
+        "patient": "农*良"
+      },
+      {
+        "ym": "2024-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL24A36",
+        "code": "A1D0117",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "沈*琴"
+      },
+      {
+        "ym": "2024-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL24A36",
+        "code": "A1D0141",
+        "cat": "二次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "沈*琴"
+      },
+      {
+        "ym": "2024-07",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "hosp": "华中科技大学同济医学院附属同济医院",
+        "no": "XL24V05",
+        "code": "A1D0113",
+        "cat": "第一次生产失败",
+        "note": "支原体阳性，不符合质量标准",
+        "patient": "席*波"
+      },
+      {
+        "ym": "2024-07",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL24V12",
+        "code": "A1D0136",
+        "cat": "第一次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "周*阳"
+      },
+      {
+        "ym": "2024-07",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "南京鼓楼医院",
+        "no": "XL24P45",
+        "code": "A1D0144",
+        "cat": "第一次生产失败",
+        "note": "收获液CD3+CAR+细胞比例12.5%，不符合质量标准",
+        "patient": "殷*兰"
+      },
+      {
+        "ym": "2024-07",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "北京大学人民医院",
+        "no": "XL24V93",
+        "code": "A1D0169",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "王*立"
+      },
+      {
+        "ym": "2024-08",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "深圳市罗湖区人民医院（友谊路院区）",
+        "no": "XL24Q38",
+        "code": "A1D0215",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "邓*"
+      },
+      {
+        "ym": "2024-08",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "南京鼓楼医院",
+        "no": "XL24P45",
+        "code": "A1D0171",
+        "cat": "二次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "殷*兰"
+      },
+      {
+        "ym": "2024-08",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "北京大学人民医院",
+        "no": "XL24N13",
+        "code": "A1D0179",
+        "cat": "第一次生产失败",
+        "note": "D2活细胞总数计数结果为8.6M，低于中控标准1E7，终止生产",
+        "patient": "张*香"
+      },
+      {
+        "ym": "2024-08",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24U28",
+        "code": "A1D0183",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "王*"
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海仁济医院",
+        "no": "XL24Q23",
+        "code": "A1D0185",
+        "cat": "第一次生产失败",
+        "note": "收获液CD3+CAR+细胞比例2.3%，不符合质量标准",
+        "patient": "王*军"
+      },
+      {
+        "ym": "2024-09",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24U82",
+        "code": "A1D0231",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "袁*强"
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL24K53",
+        "code": "A1D0233",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "赵*平"
+      },
+      {
+        "ym": "2024-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL24V12",
+        "code": "A1D0235",
+        "cat": "二次生产失败",
+        "note": "DAY2活细胞总数低于标准，终止生产",
+        "patient": "周*阳"
+      },
+      {
+        "ym": "2024-09",
+        "am": "龚卉",
+        "prov": "河南省",
+        "hosp": "河南省肿瘤医院",
+        "no": "XL24A75",
+        "code": "A1D0193",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "麻*兰"
+      },
+      {
+        "ym": "2024-09",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江省中医院",
+        "no": "XL24H91",
+        "code": "A1D0202",
+        "cat": "第一次生产失败",
+        "note": "D11收获液CD3+CAR+细胞比例6.2%，不符合质量标准",
+        "patient": "闵*生"
+      },
+      {
+        "ym": "2024-10",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海仁济医院",
+        "no": "XL24Q23",
+        "code": "A1D0262",
+        "cat": "二次生产失败",
+        "note": "收获液CD3+CAR+细胞比例3.5%，不符合质量标准",
+        "patient": "王*军"
+      },
+      {
+        "ym": "2024-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "常州市第二人民医院",
+        "no": "XL24Q17",
+        "code": "A1D0204",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "徐*俊"
+      },
+      {
+        "ym": "2024-10",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "常州市第二人民医院",
+        "no": "XL24Q17",
+        "code": "A1D0253",
+        "cat": "二次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "徐*俊"
+      },
+      {
+        "ym": "2024-10",
+        "am": "董硕",
+        "prov": "江西省",
+        "hosp": "南昌大学第一附属医院",
+        "no": "XL24N82",
+        "code": "A1D0214",
+        "cat": "第一次生产失败",
+        "note": "D2活细胞总数计数结果为9.24M，低于中控标准1E7，终止生产",
+        "patient": "杨*林"
+      },
+      {
+        "ym": "2024-10",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "宁波大学附属人民医院",
+        "no": "XL24J83",
+        "code": "A1D0220",
+        "cat": "第一次生产失败",
+        "note": "D2活细胞总数计数结果为3.4M，低于中控标准1E7，终止生产",
+        "patient": "徐*珠"
+      },
+      {
+        "ym": "2024-10",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "中国人民解放军总医院",
+        "no": "XL24U41",
+        "code": "A1D0227",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "马*荔"
+      },
+      {
+        "ym": "2024-11",
+        "am": "董硕",
+        "prov": "福建省",
+        "hosp": "福建医科大学附属第一医院",
+        "no": "XL24D14",
+        "code": "A1D0173",
+        "cat": "第一次生产失败",
+        "note": "活率63%，不符合质量标准≥70%",
+        "patient": "陈*莺"
+      },
+      {
+        "ym": "2024-11",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "苏州大学附属第一医院",
+        "no": "XL24C83",
+        "code": "A1D0190",
+        "cat": "第一次生产失败",
+        "note": "收获液CD3+CAR+细胞比例9.4%，不符合质量标准",
+        "patient": "徐*星"
+      },
+      {
+        "ym": "2024-11",
+        "am": "李磊",
+        "prov": "四川省",
+        "hosp": "四川省人民医院",
+        "no": "XL24K45",
+        "code": "A1D0203",
+        "cat": "第一次生产失败",
+        "note": "IFN-γ10，不符合质量标准≥14",
+        "patient": "廖*燕"
+      },
+      {
+        "ym": "2024-11",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24Z36",
+        "code": "A1D0205",
+        "cat": "第一次生产失败",
+        "note": "活率69%，不符合质量标准≥70%",
+        "patient": "侯*华"
+      },
+      {
+        "ym": "2024-11",
+        "am": "李磊",
+        "prov": "重庆市",
+        "hosp": "重庆大学附属三峡医院",
+        "no": "XL24T14",
+        "code": "A1D0237",
+        "cat": "第一次生产失败",
+        "note": "D11收获液CD3+CAR+细胞比例13.1%，不符合质量标准",
+        "patient": "刘*太"
+      },
+      {
+        "ym": "2024-11",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24W54",
+        "code": "A1D0250",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "朱*旭"
+      },
+      {
+        "ym": "2024-11",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24F11",
+        "code": "A1D0260",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "王*英"
+      },
+      {
+        "ym": "2024-11",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "北京大学人民医院",
+        "no": "XL24P16",
+        "code": "A1D0285",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "高*明"
+      },
+      {
+        "ym": "2024-12",
+        "am": "李磊",
+        "prov": "四川省",
+        "hosp": "四川省人民医院",
+        "no": "XL24K45",
+        "code": "A1D0307",
+        "cat": "二次生产失败",
+        "note": "IFN-γ8，不符合质量标准≥14",
+        "patient": "廖*燕"
+      },
+      {
+        "ym": "2024-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24Z36",
+        "code": "A1D0205",
+        "cat": "第一次生产失败",
+        "note": "活率69%，不符合质量标准≥70%",
+        "patient": "侯*华"
+      },
+      {
+        "ym": "2024-12",
+        "am": "李磊",
+        "prov": "重庆市",
+        "hosp": "重庆大学附属三峡医院",
+        "no": "XL24T14",
+        "code": "A1D0314",
+        "cat": "二次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "刘*太"
+      },
+      {
+        "ym": "2024-12",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL24W54",
+        "code": "A1D0316",
+        "cat": "二次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "朱*旭"
+      },
+      {
+        "ym": "2024-12",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "广州市第一人民医院",
+        "no": "XL24K92",
+        "code": "A1D0251",
+        "cat": "第一次生产失败",
+        "note": "活率62%，不符合质量标准≥70%，含量64%，不符合质量标准70%-130%",
+        "patient": "黄*红"
+      },
+      {
+        "ym": "2024-12",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL24E61",
+        "code": "A1D0282",
+        "cat": "第一次生产失败",
+        "note": "D11收获液CD3+CAR+细胞比例4.2%，不符合质量标准",
+        "patient": "金*兰"
+      },
+      {
+        "ym": "2024-12",
+        "am": "未知",
+        "prov": "江苏省",
+        "hosp": "省人民",
+        "no": "Xl24Z54",
+        "code": "A1D0325",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": ""
+      },
+      {
+        "ym": "2025-01",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "北京大学人民医院",
+        "no": "XL24Z59",
+        "code": "A1D0241",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "陈*民"
+      },
+      {
+        "ym": "2025-01",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市同济医院",
+        "no": "XL24K75",
+        "code": "A1D0279",
+        "cat": "第一次生产失败",
+        "note": "含量141%不合格",
+        "patient": "徐*陶"
+      },
+      {
+        "ym": "2025-01",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市同济医院",
+        "no": "XL24K75",
+        "code": "A1D0279",
+        "cat": "二次生产失败",
+        "note": "含量143%不合格",
+        "patient": "徐*陶"
+      },
+      {
+        "ym": "2025-01",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "南京鼓楼医院",
+        "no": "XL25R15",
+        "code": "A1E0007",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "李*华"
+      },
+      {
+        "ym": "2025-02",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "中山大学肿瘤医院",
+        "no": "XL24R06",
+        "code": "A1D0296",
+        "cat": "第一次生产失败",
+        "note": "活率为69%，不符合质量标准≥70%",
+        "patient": "罗*禄"
+      },
+      {
+        "ym": "2025-02",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "中国人民解放军海军特色医学中心",
+        "no": "XL24S04",
+        "code": "A1D0302",
+        "cat": "第一次生产失败",
+        "note": "含量144%，不合格",
+        "patient": "彭*英"
+      },
+      {
+        "ym": "2025-02",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL24E58",
+        "code": "A1D0304",
+        "cat": "第一次生产失败",
+        "note": "含量141%，不合格",
+        "patient": "张*书"
+      },
+      {
+        "ym": "2025-02",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "首都医科大学附属北京朝阳医院",
+        "no": "XL24T88",
+        "code": "A1D0313",
+        "cat": "第一次生产失败",
+        "note": "含量138%，不合格",
+        "patient": "刘*林"
+      },
+      {
+        "ym": "2025-02",
+        "am": "崔珺",
+        "prov": "北京市",
+        "hosp": "北京大学人民医院",
+        "no": "XL24B65",
+        "code": "A1D0315",
+        "cat": "第一次生产失败",
+        "note": "活率为68%，不符合质量标准≥70%",
+        "patient": "陈*林"
+      },
+      {
+        "ym": "2025-02",
+        "am": "兰明金",
+        "prov": "香港",
+        "hosp": "玛丽医院（Queen Mary Hospital）",
+        "no": "XL25K37",
+        "code": "A1E0017",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "C*K"
+      },
+      {
+        "ym": "2025-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市同济医院",
+        "no": "XL24C65",
+        "code": "A1E0009",
+        "cat": "第一次生产失败",
+        "note": "IFN-γ12，不符合质量标准≥14",
+        "patient": "陈*芬"
+      },
+      {
+        "ym": "2025-03",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL25D30",
+        "code": "A1E0022",
+        "cat": "第一次生产失败",
+        "note": "D2细胞数不足，终止生产",
+        "patient": "陈*忠"
+      },
+      {
+        "ym": "2025-04",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市曜影医院",
+        "no": "XL25V52",
+        "code": "A1E0060",
+        "cat": "第一次生产失败",
+        "note": "D5细胞数不足，终止生产",
+        "patient": "E*A S*H H*N"
+      },
+      {
+        "ym": "2025-04",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "hosp": "广西医科大学附属肿瘤医院",
+        "no": "XL25V48",
+        "code": "A1E0070",
+        "cat": "PBMC 分选失败",
+        "note": "单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "兰*慧"
+      },
+      {
+        "ym": "2025-05",
+        "am": "兰明金",
+        "prov": "广西壮族自治区",
+        "hosp": "广西医科大学附属肿瘤医院",
+        "no": "XL25V48",
+        "code": "A1E0095",
+        "cat": "PBMC 分选失败",
+        "note": "二次单采血分选后PBMC细胞量不足1袋，无法进行生产",
+        "patient": "兰*慧"
+      },
+      {
+        "ym": "2025-05",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市同济医院",
+        "no": "XL24E16",
+        "code": "A1E0055",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数体积不够不合格",
+        "patient": "陈*松"
+      },
+      {
+        "ym": "2025-06",
+        "am": "李磊",
+        "prov": "重庆市",
+        "hosp": "重庆大学附属肿瘤医院",
+        "no": "XL25Y01",
+        "code": "A1E0100",
+        "cat": "第一次生产失败",
+        "note": "D11收获液CD3+CAR+细胞比例7.7%，细胞数不足，不符合质量标准",
+        "patient": "余*"
+      },
+      {
+        "ym": "2025-06",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市曜影医院",
+        "no": "XL25F69",
+        "code": "A1E0102",
+        "cat": "第一次生产失败",
+        "note": "细胞数远远不够 转效仅2.6%,D11细胞数不足，终止生产",
+        "patient": "H*N F*S D*A"
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL25T53",
+        "code": "A1E0111",
+        "cat": "PBMC 分选失败",
+        "note": "PBMC细胞不足1袋 单采血仅1476M 分选后453M",
+        "patient": "刘*春"
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL25T53",
+        "code": "A1E0131",
+        "cat": "PBMC 分选失败",
+        "note": "PBMC细胞不足1袋 单采血仅980M 分选后311M",
+        "patient": "刘*春"
+      },
+      {
+        "ym": "2025-06",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL25H48",
+        "code": "A1E0119",
+        "cat": "PBMC 分选失败",
+        "note": "PBMC细胞不足1袋 单采血仅775M",
+        "patient": "林*富"
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL25V70",
+        "code": "A1E0129",
+        "cat": "PBMC 分选失败",
+        "note": "PBMC细胞不足1袋 单采血仅200M",
+        "patient": "李*芳"
+      },
+      {
+        "ym": "2025-06",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "南京鼓楼医院",
+        "no": "XL24E23",
+        "code": "A1D0273",
+        "cat": "第一次生产失败",
+        "note": "活率为69%，不符合质量标准≥70%",
+        "patient": "周*荣"
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵蕊",
+        "prov": "吉林省",
+        "hosp": "吉林大学第一医院",
+        "no": "XL25J77",
+        "code": "A1E0114",
+        "cat": "第一次生产失败",
+        "note": "CD3+CAR+细胞比例14.4%",
+        "patient": "陈*宝"
+      },
+      {
+        "ym": "2025-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属邵逸夫医院",
+        "no": "XL25C47",
+        "code": "A1E0115",
+        "cat": "第一次生产失败",
+        "note": "收获液转效13.8%，细胞数不足",
+        "patient": "黄*利"
+      },
+      {
+        "ym": "2025-07",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL25H48",
+        "code": "A1E0162",
+        "cat": "PBMC 分选失败",
+        "note": "单采血计数活细胞总数1.4E9个，低于标准≥1.5E9个，PBMC不足1袋",
+        "patient": "林*富"
+      },
+      {
+        "ym": "2025-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "天津医科大学肿瘤医院（空港院区）",
+        "no": "XL25X32",
+        "code": "A1E0161",
+        "cat": "PBMC 分选失败",
+        "note": "断电，PBMC不足1袋",
+        "patient": "李*生"
+      },
+      {
+        "ym": "2025-08",
+        "am": "HK_AM1",
+        "prov": "香港",
+        "hosp": "玛丽医院（Queen Mary Hospital）",
+        "no": "XL25Z63",
+        "code": "A1E0147",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数体积不够不合格",
+        "patient": "L*M"
+      },
+      {
+        "ym": "2025-08",
+        "am": "李磊",
+        "prov": "重庆市",
+        "hosp": "重庆大学附属肿瘤医院",
+        "no": "XL25Y01",
+        "code": "A1E0167",
+        "cat": "二次生产失败",
+        "note": "二次单采 收获液CD3+CAR+细胞比例13.3%",
+        "patient": "余*"
+      },
+      {
+        "ym": "2025-08",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL25K55",
+        "code": "A1E0180",
+        "cat": "PBMC 分选失败",
+        "note": "设备故障，PBMC不足1袋",
+        "patient": "张*"
+      },
+      {
+        "ym": "2025-08",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "hosp": "华中科技大学同济医学院附属协和医院",
+        "no": "XL25H28",
+        "code": "A1E0187",
+        "cat": "PBMC 分选失败",
+        "note": "PBMC细胞不足1袋 单采血1500M 分选后297M",
+        "patient": "胡*波"
+      },
+      {
+        "ym": "2025-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海复旦大学附属中山医院",
+        "no": "XL25P34",
+        "code": "A1E0123",
+        "cat": "第一次生产失败",
+        "note": "磁珠残留不合格",
+        "patient": "顾*骏"
+      },
+      {
+        "ym": "2025-08",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属邵逸夫医院",
+        "no": "XL25C47",
+        "code": "A1E0145",
+        "cat": "二次生产失败",
+        "note": "二次单采,收获液转效9.9%，细胞数不足",
+        "patient": "黄*利"
+      },
+      {
+        "ym": "2025-08",
+        "am": "赵蕊",
+        "prov": "吉林省",
+        "hosp": "吉林大学第一医院",
+        "no": "XL25J77",
+        "code": "A1E0163",
+        "cat": "二次生产失败",
+        "note": "二次单采,CD3+CAR+细胞比例14.1%、磁珠残留不合格",
+        "patient": "陈*宝"
+      },
+      {
+        "ym": "2025-09",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海复旦大学附属中山医院",
+        "no": "XL25P34",
+        "code": "A1E0209",
+        "cat": "二次生产失败",
+        "note": "二次单采,细胞数不足",
+        "patient": "顾*骏"
+      },
+      {
+        "ym": "2025-10",
+        "am": "赵蕊",
+        "prov": "吉林省",
+        "hosp": "吉林大学第一医院",
+        "no": "XL25Y70",
+        "code": "A1E0198",
+        "cat": "第一次生产失败",
+        "note": "D5细胞数不足，终止生产",
+        "patient": "马*"
+      },
+      {
+        "ym": "2026-01",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市曜影医院",
+        "no": "XL25R84",
+        "code": "9009125000046",
+        "cat": "第一次生产失败",
+        "note": "活率为69%，不符合质量标准≥70%",
+        "patient": "S*E S*Y"
+      },
+      {
+        "ym": "2026-01",
+        "am": "董硕",
+        "prov": "浙江省",
+        "hosp": "浙江大学医学院附属第一医院（余杭院区）",
+        "no": "XL26F68",
+        "code": "9009126000009",
+        "cat": "第一次生产失败",
+        "note": "收获液转效11.4%，细胞数不足",
+        "patient": "郑*敏"
+      },
+      {
+        "ym": "2026-02",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL26W44",
+        "code": "9009126000045",
+        "cat": "PBMC 分选失败",
+        "note": "单采血活细胞总数为1.3*10^9个（标准≥1.5*10^9）。分选后活细胞总数481.58*10^6个，不足1袋PBMC（5.0*10^8）",
+        "patient": "王*林"
+      },
+      {
+        "ym": "2026-03",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海交通大学医学院附属瑞金医院",
+        "no": "XL25W47",
+        "code": "9009125000051",
+        "cat": "第一次生产失败",
+        "note": "活率为69%，不符合质量标准≥70%",
+        "patient": "黄*方"
+      },
+      {
+        "ym": "2026-03",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "东莞市人民医院",
+        "no": "XL26A12",
+        "code": "9009126000036",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "袁*如"
+      },
+      {
+        "ym": "2026-03",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "苏州大学附属第一医院",
+        "no": "XL26C62",
+        "code": "9009126000058",
+        "cat": "PBMC 分选失败",
+        "note": "PBMC细胞不足1袋",
+        "patient": "孙*义"
+      },
+      {
+        "ym": "2026-04",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "东莞市人民医院",
+        "no": "XL26A12",
+        "code": "9009126000107",
+        "cat": "二次生产失败",
+        "note": "Day11 CAR-T细胞培养工序活细胞总数为102.33×10^6个，远低于单袋制剂制备需求数量（709.09×10^6个）",
+        "patient": "袁*如"
+      },
+      {
+        "ym": "2026-04",
+        "am": "李磊",
+        "prov": "四川省",
+        "hosp": "四川大学华西医院",
+        "no": "XL26B58",
+        "code": "9009126000117",
+        "cat": "第一次生产失败",
+        "note": "Day2细胞总数为2.90×10^5个，远低于中控标准（1×10^7个），生产失败",
+        "patient": "冯*芬"
+      },
+      {
+        "ym": "2026-04",
+        "am": "李磊",
+        "prov": "重庆市",
+        "hosp": "中国人民解放军陆军特色医学中心（大坪医院）",
+        "no": "XL26A47",
+        "code": "9009126000061",
+        "cat": "第一次生产失败",
+        "note": "成品细胞活率检测结果为66%，不符合质量标准（≥70%）。",
+        "patient": "王*秀"
+      },
+      {
+        "ym": "2026-05",
+        "am": "龚卉",
+        "prov": "湖北省",
+        "hosp": "华中科技大学同济医学院附属同济医院",
+        "no": "XL26J50",
+        "code": "9009126000119",
+        "cat": "第一次生产失败",
+        "note": "D11细胞数不足，终止生产",
+        "patient": "孔*琴"
+      },
+      {
+        "ym": "2026-06",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL26C57",
+        "code": "9009126000173",
+        "cat": "第一次生产失败",
+        "note": "6.30 IFN-γ检测结果为13，不符合质量标准（≥14）",
+        "patient": "钟*发"
+      },
+      {
+        "ym": "2026-07",
+        "am": "赵蕊",
+        "prov": "天津市",
+        "hosp": "中国医学科学院血液病医院",
+        "no": "XL26C57",
+        "code": "9009126000194",
+        "cat": "二次生产失败",
+        "note": "7.21 制剂制备工序活细胞总数为734.40×10^6个，该细胞数可配制的半成品体积为48.7ml，不满足半成品最小配制体积（54.6ml）要求，该批生产失败",
+        "patient": "钟*发"
+      },
+      {
+        "ym": "2026-08",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "深圳市第二人民医院（深圳大学第一附属医院）",
+        "no": "XL26F10",
+        "code": "9009126000180",
+        "cat": "第一次生产失败",
+        "note": "8.26 生产失败 剩余PBMC进行二次生产",
+        "patient": "胡*"
+      },
+      {
+        "ym": "2026-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海仁济医院",
+        "no": "XL26N12",
+        "code": "9009126000202",
+        "cat": "第一次生产失败",
+        "note": "0812：伊基奥仑赛注射液（批号：A1AF0194）成品CD3+CAR+细胞含量检测结果为150%标示量，不满足质量标准要求（70%-130%标示量）",
+        "patient": "S*A C*E F*Y"
+      },
+      {
+        "ym": "2026-08",
+        "am": "高威龙",
+        "prov": "上海市",
+        "hosp": "上海市曜影医院",
+        "no": "XL26F43",
+        "code": "9009126000210",
+        "cat": "二次生产失败",
+        "note": "8,14:D11活细胞总数（281.52×106个）计算出可配制的半成品体积为21.0ml，不满足最小配制体积（54.6ml）要求， A1E0102退款后的二次单采",
+        "patient": "H*N F*S D*A"
+      },
+      {
+        "ym": "2026-08",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "中山大学附属第一医院",
+        "no": "XL26M00",
+        "code": "9009126000234",
+        "cat": "第一次生产失败",
+        "note": "8.30 D11细胞数不足",
+        "patient": "贺*莲"
+      },
+      {
+        "ym": "2026-09",
+        "am": "赵俊兴",
+        "prov": "江苏省",
+        "hosp": "苏州大学附属第一医院",
+        "no": "XL26J55",
+        "code": "9009126000262",
+        "cat": "第一次生产失败",
+        "note": "9.22 含量不合格",
+        "patient": "张*"
+      },
+      {
+        "ym": "2026-09",
+        "am": "兰明金",
+        "prov": "广东省",
+        "hosp": "中山大学附属第一医院",
+        "no": "XL26T77",
+        "code": "9009126000269",
+        "cat": "第一次生产失败",
+        "note": "Day5生产管路在B级暴露，终止生产",
+        "patient": "张*"
+      },
+      {
+        "ym": "2026-09",
+        "am": "龚卉",
+        "prov": "陕西省",
+        "hosp": "空军军医大学西京医院",
+        "no": "XL26X86",
+        "code": "9009126000267",
+        "cat": "PBMC 分选失败",
+        "note": "分选不足1袋",
+        "patient": "贾*珍"
       }
     ]
   }

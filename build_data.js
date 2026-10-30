@@ -378,9 +378,9 @@ records.forEach(function(r) {
   }
 });
 
-// ── 8h. YTD 异常订单（异常订单.xlsx 当年累计：PBMC分选失败+第一次+第二次生产失败） ──
-var abnPath = path.join(rawDir, '异常订单.xlsx');
-if (!fs.existsSync(abnPath)) abnPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '异常订单.xlsx');
+// ── 8h. YTD 异常订单（生产异常订单.xlsx 当年累计：PBMC分选失败+第一次+第二次生产失败） ──
+var abnPath = path.join(rawDir, '生产异常订单.xlsx');
+if (!fs.existsSync(abnPath)) abnPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '生产异常订单.xlsx');
 var abnWb = XLSX.readFile(abnPath);
 var abnRows = XLSX.utils.sheet_to_json(abnWb.Sheets[abnWb.SheetNames[0]], { header: 1 });
 var abnPbmc = 0, abnFirst = 0, abnSecond = 0;
@@ -943,9 +943,9 @@ var ABN_SHEET_CFG = {
 };
 var abnManual = {}; // key → { 合同号 → {reason, action, planTime} }
 (function () {
-  var abnPath = path.join(rawDir, '异常订单管理.xlsx');
-  if (!fs.existsSync(abnPath)) abnPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '异常订单管理.xlsx');
-  if (!fs.existsSync(abnPath)) { console.warn('⚠️ 未找到 异常订单管理.xlsx，人工字段将留空'); return; }
+  var abnPath = path.join(rawDir, '运营异常订单管理.xlsx');
+  if (!fs.existsSync(abnPath)) abnPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '运营异常订单管理.xlsx');
+  if (!fs.existsSync(abnPath)) { console.warn('⚠️ 未找到 运营异常订单管理.xlsx，人工字段将留空'); return; }
   try {
     var abnWb = XLSX.readFile(abnPath);
     Object.keys(ABN_SHEET_CFG).forEach(function (k) {
@@ -966,7 +966,7 @@ var abnManual = {}; // key → { 合同号 → {reason, action, planTime} }
       abnManual[k] = map;
     });
     console.log('异常订单管理人工字段:', Object.keys(abnManual).map(function (k) { return k + '=' + Object.keys(abnManual[k]).length; }).join(' / '));
-  } catch (e) { console.warn('⚠️ 读取 异常订单管理.xlsx 失败:', e.message); }
+  } catch (e) { console.warn('⚠️ 读取 运营异常订单管理.xlsx 失败:', e.message); }
 })();
 ['nosample', 'noproduction', 'noreinfusion'].forEach(function (k) { if (!abnManual[k]) abnManual[k] = {}; });
 
@@ -1703,6 +1703,160 @@ try {
   console.error('⚠️ 读取 China Solution 数据失败:', e.message);
 }
 
+// ── 8w. 惠民保 & 商保：order dict「惠民保」「商业保险」列 + 名称映射表 ──
+// 口径（2026-10-30 用户确认）：
+//   ① 列非空即计入（含「职工保」）；两列独立判定，同时命中则两边都算
+//   ② 组合值按 + & 、 拆开，分别计入各自名称
+//   ③ 名称先过映射表归一；映射表里没有的名称原样保留并打警告
+var INSURANCE = { at: '', months: [], denom: {}, rows: [], amList: [], unmapped: { hb: [], bx: [] } };
+(function () {
+  // ① 名称映射表
+  var mapPath = path.join(rawDir, '惠民保商保名称映射.xlsx');
+  if (!fs.existsSync(mapPath)) mapPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '惠民保商保名称映射.xlsx');
+  var nameMap = { hb: {}, bx: {} }, known = { hb: {}, bx: {} };
+  if (fs.existsSync(mapPath)) {
+    var mWb = XLSX.readFile(mapPath);
+    var mAoa = XLSX.utils.sheet_to_json(mWb.Sheets[mWb.SheetNames[0]], { header: 1, defval: '' });
+    var mH = (mAoa[0] || []).map(function (h) { return String(h).trim(); });
+    var iT = mH.indexOf('类型'), iO = mH.indexOf('原始名称'), iS = mH.indexOf('标准名称');
+    for (var i = 1; i < mAoa.length; i++) {
+      var mr = mAoa[i] || [];
+      var mt = String(mr[iT] || '').trim(), mo = String(mr[iO] || '').trim(), ms = String(mr[iS] || '').trim();
+      if (!mo) continue;
+      var mk = (mt === '惠民保') ? 'hb' : 'bx';
+      nameMap[mk][mo] = ms || mo;
+      known[mk][mo] = true;
+    }
+    INSURANCE.at = fmtDT(fs.statSync(mapPath).mtime);
+  } else {
+    console.warn('⚠️ 未找到 惠民保商保名称映射.xlsx，名称将不做归一');
+  }
+
+  // ② 订单号 → 下单月/AM/省市
+  var recByNo = {};
+  records.forEach(function (r) {
+    recByNo[r.no] = { ym: (r.od ? r.od.slice(0, 7) : ''), prov: r.prov || '', city: r.city || '' };
+  });
+  var dictAM = {};
+  dictRows.slice(1).forEach(function (r) {
+    var no = String(r[1] || '').trim();
+    if (no) dictAM[no] = String(r[3] || '').trim();
+  });
+
+  function splitIns(v) {
+    return String(v || '').split(/[+&＆、,，\/]/).map(function (s) { return s.trim(); }).filter(Boolean);
+  }
+  function canon(k, n) {
+    if (nameMap[k][n]) return nameMap[k][n];
+    if (!known[k][n] && INSURANCE.unmapped[k].indexOf(n) < 0) INSURANCE.unmapped[k].push(n);
+    return n;
+  }
+
+  var amSet = {}, monSet = {};
+  var denomTmp = {};
+  dictRows.slice(1).forEach(function (r) {
+    var no = String(r[1] || '').trim();
+    if (!no) return;
+    var rec = recByNo[no];
+    if (!rec || !rec.ym) return;                       // 无下单时间的不计入
+    var am = amClean[dictAM[no]] || dictAM[no] || '';
+    if (am) amSet[am] = true;
+    monSet[rec.ym] = true;
+    var dk = rec.ym + '|' + am + '|' + (rec.prov || '未知') + '|' + (rec.city || '未知');
+    denomTmp[dk] = (denomTmp[dk] || 0) + 1;
+
+    var hbN = splitIns(r[4]).map(function (n) { return canon('hb', n); });
+    var bxN = splitIns(r[5]).map(function (n) { return canon('bx', n); });
+    if (!hbN.length && !bxN.length) return;
+    INSURANCE.rows.push({
+      ym: rec.ym, am: am, prov: rec.prov || '未知', city: rec.city || '未知',
+      hb: hbN, bx: bxN
+    });
+  });
+  INSURANCE.denom = denomTmp;
+  INSURANCE.months = Object.keys(monSet).sort();
+  INSURANCE.amList = Object.keys(amSet).sort();
+
+  var hbCnt = 0, bxCnt = 0;
+  INSURANCE.rows.forEach(function (r) { if (r.hb.length) hbCnt++; if (r.bx.length) bxCnt++; });
+  console.log('惠民保/商保: 总订单 ' + Object.keys(recByNo).length + ' 单 | 惠民保 ' + hbCnt + ' | 商保 ' + bxCnt +
+    ' | 月份 ' + INSURANCE.months.length + ' | AM ' + INSURANCE.amList.length);
+  if (INSURANCE.unmapped.hb.length) console.warn('⚠️ 惠民保未登记名称(' + INSURANCE.unmapped.hb.length + '): ' + INSURANCE.unmapped.hb.join('、'));
+  if (INSURANCE.unmapped.bx.length) console.warn('⚠️ 商保未登记名称(' + INSURANCE.unmapped.bx.length + '): ' + INSURANCE.unmapped.bx.join('、'));
+})();
+
+// ── 8x. 生产异常订单：生产异常订单.xlsx Sheet2（逐单明细） ──
+// 分类：PBMC分选失败 / 第一次生产失败 / 二次生产失败（展示统一为「PBMC 分选失败」）
+var PROD_ABN = { at: '', cats: ['PBMC 分选失败', '第一次生产失败', '二次生产失败'], months: [], monthly: {}, rows: [] };
+try {
+  var paPath = path.join(rawDir, '生产异常订单.xlsx');
+  if (!fs.existsSync(paPath)) paPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '生产异常订单.xlsx');
+  var paWb = XLSX.readFile(paPath);
+  PROD_ABN.at = fmtDT(fs.statSync(paPath).mtime);
+  var paAoa = XLSX.utils.sheet_to_json(paWb.Sheets['Sheet2'], { header: 1, defval: '' });
+  var paH = (paAoa[0] || []).map(function (h) { return String(h).replace(/[\r\n\s]/g, ''); });
+  var pI = {
+    no: paH.indexOf('销售订单'), code: paH.indexOf('追溯码'), ym: paH.indexOf('年月'),
+    cat: paH.indexOf('分类'), note: paH.indexOf('最新更新信息'),
+    prov: paH.indexOf('区域'), hospShort: paH.indexOf('单采医院简称'), area: paH.indexOf('二次类型')
+  };
+  var CAT_MAP = { 'PBMC分选失败': 'PBMC 分选失败', '第一次生产失败': '第一次生产失败', '二次生产失败': '二次生产失败' };
+  var recByNo2 = {}, dictAM2 = {};
+  records.forEach(function (r) { recByNo2[r.no] = r; });
+  dictRows.slice(1).forEach(function (r) { var no = String(r[1] || '').trim(); if (no) dictAM2[no] = String(r[3] || '').trim(); });
+
+  var monSet2 = {};
+  for (var pi = 1; pi < paAoa.length; pi++) {
+    var pr = paAoa[pi];
+    if (!pr) continue;
+    var pno = String(pr[pI.no] || '').trim();
+    if (!pno) continue;
+    var pymRaw = String(pr[pI.ym] || '').trim();
+    if (!/^\d{6}$/.test(pymRaw)) continue;
+    var pym = pymRaw.slice(0, 4) + '-' + pymRaw.slice(4, 6);
+    var pcatRaw = String(pr[pI.cat] || '').trim();
+    var pcat = CAT_MAP[pcatRaw];
+    if (!pcat) { console.warn('⚠️ 生产异常未知分类: ' + pcatRaw + '（订单 ' + pno + '）'); continue; }
+    var rec2 = recByNo2[pno];
+    var ram = amClean[dictAM2[pno]] || dictAM2[pno] || '';
+    var pprov = rec2 ? (rec2.prov || '') : String(pr[pI.prov] || '').trim();
+    var phosp = rec2 ? (rec2.hosp || '') : String(pr[pI.hospShort] || '').trim();
+    monSet2[pym] = true;
+    PROD_ABN.rows.push({
+      ym: pym,
+      am: ram || '未知',
+      prov: pprov || String(pr[pI.prov] || '').trim() || '未知',
+      hosp: phosp || '未知',
+      no: pno,
+      code: String(pr[pI.code] || '').trim(),
+      cat: pcat,
+      note: String(pr[pI.note] || '').replace(/[\r\n]+/g, ' ').trim(),
+      patient: rec2 ? (rec2.patient || '') : ''            // records.patient 已脱敏
+    });
+  }
+  // 连续月份
+  var mAll = Object.keys(monSet2).sort();
+  if (mAll.length) {
+    var y0 = +mAll[0].slice(0, 4), m0 = +mAll[0].slice(5, 7);
+    var y1 = +mAll[mAll.length - 1].slice(0, 4), m1 = +mAll[mAll.length - 1].slice(5, 7);
+    for (var yy = y0, mm = m0; yy < y1 || (yy === y1 && mm <= m1);) {
+      PROD_ABN.months.push(yy + '-' + String(mm).padStart(2, '0'));
+      mm++; if (mm > 12) { mm = 1; yy++; }
+    }
+    PROD_ABN.months.forEach(function (k) { PROD_ABN.monthly[k] = [0, 0, 0]; });
+    PROD_ABN.rows.forEach(function (r) {
+      var ci2 = PROD_ABN.cats.indexOf(r.cat);
+      if (ci2 >= 0 && PROD_ABN.monthly[r.ym]) PROD_ABN.monthly[r.ym][ci2]++;
+    });
+  }
+  var pSum = [0, 0, 0];
+  PROD_ABN.rows.forEach(function (r) { var k = PROD_ABN.cats.indexOf(r.cat); if (k >= 0) pSum[k]++; });
+  console.log('生产异常: ' + PROD_ABN.rows.length + ' 条 | PBMC ' + pSum[0] + ' / 第一次 ' + pSum[1] + ' / 二次 ' + pSum[2] +
+    ' | 月份 ' + PROD_ABN.months.length + ' | 唯一订单 ' + Object.keys(PROD_ABN.rows.reduce(function (o, r) { o[r.no] = 1; return o; }, {})).length);
+} catch (e) {
+  console.error('⚠️ 读取 生产异常订单.xlsx Sheet2 失败:', e.message);
+}
+
 // ── 10. 输出 js/data.js（页面直接 <script> 引用） ──
 (async function () {
 await buildSummaries();
@@ -1737,7 +1891,9 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     REGION3_AI: REGION3_AI,
     COE_PAGES: COE_PAGES,
     CANCEL_MGMT: CANCEL_MGMT,
-    CS_BIZ: CS_BIZ
+    CS_BIZ: CS_BIZ,
+    INSURANCE: INSURANCE,
+    PROD_ABN: PROD_ABN
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');

@@ -31,6 +31,12 @@
         { id: 'page25.html', key: 'reinf_wait', num: 'P25', name: '回输等待期管理' },
         { id: 'page8.html', key: 'reserved', num: 'P26', name: '预留' },
         { id: 'page26.html', key: 'cs_biz', num: 'P27', name: 'China Solution 业务' },
+        { id: 'page27.html', key: 'ins_hb', num: 'P28', name: '惠民保管理' },
+        { id: 'page28.html', key: 'ins_bx', num: 'P29', name: '商保管理' },
+        { id: 'page29.html', key: 'ins_name', num: 'P30', name: '惠民保 & 商保名称统计' },
+        { id: 'page30.html', key: 'pabn_sum', num: 'P31', name: '生产异常订单管理' },
+        { id: 'page31.html', key: 'pabn_hosp', num: 'P32', name: '医院生产异常订单' },
+        { id: 'page32.html', key: 'pabn_list', num: 'P33', name: '生产异常订单明细' },
     ];
     var PAGES = window.BOARD_PAGES;
     var PER = 4; // 每屏最多 4 项
@@ -101,6 +107,12 @@
         'page24.html': '<svg viewBox="0 0 24 24"><path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7c0-1.1-.9-2-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z"/></svg>',
         'page25.html': '<svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>',
         'page7.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>',
+        'page28.html': '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>',
+        'page29.html': '<svg viewBox="0 0 24 24"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg>',
+        'page31.html': '<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>',
+        'page32.html': '<svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>',
+        'page30.html': '<svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>',
+        'page27.html': '<svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>',
         'page26.html': '<svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>',
         'page8.html': '<svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>'
     };
@@ -112,8 +124,10 @@
         { label: '海外业务', iconId: 'page3.html', keys: ['reg', 'sales', 'channels', 'cs_biz'] },
         { label: '每日跟进', iconId: 'page9.html', keys: ['daily30', 'cart_daily', 'overdue'] },
         { label: '辖区管理', iconId: 'page5.html', keys: ['region2', 'region3', 'region4', 'coe_scoe', 'coe_coe', 'coe_rcoe'] },
+        { label: '惠民保 & 商保管理', iconId: 'page27.html', keys: ['ins_hb', 'ins_bx', 'ins_name'] },
         { label: '订单生产运营管理', iconId: 'page23.html', keys: ['prod_wait', 'prod_cycle', 'reinf_wait'] },
-        { label: '异常订单管理', iconId: 'page11.html', keys: ['abn_nosample', 'abn_noproduction', 'abn_noreinfusion'] },
+        { label: '运营异常订单管理', iconId: 'page11.html', keys: ['abn_nosample', 'abn_noproduction', 'abn_noreinfusion'] },
+        { label: '生产异常订单管理', iconId: 'page30.html', keys: ['pabn_sum', 'pabn_hosp', 'pabn_list'] },
         { label: '取消订单管理', iconId: 'cancel.html', keys: ['cancel_ytd', 'cancel_all', 'cancel_hosp'] },
         { label: '彩蛋', iconId: 'page8.html', keys: ['reserved'] },
         { label: '系统', iconId: 'page7.html', keys: ['admin'] }

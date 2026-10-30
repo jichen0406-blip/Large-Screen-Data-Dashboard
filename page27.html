@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>福可苏业绩总览 · 惠民保管理</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/geo-data.js"></script>
+<script type="text/javascript" src="js/insurance.js"></script>
+<link rel="stylesheet" href="css/style.css">
+	<style>
+	/* 不加固定 min-height：id 级尺寸会压过 .page-fill 的 flex 链（§10.4） */
+	.ins-bar{ display:flex; align-items:center; gap:10px; margin:14px 0 0; padding:10px 16px; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.4), 0 0 14px rgba(47,137,207,.2); background: rgba(2,24,61,.3); flex-wrap:wrap; flex:0 0 auto; }
+	.ins-bar-tit{ font-size:15px; color:#daf9ff; letter-spacing:2px; white-space:nowrap; }
+	.ins-sep{ color:rgba(159,232,255,.75); font-size:14px; }
+	.ins-bar .pt-time-note{ margin-left:auto; font-size:12px; color:rgba(255,255,255,.5); white-space:nowrap; }
+	.ins-kpigrid{ flex:0 0 auto; margin:10px 0 0; flex-wrap:nowrap; }
+	.ins-kpigrid .kpi-card{ padding:9px 14px; }
+	.ins-kpigrid .kc-val{ font-size:26px; }
+	.ins-kpigrid .kc-val small{ font-size:13px; font-weight:400; color:rgba(159,232,255,.75); margin-left:3px; }
+	.ins-body{ flex:1; min-height:0; display:flex; gap:12px; margin:10px 0 10px; }
+	.ins-mapbox{ flex:3 1 0; min-width:0; min-height:0; display:flex; flex-direction:column; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 12px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:6px 12px 8px; }
+	.ins-tblbox{ flex:2 1 0; min-width:0; min-height:0; display:flex; flex-direction:column; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 10px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:8px 12px 10px; }
+	.ins-tblbox .pt-tbl-wrap{ flex:1; min-height:0; max-height:none; }
+	.ins-tblbox table.pt{ min-width:0; font-size:12px; }
+	.ins-tblbox table.pt th, .ins-tblbox table.pt td{ padding:3px 4px; }
+	.ins-crumb{ display:flex; align-items:center; gap:8px; font-size:13px; color:rgba(223,244,255,.85); margin:2px 0 4px; flex:0 0 auto; }
+	.ins-crumb a{ color:#4fe3ff; text-decoration:none; }
+	.ins-crumb a:hover{ text-decoration:underline; }
+	.ins-crumb .sep{ color:rgba(255,255,255,.35); }
+	.ins-crumb b{ color:#fff; }
+	.ins-crumb .hint{ color:rgba(255,255,255,.45); font-size:12px; }
+	.ins-map{ flex:1; min-height:0; }
+	.ins-empty{ display:flex; align-items:center; justify-content:center; height:100%; color:rgba(255,255,255,.45); font-size:13px; }
+	.fs-body .ins-map{ width:100%; height:100%; }
+	.ins-modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:9000; }
+	.ins-modal-mask{ position:absolute; inset:0; background:rgba(2,12,30,.72); }
+	.ins-modal-box{ position:relative; width:min(1100px,88vw); height:min(680px,84vh); display:flex; flex-direction:column; background:linear-gradient(180deg, rgba(6,32,62,.98), rgba(2,18,40,.98)); border:1px solid rgba(47,137,207,.75); border-radius:10px; box-shadow:0 0 40px rgba(47,137,207,.45); overflow:hidden; }
+	.ins-modal-hd{ flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 16px; border-bottom:1px solid rgba(47,137,207,.35); }
+	.ins-modal-hd span{ font-size:16px; color:#daf9ff; letter-spacing:1px; font-weight:700; }
+	.ins-modal-close{ width:30px; height:30px; border:none; border-radius:6px; background:rgba(47,137,207,.2); color:#9fe8ff; font-size:20px; line-height:1; cursor:pointer; }
+	.ins-modal-close:hover{ background:rgba(47,137,207,.45); color:#fff; }
+	.ins-modal-body{ flex:1; min-height:0; display:flex; gap:10px; padding:10px; }
+	.ins-modal-map{ flex:3 1 0; min-width:0; min-height:0; }
+	.ins-modal-list{ flex:1 1 0; min-width:0; overflow:auto; border-left:1px solid rgba(47,137,207,.25); padding-left:10px; }
+	.iml-hd{ font-size:12px; color:rgba(159,232,255,.75); letter-spacing:1px; padding:2px 0 8px; border-bottom:1px solid rgba(47,137,207,.3); margin-bottom:6px; }
+	.iml-row{ display:flex; align-items:center; justify-content:space-between; padding:5px 2px; border-bottom:1px dashed rgba(47,137,207,.18); font-size:13px; }
+	.iml-n{ color:#dff4ff; }
+	.iml-v{ color:#4fe3ff; font-weight:700; font-variant-numeric:tabular-nums; }
+	.iml-v.zero{ color:rgba(255,255,255,.35); font-weight:400; }
+	</style>
+	<script>window.INS_CFG = { key: 'hb', title: '惠民保' };</script>
+	<script>window.PAGE_KEY='ins_hb';</script>
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
+</head>
+<body>
+	<div class="login-mask" id="loginMask">
+	<div class="login-body">
+		<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
+		<div class="login-center">
+			<div class="login-shuzibg"></div>
+			<div class="login-title">
+				<img class="login-logo" src="images/logo-white.png" alt="驯鹿生物">
+				<p class="login-title-main">驯鹿生物大数据监控平台</p>
+				<p class="login-title-sub">登录页</p>
+			</div>
+			<div class="login-card">
+				<div class="login-welcome">欢迎登录系统!</div>
+				<div class="login-input">
+					<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+					<input type="text" id="loginUser" placeholder="请输入账号" value="administrator" autocomplete="off">
+				</div>
+				<div class="login-input">
+					<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+					<input type="password" id="loginPwd" placeholder="密码" autocomplete="off">
+				</div>
+				<label class="login-remember"><input type="checkbox" id="loginRemember"><span>记住密码</span></label>
+				<div class="login-err" id="loginErr"></div>
+				<div class="login-btn" id="loginBtn"><span>登 录</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="login-bolang"></div>
+</div><div class="head clearfix">
+		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
+		<div class="head-left">
+			<div class="update">数据更新时间 <span id="insUpd">--</span></div>
+			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
+		</div>
+		<div class="tm-wrap">
+			<div class="time" id="showTime">--</div>
+			<div class="weather" id="weather">上海 --</div>
+		</div>
+		<script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
+	</div>
+	<div class="mainbox page-fill">
+		<div class="ins-bar">
+			<span class="ins-bar-tit">时间区间</span>
+			<select id="insY1" class="pt-sel" title="起始年"></select>
+			<select id="insM1" class="pt-sel" title="起始月"></select>
+			<span class="ins-sep">~</span>
+			<select id="insY2" class="pt-sel" title="结束年"></select>
+			<select id="insM2" class="pt-sel" title="结束月"></select>
+			<span class="ins-sep">|</span>
+			<span class="ins-bar-tit">AM</span>
+			<select id="insAM" class="pt-sel" title="AM"></select>
+			<span class="pt-time-note">按「下单」口径归属月份与 AM</span>
+		</div>
+		<div class="kpi-grid ins-kpigrid" id="insKpi"></div>
+		<div class="ins-body">
+		<div class="ins-mapbox">
+			<div class="sec-head">惠民保渗透地图 <span class="sub">圆大小 = 订单数</span><button class="map-fs" type="button" data-fs="insMap" data-title="惠民保渗透地图">⛶</button></div>
+			<div class="ins-crumb" id="insCrumb"></div>
+			<div class="ins-map" id="insMap"></div>
+		</div>
+		<div class="ins-tblbox">
+			<div class="sec-head" data-xls="insTbl" data-xls-title="惠民保明细">惠民保明细 <span class="sub" id="insTblSub"></span></div>
+			<div class="pt-tbl-wrap" id="insTbl"></div>
+		</div>
+		</div>
+	</div>
+	<div class="ins-modal" id="insModal">
+		<div class="ins-modal-mask" id="insModalMask"></div>
+		<div class="ins-modal-box">
+			<div class="ins-modal-hd">
+				<span id="insModalTitle">城市分布</span>
+				<button class="ins-modal-close" id="insModalClose" type="button">×</button>
+			</div>
+			<div class="ins-modal-body">
+				<div class="ins-modal-map" id="insModalMap"></div>
+				<div class="ins-modal-list" id="insModalList"></div>
+			</div>
+		</div>
+	</div>
+	<div class="fs-mask" id="fsMask" style="display:none;">
+		<div class="fs-head">
+			<span class="fs-title" id="fsTitle">--</span>
+			<button class="fs-close" id="fsClose" type="button">×</button>
+		</div>
+		<div class="fs-body" id="fsBody"></div>
+	</div>
+	<div class="menu-mask" id="menuMask" style="display:none;">
+		<div class="menu-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit">网页导航</span>
+				<button class="menu-close" id="menuClose" type="button">×</button>
+			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
+		</div>
+	</div>
+	<script>
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		var I = B && B.INSURANCE;
+		$('#insUpd').text((I && I.at) ? I.at : ((B && B.UPDATED) ? B.UPDATED : '--'));
+	});
+	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
+	<script type="text/javascript" src="js/fs.js"></script>
+	<div class="side-nav" id="sideNav"></div>
+</body>
+</html>
