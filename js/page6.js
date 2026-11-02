@@ -49,16 +49,21 @@ $(function () {
         var acc = accumulate(y, m), rows = [];
         Object.keys(acc).forEach(function (key) {
             var v = acc[key];
-            if (!(v.o > 0 || v.r > 0)) return;
+            // 保留「今年或去年有活动」的医院：今年零活动的医院也必须留在行集里，
+            // 否则省份合计的去年基数会被截断，同比被高估（cur 标记今年是否有活动，明细表据此过滤）
+            if (!(v.o > 0 || v.r > 0 || v.lo > 0 || v.lr > 0)) return;
             var p = key.split('|');
-            rows.push({ am: p[0], prov: p[1], city: p[2], hosp: p[3], o: v.o, r: v.r, lo: v.lo, lr: v.lr });
+            rows.push({ am: p[0], prov: p[1], city: p[2], hosp: p[3], o: v.o, r: v.r, lo: v.lo, lr: v.lr,
+                        cur: (v.o > 0 || v.r > 0) });
         });
         return rows;
     }
 
     function renderTables() {
         var rows = currentRows();
-        renderHS(rows.slice()); // 传副本：renderHS 内部排序/加字段不影响省份表
+        // 医院明细：只列今年有活动的医院
+        renderHS(rows.filter(function (r) { return r.cur; }));
+        // 省份合计：用全量行（含今年零活动的医院），保证去年基数完整
         renderPV(rows);
     }
 
@@ -132,7 +137,8 @@ $(function () {
             var ams = AMS.filter(function (a) { return g.ams[a]; });
             Object.keys(g.ams).forEach(function (a) { if (ams.indexOf(a) < 0) ams.push(a); });
             return { prov: prov, ams: ams.join('、'), o: g.o, r: g.r, lo: g.lo, lr: g.lr, n: Object.keys(g.hosp).length };
-        }).sort(function (a, b) { return b.o - a.o || a.prov.localeCompare(b.prov, 'zh'); });
+        }).filter(function (g) { return g.o > 0 || g.r > 0; })   // 今年零活动的省份不显示（其去年基数已计入有活动的省份）
+          .sort(function (a, b) { return b.o - a.o || a.prov.localeCompare(b.prov, 'zh'); });
 
         var h = '<table class="pt"><thead><tr>' +
             '<th>AM</th><th>省份名称</th><th>下单医院数</th>' +
