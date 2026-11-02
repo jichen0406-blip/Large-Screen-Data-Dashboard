@@ -278,3 +278,61 @@
         }
     });
 })();
+
+// ── 全局缩放（body zoom .8）下的鼠标坐标补偿 ────────────────────────────
+// Chrome 的 CSS zoom 之后，getBoundingClientRect() / offsetX 返回的是「缩放后」的
+// 视觉坐标，而 ECharts(zrender) 的绘图坐标系仍是未缩放的 CSS 像素（offsetWidth），
+// 两者相差 1/zoom 倍，表现为点击/悬浮位置整体向左偏（约 20%）。
+// 这里在捕获阶段把 offsetX / offsetY 换算回未缩放坐标系，全站图表一次修好。
+(function () {
+    function fixCoord(ev) {
+        var t = ev.target;
+        if (!t || !t.getBoundingClientRect || ev.clientX == null) return;
+        var ow = t.offsetWidth, oh = t.offsetHeight;
+        if (!ow || !oh) return;
+        var r = t.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        var kx = ow / r.width, ky = oh / r.height;
+        if (Math.abs(kx - 1) < 0.002 && Math.abs(ky - 1) < 0.002) return; // 未缩放，不处理
+        var x = (ev.clientX - r.left) * kx;
+        var y = (ev.clientY - r.top) * ky;
+        try {
+            Object.defineProperty(ev, 'offsetX', { configurable: true, get: function () { return x; } });
+            Object.defineProperty(ev, 'offsetY', { configurable: true, get: function () { return y; } });
+        } catch (e) { }
+    }
+    ['mousemove', 'mousedown', 'mouseup', 'click', 'dblclick', 'contextmenu', 'mouseover', 'mouseout']
+        .forEach(function (n) { window.addEventListener(n, fixCoord, true); });
+
+    // 触屏：Touch 对象没有 offsetX，zrender 只能退回 clientX - rect.left，
+    // 拿到的仍是缩放后的坐标，同样会偏。这里把 Touch 自身的 clientX/clientY 换算回未缩放坐标系。
+    function patchTouch(tc, x, y) {
+        try {
+            tc.__zoomFixed = 1;
+            Object.defineProperty(tc, 'clientX', { configurable: true, get: function () { return x; } });
+            Object.defineProperty(tc, 'clientY', { configurable: true, get: function () { return y; } });
+        } catch (e) { }
+    }
+    function fixTouch(ev) {
+        var lists = [ev.touches, ev.targetTouches, ev.changedTouches];
+        for (var i = 0; i < lists.length; i++) {
+            var list = lists[i];
+            if (!list || !list.length) continue;
+            for (var j = 0; j < list.length; j++) {
+                var tc = list[j];
+                if (!tc || tc.__zoomFixed || tc.clientX == null) continue;
+                var t = tc.target || ev.target;
+                if (!t || !t.getBoundingClientRect) continue;
+                var ow = t.offsetWidth, oh = t.offsetHeight;
+                if (!ow || !oh) continue;
+                var r = t.getBoundingClientRect();
+                if (!r.width || !r.height) continue;
+                var kx = ow / r.width, ky = oh / r.height;
+                if (Math.abs(kx - 1) < 0.002 && Math.abs(ky - 1) < 0.002) continue; // 未缩放，不处理
+                patchTouch(tc, r.left + (tc.clientX - r.left) * kx, r.top + (tc.clientY - r.top) * ky);
+            }
+        }
+    }
+    ['touchstart', 'touchmove', 'touchend', 'touchcancel']
+        .forEach(function (n) { window.addEventListener(n, fixTouch, true); });
+})();
