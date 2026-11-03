@@ -11,7 +11,7 @@
         { id: 'page2.html', key: 'sales', num: 'P5', name: '福可苏-海外患者分布' },
         { id: 'page3.html', key: 'reg', num: 'P6', name: '福可苏-全球注册进度' },
         { id: 'page18.html', key: 'channels', num: 'P7', name: '福可苏-海外患者销量' },
-        { id: 'page4.html', key: 'region1', num: 'P8', name: '目标数据管理' },
+        { id: 'page4.html', key: 'region1', num: 'P8', name: '福可苏目标管理' },
         { id: 'page5.html', key: 'region2', num: 'P9', name: 'AM下单&回输数据' },
         { id: 'page6.html', key: 'region3', num: 'P10', name: '省份&医院数据' },
         { id: 'page22.html', key: 'region4', num: 'P11', name: '医院销量散点图' },
@@ -120,8 +120,8 @@
     // 新增页面若想进组，把它的 key 加进对应 keys 即可；不维护这里就显示在「其他」组里
     var NAV_GROUPS = [
         { label: '更新日志', iconId: 'changelog.html', keys: ['changelog'] },
-        { label: '总览', iconId: 'index.html', keys: ['index', 'flow', 'region1'] },
-        { label: '海外业务', iconId: 'page3.html', keys: ['reg', 'sales', 'channels', 'cs_biz'] },
+        { label: '业务总览', iconId: 'index.html', keys: ['index', 'flow', 'region1', 'cs_biz'] },
+        { label: '海外业务', iconId: 'page3.html', keys: ['reg', 'sales', 'channels'] },
         { label: '每日跟进', iconId: 'page9.html', keys: ['daily30', 'cart_daily', 'overdue'] },
         { label: '辖区管理', iconId: 'page5.html', keys: ['region2', 'region3', 'region4', 'coe_scoe', 'coe_coe', 'coe_rcoe'] },
         { label: '惠民保 & 商保管理', iconId: 'page27.html', keys: ['ins_hb', 'ins_bx', 'ins_name'] },

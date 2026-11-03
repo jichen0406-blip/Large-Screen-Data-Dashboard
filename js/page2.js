@@ -357,6 +357,10 @@ $(function () {
         });
     }
 
+    // 国家显示名：数据层沿用「中国」，海外商业化口径下展示为「中国大陆」（港澳台单列）
+    var CN_LABEL = { '中国': '中国大陆' };
+    function cnLabel(n) { return CN_LABEL[n] || n; }
+
     // 右侧表格：国家 × 导流分类（医生导流/OB导流/NPP/商业化），大洲/国家合并，固定 15 行
     function fillTblRight(id, countryCat) {
         var items = [];
@@ -392,7 +396,7 @@ $(function () {
                 names.forEach(function (cname) {
                     var clist = byCountry[cname].slice().sort(function (a, b) { return b.o - a.o; });
                     var conTd = first ? '<td rowspan="' + allList.length + '" class="p2-tbl-con">' + con + '</td>' : '';
-                    html += '<tr>' + conTd + '<td rowspan="' + clist.length + '">' + cname + '</td><td>' + clist[0].cat + '</td><td>' + clist[0].o + '</td><td>' + clist[0].r + '</td></tr>';
+                    html += '<tr>' + conTd + '<td rowspan="' + clist.length + '">' + cnLabel(cname) + '</td><td>' + clist[0].cat + '</td><td>' + clist[0].o + '</td><td>' + clist[0].r + '</td></tr>';
                     trCount++;
                     first = false;
                     for (var i = 1; i < clist.length; i++) {
@@ -422,7 +426,7 @@ $(function () {
     function openTop10(zh) {
         var top = curYear === 'all' ? OVERSEAS.TOP10.all : (OVERSEAS.TOP10.y[curYear] || {});
         var d = top[zh];
-        $('#p2Title').text(zh + ' · 海外商业化');
+        $('#p2Title').text(cnLabel(zh) + ' · 海外商业化');
         function fill(id, list) {
             if (!list || !list.length) { $('#' + id).html('<li class="prov-rank-empty">暂无数据</li>'); return; }
             var html = '';
