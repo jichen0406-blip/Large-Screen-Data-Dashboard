@@ -659,18 +659,20 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .cart-stack{ flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
 .cart-stack > .pt-tbl-col{ flex: 1; min-height: 0; }
 /* 日历吃剩余高度，下方「工作量提醒」固定高度（内部滚动）；明细表已拆到独立页 */
-.cart-stack > .pt-tbl-col:first-child{ flex: 0 1 auto; }
+/* 纵向 2/3 给日历、1/3 给下方预警（2026-11-05 用户确认） */
+.cart-stack > .pt-tbl-col:first-child{ flex: 2 1 0; min-height: 0; }
 .cart-stack > .pt-tbl-col:first-child > .pt-tbl-wrap{ flex: 1; min-height: 0; max-height: none; }
-.cart-stack > .pt-tbl-col:last-child{ flex: 1 1 0; }
+.cart-stack > .pt-tbl-col:last-child{ flex: 1 1 0; min-height: 0; }
 .cart-stack > .pt-tbl-col:last-child > .pt-tbl-wrap{ flex: 1; min-height: 0; max-height: none; }
-#p10calwrap{ min-height: 300px; }
+/* 日历容器吃满所在列的 2/3 高度，超出部分在容器内滚动（周表头 sticky） */
+#p10calwrap, #p35calwrap{ flex: 1 1 auto; min-height: 0; height: auto; overflow-y: auto; }
 #p10warnwrap{ min-height: 200px; }
 #p10cal{ min-width: 900px; }
-.cart-wd{ display: flex; background: linear-gradient(180deg, rgba(10,74,138,.9), rgba(7,44,88,.9)); border: 1px solid rgba(79,227,255,.45); border-bottom: none; }
+.cart-wd{ display: flex; background: linear-gradient(180deg, rgba(10,74,138,.9), rgba(7,44,88,.9)); border: 1px solid rgba(79,227,255,.45); border-bottom: none; position: sticky; top: 0; z-index: 3; }
 .cart-wd span{ flex: 1; text-align: center; padding: 5px 0; color: #daf9ff; font-weight: 600; letter-spacing: 1px; font-size: 13px; text-shadow: 0 0 6px rgba(79,227,255,.4); }
 .cart-wd span + span{ border-left: 1px solid rgba(79,227,255,.18); }
 .cart-grid{ display: flex; flex-wrap: wrap; border-top: 1px solid rgba(47,137,207,.25); border-left: 1px solid rgba(47,137,207,.25); }
-.cart-day{ flex: 0 0 calc(100% / 7); box-sizing: border-box; border-right: 1px solid rgba(47,137,207,.25); border-bottom: 1px solid rgba(47,137,207,.25); background: rgba(2,24,61,.1); min-width: 0; display: flex; flex-direction: column; }
+.cart-day{ flex: 0 0 calc(100% / 7); box-sizing: border-box; border-right: 1px solid rgba(47,137,207,.25); border-bottom: 1px solid rgba(47,137,207,.25); background: rgba(2,24,61,.1); min-width: 0; display: flex; flex-direction: column; height: 118px; overflow: hidden; }
 .cart-day.off{ opacity: 0; }
 .cart-day.today .cd-date{ background: #0a5ea0; color: #fff; border-radius: 3px; box-shadow: 0 0 6px rgba(79,227,255,.5); }
 .cd-hd{ display: flex; align-items: center; gap: 5px; padding: 3px 5px; border-bottom: 1px dashed rgba(47,137,207,.22); }
@@ -956,3 +958,37 @@ body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
 .w-free-i i{ font-style:normal; color:#ffcf4d; font-size:10px; }
 .w-free-i.pt{ background:rgba(255,207,77,.14); color:#ffd98a; border-color:rgba(255,207,77,.4); }
 .w-none{ font-size:11px; color:rgba(255,255,255,.4); }
+
+/* ── 通用浮窗 .bd-modal（2026-11-05，源自 page27 .ins-modal） ── */
+.bd-modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:9200; }
+.bd-modal.on{ display:flex; }
+.bd-modal-mask{ position:absolute; inset:0; background:rgba(2,12,30,.72); }
+.bd-modal-box{ position:relative; width:min(980px,92vw); max-height:min(680px,86vh); display:flex; flex-direction:column;
+  background:linear-gradient(180deg, rgba(6,32,62,.98), rgba(2,18,40,.98)); border:1px solid rgba(47,137,207,.75);
+  border-radius:10px; box-shadow:0 0 40px rgba(47,137,207,.45); overflow:hidden; }
+.bd-modal-hd{ flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; padding:10px 16px;
+  border-bottom:1px solid rgba(47,137,207,.35); }
+.bd-modal-hd span{ font-size:16px; color:#daf9ff; letter-spacing:1px; font-weight:700; }
+.bd-modal-close{ width:30px; height:30px; border:none; border-radius:6px; background:rgba(47,137,207,.2);
+  color:#9fe8ff; font-size:20px; line-height:1; cursor:pointer; }
+.bd-modal-close:hover{ background:rgba(47,137,207,.45); color:#fff; }
+.bd-modal-body{ flex:1; min-height:0; overflow:auto; padding:12px 16px 16px; font-size:13px; color:rgba(255,255,255,.85); }
+.bd-modal-sec{ margin-bottom:14px; }
+.bd-modal-sec h4{ margin:0 0 8px; font-size:13px; color:#9fe8ff; letter-spacing:1px; font-weight:600;
+  padding-bottom:5px; border-bottom:1px solid rgba(47,137,207,.3); }
+.bd-modal-sec p{ margin:0 0 6px; line-height:1.9; }
+.bd-modal-sec p b{ color:#ffcf4d; }
+.bd-cos-blk{ margin-bottom:10px; padding:8px 10px; border:1px solid rgba(255,77,79,.35); border-radius:6px; background:rgba(255,77,79,.08); }
+.bd-cos-blk .bd-cos-hd{ font-size:13px; color:#ff9d9a; font-weight:700; margin-bottom:6px; }
+.bd-cos-blk .bd-task{ display:flex; gap:10px; align-items:center; font-size:12px; padding:3px 0;
+  border-bottom:1px dashed rgba(47,137,207,.18); color:rgba(255,255,255,.82); }
+.bd-cos-blk .bd-task:last-child{ border-bottom:none; }
+.bd-task .t-type{ flex:0 0 44px; padding:0 5px; border-radius:3px; text-align:center; font-size:11px; }
+.bd-task .t-type.ap{ background:rgba(79,227,255,.28); border:1px solid rgba(79,227,255,.6); color:#e8fbff; }
+.bd-task .t-type.re{ background:rgba(177,138,255,.28); border:1px solid rgba(177,138,255,.6); color:#f2ebff; }
+.bd-task .t-hosp{ flex:1 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.bd-task .t-code{ flex:0 0 auto; color:rgba(255,255,255,.5); font-size:11px; }
+.bd-free{ display:flex; flex-wrap:wrap; gap:6px; }
+
+.bd-info{ margin-left:6px; width:18px; height:18px; border-radius:50%; border:1px solid rgba(79,227,255,.55); background:rgba(47,137,207,.18); color:#9fe8ff; font-size:12px; line-height:1; cursor:pointer; padding:0; }
+.bd-info:hover{ background:rgba(47,137,207,.45); color:#fff; }

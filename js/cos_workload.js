@@ -22,6 +22,7 @@
 
     var selY = parseInt(DEF_YM.slice(0, 4), 10);
     var selM = parseInt(DEF_YM.slice(5, 7), 10);
+    var selCos = 'ALL';                 // COS 筛选：同时过滤日历与汇总
     var WD = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
 
     function fillYearMonth() {
@@ -33,9 +34,26 @@
         $y.val(String(selY)); $m.val(String(selM));
     }
 
+    function fillCos() {
+        var ro = C.roster();
+        var extra = {};
+        EXEC.forEach(function (r) { if (r.cos && !ro[r.cos]) extra[r.cos] = true; });
+        var all = Object.keys(ro).concat(Object.keys(extra).sort());
+        var h = '<option value="ALL">全部 COS</option>';
+        all.forEach(function (n) {
+            var city = C.cosCity(n);
+            h += '<option value="' + n + '">' + n + (city ? '（' + city + '）' : '') + (C.isPartTime(n) ? ' ·兼职' : '') + '</option>';
+        });
+        $('#p35cos').html(h).val(selCos);
+    }
+
     function monthRows() {
         var ym = selY + '-' + pad2(selM);
-        return EXEC.filter(function (r) { return r.actual.slice(0, 7) === ym; });
+        return EXEC.filter(function (r) {
+            if (r.actual.slice(0, 7) !== ym) return false;
+            if (selCos !== 'ALL' && (r.cos || '未指定') !== selCos) return false;
+            return true;
+        });
     }
 
     // ---------- 日历 ----------
@@ -89,11 +107,13 @@
         var filled = firstDow + dim;
         while (filled % 7) { grid += '<div class="cart-day off"></div>'; filled++; }
         $('#p35cal').html(html + '<div class="cart-grid">' + grid + '</div>');
-        $('#p35calstat').html('<b class="cart-total">共 ' + total + ' 单已完成</b>');
+        var sumAp = 0, sumRe = 0;
+        monthRows().forEach(function (r) { if (r.type === 'apheresis') sumAp++; else sumRe++; });
+        $('#p35calstat').html('<b class="cart-total">单采 ' + sumAp + ' 单 · 回输 ' + sumRe + ' 单 · 合计 ' + (sumAp + sumRe) + ' 单已完成</b>');
     }
 
-    // ---------- 当月汇总表 ----------
-    function renderTable() {
+    // ---------- 当月汇总（卡片网格 + 隐藏表供导出） ----------
+    function renderCards() {
         var rows = monthRows();
         var agg = {};
         rows.forEach(function (r) {
@@ -103,47 +123,49 @@
         });
 
         var ro = C.roster();
-        // 花名册在前（按名单顺序），未在册 + 未指定在后
-        var names = Object.keys(ro).filter(function (n) { return true; });
-        Object.keys(agg).forEach(function (n) { if (names.indexOf(n) < 0) names.push(n); });
-        if (!ro['未指定'] && agg['未指定']) { /* 已在上一行追加 */ }
+        var names = Object.keys(ro).slice();
+        var extra = Object.keys(agg).filter(function (n) { return names.indexOf(n) < 0 && n !== '未指定'; }).sort();
+        names = names.concat(extra);
+        if (agg['未指定']) names.push('未指定');
 
-        var sumAp = 0, sumRe = 0;
-        var body = '';
+        var sumAp = 0, sumRe = 0, cards = '', trows = '';
         names.forEach(function (n) {
             var o = agg[n] || { ap: 0, re: 0 };
-            if (!o.ap && !o.re) return;                 // 当月没工作的不占行
+            if (!o.ap && !o.re) return;                       // 当月没工作的不占卡
             sumAp += o.ap; sumRe += o.re;
-            var flagged = (n === '未指定') ? '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未指定</span>'
-                : (ro[n] ? '' : '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未在册</span>');
-            var part = C.isPartTime(n) ? '<span class="tt-tag" style="background:rgba(255,207,77,.18);color:#ffcf4d">兼职·仅顶替' + C.backupOf(n) + '</span>' : '';
-            body += '<tr>' +
-                '<td class="pt-lbl">' + n + '</td>' +
-                '<td>' + (C.cosCity(n) || '—') + '</td>' +
-                '<td class="tt-num" style="color:#62c98d;font-weight:600;">' + (o.ap || '') + '</td>' +
-                '<td class="tt-num" style="color:#ffcf4d;font-weight:600;">' + (o.re || '') + '</td>' +
-                '<td class="tt-num" style="font-weight:700;">' + (o.ap + o.re) + '</td>' +
-                '<td>' + flagged + part + '</td>' +
-                '</tr>';
+            var city = C.cosCity(n);
+            var cls = n === '未指定' ? ' other' : (C.isPartTime(n) ? ' part' : '');
+            var tags = '';
+            if (n === '未指定') tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未指定</span>';
+            else if (!ro[n]) tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未在册</span>';
+            if (C.isPartTime(n)) tags += '<span class="tt-tag" style="background:rgba(255,207,77,.18);color:#ffcf4d">兼职·仅顶替' + C.backupOf(n) + '</span>';
+            cards += '<div class="cs-wl-card' + cls + '">' +
+                '<div class="c-hd"><span class="c-name" title="' + n + '">' + n + '</span>' +
+                (city ? '<span class="c-city">' + city + '</span>' : '') + '</div>' +
+                '<div class="c-num"><span class="ap">单采 <b>' + o.ap + '</b></span>' +
+                '<span class="re">回输 <b>' + o.re + '</b></span>' +
+                '<span class="tt">合计 <b>' + (o.ap + o.re) + '</b></span></div>' +
+                (tags ? '<div class="c-tag">' + tags + '</div>' : '') +
+                '</div>';
+            trows += '<tr><td>' + n + '</td><td>' + (city || '') + '</td><td>' + o.ap + '</td><td>' + o.re + '</td><td>' + (o.ap + o.re) + '</td></tr>';
         });
-        if (!body) body = '<tr><td colspan="6" style="text-align:center;color:rgba(255,255,255,.45);padding:18px 0;">本月没有已执行记录</td></tr>';
-        var h = '<table class="pt pt-ov"><thead><tr>' +
-            '<th class="pt-lbl">COS</th><th>所在城市</th><th>单采</th><th>回输</th><th>合计</th><th>备注</th>' +
-            '</tr></thead><tbody>' + body + '</tbody>' +
-            '<tfoot><tr><td class="pt-lbl">合计</td><td>—</td>' +
-            '<td class="tt-num">' + sumAp + '</td><td class="tt-num">' + sumRe + '</td>' +
-            '<td class="tt-num">' + (sumAp + sumRe) + '</td><td>' + names.filter(function (n) { return agg[n]; }).length + ' 人</td></tr></tfoot>' +
-            '</table>';
-        $('#p35tbl').html(h);
-        $('#p35tblstat').html('<b class="cart-total">' + (sumAp + sumRe) + ' 单</b>');
+
+        if (!cards) cards = '<div class="cs-wl-empty">本月没有已执行记录</div>';
+        // 卡片 + 隐藏表（excel_export 从表里取值，卡片只是展示）
+        $('#p35tbl').html('<div class="cs-wl-cards">' + cards + '</div>' +
+            '<table class="pt" style="display:none"><thead><tr><th>COS</th><th>所在城市</th><th>单采</th><th>回输</th><th>合计</th></tr></thead><tbody>' +
+            trows + '</tbody></table>');
+        $('#p35tblstat').html('<b class="cart-total">单采 ' + sumAp + ' · 回输 ' + sumRe + ' · 共 ' + (sumAp + sumRe) + ' 单</b>');
     }
 
-    function renderAll() { renderCalendar(); renderTable(); }
+    function renderAll() { renderCalendar(); renderCards(); }
 
     $(function () {
         fillYearMonth();
+        fillCos();
         $('#p35y').on('change', function () { selY = parseInt(this.value, 10); renderAll(); });
         $('#p35m').on('change', function () { selM = parseInt(this.value, 10); renderAll(); });
+        $('#p35cos').on('change', function () { selCos = this.value; renderAll(); });
         renderAll();
     });
 })();

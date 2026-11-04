@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>福可苏业绩总览 · COS工作量</title>
+<title>福可苏业绩总览 · COS工作量统计</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
@@ -12,10 +12,25 @@
 <script type="text/javascript" src="js/cos_workload.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<style>
+	.cs-wl-cards{ display:grid; grid-template-columns:repeat(auto-fill, minmax(168px, 1fr)); gap:8px; padding:8px; }
+	.cs-wl-card{ border:1px solid rgba(47,137,207,.45); border-left:3px solid #4fe3ff; border-radius:6px;
+	  background:rgba(2,24,61,.35); padding:6px 9px; min-width:0; }
+	.cs-wl-card.part{ border-left-color:#ffcf4d; }
+	.cs-wl-card.other{ border-left-color:rgba(154,160,166,.8); opacity:.85; }
+	.cs-wl-card .c-hd{ display:flex; align-items:baseline; gap:6px; margin-bottom:3px; }
+	.cs-wl-card .c-name{ font-size:14px; font-weight:700; color:#dff4ff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	.cs-wl-card .c-city{ font-size:11px; color:rgba(159,232,255,.7); flex:none; }
+	.cs-wl-card .c-num{ display:flex; gap:10px; font-size:12px; font-variant-numeric:tabular-nums; }
+	.cs-wl-card .c-num b{ font-size:15px; font-weight:700; }
+	.cs-wl-card .c-num .ap b{ color:#62c98d; }
+	.cs-wl-card .c-num .re b{ color:#ffcf4d; }
+	.cs-wl-card .c-num .tt{ color:rgba(255,255,255,.85); }
+	.cs-wl-card .c-tag{ margin-top:3px; display:flex; gap:4px; flex-wrap:wrap; }
+	.cs-wl-empty{ padding:24px; text-align:center; color:rgba(255,255,255,.45); font-size:13px; }
 	.cart-foot-note{ flex:0 0 auto; margin:2px 0 0; padding:6px 10px; font-size:12px; color:rgba(159,232,255,.7); border:1px dashed rgba(47,137,207,.35); background:rgba(2,24,61,.3); letter-spacing:.5px; }
-	.cart-stack-detail > .pt-tbl-col:first-child{ flex:0 1 auto; }
-	.cart-stack-detail > .pt-tbl-col:last-child{ flex:1 1 0; }
-	.cs-wl-day{ display:flex; flex-direction:column; gap:2px; }
+	.cart-stack-detail > .pt-tbl-col:first-child{ flex:2 1 0; min-height:0; }
+	.cart-stack-detail > .pt-tbl-col:last-child{ flex:1 1 0; min-height:0; }
+	.cs-wl-day{ display:grid; grid-template-columns:1fr 1fr; gap:2px 6px; align-content:start; max-height:none; overflow-y:auto; }
 	.cs-wl-i{ display:flex; align-items:center; gap:4px; font-size:11px; color:#dff4ff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 	.cs-wl-i b{ font-weight:600; color:#9fe8ff; }
 	.cs-wl-i em{ font-style:normal; color:#62c98d; }
@@ -82,6 +97,9 @@
 			<span class="pt-time-tit">年月控制</span>
 			<select id="p35y" class="pt-sel" title="年份"></select>
 			<select id="p35m" class="pt-sel" title="月份"></select>
+			<span class="cart-sep"></span>
+			<span class="cart-ctl-lab">COS</span>
+			<select id="p35cos" class="pt-sel" title="COS"><option value="ALL">全部 COS</option></select>
 			<span class="pt-time-note">仅统计已执行（按计划执行 / 延期提前执行），不含未执行与未来预约</span>
 		</div>
 		<div class="cart-stack cart-stack-detail">
@@ -90,7 +108,7 @@
 				<div class="pt-tbl-wrap" id="p35calwrap" data-xls-skip><div id="p35cal"></div></div>
 			</div>
 			<div class="pt-tbl-col">
-				<div class="sec-head" data-xls="p35tbl" data-xls-title="COS 当月工作量">COS 当月汇总<span class="sub">只计已执行</span><span id="p35tblstat"></span><button class="map-fs" type="button" data-fs="p35tbl" data-title="COS 当月汇总">⛶</button></div>
+				<div class="sec-head" data-xls="p35tbl" data-xls-title="COS 当月工作量统计">COS 当月汇总<span class="sub">只计已执行 · 每人一卡</span><span id="p35tblstat"></span><button class="map-fs" type="button" data-fs="p35tbl" data-title="COS 当月汇总">⛶</button></div>
 				<div class="pt-tbl-wrap" id="p35tbl"></div>
 			</div>
 		</div>

@@ -67,7 +67,10 @@
         var ym = selY + '-' + pad2(selM);
         return DATA.filter(function (r) {
             if (focus) return inFocus(r);
-            return r.plan.slice(0, 7) === ym && selLights[stateOf(r, today)];
+            if (r.plan.slice(0, 7) !== ym || !selLights[stateOf(r, today)]) return false;
+            // COS 筛选对日历与预警同时生效
+            if (selCos !== 'ALL' && (r.cos || '') !== selCos) return false;
+            return true;
         });
     }
 
@@ -149,7 +152,7 @@
             var dayList = dayRecs[d] || [];
             total += dayList.length;
             var rk = dayRisk(dayList);
-            var riskBadge = rk.length ? '<span class="cart-day-risk" title="当天 ' + rk.length + ' 人的工作量无法覆盖">⚠' + rk.length + '</span>' : '';
+            var riskBadge = rk.length ? '<span class="cart-day-risk" data-day="' + d + '" title="点击查看当天预警详情">⚠' + rk.length + '</span>' : '';
             var cards = dayList.map(function (r) { return cardHTML(r, today); }).join('');
             var stCnt = {};
             dayList.forEach(function (r) { var k = stateOf(r, today); stCnt[k] = (stCnt[k] || 0) + 1; });
@@ -176,7 +179,7 @@
         });
         var days = [];
         var totalRisk = 0;
-        for (var d = 1; d <= dim; d++) {
+        for (var d = dim; d >= 1; d--) {                       // 日期降序：当月最后一天在最上
             var list = byDay[d] || [];
             var rk = dayRisk(list);
             if (selCos !== 'ALL') rk = rk.filter(function (x) { return x.cos === selCos; });
@@ -231,6 +234,71 @@
         }
     }
 
+    // ---------- 浮窗：当天预警详情 / 判定逻辑 ----------
+    var $Modal = null;
+    function modalOpen(title, html) {
+        if (!$Modal) $Modal = $('#bdModal');
+        $('#bdModalTitle').text(title);
+        $('#bdModalBody').html(html);
+        $Modal.addClass('on');
+    }
+    function modalClose() { if ($Modal) $Modal.removeClass('on'); else $('#bdModal').removeClass('on'); }
+
+    function openDayModal(day) {
+        var today = beijingToday();
+        var ym = selY + '-' + pad2(selM);
+        var ds = ym + '-' + pad2(day);
+        var list = monthRecs(today).filter(function (r) { return parseInt(r.plan.slice(8, 10), 10) === day; });
+        var rk = dayRisk(list);
+        if (selCos !== 'ALL') rk = rk.filter(function (x) { return x.cos === selCos; });
+        var h = '';
+        if (!rk.length) {
+            h = '<div class="bd-modal-sec"><p>当天没有「同一 COS 跨多家医院」的情况。</p></div>';
+        } else {
+            h += '<div class="bd-modal-sec"><h4>无法覆盖的 COS（' + rk.length + ' 人）</h4>';
+            rk.forEach(function (k) {
+                var mine = list.filter(function (r) { return (r.cos || '') === k.cos; });
+                var city = C.cosCity(k.cos);
+                h += '<div class="bd-cos-blk">' +
+                    '<div class="bd-cos-hd">' + k.cos + (city ? '·' + city : '') +
+                    '　<span style="font-weight:400;color:rgba(255,255,255,.6)">' + k.hosps + ' 家医院 · ' + k.n + ' 单（单采 ' + k.ap + ' / 回输 ' + k.re + '）</span></div>' +
+                    mine.map(function (r) {
+                        return '<div class="bd-task">' +
+                            '<span class="t-type ' + (r.type === 'apheresis' ? 'ap' : 're') + '">' + (r.type === 'apheresis' ? '单采' : '回输') + '</span>' +
+                            '<span class="t-hosp" title="' + r.hosp + '">' + (r.hosp || '未知医院') + '</span>' +
+                            '<span class="t-code">' + (r.code || '(无码)') + '</span>' +
+                            '</div>';
+                    }).join('') +
+                    '</div>';
+            });
+            h += '</div>';
+            var free = freeCos(list, rk);
+            h += '<div class="bd-modal-sec"><h4>当天可支援（空闲）</h4>';
+            h += free.length
+                ? '<div class="bd-free">' + free.map(function (f) {
+                    return '<span class="w-free-i' + (f.backupOf ? ' pt' : '') + '">' + f.name +
+                        (f.city ? '<em>' + f.city + '</em>' : '') + (f.backupOf ? '<i>替' + f.backupOf + '</i>' : '') + '</span>';
+                }).join('') + '</div>'
+                : '<p class="w-none">当天全员有任务</p>';
+            h += '</div>';
+        }
+        modalOpen(ds + ' 预警详情', h);
+    }
+
+    var RULE_HTML =
+        '<div class="bd-modal-sec"><h4>判定口径</h4>' +
+        '<p>① 取<b>当前所选年月</b>、且通过<b>状态灯筛选</b>与 <b>COS 筛选</b>后的记录，按计划日期逐日落格。</p>' +
+        '<p>② 同一天内按 COS 归集：某 COS 当天的任务涉及 <b>≥2 家不同医院</b> → 判为「<b>无法覆盖</b>」，日历当天出现 <b>⚠N</b>（N = 无法覆盖的人数）。</p>' +
+        '<p>③ 以下情形视作<b>可以完成</b>，不预警：<br>· 同一家医院的多个单采 / 回输<br>· 同一城市内当天仅有回输任务且 ≤3 个</p>' +
+        '</div>' +
+        '<div class="bd-modal-sec"><h4>可支援推荐</h4>' +
+        '<p>① 只列当天<b>完全没有任务</b>的 COS，按所在城市就近排序（不做距离计算）。</p>' +
+        '<p>② <b>兼职 COS</b>（花名册标记「只替换X」，如 <b>林雅珺只顶替付苗</b>）默认不参与推荐；仅当其可顶替的人当天出风险时才列出，并标注「替X」。</p>' +
+        '</div>' +
+        '<div class="bd-modal-sec"><h4>数据范围</h4>' +
+        '<p>仅统计已排期订单（取消 / 终止 / 未排期已在数据层过滤）；COS 取自订单申请时的运营专员，<b>中途换人与二次单采不纳入</b>。</p>' +
+        '</div>';
+
     function renderAll() {
         var today = beijingToday();
         var recs = monthRecs(today);
@@ -275,8 +343,7 @@
         $('#p10m').on('change', function () { selM = parseInt(this.value, 10); rerender(); });
         $('#p10cos').on('change', function () {
             selCos = this.value;
-            var today = beijingToday();
-            renderWarn(today, monthRecs(today));   // 只重绘提醒块，不动日历
+            renderAll();                            // 日历 + 预警 同步按 COS 过滤
         });
         $('#p10lights').on('click', '.cart-light', function () {
             var k = $(this).data('k');
@@ -297,5 +364,14 @@
         renderLights();
         bindEvents();
         renderAll();
+
+        // 日历角标 → 当天预警详情浮窗
+        $('#p10cal').on('click', '.cart-day-risk', function () {
+            openDayModal(parseInt($(this).attr('data-day'), 10));
+        });
+        // 标题 ⓘ → 判定逻辑浮窗
+        $('#p10warnInfo').on('click', function () { modalOpen('工作预警 · 判定逻辑', RULE_HTML); });
+        $('#bdModalClose, #bdModalMask').on('click', modalClose);
+        $(document).on('keydown', function (e) { if (e.key === 'Escape') modalClose(); });
     });
 })();

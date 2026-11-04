@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>福可苏业绩总览 · CART运营-日历</title>
+<title>福可苏业绩总览 · CART运营日历</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
@@ -94,9 +94,17 @@
 				<div class="pt-tbl-wrap" id="p10calwrap" data-xls-skip><div id="p10cal"></div></div>
 			</div>
 			<div class="pt-tbl-col">
-				<div class="sec-head">工作量提醒 <span class="sub">同一 COS 同一天跨医院 = 无法覆盖</span><span id="p10warnstat"></span><button class="map-fs" type="button" data-fs="p10warnwrap" data-title="工作量提醒">⛶</button></div>
+				<div class="sec-head">工作预警 <button class="bd-info" type="button" id="p10warnInfo" title="查看判定逻辑">ⓘ</button><span class="sub">同一 COS 同一天跨医院 = 无法覆盖</span><span id="p10warnstat"></span><button class="map-fs" type="button" data-fs="p10warnwrap" data-title="工作预警">⛶</button></div>
 				<div class="pt-tbl-wrap" id="p10warnwrap" data-xls-skip><div id="p10warn"></div></div>
 			</div>
+		</div>
+	</div>
+	<!-- 通用浮窗：当天预警详情 / 判定逻辑 -->
+	<div class="bd-modal" id="bdModal">
+		<div class="bd-modal-mask" id="bdModalMask"></div>
+		<div class="bd-modal-box">
+			<div class="bd-modal-hd"><span id="bdModalTitle">--</span><button class="bd-modal-close" id="bdModalClose" type="button">×</button></div>
+			<div class="bd-modal-body" id="bdModalBody"></div>
 		</div>
 	</div>
 	<!-- 地图放大全屏 -->
