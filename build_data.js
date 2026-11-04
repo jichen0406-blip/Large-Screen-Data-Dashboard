@@ -907,13 +907,41 @@ records.forEach(function (r) {
   var d = dictInfo[r.no] || {};
   if (d.cancel === '1') return;
   if (r.apmt) {
-    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, cos: r.cos, type: 'apheresis', plan: r.apmt, actual: r.ap || '' });
+    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, cos: r.cos, type: 'apheresis', plan: r.apmt, actual: r.ap || '', prov: r.prov || '', city: r.city || '', area: r.area || '' });
   }
   if (r.planRe) {
-    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, cos: r.cos, type: 'reinfusion', plan: r.planRe, actual: r.reStart || '' });
+    CART_DAILY.push({ code: r.code, hosp: r.hosp, patient: r.patient, cos: r.cos, type: 'reinfusion', plan: r.planRe, actual: r.reStart || '', prov: r.prov || '', city: r.city || '', area: r.area || '' });
   }
 });
 console.log('CART_DAILY 记录数:', CART_DAILY.length);
+
+// ── 8p2. COS 花名册：COS名单.xlsx（COS / 所在城市 / 标记） ──
+// 标记列含「只替换X」→ backupOf=X：兼职 COS，仅可顶替该 COS，不能独立承接其他辖区
+var COS_MAP = {};
+try {
+  var cosPath = path.join(rawDir, 'COS名单.xlsx');
+  if (fs.existsSync(cosPath)) {
+    var cosAoa = XLSX.utils.sheet_to_json(XLSX.readFile(cosPath).Sheets['Sheet1'], { header: 1, defval: '' });
+    var cosH = (cosAoa[0] || []).map(function (h) { return String(h).replace(/[\r\n\s]/g, ''); });
+    var cCI = cosH.indexOf('COS'), cCT = cosH.indexOf('所在城市'), cCF = cosH.indexOf('标记');
+    for (var ck = 1; ck < cosAoa.length; ck++) {
+      var crow = cosAoa[ck] || [];
+      var cname = String(crow[cCI] || '').trim();
+      if (!cname) continue;
+      var cflag = String(crow[cCF] || '').replace(/[\r\n]/g, '').trim();
+      var mb = cflag.match(/只替换\s*(.+)/);
+      COS_MAP[cname] = { city: String(crow[cCT] || '').trim(), flag: cflag, backupOf: mb ? mb[1].trim() : '' };
+    }
+    console.log('COS 名单:', Object.keys(COS_MAP).length, '人 |',
+      Object.keys(COS_MAP).map(function (k) {
+        return k + '(' + COS_MAP[k].city + (COS_MAP[k].backupOf ? '·兼职替' + COS_MAP[k].backupOf : '') + ')';
+      }).join(' '));
+  } else {
+    console.warn('⚠️ 未找到 COS名单.xlsx，COS 城市/兼职信息为空');
+  }
+} catch (e) {
+  console.error('⚠️ 读取 COS名单.xlsx 失败:', e.message);
+}
 
 // ── 8q. 异常订单管理：三类异常订单（从 bs_order + order dict 重算；人工字段取自 异常订单管理.xlsx） ──
 // 长期未单采 = 有单 且 无实际单采开始；长期未转生产 = 已单采 且 无质量放行；长期未回输 = 已放行 且 无实际回输开始
@@ -1840,6 +1868,91 @@ try {
   console.error('⚠️ 读取 China Solution 数据失败:', e.message);
 }
 
+// ── 8y. 技术转移业务：大类='技术授权转移'，★ 直接 USD 计价，不做汇率折算 ──
+var TECH_BIZ = { at: '', file: '', source: '', years: [], companies: [], rows: [] };
+try {
+  function tfNum(v) {
+    if (v === '' || v == null) return null;
+    if (typeof v === 'number') return isFinite(v) ? v : null;
+    var n = parseFloat(String(v).replace(/[,，\s ]/g, ''));
+    return isFinite(n) ? n : null;
+  }
+  function tfYM(v) {
+    if (v == null || v === '') return '';
+    if (typeof v === 'number') {
+      var d0 = (typeof excelToDate === 'function') ? excelToDate(v) : null;
+      if (!d0) return '';
+      return String(d0.getFullYear()) + '-' + String(d0.getMonth() + 1).padStart(2, '0');
+    }
+    var m = String(v).trim().match(/(\d{4})\D+(\d{1,2})/);
+    if (!m) return '';
+    var mo = parseInt(m[2], 10);
+    if (!(mo >= 1 && mo <= 12)) return '';
+    return m[1] + '-' + String(mo).padStart(2, '0');
+  }
+  var tfFile = fs.readdirSync(rawDir).filter(function (f) {
+    return f.indexOf('海外收入统计') === 0 && /\.xlsx$/i.test(f) && f.indexOf('~$') < 0;
+  }).sort().pop();
+  if (!tfFile) throw new Error('rawdata 下未找到 海外收入统计-*.xlsx');
+  TECH_BIZ.file = tfFile;
+  TECH_BIZ.source = '海外收入统计 ' + tfFile;
+  TECH_BIZ.at = fmtDT(fs.statSync(path.join(rawDir, tfFile)).mtime);
+
+  var tfAoa = XLSX.utils.sheet_to_json(XLSX.readFile(path.join(rawDir, tfFile)).Sheets['DATA'], { header: 1, defval: '' });
+  var tfHi = -1;
+  for (var th = 0; th < Math.min(6, tfAoa.length); th++) {
+    if (!tfAoa[th]) continue;
+    var thj = tfAoa[th].map(function (v) { return String(v).replace(/[\r\n\s]/g, ''); }).join('|');
+    if (thj.indexOf('到款日期') >= 0 && thj.indexOf('客户名称') >= 0 && thj.indexOf('大类') >= 0) { tfHi = th; break; }
+  }
+  if (tfHi < 0) throw new Error('DATA 表未找到表头行（需含 到款日期/客户名称/大类）');
+  var tfH = tfAoa[tfHi].map(function (h) { return String(h).replace(/[\r\n\s]/g, ''); });
+  var tI = {
+    date: tfH.indexOf('到款日期'), cust: tfH.indexOf('客户名称'), biz: tfH.indexOf('业务类型'),
+    cat: tfH.indexOf('大类'), amt: tfH.indexOf('金额'), cur: tfH.indexOf('货币'),
+    cost: tfH.indexOf('成本金额'), ctry: tfH.indexOf('国家'), note: tfH.indexOf('备注')
+  };
+  var tfSkip = 0;
+  for (var ti = tfHi + 1; ti < tfAoa.length; ti++) {
+    var tr = tfAoa[ti];
+    if (!tr || !tr.length) continue;
+    if (String(tr[tI.cat] || '').trim() !== '技术授权转移') { tfSkip++; continue; }
+    var tYm = tfYM(tr[tI.date]);
+    if (!tYm) { console.warn('⚠️ 技术转移 到款日期无法解析，已跳过：' + tr[tI.date]); continue; }
+    var tAmt = tfNum(tr[tI.amt]);
+    if (tAmt == null) { console.warn('⚠️ 技术转移 金额无法解析，已跳过：' + tr[tI.cust]); continue; }
+    var tCur = String(tr[tI.cur] || '').trim().toUpperCase() || 'USD';
+    if (tCur !== 'USD') console.warn('⚠️ 技术转移 出现非 USD 币种（' + tCur + '），按原值展示：' + tr[tI.cust]);
+    var tCtry = String(tr[tI.ctry] || '').trim();
+    TECH_BIZ.rows.push({
+      ym: tYm, year: tYm.slice(0, 4), country: tCtry, geo: CS_GEO[tCtry] || '',
+      cust: String(tr[tI.cust] || '').replace(/[\r\n\t]/g, ' ').replace(/\s+/g, ' ').trim(),
+      biz: String(tr[tI.biz] || '').trim(),
+      note: tI.note >= 0 ? String(tr[tI.note] || '').replace(/[\r\n]/g, ' ').trim() : '',
+      cur: tCur,
+      amtUsd: Math.round(tAmt * 100) / 100      // 原币金额（USD），★ 不折人民币
+    });
+  }
+  TECH_BIZ.rows.sort(function (a, b) { return a.ym < b.ym ? 1 : (a.ym > b.ym ? -1 : 0); });
+  var tComp = {}, tYears = {};
+  TECH_BIZ.rows.forEach(function (r) {
+    var c = tComp[r.cust] || (tComp[r.cust] = { name: r.cust, total: 0, n: 0 });
+    c.total = Math.round((c.total + r.amtUsd) * 100) / 100;
+    c.n++;
+    tYears[r.year] = true;
+  });
+  TECH_BIZ.companies = Object.keys(tComp).map(function (k) { return tComp[k]; })
+    .sort(function (a, b) { return b.total - a.total; });
+  TECH_BIZ.years = Object.keys(tYears).sort();
+  console.log('技术转移 记录:', TECH_BIZ.rows.length, '| 公司:', TECH_BIZ.companies.length,
+    '| 跳过非技术转移:', tfSkip);
+  TECH_BIZ.companies.forEach(function (c) {
+    console.log('   ' + c.name + '  ' + c.n + ' 笔  ' + c.total + ' USD');
+  });
+} catch (e) {
+  console.error('⚠️ 读取 技术转移 数据失败:', e.message);
+}
+
 // ── 8w. 惠民保 & 商保：order dict「惠民保」「商业保险」列 + 名称映射表 ──
 // 口径（2026-10-30 用户确认）：
 //   ① 列非空即计入（含「职工保」）；两列独立判定，同时命中则两边都算
@@ -2029,6 +2142,8 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     COE_PAGES: COE_PAGES,
     CANCEL_MGMT: CANCEL_MGMT,
     CS_BIZ: CS_BIZ,
+    TECH_BIZ: TECH_BIZ,
+    COS_MAP: COS_MAP,
     INSURANCE: INSURANCE,
     PROD_ABN: PROD_ABN
   }, null, 2) + ';\n';

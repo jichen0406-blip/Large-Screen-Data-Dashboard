@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>福可苏业绩总览 · CART运营每日跟进</title>
+<title>福可苏业绩总览 · CART运营-日历</title>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/cart_common.js"></script>
 <script type="text/javascript" src="js/cart_daily.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<script>window.PAGE_KEY='cart_daily';</script>
@@ -73,6 +74,9 @@
 			<span class="cart-sep"></span>
 			<span class="cart-ctl-lab">状态筛选（多选）</span>
 			<div class="cart-lights" id="p10lights"></div>
+			<span class="cart-sep"></span>
+			<span class="cart-ctl-lab">COS</span>
+			<select id="p10cos" class="pt-sel" title="COS"><option value="ALL">全部 COS</option></select>
 			<div class="cart-search">
 				<input type="text" id="p10code" placeholder="追溯码精确搜索" autocomplete="off">
 				<select id="p10qtype" class="pt-sel cart-qtype" title="类型">
@@ -90,8 +94,8 @@
 				<div class="pt-tbl-wrap" id="p10calwrap" data-xls-skip><div id="p10cal"></div></div>
 			</div>
 			<div class="pt-tbl-col">
-				<div class="sec-head">明细表格 <span class="sub">整月 · 排序 红→灰→黄→绿</span><button class="map-fs" type="button" data-fs="p10tbl" data-title="明细表格">⛶</button></div>
-				<div class="pt-tbl-wrap" id="p10tbl" data-xls-skip></div>
+				<div class="sec-head">工作量提醒 <span class="sub">同一 COS 同一天跨医院 = 无法覆盖</span><span id="p10warnstat"></span><button class="map-fs" type="button" data-fs="p10warnwrap" data-title="工作量提醒">⛶</button></div>
+				<div class="pt-tbl-wrap" id="p10warnwrap" data-xls-skip><div id="p10warn"></div></div>
 			</div>
 		</div>
 	</div>

@@ -1,34 +1,15 @@
-// cart_daily.js — CART运营每日跟进：细胞订单(BS Order)执行监控
-// 把每单拆成「单采/回输」两条记录，四色状态灯(红/灰/黄/绿) 日历Dashboard + 明细表
+// cart_daily.js — CART运营-日历：细胞订单(BS Order)执行监控
+// 把每单拆成「单采/回输」两条记录，四色状态灯(红/灰/黄/绿) 日历 Dashboard + 工作量提醒
 // 状态按「今天」判定：无后端，取客户端北京时间(UTC+8)实时值；数据层只给原始计划/实际日期
+// 明细表已拆到独立的「CART运营-明细」页（page34.html / js/cart_detail.js）
 (function () {
     var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
     if (!B || !B.CART_DAILY) return;
     var DATA = B.CART_DAILY;
-
-    var pad2 = function (n) { return (n < 10 ? '0' : '') + n; };
-    // 客户端北京时间“今天”（UTC+8 墙钟日期），YYYY-MM-DD
-    function beijingToday() {
-        var d = new Date(Date.now() + 8 * 3600000);
-        return d.getUTCFullYear() + '-' + pad2(d.getUTCMonth() + 1) + '-' + pad2(d.getUTCDate());
-    }
-
-    var TYPE_LABEL = { apheresis: '单采', reinfusion: '回输' };
-    var TYPE_ICON = { apheresis: '🧬', reinfusion: '💉' };
-    // 排序/颜色约定：红→灰→黄→绿（order 越小越靠前）
-    var LIGHTS = [
-        { k: 'red',    order: 0, color: '#ff4d4f', txt: '逾期未执行' },
-        { k: 'gray',   order: 1, color: '#9aa0a6', txt: '待执行' },
-        { k: 'yellow', order: 2, color: '#ffb800', txt: '延期/提前执行' },
-        { k: 'green',  order: 3, color: '#62c98d', txt: '按计划执行' }
-    ];
-    var LK = {}; LIGHTS.forEach(function (l) { LK[l.k] = l; });
-    // 记录状态：有实际开始 → 与计划同日=绿，否则=黄；无实际 → 计划≤今天=红，否则=灰
-    function stateOf(r, today) {
-        if (r.actual) return r.actual === r.plan ? 'green' : 'yellow';
-        return r.plan <= today ? 'red' : 'gray';
-    }
-    function stateOrder(r, today) { return LK[stateOf(r, today)].order; }
+    var C = window.CART_COMMON;
+    var pad2 = C.pad2, beijingToday = C.beijingToday;
+    var TYPE_LABEL = C.TYPE_LABEL, LIGHTS = C.LIGHTS, LK = C.LK;
+    var stateOf = C.stateOf, stateOrder = C.stateOrder, statHTML = C.statHTML;
 
     // 可用月份（按计划日期）用于默认定位最新月
     var monthSet = {};
@@ -39,13 +20,11 @@
     YMS.forEach(function (ym) { yearSet[ym.slice(0, 4)] = true; });
     var YEARS = Object.keys(yearSet).sort().reverse(); // 新→旧
 
-    // 当前状态
     var selY = parseInt(DEF_YM.slice(0, 4), 10);
     var selM = parseInt(DEF_YM.slice(5, 7), 10);
-    var selLights = { red: true, gray: true, yellow: true, green: true }; // 默认四个状态全选
-    var hl = null; // 搜索命中高亮 {code, type, plan}
-    var focus = null; // 搜索聚焦：非空时日历/表格仅显示该订单记录 {code, type}
-    var msg = '';
+    var selLights = { red: true, gray: true, yellow: true, green: true };
+    var selCos = 'ALL';          // 提醒块 COS 筛选（不影响日历）
+    var hl = null, focus = null, msg = '';
 
     function inFocus(r) { return focus && r.code === focus.code && r.type === focus.type; }
 
@@ -58,6 +37,20 @@
         $m.html(mh);
         $y.val(String(selY)); $m.val(String(selM));
     }
+    function fillCos() {
+        var ro = C.roster();
+        var names = Object.keys(ro);
+        // 花名册优先；历史数据里出现但不在册的 COS 也一并列出，避免筛选漏人
+        var extra = {};
+        DATA.forEach(function (r) { if (r.cos && !ro[r.cos]) extra[r.cos] = true; });
+        var all = names.concat(Object.keys(extra).sort());
+        var h = '<option value="ALL">全部 COS</option>';
+        all.forEach(function (n) {
+            var city = C.cosCity(n);
+            h += '<option value="' + n + '">' + n + (city ? '（' + city + '）' : '') + (C.isPartTime(n) ? ' ·兼职' : '') + '</option>';
+        });
+        $('#p10cos').html(h).val(selCos);
+    }
     function renderLights() {
         var s = '';
         LIGHTS.forEach(function (l) {
@@ -67,6 +60,15 @@
                 '</button>';
         });
         $('#p10lights').html(s);
+    }
+
+    // ---------- 当月记录（日历与提醒共用同一口径） ----------
+    function monthRecs(today) {
+        var ym = selY + '-' + pad2(selM);
+        return DATA.filter(function (r) {
+            if (focus) return inFocus(r);
+            return r.plan.slice(0, 7) === ym && selLights[stateOf(r, today)];
+        });
     }
 
     // ---------- 日历 Dashboard ----------
@@ -79,38 +81,64 @@
             '<div class="cc-bot"><span class="cc-hosp">' + (r.hosp || '未知医院') + '</span><span class="cc-pat">' + (r.patient || '·') + '</span></div>' +
             '</div>';
     }
-    // 分状态计数 HTML：色点 + 数量（仅列出现过的状态）
-    function statHTML(stCnt, big) {
-        var s = '';
-        LIGHTS.forEach(function (l) {
-            var n = stCnt[l.k] || 0;
-            if (!n) return;
-            s += '<i class="cart-mini' + (big ? ' big' : '') + '" style="background:' + l.color + ';box-shadow:0 0 5px ' + l.color + '"></i>' +
-                '<b class="cart-num' + (big ? ' big' : '') + '" style="color:' + l.color + '">' + n + '</b>';
+
+    // 某天的风险：按 COS 聚合，涉及 ≥2 家医院即「无法覆盖」
+    function dayRisk(recs) {
+        var byCos = {};
+        recs.forEach(function (r) {
+            var c = byCos[r.cos || ''] || (byCos[r.cos || ''] = { cos: r.cos || '', hosps: {}, n: 0, ap: 0, re: 0 });
+            if (r.hosp) c.hosps[r.hosp] = true;
+            c.n++;
+            if (r.type === 'apheresis') c.ap++; else c.re++;
         });
-        return s;
+        var out = [];
+        Object.keys(byCos).forEach(function (k) {
+            var c = byCos[k];
+            if (!c.cos) return;                                   // 未指定 COS 的不判风险
+            if (Object.keys(c.hosps).length < 2) return;          // 单家医院 = 可完成
+            out.push({ cos: c.cos, hosps: Object.keys(c.hosps).length, n: c.n, ap: c.ap, re: c.re });
+        });
+        out.sort(function (a, b) { return b.hosps - a.hosps || b.n - a.n; });
+        return out;
     }
-    function renderCalendar() {
-        var today = beijingToday();
+
+    // 当天完全没有任务的 COS（推荐人选）；兼职 COS 仅在顶替对象出风险时出现
+    function freeCos(recs, riskList) {
+        var busy = {};
+        recs.forEach(function (r) { if (r.cos) busy[r.cos] = true; });
+        var riskCos = {};
+        riskList.forEach(function (x) { riskCos[x.cos] = true; });
+        var ro = C.roster();
+        var out = [];
+        Object.keys(ro).forEach(function (n) {
+            if (busy[n]) return;
+            var bo = ro[n].backupOf;
+            if (bo && !riskCos[bo]) return;   // 兼职：只有其「可顶替的人」出风险才推荐
+            out.push({ name: n, city: ro[n].city || '', backupOf: bo || '' });
+        });
+        // 同城优先（按风险方所在城市），其余按原顺序
+        var wantCity = {};
+        riskList.forEach(function (x) { var cy = C.cosCity(x.cos); if (cy) wantCity[cy] = true; });
+        out.sort(function (a, b) {
+            var sa = wantCity[a.city] ? 0 : 1, sb = wantCity[b.city] ? 0 : 1;
+            return sa - sb;
+        });
+        return out;
+    }
+
+    function renderCalendar(today, recs) {
         var ym = selY + '-' + pad2(selM);
         var first = new Date(Date.UTC(selY, selM - 1, 1));
         var firstDow = (first.getUTCDay() + 6) % 7; // 周一=0
         var dim = new Date(Date.UTC(selY, selM, 0)).getUTCDate();
         var dayRecs = {};
         var monthCnt = {}; LIGHTS.forEach(function (l) { monthCnt[l.k] = 0; });
-        DATA.forEach(function (r) {
-            if (inFocus(r)) { // 搜索聚焦：该订单无视筛选，始终保留
-                var df = parseInt(r.plan.slice(8, 10), 10);
-                (dayRecs[df] = dayRecs[df] || []).push(r);
-                monthCnt[stateOf(r, today)]++;
-                return;
-            }
-            if (focus) return; // 聚焦态下不混入其它记录
-            if (r.plan.slice(0, 7) !== ym || !selLights[stateOf(r, today)]) return;
+        recs.forEach(function (r) {
             var d = parseInt(r.plan.slice(8, 10), 10);
             (dayRecs[d] = dayRecs[d] || []).push(r);
             monthCnt[stateOf(r, today)]++;
         });
+        var height = {};  // 每天风险人数（角标）
         var html = '<div class="cart-wd">' + WD_HDR.map(function (w) { return '<span>' + w + '</span>'; }).join('') + '</div>';
         var grid = '';
         var total = 0;
@@ -118,69 +146,80 @@
             var d = cell - firstDow + 1;
             var todayCls = (ym === today.slice(0, 7) && d === parseInt(today.slice(8, 10), 10)) ? ' today' : '';
             if (d < 1) { grid += '<div class="cart-day off"></div>'; continue; }
-            var recs = dayRecs[d] || [];
-            total += recs.length;
-            var cards = recs.map(function (r) { return cardHTML(r, today); }).join('');
+            var dayList = dayRecs[d] || [];
+            total += dayList.length;
+            var rk = dayRisk(dayList);
+            var riskBadge = rk.length ? '<span class="cart-day-risk" title="当天 ' + rk.length + ' 人的工作量无法覆盖">⚠' + rk.length + '</span>' : '';
+            var cards = dayList.map(function (r) { return cardHTML(r, today); }).join('');
             var stCnt = {};
-            recs.forEach(function (r) { var k = stateOf(r, today); stCnt[k] = (stCnt[k] || 0) + 1; });
+            dayList.forEach(function (r) { var k = stateOf(r, today); stCnt[k] = (stCnt[k] || 0) + 1; });
             grid += '<div class="cart-day' + todayCls + '">' +
-                '<div class="cd-hd"><span class="cd-date">' + d + '</span><span class="cd-st">' + statHTML(stCnt) + '</span></div>' +
+                '<div class="cd-hd"><span class="cd-date">' + d + '</span>' + riskBadge + '<span class="cd-st">' + statHTML(stCnt) + '</span></div>' +
                 '<div class="cd-body">' + (cards || '<div class="cd-empty">—</div>') + '</div>' +
                 '</div>';
         }
-        // 补齐末尾空位，凑满 7 的整数倍
         var filled = firstDow + dim;
         while (filled % 7) { grid += '<div class="cart-day off"></div>'; filled++; }
         $('#p10cal').html(html + '<div class="cart-grid">' + grid + '</div>');
         $('#p10calstat').html('<b class="cart-total">共 ' + total + ' 条</b>' + statHTML(monthCnt, true));
         if (hl) highlightHit();
+        return recs;
     }
 
-    // ---------- 明细表格 ----------
-    var TH = [
-        { t: '追溯码', cls: 'c-code' },
-        { t: '医院', cls: 'c-hosp' },
-        { t: '患者脱敏', cls: 'c-pat' },
-        { t: '类型', cls: 'c-type' },
-        { t: 'COS', cls: 'c-cos' },
-        { t: '状态', cls: 'c-st' },
-        { t: '计划时间', cls: 'c-plan' },
-        { t: '实际开始时间', cls: 'c-act' }
-    ];
-    function renderTable() {
-        var today = beijingToday();
-        var ym = selY + '-' + pad2(selM);
-        var recs = DATA.filter(function (r) {
-            if (focus) return inFocus(r); // 搜索聚焦：明细只显示该订单这条记录
-            return r.plan.slice(0, 7) === ym && selLights[stateOf(r, today)];
-        }).sort(function (a, b) {
-            var d = stateOrder(a, today) - stateOrder(b, today);
-            if (d) return d;
-            if (a.plan !== b.plan) return a.plan < b.plan ? -1 : 1;
-            return a.type < b.type ? -1 : 1;
+    // ---------- 工作量提醒 ----------
+    function renderWarn(today, recs) {
+        var dim = new Date(Date.UTC(selY, selM, 0)).getUTCDate();
+        var byDay = {};
+        recs.forEach(function (r) {
+            var d = parseInt(r.plan.slice(8, 10), 10);
+            (byDay[d] = byDay[d] || []).push(r);
         });
-        var hd = '<div class="cart-tbl-hdr">' + TH.map(function (c) { return '<span class="' + c.cls + '">' + c.t + '</span>'; }).join('') + '</div>';
-        if (!recs.length) { $('#p10tbl').html(hd + '<div class="cart-tbl-empty">本月无记录</div>'); return; }
+        var days = [];
+        var totalRisk = 0;
+        for (var d = 1; d <= dim; d++) {
+            var list = byDay[d] || [];
+            var rk = dayRisk(list);
+            if (selCos !== 'ALL') rk = rk.filter(function (x) { return x.cos === selCos; });
+            if (!rk.length) continue;
+            totalRisk += rk.length;
+            days.push({ d: d, list: list, risk: rk });
+        }
+        var ym = selY + '-' + pad2(selM);
+        var hd = '<div class="cart-warn-hdr"><span class="w-date">日期</span><span class="w-risk">无法覆盖的 COS</span><span class="w-free">当天可支援（空闲）</span></div>';
+        if (!days.length) {
+            $('#p10warn').html(hd + '<div class="cart-warn-empty">本月没有「同一 COS 同一天跨多家医院」的情况 ✓</div>');
+            $('#p10warnstat').text('');
+            return;
+        }
         var rows = '';
-        recs.forEach(function (r, i) {
-            var st = stateOf(r, today);
-            var hit = hl && hl.code === r.code && hl.type === r.type ? ' cart-hit' : '';
-            rows += '<div class="cart-tbl-row' + hit + '" data-i="' + i + '" data-t="' + r.type + '">' +
-                '<span class="c-code" title="' + r.code + '">' + (r.code || '(无码)') + '</span>' +
-                '<span class="c-hosp">' + (r.hosp || '未知医院') + '</span>' +
-                '<span class="c-pat">' + (r.patient || '·') + '</span>' +
-                '<span class="c-type"><i class="c-type-ico">' + TYPE_ICON[r.type] + '</i>' + TYPE_LABEL[r.type] + '</span>' +
-                '<span class="c-cos' + (r.cos ? '' : ' no') + '">' + (r.cos || '-') + '</span>' +
-                '<span class="c-st"><i class="cart-dot" style="background:' + LK[st].color + ';box-shadow:0 0 6px ' + LK[st].color + ';"></i>' + LK[st].txt + '</span>' +
-                '<span class="c-plan">' + r.plan + '</span>' +
-                '<span class="c-act' + (r.actual ? '' : ' no') + '">' + (r.actual || '-') + '</span>' +
+        days.forEach(function (x) {
+            var dd = ym + '-' + pad2(x.d);
+            var riskHtml = x.risk.map(function (k) {
+                var ro = C.roster()[k.cos];
+                var city = (ro && ro.city) ? ('·' + ro.city) : '';
+                var bo = (ro && ro.backupOf) ? ('<i class="w-part">兼职</i>') : '';
+                return '<span class="w-cos">' + k.cos + city + bo + '</span>' +
+                    '<span class="w-meta">' + k.hosps + ' 家医院 · ' + k.n + ' 单（单采 ' + k.ap + ' / 回输 ' + k.re + '）</span>';
+            }).join('');
+            var free = freeCos(x.list, x.risk);
+            var freeHtml = free.length
+                ? free.slice(0, 8).map(function (f) {
+                    return '<span class="w-free-i' + (f.backupOf ? ' pt' : '') + '">' + f.name +
+                        (f.city ? '<em>' + f.city + '</em>' : '') +
+                        (f.backupOf ? '<i>替' + f.backupOf + '</i>' : '') + '</span>';
+                }).join('')
+                : '<span class="w-none">当天全员有任务</span>';
+            rows += '<div class="cart-warn-row">' +
+                '<span class="w-date">' + dd + '<em>周' + '日一二三四五六'.charAt(new Date(Date.UTC(selY, selM - 1, x.d)).getUTCDay()) + '</em></span>' +
+                '<span class="w-risk">' + riskHtml + '</span>' +
+                '<span class="w-free">' + freeHtml + '</span>' +
                 '</div>';
         });
-        $('#p10tbl').html(hd + '<div class="cart-tbl-body">' + rows + '</div>');
-        if (hl) highlightHit();
+        $('#p10warn').html(hd + '<div class="cart-warn-body">' + rows + '</div>');
+        $('#p10warnstat').html('<b class="cart-total">' + days.length + ' 天 · ' + totalRisk + ' 人次无法覆盖</b>');
     }
 
-    // 搜索命中后：日历卡片 + 表格行 高亮闪烁并滚动到可视区
+    // 搜索命中后：日历卡片高亮闪烁并滚动到可视区
     function highlightHit() {
         if (!hl) return;
         var cards = document.querySelectorAll('#p10cal .cart-card');
@@ -190,57 +229,58 @@
                 break;
             }
         }
-        var rows = document.querySelectorAll('#p10tbl .cart-tbl-row');
-        for (var i = 0; i < rows.length; i++) {
-            var r = rows[i];
-            if (r.getAttribute('data-t') === hl.type && r.querySelector('.c-code').textContent === (hl.code || '(无码)')) {
-                r.scrollIntoView({ block: 'center' });
-                break;
-            }
-        }
+    }
+
+    function renderAll() {
+        var today = beijingToday();
+        var recs = monthRecs(today);
+        renderCalendar(today, recs);
+        renderWarn(today, recs);
     }
 
     // ---------- 搜索 ----------
     function doSearch() {
         var code = String($('#p10code').val() || '').trim();
-        var qtype = $('#p10qtype').val(); // apheresis / reinfusion
+        var qtype = $('#p10qtype').val();
         if (!code) { $('#p10msg').text('请输入追溯码').addClass('err'); return; }
         var hitRec = null;
         DATA.forEach(function (r) { if (r.code === code && r.type === qtype && !hitRec) hitRec = r; });
         if (!hitRec) {
-            hl = null;
-            focus = null;
+            hl = null; focus = null;
             $('#p10msg').text('未找到该追溯码对应的记录（可能不存在 / 已取消或终止被过滤 / 未排期不显示）').addClass('err');
-            renderCalendar(); renderTable();
+            renderAll();
             return;
         }
         selY = parseInt(hitRec.plan.slice(0, 4), 10);
         selM = parseInt(hitRec.plan.slice(5, 7), 10);
-        LIGHTS.forEach(function (l) { selLights[l.k] = true; }); // 自动重置全选
+        LIGHTS.forEach(function (l) { selLights[l.k] = true; });
         $('#p10y').val(String(selY)); $('#p10m').val(String(selM));
         hl = { code: code, type: qtype };
-        focus = { code: code, type: qtype }; // 聚焦：日历/表格只显示该订单
+        focus = { code: code, type: qtype };
         msg = '';
         $('#p10msg').text('已定位：' + code + '（' + TYPE_LABEL[qtype] + '，' + hitRec.plan + '）· 仅显示该订单，点「清空」返回整月').removeClass('err');
-        renderCalendar(); renderTable();
+        renderAll();
     }
     function doClear() {
         $('#p10code').val('');
         $('#p10msg').text('').removeClass('err');
-        hl = null;
-        focus = null;
-        renderCalendar(); renderTable(); // 回到当前年月的整月视图
+        hl = null; focus = null;
+        renderAll();
     }
 
     // ---------- 事件绑定 ----------
-    function rerender() { hl = null; focus = null; msg = ''; $('#p10msg').text('').removeClass('err'); renderCalendar(); renderTable(); }
+    function rerender() { hl = null; focus = null; msg = ''; $('#p10msg').text('').removeClass('err'); renderAll(); }
     function bindEvents() {
         $('#p10y').on('change', function () { selY = parseInt(this.value, 10); rerender(); });
         $('#p10m').on('change', function () { selM = parseInt(this.value, 10); rerender(); });
+        $('#p10cos').on('change', function () {
+            selCos = this.value;
+            var today = beijingToday();
+            renderWarn(today, monthRecs(today));   // 只重绘提醒块，不动日历
+        });
         $('#p10lights').on('click', '.cart-light', function () {
             var k = $(this).data('k');
             var next = !selLights[k];
-            // 至少保留一个状态灯
             var onCnt = LIGHTS.filter(function (l) { return selLights[l.k]; }).length;
             if (!next && onCnt <= 1) return;
             selLights[k] = next;
@@ -253,9 +293,9 @@
 
     $(function () {
         fillYearMonth();
+        fillCos();
         renderLights();
         bindEvents();
-        renderCalendar();
-        renderTable();
+        renderAll();
     });
 })();

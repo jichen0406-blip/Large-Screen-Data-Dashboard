@@ -1,8 +1,8 @@
 /* 自动生成文件 — 请勿手动修改，运行 node build_data.js 刷新 */
-/* 数据源: bs_order - 2026-11-03T170146.707.xlsx | 数据截止: 2026-11-03 */
+/* 数据源: bs_order - 2026-11-03T170146.707.xlsx | 数据截止: 2026-11-04 */
 var BOARD_DATA = {
   "UPDATED": "2026-11-03 17:01:55",
-  "DP": "2026-11-03",
+  "DP": "2026-11-04",
   "Y": "2026",
   "YTD": {
     "O": 369,
@@ -775,16 +775,14 @@ var BOARD_DATA = {
           "v": 1
         }
       ]
+    },
+    {
+      "date": "2026-11-04",
+      "orders": [],
+      "reinfusion": []
     }
   ],
   "DAILY30": [
-    {
-      "date": "2026-10-05",
-      "orders": [],
-      "reinfusion": [],
-      "apheresis": [],
-      "release": []
-    },
     {
       "date": "2026-10-06",
       "orders": [
@@ -1861,6 +1859,13 @@ var BOARD_DATA = {
           "name": "王*荣"
         }
       ],
+      "release": []
+    },
+    {
+      "date": "2026-11-04",
+      "orders": [],
+      "reinfusion": [],
+      "apheresis": [],
       "release": []
     }
   ],
@@ -27608,7 +27613,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-07",
-      "actual": "2023-07-07"
+      "actual": "2023-07-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0001",
@@ -27617,7 +27625,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-08-16",
-      "actual": "2023-08-21"
+      "actual": "2023-08-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0002",
@@ -27626,7 +27637,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-07-11",
-      "actual": "2023-07-11"
+      "actual": "2023-07-11",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0002",
@@ -27635,7 +27649,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-08-08",
-      "actual": "2023-08-08"
+      "actual": "2023-08-08",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0003",
@@ -27644,7 +27661,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-11",
-      "actual": "2023-07-11"
+      "actual": "2023-07-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0003",
@@ -27653,7 +27673,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-08-11",
-      "actual": "2023-08-11"
+      "actual": "2023-08-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0004",
@@ -27662,7 +27685,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-07-12",
-      "actual": "2023-07-12"
+      "actual": "2023-07-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0004",
@@ -27671,7 +27697,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-08-07",
-      "actual": "2023-08-07"
+      "actual": "2023-08-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0005",
@@ -27680,7 +27709,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-13",
-      "actual": "2023-07-13"
+      "actual": "2023-07-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0005",
@@ -27689,7 +27721,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-08-14",
-      "actual": "2023-08-14"
+      "actual": "2023-08-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0006",
@@ -27698,7 +27733,10 @@ var BOARD_DATA = {
       "cos": "胡慧",
       "type": "apheresis",
       "plan": "2023-07-18",
-      "actual": "2023-07-18"
+      "actual": "2023-07-18",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "A1C0006",
@@ -27707,7 +27745,10 @@ var BOARD_DATA = {
       "cos": "胡慧",
       "type": "reinfusion",
       "plan": "2023-09-08",
-      "actual": "2023-09-08"
+      "actual": "2023-09-08",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "A1C0011",
@@ -27716,7 +27757,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-07-28",
-      "actual": "2023-07-28"
+      "actual": "2023-07-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0011",
@@ -27725,7 +27769,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-08-30",
-      "actual": "2023-08-30"
+      "actual": "2023-08-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0008",
@@ -27734,7 +27781,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-07-21",
-      "actual": "2023-07-21"
+      "actual": "2023-07-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0008",
@@ -27743,7 +27793,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-08-17",
-      "actual": "2023-08-17"
+      "actual": "2023-08-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0009",
@@ -27752,7 +27805,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2023-07-21",
-      "actual": "2023-07-21"
+      "actual": "2023-07-21",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1C0009",
@@ -27761,7 +27817,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2023-08-29",
-      "actual": "2023-08-29"
+      "actual": "2023-08-29",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1C0010",
@@ -27770,7 +27829,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-07-26",
-      "actual": "2023-07-26"
+      "actual": "2023-07-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0010",
@@ -27779,7 +27841,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-09-28",
-      "actual": "2023-09-28"
+      "actual": "2023-09-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0013",
@@ -27788,7 +27853,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2023-07-28",
-      "actual": "2023-07-28"
+      "actual": "2023-07-28",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1C0013",
@@ -27797,7 +27865,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2023-08-28",
-      "actual": "2023-08-28"
+      "actual": "2023-08-28",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1C0015",
@@ -27806,7 +27877,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-07-31",
-      "actual": "2023-07-31"
+      "actual": "2023-07-31",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0015",
@@ -27815,7 +27889,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-08-28",
-      "actual": "2023-08-28"
+      "actual": "2023-08-28",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0024",
@@ -27824,7 +27901,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-08-24",
-      "actual": "2023-08-24"
+      "actual": "2023-08-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0024",
@@ -27833,7 +27913,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-09-20",
-      "actual": "2023-09-20"
+      "actual": "2023-09-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0018",
@@ -27842,7 +27925,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-08-10",
-      "actual": "2023-08-10"
+      "actual": "2023-08-10",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1C0018",
@@ -27851,7 +27937,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2023-09-11",
-      "actual": "2023-09-11"
+      "actual": "2023-09-11",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1C0017",
@@ -27860,7 +27949,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-08-08",
-      "actual": "2023-08-08"
+      "actual": "2023-08-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0017",
@@ -27869,7 +27961,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-10-13",
-      "actual": "2023-10-13"
+      "actual": "2023-10-13",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0016",
@@ -27878,7 +27973,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-08-08",
-      "actual": "2023-08-08"
+      "actual": "2023-08-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0016",
@@ -27887,7 +27985,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2023-09-04",
-      "actual": "2023-09-04"
+      "actual": "2023-09-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0027",
@@ -27896,7 +27997,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-08-30",
-      "actual": "2023-08-30"
+      "actual": "2023-08-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0027",
@@ -27905,7 +28009,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-09-26",
-      "actual": "2023-09-26"
+      "actual": "2023-09-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0020",
@@ -27914,7 +28021,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-08-21",
-      "actual": "2023-08-21"
+      "actual": "2023-08-21",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0020",
@@ -27923,7 +28033,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-09-14",
-      "actual": "2023-09-14"
+      "actual": "2023-09-14",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0023",
@@ -27932,7 +28045,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-08-24",
-      "actual": "2023-08-24"
+      "actual": "2023-08-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0023",
@@ -27941,7 +28057,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-10-16",
-      "actual": "2023-10-16"
+      "actual": "2023-10-16",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0025",
@@ -27950,7 +28069,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-08-25",
-      "actual": "2023-08-25"
+      "actual": "2023-08-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0025",
@@ -27959,7 +28081,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-09-28",
-      "actual": "2023-09-28"
+      "actual": "2023-09-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0026",
@@ -27968,7 +28093,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2023-08-28",
-      "actual": "2023-08-28"
+      "actual": "2023-08-28",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1C0026",
@@ -27977,7 +28105,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2023-10-30",
-      "actual": "2023-10-30"
+      "actual": "2023-10-30",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1C0029",
@@ -27986,7 +28117,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-08-31",
-      "actual": "2023-08-31"
+      "actual": "2023-08-31",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0029",
@@ -27995,7 +28129,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-11-09",
-      "actual": "2023-11-09"
+      "actual": "2023-11-09",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0031",
@@ -28004,7 +28141,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-09-06",
-      "actual": "2023-09-06"
+      "actual": "2023-09-06",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0031",
@@ -28013,7 +28153,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2023-12-29",
-      "actual": "2023-12-29"
+      "actual": "2023-12-29",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0032",
@@ -28022,7 +28165,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-09-08",
-      "actual": "2023-09-08"
+      "actual": "2023-09-08",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0032",
@@ -28031,7 +28177,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-10-14",
-      "actual": "2023-10-14"
+      "actual": "2023-10-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0034",
@@ -28040,7 +28189,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-09-21",
-      "actual": "2023-09-21"
+      "actual": "2023-09-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0034",
@@ -28049,7 +28201,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-10-16",
-      "actual": "2023-10-16"
+      "actual": "2023-10-16",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0035",
@@ -28058,7 +28213,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-09-14",
-      "actual": "2023-09-14"
+      "actual": "2023-09-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0035",
@@ -28067,7 +28225,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-10-18",
-      "actual": "2023-10-18"
+      "actual": "2023-10-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0036",
@@ -28076,7 +28237,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2023-09-14",
-      "actual": "2023-09-14"
+      "actual": "2023-09-14",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1C0036",
@@ -28085,7 +28249,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2023-10-31",
-      "actual": "2023-10-31"
+      "actual": "2023-10-31",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1C0041",
@@ -28094,7 +28261,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-09-27",
-      "actual": "2023-09-27"
+      "actual": "2023-09-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0041",
@@ -28103,7 +28273,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-11-10",
-      "actual": "2023-11-10"
+      "actual": "2023-11-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0037",
@@ -28112,7 +28285,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-09-15",
-      "actual": "2023-09-15"
+      "actual": "2023-09-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0037",
@@ -28121,7 +28297,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2023-10-23",
-      "actual": "2023-10-23"
+      "actual": "2023-10-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0038",
@@ -28130,7 +28309,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2023-09-19",
-      "actual": "2023-09-19"
+      "actual": "2023-09-19",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1C0038",
@@ -28139,7 +28321,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2023-10-23",
-      "actual": "2023-10-23"
+      "actual": "2023-10-23",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1C0039",
@@ -28148,7 +28333,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-09-21",
-      "actual": "2023-09-21"
+      "actual": "2023-09-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0039",
@@ -28157,7 +28345,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-04-17",
-      "actual": "2024-04-17"
+      "actual": "2024-04-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0042",
@@ -28166,7 +28357,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2023-09-26",
-      "actual": "2023-09-26"
+      "actual": "2023-09-26",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1C0042",
@@ -28175,7 +28369,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2023-11-06",
-      "actual": "2023-11-06"
+      "actual": "2023-11-06",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1C0046",
@@ -28184,7 +28381,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-10-19",
-      "actual": "2023-10-19"
+      "actual": "2023-10-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0046",
@@ -28193,7 +28393,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2023-11-15",
-      "actual": "2023-11-15"
+      "actual": "2023-11-15",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0047",
@@ -28202,7 +28405,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-10-23",
-      "actual": "2023-10-23"
+      "actual": "2023-10-23",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0047",
@@ -28211,7 +28417,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-12-27",
-      "actual": "2023-12-27"
+      "actual": "2023-12-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0048",
@@ -28220,7 +28429,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2023-10-20",
-      "actual": "2023-10-20"
+      "actual": "2023-10-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0048",
@@ -28229,7 +28441,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2023-11-22",
-      "actual": "2023-11-22"
+      "actual": "2023-11-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0049",
@@ -28238,7 +28453,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-10-20",
-      "actual": "2023-10-20"
+      "actual": "2023-10-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0049",
@@ -28247,7 +28465,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-11-17",
-      "actual": "2023-11-17"
+      "actual": "2023-11-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0050",
@@ -28256,7 +28477,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-10-23",
-      "actual": "2023-10-23"
+      "actual": "2023-10-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0050",
@@ -28265,7 +28489,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2023-11-22",
-      "actual": "2023-11-22"
+      "actual": "2023-11-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0052",
@@ -28274,7 +28501,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-10-27",
-      "actual": "2023-10-27"
+      "actual": "2023-10-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0052",
@@ -28283,7 +28513,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2023-12-07",
-      "actual": "2023-12-07"
+      "actual": "2023-12-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0054",
@@ -28292,7 +28525,10 @@ var BOARD_DATA = {
       "cos": "朱梦瑄",
       "type": "apheresis",
       "plan": "2023-11-07",
-      "actual": "2023-11-07"
+      "actual": "2023-11-07",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1C0054",
@@ -28301,7 +28537,10 @@ var BOARD_DATA = {
       "cos": "朱梦瑄",
       "type": "reinfusion",
       "plan": "2024-05-20",
-      "actual": "2024-05-20"
+      "actual": "2024-05-20",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1C0053",
@@ -28310,7 +28549,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2023-11-05",
-      "actual": "2023-11-05"
+      "actual": "2023-11-05",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1C0053",
@@ -28319,7 +28561,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2023-12-14",
-      "actual": "2023-12-14"
+      "actual": "2023-12-14",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1C0055",
@@ -28328,7 +28573,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-11-07",
-      "actual": "2023-11-07"
+      "actual": "2023-11-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0055",
@@ -28337,7 +28585,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-01-24",
-      "actual": "2024-01-24"
+      "actual": "2024-01-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0060",
@@ -28346,7 +28597,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-15",
-      "actual": "2023-11-15"
+      "actual": "2023-11-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0060",
@@ -28355,7 +28609,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-09",
-      "actual": "2024-01-09"
+      "actual": "2024-01-09",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0277",
@@ -28364,7 +28621,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-31",
-      "actual": "2024-10-31"
+      "actual": "2024-10-31",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0277",
@@ -28373,7 +28633,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-03-24",
-      "actual": "2025-03-24"
+      "actual": "2025-03-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0057",
@@ -28382,7 +28645,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-11-10",
-      "actual": "2023-11-10"
+      "actual": "2023-11-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0057",
@@ -28391,7 +28657,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-03-15",
-      "actual": "2024-03-15"
+      "actual": "2024-03-15",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0059",
@@ -28400,7 +28669,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2023-11-16",
-      "actual": "2023-11-16"
+      "actual": "2023-11-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0059",
@@ -28409,7 +28681,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-11",
-      "actual": "2024-03-11"
+      "actual": "2024-03-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0062",
@@ -28418,7 +28693,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-17",
-      "actual": "2023-11-17"
+      "actual": "2023-11-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0062",
@@ -28427,7 +28705,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2023-12-28",
-      "actual": "2023-12-28"
+      "actual": "2023-12-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0065",
@@ -28436,7 +28717,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-11-16",
-      "actual": "2023-11-16"
+      "actual": "2023-11-16",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0065",
@@ -28445,7 +28729,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-01-18",
-      "actual": "2024-01-18"
+      "actual": "2024-01-18",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0064",
@@ -28454,7 +28741,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-11-15",
-      "actual": "2023-11-15"
+      "actual": "2023-11-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0064",
@@ -28463,7 +28753,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-01-15",
-      "actual": "2024-01-15"
+      "actual": "2024-01-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0079",
@@ -28472,7 +28765,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-04-16",
-      "actual": "2025-04-16"
+      "actual": "2025-04-16",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0070",
@@ -28481,7 +28777,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-11-22",
-      "actual": "2023-11-22"
+      "actual": "2023-11-22",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1C0070",
@@ -28490,7 +28789,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2023-12-28",
-      "actual": "2023-12-28"
+      "actual": "2023-12-28",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1C0069",
@@ -28499,7 +28801,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-23",
-      "actual": "2023-11-23"
+      "actual": "2023-11-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0069",
@@ -28508,7 +28813,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-02",
-      "actual": "2024-01-02"
+      "actual": "2024-01-02",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0072",
@@ -28517,7 +28825,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-11-24",
-      "actual": "2023-11-24"
+      "actual": "2023-11-24",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0072",
@@ -28526,7 +28837,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2023-12-28",
-      "actual": "2023-12-28"
+      "actual": "2023-12-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0085",
@@ -28535,7 +28849,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-20",
-      "actual": "2023-12-20"
+      "actual": "2023-12-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0085",
@@ -28544,7 +28861,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-25",
-      "actual": "2024-01-25"
+      "actual": "2024-01-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0073",
@@ -28553,7 +28873,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2023-12-22",
-      "actual": "2023-12-22"
+      "actual": "2023-12-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0073",
@@ -28562,7 +28885,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-02-26",
-      "actual": "2024-02-26"
+      "actual": "2024-02-26",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0075",
@@ -28571,7 +28897,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-11-25",
-      "actual": "2023-11-25"
+      "actual": "2023-11-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0075",
@@ -28580,7 +28909,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-10",
-      "actual": "2024-01-10"
+      "actual": "2024-01-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0074",
@@ -28589,7 +28921,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-11-25",
-      "actual": "2023-11-25"
+      "actual": "2023-11-25",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0074",
@@ -28598,7 +28933,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-01-03",
-      "actual": "2024-01-03"
+      "actual": "2024-01-03",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0077",
@@ -28607,7 +28945,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2023-11-30",
-      "actual": "2023-11-30"
+      "actual": "2023-11-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0077",
@@ -28616,7 +28957,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-03-05",
-      "actual": "2024-03-05"
+      "actual": "2024-03-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0076",
@@ -28625,7 +28969,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-11-28",
-      "actual": "2023-11-28"
+      "actual": "2023-11-28",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1C0076",
@@ -28634,7 +28981,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2023-12-28",
-      "actual": "2023-12-28"
+      "actual": "2023-12-28",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1C0078",
@@ -28643,7 +28993,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2023-11-30",
-      "actual": "2023-11-30"
+      "actual": "2023-11-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0078",
@@ -28652,7 +29005,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-01-16",
-      "actual": "2024-01-16"
+      "actual": "2024-01-16",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1C0079",
@@ -28661,7 +29017,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2023-12-04",
-      "actual": "2023-12-04"
+      "actual": "2023-12-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0079",
@@ -28670,7 +29029,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-02-24",
-      "actual": "2024-02-24"
+      "actual": "2024-02-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0082",
@@ -28679,7 +29041,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-05",
-      "actual": "2023-12-05"
+      "actual": "2023-12-05",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0082",
@@ -28688,7 +29053,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-03-07",
-      "actual": "2024-03-07"
+      "actual": "2024-03-07",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0013",
@@ -28697,7 +29065,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-17",
-      "actual": "2024-01-17"
+      "actual": "2024-01-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0013",
@@ -28706,7 +29077,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-29",
-      "actual": "2024-03-29"
+      "actual": "2024-03-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0083",
@@ -28715,7 +29089,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-12-07",
-      "actual": "2023-12-07"
+      "actual": "2023-12-07",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0083",
@@ -28724,7 +29101,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-03-18",
-      "actual": "2024-03-19"
+      "actual": "2024-03-19",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0084",
@@ -28733,7 +29113,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-12-07",
-      "actual": "2023-12-07"
+      "actual": "2023-12-07",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0084",
@@ -28742,7 +29125,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-09-23",
-      "actual": "2024-09-23"
+      "actual": "2024-09-23",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0088",
@@ -28751,7 +29137,10 @@ var BOARD_DATA = {
       "cos": "朱梦瑄",
       "type": "apheresis",
       "plan": "2023-12-15",
-      "actual": "2023-12-15"
+      "actual": "2023-12-15",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1C0088",
@@ -28760,7 +29149,10 @@ var BOARD_DATA = {
       "cos": "朱梦瑄",
       "type": "reinfusion",
       "plan": "2024-01-19",
-      "actual": "2024-01-19"
+      "actual": "2024-01-19",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1C0087",
@@ -28769,7 +29161,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-15",
-      "actual": "2023-12-15"
+      "actual": "2023-12-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0087",
@@ -28778,7 +29173,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-01-22",
-      "actual": "2024-01-22"
+      "actual": "2024-01-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0086",
@@ -28787,7 +29185,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-13",
-      "actual": "2023-12-13"
+      "actual": "2023-12-13",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0086",
@@ -28796,7 +29197,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-04-11",
-      "actual": "2024-04-11"
+      "actual": "2024-04-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0090",
@@ -28805,7 +29209,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2023-12-18",
-      "actual": "2023-12-18"
+      "actual": "2023-12-18",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0090",
@@ -28814,7 +29221,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2024-03-14",
-      "actual": "2024-03-14"
+      "actual": "2024-03-14",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1C0093",
@@ -28823,7 +29233,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2023-12-20",
-      "actual": "2023-12-20"
+      "actual": "2023-12-20",
+      "prov": "浙江省",
+      "city": "温州市",
+      "area": "South"
     },
     {
       "code": "A1C0093",
@@ -28832,7 +29245,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-02-01",
-      "actual": "2024-02-01"
+      "actual": "2024-02-01",
+      "prov": "浙江省",
+      "city": "温州市",
+      "area": "South"
     },
     {
       "code": "A1C0097",
@@ -28841,7 +29257,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2023-12-26",
-      "actual": "2023-12-26"
+      "actual": "2023-12-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1C0097",
@@ -28850,7 +29269,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-03-08",
-      "actual": "2024-03-08"
+      "actual": "2024-03-08",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0039",
@@ -28859,7 +29281,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-02-22",
-      "actual": "2024-02-22"
+      "actual": "2024-02-22",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0039",
@@ -28868,7 +29293,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-04-02",
-      "actual": "2024-04-02"
+      "actual": "2024-04-02",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1C0096",
@@ -28877,7 +29305,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2023-12-26",
-      "actual": "2023-12-26"
+      "actual": "2023-12-26",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "A1C0096",
@@ -28886,7 +29317,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-05-14",
-      "actual": "2024-05-14"
+      "actual": "2024-05-14",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "A1C0095",
@@ -28895,7 +29329,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2023-12-23",
-      "actual": "2023-12-23"
+      "actual": "2023-12-23",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0095",
@@ -28904,7 +29341,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-04-01",
-      "actual": "2024-04-05"
+      "actual": "2024-04-05",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1C0098",
@@ -28913,7 +29353,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-08",
-      "actual": "2024-01-08"
+      "actual": "2024-01-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1C0098",
@@ -28922,7 +29365,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-04-08",
-      "actual": "2024-04-08"
+      "actual": "2024-04-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0001",
@@ -28931,7 +29377,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-01-03",
-      "actual": "2024-01-03"
+      "actual": "2024-01-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0001",
@@ -28940,7 +29389,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-02-29",
-      "actual": "2024-02-29"
+      "actual": "2024-02-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0002",
@@ -28949,7 +29401,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-03",
-      "actual": "2024-01-03"
+      "actual": "2024-01-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0002",
@@ -28958,7 +29413,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-02-24",
-      "actual": "2024-02-24"
+      "actual": "2024-02-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0003",
@@ -28967,7 +29425,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-01-11",
-      "actual": "2024-01-11"
+      "actual": "2024-01-11",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0003",
@@ -28976,7 +29437,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-07-04",
-      "actual": "2024-07-04"
+      "actual": "2024-07-04",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0004",
@@ -28985,7 +29449,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-06",
-      "actual": "2024-01-06"
+      "actual": "2024-01-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0004",
@@ -28994,7 +29461,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-03-11",
-      "actual": "2024-03-11"
+      "actual": "2024-03-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0005",
@@ -29003,7 +29473,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-06",
-      "actual": "2024-01-06"
+      "actual": "2024-01-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0005",
@@ -29012,7 +29485,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-04-22",
-      "actual": "2024-04-22"
+      "actual": "2024-04-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0008",
@@ -29021,7 +29497,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-01-10",
-      "actual": "2024-01-10"
+      "actual": "2024-01-10",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0008",
@@ -29030,7 +29509,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-02-26",
-      "actual": "2024-02-26"
+      "actual": "2024-02-26",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0006",
@@ -29039,7 +29521,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-01-18",
-      "actual": "2024-01-18"
+      "actual": "2024-01-18",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0006",
@@ -29048,7 +29533,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-03-25",
-      "actual": "2024-03-25"
+      "actual": "2024-03-25",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0007",
@@ -29057,7 +29545,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-10",
-      "actual": "2024-01-10"
+      "actual": "2024-01-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0007",
@@ -29066,7 +29557,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-02-27",
-      "actual": "2024-02-28"
+      "actual": "2024-02-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0009",
@@ -29075,7 +29569,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-01-10",
-      "actual": "2024-01-10"
+      "actual": "2024-01-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0010",
@@ -29084,7 +29581,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-15",
-      "actual": "2024-01-15"
+      "actual": "2024-01-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0010",
@@ -29093,7 +29593,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-11",
-      "actual": "2024-06-11"
+      "actual": "2024-06-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0011",
@@ -29102,7 +29605,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-01-29",
-      "actual": "2024-01-29"
+      "actual": "2024-01-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0011",
@@ -29111,7 +29617,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-05-14",
-      "actual": "2024-05-14"
+      "actual": "2024-05-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0012",
@@ -29120,7 +29629,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2024-01-16",
-      "actual": "2024-01-16"
+      "actual": "2024-01-16",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0012",
@@ -29129,7 +29641,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-06-06",
-      "actual": "2024-06-06"
+      "actual": "2024-06-06",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0015",
@@ -29138,7 +29653,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-18",
-      "actual": "2024-01-18"
+      "actual": "2024-01-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0015",
@@ -29147,7 +29665,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-25",
-      "actual": "2024-03-25"
+      "actual": "2024-03-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0016",
@@ -29156,7 +29677,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2024-01-18",
-      "actual": "2024-01-18"
+      "actual": "2024-01-18",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0016",
@@ -29165,7 +29689,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-03-11",
-      "actual": "2024-03-11"
+      "actual": "2024-03-11",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0018",
@@ -29174,7 +29701,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-01-22",
-      "actual": "2024-01-22"
+      "actual": "2024-01-22",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1D0018",
@@ -29183,7 +29713,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-03-04",
-      "actual": "2024-03-04"
+      "actual": "2024-03-04",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1D0019",
@@ -29192,7 +29725,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-01-22",
-      "actual": "2024-01-22"
+      "actual": "2024-01-22",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0019",
@@ -29201,7 +29737,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-02-26",
-      "actual": "2024-02-26"
+      "actual": "2024-02-26",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0021",
@@ -29210,7 +29749,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-01-23",
-      "actual": "2024-01-23"
+      "actual": "2024-01-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0021",
@@ -29219,7 +29761,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-03-28",
-      "actual": "2024-03-28"
+      "actual": "2024-03-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0024",
@@ -29228,7 +29773,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-01-25",
-      "actual": "2024-01-25"
+      "actual": "2024-01-25",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0024",
@@ -29237,7 +29785,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-05-27",
-      "actual": "2024-05-27"
+      "actual": "2024-05-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0022",
@@ -29246,7 +29797,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2024-01-25",
-      "actual": "2024-01-25"
+      "actual": "2024-01-25",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0022",
@@ -29255,7 +29809,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-03-29",
-      "actual": "2024-03-29"
+      "actual": "2024-03-29",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0023",
@@ -29264,7 +29821,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-01-24",
-      "actual": "2024-01-24"
+      "actual": "2024-01-24",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0023",
@@ -29273,7 +29833,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-03-08",
-      "actual": "2024-03-08"
+      "actual": "2024-03-08",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0026",
@@ -29282,7 +29845,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-01-24",
-      "actual": "2024-01-24"
+      "actual": "2024-01-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0026",
@@ -29291,7 +29857,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-03-19",
-      "actual": "2024-03-19"
+      "actual": "2024-03-19",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0027",
@@ -29300,7 +29869,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-01-30",
-      "actual": "2024-01-30"
+      "actual": "2024-01-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0027",
@@ -29309,7 +29881,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-04-12",
-      "actual": "2024-04-12"
+      "actual": "2024-04-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0028",
@@ -29318,7 +29893,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-01-30",
-      "actual": "2024-01-30"
+      "actual": "2024-01-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0028",
@@ -29327,7 +29905,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-03-21",
-      "actual": "2024-03-21"
+      "actual": "2024-03-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0030",
@@ -29336,7 +29917,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-02-06",
-      "actual": "2024-02-06"
+      "actual": "2024-02-06",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0030",
@@ -29345,7 +29929,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-03-15",
-      "actual": "2024-03-15"
+      "actual": "2024-03-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0032",
@@ -29354,7 +29941,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-02-06",
-      "actual": "2024-02-06"
+      "actual": "2024-02-06",
+      "prov": "湖南省",
+      "city": "长沙市",
+      "area": "North"
     },
     {
       "code": "A1D0032",
@@ -29363,7 +29953,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-03-21",
-      "actual": "2024-03-21"
+      "actual": "2024-03-21",
+      "prov": "湖南省",
+      "city": "长沙市",
+      "area": "North"
     },
     {
       "code": "A1D0034",
@@ -29372,7 +29965,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2024-02-06",
-      "actual": "2024-02-06"
+      "actual": "2024-02-06",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0034",
@@ -29381,7 +29977,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-08-01",
-      "actual": "2024-08-01"
+      "actual": "2024-08-01",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0035",
@@ -29390,7 +29989,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-02-08",
-      "actual": "2024-02-08"
+      "actual": "2024-02-08",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0035",
@@ -29399,7 +30001,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-03-14",
-      "actual": "2024-03-14"
+      "actual": "2024-03-14",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000236",
@@ -29408,7 +30013,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-08-20",
-      "actual": "2026-08-20"
+      "actual": "2026-08-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000236",
@@ -29417,7 +30025,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-11-07",
-      "actual": ""
+      "actual": "",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0036",
@@ -29426,7 +30037,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-02-09",
-      "actual": "2024-02-09"
+      "actual": "2024-02-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0036",
@@ -29435,7 +30049,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-03-20",
-      "actual": "2024-03-20"
+      "actual": "2024-03-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0038",
@@ -29444,7 +30061,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-03-07",
-      "actual": "2024-03-07"
+      "actual": "2024-03-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0038",
@@ -29453,7 +30073,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-04-15",
-      "actual": "2024-04-15"
+      "actual": "2024-04-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0040",
@@ -29462,7 +30085,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-02-26",
-      "actual": "2024-02-26"
+      "actual": "2024-02-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0040",
@@ -29471,7 +30097,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-14",
-      "actual": "2024-05-14"
+      "actual": "2024-05-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0042",
@@ -29480,7 +30109,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-02-28",
-      "actual": "2024-02-28"
+      "actual": "2024-02-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0042",
@@ -29489,7 +30121,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-22",
-      "actual": "2024-05-22"
+      "actual": "2024-05-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0043",
@@ -29498,7 +30133,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-02-28",
-      "actual": "2024-02-28"
+      "actual": "2024-02-28",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0043",
@@ -29507,7 +30145,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-04-08",
-      "actual": "2024-04-08"
+      "actual": "2024-04-08",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0045",
@@ -29516,7 +30157,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-04",
-      "actual": "2024-03-04"
+      "actual": "2024-03-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0045",
@@ -29525,7 +30169,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-04-23",
-      "actual": "2024-04-23"
+      "actual": "2024-04-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0046",
@@ -29534,7 +30181,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-03-07",
-      "actual": "2024-03-07"
+      "actual": "2024-03-07",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1D0046",
@@ -29543,7 +30193,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-06-07",
-      "actual": "2024-06-07"
+      "actual": "2024-06-07",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1D0047",
@@ -29552,7 +30205,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-03-08",
-      "actual": "2024-03-08"
+      "actual": "2024-03-08",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0047",
@@ -29561,7 +30217,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-05-06",
-      "actual": "2024-05-06"
+      "actual": "2024-05-06",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0049",
@@ -29570,7 +30229,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2024-03-12",
-      "actual": "2024-03-12"
+      "actual": "2024-03-12",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0049",
@@ -29579,7 +30241,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-06-05",
-      "actual": "2024-06-05"
+      "actual": "2024-06-05",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0050",
@@ -29588,7 +30253,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-03-14",
-      "actual": "2024-03-14"
+      "actual": "2024-03-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0050",
@@ -29597,7 +30265,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-08-12",
-      "actual": "2024-08-12"
+      "actual": "2024-08-12",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0053",
@@ -29606,7 +30277,10 @@ var BOARD_DATA = {
       "cos": "魏芳",
       "type": "apheresis",
       "plan": "2024-03-15",
-      "actual": "2024-03-15"
+      "actual": "2024-03-15",
+      "prov": "河南省",
+      "city": "洛阳市",
+      "area": "North"
     },
     {
       "code": "A1D0053",
@@ -29615,7 +30289,10 @@ var BOARD_DATA = {
       "cos": "魏芳",
       "type": "reinfusion",
       "plan": "2024-04-19",
-      "actual": "2024-04-19"
+      "actual": "2024-04-19",
+      "prov": "河南省",
+      "city": "洛阳市",
+      "area": "North"
     },
     {
       "code": "A1D0051",
@@ -29624,7 +30301,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2024-03-12",
-      "actual": "2024-03-12"
+      "actual": "2024-03-12",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0051",
@@ -29633,7 +30313,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-05-17",
-      "actual": "2024-05-17"
+      "actual": "2024-05-17",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1E0156",
@@ -29642,7 +30325,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-07-11",
-      "actual": "2025-07-11"
+      "actual": "2025-07-11",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0156",
@@ -29651,7 +30337,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-08-26",
-      "actual": "2025-08-26"
+      "actual": "2025-08-26",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0055",
@@ -29660,7 +30349,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-03-14",
-      "actual": "2024-03-14"
+      "actual": "2024-03-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0055",
@@ -29669,7 +30361,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-19",
-      "actual": "2024-08-20"
+      "actual": "2024-08-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0054",
@@ -29678,7 +30373,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-14",
-      "actual": "2024-03-14"
+      "actual": "2024-03-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0054",
@@ -29687,7 +30385,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-05-17",
-      "actual": "2024-05-17"
+      "actual": "2024-05-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0056",
@@ -29696,7 +30397,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-03-15",
-      "actual": "2024-03-15"
+      "actual": "2024-03-15",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0056",
@@ -29705,7 +30409,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2024-04-23",
-      "actual": "2024-04-23"
+      "actual": "2024-04-23",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0058",
@@ -29714,7 +30421,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-03-19",
-      "actual": "2024-03-19"
+      "actual": "2024-03-19",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0058",
@@ -29723,7 +30433,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-04-23",
-      "actual": "2024-04-23"
+      "actual": "2024-04-23",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0057",
@@ -29732,7 +30445,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-03-20",
-      "actual": "2024-03-20"
+      "actual": "2024-03-20",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1D0057",
@@ -29741,7 +30457,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-10-15",
-      "actual": "2024-10-15"
+      "actual": "2024-10-15",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1D0085",
@@ -29750,7 +30469,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "apheresis",
       "plan": "2024-04-26",
-      "actual": "2024-04-26"
+      "actual": "2024-04-26",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0085",
@@ -29759,7 +30481,10 @@ var BOARD_DATA = {
       "cos": "高雨蒙",
       "type": "reinfusion",
       "plan": "2024-07-02",
-      "actual": "2024-07-02"
+      "actual": "2024-07-02",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0060",
@@ -29768,7 +30493,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-21",
-      "actual": "2024-03-21"
+      "actual": "2024-03-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0060",
@@ -29777,7 +30505,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-08-05",
-      "actual": "2024-08-05"
+      "actual": "2024-08-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0061",
@@ -29786,7 +30517,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-03-22",
-      "actual": "2024-03-22"
+      "actual": "2024-03-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0063",
@@ -29795,7 +30529,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-03-25",
-      "actual": "2024-03-25"
+      "actual": "2024-03-25",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "A1D0064",
@@ -29804,7 +30541,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-03-25",
-      "actual": "2024-03-25"
+      "actual": "2024-03-25",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0064",
@@ -29813,7 +30553,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-11-04",
-      "actual": "2024-11-04"
+      "actual": "2024-11-04",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0065",
@@ -29822,7 +30565,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-03-26",
-      "actual": "2024-03-26"
+      "actual": "2024-03-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0065",
@@ -29831,7 +30577,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-08-26",
-      "actual": "2024-08-26"
+      "actual": "2024-08-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0310",
@@ -29840,7 +30589,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-12-05",
-      "actual": "2024-12-05"
+      "actual": "2024-12-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0310",
@@ -29849,7 +30601,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-08-03",
-      "actual": "2025-08-03"
+      "actual": "2025-08-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0068",
@@ -29858,7 +30613,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-04-02",
-      "actual": "2024-04-02"
+      "actual": "2024-04-02",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0068",
@@ -29867,7 +30625,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-07-22",
-      "actual": "2024-07-22"
+      "actual": "2024-07-22",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0069",
@@ -29876,7 +30637,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-03",
-      "actual": "2024-04-03"
+      "actual": "2024-04-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0069",
@@ -29885,7 +30649,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-20",
-      "actual": "2024-05-20"
+      "actual": "2024-05-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0070",
@@ -29894,7 +30661,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-11",
-      "actual": "2024-04-11"
+      "actual": "2024-04-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0070",
@@ -29903,7 +30673,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-22",
-      "actual": "2024-05-22"
+      "actual": "2024-05-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0071",
@@ -29912,7 +30685,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-04-12",
-      "actual": "2024-04-12"
+      "actual": "2024-04-12",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0071",
@@ -29921,7 +30697,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-08-19",
-      "actual": "2024-08-19"
+      "actual": "2024-08-19",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0072",
@@ -29930,7 +30709,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-04-15",
-      "actual": "2024-04-15"
+      "actual": "2024-04-15",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0072",
@@ -29939,7 +30721,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-05-29",
-      "actual": "2024-05-29"
+      "actual": "2024-05-29",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0074",
@@ -29948,7 +30733,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-16",
-      "actual": "2024-04-16"
+      "actual": "2024-04-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0074",
@@ -29957,7 +30745,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-27",
-      "actual": "2024-06-27"
+      "actual": "2024-06-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0077",
@@ -29966,7 +30757,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-18",
-      "actual": "2024-04-18"
+      "actual": "2024-04-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0078",
@@ -29975,7 +30769,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-18",
-      "actual": "2024-04-18"
+      "actual": "2024-04-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0078",
@@ -29984,7 +30781,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-03",
-      "actual": "2024-06-03"
+      "actual": "2024-06-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0079",
@@ -29993,7 +30793,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-22",
-      "actual": "2024-04-22"
+      "actual": "2024-04-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0079",
@@ -30002,7 +30805,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-05-15",
-      "actual": "2024-05-15"
+      "actual": "2024-05-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0080",
@@ -30011,7 +30817,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-22",
-      "actual": "2024-04-22"
+      "actual": "2024-04-22",
+      "prov": "山西省",
+      "city": "太原市",
+      "area": "North"
     },
     {
       "code": "A1D0081",
@@ -30020,7 +30829,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-04-24",
-      "actual": "2024-04-24"
+      "actual": "2024-04-24",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0081",
@@ -30029,7 +30841,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-05-27",
-      "actual": "2024-05-27"
+      "actual": "2024-05-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0082",
@@ -30038,7 +30853,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-04-23",
-      "actual": "2024-04-23"
+      "actual": "2024-04-23",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0082",
@@ -30047,7 +30865,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-09-16",
-      "actual": "2024-09-16"
+      "actual": "2024-09-16",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0083",
@@ -30056,7 +30877,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-04-25",
-      "actual": "2024-04-25"
+      "actual": "2024-04-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0083",
@@ -30065,7 +30889,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-28",
-      "actual": "2024-06-28"
+      "actual": "2024-06-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0086",
@@ -30074,7 +30901,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-04-26",
-      "actual": "2024-04-26"
+      "actual": "2024-04-26",
+      "prov": "江苏省",
+      "city": "无锡市",
+      "area": "North"
     },
     {
       "code": "A1D0086",
@@ -30083,7 +30913,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-09-09",
-      "actual": "2024-09-09"
+      "actual": "2024-09-09",
+      "prov": "江苏省",
+      "city": "无锡市",
+      "area": "North"
     },
     {
       "code": "A1D0084",
@@ -30092,7 +30925,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-04-26",
-      "actual": "2024-04-26"
+      "actual": "2024-04-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0084",
@@ -30101,7 +30937,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-05-23",
-      "actual": "2024-05-23"
+      "actual": "2024-05-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0089",
@@ -30110,7 +30949,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-07",
-      "actual": "2024-05-07"
+      "actual": "2024-05-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0089",
@@ -30119,7 +30961,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-06-24",
-      "actual": "2024-06-24"
+      "actual": "2024-06-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0110",
@@ -30128,7 +30973,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-05-29",
-      "actual": "2024-05-29"
+      "actual": "2024-05-29",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1D0110",
@@ -30137,7 +30985,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-07-02",
-      "actual": "2024-07-02"
+      "actual": "2024-07-02",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1D0091",
@@ -30146,7 +30997,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-08",
-      "actual": "2024-05-08"
+      "actual": "2024-05-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0091",
@@ -30155,7 +31009,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-07-23",
-      "actual": "2024-07-23"
+      "actual": "2024-07-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0093",
@@ -30164,7 +31021,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-05-09",
-      "actual": "2024-05-09"
+      "actual": "2024-05-09",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1D0094",
@@ -30173,7 +31033,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-05-10",
-      "actual": "2024-05-10"
+      "actual": "2024-05-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0094",
@@ -30182,7 +31045,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-06-04",
-      "actual": "2024-06-04"
+      "actual": "2024-06-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0096",
@@ -30191,7 +31057,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-05-10",
-      "actual": "2024-05-10"
+      "actual": "2024-05-10",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0096",
@@ -30200,7 +31069,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-06-27",
-      "actual": "2024-06-27"
+      "actual": "2024-06-27",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0097",
@@ -30209,7 +31081,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-05-13",
-      "actual": "2024-05-13"
+      "actual": "2024-05-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0097",
@@ -30218,7 +31093,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-07-15",
-      "actual": "2024-07-15"
+      "actual": "2024-07-15",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0098",
@@ -30227,7 +31105,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-05-15",
-      "actual": "2024-05-15"
+      "actual": "2024-05-15",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0098",
@@ -30236,7 +31117,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2025-06-04",
-      "actual": "2025-06-04"
+      "actual": "2025-06-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0099",
@@ -30245,7 +31129,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-05-14",
-      "actual": "2024-05-14"
+      "actual": "2024-05-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0099",
@@ -30254,7 +31141,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-06-07",
-      "actual": "2024-06-07"
+      "actual": "2024-06-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0100",
@@ -30263,7 +31153,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-14",
-      "actual": "2024-05-14"
+      "actual": "2024-05-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0100",
@@ -30272,7 +31165,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-09",
-      "actual": "2025-04-09"
+      "actual": "2025-04-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0101",
@@ -30281,7 +31177,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-15",
-      "actual": "2024-05-15"
+      "actual": "2024-05-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0101",
@@ -30290,7 +31189,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-27",
-      "actual": "2024-09-27"
+      "actual": "2024-09-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0102",
@@ -30299,7 +31201,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-16",
-      "actual": "2024-05-16"
+      "actual": "2024-05-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0102",
@@ -30308,7 +31213,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-07-09",
-      "actual": "2024-07-09"
+      "actual": "2024-07-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0104",
@@ -30317,7 +31225,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-05-20",
-      "actual": "2024-05-20"
+      "actual": "2024-05-20",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0104",
@@ -30326,7 +31237,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-03-06",
-      "actual": "2025-03-06"
+      "actual": "2025-03-06",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0062",
@@ -30335,7 +31249,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-03-21",
-      "actual": "2025-03-21"
+      "actual": "2025-03-21",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0109",
@@ -30344,7 +31261,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-05-27",
-      "actual": "2024-05-27"
+      "actual": "2024-05-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0109",
@@ -30353,7 +31273,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-06-28",
-      "actual": "2024-06-28"
+      "actual": "2024-06-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0107",
@@ -30362,7 +31285,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-05-28",
-      "actual": "2024-05-28"
+      "actual": "2024-05-28",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0107",
@@ -30371,7 +31297,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-08-12",
-      "actual": "2024-08-12"
+      "actual": "2024-08-12",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0108",
@@ -30380,7 +31309,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-05-27",
-      "actual": "2024-05-27"
+      "actual": "2024-05-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0108",
@@ -30389,7 +31321,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-02",
-      "actual": "2024-08-02"
+      "actual": "2024-08-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0080",
@@ -30398,7 +31333,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-04-22",
-      "actual": "2025-04-22"
+      "actual": "2025-04-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0080",
@@ -30407,7 +31345,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-07-08",
-      "actual": "2025-07-08"
+      "actual": "2025-07-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0114",
@@ -30416,7 +31357,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-06-03",
-      "actual": "2024-06-03"
+      "actual": "2024-06-03",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0114",
@@ -30425,7 +31369,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2024-08-23",
-      "actual": "2024-08-23"
+      "actual": "2024-08-23",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0113",
@@ -30434,7 +31381,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-06-03",
-      "actual": "2024-06-03"
+      "actual": "2024-06-03",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0113",
@@ -30443,7 +31393,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-07-18",
-      "actual": "2024-07-21"
+      "actual": "2024-07-21",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0115",
@@ -30452,7 +31405,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2024-06-04",
-      "actual": "2024-06-04"
+      "actual": "2024-06-04",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0115",
@@ -30461,7 +31417,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2024-07-22",
-      "actual": "2024-07-22"
+      "actual": "2024-07-22",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0118",
@@ -30470,7 +31429,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-06-05",
-      "actual": "2024-06-05"
+      "actual": "2024-06-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0118",
@@ -30479,7 +31441,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-14",
-      "actual": "2024-09-14"
+      "actual": "2024-09-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0119",
@@ -30488,7 +31453,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-06-07",
-      "actual": "2024-06-07"
+      "actual": "2024-06-07",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0119",
@@ -30497,7 +31465,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-01-18",
-      "actual": "2025-01-18"
+      "actual": "2025-01-18",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0120",
@@ -30506,7 +31477,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-06-12",
-      "actual": "2024-06-12"
+      "actual": "2024-06-12",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "A1D0120",
@@ -30515,7 +31489,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "reinfusion",
       "plan": "2024-09-14",
-      "actual": "2024-09-14"
+      "actual": "2024-09-14",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "A1D0122",
@@ -30524,7 +31501,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-12",
-      "actual": "2024-06-12"
+      "actual": "2024-06-12",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0122",
@@ -30533,7 +31513,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-03-24",
-      "actual": "2025-03-24"
+      "actual": "2025-03-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0123",
@@ -30542,7 +31525,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-13",
-      "actual": "2024-06-13"
+      "actual": "2024-06-13",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0123",
@@ -30551,7 +31537,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-09-25",
-      "actual": "2024-09-25"
+      "actual": "2024-09-25",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0125",
@@ -30560,7 +31549,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-13",
-      "actual": "2024-06-13"
+      "actual": "2024-06-13",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0127",
@@ -30569,7 +31561,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-06-14",
-      "actual": "2024-06-14"
+      "actual": "2024-06-14",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0133",
@@ -30578,7 +31573,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-06-21",
-      "actual": "2024-06-21"
+      "actual": "2024-06-21",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0133",
@@ -30587,7 +31585,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-07-24",
-      "actual": "2024-07-25"
+      "actual": "2024-07-25",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0128",
@@ -30596,7 +31597,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-06-17",
-      "actual": "2024-06-17"
+      "actual": "2024-06-17",
+      "prov": "浙江省",
+      "city": "嘉兴市",
+      "area": "South"
     },
     {
       "code": "A1D0128",
@@ -30605,7 +31609,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-11-12",
-      "actual": "2024-11-12"
+      "actual": "2024-11-12",
+      "prov": "浙江省",
+      "city": "嘉兴市",
+      "area": "South"
     },
     {
       "code": "A1D0129",
@@ -30614,7 +31621,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-06-19",
-      "actual": "2024-06-19"
+      "actual": "2024-06-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0129",
@@ -30623,7 +31633,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-07-23",
-      "actual": "2024-07-23"
+      "actual": "2024-07-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0130",
@@ -30632,7 +31645,10 @@ var BOARD_DATA = {
       "cos": "刘诗语",
       "type": "apheresis",
       "plan": "2024-06-19",
-      "actual": "2024-06-19"
+      "actual": "2024-06-19",
+      "prov": "黑龙江省",
+      "city": "哈尔滨市",
+      "area": "North"
     },
     {
       "code": "A1D0131",
@@ -30641,7 +31657,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-06-19",
-      "actual": "2024-06-19"
+      "actual": "2024-06-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0131",
@@ -30650,7 +31669,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-07-24",
-      "actual": "2024-07-24"
+      "actual": "2024-07-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0132",
@@ -30659,7 +31681,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-06-21",
-      "actual": "2024-06-21"
+      "actual": "2024-06-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0132",
@@ -30668,7 +31693,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-19",
-      "actual": "2024-08-19"
+      "actual": "2024-08-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0134",
@@ -30677,7 +31705,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-06-21",
-      "actual": "2024-06-21"
+      "actual": "2024-06-21",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1D0134",
@@ -30686,7 +31717,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2024-08-18",
-      "actual": "2024-08-18"
+      "actual": "2024-08-18",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1D0135",
@@ -30695,7 +31729,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-06-21",
-      "actual": "2024-06-21"
+      "actual": "2024-06-21",
+      "prov": "山东省",
+      "city": "青岛市",
+      "area": "North"
     },
     {
       "code": "A1D0135",
@@ -30704,7 +31741,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-07-21",
-      "actual": "2025-07-21"
+      "actual": "2025-07-21",
+      "prov": "山东省",
+      "city": "青岛市",
+      "area": "North"
     },
     {
       "code": "A1D0137",
@@ -30713,7 +31753,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-06-24",
-      "actual": "2024-06-24"
+      "actual": "2024-06-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0137",
@@ -30722,7 +31765,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-08-06",
-      "actual": "2024-08-06"
+      "actual": "2024-08-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0138",
@@ -30731,7 +31777,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-06-23",
-      "actual": "2024-06-23"
+      "actual": "2024-06-23",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0138",
@@ -30740,7 +31789,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-09-15",
-      "actual": "2024-09-15"
+      "actual": "2024-09-15",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0142",
@@ -30749,7 +31801,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-06-28",
-      "actual": "2024-06-28"
+      "actual": "2024-06-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0142",
@@ -30758,7 +31813,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-08-06",
-      "actual": "2024-08-06"
+      "actual": "2024-08-06",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0140",
@@ -30767,7 +31825,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-06-26",
-      "actual": "2024-06-26"
+      "actual": "2024-06-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0140",
@@ -30776,7 +31837,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-26",
-      "actual": "2024-08-26"
+      "actual": "2024-08-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0143",
@@ -30785,7 +31849,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-06-27",
-      "actual": "2024-06-27"
+      "actual": "2024-06-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0143",
@@ -30794,7 +31861,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-08-21",
-      "actual": "2024-08-21"
+      "actual": "2024-08-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0159",
@@ -30803,7 +31873,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-19",
-      "actual": "2024-07-19"
+      "actual": "2024-07-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0159",
@@ -30812,7 +31885,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-09-11",
-      "actual": "2024-09-11"
+      "actual": "2024-09-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0145",
@@ -30821,7 +31897,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-07-03",
-      "actual": "2024-07-03"
+      "actual": "2024-07-03",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0146",
@@ -30830,7 +31909,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-05",
-      "actual": "2024-07-05"
+      "actual": "2024-07-05",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0146",
@@ -30839,7 +31921,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-08-12",
-      "actual": "2024-08-12"
+      "actual": "2024-08-12",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0149",
@@ -30848,7 +31933,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-09",
-      "actual": "2024-07-09"
+      "actual": "2024-07-09",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0149",
@@ -30857,7 +31945,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-08-27",
-      "actual": "2024-08-27"
+      "actual": "2024-08-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0147",
@@ -30866,7 +31957,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-09",
-      "actual": "2024-07-09"
+      "actual": "2024-07-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0147",
@@ -30875,7 +31969,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-08",
-      "actual": "2024-10-08"
+      "actual": "2024-10-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0148",
@@ -30884,7 +31981,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-08",
-      "actual": "2024-07-08"
+      "actual": "2024-07-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0148",
@@ -30893,7 +31993,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-23",
-      "actual": "2024-10-23"
+      "actual": "2024-10-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0151",
@@ -30902,7 +32005,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-10",
-      "actual": "2024-07-10"
+      "actual": "2024-07-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0151",
@@ -30911,7 +32017,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-08-20",
-      "actual": "2024-08-20"
+      "actual": "2024-08-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0152",
@@ -30920,7 +32029,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-07-12",
-      "actual": "2024-07-12"
+      "actual": "2024-07-12",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0152",
@@ -30929,7 +32041,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-06-30",
-      "actual": "2025-06-30"
+      "actual": "2025-06-30",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0153",
@@ -30938,7 +32053,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-07-12",
-      "actual": "2024-07-12"
+      "actual": "2024-07-12",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0153",
@@ -30947,7 +32065,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-09-09",
-      "actual": "2024-09-09"
+      "actual": "2024-09-09",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0154",
@@ -30956,7 +32077,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-07-17",
-      "actual": "2024-07-17"
+      "actual": "2024-07-17",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0154",
@@ -30965,7 +32089,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-04-03",
-      "actual": "2025-04-03"
+      "actual": "2025-04-03",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0157",
@@ -30974,7 +32101,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "apheresis",
       "plan": "2024-07-18",
-      "actual": "2024-07-18"
+      "actual": "2024-07-18",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0157",
@@ -30983,7 +32113,10 @@ var BOARD_DATA = {
       "cos": "钱程",
       "type": "reinfusion",
       "plan": "2024-09-04",
-      "actual": "2024-09-04"
+      "actual": "2024-09-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0158",
@@ -30992,7 +32125,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-07-19",
-      "actual": "2024-07-19"
+      "actual": "2024-07-19",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0158",
@@ -31001,7 +32137,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-09-03",
-      "actual": "2024-09-03"
+      "actual": "2024-09-03",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0161",
@@ -31010,7 +32149,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-20",
-      "actual": "2024-07-20"
+      "actual": "2024-07-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0161",
@@ -31019,7 +32161,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-09-02",
-      "actual": "2024-09-02"
+      "actual": "2024-09-02",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0160",
@@ -31028,7 +32173,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-07-22",
-      "actual": "2024-07-22"
+      "actual": "2024-07-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0160",
@@ -31037,7 +32185,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2025-10-22",
-      "actual": "2025-10-22"
+      "actual": "2025-10-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0162",
@@ -31046,7 +32197,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-07-22",
-      "actual": "2024-07-22"
+      "actual": "2024-07-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0162",
@@ -31055,7 +32209,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-09-03",
-      "actual": "2024-09-03"
+      "actual": "2024-09-03",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0163",
@@ -31064,7 +32221,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-23",
-      "actual": "2024-07-23"
+      "actual": "2024-07-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0163",
@@ -31073,7 +32233,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-18",
-      "actual": "2024-09-18"
+      "actual": "2024-09-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0165",
@@ -31082,7 +32245,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-07-25",
-      "actual": "2024-07-25"
+      "actual": "2024-07-25",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "A1D0165",
@@ -31091,7 +32257,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2024-09-12",
-      "actual": "2024-09-12"
+      "actual": "2024-09-12",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "A1D0166",
@@ -31100,7 +32269,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-07-25",
-      "actual": "2024-07-25"
+      "actual": "2024-07-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0166",
@@ -31109,7 +32281,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-01",
-      "actual": "2024-09-01"
+      "actual": "2024-09-01",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0168",
@@ -31118,7 +32293,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-26",
-      "actual": "2024-07-26"
+      "actual": "2024-07-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0168",
@@ -31127,7 +32305,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-18",
-      "actual": "2024-11-18"
+      "actual": "2024-11-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0170",
@@ -31136,7 +32317,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-29",
-      "actual": "2024-07-29"
+      "actual": "2024-07-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0170",
@@ -31145,7 +32329,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-07",
-      "actual": "2024-11-07"
+      "actual": "2024-11-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0174",
@@ -31154,7 +32341,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-07-31",
-      "actual": "2024-07-31"
+      "actual": "2024-07-31",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0174",
@@ -31163,7 +32353,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-10-14",
-      "actual": "2024-10-14"
+      "actual": "2024-10-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0305",
@@ -31172,7 +32365,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-11-29",
-      "actual": "2024-11-29"
+      "actual": "2024-11-29",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0305",
@@ -31181,7 +32377,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-12-31",
-      "actual": "2024-12-31"
+      "actual": "2024-12-31",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0172",
@@ -31190,7 +32389,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-07-31",
-      "actual": "2024-07-31"
+      "actual": "2024-07-31",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0172",
@@ -31199,7 +32401,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-29",
-      "actual": "2024-09-29"
+      "actual": "2024-09-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0175",
@@ -31208,7 +32413,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-01",
-      "actual": "2024-08-01"
+      "actual": "2024-08-01",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0175",
@@ -31217,7 +32425,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-02",
-      "actual": "2024-10-02"
+      "actual": "2024-10-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0177",
@@ -31226,7 +32437,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-07",
-      "actual": "2024-08-07"
+      "actual": "2024-08-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0177",
@@ -31235,7 +32449,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-20",
-      "actual": "2024-09-20"
+      "actual": "2024-09-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0176",
@@ -31244,7 +32461,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-08-05",
-      "actual": "2024-08-05"
+      "actual": "2024-08-05",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0176",
@@ -31253,7 +32473,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-09-18",
-      "actual": "2024-09-18"
+      "actual": "2024-09-18",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0180",
@@ -31262,7 +32485,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-09",
-      "actual": "2024-08-09"
+      "actual": "2024-08-09",
+      "prov": "湖南省",
+      "city": "长沙市",
+      "area": "North"
     },
     {
       "code": "A1D0180",
@@ -31271,7 +32497,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-09-19",
-      "actual": "2024-09-19"
+      "actual": "2024-09-19",
+      "prov": "湖南省",
+      "city": "长沙市",
+      "area": "North"
     },
     {
       "code": "A1D0178",
@@ -31280,7 +32509,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-06",
-      "actual": "2024-08-06"
+      "actual": "2024-08-06",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0178",
@@ -31289,7 +32521,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-02-14",
-      "actual": "2025-02-14"
+      "actual": "2025-02-14",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0218",
@@ -31298,7 +32533,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-29",
-      "actual": "2024-08-29"
+      "actual": "2024-08-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0218",
@@ -31307,7 +32545,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-28",
-      "actual": "2024-09-28"
+      "actual": "2024-09-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0189",
@@ -31316,7 +32557,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-12",
-      "actual": "2024-08-12"
+      "actual": "2024-08-12",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0189",
@@ -31325,7 +32569,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-09-30",
-      "actual": "2024-09-30"
+      "actual": "2024-09-30",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0182",
@@ -31334,7 +32581,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-08-08",
-      "actual": "2024-08-08"
+      "actual": "2024-08-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0182",
@@ -31343,7 +32593,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2024-11-26",
-      "actual": "2024-11-26"
+      "actual": "2024-11-26",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0181",
@@ -31352,7 +32605,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-08",
-      "actual": "2024-08-08"
+      "actual": "2024-08-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0181",
@@ -31361,7 +32617,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-02-27",
-      "actual": "2025-02-27"
+      "actual": "2025-02-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0184",
@@ -31370,7 +32629,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-08-09",
-      "actual": "2024-08-09"
+      "actual": "2024-08-09",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0184",
@@ -31379,7 +32641,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2024-09-23",
-      "actual": "2024-09-23"
+      "actual": "2024-09-23",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0211",
@@ -31388,7 +32653,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-27",
-      "actual": "2024-08-27"
+      "actual": "2024-08-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0211",
@@ -31397,7 +32665,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-30",
-      "actual": "2024-09-30"
+      "actual": "2024-09-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0186",
@@ -31406,7 +32677,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-14",
-      "actual": "2024-08-14"
+      "actual": "2024-08-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0186",
@@ -31415,7 +32689,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-25",
-      "actual": "2024-09-25"
+      "actual": "2024-09-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0188",
@@ -31424,7 +32701,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-13",
-      "actual": "2024-08-13"
+      "actual": "2024-08-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0188",
@@ -31433,7 +32713,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-10-14",
-      "actual": "2024-10-14"
+      "actual": "2024-10-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0187",
@@ -31442,7 +32725,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-12",
-      "actual": "2024-08-12"
+      "actual": "2024-08-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0187",
@@ -31451,7 +32737,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-09-05",
-      "actual": "2024-09-05"
+      "actual": "2024-09-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0213",
@@ -31460,7 +32749,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-08-30",
-      "actual": "2024-08-30"
+      "actual": "2024-08-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0213",
@@ -31469,7 +32761,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-10-29",
-      "actual": "2024-10-29"
+      "actual": "2024-10-29",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0191",
@@ -31478,7 +32773,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-08-14",
-      "actual": "2024-08-14"
+      "actual": "2024-08-14",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "A1D0191",
@@ -31487,7 +32785,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-09-24",
-      "actual": "2024-09-24"
+      "actual": "2024-09-24",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "A1D0192",
@@ -31496,7 +32797,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2024-08-15",
-      "actual": "2024-08-15"
+      "actual": "2024-08-15",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "A1D0223",
@@ -31505,7 +32809,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-09-06",
-      "actual": "2024-09-06"
+      "actual": "2024-09-06",
+      "prov": "河南省",
+      "city": "郑州市",
+      "area": "North"
     },
     {
       "code": "A1D0223",
@@ -31514,7 +32821,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2024-12-18",
-      "actual": "2024-12-18"
+      "actual": "2024-12-18",
+      "prov": "河南省",
+      "city": "郑州市",
+      "area": "North"
     },
     {
       "code": "A1D0194",
@@ -31523,7 +32833,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-08-15",
-      "actual": "2024-08-15"
+      "actual": "2024-08-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0194",
@@ -31532,7 +32845,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-11-27",
-      "actual": "2024-11-27"
+      "actual": "2024-11-27",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0196",
@@ -31541,7 +32857,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-16",
-      "actual": "2024-08-16"
+      "actual": "2024-08-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0196",
@@ -31550,7 +32869,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-12-06",
-      "actual": "2024-12-06"
+      "actual": "2024-12-06",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0198",
@@ -31559,7 +32881,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-08-16",
-      "actual": "2024-08-16"
+      "actual": "2024-08-16",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0198",
@@ -31568,7 +32893,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-10-15",
-      "actual": "2024-10-15"
+      "actual": "2024-10-15",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0199",
@@ -31577,7 +32905,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-08-16",
-      "actual": "2024-08-16"
+      "actual": "2024-08-16",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0199",
@@ -31586,7 +32917,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-09-09",
-      "actual": "2025-09-09"
+      "actual": "2025-09-09",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0201",
@@ -31595,7 +32929,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-08-19",
-      "actual": "2024-08-19"
+      "actual": "2024-08-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0201",
@@ -31604,7 +32941,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-11-19",
-      "actual": "2024-11-19"
+      "actual": "2024-11-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0200",
@@ -31613,7 +32953,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-19",
-      "actual": "2024-08-19"
+      "actual": "2024-08-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0200",
@@ -31622,7 +32965,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-29",
-      "actual": "2024-11-29"
+      "actual": "2024-11-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0321",
@@ -31631,7 +32977,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-17",
-      "actual": "2024-12-17"
+      "actual": "2024-12-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0321",
@@ -31640,7 +32989,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-10",
-      "actual": "2025-03-10"
+      "actual": "2025-03-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0206",
@@ -31649,7 +33001,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-08-22",
-      "actual": "2024-08-22"
+      "actual": "2024-08-22",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "A1D0206",
@@ -31658,7 +33013,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-10-14",
-      "actual": "2024-10-14"
+      "actual": "2024-10-14",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "A1D0207",
@@ -31667,7 +33025,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-22",
-      "actual": "2024-08-22"
+      "actual": "2024-08-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0207",
@@ -31676,7 +33037,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-01-14",
-      "actual": "2025-01-14"
+      "actual": "2025-01-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0209",
@@ -31685,7 +33049,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-26",
-      "actual": "2024-08-26"
+      "actual": "2024-08-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0209",
@@ -31694,7 +33061,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-09-20",
-      "actual": "2024-09-20"
+      "actual": "2024-09-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0210",
@@ -31703,7 +33073,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-08-26",
-      "actual": "2024-08-26"
+      "actual": "2024-08-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0210",
@@ -31712,7 +33085,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-11-21",
-      "actual": "2024-11-21"
+      "actual": "2024-11-21",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0212",
@@ -31721,7 +33097,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-09-02",
-      "actual": "2024-09-02"
+      "actual": "2024-09-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0212",
@@ -31730,7 +33109,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-10-22",
-      "actual": "2024-10-22"
+      "actual": "2024-10-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0216",
@@ -31739,7 +33121,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-29",
-      "actual": "2024-08-29"
+      "actual": "2024-08-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0216",
@@ -31748,7 +33133,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-10-18",
-      "actual": "2024-10-18"
+      "actual": "2024-10-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0217",
@@ -31757,7 +33145,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-08-29",
-      "actual": "2024-08-29"
+      "actual": "2024-08-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0217",
@@ -31766,7 +33157,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-04",
-      "actual": "2024-11-04"
+      "actual": "2024-11-04",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0243",
@@ -31775,7 +33169,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2024-09-29",
-      "actual": "2024-09-29"
+      "actual": "2024-09-29",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0243",
@@ -31784,7 +33181,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-10-21",
-      "actual": "2025-10-21"
+      "actual": "2025-10-21",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1D0219",
@@ -31793,7 +33193,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-09-04",
-      "actual": "2024-09-04"
+      "actual": "2024-09-04",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0219",
@@ -31802,7 +33205,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2024-11-12",
-      "actual": "2024-11-12"
+      "actual": "2024-11-12",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0264",
@@ -31811,7 +33217,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-18",
-      "actual": "2024-10-18"
+      "actual": "2024-10-18",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0264",
@@ -31820,7 +33229,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-12-04",
-      "actual": "2024-12-04"
+      "actual": "2024-12-04",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0224",
@@ -31829,7 +33241,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-09-09",
-      "actual": "2024-09-09"
+      "actual": "2024-09-09",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0224",
@@ -31838,7 +33253,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2024-12-13",
-      "actual": "2024-12-13"
+      "actual": "2024-12-13",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0222",
@@ -31847,7 +33265,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-09-05",
-      "actual": "2024-09-05"
+      "actual": "2024-09-05",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0222",
@@ -31856,7 +33277,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-09-23",
-      "actual": "2025-09-23"
+      "actual": "2025-09-23",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1D0226",
@@ -31865,7 +33289,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-09-11",
-      "actual": "2024-09-11"
+      "actual": "2024-09-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0226",
@@ -31874,7 +33301,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-11-08",
-      "actual": "2024-11-08"
+      "actual": "2024-11-08",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0228",
@@ -31883,7 +33313,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-09-11",
-      "actual": "2024-09-11"
+      "actual": "2024-09-11",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0228",
@@ -31892,7 +33325,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-01-16",
-      "actual": "2025-01-16"
+      "actual": "2025-01-16",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0229",
@@ -31901,7 +33337,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-09-12",
-      "actual": "2024-09-12"
+      "actual": "2024-09-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0229",
@@ -31910,7 +33349,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-11-15",
-      "actual": "2024-11-15"
+      "actual": "2024-11-15",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0230",
@@ -31919,7 +33361,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-13",
-      "actual": "2024-09-13"
+      "actual": "2024-09-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0230",
@@ -31928,7 +33373,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-12-17",
-      "actual": "2024-12-17"
+      "actual": "2024-12-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0242",
@@ -31937,7 +33385,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-24",
-      "actual": "2024-09-24"
+      "actual": "2024-09-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0242",
@@ -31946,7 +33397,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-01",
-      "actual": "2024-11-01"
+      "actual": "2024-11-01",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0274",
@@ -31955,7 +33409,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "apheresis",
       "plan": "2024-10-24",
-      "actual": "2024-10-24"
+      "actual": "2024-10-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0274",
@@ -31964,7 +33421,10 @@ var BOARD_DATA = {
       "cos": "孙明明",
       "type": "reinfusion",
       "plan": "2024-12-03",
-      "actual": "2024-12-03"
+      "actual": "2024-12-03",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0232",
@@ -31973,7 +33433,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-09-20",
-      "actual": "2024-09-20"
+      "actual": "2024-09-20",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0232",
@@ -31982,7 +33445,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-11-27",
-      "actual": "2024-11-27"
+      "actual": "2024-11-27",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0234",
@@ -31991,7 +33457,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-09-19",
-      "actual": "2024-09-19"
+      "actual": "2024-09-19",
+      "prov": "浙江省",
+      "city": "温州市",
+      "area": "South"
     },
     {
       "code": "A1D0234",
@@ -32000,7 +33469,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-04-17",
-      "actual": "2025-04-17"
+      "actual": "2025-04-17",
+      "prov": "浙江省",
+      "city": "温州市",
+      "area": "South"
     },
     {
       "code": "A1D0236",
@@ -32009,7 +33481,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-23",
-      "actual": "2024-09-23"
+      "actual": "2024-09-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0236",
@@ -32018,7 +33493,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-04",
-      "actual": "2024-11-04"
+      "actual": "2024-11-04",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0239",
@@ -32027,7 +33505,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-09-26",
-      "actual": "2024-09-26"
+      "actual": "2024-09-26",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1D0239",
@@ -32036,7 +33517,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-12-20",
-      "actual": "2024-12-20"
+      "actual": "2024-12-20",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1E0019",
@@ -32045,7 +33529,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-02-08",
-      "actual": "2025-02-08"
+      "actual": "2025-02-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0019",
@@ -32054,7 +33541,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-19",
-      "actual": "2025-03-19"
+      "actual": "2025-03-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0245",
@@ -32063,7 +33553,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-09-25",
-      "actual": "2024-09-25"
+      "actual": "2024-09-25",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0245",
@@ -32072,7 +33565,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-01-28",
-      "actual": "2025-01-28"
+      "actual": "2025-01-28",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0252",
@@ -32081,7 +33577,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-10-08",
-      "actual": "2024-10-08"
+      "actual": "2024-10-08",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0252",
@@ -32090,7 +33589,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-12-11",
-      "actual": "2024-12-10"
+      "actual": "2024-12-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0320",
@@ -32099,7 +33601,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-12-16",
-      "actual": "2024-12-16"
+      "actual": "2024-12-16",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0320",
@@ -32108,7 +33613,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-02-12",
-      "actual": "2025-02-12"
+      "actual": "2025-02-12",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0247",
@@ -32117,7 +33625,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-09-27",
-      "actual": "2024-09-27"
+      "actual": "2024-09-27",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0248",
@@ -32126,7 +33637,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-09-27",
-      "actual": "2024-09-27"
+      "actual": "2024-09-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0248",
@@ -32135,7 +33649,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-12-25",
-      "actual": "2024-12-25"
+      "actual": "2024-12-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0255",
@@ -32144,7 +33661,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-10-10",
-      "actual": "2024-10-10"
+      "actual": "2024-10-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0255",
@@ -32153,7 +33673,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-02-10",
-      "actual": "2025-02-10"
+      "actual": "2025-02-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0254",
@@ -32162,7 +33685,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-10-10",
-      "actual": "2024-10-10"
+      "actual": "2024-10-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0254",
@@ -32171,7 +33697,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-12-18",
-      "actual": "2024-12-18"
+      "actual": "2024-12-18",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0256",
@@ -32180,7 +33709,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-10-12",
-      "actual": "2024-10-12"
+      "actual": "2024-10-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0256",
@@ -32189,7 +33721,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-11",
-      "actual": "2024-11-11"
+      "actual": "2024-11-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0257",
@@ -32198,7 +33733,10 @@ var BOARD_DATA = {
       "cos": "洪琳",
       "type": "apheresis",
       "plan": "2024-10-16",
-      "actual": "2024-10-16"
+      "actual": "2024-10-16",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0257",
@@ -32207,7 +33745,10 @@ var BOARD_DATA = {
       "cos": "洪琳",
       "type": "reinfusion",
       "plan": "2024-12-23",
-      "actual": "2024-12-23"
+      "actual": "2024-12-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0258",
@@ -32216,7 +33757,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-10-15",
-      "actual": "2024-10-15"
+      "actual": "2024-10-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0258",
@@ -32225,7 +33769,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2024-11-25",
-      "actual": "2024-11-25"
+      "actual": "2024-11-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0263",
@@ -32234,7 +33781,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-10-17",
-      "actual": "2024-10-17"
+      "actual": "2024-10-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0261",
@@ -32243,7 +33793,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2024-10-22",
-      "actual": "2024-10-22"
+      "actual": "2024-10-22",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0261",
@@ -32252,7 +33805,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2024-12-30",
-      "actual": "2024-12-30"
+      "actual": "2024-12-30",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1D0265",
@@ -32261,7 +33817,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2024-10-17",
-      "actual": "2024-10-17"
+      "actual": "2024-10-17",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0265",
@@ -32270,7 +33829,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-02-18",
-      "actual": "2025-02-18"
+      "actual": "2025-02-18",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0266",
@@ -32279,7 +33841,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-10-29",
-      "actual": "2024-10-29"
+      "actual": "2024-10-29",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0266",
@@ -32288,7 +33853,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-01-14",
-      "actual": "2025-01-14"
+      "actual": "2025-01-14",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0267",
@@ -32297,7 +33865,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-10-23",
-      "actual": "2024-10-23"
+      "actual": "2024-10-23",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0267",
@@ -32306,7 +33877,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2024-12-19",
-      "actual": "2024-12-19"
+      "actual": "2024-12-19",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0268",
@@ -32315,7 +33889,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2024-10-23",
-      "actual": "2024-10-23"
+      "actual": "2024-10-23",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0268",
@@ -32324,7 +33901,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-03-06",
-      "actual": "2025-03-06"
+      "actual": "2025-03-06",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1D0269",
@@ -32333,7 +33913,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-22",
-      "actual": "2024-10-22"
+      "actual": "2024-10-22",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0269",
@@ -32342,7 +33925,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2024-11-25",
-      "actual": "2024-11-29"
+      "actual": "2024-11-29",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0270",
@@ -32351,7 +33937,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-10-23",
-      "actual": "2024-10-23"
+      "actual": "2024-10-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0270",
@@ -32360,7 +33949,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-01-08",
-      "actual": "2025-01-08"
+      "actual": "2025-01-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0186",
@@ -32369,7 +33961,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-08-13",
-      "actual": "2025-08-13"
+      "actual": "2025-08-13",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0186",
@@ -32378,7 +33973,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-09-26",
-      "actual": "2025-09-26"
+      "actual": "2025-09-26",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0038",
@@ -32387,7 +33985,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-02-25",
-      "actual": "2025-02-25"
+      "actual": "2025-02-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0038",
@@ -32396,7 +33997,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-19",
-      "actual": "2025-06-19"
+      "actual": "2025-06-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0278",
@@ -32405,7 +34009,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-10-30",
-      "actual": "2024-10-30"
+      "actual": "2024-10-30",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0278",
@@ -32414,7 +34021,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-02-27",
-      "actual": "2025-02-27"
+      "actual": "2025-02-27",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0280",
@@ -32423,7 +34033,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2024-11-01",
-      "actual": "2024-11-01"
+      "actual": "2024-11-01",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0280",
@@ -32432,7 +34045,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-02-17",
-      "actual": "2025-02-17"
+      "actual": "2025-02-17",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1D0283",
@@ -32441,7 +34057,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-11-04",
-      "actual": "2024-11-04"
+      "actual": "2024-11-04",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0283",
@@ -32450,7 +34069,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-04-01",
-      "actual": "2025-04-01"
+      "actual": "2025-04-01",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0281",
@@ -32459,7 +34081,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-11-01",
-      "actual": "2024-11-01"
+      "actual": "2024-11-01",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0281",
@@ -32468,7 +34093,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-02-17",
-      "actual": "2025-02-17"
+      "actual": "2025-02-17",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0284",
@@ -32477,7 +34105,10 @@ var BOARD_DATA = {
       "cos": "洪琳",
       "type": "apheresis",
       "plan": "2024-11-06",
-      "actual": "2024-11-06"
+      "actual": "2024-11-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0284",
@@ -32486,7 +34117,10 @@ var BOARD_DATA = {
       "cos": "洪琳",
       "type": "reinfusion",
       "plan": "2025-03-24",
-      "actual": "2025-03-24"
+      "actual": "2025-03-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0300",
@@ -32495,7 +34129,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-11-26",
-      "actual": "2024-11-26"
+      "actual": "2024-11-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0300",
@@ -32504,7 +34141,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-12-30",
-      "actual": "2024-12-30"
+      "actual": "2024-12-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0286",
@@ -32513,7 +34153,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-11",
-      "actual": "2024-11-11"
+      "actual": "2024-11-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0286",
@@ -32522,7 +34165,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-13",
-      "actual": "2025-03-13"
+      "actual": "2025-03-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0288",
@@ -32531,7 +34177,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-13",
-      "actual": "2024-11-13"
+      "actual": "2024-11-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0289",
@@ -32540,7 +34189,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-14",
-      "actual": "2024-11-14"
+      "actual": "2024-11-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0289",
@@ -32549,7 +34201,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-05",
-      "actual": "2025-06-05"
+      "actual": "2025-06-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0290",
@@ -32558,7 +34213,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-18",
-      "actual": "2024-11-18"
+      "actual": "2024-11-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0290",
@@ -32567,7 +34225,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-01-15",
-      "actual": "2025-01-15"
+      "actual": "2025-01-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000050",
@@ -32576,7 +34237,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-12-23",
-      "actual": "2025-12-23"
+      "actual": "2025-12-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0291",
@@ -32585,7 +34249,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-11-19",
-      "actual": "2024-11-19"
+      "actual": "2024-11-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0291",
@@ -32594,7 +34261,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-03-26",
-      "actual": "2025-03-26"
+      "actual": "2025-03-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0294",
@@ -32603,7 +34273,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2024-11-21",
-      "actual": "2024-11-21"
+      "actual": "2024-11-21",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1D0294",
@@ -32612,7 +34285,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-09-26",
-      "actual": "2025-09-26"
+      "actual": "2025-09-26",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0037",
@@ -32621,7 +34297,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-02-24",
-      "actual": "2025-02-24"
+      "actual": "2025-02-24",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0037",
@@ -32630,7 +34309,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-04-08",
-      "actual": "2025-04-08"
+      "actual": "2025-04-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0295",
@@ -32639,7 +34321,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-11-21",
-      "actual": "2024-11-21"
+      "actual": "2024-11-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0295",
@@ -32648,7 +34333,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-02-17",
-      "actual": "2025-02-17"
+      "actual": "2025-02-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0301",
@@ -32657,7 +34345,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2024-11-27",
-      "actual": "2024-11-27"
+      "actual": "2024-11-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0301",
@@ -32666,7 +34357,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2024-12-31",
-      "actual": "2024-12-31"
+      "actual": "2024-12-31",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1D0298",
@@ -32675,7 +34369,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-11-25",
-      "actual": "2024-11-25"
+      "actual": "2024-11-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0298",
@@ -32684,7 +34381,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2024-12-25",
-      "actual": "2024-12-25"
+      "actual": "2024-12-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0035",
@@ -32693,7 +34393,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-02-26",
-      "actual": "2025-02-26"
+      "actual": "2025-02-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0035",
@@ -32702,7 +34405,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-06",
-      "actual": "2025-06-06"
+      "actual": "2025-06-06",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000038",
@@ -32711,7 +34417,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-02",
-      "actual": "2026-02-02"
+      "actual": "2026-02-02",
+      "prov": "浙江省",
+      "city": "湖州市",
+      "area": "South"
     },
     {
       "code": "A1E0040",
@@ -32720,7 +34429,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-04-24",
-      "actual": "2025-04-24"
+      "actual": "2025-04-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0040",
@@ -32729,7 +34441,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-06-02",
-      "actual": "2025-06-02"
+      "actual": "2025-06-02",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0306",
@@ -32738,7 +34453,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-03",
-      "actual": "2024-12-03"
+      "actual": "2024-12-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0306",
@@ -32747,7 +34465,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-30",
-      "actual": "2025-05-30"
+      "actual": "2025-05-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0308",
@@ -32756,7 +34477,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2024-12-04",
-      "actual": "2024-12-04"
+      "actual": "2024-12-04",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0308",
@@ -32765,7 +34489,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-04-07",
-      "actual": "2025-04-07"
+      "actual": "2025-04-07",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1D0309",
@@ -32774,7 +34501,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-05",
-      "actual": "2024-12-05"
+      "actual": "2024-12-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0309",
@@ -32783,7 +34513,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-24",
-      "actual": "2025-03-24"
+      "actual": "2025-03-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000135",
@@ -32792,7 +34525,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-29",
-      "actual": "2026-04-29"
+      "actual": "2026-04-29",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "9009126000135",
@@ -32801,7 +34537,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-06",
-      "actual": "2026-06-06"
+      "actual": "2026-06-06",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1D0312",
@@ -32810,7 +34549,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-12-06",
-      "actual": "2024-12-06"
+      "actual": "2024-12-06",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0312",
@@ -32819,7 +34561,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-02-27",
-      "actual": "2025-02-27"
+      "actual": "2025-02-27",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0313",
@@ -32828,7 +34573,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-12-10",
-      "actual": "2024-12-10"
+      "actual": "2024-12-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0313",
@@ -32837,7 +34585,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-25",
-      "actual": "2025-03-25"
+      "actual": "2025-03-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0315",
@@ -32846,7 +34597,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2024-12-12",
-      "actual": "2024-12-12"
+      "actual": "2024-12-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0315",
@@ -32855,7 +34609,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-10",
-      "actual": "2025-03-10"
+      "actual": "2025-03-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1D0317",
@@ -32864,7 +34621,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-13",
-      "actual": "2024-12-13"
+      "actual": "2024-12-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0323",
@@ -32873,7 +34633,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2024-12-18",
-      "actual": "2024-12-18"
+      "actual": "2024-12-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0323",
@@ -32882,7 +34645,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-02-26",
-      "actual": "2025-02-26"
+      "actual": "2025-02-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1D0324",
@@ -32891,7 +34657,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2024-12-18",
-      "actual": "2024-12-18"
+      "actual": "2024-12-18",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0324",
@@ -32900,7 +34669,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-20",
-      "actual": "2025-10-20"
+      "actual": "2025-10-20",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0014",
@@ -32909,7 +34681,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-01-23",
-      "actual": "2025-01-23"
+      "actual": "2025-01-23",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0014",
@@ -32918,7 +34693,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-03-04",
-      "actual": "2025-03-04"
+      "actual": "2025-03-04",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1D0326",
@@ -32927,7 +34705,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2024-12-26",
-      "actual": "2024-12-26"
+      "actual": "2024-12-26",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0001",
@@ -32936,7 +34717,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-01-06",
-      "actual": "2025-01-06"
+      "actual": "2025-01-06",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1E0001",
@@ -32945,7 +34729,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-03-11",
-      "actual": "2025-03-11"
+      "actual": "2025-03-11",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1E0002",
@@ -32954,7 +34741,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-16",
-      "actual": "2025-01-16"
+      "actual": "2025-01-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0002",
@@ -32963,7 +34753,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-07-30",
-      "actual": "2025-07-30"
+      "actual": "2025-07-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0006",
@@ -32972,7 +34765,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-01-13",
-      "actual": "2025-01-13"
+      "actual": "2025-01-13",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0006",
@@ -32981,7 +34777,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-04-15",
-      "actual": "2025-04-15"
+      "actual": "2025-04-15",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0004",
@@ -32990,7 +34789,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-10",
-      "actual": "2025-01-10"
+      "actual": "2025-01-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0004",
@@ -32999,7 +34801,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-15",
-      "actual": "2025-05-15"
+      "actual": "2025-05-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0005",
@@ -33008,7 +34813,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-15",
-      "actual": "2025-01-15"
+      "actual": "2025-01-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0005",
@@ -33017,7 +34825,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-18",
-      "actual": "2025-06-18"
+      "actual": "2025-06-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0020",
@@ -33026,7 +34837,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-02-12",
-      "actual": "2025-02-12"
+      "actual": "2025-02-12",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0020",
@@ -33035,7 +34849,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-03-31",
-      "actual": "2025-03-31"
+      "actual": "2025-03-31",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0045",
@@ -33044,7 +34861,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-03-24",
-      "actual": "2025-03-24"
+      "actual": "2025-03-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0045",
@@ -33053,7 +34873,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-06-23",
-      "actual": "2025-06-23"
+      "actual": "2025-06-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0012",
@@ -33062,7 +34885,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-01-22",
-      "actual": "2025-01-22"
+      "actual": "2025-01-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0012",
@@ -33071,7 +34897,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-02",
-      "actual": "2025-03-02"
+      "actual": "2025-03-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0008",
@@ -33080,7 +34909,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-01-14",
-      "actual": "2025-01-14"
+      "actual": "2025-01-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0008",
@@ -33089,7 +34921,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-15",
-      "actual": "2025-10-15"
+      "actual": "2025-10-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0013",
@@ -33098,7 +34933,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-01-16",
-      "actual": "2025-01-16"
+      "actual": "2025-01-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0013",
@@ -33107,7 +34945,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-11",
-      "actual": "2025-06-11"
+      "actual": "2025-06-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0076",
@@ -33116,7 +34957,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-04-10",
-      "actual": "2025-04-10"
+      "actual": "2025-04-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0076",
@@ -33125,7 +34969,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-05-26",
-      "actual": "2025-05-26"
+      "actual": "2025-05-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0010",
@@ -33134,7 +34981,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-01-16",
-      "actual": "2025-01-16"
+      "actual": "2025-01-16",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0010",
@@ -33143,7 +34993,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-04-21",
-      "actual": "2025-04-21"
+      "actual": "2025-04-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0011",
@@ -33152,7 +35005,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-01-17",
-      "actual": "2025-01-17"
+      "actual": "2025-01-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0011",
@@ -33161,7 +35017,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-03-31",
-      "actual": "2025-03-31"
+      "actual": "2025-03-31",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0137",
@@ -33170,7 +35029,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-06-27",
-      "actual": "2025-06-27"
+      "actual": "2025-06-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0137",
@@ -33179,7 +35041,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-11",
-      "actual": "2025-08-11"
+      "actual": "2025-08-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0018",
@@ -33188,7 +35053,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-02-07",
-      "actual": "2025-02-07"
+      "actual": "2025-02-07",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0018",
@@ -33197,7 +35065,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-28",
-      "actual": "2025-10-28"
+      "actual": "2025-10-28",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0021",
@@ -33206,7 +35077,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-02-10",
-      "actual": "2025-02-10"
+      "actual": "2025-02-10",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0021",
@@ -33215,7 +35089,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-03-20",
-      "actual": "2025-03-20"
+      "actual": "2025-03-20",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0023",
@@ -33224,7 +35101,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-02-11",
-      "actual": "2025-02-11"
+      "actual": "2025-02-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0023",
@@ -33233,7 +35113,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-03-30",
-      "actual": "2025-03-30"
+      "actual": "2025-03-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0025",
@@ -33242,7 +35125,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-02-09",
-      "actual": "2025-02-09"
+      "actual": "2025-02-09",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "A1E0025",
@@ -33251,7 +35137,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-04-10",
-      "actual": "2025-04-10"
+      "actual": "2025-04-10",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "A1E0027",
@@ -33260,7 +35149,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-13",
-      "actual": "2025-02-13"
+      "actual": "2025-02-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0027",
@@ -33269,7 +35161,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-16",
-      "actual": "2025-04-16"
+      "actual": "2025-04-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0028",
@@ -33278,7 +35173,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-14",
-      "actual": "2025-02-14"
+      "actual": "2025-02-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0028",
@@ -33287,7 +35185,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-09",
-      "actual": "2025-04-09"
+      "actual": "2025-04-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0030",
@@ -33296,7 +35197,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2025-02-18",
-      "actual": "2025-02-18"
+      "actual": "2025-02-18",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0029",
@@ -33305,7 +35209,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-02-17",
-      "actual": "2025-02-17"
+      "actual": "2025-02-17",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0029",
@@ -33314,7 +35221,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-04-11",
-      "actual": "2025-04-11"
+      "actual": "2025-04-11",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0031",
@@ -33323,7 +35233,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-19",
-      "actual": "2025-02-19"
+      "actual": "2025-02-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0031",
@@ -33332,7 +35245,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-04-15",
-      "actual": "2025-04-15"
+      "actual": "2025-04-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0032",
@@ -33341,7 +35257,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-02-20",
-      "actual": "2025-02-20"
+      "actual": "2025-02-20",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0032",
@@ -33350,7 +35269,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-27",
-      "actual": "2025-10-27"
+      "actual": "2025-10-27",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0033",
@@ -33359,7 +35281,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-02-20",
-      "actual": "2025-02-20"
+      "actual": "2025-02-20",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0033",
@@ -33368,7 +35293,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-03-31",
-      "actual": "2025-03-31"
+      "actual": "2025-03-31",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0034",
@@ -33377,7 +35305,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-02-21",
-      "actual": "2025-02-21"
+      "actual": "2025-02-21",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0034",
@@ -33386,7 +35317,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-04-02",
-      "actual": "2025-04-02"
+      "actual": "2025-04-02",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0068",
@@ -33395,7 +35329,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-02",
-      "actual": "2025-04-02"
+      "actual": "2025-04-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0039",
@@ -33404,7 +35341,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-02-24",
-      "actual": "2025-02-24"
+      "actual": "2025-02-24",
+      "prov": "山东省",
+      "city": "青岛市",
+      "area": "North"
     },
     {
       "code": "A1E0039",
@@ -33413,7 +35353,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2026-04-20",
-      "actual": "2026-04-20"
+      "actual": "2026-04-20",
+      "prov": "山东省",
+      "city": "青岛市",
+      "area": "North"
     },
     {
       "code": "A1E0041",
@@ -33422,7 +35365,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-02-27",
-      "actual": "2025-02-27"
+      "actual": "2025-02-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0043",
@@ -33431,7 +35377,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-02-28",
-      "actual": "2025-02-28"
+      "actual": "2025-02-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0043",
@@ -33440,7 +35389,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-06-03",
-      "actual": "2025-06-03"
+      "actual": "2025-06-03",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0044",
@@ -33449,7 +35401,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-02-28",
-      "actual": "2025-02-28"
+      "actual": "2025-02-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0044",
@@ -33458,7 +35413,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-05-24",
-      "actual": "2025-05-24"
+      "actual": "2025-05-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0047",
@@ -33467,7 +35425,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-06",
-      "actual": "2025-03-06"
+      "actual": "2025-03-06",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0047",
@@ -33476,7 +35437,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-15",
-      "actual": "2025-08-15"
+      "actual": "2025-08-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0046",
@@ -33485,7 +35449,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-03-06",
-      "actual": "2025-03-06"
+      "actual": "2025-03-06",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0046",
@@ -33494,7 +35461,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-07-08",
-      "actual": "2025-07-08"
+      "actual": "2025-07-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0049",
@@ -33503,7 +35473,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-03-07",
-      "actual": "2025-03-07"
+      "actual": "2025-03-07",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0048",
@@ -33512,7 +35485,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-17",
-      "actual": "2025-04-17"
+      "actual": "2025-04-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0048",
@@ -33521,7 +35497,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-16",
-      "actual": "2025-05-16"
+      "actual": "2025-05-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0050",
@@ -33530,7 +35509,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-03-11",
-      "actual": "2025-03-11"
+      "actual": "2025-03-11",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0050",
@@ -33539,7 +35521,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-05-20",
-      "actual": "2025-05-20"
+      "actual": "2025-05-20",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0053",
@@ -33548,7 +35533,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-03-13",
-      "actual": "2025-03-13"
+      "actual": "2025-03-13",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1E0053",
@@ -33557,7 +35545,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-05-13",
-      "actual": "2025-05-14"
+      "actual": "2025-05-14",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1E0054",
@@ -33566,7 +35557,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-14",
-      "actual": "2025-03-14"
+      "actual": "2025-03-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0054",
@@ -33575,7 +35569,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-25",
-      "actual": "2025-09-25"
+      "actual": "2025-09-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0059",
@@ -33584,7 +35581,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2025-03-20",
-      "actual": "2025-03-20"
+      "actual": "2025-03-20",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0059",
@@ -33593,7 +35593,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2026-09-27",
-      "actual": "2026-09-27"
+      "actual": "2026-09-27",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0056",
@@ -33602,7 +35605,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-18",
-      "actual": "2025-03-18"
+      "actual": "2025-03-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0056",
@@ -33611,7 +35617,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-20",
-      "actual": "2025-08-20"
+      "actual": "2025-08-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0058",
@@ -33620,7 +35629,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-03-21",
-      "actual": "2025-03-21"
+      "actual": "2025-03-21",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0058",
@@ -33629,7 +35641,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-06-16",
-      "actual": "2025-06-16"
+      "actual": "2025-06-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0057",
@@ -33638,7 +35653,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-19",
-      "actual": "2025-03-19"
+      "actual": "2025-03-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0057",
@@ -33647,7 +35665,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-07-16",
-      "actual": "2025-07-16"
+      "actual": "2025-07-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0061",
@@ -33656,7 +35677,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-20",
-      "actual": "2025-03-20"
+      "actual": "2025-03-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0061",
@@ -33665,7 +35689,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-08",
-      "actual": "2025-08-08"
+      "actual": "2025-08-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0064",
@@ -33674,7 +35701,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-25",
-      "actual": "2025-03-25"
+      "actual": "2025-03-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0064",
@@ -33683,7 +35713,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-17",
-      "actual": "2025-06-17"
+      "actual": "2025-06-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0065",
@@ -33692,7 +35725,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-26",
-      "actual": "2025-03-26"
+      "actual": "2025-03-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0066",
@@ -33701,7 +35737,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-03-28",
-      "actual": "2025-03-28"
+      "actual": "2025-03-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0066",
@@ -33710,7 +35749,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-30",
-      "actual": "2025-06-30"
+      "actual": "2025-06-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0069",
@@ -33719,7 +35761,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-04-01",
-      "actual": "2025-04-01"
+      "actual": "2025-04-01",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0069",
@@ -33728,7 +35773,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-03",
-      "actual": "2026-03-05"
+      "actual": "2026-03-05",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0071",
@@ -33737,7 +35785,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-04-08",
-      "actual": "2025-04-08"
+      "actual": "2025-04-08",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0071",
@@ -33746,7 +35797,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-06-30",
-      "actual": "2025-06-30"
+      "actual": "2025-06-30",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0072",
@@ -33755,7 +35809,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-04-08",
-      "actual": "2025-04-08"
+      "actual": "2025-04-08",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0072",
@@ -33764,7 +35821,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-06-03",
-      "actual": "2025-06-03"
+      "actual": "2025-06-03",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0073",
@@ -33773,7 +35833,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-09",
-      "actual": "2025-04-09"
+      "actual": "2025-04-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0073",
@@ -33782,7 +35845,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-05-29",
-      "actual": "2025-05-29"
+      "actual": "2025-05-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0074",
@@ -33791,7 +35857,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-10",
-      "actual": "2025-04-10"
+      "actual": "2025-04-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0075",
@@ -33800,7 +35869,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-04-10",
-      "actual": "2025-04-10"
+      "actual": "2025-04-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0075",
@@ -33809,7 +35881,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-06-03",
-      "actual": "2025-06-03"
+      "actual": "2025-06-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0078",
@@ -33818,7 +35893,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-14",
-      "actual": "2025-04-14"
+      "actual": "2025-04-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0078",
@@ -33827,7 +35905,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-06-04",
-      "actual": "2025-06-04"
+      "actual": "2025-06-04",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0082",
@@ -33836,7 +35917,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-04-23",
-      "actual": "2025-04-23"
+      "actual": "2025-04-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0082",
@@ -33845,7 +35929,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-07-03",
-      "actual": "2025-07-03"
+      "actual": "2025-07-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0083",
@@ -33854,7 +35941,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-04-29",
-      "actual": "2025-04-29"
+      "actual": "2025-04-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0083",
@@ -33863,7 +35953,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-06-13",
-      "actual": "2025-06-13"
+      "actual": "2025-06-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0084",
@@ -33872,7 +35965,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-04-30",
-      "actual": "2025-04-30"
+      "actual": "2025-04-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0084",
@@ -33881,7 +35977,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-31",
-      "actual": "2025-12-31"
+      "actual": "2025-12-31",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0087",
@@ -33890,7 +35989,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-05-07",
-      "actual": "2025-05-07"
+      "actual": "2025-05-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0087",
@@ -33899,7 +36001,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-17",
-      "actual": "2025-10-17"
+      "actual": "2025-10-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0088",
@@ -33908,7 +36013,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-15",
-      "actual": "2025-08-15"
+      "actual": "2025-08-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0088",
@@ -33917,7 +36025,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-19",
-      "actual": "2025-11-19"
+      "actual": "2025-11-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0094",
@@ -33926,7 +36037,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-05-15",
-      "actual": "2025-05-15"
+      "actual": "2025-05-15",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0094",
@@ -33935,7 +36049,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-07-01",
-      "actual": "2025-07-01"
+      "actual": "2025-07-01",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0093",
@@ -33944,7 +36061,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-05-14",
-      "actual": "2025-05-14"
+      "actual": "2025-05-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0093",
@@ -33953,7 +36073,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-07-16",
-      "actual": "2025-07-16"
+      "actual": "2025-07-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0097",
@@ -33962,7 +36085,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-05-16",
-      "actual": "2025-05-16"
+      "actual": "2025-05-16",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0097",
@@ -33971,7 +36097,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-07-14",
-      "actual": "2025-07-14"
+      "actual": "2025-07-14",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0098",
@@ -33980,7 +36109,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-05-16",
-      "actual": "2025-05-16"
+      "actual": "2025-05-16",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0098",
@@ -33989,7 +36121,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-07-07",
-      "actual": "2025-07-07"
+      "actual": "2025-07-07",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000060",
@@ -33998,7 +36133,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-12-26",
-      "actual": "2025-12-26"
+      "actual": "2025-12-26",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009125000060",
@@ -34007,7 +36145,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2026-01-26",
-      "actual": "2026-01-26"
+      "actual": "2026-01-26",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0101",
@@ -34016,7 +36157,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-05-21",
-      "actual": "2025-05-21"
+      "actual": "2025-05-21",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0101",
@@ -34025,7 +36169,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-08-04",
-      "actual": "2025-08-04"
+      "actual": "2025-08-04",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0103",
@@ -34034,7 +36181,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-05-22",
-      "actual": "2025-05-22"
+      "actual": "2025-05-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0103",
@@ -34043,7 +36193,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-06-24",
-      "actual": "2025-06-24"
+      "actual": "2025-06-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0104",
@@ -34052,7 +36205,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-05-21",
-      "actual": "2025-05-21"
+      "actual": "2025-05-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0104",
@@ -34061,7 +36217,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-07-07",
-      "actual": "2025-07-07"
+      "actual": "2025-07-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0105",
@@ -34070,7 +36229,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-05-22",
-      "actual": "2025-05-22"
+      "actual": "2025-05-22",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0105",
@@ -34079,7 +36241,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-07-09",
-      "actual": "2025-07-09"
+      "actual": "2025-07-09",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0106",
@@ -34088,7 +36253,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-05-23",
-      "actual": "2025-05-23"
+      "actual": "2025-05-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0106",
@@ -34097,7 +36265,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-18",
-      "actual": "2025-08-18"
+      "actual": "2025-08-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0107",
@@ -34106,7 +36277,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-05-27",
-      "actual": "2025-05-27"
+      "actual": "2025-05-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0108",
@@ -34115,7 +36289,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "apheresis",
       "plan": "2025-05-29",
-      "actual": "2025-05-29"
+      "actual": "2025-05-29",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1E0108",
@@ -34124,7 +36301,10 @@ var BOARD_DATA = {
       "cos": "欧倩倩",
       "type": "reinfusion",
       "plan": "2025-07-11",
-      "actual": "2025-07-11"
+      "actual": "2025-07-11",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1E0109",
@@ -34133,7 +36313,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-05-30",
-      "actual": "2025-05-30"
+      "actual": "2025-05-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0109",
@@ -34142,7 +36325,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-19",
-      "actual": "2025-08-21"
+      "actual": "2025-08-21",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0110",
@@ -34151,7 +36337,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-06-05",
-      "actual": "2025-06-05"
+      "actual": "2025-06-05",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0110",
@@ -34160,7 +36349,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-07-22",
-      "actual": "2025-07-22"
+      "actual": "2025-07-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0126",
@@ -34169,7 +36361,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-08-22",
-      "actual": "2025-08-22"
+      "actual": "2025-08-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0126",
@@ -34178,7 +36373,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-10-31",
-      "actual": "2025-10-31"
+      "actual": "2025-10-31",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0199",
@@ -34187,7 +36385,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-22",
-      "actual": "2025-08-22"
+      "actual": "2025-08-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0199",
@@ -34196,7 +36397,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-23",
-      "actual": "2025-09-23"
+      "actual": "2025-09-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0112",
@@ -34205,7 +36409,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-06",
-      "actual": "2025-06-06"
+      "actual": "2025-06-06",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0112",
@@ -34214,7 +36421,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-07",
-      "actual": "2025-08-07"
+      "actual": "2025-08-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0113",
@@ -34223,7 +36433,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-06-13",
-      "actual": "2025-06-13"
+      "actual": "2025-06-13",
+      "prov": "吉林省",
+      "city": "长春市",
+      "area": "North"
     },
     {
       "code": "A1E0122",
@@ -34232,7 +36445,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-06-17",
-      "actual": "2025-06-17"
+      "actual": "2025-06-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0122",
@@ -34241,7 +36457,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-09",
-      "actual": "2025-09-09"
+      "actual": "2025-09-09",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0117",
@@ -34250,7 +36469,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-06-11",
-      "actual": "2025-06-11"
+      "actual": "2025-06-11",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0117",
@@ -34259,7 +36481,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-01-05",
-      "actual": "2026-01-05"
+      "actual": "2026-01-05",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0118",
@@ -34268,7 +36493,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-13",
-      "actual": "2025-06-13"
+      "actual": "2025-06-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0118",
@@ -34277,7 +36505,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-11",
-      "actual": "2025-12-11"
+      "actual": "2025-12-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0121",
@@ -34286,7 +36517,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-06-17",
-      "actual": "2025-06-17"
+      "actual": "2025-06-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0121",
@@ -34295,7 +36529,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-09-07",
-      "actual": "2025-09-07"
+      "actual": "2025-09-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0120",
@@ -34304,7 +36541,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "apheresis",
       "plan": "2025-06-13",
-      "actual": "2025-06-13"
+      "actual": "2025-06-13",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0120",
@@ -34313,7 +36553,10 @@ var BOARD_DATA = {
       "cos": "陈瑾",
       "type": "reinfusion",
       "plan": "2025-07-30",
-      "actual": "2025-07-30"
+      "actual": "2025-07-30",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0124",
@@ -34322,7 +36565,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-16",
-      "actual": "2025-06-16"
+      "actual": "2025-06-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0124",
@@ -34331,7 +36577,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-22",
-      "actual": "2025-09-22"
+      "actual": "2025-09-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0127",
@@ -34340,7 +36589,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-06-17",
-      "actual": "2025-06-17"
+      "actual": "2025-06-17",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0127",
@@ -34349,7 +36601,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-09-01",
-      "actual": "2025-09-01"
+      "actual": "2025-09-01",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0125",
@@ -34358,7 +36613,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-06-20",
-      "actual": "2025-06-20"
+      "actual": "2025-06-20",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0125",
@@ -34367,7 +36625,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-08-05",
-      "actual": "2025-08-05"
+      "actual": "2025-08-05",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0128",
@@ -34376,7 +36637,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-06-18",
-      "actual": "2025-06-18"
+      "actual": "2025-06-18",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0128",
@@ -34385,7 +36649,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-10-05",
-      "actual": "2025-10-05"
+      "actual": "2025-10-05",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0129",
@@ -34394,7 +36661,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-19",
-      "actual": "2025-06-19"
+      "actual": "2025-06-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0130",
@@ -34403,7 +36673,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-20",
-      "actual": "2025-06-20"
+      "actual": "2025-06-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0130",
@@ -34412,7 +36685,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-12",
-      "actual": "2025-08-12"
+      "actual": "2025-08-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0132",
@@ -34421,7 +36697,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-30",
-      "actual": "2025-06-30"
+      "actual": "2025-06-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0132",
@@ -34430,7 +36709,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-04",
-      "actual": "2025-09-04"
+      "actual": "2025-09-04",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0136",
@@ -34439,7 +36721,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-06-26",
-      "actual": "2025-06-26"
+      "actual": "2025-06-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0136",
@@ -34448,7 +36733,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-08-13",
-      "actual": "2025-08-13"
+      "actual": "2025-08-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0135",
@@ -34457,7 +36745,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-06-27",
-      "actual": "2025-06-27"
+      "actual": "2025-06-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0135",
@@ -34466,7 +36757,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-08-08",
-      "actual": "2025-08-08"
+      "actual": "2025-08-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000250",
@@ -34475,7 +36769,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2026-08-25",
-      "actual": "2026-08-25"
+      "actual": "2026-08-25",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000250",
@@ -34484,7 +36781,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2026-10-09",
-      "actual": "2026-10-09"
+      "actual": "2026-10-09",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0141",
@@ -34493,7 +36793,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-02",
-      "actual": "2025-07-02"
+      "actual": "2025-07-02",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0141",
@@ -34502,7 +36805,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-25",
-      "actual": "2025-08-25"
+      "actual": "2025-08-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0139",
@@ -34511,7 +36817,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-03",
-      "actual": "2025-07-03"
+      "actual": "2025-07-03",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0139",
@@ -34520,7 +36829,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-16",
-      "actual": "2026-03-16"
+      "actual": "2026-03-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0149",
@@ -34529,7 +36841,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-10",
-      "actual": "2025-07-10"
+      "actual": "2025-07-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0149",
@@ -34538,7 +36853,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-16",
-      "actual": "2025-09-16"
+      "actual": "2025-09-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0143",
@@ -34547,7 +36865,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-04",
-      "actual": "2025-07-04"
+      "actual": "2025-07-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0143",
@@ -34556,7 +36877,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-23",
-      "actual": "2025-08-23"
+      "actual": "2025-08-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0140",
@@ -34565,7 +36889,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-02",
-      "actual": "2025-07-02"
+      "actual": "2025-07-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0140",
@@ -34574,7 +36901,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-22",
-      "actual": "2025-10-22"
+      "actual": "2025-10-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0144",
@@ -34583,7 +36913,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-07",
-      "actual": "2025-07-07"
+      "actual": "2025-07-07",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0144",
@@ -34592,7 +36925,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-23",
-      "actual": "2025-09-23"
+      "actual": "2025-09-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0151",
@@ -34601,7 +36937,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-14",
-      "actual": "2025-07-14"
+      "actual": "2025-07-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0151",
@@ -34610,7 +36949,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-08-19",
-      "actual": "2025-08-19"
+      "actual": "2025-08-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0148",
@@ -34619,7 +36961,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-07-07",
-      "actual": "2025-07-07"
+      "actual": "2025-07-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0148",
@@ -34628,7 +36973,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-08-25",
-      "actual": "2025-08-25"
+      "actual": "2025-08-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0150",
@@ -34637,7 +36985,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-07-10",
-      "actual": "2025-07-10"
+      "actual": "2025-07-10",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0150",
@@ -34646,7 +36997,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2026-01-16",
-      "actual": "2026-01-16"
+      "actual": "2026-01-16",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0153",
@@ -34655,7 +37009,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "apheresis",
       "plan": "2025-07-11",
-      "actual": "2025-07-11"
+      "actual": "2025-07-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0153",
@@ -34664,7 +37021,10 @@ var BOARD_DATA = {
       "cos": "张岩",
       "type": "reinfusion",
       "plan": "2025-09-14",
-      "actual": "2025-09-14"
+      "actual": "2025-09-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0152",
@@ -34673,7 +37033,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-07-16",
-      "actual": "2025-07-16"
+      "actual": "2025-07-16",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "A1E0152",
@@ -34682,7 +37045,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-09-08",
-      "actual": "2025-09-08"
+      "actual": "2025-09-08",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "A1E0154",
@@ -34691,7 +37057,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-07-10",
-      "actual": "2025-07-10"
+      "actual": "2025-07-10",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0154",
@@ -34700,7 +37069,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-27",
-      "actual": "2026-03-27"
+      "actual": "2026-03-27",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0155",
@@ -34709,7 +37081,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-07-11",
-      "actual": "2025-07-11"
+      "actual": "2025-07-11",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1E0155",
@@ -34718,7 +37093,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-09-23",
-      "actual": "2025-09-23"
+      "actual": "2025-09-23",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "A1E0157",
@@ -34727,7 +37105,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-16",
-      "actual": "2025-07-16"
+      "actual": "2025-07-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0157",
@@ -34736,7 +37117,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-09-24",
-      "actual": "2025-09-24"
+      "actual": "2025-09-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0158",
@@ -34745,7 +37129,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-07-16",
-      "actual": "2025-07-16"
+      "actual": "2025-07-16",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0159",
@@ -34754,7 +37141,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-17",
-      "actual": "2025-07-17"
+      "actual": "2025-07-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0160",
@@ -34763,7 +37153,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-17",
-      "actual": "2025-07-17"
+      "actual": "2025-07-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0160",
@@ -34772,7 +37165,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-27",
-      "actual": "2025-10-27"
+      "actual": "2025-10-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0193",
@@ -34781,7 +37177,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-13",
-      "actual": "2025-08-13"
+      "actual": "2025-08-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0193",
@@ -34790,7 +37189,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-22",
-      "actual": "2025-10-22"
+      "actual": "2025-10-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0164",
@@ -34799,7 +37201,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-07-22",
-      "actual": "2025-07-22"
+      "actual": "2025-07-22",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0164",
@@ -34808,7 +37213,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-11-25",
-      "actual": "2025-11-25"
+      "actual": "2025-11-25",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0166",
@@ -34817,7 +37225,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-07-29",
-      "actual": "2025-07-29"
+      "actual": "2025-07-29",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0166",
@@ -34826,7 +37237,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-12-02",
-      "actual": "2025-12-02"
+      "actual": "2025-12-02",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0173",
@@ -34835,7 +37249,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-07-31",
-      "actual": "2025-07-31"
+      "actual": "2025-07-31",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0173",
@@ -34844,7 +37261,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-09-24",
-      "actual": "2025-09-24"
+      "actual": "2025-09-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0165",
@@ -34853,7 +37273,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-07-24",
-      "actual": "2025-07-24"
+      "actual": "2025-07-24",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0165",
@@ -34862,7 +37285,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-09-11",
-      "actual": "2025-09-11"
+      "actual": "2025-09-11",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0171",
@@ -34871,7 +37297,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-07-31",
-      "actual": "2025-07-31"
+      "actual": "2025-07-31",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1E0171",
@@ -34880,7 +37309,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-09-15",
-      "actual": "2025-09-15"
+      "actual": "2025-09-15",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1E0172",
@@ -34889,7 +37321,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-01",
-      "actual": "2025-08-01"
+      "actual": "2025-08-01",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0172",
@@ -34898,7 +37333,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-11-22",
-      "actual": "2025-11-22"
+      "actual": "2025-11-22",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0169",
@@ -34907,7 +37345,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-07-31",
-      "actual": "2025-07-31"
+      "actual": "2025-07-31",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0169",
@@ -34916,7 +37357,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-30",
-      "actual": "2025-10-30"
+      "actual": "2025-10-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000029",
@@ -34925,7 +37369,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-28",
-      "actual": "2025-11-28"
+      "actual": "2025-11-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000029",
@@ -34934,7 +37381,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-19",
-      "actual": "2026-05-19"
+      "actual": "2026-05-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0174",
@@ -34943,7 +37393,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-08-05",
-      "actual": "2025-08-05"
+      "actual": "2025-08-05",
+      "prov": "吉林省",
+      "city": "长春市",
+      "area": "North"
     },
     {
       "code": "A1E0174",
@@ -34952,7 +37405,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-09-19",
-      "actual": "2025-09-19"
+      "actual": "2025-09-19",
+      "prov": "吉林省",
+      "city": "长春市",
+      "area": "North"
     },
     {
       "code": "A1E0215",
@@ -34961,7 +37417,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-29",
-      "actual": "2025-08-29"
+      "actual": "2025-08-29",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0177",
@@ -34970,7 +37429,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-08",
-      "actual": "2025-08-08"
+      "actual": "2025-08-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0177",
@@ -34979,7 +37441,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-12-24",
-      "actual": "2025-12-24"
+      "actual": "2025-12-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0175",
@@ -34988,7 +37453,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-01",
-      "actual": "2025-08-01"
+      "actual": "2025-08-01",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0175",
@@ -34997,7 +37465,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2026-01-20",
-      "actual": "2026-01-20"
+      "actual": "2026-01-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0176",
@@ -35006,7 +37477,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-04",
-      "actual": "2025-08-04"
+      "actual": "2025-08-04",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0176",
@@ -35015,7 +37489,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-09-05",
-      "actual": "2025-09-05"
+      "actual": "2025-09-05",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0243",
@@ -35024,7 +37501,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-24",
-      "actual": "2025-09-24"
+      "actual": "2025-09-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0243",
@@ -35033,7 +37513,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-24",
-      "actual": "2025-11-24"
+      "actual": "2025-11-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0179",
@@ -35042,7 +37525,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-04",
-      "actual": "2025-08-04"
+      "actual": "2025-08-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0179",
@@ -35051,7 +37537,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-14",
-      "actual": "2025-10-14"
+      "actual": "2025-10-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0210",
@@ -35060,7 +37549,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-27",
-      "actual": "2025-08-27"
+      "actual": "2025-08-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0210",
@@ -35069,7 +37561,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-05",
-      "actual": "2026-01-05"
+      "actual": "2026-01-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0181",
@@ -35078,7 +37573,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-08-06",
-      "actual": "2025-08-06"
+      "actual": "2025-08-06",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0181",
@@ -35087,7 +37585,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-24",
-      "actual": "2025-11-24"
+      "actual": "2025-11-24",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0182",
@@ -35096,7 +37597,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-07",
-      "actual": "2025-08-07"
+      "actual": "2025-08-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0182",
@@ -35105,7 +37609,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-17",
-      "actual": "2025-10-17"
+      "actual": "2025-10-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0183",
@@ -35114,7 +37621,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-08-07",
-      "actual": "2025-08-07"
+      "actual": "2025-08-07",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0183",
@@ -35123,7 +37633,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-19",
-      "actual": "2025-11-19"
+      "actual": "2025-11-19",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0184",
@@ -35132,7 +37645,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-08",
-      "actual": "2025-08-08"
+      "actual": "2025-08-08",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0184",
@@ -35141,7 +37657,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-10-27",
-      "actual": "2025-10-27"
+      "actual": "2025-10-27",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0188",
@@ -35150,7 +37669,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-11",
-      "actual": "2025-08-11"
+      "actual": "2025-08-11",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0188",
@@ -35159,7 +37681,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-20",
-      "actual": "2025-10-20"
+      "actual": "2025-10-20",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "A1E0189",
@@ -35168,7 +37693,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-08-11",
-      "actual": "2025-08-11"
+      "actual": "2025-08-11",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0189",
@@ -35177,7 +37705,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2025-10-22",
-      "actual": "2025-10-22"
+      "actual": "2025-10-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0191",
@@ -35186,7 +37717,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-08-12",
-      "actual": "2025-08-12"
+      "actual": "2025-08-12",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0192",
@@ -35195,7 +37729,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-26",
-      "actual": "2025-08-26"
+      "actual": "2025-08-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0192",
@@ -35204,7 +37741,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-20",
-      "actual": "2025-10-20"
+      "actual": "2025-10-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0194",
@@ -35213,7 +37753,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-13",
-      "actual": "2025-08-13"
+      "actual": "2025-08-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0194",
@@ -35222,7 +37765,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-10-06",
-      "actual": "2025-10-06"
+      "actual": "2025-10-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0196",
@@ -35231,7 +37777,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-14",
-      "actual": "2025-08-14"
+      "actual": "2025-08-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0196",
@@ -35240,7 +37789,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-11-13",
-      "actual": "2025-11-13"
+      "actual": "2025-11-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0197",
@@ -35249,7 +37801,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-15",
-      "actual": "2025-08-15"
+      "actual": "2025-08-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0197",
@@ -35258,7 +37813,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-18",
-      "actual": "2025-11-18"
+      "actual": "2025-11-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0201",
@@ -35267,7 +37825,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-21",
-      "actual": "2025-08-21"
+      "actual": "2025-08-21",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1E0201",
@@ -35276,7 +37837,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-10-20",
-      "actual": "2025-10-20"
+      "actual": "2025-10-20",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1E0202",
@@ -35285,7 +37849,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-26",
-      "actual": "2025-08-26"
+      "actual": "2025-08-26",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "A1E0200",
@@ -35294,7 +37861,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-20",
-      "actual": "2025-08-20"
+      "actual": "2025-08-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0200",
@@ -35303,7 +37873,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-19",
-      "actual": "2026-01-19"
+      "actual": "2026-01-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0203",
@@ -35312,7 +37885,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-22",
-      "actual": "2025-08-22"
+      "actual": "2025-08-22",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0203",
@@ -35321,7 +37897,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-11-03",
-      "actual": "2025-11-03"
+      "actual": "2025-11-03",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0205",
@@ -35330,7 +37909,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-08-26",
-      "actual": "2025-08-26"
+      "actual": "2025-08-26",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0205",
@@ -35339,7 +37921,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-10-21",
-      "actual": "2025-10-21"
+      "actual": "2025-10-21",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "A1E0206",
@@ -35348,7 +37933,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-08-22",
-      "actual": "2025-08-22"
+      "actual": "2025-08-22",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1E0206",
@@ -35357,7 +37945,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-10-21",
-      "actual": "2025-10-21"
+      "actual": "2025-10-21",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "A1E0204",
@@ -35366,7 +37957,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-22",
-      "actual": "2025-08-22"
+      "actual": "2025-08-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0204",
@@ -35375,7 +37969,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-22",
-      "actual": "2025-12-22"
+      "actual": "2025-12-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0207",
@@ -35384,7 +37981,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-08-25",
-      "actual": "2025-08-25"
+      "actual": "2025-08-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0207",
@@ -35393,7 +37993,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-10-29",
-      "actual": "2025-10-29"
+      "actual": "2025-10-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0208",
@@ -35402,7 +38005,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-27",
-      "actual": "2025-08-27"
+      "actual": "2025-08-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0208",
@@ -35411,7 +38017,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-11-03",
-      "actual": "2025-11-03"
+      "actual": "2025-11-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0212",
@@ -35420,7 +38029,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-08-28",
-      "actual": "2025-08-28"
+      "actual": "2025-08-28",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0212",
@@ -35429,7 +38041,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-11-17",
-      "actual": "2025-11-17"
+      "actual": "2025-11-17",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0213",
@@ -35438,7 +38053,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-17",
-      "actual": "2025-09-17"
+      "actual": "2025-09-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0213",
@@ -35447,7 +38065,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-03",
-      "actual": "2026-04-03"
+      "actual": "2026-04-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0214",
@@ -35456,7 +38077,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-08-28",
-      "actual": "2025-08-28"
+      "actual": "2025-08-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0214",
@@ -35465,7 +38089,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-09",
-      "actual": "2025-11-09"
+      "actual": "2025-11-09",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0216",
@@ -35474,7 +38101,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-01",
-      "actual": "2025-09-01"
+      "actual": "2025-09-01",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0216",
@@ -35483,7 +38113,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-20",
-      "actual": "2026-01-20"
+      "actual": "2026-01-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0217",
@@ -35492,7 +38125,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-08-31",
-      "actual": "2025-08-31"
+      "actual": "2025-08-31",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0217",
@@ -35501,7 +38137,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-11-14",
-      "actual": "2025-11-14"
+      "actual": "2025-11-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0218",
@@ -35510,7 +38149,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-09-01",
-      "actual": "2025-09-01"
+      "actual": "2025-09-01",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "A1E0218",
@@ -35519,7 +38161,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-12-01",
-      "actual": "2025-12-01"
+      "actual": "2025-12-01",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000268",
@@ -35528,7 +38173,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2026-09-10",
-      "actual": "2026-09-10"
+      "actual": "2026-09-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0220",
@@ -35537,7 +38185,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-09-08",
-      "actual": "2025-09-08"
+      "actual": "2025-09-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0220",
@@ -35546,7 +38197,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-11-12",
-      "actual": "2025-11-12"
+      "actual": "2025-11-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0221",
@@ -35555,7 +38209,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-09-05",
-      "actual": "2025-09-05"
+      "actual": "2025-09-05",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0222",
@@ -35564,7 +38221,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-09-05",
-      "actual": "2025-09-05"
+      "actual": "2025-09-05",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0222",
@@ -35573,7 +38233,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-18",
-      "actual": "2025-11-18"
+      "actual": "2025-11-18",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0227",
@@ -35582,7 +38245,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "apheresis",
       "plan": "2025-09-11",
-      "actual": "2025-09-11"
+      "actual": "2025-09-11",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0227",
@@ -35591,7 +38257,10 @@ var BOARD_DATA = {
       "cos": "郑枫凡",
       "type": "reinfusion",
       "plan": "2025-11-28",
-      "actual": "2025-11-28"
+      "actual": "2025-11-28",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "A1E0226",
@@ -35600,7 +38269,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-09-09",
-      "actual": "2025-09-09"
+      "actual": "2025-09-09",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0226",
@@ -35609,7 +38281,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-03-10",
-      "actual": "2026-03-10"
+      "actual": "2026-03-10",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0224",
@@ -35618,7 +38293,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-10",
-      "actual": "2025-09-10"
+      "actual": "2025-09-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0224",
@@ -35627,7 +38305,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-08",
-      "actual": "2025-12-08"
+      "actual": "2025-12-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0225",
@@ -35636,7 +38317,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-09-08",
-      "actual": "2025-09-08"
+      "actual": "2025-09-08",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0225",
@@ -35645,7 +38329,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-11-26",
-      "actual": "2025-11-26"
+      "actual": "2025-11-26",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0231",
@@ -35654,7 +38341,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-12",
-      "actual": "2025-09-12"
+      "actual": "2025-09-12",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0231",
@@ -35663,7 +38353,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-27",
-      "actual": "2025-11-27"
+      "actual": "2025-11-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0228",
@@ -35672,7 +38365,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-12",
-      "actual": "2025-09-12"
+      "actual": "2025-09-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0228",
@@ -35681,7 +38377,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-15",
-      "actual": "2025-12-15"
+      "actual": "2025-12-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0229",
@@ -35690,7 +38389,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-11",
-      "actual": "2025-09-11"
+      "actual": "2025-09-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0230",
@@ -35699,7 +38401,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-09-12",
-      "actual": "2025-09-12"
+      "actual": "2025-09-12",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0230",
@@ -35708,7 +38413,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2025-10-24",
-      "actual": "2025-10-24"
+      "actual": "2025-10-24",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "A1E0233",
@@ -35717,7 +38425,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-22",
-      "actual": "2025-09-22"
+      "actual": "2025-09-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0233",
@@ -35726,7 +38437,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-10-28",
-      "actual": "2025-10-28"
+      "actual": "2025-10-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0235",
@@ -35735,7 +38449,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-09-15",
-      "actual": "2025-09-15"
+      "actual": "2025-09-15",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1E0235",
@@ -35744,7 +38461,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-10-29",
-      "actual": "2025-10-29"
+      "actual": "2025-10-29",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "A1E0237",
@@ -35753,7 +38473,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-17",
-      "actual": "2025-09-17"
+      "actual": "2025-09-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0237",
@@ -35762,7 +38485,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-29",
-      "actual": "2026-05-29"
+      "actual": "2026-05-29",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0234",
@@ -35771,7 +38497,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-16",
-      "actual": "2025-09-16"
+      "actual": "2025-09-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0234",
@@ -35780,7 +38509,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-10",
-      "actual": "2026-03-10"
+      "actual": "2026-03-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0238",
@@ -35789,7 +38521,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-09-19",
-      "actual": "2025-09-19"
+      "actual": "2025-09-19",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0238",
@@ -35798,7 +38533,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-11-25",
-      "actual": "2025-11-25"
+      "actual": "2025-11-25",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0248",
@@ -35807,7 +38545,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-13",
-      "actual": "2025-10-13"
+      "actual": "2025-10-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0248",
@@ -35816,7 +38557,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-27",
-      "actual": "2026-04-27"
+      "actual": "2026-04-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0240",
@@ -35825,7 +38569,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-10-02",
-      "actual": "2025-10-02"
+      "actual": "2025-10-02",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0240",
@@ -35834,7 +38581,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-22",
-      "actual": "2025-12-22"
+      "actual": "2025-12-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0241",
@@ -35843,7 +38593,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-09-23",
-      "actual": "2025-09-23"
+      "actual": "2025-09-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0241",
@@ -35852,7 +38605,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-11-17",
-      "actual": "2025-11-17"
+      "actual": "2025-11-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0244",
@@ -35861,7 +38617,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-09-25",
-      "actual": "2025-09-25"
+      "actual": "2025-09-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0244",
@@ -35870,7 +38629,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-27",
-      "actual": "2025-11-27"
+      "actual": "2025-11-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0246",
@@ -35879,7 +38641,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "apheresis",
       "plan": "2025-09-28",
-      "actual": "2025-09-28"
+      "actual": "2025-09-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0246",
@@ -35888,7 +38653,10 @@ var BOARD_DATA = {
       "cos": "汪情晴",
       "type": "reinfusion",
       "plan": "2025-12-09",
-      "actual": "2025-12-09"
+      "actual": "2025-12-09",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0247",
@@ -35897,7 +38665,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-10-06",
-      "actual": "2025-10-06"
+      "actual": "2025-10-06",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0247",
@@ -35906,7 +38677,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-26",
-      "actual": "2025-11-26"
+      "actual": "2025-11-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0249",
@@ -35915,7 +38689,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-10",
-      "actual": "2025-10-10"
+      "actual": "2025-10-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0249",
@@ -35924,7 +38701,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-27",
-      "actual": "2026-01-27"
+      "actual": "2026-01-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0250",
@@ -35933,7 +38713,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-10-21",
-      "actual": "2025-10-21"
+      "actual": "2025-10-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0250",
@@ -35942,7 +38725,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2025-12-10",
-      "actual": "2025-12-10"
+      "actual": "2025-12-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0251",
@@ -35951,7 +38737,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-11",
-      "actual": "2025-10-11"
+      "actual": "2025-10-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0251",
@@ -35960,7 +38749,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-05",
-      "actual": "2026-03-05"
+      "actual": "2026-03-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0253",
@@ -35969,7 +38761,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-10-20",
-      "actual": "2025-10-20"
+      "actual": "2025-10-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0253",
@@ -35978,7 +38773,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-11-26",
-      "actual": "2025-11-26"
+      "actual": "2025-11-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0258",
@@ -35987,7 +38785,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-10-22",
-      "actual": "2025-10-22"
+      "actual": "2025-10-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0258",
@@ -35996,7 +38797,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-08",
-      "actual": "2025-12-08"
+      "actual": "2025-12-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0254",
@@ -36005,7 +38809,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-16",
-      "actual": "2025-10-16"
+      "actual": "2025-10-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0254",
@@ -36014,7 +38821,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-12",
-      "actual": "2026-03-12"
+      "actual": "2026-03-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0255",
@@ -36023,7 +38833,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-10-16",
-      "actual": "2025-10-16"
+      "actual": "2025-10-16",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0255",
@@ -36032,7 +38845,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-02",
-      "actual": "2025-12-02"
+      "actual": "2025-12-02",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0256",
@@ -36041,7 +38857,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-17",
-      "actual": "2025-10-17"
+      "actual": "2025-10-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0256",
@@ -36050,7 +38869,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-29",
-      "actual": "2025-12-29"
+      "actual": "2025-12-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "A1E0257",
@@ -36059,7 +38881,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-10-21",
-      "actual": "2025-10-21"
+      "actual": "2025-10-21",
+      "prov": "浙江省",
+      "city": "宁波市",
+      "area": "South"
     },
     {
       "code": "A1E0259",
@@ -36068,7 +38893,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-10-23",
-      "actual": "2025-10-23"
+      "actual": "2025-10-23",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0259",
@@ -36077,7 +38905,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0260",
@@ -36086,7 +38917,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-10-22",
-      "actual": "2025-10-22"
+      "actual": "2025-10-22",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0260",
@@ -36095,7 +38929,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2025-12-12",
-      "actual": "2025-12-12"
+      "actual": "2025-12-12",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1E0261",
@@ -36104,7 +38941,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-10-24",
-      "actual": "2025-10-24"
+      "actual": "2025-10-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0261",
@@ -36113,7 +38953,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2025-12-22",
-      "actual": "2025-12-22"
+      "actual": "2025-12-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "A1E0262",
@@ -36122,7 +38965,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2025-10-24",
-      "actual": "2025-10-24"
+      "actual": "2025-10-24",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009125000002",
@@ -36131,7 +38977,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-10-30",
-      "actual": "2025-10-30"
+      "actual": "2025-10-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000002",
@@ -36140,7 +38989,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-24",
-      "actual": "2025-12-24"
+      "actual": "2025-12-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "A1E0263",
@@ -36149,7 +39001,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-10-27",
-      "actual": "2025-10-27"
+      "actual": "2025-10-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0263",
@@ -36158,7 +39013,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-01-28",
-      "actual": "2026-01-28"
+      "actual": "2026-01-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0264",
@@ -36167,7 +39025,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-10-28",
-      "actual": "2025-10-28"
+      "actual": "2025-10-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "A1E0264",
@@ -36176,7 +39037,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-01-27",
-      "actual": "2026-01-27"
+      "actual": "2026-01-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000001",
@@ -36185,7 +39049,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-10-30",
-      "actual": "2025-10-30"
+      "actual": "2025-10-30",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009125000001",
@@ -36194,7 +39061,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-29",
-      "actual": "2025-12-29"
+      "actual": "2025-12-29",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009125000006",
@@ -36203,7 +39073,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-05",
-      "actual": "2025-11-05"
+      "actual": "2025-11-05",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000006",
@@ -36212,7 +39085,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-15",
-      "actual": "2025-12-15"
+      "actual": "2025-12-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000004",
@@ -36221,7 +39097,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-11-05",
-      "actual": "2025-11-05"
+      "actual": "2025-11-05",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "9009125000004",
@@ -36230,7 +39109,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2026-01-12",
-      "actual": "2026-01-12"
+      "actual": "2026-01-12",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "9009125000003",
@@ -36239,7 +39121,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-03",
-      "actual": "2025-11-03"
+      "actual": "2025-11-03",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000003",
@@ -36248,7 +39133,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-17",
-      "actual": "2025-12-17"
+      "actual": "2025-12-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000005",
@@ -36257,7 +39145,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-11-04",
-      "actual": "2025-11-04"
+      "actual": "2025-11-04",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009125000005",
@@ -36266,7 +39157,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-15",
-      "actual": "2026-04-15"
+      "actual": "2026-04-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009125000007",
@@ -36275,7 +39169,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2025-11-05",
-      "actual": "2025-11-05"
+      "actual": "2025-11-05",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009125000007",
@@ -36284,7 +39181,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "reinfusion",
       "plan": "2026-01-24",
-      "actual": "2026-01-24"
+      "actual": "2026-01-24",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009125000009",
@@ -36293,7 +39193,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-11-07",
-      "actual": "2025-11-07"
+      "actual": "2025-11-07",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009125000009",
@@ -36302,7 +39205,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-08",
-      "actual": "2025-12-08"
+      "actual": "2025-12-08",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009125000010",
@@ -36311,7 +39217,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-11",
-      "actual": "2025-11-11"
+      "actual": "2025-11-11",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000011",
@@ -36320,7 +39229,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-11",
-      "actual": "2025-11-11"
+      "actual": "2025-11-11",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000012",
@@ -36329,7 +39241,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-12",
-      "actual": "2025-11-12"
+      "actual": "2025-11-12",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000012",
@@ -36338,7 +39253,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-12-26",
-      "actual": "2025-12-26"
+      "actual": "2025-12-26",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000013",
@@ -36347,7 +39265,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-12",
-      "actual": "2025-11-12"
+      "actual": "2025-11-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000013",
@@ -36356,7 +39277,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-11",
-      "actual": "2026-05-11"
+      "actual": "2026-05-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000016",
@@ -36365,7 +39289,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-11-12",
-      "actual": "2025-11-12"
+      "actual": "2025-11-12",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000016",
@@ -36374,7 +39301,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-02-03",
-      "actual": "2026-02-03"
+      "actual": "2026-02-03",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000017",
@@ -36383,7 +39313,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-17",
-      "actual": "2025-11-17"
+      "actual": "2025-11-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000017",
@@ -36392,7 +39325,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-29",
-      "actual": "2025-12-29"
+      "actual": "2025-12-29",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000021",
@@ -36401,7 +39337,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-11-18",
-      "actual": "2025-11-18"
+      "actual": "2025-11-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000021",
@@ -36410,7 +39349,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2025-12-30",
-      "actual": "2025-12-30"
+      "actual": "2025-12-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000018",
@@ -36419,7 +39361,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-17",
-      "actual": "2025-11-17"
+      "actual": "2025-11-17",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000018",
@@ -36428,7 +39373,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-12-25",
-      "actual": "2025-12-25"
+      "actual": "2025-12-25",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000019",
@@ -36437,7 +39385,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-11-18",
-      "actual": "2025-11-18"
+      "actual": "2025-11-18",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000019",
@@ -36446,7 +39397,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2025-12-18",
-      "actual": "2025-12-18"
+      "actual": "2025-12-18",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000022",
@@ -36455,7 +39409,10 @@ var BOARD_DATA = {
       "cos": "顾美琴",
       "type": "apheresis",
       "plan": "2025-11-19",
-      "actual": "2025-11-19"
+      "actual": "2025-11-19",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009125000022",
@@ -36464,7 +39421,10 @@ var BOARD_DATA = {
       "cos": "顾美琴",
       "type": "reinfusion",
       "plan": "2025-12-15",
-      "actual": "2025-12-15"
+      "actual": "2025-12-15",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009125000023",
@@ -36473,7 +39433,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-11-20",
-      "actual": "2025-11-20"
+      "actual": "2025-11-20",
+      "prov": "吉林省",
+      "city": "长春市",
+      "area": "North"
     },
     {
       "code": "9009125000023",
@@ -36482,7 +39445,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2025-12-31",
-      "actual": "2026-01-09"
+      "actual": "2026-01-09",
+      "prov": "吉林省",
+      "city": "长春市",
+      "area": "North"
     },
     {
       "code": "9009125000027",
@@ -36491,7 +39457,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-11-24",
-      "actual": "2025-11-24"
+      "actual": "2025-11-24",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009125000027",
@@ -36500,7 +39469,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2025-12-22",
-      "actual": "2025-12-22"
+      "actual": "2025-12-22",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009125000026",
@@ -36509,7 +39481,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-24",
-      "actual": "2025-11-24"
+      "actual": "2025-11-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000026",
@@ -36518,7 +39493,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-12",
-      "actual": "2026-01-12"
+      "actual": "2026-01-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000025",
@@ -36527,7 +39505,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-11-21",
-      "actual": "2025-11-21"
+      "actual": "2025-11-21",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000025",
@@ -36536,7 +39517,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2025-12-29",
-      "actual": "2025-12-29"
+      "actual": "2025-12-29",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000031",
@@ -36545,7 +39529,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-12-13",
-      "actual": "2025-12-13"
+      "actual": "2025-12-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000031",
@@ -36554,7 +39541,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-01-16",
-      "actual": "2026-01-16"
+      "actual": "2026-01-16",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000028",
@@ -36563,7 +39553,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-26",
-      "actual": "2025-11-26"
+      "actual": "2025-11-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000028",
@@ -36572,7 +39565,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-19",
-      "actual": "2026-08-19"
+      "actual": "2026-08-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000035",
@@ -36581,7 +39577,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-02",
-      "actual": "2025-12-02"
+      "actual": "2025-12-02",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000035",
@@ -36590,7 +39589,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-20",
-      "actual": "2026-01-20"
+      "actual": "2026-01-20",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000030",
@@ -36599,7 +39601,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-11-27",
-      "actual": "2025-11-27"
+      "actual": "2025-11-27",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009125000030",
@@ -36608,7 +39613,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2025-12-23",
-      "actual": "2025-12-23"
+      "actual": "2025-12-23",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009125000034",
@@ -36617,7 +39625,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-12-30",
-      "actual": "2025-12-30"
+      "actual": "2025-12-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000034",
@@ -36626,7 +39637,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-17",
-      "actual": "2026-02-17"
+      "actual": "2026-02-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000033",
@@ -36635,7 +39649,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2025-11-29",
-      "actual": "2025-11-29"
+      "actual": "2025-11-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000033",
@@ -36644,7 +39661,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2025-12-31",
-      "actual": "2025-12-31"
+      "actual": "2025-12-31",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000036",
@@ -36653,7 +39673,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-04",
-      "actual": "2025-12-04"
+      "actual": "2025-12-04",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000036",
@@ -36662,7 +39685,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-05",
-      "actual": "2026-01-05"
+      "actual": "2026-01-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000037",
@@ -36671,7 +39697,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-04",
-      "actual": "2025-12-04"
+      "actual": "2025-12-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000037",
@@ -36680,7 +39709,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-25",
-      "actual": "2026-03-25"
+      "actual": "2026-03-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000038",
@@ -36689,7 +39721,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-08",
-      "actual": "2025-12-08"
+      "actual": "2025-12-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000038",
@@ -36698,7 +39733,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-01-26",
-      "actual": "2026-01-26"
+      "actual": "2026-01-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000039",
@@ -36707,7 +39745,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-11",
-      "actual": "2025-12-11"
+      "actual": "2025-12-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000039",
@@ -36716,7 +39757,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-04",
-      "actual": "2026-02-04"
+      "actual": "2026-02-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000052",
@@ -36725,7 +39769,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-23",
-      "actual": "2025-12-23"
+      "actual": "2025-12-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000040",
@@ -36734,7 +39781,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-12-10",
-      "actual": "2025-12-10"
+      "actual": "2025-12-10",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000040",
@@ -36743,7 +39793,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-03-30",
-      "actual": "2026-03-30"
+      "actual": "2026-03-30",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000041",
@@ -36752,7 +39805,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-10",
-      "actual": "2025-12-10"
+      "actual": "2025-12-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000041",
@@ -36761,7 +39817,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-06-03",
-      "actual": "2026-06-03"
+      "actual": "2026-06-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000043",
@@ -36770,7 +39829,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-16",
-      "actual": "2025-12-16"
+      "actual": "2025-12-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000043",
@@ -36779,7 +39841,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-04",
-      "actual": "2026-02-04"
+      "actual": "2026-02-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000042",
@@ -36788,7 +39853,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-12-15",
-      "actual": "2025-12-15"
+      "actual": "2025-12-15",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009125000042",
@@ -36797,7 +39865,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-06",
-      "actual": "2026-04-06"
+      "actual": "2026-04-06",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009125000044",
@@ -36806,7 +39877,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-18",
-      "actual": "2025-12-18"
+      "actual": "2025-12-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000044",
@@ -36815,7 +39889,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-19",
-      "actual": "2026-01-19"
+      "actual": "2026-01-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000045",
@@ -36824,7 +39901,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2025-12-19",
-      "actual": "2025-12-19"
+      "actual": "2025-12-19",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009125000045",
@@ -36833,7 +39913,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-01-19",
-      "actual": "2026-01-19"
+      "actual": "2026-01-19",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009125000047",
@@ -36842,7 +39925,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-19",
-      "actual": "2025-12-19"
+      "actual": "2025-12-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000047",
@@ -36851,7 +39937,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-11",
-      "actual": "2026-02-11"
+      "actual": "2026-02-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000048",
@@ -36860,7 +39949,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-12-19",
-      "actual": "2025-12-19"
+      "actual": "2025-12-19",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000048",
@@ -36869,7 +39961,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-03-11",
-      "actual": "2026-03-11"
+      "actual": "2026-03-11",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000049",
@@ -36878,7 +39973,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2025-12-20",
-      "actual": "2025-12-20"
+      "actual": "2025-12-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000049",
@@ -36887,7 +39985,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-01-20",
-      "actual": "2026-01-20"
+      "actual": "2026-01-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000062",
@@ -36896,7 +39997,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2025-12-29",
-      "actual": "2025-12-29"
+      "actual": "2025-12-29",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "9009125000062",
@@ -36905,7 +40009,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2026-02-02",
-      "actual": "2026-02-02"
+      "actual": "2026-02-02",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "9009125000059",
@@ -36914,7 +40021,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2025-12-29",
-      "actual": "2025-12-29"
+      "actual": "2025-12-29",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009125000059",
@@ -36923,7 +40033,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-01-30",
-      "actual": "2026-01-30"
+      "actual": "2026-01-30",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009125000053",
@@ -36932,7 +40045,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-24",
-      "actual": "2025-12-24"
+      "actual": "2025-12-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000053",
@@ -36941,7 +40057,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-02",
-      "actual": "2026-03-02"
+      "actual": "2026-03-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000056",
@@ -36950,7 +40069,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2025-12-25",
-      "actual": "2025-12-25"
+      "actual": "2025-12-25",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000056",
@@ -36959,7 +40081,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-10-29",
-      "actual": "2026-10-29"
+      "actual": "2026-10-29",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009125000054",
@@ -36968,7 +40093,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-25",
-      "actual": "2025-12-25"
+      "actual": "2025-12-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000054",
@@ -36977,7 +40105,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-15",
-      "actual": "2026-04-15"
+      "actual": "2026-04-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000055",
@@ -36986,7 +40117,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2025-12-25",
-      "actual": "2025-12-25"
+      "actual": "2025-12-25",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000055",
@@ -36995,7 +40129,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-01-29",
-      "actual": "2026-01-29"
+      "actual": "2026-01-29",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009125000058",
@@ -37004,7 +40141,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2025-12-25",
-      "actual": "2025-12-25"
+      "actual": "2025-12-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009125000061",
@@ -37013,7 +40153,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-26",
-      "actual": "2025-12-26"
+      "actual": "2025-12-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000063",
@@ -37022,7 +40165,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2025-12-30",
-      "actual": "2025-12-30"
+      "actual": "2025-12-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000063",
@@ -37031,7 +40177,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-01-31",
-      "actual": "2026-01-31"
+      "actual": "2026-01-31",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009125000065",
@@ -37040,7 +40189,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-04",
-      "actual": "2026-01-04"
+      "actual": "2026-01-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000065",
@@ -37049,7 +40201,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-03",
-      "actual": "2026-02-03"
+      "actual": "2026-02-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009125000064",
@@ -37058,7 +40213,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-01",
-      "actual": ""
+      "actual": "",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000002",
@@ -37067,7 +40225,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-05",
-      "actual": "2026-01-05"
+      "actual": "2026-01-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000002",
@@ -37076,7 +40237,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-25",
-      "actual": "2026-02-25"
+      "actual": "2026-02-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000001",
@@ -37085,7 +40249,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-05",
-      "actual": "2026-01-05"
+      "actual": "2026-01-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000001",
@@ -37094,7 +40261,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-09",
-      "actual": "2026-04-09"
+      "actual": "2026-04-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000003",
@@ -37103,7 +40273,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-07",
-      "actual": "2026-01-07"
+      "actual": "2026-01-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000003",
@@ -37112,7 +40285,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-03-05",
-      "actual": "2026-03-05"
+      "actual": "2026-03-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000004",
@@ -37121,7 +40297,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-01-07",
-      "actual": "2026-01-07"
+      "actual": "2026-01-07",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000004",
@@ -37130,7 +40309,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-02-09",
-      "actual": "2026-02-09"
+      "actual": "2026-02-09",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000005",
@@ -37139,7 +40321,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-08",
-      "actual": "2026-01-08"
+      "actual": "2026-01-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000005",
@@ -37148,7 +40333,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-01-29",
-      "actual": "2026-01-29"
+      "actual": "2026-01-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000006",
@@ -37157,7 +40345,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2026-01-08",
-      "actual": "2026-01-08"
+      "actual": "2026-01-08",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000007",
@@ -37166,7 +40357,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-01-09",
-      "actual": "2026-01-09"
+      "actual": "2026-01-09",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000007",
@@ -37175,7 +40369,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-03-04",
-      "actual": "2026-03-04"
+      "actual": "2026-03-04",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000008",
@@ -37184,7 +40381,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-14",
-      "actual": "2026-01-14"
+      "actual": "2026-01-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000008",
@@ -37193,7 +40393,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-03-10",
-      "actual": "2026-03-10"
+      "actual": "2026-03-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000010",
@@ -37202,7 +40405,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-14",
-      "actual": "2026-01-14"
+      "actual": "2026-01-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000010",
@@ -37211,7 +40417,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-31",
-      "actual": "2026-03-31"
+      "actual": "2026-03-31",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000014",
@@ -37220,7 +40429,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-14",
-      "actual": "2026-01-14"
+      "actual": "2026-01-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000013",
@@ -37229,7 +40441,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-01-14",
-      "actual": "2026-01-14"
+      "actual": "2026-01-14",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000013",
@@ -37238,7 +40453,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-03-05",
-      "actual": "2026-03-05"
+      "actual": "2026-03-05",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000012",
@@ -37247,7 +40465,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-14",
-      "actual": "2026-01-14"
+      "actual": "2026-01-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000012",
@@ -37256,7 +40477,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-02-10",
-      "actual": "2026-02-10"
+      "actual": "2026-02-10",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000015",
@@ -37265,7 +40489,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-14",
-      "actual": "2026-01-14"
+      "actual": "2026-01-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000015",
@@ -37274,7 +40501,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-02-24",
-      "actual": "2026-02-24"
+      "actual": "2026-02-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000016",
@@ -37283,7 +40513,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-16",
-      "actual": "2026-01-16"
+      "actual": "2026-01-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000016",
@@ -37292,7 +40525,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-04-30",
-      "actual": "2026-04-30"
+      "actual": "2026-04-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000018",
@@ -37301,7 +40537,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-16",
-      "actual": "2026-01-16"
+      "actual": "2026-01-16",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000018",
@@ -37310,7 +40549,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-06-03",
-      "actual": "2026-06-04"
+      "actual": "2026-06-04",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000021",
@@ -37319,7 +40561,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-20",
-      "actual": "2026-01-20"
+      "actual": "2026-01-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000021",
@@ -37328,7 +40573,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-25",
-      "actual": "2026-02-25"
+      "actual": "2026-02-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000022",
@@ -37337,7 +40585,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-21",
-      "actual": "2026-01-21"
+      "actual": "2026-01-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000022",
@@ -37346,7 +40597,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000024",
@@ -37355,7 +40609,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-22",
-      "actual": "2026-01-22"
+      "actual": "2026-01-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000024",
@@ -37364,7 +40621,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-06-08",
-      "actual": "2026-06-08"
+      "actual": "2026-06-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000025",
@@ -37373,7 +40633,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-23",
-      "actual": "2026-01-23"
+      "actual": "2026-01-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000025",
@@ -37382,7 +40645,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-02-21",
-      "actual": "2026-02-21"
+      "actual": "2026-02-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000032",
@@ -37391,7 +40657,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-28",
-      "actual": "2026-01-28"
+      "actual": "2026-01-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000030",
@@ -37400,7 +40669,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2026-01-28",
-      "actual": "2026-01-28"
+      "actual": "2026-01-28",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "9009126000030",
@@ -37409,7 +40681,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "reinfusion",
       "plan": "2026-04-20",
-      "actual": "2026-04-20"
+      "actual": "2026-04-20",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "9009126000026",
@@ -37418,7 +40693,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-01-25",
-      "actual": "2026-01-25"
+      "actual": "2026-01-25",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000026",
@@ -37427,7 +40705,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-04-27",
-      "actual": "2026-04-27"
+      "actual": "2026-04-27",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000031",
@@ -37436,7 +40717,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-01-28",
-      "actual": "2026-01-28"
+      "actual": "2026-01-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000031",
@@ -37445,7 +40729,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-06",
-      "actual": "2026-05-06"
+      "actual": "2026-05-06",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000033",
@@ -37454,7 +40741,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-01-29",
-      "actual": "2026-01-29"
+      "actual": "2026-01-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000033",
@@ -37463,7 +40753,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-04-13",
-      "actual": "2026-04-13"
+      "actual": "2026-04-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000034",
@@ -37472,7 +40765,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-01-30",
-      "actual": "2026-01-30"
+      "actual": "2026-01-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000034",
@@ -37481,7 +40777,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000035",
@@ -37490,7 +40789,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-01-29",
-      "actual": "2026-01-29"
+      "actual": "2026-01-29",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000040",
@@ -37499,7 +40801,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-05",
-      "actual": "2026-02-05"
+      "actual": "2026-02-05",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000040",
@@ -37508,7 +40813,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-27",
-      "actual": "2026-03-27"
+      "actual": "2026-03-27",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000039",
@@ -37517,7 +40825,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-04",
-      "actual": "2026-02-04"
+      "actual": "2026-02-04",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000039",
@@ -37526,7 +40837,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-08-24",
-      "actual": "2026-08-24"
+      "actual": "2026-08-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000041",
@@ -37535,7 +40849,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-02-05",
-      "actual": "2026-02-05"
+      "actual": "2026-02-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000041",
@@ -37544,7 +40861,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-09",
-      "actual": "2026-07-09"
+      "actual": "2026-07-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000042",
@@ -37553,7 +40873,10 @@ var BOARD_DATA = {
       "cos": "周逢玮",
       "type": "apheresis",
       "plan": "2026-02-06",
-      "actual": "2026-02-06"
+      "actual": "2026-02-06",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000043",
@@ -37562,7 +40885,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-07",
-      "actual": "2026-02-07"
+      "actual": "2026-02-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000043",
@@ -37571,7 +40897,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-03-31",
-      "actual": "2026-03-31"
+      "actual": "2026-03-31",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000044",
@@ -37580,7 +40909,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-02-24",
-      "actual": "2026-02-24"
+      "actual": "2026-02-24",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "9009126000044",
@@ -37589,7 +40921,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-03-31",
-      "actual": "2026-04-01"
+      "actual": "2026-04-01",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "9009126000046",
@@ -37598,7 +40933,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-02-25",
-      "actual": "2026-02-25"
+      "actual": "2026-02-25",
+      "prov": "广东省",
+      "city": "佛山市",
+      "area": "South"
     },
     {
       "code": "9009126000046",
@@ -37607,7 +40945,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-05-13",
-      "actual": "2026-05-13"
+      "actual": "2026-05-13",
+      "prov": "广东省",
+      "city": "佛山市",
+      "area": "South"
     },
     {
       "code": "9009126000048",
@@ -37616,7 +40957,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-27",
-      "actual": "2026-02-27"
+      "actual": "2026-02-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000047",
@@ -37625,7 +40969,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-24",
-      "actual": "2026-02-24"
+      "actual": "2026-02-24",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000049",
@@ -37634,7 +40981,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-02-26",
-      "actual": "2026-02-26"
+      "actual": "2026-02-26",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000049",
@@ -37643,7 +40993,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-04-14",
-      "actual": "2026-04-14"
+      "actual": "2026-04-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000050",
@@ -37652,7 +41005,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-02-28",
-      "actual": "2026-02-28"
+      "actual": "2026-02-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000050",
@@ -37661,7 +41017,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-28",
-      "actual": "2026-07-28"
+      "actual": "2026-07-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000051",
@@ -37670,7 +41029,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-02-28",
-      "actual": "2026-02-28"
+      "actual": "2026-02-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000051",
@@ -37679,7 +41041,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-13",
-      "actual": "2026-07-13"
+      "actual": "2026-07-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000054",
@@ -37688,7 +41053,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-03-03",
-      "actual": "2026-03-03"
+      "actual": "2026-03-03",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000054",
@@ -37697,7 +41065,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-03-31",
-      "actual": "2026-03-31"
+      "actual": "2026-03-31",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000053",
@@ -37706,7 +41077,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-03",
-      "actual": "2026-03-03"
+      "actual": "2026-03-03",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000053",
@@ -37715,7 +41089,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-09-14",
-      "actual": "2026-09-14"
+      "actual": "2026-09-14",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000055",
@@ -37724,7 +41101,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-03",
-      "actual": "2026-03-03"
+      "actual": "2026-03-03",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000056",
@@ -37733,7 +41113,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-03",
-      "actual": "2026-03-03"
+      "actual": "2026-03-03",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000057",
@@ -37742,7 +41125,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-05",
-      "actual": "2026-03-05"
+      "actual": "2026-03-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000057",
@@ -37751,7 +41137,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-06",
-      "actual": "2026-05-06"
+      "actual": "2026-05-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000060",
@@ -37760,7 +41149,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-03-06",
-      "actual": "2026-03-06"
+      "actual": "2026-03-06",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000060",
@@ -37769,7 +41161,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-05-06",
-      "actual": "2026-05-06"
+      "actual": "2026-05-06",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000146",
@@ -37778,7 +41173,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000146",
@@ -37787,7 +41185,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-06-17",
-      "actual": "2026-06-17"
+      "actual": "2026-06-17",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000064",
@@ -37796,7 +41197,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-10",
-      "actual": "2026-03-10"
+      "actual": "2026-03-10",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "9009126000064",
@@ -37805,7 +41209,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-22",
-      "actual": "2026-04-22"
+      "actual": "2026-04-22",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "9009126000059",
@@ -37814,7 +41221,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-03-05",
-      "actual": "2026-03-05"
+      "actual": "2026-03-05",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000059",
@@ -37823,7 +41233,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-05-25",
-      "actual": "2026-05-25"
+      "actual": "2026-05-25",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000063",
@@ -37832,7 +41245,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-03-08",
-      "actual": "2026-03-08"
+      "actual": "2026-03-08",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000063",
@@ -37841,7 +41257,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-04-17",
-      "actual": "2026-04-17"
+      "actual": "2026-04-17",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000069",
@@ -37850,7 +41269,10 @@ var BOARD_DATA = {
       "cos": "成无忧",
       "type": "apheresis",
       "plan": "2026-03-13",
-      "actual": "2026-03-13"
+      "actual": "2026-03-13",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "9009126000068",
@@ -37859,7 +41281,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-11",
-      "actual": "2026-03-11"
+      "actual": "2026-03-11",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000068",
@@ -37868,7 +41293,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-04-14",
-      "actual": "2026-04-14"
+      "actual": "2026-04-14",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000067",
@@ -37877,7 +41305,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-11",
-      "actual": "2026-03-11"
+      "actual": "2026-03-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000067",
@@ -37886,7 +41317,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-01",
-      "actual": "2026-09-01"
+      "actual": "2026-09-01",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000070",
@@ -37895,7 +41329,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-03-13",
-      "actual": "2026-03-13"
+      "actual": "2026-03-13",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000070",
@@ -37904,7 +41341,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-04-13",
-      "actual": "2026-04-13"
+      "actual": "2026-04-13",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000071",
@@ -37913,7 +41353,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-13",
-      "actual": "2026-03-13"
+      "actual": "2026-03-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000071",
@@ -37922,7 +41365,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-06",
-      "actual": "2026-07-06"
+      "actual": "2026-07-06",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000072",
@@ -37931,7 +41377,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-13",
-      "actual": "2026-03-13"
+      "actual": "2026-03-13",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000072",
@@ -37940,7 +41389,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-04-20",
-      "actual": "2026-04-20"
+      "actual": "2026-04-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000078",
@@ -37949,7 +41401,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-17",
-      "actual": "2026-03-17"
+      "actual": "2026-03-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000078",
@@ -37958,7 +41413,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000074",
@@ -37967,7 +41425,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-17",
-      "actual": "2026-03-17"
+      "actual": "2026-03-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000074",
@@ -37976,7 +41437,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-06",
-      "actual": "2026-05-06"
+      "actual": "2026-05-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000075",
@@ -37985,7 +41449,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-03-16",
-      "actual": "2026-03-16"
+      "actual": "2026-03-16",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000075",
@@ -37994,7 +41461,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-05-25",
-      "actual": "2026-05-25"
+      "actual": "2026-05-25",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000077",
@@ -38003,7 +41473,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-16",
-      "actual": "2026-03-16"
+      "actual": "2026-03-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000077",
@@ -38012,7 +41485,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-04-18",
-      "actual": "2026-04-18"
+      "actual": "2026-04-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000083",
@@ -38021,7 +41497,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-30",
-      "actual": "2026-03-30"
+      "actual": "2026-03-30",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000083",
@@ -38030,7 +41509,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-25",
-      "actual": "2026-06-25"
+      "actual": "2026-06-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000080",
@@ -38039,7 +41521,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-19",
-      "actual": "2026-03-19"
+      "actual": "2026-03-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000080",
@@ -38048,7 +41533,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000079",
@@ -38057,7 +41545,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-18",
-      "actual": "2026-03-18"
+      "actual": "2026-03-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000079",
@@ -38066,7 +41557,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-14",
-      "actual": "2026-05-14"
+      "actual": "2026-05-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000081",
@@ -38075,7 +41569,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-03-27",
-      "actual": "2026-03-27"
+      "actual": "2026-03-27",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000082",
@@ -38084,7 +41581,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-03-20",
-      "actual": "2026-03-20"
+      "actual": "2026-03-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000082",
@@ -38093,7 +41593,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-05-25",
-      "actual": "2026-05-25"
+      "actual": "2026-05-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000084",
@@ -38102,7 +41605,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-24",
-      "actual": "2026-03-24"
+      "actual": "2026-03-24",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000084",
@@ -38111,7 +41617,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-04-25",
-      "actual": "2026-04-25"
+      "actual": "2026-04-25",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000085",
@@ -38120,7 +41629,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-26",
-      "actual": "2026-03-26"
+      "actual": "2026-03-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000085",
@@ -38129,7 +41641,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-11",
-      "actual": "2026-05-11"
+      "actual": "2026-05-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000086",
@@ -38138,7 +41653,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-03-25",
-      "actual": "2026-03-25"
+      "actual": "2026-03-25",
+      "prov": "浙江省",
+      "city": "台州市",
+      "area": "South"
     },
     {
       "code": "9009126000086",
@@ -38147,7 +41665,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-06-25",
-      "actual": "2026-06-25"
+      "actual": "2026-06-25",
+      "prov": "浙江省",
+      "city": "台州市",
+      "area": "South"
     },
     {
       "code": "9009126000088",
@@ -38156,7 +41677,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-03-27",
-      "actual": "2026-03-27"
+      "actual": "2026-03-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000088",
@@ -38165,7 +41689,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000087",
@@ -38174,7 +41701,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-03-26",
-      "actual": "2026-03-26"
+      "actual": "2026-03-26",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000087",
@@ -38183,7 +41713,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-05-21",
-      "actual": "2026-05-21"
+      "actual": "2026-05-21",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000089",
@@ -38192,7 +41725,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-02",
-      "actual": "2026-04-02"
+      "actual": "2026-04-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000089",
@@ -38201,7 +41737,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-08",
-      "actual": "2026-05-08"
+      "actual": "2026-05-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000090",
@@ -38210,7 +41749,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-03-30",
-      "actual": "2026-03-30"
+      "actual": "2026-03-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000090",
@@ -38219,7 +41761,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-09",
-      "actual": "2026-07-09"
+      "actual": "2026-07-09",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000092",
@@ -38228,7 +41773,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-03-31",
-      "actual": "2026-03-31"
+      "actual": "2026-03-31",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "9009126000092",
@@ -38237,7 +41785,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-05-08",
-      "actual": "2026-05-08"
+      "actual": "2026-05-08",
+      "prov": "安徽省",
+      "city": "合肥市",
+      "area": "North"
     },
     {
       "code": "9009126000093",
@@ -38246,7 +41797,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-01",
-      "actual": "2026-04-01"
+      "actual": "2026-04-01",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000093",
@@ -38255,7 +41809,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-08-06",
-      "actual": "2026-08-06"
+      "actual": "2026-08-06",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000095",
@@ -38264,7 +41821,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-02",
-      "actual": "2026-04-02"
+      "actual": "2026-04-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000095",
@@ -38273,7 +41833,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-12",
-      "actual": "2026-05-12"
+      "actual": "2026-05-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000097",
@@ -38282,7 +41845,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-04-06",
-      "actual": "2026-04-06"
+      "actual": "2026-04-06",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000097",
@@ -38291,7 +41857,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-05-11",
-      "actual": "2026-05-11"
+      "actual": "2026-05-11",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000096",
@@ -38300,7 +41869,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-02",
-      "actual": "2026-04-02"
+      "actual": "2026-04-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000096",
@@ -38309,7 +41881,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-20",
-      "actual": "2026-08-20"
+      "actual": "2026-08-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000099",
@@ -38318,7 +41893,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-03",
-      "actual": "2026-04-03"
+      "actual": "2026-04-03",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000099",
@@ -38327,7 +41905,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-06-17",
-      "actual": "2026-06-17"
+      "actual": "2026-06-17",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000313",
@@ -38336,7 +41917,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-10-11",
-      "actual": "2026-10-11"
+      "actual": "2026-10-11",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000101",
@@ -38345,7 +41929,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-04",
-      "actual": "2026-04-04"
+      "actual": "2026-04-04",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000101",
@@ -38354,7 +41941,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-05-21",
-      "actual": "2026-05-21"
+      "actual": "2026-05-21",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000104",
@@ -38363,7 +41953,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-08",
-      "actual": "2026-04-08"
+      "actual": "2026-04-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000104",
@@ -38372,7 +41965,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-03",
-      "actual": "2026-07-03"
+      "actual": "2026-07-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000102",
@@ -38381,7 +41977,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-04-08",
-      "actual": "2026-04-08"
+      "actual": "2026-04-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000102",
@@ -38390,7 +41989,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-05-19",
-      "actual": "2026-05-19"
+      "actual": "2026-05-19",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000103",
@@ -38399,7 +42001,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-08",
-      "actual": "2026-04-08"
+      "actual": "2026-04-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000103",
@@ -38408,7 +42013,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000106",
@@ -38417,7 +42025,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-09",
-      "actual": "2026-04-09"
+      "actual": "2026-04-09",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000105",
@@ -38426,7 +42037,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-09",
-      "actual": "2026-04-09"
+      "actual": "2026-04-09",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000105",
@@ -38435,7 +42049,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-03",
-      "actual": "2026-08-03"
+      "actual": "2026-08-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000109",
@@ -38444,7 +42061,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-13",
-      "actual": "2026-04-13"
+      "actual": "2026-04-13",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000109",
@@ -38453,7 +42073,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-05-07",
-      "actual": "2026-05-07"
+      "actual": "2026-05-07",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000108",
@@ -38462,7 +42085,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-13",
-      "actual": "2026-04-13"
+      "actual": "2026-04-13",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000108",
@@ -38471,7 +42097,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-02",
-      "actual": "2026-06-02"
+      "actual": "2026-06-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000110",
@@ -38480,7 +42109,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-04-15",
-      "actual": "2026-04-15"
+      "actual": "2026-04-15",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000111",
@@ -38489,7 +42121,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-15",
-      "actual": "2026-04-15"
+      "actual": "2026-04-15",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000111",
@@ -38498,7 +42133,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-09-19",
-      "actual": "2026-09-19"
+      "actual": "2026-09-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000113",
@@ -38507,7 +42145,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-04-18",
-      "actual": "2026-04-18"
+      "actual": "2026-04-18",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000113",
@@ -38516,7 +42157,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-06-08",
-      "actual": "2026-06-08"
+      "actual": "2026-06-08",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000112",
@@ -38525,7 +42169,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-22",
-      "actual": "2026-04-22"
+      "actual": "2026-04-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000112",
@@ -38534,7 +42181,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-09-23",
-      "actual": "2026-09-23"
+      "actual": "2026-09-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000115",
@@ -38543,7 +42193,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-21",
-      "actual": "2026-04-21"
+      "actual": "2026-04-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000115",
@@ -38552,7 +42205,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-20",
-      "actual": "2026-07-20"
+      "actual": "2026-07-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000118",
@@ -38561,7 +42217,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-22",
-      "actual": "2026-04-22"
+      "actual": "2026-04-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000118",
@@ -38570,7 +42229,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-13",
-      "actual": "2026-06-13"
+      "actual": "2026-06-13",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000120",
@@ -38579,7 +42241,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-22",
-      "actual": "2026-04-22"
+      "actual": "2026-04-22",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000120",
@@ -38588,7 +42253,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-07-13",
-      "actual": "2026-07-13"
+      "actual": "2026-07-13",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000121",
@@ -38597,7 +42265,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-22",
-      "actual": "2026-04-22"
+      "actual": "2026-04-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000122",
@@ -38606,7 +42277,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-04-24",
-      "actual": "2026-04-24"
+      "actual": "2026-04-24",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000122",
@@ -38615,7 +42289,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-07-06",
-      "actual": "2026-07-06"
+      "actual": "2026-07-06",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000123",
@@ -38624,7 +42301,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-23",
-      "actual": "2026-04-23"
+      "actual": "2026-04-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000123",
@@ -38633,7 +42313,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-06-10",
-      "actual": "2026-06-10"
+      "actual": "2026-06-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000124",
@@ -38642,7 +42325,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-04-24",
-      "actual": "2026-04-24"
+      "actual": "2026-04-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000124",
@@ -38651,7 +42337,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-07-21",
-      "actual": "2026-07-21"
+      "actual": "2026-07-21",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000125",
@@ -38660,7 +42349,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-04-23",
-      "actual": "2026-04-23"
+      "actual": "2026-04-23",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000127",
@@ -38669,7 +42361,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-04-24",
-      "actual": "2026-04-24"
+      "actual": "2026-04-24",
+      "prov": "浙江省",
+      "city": "台州市",
+      "area": "South"
     },
     {
       "code": "9009126000134",
@@ -38678,7 +42373,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-04-29",
-      "actual": "2026-04-29"
+      "actual": "2026-04-29",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000134",
@@ -38687,7 +42385,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-05-30",
-      "actual": "2026-05-30"
+      "actual": "2026-05-30",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000132",
@@ -38696,7 +42397,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-29",
-      "actual": "2026-04-29"
+      "actual": "2026-04-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000132",
@@ -38705,7 +42409,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-13",
-      "actual": "2026-07-13"
+      "actual": "2026-07-13",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000128",
@@ -38714,7 +42421,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-27",
-      "actual": "2026-04-27"
+      "actual": "2026-04-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000128",
@@ -38723,7 +42433,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-05",
-      "actual": "2026-06-05"
+      "actual": "2026-06-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000129",
@@ -38732,7 +42445,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-28",
-      "actual": "2026-04-28"
+      "actual": "2026-04-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000129",
@@ -38741,7 +42457,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-06",
-      "actual": "2026-06-06"
+      "actual": "2026-06-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000130",
@@ -38750,7 +42469,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-04-28",
-      "actual": "2026-04-28"
+      "actual": "2026-04-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000130",
@@ -38759,7 +42481,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-30",
-      "actual": "2026-09-30"
+      "actual": "2026-09-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000131",
@@ -38768,7 +42493,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-28",
-      "actual": "2026-04-28"
+      "actual": "2026-04-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000131",
@@ -38777,7 +42505,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-03",
-      "actual": "2026-06-03"
+      "actual": "2026-06-03",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000133",
@@ -38786,7 +42517,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-04-29",
-      "actual": "2026-04-29"
+      "actual": "2026-04-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000133",
@@ -38795,7 +42529,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-06",
-      "actual": "2026-07-06"
+      "actual": "2026-07-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000136",
@@ -38804,7 +42541,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-04-30",
-      "actual": "2026-04-30"
+      "actual": "2026-04-30",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "9009126000136",
@@ -38813,7 +42553,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-18",
-      "actual": "2026-06-18"
+      "actual": "2026-06-18",
+      "prov": "广西壮族自治区",
+      "city": "南宁市",
+      "area": "South"
     },
     {
       "code": "9009126000138",
@@ -38822,7 +42565,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-05-08",
-      "actual": "2026-05-08"
+      "actual": "2026-05-08",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000138",
@@ -38831,7 +42577,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-29",
-      "actual": "2026-06-29"
+      "actual": "2026-06-29",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000137",
@@ -38840,7 +42589,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-05-06",
-      "actual": "2026-05-06"
+      "actual": "2026-05-06",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000137",
@@ -38849,7 +42601,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-07-30",
-      "actual": "2026-07-30"
+      "actual": "2026-07-30",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000140",
@@ -38858,7 +42613,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-05-11",
-      "actual": "2026-05-11"
+      "actual": "2026-05-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000140",
@@ -38867,7 +42625,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-06-22",
-      "actual": "2026-06-22"
+      "actual": "2026-06-22",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000145",
@@ -38876,7 +42637,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000145",
@@ -38885,7 +42649,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-06-30",
-      "actual": "2026-06-30"
+      "actual": "2026-06-30",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000144",
@@ -38894,7 +42661,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000144",
@@ -38903,7 +42673,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-07-27",
-      "actual": "2026-07-27"
+      "actual": "2026-07-27",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000141",
@@ -38912,7 +42685,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-05-14",
-      "actual": "2026-05-14"
+      "actual": "2026-05-14",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000141",
@@ -38921,7 +42697,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-07-06",
-      "actual": "2026-07-06"
+      "actual": "2026-07-06",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000142",
@@ -38930,7 +42709,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-14",
-      "actual": "2026-05-14"
+      "actual": "2026-05-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000142",
@@ -38939,7 +42721,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-10",
-      "actual": "2026-08-10"
+      "actual": "2026-08-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000143",
@@ -38948,7 +42733,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-05-14",
-      "actual": "2026-05-14"
+      "actual": "2026-05-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000143",
@@ -38957,7 +42745,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-08-26",
-      "actual": "2026-08-26"
+      "actual": "2026-08-26",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000147",
@@ -38966,7 +42757,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000147",
@@ -38975,7 +42769,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-06-29",
-      "actual": "2026-06-29"
+      "actual": "2026-06-29",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000149",
@@ -38984,7 +42781,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000149",
@@ -38993,7 +42793,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-24",
-      "actual": "2026-08-24"
+      "actual": "2026-08-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000151",
@@ -39002,7 +42805,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000151",
@@ -39011,7 +42817,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-31",
-      "actual": "2026-08-31"
+      "actual": "2026-08-31",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000150",
@@ -39020,7 +42829,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-05-15",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000150",
@@ -39029,7 +42841,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-07-01",
-      "actual": "2026-07-01"
+      "actual": "2026-07-01",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000152",
@@ -39038,7 +42853,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-18",
-      "actual": "2026-05-18"
+      "actual": "2026-05-18",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000153",
@@ -39047,7 +42865,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-20",
-      "actual": "2026-05-20"
+      "actual": "2026-05-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000153",
@@ -39056,7 +42877,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-08-03",
-      "actual": "2026-08-03"
+      "actual": "2026-08-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000154",
@@ -39065,7 +42889,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-05-20",
-      "actual": "2026-05-20"
+      "actual": "2026-05-20",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000154",
@@ -39074,7 +42901,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-06-17",
-      "actual": "2026-06-17"
+      "actual": "2026-06-17",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000155",
@@ -39083,7 +42913,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-20",
-      "actual": "2026-05-20"
+      "actual": "2026-05-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000155",
@@ -39092,7 +42925,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-06-22",
-      "actual": "2026-06-22"
+      "actual": "2026-06-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000156",
@@ -39101,7 +42937,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-22",
-      "actual": ""
+      "actual": "",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000157",
@@ -39110,7 +42949,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-05-25",
-      "actual": "2026-05-25"
+      "actual": "2026-05-25",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000158",
@@ -39119,7 +42961,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-27",
-      "actual": "2026-05-27"
+      "actual": "2026-05-27",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "9009126000158",
@@ -39128,7 +42973,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-03",
-      "actual": "2026-09-03"
+      "actual": "2026-09-03",
+      "prov": "辽宁省",
+      "city": "大连市",
+      "area": "North"
     },
     {
       "code": "9009126000159",
@@ -39137,7 +42985,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-27",
-      "actual": "2026-05-27"
+      "actual": "2026-05-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000159",
@@ -39146,7 +42997,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-21",
-      "actual": "2026-10-21"
+      "actual": "2026-10-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000160",
@@ -39155,7 +43009,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-05-27",
-      "actual": "2026-05-27"
+      "actual": "2026-05-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000161",
@@ -39164,7 +43021,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-28",
-      "actual": "2026-05-28"
+      "actual": "2026-05-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000161",
@@ -39173,7 +43033,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-29",
-      "actual": "2026-07-29"
+      "actual": "2026-07-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000162",
@@ -39182,7 +43045,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-05-29",
-      "actual": "2026-05-29"
+      "actual": "2026-05-29",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000163",
@@ -39191,7 +43057,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-05-29",
-      "actual": "2026-05-29"
+      "actual": "2026-05-29",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000163",
@@ -39200,7 +43069,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-07-06",
-      "actual": "2026-07-06"
+      "actual": "2026-07-06",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000164",
@@ -39209,7 +43081,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-05-29",
-      "actual": "2026-05-29"
+      "actual": "2026-05-29",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000165",
@@ -39218,7 +43093,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-06-01",
-      "actual": "2026-06-01"
+      "actual": "2026-06-01",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000165",
@@ -39227,7 +43105,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-25",
-      "actual": "2026-08-25"
+      "actual": "2026-08-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000166",
@@ -39236,7 +43117,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-01",
-      "actual": "2026-06-01"
+      "actual": "2026-06-01",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "9009126000166",
@@ -39245,7 +43129,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-07-08",
-      "actual": "2026-07-08"
+      "actual": "2026-07-08",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "9009126000167",
@@ -39254,7 +43141,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-06-04",
-      "actual": "2026-06-04"
+      "actual": "2026-06-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000167",
@@ -39263,7 +43153,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-10",
-      "actual": "2026-08-10"
+      "actual": "2026-08-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000168",
@@ -39272,7 +43165,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-05",
-      "actual": "2026-06-05"
+      "actual": "2026-06-05",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000169",
@@ -39281,7 +43177,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-09",
-      "actual": "2026-06-09"
+      "actual": "2026-06-09",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000169",
@@ -39290,7 +43189,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-08-06",
-      "actual": "2026-08-06"
+      "actual": "2026-08-06",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000171",
@@ -39299,7 +43201,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-08",
-      "actual": "2026-06-08"
+      "actual": "2026-06-08",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000172",
@@ -39308,7 +43213,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-06-09",
-      "actual": "2026-06-09"
+      "actual": "2026-06-09",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009126000194",
@@ -39317,7 +43225,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-07",
-      "actual": "2026-07-07"
+      "actual": "2026-07-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000174",
@@ -39326,7 +43237,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-11",
-      "actual": "2026-06-11"
+      "actual": "2026-06-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000174",
@@ -39335,7 +43249,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-07-22",
-      "actual": "2026-07-22"
+      "actual": "2026-07-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000175",
@@ -39344,7 +43261,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-10",
-      "actual": "2026-06-10"
+      "actual": "2026-06-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000176",
@@ -39353,7 +43273,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-11",
-      "actual": "2026-06-11"
+      "actual": "2026-06-11",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000177",
@@ -39362,7 +43285,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-12",
-      "actual": "2026-06-12"
+      "actual": "2026-06-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000177",
@@ -39371,7 +43297,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-07",
-      "actual": "2026-09-07"
+      "actual": "2026-09-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000178",
@@ -39380,7 +43309,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-06-17",
-      "actual": "2026-06-17"
+      "actual": "2026-06-17",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "9009126000178",
@@ -39389,7 +43321,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-07-15",
-      "actual": "2026-07-15"
+      "actual": "2026-07-15",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "9009126000192",
@@ -39398,7 +43333,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-08",
-      "actual": "2026-07-08"
+      "actual": "2026-07-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000192",
@@ -39407,7 +43345,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-05",
-      "actual": "2026-08-05"
+      "actual": "2026-08-05",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000179",
@@ -39416,7 +43357,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-06-23",
-      "actual": "2026-06-23"
+      "actual": "2026-06-23",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000179",
@@ -39425,7 +43369,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-12",
-      "actual": "2026-08-12"
+      "actual": "2026-08-12",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000180",
@@ -39434,7 +43381,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-06-24",
-      "actual": "2026-06-24"
+      "actual": "2026-06-24",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000180",
@@ -39443,7 +43393,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-09-28",
-      "actual": "2026-09-28"
+      "actual": "2026-09-28",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000181",
@@ -39452,7 +43405,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-06-25",
-      "actual": "2026-06-25"
+      "actual": "2026-06-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000181",
@@ -39461,7 +43417,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-01",
-      "actual": ""
+      "actual": "",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000184",
@@ -39470,7 +43429,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-06-30",
-      "actual": "2026-06-30"
+      "actual": "2026-06-30",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000186",
@@ -39479,7 +43441,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-03",
-      "actual": "2026-07-03"
+      "actual": "2026-07-03",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000186",
@@ -39488,7 +43453,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-10",
-      "actual": "2026-08-10"
+      "actual": "2026-08-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000183",
@@ -39497,7 +43465,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-06-26",
-      "actual": "2026-06-26"
+      "actual": "2026-06-26",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000183",
@@ -39506,7 +43477,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-07-27",
-      "actual": "2026-07-27"
+      "actual": "2026-07-27",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000185",
@@ -39515,7 +43489,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-07-02",
-      "actual": "2026-07-02"
+      "actual": "2026-07-02",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000185",
@@ -39524,7 +43501,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-10-31",
-      "actual": "2026-10-31"
+      "actual": "2026-10-31",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000187",
@@ -39533,7 +43513,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-07-01",
-      "actual": "2026-07-01"
+      "actual": "2026-07-01",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009126000187",
@@ -39542,7 +43525,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-08-05",
-      "actual": "2026-08-05"
+      "actual": "2026-08-05",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009126000188",
@@ -39551,7 +43537,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-07-02",
-      "actual": "2026-07-02"
+      "actual": "2026-07-02",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000188",
@@ -39560,7 +43549,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-10-22",
-      "actual": "2026-10-22"
+      "actual": "2026-10-22",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000189",
@@ -39569,7 +43561,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-02",
-      "actual": "2026-07-02"
+      "actual": "2026-07-02",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000190",
@@ -39578,7 +43573,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-02",
-      "actual": "2026-07-02"
+      "actual": "2026-07-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000190",
@@ -39587,7 +43585,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-25",
-      "actual": "2026-08-25"
+      "actual": "2026-08-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000193",
@@ -39596,7 +43597,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-07",
-      "actual": "2026-07-07"
+      "actual": "2026-07-07",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000193",
@@ -39605,7 +43609,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-19",
-      "actual": "2026-08-19"
+      "actual": "2026-08-19",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000195",
@@ -39614,7 +43621,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-08",
-      "actual": "2026-07-08"
+      "actual": "2026-07-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000195",
@@ -39623,7 +43633,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-16",
-      "actual": "2026-09-16"
+      "actual": "2026-09-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000196",
@@ -39632,7 +43645,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-08",
-      "actual": "2026-07-08"
+      "actual": "2026-07-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000196",
@@ -39641,7 +43657,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-08-10",
-      "actual": "2026-08-10"
+      "actual": "2026-08-10",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000200",
@@ -39650,7 +43669,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-07-09",
-      "actual": "2026-07-09"
+      "actual": "2026-07-09",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000199",
@@ -39659,7 +43681,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-07-09",
-      "actual": "2026-07-09"
+      "actual": "2026-07-09",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000198",
@@ -39668,7 +43693,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-09",
-      "actual": "2026-07-09"
+      "actual": "2026-07-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000198",
@@ -39677,7 +43705,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-09",
-      "actual": "2026-10-09"
+      "actual": "2026-10-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000201",
@@ -39686,7 +43717,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-10",
-      "actual": "2026-07-10"
+      "actual": "2026-07-10",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000238",
@@ -39695,7 +43729,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-19",
-      "actual": "2026-08-19"
+      "actual": "2026-08-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000238",
@@ -39704,7 +43741,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-09-16",
-      "actual": "2026-09-16"
+      "actual": "2026-09-16",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000204",
@@ -39713,7 +43753,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-14",
-      "actual": "2026-07-14"
+      "actual": "2026-07-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000204",
@@ -39722,7 +43765,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-10-14",
-      "actual": "2026-10-14"
+      "actual": "2026-10-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000203",
@@ -39731,7 +43777,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-14",
-      "actual": "2026-07-14"
+      "actual": "2026-07-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000207",
@@ -39740,7 +43789,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-17",
-      "actual": "2026-07-17"
+      "actual": "2026-07-17",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000207",
@@ -39749,7 +43801,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-08-31",
-      "actual": "2026-08-31"
+      "actual": "2026-08-31",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000205",
@@ -39758,7 +43813,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-16",
-      "actual": "2026-07-16"
+      "actual": "2026-07-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000206",
@@ -39767,7 +43825,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-16",
-      "actual": "2026-07-16"
+      "actual": "2026-07-16",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000206",
@@ -39776,7 +43837,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-09-22",
-      "actual": "2026-09-22"
+      "actual": "2026-09-22",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000217",
@@ -39785,7 +43849,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-24",
-      "actual": "2026-07-24"
+      "actual": "2026-07-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000217",
@@ -39794,7 +43861,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-09-11",
-      "actual": "2026-09-11"
+      "actual": "2026-09-11",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000211",
@@ -39803,7 +43873,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-23",
-      "actual": "2026-07-23"
+      "actual": "2026-07-23",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000211",
@@ -39812,7 +43885,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000209",
@@ -39821,7 +43897,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-07-18",
-      "actual": "2026-07-18"
+      "actual": "2026-07-18",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000213",
@@ -39830,7 +43909,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-07-23",
-      "actual": "2026-07-23"
+      "actual": "2026-07-23",
+      "prov": "四川省",
+      "city": "南充市",
+      "area": "South"
     },
     {
       "code": "9009126000212",
@@ -39839,7 +43921,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-22",
-      "actual": "2026-07-22"
+      "actual": "2026-07-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000212",
@@ -39848,7 +43933,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-26",
-      "actual": "2026-10-26"
+      "actual": "2026-10-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000214",
@@ -39857,7 +43945,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-22",
-      "actual": "2026-07-22"
+      "actual": "2026-07-22",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000215",
@@ -39866,7 +43957,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-07-29",
-      "actual": "2026-07-29"
+      "actual": "2026-07-29",
+      "prov": "浙江省",
+      "city": "绍兴市",
+      "area": "South"
     },
     {
       "code": "9009126000215",
@@ -39875,7 +43969,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "reinfusion",
       "plan": "2026-09-07",
-      "actual": "2026-09-07"
+      "actual": "2026-09-07",
+      "prov": "浙江省",
+      "city": "绍兴市",
+      "area": "South"
     },
     {
       "code": "9009126000218",
@@ -39884,7 +43981,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-07-28",
-      "actual": "2026-07-28"
+      "actual": "2026-07-28",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000218",
@@ -39893,7 +43993,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-11-04",
-      "actual": ""
+      "actual": "",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000216",
@@ -39902,7 +44005,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-07-23",
-      "actual": "2026-07-23"
+      "actual": "2026-07-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000227",
@@ -39911,7 +44017,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-14",
-      "actual": "2026-08-14"
+      "actual": "2026-08-14",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000219",
@@ -39920,7 +44029,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-07-29",
-      "actual": "2026-07-29"
+      "actual": "2026-07-29",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000219",
@@ -39929,7 +44041,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "reinfusion",
       "plan": "2026-09-10",
-      "actual": "2026-09-10"
+      "actual": "2026-09-10",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000220",
@@ -39938,7 +44053,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-30",
-      "actual": "2026-07-30"
+      "actual": "2026-07-30",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000221",
@@ -39947,7 +44065,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-07-31",
-      "actual": "2026-07-31"
+      "actual": "2026-07-31",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000222",
@@ -39956,7 +44077,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-07-31",
-      "actual": "2026-07-31"
+      "actual": "2026-07-31",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000223",
@@ -39965,7 +44089,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-04",
-      "actual": "2026-08-04"
+      "actual": "2026-08-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000223",
@@ -39974,7 +44101,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-11-07",
-      "actual": ""
+      "actual": "",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000224",
@@ -39983,7 +44113,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-07",
-      "actual": "2026-08-07"
+      "actual": "2026-08-07",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000224",
@@ -39992,7 +44125,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-09-24",
-      "actual": "2026-09-24"
+      "actual": "2026-09-24",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000225",
@@ -40001,7 +44137,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-08-06",
-      "actual": "2026-08-06"
+      "actual": "2026-08-06",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000225",
@@ -40010,7 +44149,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-10-15",
-      "actual": "2026-10-15"
+      "actual": "2026-10-15",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000226",
@@ -40019,7 +44161,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-08-07",
-      "actual": "2026-08-07"
+      "actual": "2026-08-07",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000228",
@@ -40028,7 +44173,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-10",
-      "actual": "2026-08-10"
+      "actual": "2026-08-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000228",
@@ -40037,7 +44185,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000231",
@@ -40046,7 +44197,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-12",
-      "actual": "2026-08-12"
+      "actual": "2026-08-12",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000230",
@@ -40055,7 +44209,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-08-13",
-      "actual": "2026-08-13"
+      "actual": "2026-08-13",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000229",
@@ -40064,7 +44221,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-12",
-      "actual": "2026-08-12"
+      "actual": "2026-08-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000232",
@@ -40073,7 +44233,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-08-12",
-      "actual": "2026-08-12"
+      "actual": "2026-08-12",
+      "prov": "河南省",
+      "city": "郑州市",
+      "area": "North"
     },
     {
       "code": "9009126000232",
@@ -40082,7 +44245,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-09-17",
-      "actual": "2026-09-17"
+      "actual": "2026-09-17",
+      "prov": "河南省",
+      "city": "郑州市",
+      "area": "North"
     },
     {
       "code": "9009126000233",
@@ -40091,7 +44257,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-14",
-      "actual": "2026-08-14"
+      "actual": "2026-08-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000233",
@@ -40100,7 +44269,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-04",
-      "actual": "2026-10-04"
+      "actual": "2026-10-04",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000234",
@@ -40109,7 +44281,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-14",
-      "actual": "2026-08-14"
+      "actual": "2026-08-14",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000235",
@@ -40118,7 +44293,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-14",
-      "actual": "2026-08-14"
+      "actual": "2026-08-14",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000237",
@@ -40127,7 +44305,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-19",
-      "actual": "2026-08-19"
+      "actual": "2026-08-19",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000239",
@@ -40136,7 +44317,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "apheresis",
       "plan": "2026-08-20",
-      "actual": "2026-08-20"
+      "actual": "2026-08-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000239",
@@ -40145,7 +44329,10 @@ var BOARD_DATA = {
       "cos": "林雅珺",
       "type": "reinfusion",
       "plan": "2026-09-28",
-      "actual": "2026-09-28"
+      "actual": "2026-09-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000241",
@@ -40154,7 +44341,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-20",
-      "actual": "2026-08-20"
+      "actual": "2026-08-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000240",
@@ -40163,7 +44353,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-21",
-      "actual": "2026-08-21"
+      "actual": "2026-08-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000242",
@@ -40172,7 +44365,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-08-20",
-      "actual": "2026-08-20"
+      "actual": "2026-08-20",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000242",
@@ -40181,7 +44377,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "reinfusion",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000243",
@@ -40190,7 +44389,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-08-21",
-      "actual": "2026-08-21"
+      "actual": "2026-08-21",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000243",
@@ -40199,7 +44401,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "reinfusion",
       "plan": "2026-09-21",
-      "actual": "2026-09-21"
+      "actual": "2026-09-21",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000255",
@@ -40208,7 +44413,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-28",
-      "actual": "2026-08-28"
+      "actual": "2026-08-28",
+      "prov": "河北省",
+      "city": "石家庄市",
+      "area": "North"
     },
     {
       "code": "9009126000247",
@@ -40217,7 +44425,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-27",
-      "actual": "2026-08-27"
+      "actual": "2026-08-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000247",
@@ -40226,7 +44437,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-09-27",
-      "actual": "2026-09-27"
+      "actual": "2026-09-27",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000244",
@@ -40235,7 +44449,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-31",
-      "actual": "2026-08-31"
+      "actual": "2026-08-31",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000244",
@@ -40244,7 +44461,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-22",
-      "actual": "2026-10-22"
+      "actual": "2026-10-22",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000246",
@@ -40253,7 +44473,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-26",
-      "actual": "2026-08-26"
+      "actual": "2026-08-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000246",
@@ -40262,7 +44485,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-09-28",
-      "actual": "2026-09-28"
+      "actual": "2026-09-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000248",
@@ -40271,7 +44497,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-25",
-      "actual": "2026-08-25"
+      "actual": "2026-08-25",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000245",
@@ -40280,7 +44509,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-24",
-      "actual": "2026-08-24"
+      "actual": "2026-08-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000245",
@@ -40289,7 +44521,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-11-05",
-      "actual": ""
+      "actual": "",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000249",
@@ -40298,7 +44533,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-25",
-      "actual": "2026-08-25"
+      "actual": "2026-08-25",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000249",
@@ -40307,7 +44545,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-12",
-      "actual": "2026-10-12"
+      "actual": "2026-10-12",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000251",
@@ -40316,7 +44557,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-26",
-      "actual": "2026-08-26"
+      "actual": "2026-08-26",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000251",
@@ -40325,7 +44569,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-22",
-      "actual": "2026-10-22"
+      "actual": "2026-10-22",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000252",
@@ -40334,7 +44581,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-08-27",
-      "actual": "2026-08-27"
+      "actual": "2026-08-27",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000252",
@@ -40343,7 +44593,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-23",
-      "actual": "2026-10-23"
+      "actual": "2026-10-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000253",
@@ -40352,7 +44605,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-08-28",
-      "actual": "2026-08-28"
+      "actual": "2026-08-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000256",
@@ -40361,7 +44617,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-08-28",
-      "actual": "2026-08-28"
+      "actual": "2026-08-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000256",
@@ -40370,7 +44629,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-14",
-      "actual": "2026-10-14"
+      "actual": "2026-10-14",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000258",
@@ -40379,7 +44641,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-09-01",
-      "actual": "2026-09-01"
+      "actual": "2026-09-01",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000257",
@@ -40388,7 +44653,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-08-28",
-      "actual": "2026-08-28"
+      "actual": "2026-08-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000264",
@@ -40397,7 +44665,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-08",
-      "actual": "2026-09-08"
+      "actual": "2026-09-08",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000264",
@@ -40406,7 +44677,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-10-29",
-      "actual": "2026-10-29"
+      "actual": "2026-10-29",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000260",
@@ -40415,7 +44689,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-03",
-      "actual": "2026-09-03"
+      "actual": "2026-09-03",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000260",
@@ -40424,7 +44701,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-28",
-      "actual": "2026-10-28"
+      "actual": "2026-10-28",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000259",
@@ -40433,7 +44713,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-09-02",
-      "actual": "2026-09-02"
+      "actual": "2026-09-02",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000261",
@@ -40442,7 +44725,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-04",
-      "actual": "2026-09-04"
+      "actual": "2026-09-04",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000261",
@@ -40451,7 +44737,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-19",
-      "actual": "2026-10-19"
+      "actual": "2026-10-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000262",
@@ -40460,7 +44749,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-09-04",
-      "actual": "2026-09-04"
+      "actual": "2026-09-04",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000263",
@@ -40469,7 +44761,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-08",
-      "actual": "2026-09-08"
+      "actual": "2026-09-08",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000263",
@@ -40478,7 +44773,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-10-26",
-      "actual": ""
+      "actual": "",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000265",
@@ -40487,7 +44785,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-08",
-      "actual": "2026-09-08"
+      "actual": "2026-09-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000265",
@@ -40496,7 +44797,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-11",
-      "actual": "2026-10-11"
+      "actual": "2026-10-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000277",
@@ -40505,7 +44809,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-09-12",
-      "actual": "2026-09-12"
+      "actual": "2026-09-12",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000266",
@@ -40514,7 +44821,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-09",
-      "actual": "2026-09-09"
+      "actual": "2026-09-09",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000266",
@@ -40523,7 +44833,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-26",
-      "actual": "2026-10-26"
+      "actual": "2026-10-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000269",
@@ -40532,7 +44845,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-09",
-      "actual": "2026-09-09"
+      "actual": "2026-09-09",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000269",
@@ -40541,7 +44857,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000270",
@@ -40550,7 +44869,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-09",
-      "actual": "2026-09-09"
+      "actual": "2026-09-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000271",
@@ -40559,7 +44881,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-10",
-      "actual": "2026-09-10"
+      "actual": "2026-09-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000272",
@@ -40568,7 +44893,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-09-10",
-      "actual": "2026-09-10"
+      "actual": "2026-09-10",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000273",
@@ -40577,7 +44905,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-11",
-      "actual": "2026-09-11"
+      "actual": "2026-09-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000274",
@@ -40586,7 +44917,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-11",
-      "actual": "2026-09-11"
+      "actual": "2026-09-11",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000274",
@@ -40595,7 +44929,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000275",
@@ -40604,7 +44941,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-11-03",
-      "actual": "2026-11-03"
+      "actual": "2026-11-03",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000276",
@@ -40613,7 +44953,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-11",
-      "actual": "2026-09-11"
+      "actual": "2026-09-11",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000278",
@@ -40622,7 +44965,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-09-14",
-      "actual": "2026-09-14"
+      "actual": "2026-09-14",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000279",
@@ -40631,7 +44977,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-09-21",
-      "actual": "2026-09-21"
+      "actual": "2026-09-21",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000280",
@@ -40640,7 +44989,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-17",
-      "actual": "2026-09-17"
+      "actual": "2026-09-17",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000280",
@@ -40649,7 +45001,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-10-26",
-      "actual": "2026-10-26"
+      "actual": "2026-10-26",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000283",
@@ -40658,7 +45013,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-18",
-      "actual": "2026-09-18"
+      "actual": "2026-09-18",
+      "prov": "黑龙江省",
+      "city": "哈尔滨市",
+      "area": "North"
     },
     {
       "code": "9009126000282",
@@ -40667,7 +45025,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-09-18",
-      "actual": "2026-09-18"
+      "actual": "2026-09-18",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000281",
@@ -40676,7 +45037,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-09-17",
-      "actual": "2026-09-17"
+      "actual": "2026-09-17",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000281",
@@ -40685,7 +45049,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "reinfusion",
       "plan": "2026-11-03",
-      "actual": "2026-11-03"
+      "actual": "2026-11-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000284",
@@ -40694,7 +45061,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-09-17",
-      "actual": "2026-09-17"
+      "actual": "2026-09-17",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000285",
@@ -40703,7 +45073,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-21",
-      "actual": "2026-09-21"
+      "actual": "2026-09-21",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000285",
@@ -40712,7 +45085,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "reinfusion",
       "plan": "2026-11-04",
-      "actual": ""
+      "actual": "",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000288",
@@ -40721,7 +45097,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-21",
-      "actual": "2026-09-21"
+      "actual": "2026-09-21",
+      "prov": "广东省",
+      "city": "深圳市",
+      "area": "South"
     },
     {
       "code": "9009126000286",
@@ -40730,7 +45109,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-18",
-      "actual": "2026-09-18"
+      "actual": "2026-09-18",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000287",
@@ -40739,7 +45121,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-09-18",
-      "actual": "2026-09-18"
+      "actual": "2026-09-18",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000287",
@@ -40748,7 +45133,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-10-28",
-      "actual": "2026-10-28"
+      "actual": "2026-10-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000291",
@@ -40757,7 +45145,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-09-23",
-      "actual": "2026-09-23"
+      "actual": "2026-09-23",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000289",
@@ -40766,7 +45157,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-09-21",
-      "actual": "2026-09-21"
+      "actual": "2026-09-21",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000289",
@@ -40775,7 +45169,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "reinfusion",
       "plan": "2026-11-02",
-      "actual": "2026-11-02"
+      "actual": "2026-11-02",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000292",
@@ -40784,7 +45181,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-09-20",
-      "actual": "2026-09-20"
+      "actual": "2026-09-20",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000294",
@@ -40793,7 +45193,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-23",
-      "actual": "2026-09-23"
+      "actual": "2026-09-23",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000293",
@@ -40802,7 +45205,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-09-22",
-      "actual": "2026-09-22"
+      "actual": "2026-09-22",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000300",
@@ -40811,7 +45217,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-09-24",
-      "actual": "2026-09-24"
+      "actual": "2026-09-24",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000300",
@@ -40820,7 +45229,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "reinfusion",
       "plan": "2026-10-25",
-      "actual": "2026-10-25"
+      "actual": "2026-10-25",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000298",
@@ -40829,7 +45241,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-09-23",
-      "actual": "2026-09-23"
+      "actual": "2026-09-23",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009126000297",
@@ -40838,7 +45253,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-09-23",
-      "actual": "2026-09-23"
+      "actual": "2026-09-23",
+      "prov": "河南省",
+      "city": "郑州市",
+      "area": "North"
     },
     {
       "code": "9009126000296",
@@ -40847,7 +45265,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-09-28",
-      "actual": "2026-09-28"
+      "actual": "2026-09-28",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000295",
@@ -40856,7 +45277,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-09-24",
-      "actual": "2026-09-24"
+      "actual": "2026-09-24",
+      "prov": "四川省",
+      "city": "成都市",
+      "area": "South"
     },
     {
       "code": "9009126000299",
@@ -40865,7 +45289,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-09-24",
-      "actual": "2026-09-24"
+      "actual": "2026-09-24",
+      "prov": "陕西省",
+      "city": "西安市",
+      "area": "North"
     },
     {
       "code": "9009126000301",
@@ -40874,7 +45301,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-09-26",
-      "actual": "2026-09-26"
+      "actual": "2026-09-26",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000303",
@@ -40883,7 +45313,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-10-04",
-      "actual": "2026-10-04"
+      "actual": "2026-10-04",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000340",
@@ -40892,7 +45325,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-10-27",
-      "actual": "2026-10-27"
+      "actual": "2026-10-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000304",
@@ -40901,7 +45337,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-02",
-      "actual": "2026-10-02"
+      "actual": "2026-10-02",
+      "prov": "广东省",
+      "city": "惠州市",
+      "area": "South"
     },
     {
       "code": "9009126000305",
@@ -40910,7 +45349,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-10-03",
-      "actual": "2026-10-03"
+      "actual": "2026-10-03",
+      "prov": "江苏省",
+      "city": "南京市",
+      "area": "North"
     },
     {
       "code": "9009126000306",
@@ -40919,7 +45361,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-10-08",
-      "actual": "2026-10-08"
+      "actual": "2026-10-08",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000307",
@@ -40928,7 +45373,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-10-08",
-      "actual": "2026-10-08"
+      "actual": "2026-10-08",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009126000308",
@@ -40937,7 +45385,10 @@ var BOARD_DATA = {
       "cos": "顾美琴",
       "type": "apheresis",
       "plan": "2026-10-08",
-      "actual": "2026-10-08"
+      "actual": "2026-10-08",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000312",
@@ -40946,7 +45397,10 @@ var BOARD_DATA = {
       "cos": "顾美琴",
       "type": "apheresis",
       "plan": "2026-10-09",
-      "actual": "2026-10-09"
+      "actual": "2026-10-09",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000310",
@@ -40955,7 +45409,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-09",
-      "actual": "2026-10-09"
+      "actual": "2026-10-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000309",
@@ -40964,7 +45421,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-09",
-      "actual": "2026-10-09"
+      "actual": "2026-10-09",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000311",
@@ -40973,7 +45433,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-09",
-      "actual": "2026-10-09"
+      "actual": "2026-10-09",
+      "prov": "广东省",
+      "city": "惠州市",
+      "area": "South"
     },
     {
       "code": "9009126000315",
@@ -40982,7 +45445,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-10-10",
-      "actual": "2026-10-10"
+      "actual": "2026-10-10",
+      "prov": "山东省",
+      "city": "济南市",
+      "area": "North"
     },
     {
       "code": "9009126000314",
@@ -40991,7 +45457,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-10",
-      "actual": "2026-10-10"
+      "actual": "2026-10-10",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000316",
@@ -41000,7 +45469,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-10-13",
-      "actual": "2026-10-13"
+      "actual": "2026-10-13",
+      "prov": "浙江省",
+      "city": "湖州市",
+      "area": "South"
     },
     {
       "code": "9009126000317",
@@ -41009,7 +45481,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-13",
-      "actual": "2026-10-13"
+      "actual": "2026-10-13",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000318",
@@ -41018,7 +45493,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-14",
-      "actual": "2026-10-14"
+      "actual": "2026-10-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000319",
@@ -41027,7 +45505,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-14",
-      "actual": "2026-10-14"
+      "actual": "2026-10-14",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000322",
@@ -41036,7 +45517,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-15",
-      "actual": "2026-10-15"
+      "actual": "2026-10-15",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000320",
@@ -41045,7 +45529,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-16",
-      "actual": "2026-10-16"
+      "actual": "2026-10-16",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000323",
@@ -41054,7 +45541,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-10-15",
-      "actual": "2026-10-15"
+      "actual": "2026-10-15",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000321",
@@ -41063,7 +45553,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-10-15",
-      "actual": "2026-10-15"
+      "actual": "2026-10-15",
+      "prov": "江西省",
+      "city": "南昌市",
+      "area": "South"
     },
     {
       "code": "9009126000326",
@@ -41072,7 +45565,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-19",
-      "actual": "2026-10-19"
+      "actual": "2026-10-19",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000341",
@@ -41081,7 +45577,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-28",
-      "actual": "2026-10-28"
+      "actual": "2026-10-28",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000324",
@@ -41090,7 +45589,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-16",
-      "actual": "2026-10-16"
+      "actual": "2026-10-16",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000325",
@@ -41099,7 +45601,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-10-16",
-      "actual": "2026-10-16"
+      "actual": "2026-10-16",
+      "prov": "福建省",
+      "city": "厦门市",
+      "area": "South"
     },
     {
       "code": "9009126000327",
@@ -41108,7 +45613,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-16",
-      "actual": "2026-10-16"
+      "actual": "2026-10-16",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000329",
@@ -41117,7 +45625,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-10-19",
-      "actual": "2026-10-19"
+      "actual": "2026-10-19",
+      "prov": "山东省",
+      "city": "青岛市",
+      "area": "North"
     },
     {
       "code": "9009126000328",
@@ -41126,7 +45637,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "9009126000330",
@@ -41135,7 +45649,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-10-20",
-      "actual": "2026-10-20"
+      "actual": "2026-10-20",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000331",
@@ -41144,7 +45661,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-21",
-      "actual": "2026-10-21"
+      "actual": "2026-10-21",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000334",
@@ -41153,7 +45673,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-10-27",
-      "actual": "2026-10-27"
+      "actual": "2026-10-27",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000332",
@@ -41162,7 +45685,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-10-22",
-      "actual": "2026-10-22"
+      "actual": "2026-10-22",
+      "prov": "福建省",
+      "city": "福州市",
+      "area": "South"
     },
     {
       "code": "9009126000333",
@@ -41171,7 +45697,10 @@ var BOARD_DATA = {
       "cos": "付苗",
       "type": "apheresis",
       "plan": "2026-10-22",
-      "actual": ""
+      "actual": "",
+      "prov": "广东省",
+      "city": "广州市",
+      "area": "South"
     },
     {
       "code": "9009126000335",
@@ -41180,7 +45709,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-23",
-      "actual": "2026-10-23"
+      "actual": "2026-10-23",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000337",
@@ -41189,7 +45721,10 @@ var BOARD_DATA = {
       "cos": "李孝欣",
       "type": "apheresis",
       "plan": "2026-10-28",
-      "actual": "2026-10-28"
+      "actual": "2026-10-28",
+      "prov": "重庆市",
+      "city": "重庆市",
+      "area": "South"
     },
     {
       "code": "9009126000336",
@@ -41198,7 +45733,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-10-27",
-      "actual": "2026-10-27"
+      "actual": "2026-10-27",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000338",
@@ -41207,7 +45745,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-27",
-      "actual": ""
+      "actual": "",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000344",
@@ -41216,7 +45757,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-10-28",
-      "actual": "2026-10-28"
+      "actual": "2026-10-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000345",
@@ -41225,7 +45769,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-10-30",
-      "actual": "2026-10-30"
+      "actual": "2026-10-30",
+      "prov": "辽宁省",
+      "city": "沈阳市",
+      "area": "North"
     },
     {
       "code": "9009126000342",
@@ -41234,7 +45781,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-10-29",
-      "actual": "2026-10-29"
+      "actual": "2026-10-29",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000343",
@@ -41243,7 +45793,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-10-28",
-      "actual": "2026-10-28"
+      "actual": "2026-10-28",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000346",
@@ -41252,7 +45805,10 @@ var BOARD_DATA = {
       "cos": "徐梦希",
       "type": "apheresis",
       "plan": "2026-10-30",
-      "actual": "2026-10-30"
+      "actual": "2026-10-30",
+      "prov": "北京市",
+      "city": "北京市",
+      "area": "North"
     },
     {
       "code": "9009126000347",
@@ -41261,7 +45817,10 @@ var BOARD_DATA = {
       "cos": "樊梦",
       "type": "apheresis",
       "plan": "2026-10-31",
-      "actual": "2026-10-31"
+      "actual": "2026-10-31",
+      "prov": "湖北省",
+      "city": "武汉市",
+      "area": "North"
     },
     {
       "code": "9009126000348",
@@ -41270,7 +45829,10 @@ var BOARD_DATA = {
       "cos": "倪慧芝",
       "type": "apheresis",
       "plan": "2026-11-02",
-      "actual": "2026-11-02"
+      "actual": "2026-11-02",
+      "prov": "上海市",
+      "city": "上海市",
+      "area": "South"
     },
     {
       "code": "9009126000349",
@@ -41279,7 +45841,10 @@ var BOARD_DATA = {
       "cos": "金银",
       "type": "apheresis",
       "plan": "2026-11-03",
-      "actual": "2026-11-03"
+      "actual": "2026-11-03",
+      "prov": "江苏省",
+      "city": "苏州市",
+      "area": "North"
     },
     {
       "code": "9009126000350",
@@ -41288,7 +45853,10 @@ var BOARD_DATA = {
       "cos": "武丹",
       "type": "apheresis",
       "plan": "2026-11-03",
-      "actual": "2026-11-03"
+      "actual": "2026-11-03",
+      "prov": "天津市",
+      "city": "天津市",
+      "area": "North"
     },
     {
       "code": "9009126000352",
@@ -41297,7 +45865,10 @@ var BOARD_DATA = {
       "cos": "楼燕飞",
       "type": "apheresis",
       "plan": "2026-11-06",
-      "actual": ""
+      "actual": "",
+      "prov": "浙江省",
+      "city": "杭州市",
+      "area": "South"
     },
     {
       "code": "A1D0299",
@@ -41306,7 +45877,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2024-11-27",
-      "actual": "2024-11-27"
+      "actual": "2024-11-27",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1D0299",
@@ -41315,7 +45889,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2024-12-30",
-      "actual": "2024-12-31"
+      "actual": "2024-12-31",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0051",
@@ -41324,7 +45901,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2025-03-12",
-      "actual": "2025-03-12"
+      "actual": "2025-03-12",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0051",
@@ -41333,7 +45913,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2025-04-30",
-      "actual": "2025-04-30"
+      "actual": "2025-04-30",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0026",
@@ -41342,7 +45925,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2025-03-06",
-      "actual": "2025-03-06"
+      "actual": "2025-03-06",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0026",
@@ -41351,7 +45937,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2025-04-23",
-      "actual": "2025-05-08"
+      "actual": "2025-05-08",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0211",
@@ -41360,7 +45949,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2025-09-02",
-      "actual": "2025-09-02"
+      "actual": "2025-09-02",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0211",
@@ -41369,7 +45961,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2025-10-22",
-      "actual": "2025-11-03"
+      "actual": "2025-11-03",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0223",
@@ -41378,7 +45973,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2025-09-10",
-      "actual": "2025-09-10"
+      "actual": "2025-09-10",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "A1E0223",
@@ -41387,7 +45985,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2025-11-04",
-      "actual": "2026-02-12"
+      "actual": "2026-02-12",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009125000020",
@@ -41396,7 +45997,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2025-11-20",
-      "actual": "2025-11-20"
+      "actual": "2025-11-20",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009125000020",
@@ -41405,7 +46009,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-01-05",
-      "actual": "2026-02-23"
+      "actual": "2026-02-23",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000020",
@@ -41414,7 +46021,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-01-19",
-      "actual": "2026-01-19"
+      "actual": "2026-01-19",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000020",
@@ -41423,7 +46033,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-02-23",
-      "actual": "2026-04-08"
+      "actual": "2026-04-08",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000027",
@@ -41432,7 +46045,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-01-27",
-      "actual": "2026-01-27"
+      "actual": "2026-01-27",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000027",
@@ -41441,7 +46057,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-03-16",
-      "actual": "2026-04-17"
+      "actual": "2026-04-17",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000029",
@@ -41450,7 +46069,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-02-05",
-      "actual": "2026-02-05"
+      "actual": "2026-02-05",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000029",
@@ -41459,7 +46081,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-04-01",
-      "actual": "2026-04-01"
+      "actual": "2026-04-01",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000037",
@@ -41468,7 +46093,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-02-04",
-      "actual": "2026-02-04"
+      "actual": "2026-02-04",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000037",
@@ -41477,7 +46105,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-04-03",
-      "actual": "2026-04-27"
+      "actual": "2026-04-27",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000091",
@@ -41486,7 +46117,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-04-01",
-      "actual": "2026-04-01"
+      "actual": "2026-04-01",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000091",
@@ -41495,7 +46129,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-04-30",
-      "actual": "2026-05-15"
+      "actual": "2026-05-15",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000114",
@@ -41504,7 +46141,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-04-22",
-      "actual": "2026-04-22"
+      "actual": "2026-04-22",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000114",
@@ -41513,7 +46153,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-05-21",
-      "actual": "2026-06-12"
+      "actual": "2026-06-12",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000208",
@@ -41522,7 +46165,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-07-23",
-      "actual": "2026-07-23"
+      "actual": "2026-07-23",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000208",
@@ -41531,7 +46177,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-09-02",
-      "actual": "2026-09-07"
+      "actual": "2026-09-07",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     },
     {
       "code": "9009126000197",
@@ -41540,7 +46189,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-07-13",
-      "actual": "2026-07-13"
+      "actual": "2026-07-13",
+      "prov": "",
+      "city": "",
+      "area": "SG"
     },
     {
       "code": "9009126000197",
@@ -41549,7 +46201,10 @@ var BOARD_DATA = {
       "cos": "",
       "type": "reinfusion",
       "plan": "2026-08-18",
-      "actual": "2026-08-18"
+      "actual": "2026-08-18",
+      "prov": "",
+      "city": "",
+      "area": "SG"
     },
     {
       "code": "9009126000339",
@@ -41558,12 +46213,15 @@ var BOARD_DATA = {
       "cos": "",
       "type": "apheresis",
       "plan": "2026-10-29",
-      "actual": "2026-10-29"
+      "actual": "2026-10-29",
+      "prov": "香港",
+      "city": "香港",
+      "area": "HK"
     }
   ],
   "ABN_MGMT": {
     "UPDATED": "2026-11-03 17:01:55",
-    "summaryAt": "2026-11-03",
+    "summaryAt": "2026-11-04",
     "pages": {
       "nosample": {
         "rows": [
@@ -41579,7 +46237,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "全流程",
             "baseTime": "2023-12-27",
-            "months": 34.7,
+            "months": 34.8,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41599,7 +46257,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2024-09-01",
-            "months": 26.4,
+            "months": 26.5,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41619,7 +46277,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2024-09-01",
-            "months": 26.4,
+            "months": 26.5,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41659,7 +46317,7 @@ var BOARD_DATA = {
             "hosp": "吉林大学第一医院",
             "status": "冻存",
             "baseTime": "2025-04-11",
-            "months": 19,
+            "months": 19.1,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41699,7 +46357,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "冻存",
             "baseTime": "2025-06-25",
-            "months": 16.5,
+            "months": 16.6,
             "planRe": "",
             "bucket": "≥12 月",
             "risk": "",
@@ -41899,7 +46557,7 @@ var BOARD_DATA = {
             "hosp": "首都医科大学附属北京朝阳医院",
             "status": "全流程",
             "baseTime": "2026-05-18",
-            "months": 5.6,
+            "months": 5.7,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -41939,7 +46597,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2026-07-08",
-            "months": 3.9,
+            "months": 4,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -41959,7 +46617,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第二医院",
             "status": "全流程",
             "baseTime": "2026-07-29",
-            "months": 3.2,
+            "months": 3.3,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "",
@@ -42019,7 +46677,7 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-08-13",
-            "months": 2.7,
+            "months": 2.8,
             "planRe": "",
             "bucket": "2~3 月",
             "risk": "",
@@ -42039,7 +46697,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2026-09-09",
-            "months": 1.8,
+            "months": 1.9,
             "planRe": "",
             "bucket": "1~2 月",
             "risk": "",
@@ -42059,7 +46717,7 @@ var BOARD_DATA = {
             "hosp": "温州医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2026-09-24",
-            "months": 1.3,
+            "months": 1.4,
             "planRe": "",
             "bucket": "1~2 月",
             "risk": "",
@@ -42139,9 +46797,9 @@ var BOARD_DATA = {
             "hosp": "宁波大学附属人民医院",
             "status": "全流程",
             "baseTime": "2026-10-06",
-            "months": 0.9,
+            "months": 1,
             "planRe": "",
-            "bucket": "0~1 月",
+            "bucket": "1~2 月",
             "risk": "",
             "reason": "洗脱中",
             "action": "洗脱结束尽快预约床位",
@@ -42159,7 +46817,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属协和医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
-            "months": 0.8,
+            "months": 0.9,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42199,7 +46857,7 @@ var BOARD_DATA = {
             "hosp": "首都医科大学附属北京朝阳医院",
             "status": "全流程",
             "baseTime": "2026-10-15",
-            "months": 0.6,
+            "months": 0.7,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42239,7 +46897,7 @@ var BOARD_DATA = {
             "hosp": "华中科技大学同济医学院附属协和医院",
             "status": "冻存",
             "baseTime": "2026-10-18",
-            "months": 0.5,
+            "months": 0.6,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42259,7 +46917,7 @@ var BOARD_DATA = {
             "hosp": "南方医科大学珠江医院",
             "status": "全流程",
             "baseTime": "2026-10-21",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42279,7 +46937,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-10-21",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42309,6 +46967,26 @@ var BOARD_DATA = {
           },
           {
             "code": "",
+            "no": "XL26X68",
+            "ym": "2026-10",
+            "patient": "许*飞",
+            "area": "South",
+            "am": "董硕",
+            "prov": "浙江省",
+            "city": "宁波市",
+            "hosp": "宁波大学附属人民医院",
+            "status": "全流程",
+            "baseTime": "2026-10-27",
+            "months": 0.3,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "",
             "no": "XL26A71",
             "ym": "2026-10",
             "patient": "周*喜",
@@ -42329,26 +47007,6 @@ var BOARD_DATA = {
           },
           {
             "code": "",
-            "no": "XL26X68",
-            "ym": "2026-10",
-            "patient": "许*飞",
-            "area": "South",
-            "am": "董硕",
-            "prov": "浙江省",
-            "city": "宁波市",
-            "hosp": "宁波大学附属人民医院",
-            "status": "全流程",
-            "baseTime": "2026-10-27",
-            "months": 0.2,
-            "planRe": "",
-            "bucket": "0~1 月",
-            "risk": "",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "",
             "no": "XL26W60",
             "ym": "2026-10",
             "patient": "章*忠",
@@ -42359,7 +47017,7 @@ var BOARD_DATA = {
             "hosp": "中日友好医院",
             "status": "全流程",
             "baseTime": "2026-10-27",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42379,7 +47037,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2026-10-27",
-            "months": 0.2,
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42419,7 +47077,7 @@ var BOARD_DATA = {
             "hosp": "西安交通大学第一附属医院",
             "status": "全流程",
             "baseTime": "2026-10-30",
-            "months": 0.1,
+            "months": 0.2,
             "planRe": "",
             "bucket": "0~1 月",
             "risk": "",
@@ -42439,6 +47097,26 @@ var BOARD_DATA = {
             "hosp": "宁波大学附属人民医院",
             "status": "全流程",
             "baseTime": "2026-10-30",
+            "months": 0.2,
+            "planRe": "",
+            "bucket": "0~1 月",
+            "risk": "",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "",
+            "no": "XL26R31",
+            "ym": "2026-11",
+            "patient": "张*燕",
+            "area": "North",
+            "am": "崔珺",
+            "prov": "北京市",
+            "city": "北京市",
+            "hosp": "北京大学人民医院",
+            "status": "全流程",
+            "baseTime": "2026-11-02",
             "months": 0.1,
             "planRe": "",
             "bucket": "0~1 月",
@@ -42469,26 +47147,6 @@ var BOARD_DATA = {
           },
           {
             "code": "",
-            "no": "XL26R31",
-            "ym": "2026-11",
-            "patient": "张*燕",
-            "area": "North",
-            "am": "崔珺",
-            "prov": "北京市",
-            "city": "北京市",
-            "hosp": "北京大学人民医院",
-            "status": "全流程",
-            "baseTime": "2026-11-02",
-            "months": 0,
-            "planRe": "",
-            "bucket": "0~1 月",
-            "risk": "",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "",
             "no": "XL26W92",
             "ym": "2026-11",
             "patient": "崔*华",
@@ -42508,7 +47166,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "截至2026年11月，长期未单采订单共47单，其中0~1月19单最集中，≥12月10单最久达34.7月，风险最高。18单未填原因，建议优先核查超12月订单并补录原因，明确责任AM跟进，防止订单过期流失。"
+        "summary": "当前长期未单采订单共47单，0~1月18单最集中，≥12月10单最久达34.8月，高风险需优先核查。18单未填原因，建议先补录原因，重点跟进超6月及冻存订单，明确回院与洗脱计划。"
       },
       "noproduction": {
         "rows": [
@@ -42564,7 +47222,7 @@ var BOARD_DATA = {
             "hosp": "中国医科大学附属第一医院",
             "status": "冻存",
             "baseTime": "2024-03-26",
-            "months": 31.7,
+            "months": 31.8,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -42624,7 +47282,7 @@ var BOARD_DATA = {
             "hosp": "厦门大学附属中山医院",
             "status": "冻存",
             "baseTime": "2024-05-10",
-            "months": 30.2,
+            "months": 30.3,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -42664,7 +47322,7 @@ var BOARD_DATA = {
             "hosp": "香港大学深圳医院",
             "status": "冻存",
             "baseTime": "2024-06-15",
-            "months": 29,
+            "months": 29.1,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -42704,7 +47362,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2024-07-03",
-            "months": 28.4,
+            "months": 28.5,
             "planRe": "",
             "bucket": "≥24 月",
             "risk": "已过期",
@@ -42964,7 +47622,7 @@ var BOARD_DATA = {
             "hosp": "天津医科大学肿瘤医院（空港院区）",
             "status": "冻存",
             "baseTime": "2025-04-11",
-            "months": 19,
+            "months": 19.1,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43044,7 +47702,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2025-06-19",
-            "months": 16.7,
+            "months": 16.8,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43064,7 +47722,7 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2025-07-16",
-            "months": 15.8,
+            "months": 15.9,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43104,7 +47762,7 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2025-08-12",
-            "months": 14.9,
+            "months": 15,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43144,7 +47802,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "冻存",
             "baseTime": "2025-09-05",
-            "months": 14.1,
+            "months": 14.2,
             "planRe": "",
             "bucket": "12~24 月",
             "risk": "已过期",
@@ -43404,7 +48062,7 @@ var BOARD_DATA = {
             "hosp": "湖州市中心医院",
             "status": "冻存",
             "baseTime": "2026-02-02",
-            "months": 9.1,
+            "months": 9.2,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43484,7 +48142,7 @@ var BOARD_DATA = {
             "hosp": "福建医科大学附属协和医院",
             "status": "冻存",
             "baseTime": "2026-03-04",
-            "months": 8.1,
+            "months": 8.2,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43504,7 +48162,7 @@ var BOARD_DATA = {
             "hosp": "北京大学深圳医院",
             "status": "全流程",
             "baseTime": "2026-03-04",
-            "months": 8.1,
+            "months": 8.2,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43644,7 +48302,7 @@ var BOARD_DATA = {
             "hosp": "温州医科大学附属台州医院（浙江省台州医院）",
             "status": "冻存",
             "baseTime": "2026-04-24",
-            "months": 6.4,
+            "months": 6.5,
             "planRe": "",
             "bucket": "6~12 月",
             "risk": "未过期",
@@ -43664,7 +48322,7 @@ var BOARD_DATA = {
             "hosp": "北京大学人民医院",
             "status": "冻存",
             "baseTime": "2026-05-18",
-            "months": 5.6,
+            "months": 5.7,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43764,7 +48422,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-07-02",
-            "months": 4.1,
+            "months": 4.2,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43873,26 +48531,6 @@ var BOARD_DATA = {
             "planTime": "12月份"
           },
           {
-            "code": "9009126000213",
-            "no": "XL26Y33",
-            "ym": "2026-06",
-            "patient": "刘*均",
-            "area": "South",
-            "am": "李磊",
-            "prov": "四川省",
-            "city": "南充市",
-            "hosp": "川北医学院附属医院",
-            "status": "冻存",
-            "baseTime": "2026-07-24",
-            "months": 3.4,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "跟进采淋，但第一次没采够，等待二次采淋",
-            "action": "定期跟进",
-            "planTime": "10月"
-          },
-          {
             "code": "9009126000214",
             "no": "XL26B64",
             "ym": "2026-07",
@@ -43904,7 +48542,7 @@ var BOARD_DATA = {
             "hosp": "空军军医大学西京医院",
             "status": "冻存",
             "baseTime": "2026-07-23",
-            "months": 3.4,
+            "months": 3.5,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -43924,13 +48562,33 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "冻存",
             "baseTime": "2026-07-23",
-            "months": 3.4,
+            "months": 3.5,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
             "reason": "早线病人CR中",
             "action": "密切跟进疾病情况提前沟通洗脱期",
             "planTime": "2026-10-12"
+          },
+          {
+            "code": "9009126000213",
+            "no": "XL26Y33",
+            "ym": "2026-06",
+            "patient": "刘*均",
+            "area": "South",
+            "am": "李磊",
+            "prov": "四川省",
+            "city": "南充市",
+            "hosp": "川北医学院附属医院",
+            "status": "冻存",
+            "baseTime": "2026-07-24",
+            "months": 3.4,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "跟进采淋，但第一次没采够，等待二次采淋",
+            "action": "定期跟进",
+            "planTime": "10月"
           },
           {
             "code": "9009126000220",
@@ -43953,6 +48611,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000221",
+            "no": "XL26P63",
+            "ym": "2026-07",
+            "patient": "高*振",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "广州市",
+            "hosp": "南方医科大学南方医院",
+            "status": "冻存",
+            "baseTime": "2026-08-01",
+            "months": 3.2,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "早线患者，目前稳定状态",
+            "action": "定期跟进关注患者状态",
+            "planTime": "12月"
+          },
+          {
             "code": "9009126000222",
             "no": "XL26H89",
             "ym": "2026-07",
@@ -43971,26 +48649,6 @@ var BOARD_DATA = {
             "reason": "早线，等待线数赔付保险",
             "action": "定期随访",
             "planTime": "待定"
-          },
-          {
-            "code": "9009126000221",
-            "no": "XL26P63",
-            "ym": "2026-07",
-            "patient": "高*振",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "广州市",
-            "hosp": "南方医科大学南方医院",
-            "status": "冻存",
-            "baseTime": "2026-08-01",
-            "months": 3.1,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "早线患者，目前稳定状态",
-            "action": "定期跟进关注患者状态",
-            "planTime": "12月"
           },
           {
             "code": "9009126000231",
@@ -44084,7 +48742,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "冻存",
             "baseTime": "2026-08-19",
-            "months": 2.5,
+            "months": 2.6,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44144,7 +48802,7 @@ var BOARD_DATA = {
             "hosp": "浙江大学医学院附属第一医院（余杭院区）",
             "status": "全流程",
             "baseTime": "2026-09-03",
-            "months": 2,
+            "months": 2.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44204,7 +48862,7 @@ var BOARD_DATA = {
             "hosp": "北京大学第一医院",
             "status": "冻存",
             "baseTime": "2026-09-12",
-            "months": 1.7,
+            "months": 1.8,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44393,26 +49051,6 @@ var BOARD_DATA = {
             "planTime": "12月"
           },
           {
-            "code": "9009126000303",
-            "no": "XL26G64",
-            "ym": "2026-10",
-            "patient": "张*秀",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海第四人民医院",
-            "status": "全流程",
-            "baseTime": "2026-10-04",
-            "months": 1,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000304",
             "no": "XL26J71",
             "ym": "2026-09",
@@ -44424,7 +49062,7 @@ var BOARD_DATA = {
             "hosp": "惠州市第一人民医院",
             "status": "冻存",
             "baseTime": "2026-10-03",
-            "months": 1,
+            "months": 1.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44444,6 +49082,26 @@ var BOARD_DATA = {
             "hosp": "南京鼓楼医院",
             "status": "冻存",
             "baseTime": "2026-10-03",
+            "months": 1.1,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000303",
+            "no": "XL26G64",
+            "ym": "2026-10",
+            "patient": "张*秀",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海第四人民医院",
+            "status": "全流程",
+            "baseTime": "2026-10-04",
             "months": 1,
             "planRe": "",
             "bucket": "0~6 月",
@@ -44504,7 +49162,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "冻存",
             "baseTime": "2026-10-09",
-            "months": 0.8,
+            "months": 0.9,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44524,27 +49182,7 @@ var BOARD_DATA = {
             "hosp": "上海仁济医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
-            "months": 0.8,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000310",
-            "no": "XL26L89",
-            "ym": "2026-10",
-            "patient": "郭*发",
-            "area": "North",
-            "am": "赵蕊",
-            "prov": "天津市",
-            "city": "天津市",
-            "hosp": "天津医科大学肿瘤医院（空港院区）",
-            "status": "全流程",
-            "baseTime": "2026-10-10",
-            "months": 0.8,
+            "months": 0.9,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44564,6 +49202,26 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-10-09",
+            "months": 0.9,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000310",
+            "no": "XL26L89",
+            "ym": "2026-10",
+            "patient": "郭*发",
+            "area": "North",
+            "am": "赵蕊",
+            "prov": "天津市",
+            "city": "天津市",
+            "hosp": "天津医科大学肿瘤医院（空港院区）",
+            "status": "全流程",
+            "baseTime": "2026-10-10",
             "months": 0.8,
             "planRe": "",
             "bucket": "0~6 月",
@@ -44724,7 +49382,27 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "冻存",
             "baseTime": "2026-10-15",
-            "months": 0.6,
+            "months": 0.7,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000321",
+            "no": "XL26X59",
+            "ym": "2026-10",
+            "patient": "贺*芳",
+            "area": "South",
+            "am": "董硕",
+            "prov": "江西省",
+            "city": "南昌市",
+            "hosp": "南昌大学第一附属医院",
+            "status": "冻存",
+            "baseTime": "2026-10-15",
+            "months": 0.7,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -44764,26 +49442,6 @@ var BOARD_DATA = {
             "hosp": "北京协和医院",
             "status": "全流程",
             "baseTime": "2026-10-16",
-            "months": 0.6,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000321",
-            "no": "XL26X59",
-            "ym": "2026-10",
-            "patient": "贺*芳",
-            "area": "South",
-            "am": "董硕",
-            "prov": "江西省",
-            "city": "南昌市",
-            "hosp": "南昌大学第一附属医院",
-            "status": "冻存",
-            "baseTime": "2026-10-15",
             "months": 0.6,
             "planRe": "",
             "bucket": "0~6 月",
@@ -44944,7 +49602,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-10-21",
-            "months": 0.4,
+            "months": 0.5,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45004,7 +49662,47 @@ var BOARD_DATA = {
             "hosp": "上海嘉会国际医院",
             "status": "全流程",
             "baseTime": "2026-10-27",
-            "months": 0.2,
+            "months": 0.3,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000334",
+            "no": "XL26K15",
+            "ym": "2026-10",
+            "patient": "郑*游",
+            "area": "North",
+            "am": "龚卉",
+            "prov": "湖北省",
+            "city": "武汉市",
+            "hosp": "华中科技大学同济医学院附属同济医院",
+            "status": "全流程",
+            "baseTime": "2026-10-27",
+            "months": 0.3,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000336",
+            "no": "XL26P78",
+            "ym": "2026-10",
+            "patient": "郭*洁",
+            "area": "South",
+            "am": "高威龙",
+            "prov": "上海市",
+            "city": "上海市",
+            "hosp": "上海交通大学医学院附属瑞金医院",
+            "status": "全流程",
+            "baseTime": "2026-10-27",
+            "months": 0.3,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45033,26 +49731,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000334",
-            "no": "XL26K15",
-            "ym": "2026-10",
-            "patient": "郑*游",
-            "area": "North",
-            "am": "龚卉",
-            "prov": "湖北省",
-            "city": "武汉市",
-            "hosp": "华中科技大学同济医学院附属同济医院",
-            "status": "全流程",
-            "baseTime": "2026-10-27",
-            "months": 0.2,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000337",
             "no": "XL26J33",
             "ym": "2026-10",
@@ -45064,26 +49742,6 @@ var BOARD_DATA = {
             "hosp": "陆军军医大学第二附属医院(新桥医院)",
             "status": "冻存",
             "baseTime": "2026-10-29",
-            "months": 0.2,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000336",
-            "no": "XL26P78",
-            "ym": "2026-10",
-            "patient": "郭*洁",
-            "area": "South",
-            "am": "高威龙",
-            "prov": "上海市",
-            "city": "上海市",
-            "hosp": "上海交通大学医学院附属瑞金医院",
-            "status": "全流程",
-            "baseTime": "2026-10-27",
             "months": 0.2,
             "planRe": "",
             "bucket": "0~6 月",
@@ -45153,6 +49811,26 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
+            "code": "9009126000339",
+            "no": "XL26P70",
+            "ym": "2026-10",
+            "patient": "N*i A*g",
+            "area": "HK",
+            "am": "HK_AM1",
+            "prov": "香港",
+            "city": "香港",
+            "hosp": "威尔斯亲王医院（Prince of Wales Hospital）",
+            "status": "全流程",
+            "baseTime": "2026-10-30",
+            "months": 0.2,
+            "planRe": "",
+            "bucket": "0~6 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
             "code": "9009126000345",
             "no": "XL26E15",
             "ym": "2026-10",
@@ -45213,26 +49891,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000339",
-            "no": "XL26P70",
-            "ym": "2026-10",
-            "patient": "N*i A*g",
-            "area": "HK",
-            "am": "HK_AM1",
-            "prov": "香港",
-            "city": "香港",
-            "hosp": "威尔斯亲王医院（Prince of Wales Hospital）",
-            "status": "全流程",
-            "baseTime": "2026-10-30",
-            "months": 0.1,
-            "planRe": "",
-            "bucket": "0~6 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000348",
             "no": "XL26X09",
             "ym": "2026-10",
@@ -45244,7 +49902,7 @@ var BOARD_DATA = {
             "hosp": "上海市同济医院",
             "status": "全流程",
             "baseTime": "2026-11-02",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~6 月",
             "risk": "未过期",
@@ -45273,7 +49931,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未转生产共138单，0~6月81单最集中，主因早线病人CR中及等待进展、疾病稳定。已过期34单、即将过期2单，需立即处理。建议优先清理过期单，补录55单缺失原因，并重点跟进赵蕊、高威龙、董硕负责订单。"
+        "summary": "长期未转生产共138单，以0~6月81单最集中，主因早线病人CR中；已过期34单、即将过期2单需立即处理。建议优先清理过期及临期订单，补齐55单缺失原因，并重点跟进赵蕊、高威龙等AM名下订单。"
       },
       "noreinfusion": {
         "rows": [
@@ -45289,7 +49947,7 @@ var BOARD_DATA = {
             "hosp": "复旦大学附属中山医院厦门医院",
             "status": "全流程",
             "baseTime": "2025-10-11",
-            "months": 12.9,
+            "months": 13,
             "planRe": "",
             "bucket": "≥6 月",
             "risk": "已过期",
@@ -45349,7 +50007,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-06-26",
-            "months": 4.3,
+            "months": 4.4,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -45389,7 +50047,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-07-02",
-            "months": 4.1,
+            "months": 4.2,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -45409,7 +50067,7 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-07-20",
-            "months": 3.5,
+            "months": 3.6,
             "planRe": "",
             "bucket": "3~6 月",
             "risk": "未过期",
@@ -45589,7 +50247,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-09-21",
-            "months": 1.4,
+            "months": 1.5,
             "planRe": "2026-11-05",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -45629,7 +50287,7 @@ var BOARD_DATA = {
             "hosp": "上海交通大学医学院附属瑞金医院",
             "status": "全流程",
             "baseTime": "2026-09-24",
-            "months": 1.3,
+            "months": 1.4,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -45689,13 +50347,33 @@ var BOARD_DATA = {
             "hosp": "中国医学科学院血液病医院",
             "status": "全流程",
             "baseTime": "2026-09-30",
-            "months": 1.1,
+            "months": 1.2,
             "planRe": "2026-10-26",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "等待排仓",
             "action": "",
             "planTime": "11月"
+          },
+          {
+            "code": "9009126000277",
+            "no": "XL26X86",
+            "ym": "2026-09",
+            "patient": "贾*珍",
+            "area": "North",
+            "am": "龚卉",
+            "prov": "陕西省",
+            "city": "西安市",
+            "hosp": "空军军医大学西京医院",
+            "status": "全流程",
+            "baseTime": "2026-10-09",
+            "months": 0.9,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
           },
           {
             "code": "9009126000270",
@@ -45758,26 +50436,6 @@ var BOARD_DATA = {
             "planTime": "0"
           },
           {
-            "code": "9009126000277",
-            "no": "XL26X86",
-            "ym": "2026-09",
-            "patient": "贾*珍",
-            "area": "North",
-            "am": "龚卉",
-            "prov": "陕西省",
-            "city": "西安市",
-            "hosp": "空军军医大学西京医院",
-            "status": "全流程",
-            "baseTime": "2026-10-09",
-            "months": 0.8,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000286",
             "no": "XL26E21",
             "ym": "2026-09",
@@ -45789,6 +50447,26 @@ var BOARD_DATA = {
             "hosp": "中山大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-10-10",
+            "months": 0.8,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000293",
+            "no": "XL26W32",
+            "ym": "2026-09",
+            "patient": "陈*兰",
+            "area": "South",
+            "am": "兰明金",
+            "prov": "广东省",
+            "city": "广州市",
+            "hosp": "暨南大学附属第一医院（广州华侨医院）",
+            "status": "全流程",
+            "baseTime": "2026-10-12",
             "months": 0.8,
             "planRe": "",
             "bucket": "0~3 月",
@@ -45818,19 +50496,19 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000293",
-            "no": "XL26W32",
-            "ym": "2026-09",
-            "patient": "陈*兰",
+            "code": "9009126000236",
+            "no": "XL24S05",
+            "ym": "2024-01",
+            "patient": "李*鸣",
             "area": "South",
             "am": "兰明金",
             "prov": "广东省",
             "city": "广州市",
-            "hosp": "暨南大学附属第一医院（广州华侨医院）",
+            "hosp": "南方医科大学南方医院",
             "status": "全流程",
-            "baseTime": "2026-10-12",
-            "months": 0.7,
-            "planRe": "",
+            "baseTime": "2026-10-21",
+            "months": 0.5,
+            "planRe": "2026-11-07",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "",
@@ -45851,26 +50529,6 @@ var BOARD_DATA = {
             "baseTime": "2026-10-19",
             "months": 0.5,
             "planRe": "2026-11-04",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
-            "code": "9009126000236",
-            "no": "XL24S05",
-            "ym": "2024-01",
-            "patient": "李*鸣",
-            "area": "South",
-            "am": "兰明金",
-            "prov": "广东省",
-            "city": "广州市",
-            "hosp": "南方医科大学南方医院",
-            "status": "全流程",
-            "baseTime": "2026-10-21",
-            "months": 0.4,
-            "planRe": "2026-11-07",
             "bucket": "0~3 月",
             "risk": "未过期",
             "reason": "",
@@ -45978,26 +50636,6 @@ var BOARD_DATA = {
             "planTime": ""
           },
           {
-            "code": "9009126000301",
-            "no": "XL26N94",
-            "ym": "2026-09",
-            "patient": "李*忠",
-            "area": "North",
-            "am": "龚卉",
-            "prov": "湖北省",
-            "city": "武汉市",
-            "hosp": "华中科技大学同济医学院附属同济医院",
-            "status": "全流程",
-            "baseTime": "2026-10-31",
-            "months": 0.1,
-            "planRe": "",
-            "bucket": "0~3 月",
-            "risk": "未过期",
-            "reason": "",
-            "action": "",
-            "planTime": ""
-          },
-          {
             "code": "9009126000313",
             "no": "XL26J50",
             "ym": "2026-04",
@@ -46009,7 +50647,7 @@ var BOARD_DATA = {
             "hosp": "华中科技大学同济医学院附属同济医院",
             "status": "全流程",
             "baseTime": "2026-11-02",
-            "months": 0,
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46029,7 +50667,7 @@ var BOARD_DATA = {
             "hosp": "上海市同济医院",
             "status": "全流程",
             "baseTime": "2026-11-02",
-            "months": 0,
+            "months": 0.1,
             "planRe": "2026-11-07",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46049,7 +50687,27 @@ var BOARD_DATA = {
             "hosp": "苏州大学附属第一医院",
             "status": "全流程",
             "baseTime": "2026-11-02",
-            "months": 0,
+            "months": 0.1,
+            "planRe": "",
+            "bucket": "0~3 月",
+            "risk": "未过期",
+            "reason": "",
+            "action": "",
+            "planTime": ""
+          },
+          {
+            "code": "9009126000301",
+            "no": "XL26N94",
+            "ym": "2026-09",
+            "patient": "李*忠",
+            "area": "North",
+            "am": "龚卉",
+            "prov": "湖北省",
+            "city": "武汉市",
+            "hosp": "华中科技大学同济医学院附属同济医院",
+            "status": "全流程",
+            "baseTime": "2026-10-31",
+            "months": 0.1,
             "planRe": "",
             "bucket": "0~3 月",
             "risk": "未过期",
@@ -46058,7 +50716,7 @@ var BOARD_DATA = {
             "planTime": ""
           }
         ],
-        "summary": "长期未回输订单共39单，31单集中在0~3月，3~6月6单，≥6月2单最久12.9月。已过期2单需立即处理，另有临近过期订单应优先跟进。未填写原因达18单，建议补齐原因并重点核查赵蕊、兰明金名下订单，按到期时间分级催办回输。"
+        "summary": "长期未回输订单共39单，31单集中在0~3月，3~6月6单，≥6月2单最久13月。已过期2单，另有临近过期需立即核查。18单未填原因，信息缺口大。建议优先处理过期及即将过期订单，督促AM补录原因，并重点跟进赵蕊、兰明金名下订单。"
       }
     }
   },
@@ -46069,7 +50727,7 @@ var BOARD_DATA = {
       "prod_cycle": "生产周期整体约18天，几乎全部集中在14~30天档，2023年略长，各医院类型差异不大。AM中赵俊兴、HK_AM1偏高，但样本量小需谨慎。近半年已小幅改善。建议聚焦超长个案复盘，并跟进高耗时AM的流程卡点。",
       "reinf_wait": "回输等待期全量平均32.4天、中位数21天，14~30天档最集中。耗时逐年上升，2026年达37.6天；SCOE医院明显偏长，赵蕊、董硕等AM高于均值。建议重点跟进SCOE与高耗时AM，排查排期与协调瓶颈，设定分档目标并月度监控。"
     },
-    "aiAt": "2026-11-03",
+    "aiAt": "2026-11-04",
     "rows": [
       {
         "no": "XL23A97",
@@ -71599,7 +76257,7 @@ var BOARD_DATA = {
       "summary": "1–11月21省累计下单360、回输222，覆盖医院87家，回输率约62%。天津、北京、上海、广东四省集中度高，头部负责人贡献主要单量。北京同比增29、广东增16表现突出；吉林、浙江、广西下滑需关注。建议巩固头部省份回输转化，并针对下滑区域排查医院覆盖与动销问题。"
     },
     "hospital": {
-      "summary": "2026年1–11月国内有下单或回输医院90家，SCOE 4家、COE 12家、RCOE 14家、Others 60家，头部集中明显：血研所下单62回输49居首，北大人民、浙一余杭、瑞金紧随。38家超90天未下单，最久大连医大二院钻石湾369天，建议分层跟进头部保供，并对长空窗医院排查原因、定向激活。"
+      "summary": "2026年1–11月国内有下单或回输医院90家，SCOE 4家、COE 12家、RCOE 14家、Others 60家。中国医学科学院血液病医院以下单62、回输49居首，头部集中明显。38家医院超90天未下单，最久370天，建议分层跟进：重点维护头部，对空窗医院排查原因并激活。"
     }
   },
   "COE_PAGES": {
@@ -79021,10 +83679,10 @@ var BOARD_DATA = {
       "ytd": "2026年累计取消65单，主要集中在单采预约前（24单）。高成本取消共22单，占比33.8%，其中生产完成取消回输14单、生产中取消8单，需重点跟进生产及回输环节，建议加强生产前评估与过程管控。",
       "all": "全量取消254单，2023至2025年逐年上升（13→97单），2026年已65单。单采预约前取消98单最集中，生产中51单次之。AM董硕、赵俊兴、高威龙合计137单。建议前置预约确认、强化生产节点管控，并对高发AM专项复盘。"
     },
-    "aiAt": "2026-11-03"
+    "aiAt": "2026-11-04"
   },
   "CS_BIZ": {
-    "at": "2026-10-20 15:52:33",
+    "at": "2026-11-04 15:32:10",
     "file": "海外收入统计-202609.xlsx",
     "source": "海外收入统计 海外收入统计-202609.xlsx",
     "years": [
@@ -79135,6 +83793,216 @@ var BOARD_DATA = {
         "effWan": 10
       }
     ]
+  },
+  "TECH_BIZ": {
+    "at": "2026-11-04 15:32:10",
+    "file": "海外收入统计-202609.xlsx",
+    "source": "海外收入统计 海外收入统计-202609.xlsx",
+    "years": [
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "companies": [
+      {
+        "name": "Cabaletta Bio,Inc.",
+        "total": 7499984,
+        "n": 4
+      },
+      {
+        "name": "Instituto Butantan",
+        "total": 1999990,
+        "n": 1
+      },
+      {
+        "name": "GC Cell Corporation",
+        "total": 1922740,
+        "n": 7
+      }
+    ],
+    "rows": [
+      {
+        "ym": "2026-10",
+        "year": "2026",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "全款",
+        "cur": "USD",
+        "amtUsd": 91270
+      },
+      {
+        "ym": "2026-06",
+        "year": "2026",
+        "country": "美国",
+        "geo": "United States",
+        "cust": "Cabaletta Bio,Inc.",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 2499995
+      },
+      {
+        "ym": "2026-05",
+        "year": "2026",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "全款",
+        "cur": "USD",
+        "amtUsd": 158551
+      },
+      {
+        "ym": "2026-04",
+        "year": "2026",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 30000
+      },
+      {
+        "ym": "2026-04",
+        "year": "2026",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 37919
+      },
+      {
+        "ym": "2026-04",
+        "year": "2026",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 30000
+      },
+      {
+        "ym": "2026-03",
+        "year": "2026",
+        "country": "巴西",
+        "geo": "Brazil",
+        "cust": "Instituto Butantan",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 1999990
+      },
+      {
+        "ym": "2025-12",
+        "year": "2025",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 1350000
+      },
+      {
+        "ym": "2025-12",
+        "year": "2025",
+        "country": "韩国",
+        "geo": "Korea",
+        "cust": "GC Cell Corporation",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 225000
+      },
+      {
+        "ym": "2024-03",
+        "year": "2024",
+        "country": "美国",
+        "geo": "United States",
+        "cust": "Cabaletta Bio,Inc.",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 1499994
+      },
+      {
+        "ym": "2023-04",
+        "year": "2023",
+        "country": "美国",
+        "geo": "United States",
+        "cust": "Cabaletta Bio,Inc.",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 1000000
+      },
+      {
+        "ym": "2022-10",
+        "year": "2022",
+        "country": "美国",
+        "geo": "United States",
+        "cust": "Cabaletta Bio,Inc.",
+        "biz": "技术授权转移",
+        "note": "预收款",
+        "cur": "USD",
+        "amtUsd": 2499995
+      }
+    ]
+  },
+  "COS_MAP": {
+    "楼燕飞": {
+      "city": "杭州",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "付苗": {
+      "city": "深圳",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "武丹": {
+      "city": "天津",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "金银": {
+      "city": "苏州",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "李孝欣": {
+      "city": "成都",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "倪慧芝": {
+      "city": "上海",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "樊梦": {
+      "city": "武汉",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "徐梦希": {
+      "city": "北京",
+      "flag": "全职cos",
+      "backupOf": ""
+    },
+    "林雅珺": {
+      "city": "广州",
+      "flag": "只替换付苗",
+      "backupOf": "付苗"
+    }
   },
   "INSURANCE": {
     "at": "2026-10-30 14:44:12",
@@ -83984,7 +88852,7 @@ var BOARD_DATA = {
       "bx": "截至11月2日，商保订单占比10.2%，渗透仍偏低。区域高度集中于天津、广东，主力险种为好医保、平安e生保。建议聚焦重点省份和头部险种加大推广，并补全未知商保信息，提升商保覆盖。",
       "name": "惠民保36个名称310单，商保33个名称118单，均呈头部集中、长尾分散。建议加码职工保、沪惠保、好医保、惠军保，整合南京宁惠保、西湖益联保等区域名称，提升运营效率。"
     },
-    "aiAt": "2026-11-03"
+    "aiAt": "2026-11-04"
   },
   "PROD_ABN": {
     "at": "2026-10-30 13:38:37",
@@ -85472,6 +90340,6 @@ var BOARD_DATA = {
     ],
     "aiText": "生产异常累计 113 条：PBMC 分选失败 24 条、第一次生产失败 68 条、二次生产失败 21 条。峰值月份 2024-11（8 条）。涉及医院 45 家。",
     "ai": "生产异常累计113条，以第一次生产失败为主，占比约六成，PBMC分选失败与二次生产失败次之；2024年11月最集中，涉及45家医院，面较广。改善重点应放在第一次生产失败的根因治理与高发月份、重点机构的闭环整改。",
-    "aiAt": "2026-11-03"
+    "aiAt": "2026-11-04"
   }
 };

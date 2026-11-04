@@ -658,12 +658,13 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .cart-msg.err{ color: #ffb0ad; }
 .cart-stack{ flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
 .cart-stack > .pt-tbl-col{ flex: 1; min-height: 0; }
-/* 日历容器固定高度（约容 5 周月，6 周月内部滚动），把剩余空间让给下方明细表 */
-.cart-stack > .pt-tbl-col:first-child{ flex: 0 0 420px; }
+/* 日历吃剩余高度，下方「工作量提醒」固定高度（内部滚动）；明细表已拆到独立页 */
+.cart-stack > .pt-tbl-col:first-child{ flex: 0 1 auto; }
 .cart-stack > .pt-tbl-col:first-child > .pt-tbl-wrap{ flex: 1; min-height: 0; max-height: none; }
-.cart-stack > .pt-tbl-col:last-child{ flex: 1; }
+.cart-stack > .pt-tbl-col:last-child{ flex: 1 1 0; }
+.cart-stack > .pt-tbl-col:last-child > .pt-tbl-wrap{ flex: 1; min-height: 0; max-height: none; }
 #p10calwrap{ min-height: 300px; }
-#p10tbl{ min-height: 220px; }
+#p10warnwrap{ min-height: 200px; }
 #p10cal{ min-width: 900px; }
 .cart-wd{ display: flex; background: linear-gradient(180deg, rgba(10,74,138,.9), rgba(7,44,88,.9)); border: 1px solid rgba(79,227,255,.45); border-bottom: none; }
 .cart-wd span{ flex: 1; text-align: center; padding: 5px 0; color: #daf9ff; font-weight: 600; letter-spacing: 1px; font-size: 13px; text-shadow: 0 0 6px rgba(79,227,255,.4); }
@@ -929,3 +930,29 @@ body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
 
 /* 非 .page-fill 的主区（如全球注册进度 .p3-main）同样补偿高度 */
 .mainbox{ min-height: calc(125vh - 108px); }
+
+/* ── CART 工作量提醒（2026-11-04）：同一 COS 同一天跨多家医院 = 无法覆盖 ── */
+.cart-day-risk{ display:inline-block; margin-left:5px; padding:0 5px; border-radius:8px; font-size:11px; line-height:16px;
+  background:rgba(255,77,79,.22); color:#ff8a80; border:1px solid rgba(255,77,79,.55); }
+.cart-warn-hdr{ display:flex; gap:8px; padding:6px 8px; background:linear-gradient(180deg, rgba(10,74,138,.9), rgba(7,44,88,.9));
+  border:1px solid rgba(79,227,255,.35); color:#daf9ff; font-size:12px; font-weight:600; letter-spacing:1px; }
+.cart-warn-row{ display:flex; gap:8px; padding:7px 8px; border-bottom:1px dashed rgba(79,227,255,.16); align-items:flex-start; }
+.cart-warn-row:hover{ background:rgba(47,137,207,.12); }
+.cart-warn-empty{ padding:18px 8px; text-align:center; color:rgba(255,255,255,.45); font-size:13px; }
+.cart-warn-hdr .w-date, .cart-warn-row .w-date{ flex:0 0 96px; }
+.cart-warn-hdr .w-risk, .cart-warn-row .w-risk{ flex:1 1 0; min-width:0; }
+.cart-warn-hdr .w-free, .cart-warn-row .w-free{ flex:0 0 42%; min-width:0; }
+.cart-warn-row .w-date{ color:#9fe8ff; font-size:12px; font-variant-numeric:tabular-nums; }
+.cart-warn-row .w-date em{ font-style:normal; margin-left:4px; color:rgba(255,255,255,.45); font-size:11px; }
+.w-cos{ display:inline-block; margin:0 6px 2px 0; padding:0 6px; border-radius:8px; font-size:12px;
+  background:rgba(255,77,79,.18); color:#ff9d9a; border:1px solid rgba(255,77,79,.4); }
+.w-cos .w-part{ font-style:normal; margin-left:3px; font-size:10px; color:#ffcf4d; }
+.w-cos + .w-meta{ margin-right:10px; }
+.w-meta{ font-size:11px; color:rgba(255,255,255,.55); }
+.cart-warn-row .w-free{ display:flex; flex-wrap:wrap; gap:4px; }
+.w-free-i{ display:inline-flex; align-items:center; gap:3px; padding:0 6px; border-radius:9px; font-size:11px;
+  background:rgba(98,201,141,.16); color:#a7e8c3; border:1px solid rgba(98,201,141,.35); }
+.w-free-i em{ font-style:normal; color:rgba(255,255,255,.5); font-size:10px; }
+.w-free-i i{ font-style:normal; color:#ffcf4d; font-size:10px; }
+.w-free-i.pt{ background:rgba(255,207,77,.14); color:#ffd98a; border-color:rgba(255,207,77,.4); }
+.w-none{ font-size:11px; color:rgba(255,255,255,.4); }
