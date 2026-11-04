@@ -83,7 +83,7 @@
                 '<span class="c-hosp">' + (r.hosp || '未知医院') + '</span>' +
                 '<span class="c-pat">' + (r.patient || '·') + '</span>' +
                 '<span class="c-type"><i class="c-type-ico">' + TYPE_ICON[r.type] + '</i>' + TYPE_LABEL[r.type] + '</span>' +
-                '<span class="c-cos' + (r.cos ? '' : ' no') + '">' + (r.cos || '-') + '</span>' +
+                '<span class="c-cos' + (r.cos ? '' : ' no') + '"' + (r.cos ? '' : ' title="无 COS 记录"') + '>' + C.cosName(r) + '</span>' +
                 '<span class="c-st"><i class="cart-dot" style="background:' + LK[st].color + ';box-shadow:0 0 6px ' + LK[st].color + ';"></i>' + LK[st].txt + '</span>' +
                 '<span class="c-plan">' + r.plan + '</span>' +
                 '<span class="c-act' + (r.actual ? '' : ' no') + '">' + (r.actual || '-') + '</span>' +

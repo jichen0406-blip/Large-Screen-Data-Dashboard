@@ -49,6 +49,11 @@
             var city = C.cosCity(n);
             h += '<option value="' + n + '">' + n + (city ? '（' + city + '）' : '') + (C.isPartTime(n) ? ' ·兼职' : '') + '</option>';
         });
+        var ovs = {};
+        DATA.forEach(function (r) { if (!r.cos && r.prov !== '香港') ovs[C.cosName(r)] = true; });
+        Object.keys(ovs).sort().forEach(function (n) {
+            if (all.indexOf(n) < 0) h += '<option value="' + n + '">' + n + '（海外）</option>';
+        });
         $('#p10cos').html(h).val(selCos);
     }
     function renderLights() {
@@ -69,7 +74,7 @@
             if (focus) return inFocus(r);
             if (r.plan.slice(0, 7) !== ym || !selLights[stateOf(r, today)]) return false;
             // COS 筛选对日历与预警同时生效
-            if (selCos !== 'ALL' && (r.cos || '') !== selCos) return false;
+            if (selCos !== 'ALL' && C.cosName(r) !== selCos) return false;
             return true;
         });
     }
@@ -80,7 +85,7 @@
         var st = stateOf(r, today);
         var hit = hl && hl.code === r.code && hl.type === r.type ? ' cart-hit' : '';
         return '<div class="cart-card st-' + st + hit + '" data-k="' + r.code + '" data-t="' + r.type + '" title="追溯码 ' + r.code + '｜' + r.hosp + '｜' + (r.patient || '·') + '｜运营 ' + (r.cos || '-') + '">' +
-            '<div class="cc-top"><span class="cc-type t-' + r.type + '">' + TYPE_LABEL[r.type] + '</span>' + (r.cos ? '<span class="cc-cos">' + r.cos + '</span>' : '') + '<span class="cc-code">' + (r.code || '(无码)') + '</span></div>' +
+            '<div class="cc-top"><span class="cc-type t-' + r.type + '">' + TYPE_LABEL[r.type] + '</span><span class="cc-cos' + (r.cos ? '' : ' no-cos') + '">' + C.cosName(r) + '</span><span class="cc-code">' + (r.code || '(无码)') + '</span></div>' +
             '<div class="cc-bot"><span class="cc-hosp">' + (r.hosp || '未知医院') + '</span><span class="cc-pat">' + (r.patient || '·') + '</span></div>' +
             '</div>';
     }
@@ -89,7 +94,8 @@
     function dayRisk(recs) {
         var byCos = {};
         recs.forEach(function (r) {
-            var c = byCos[r.cos || ''] || (byCos[r.cos || ''] = { cos: r.cos || '', hosps: {}, n: 0, ap: 0, re: 0 });
+            var nm = C.cosName(r);
+            var c = byCos[nm] || (byCos[nm] = { cos: nm, hosps: {}, n: 0, ap: 0, re: 0 });
             if (r.hosp) c.hosps[r.hosp] = true;
             c.n++;
             if (r.type === 'apheresis') c.ap++; else c.re++;
@@ -97,7 +103,7 @@
         var out = [];
         Object.keys(byCos).forEach(function (k) {
             var c = byCos[k];
-            if (!c.cos) return;                                   // 未指定 COS 的不判风险
+            if (C.isOverseas(c.cos)) return;                       // 海外国家标签不是「人」，不判产能风险；香港任务已计入付苗
             if (Object.keys(c.hosps).length < 2) return;          // 单家医院 = 可完成
             out.push({ cos: c.cos, hosps: Object.keys(c.hosps).length, n: c.n, ap: c.ap, re: c.re });
         });
@@ -108,7 +114,7 @@
     // 当天完全没有任务的 COS（推荐人选）；兼职 COS 仅在顶替对象出风险时出现
     function freeCos(recs, riskList) {
         var busy = {};
-        recs.forEach(function (r) { if (r.cos) busy[r.cos] = true; });
+        recs.forEach(function (r) { busy[C.cosName(r)] = true; });
         var riskCos = {};
         riskList.forEach(function (x) { riskCos[x.cos] = true; });
         var ro = C.roster();
@@ -257,7 +263,7 @@
         } else {
             h += '<div class="bd-modal-sec"><h4>无法覆盖的 COS（' + rk.length + ' 人）</h4>';
             rk.forEach(function (k) {
-                var mine = list.filter(function (r) { return (r.cos || '') === k.cos; });
+                var mine = list.filter(function (r) { return C.cosName(r) === k.cos; });
                 var city = C.cosCity(k.cos);
                 h += '<div class="bd-cos-blk">' +
                     '<div class="bd-cos-hd">' + k.cos + (city ? '·' + city : '') +
@@ -292,7 +298,7 @@
         '<p>③ 以下情形视作<b>可以完成</b>，不预警：<br>· 同一家医院的多个单采 / 回输<br>· 同一城市内当天仅有回输任务且 ≤3 个</p>' +
         '</div>' +
         '<div class="bd-modal-sec"><h4>可支援推荐</h4>' +
-        '<p>① 只列当天<b>完全没有任务</b>的 COS，按所在城市就近排序（不做距离计算）。</p>' +
+        '<p>① 只列当天<b>完全没有任务</b>的 COS。</p>' +
         '<p>② <b>兼职 COS</b>（花名册标记「只替换X」，如 <b>林雅珺只顶替付苗</b>）默认不参与推荐；仅当其可顶替的人当天出风险时才列出，并标注「替X」。</p>' +
         '</div>' +
         '<div class="bd-modal-sec"><h4>数据范围</h4>' +

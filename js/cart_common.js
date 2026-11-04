@@ -49,6 +49,37 @@ window.CART_COMMON = (function () {
     function isPartTime(name) { var m = roster()[name]; return !!(m && m.backupOf); }
     function backupOf(name) { var m = roster()[name]; return (m && m.backupOf) || ''; }
     function cosCity(name) { var m = roster()[name]; return (m && m.city) || ''; }
+    // 没有 COS 的记录分两种（2026-11-05 用户口径）：
+    //   ① 香港医院（玛丽医院 / 威尔斯亲王）实际占用付苗产能 → 计到付苗名下
+    //   ② 其余海外订单 → 直接显示「国家」（有 province 用 province，否则按医院名兜底）
+    var NO_COS = '海外';            // 兜底文案（仅当国家也识别不出时）
+    var HK_COS = '付苗';
+    var OVERSEAS_HOSP = { 'PARKWAY': '新加坡', 'QUEEN MARY': '香港', 'PRINCE OF WALES': '香港' };
+    function ovCountry(r) {
+        var p = String((r && r.prov) || '').trim();
+        if (p && p !== '未知') return p;
+        var h = String((r && r.hosp) || '').toUpperCase();
+        for (var k in OVERSEAS_HOSP) { if (h.indexOf(k) >= 0) return OVERSEAS_HOSP[k]; }
+        return NO_COS;
+    }
+    function cosName(r) {
+        if (!r) return NO_COS;
+        if (r.cos) return r.cos;
+        if (r.prov === '香港') return HK_COS;
+        return ovCountry(r);
+    }
+    // 海外国家标签集合（这些不是「人」，不参与产能风险判定）
+    var _ovNames = null;
+    function ovNames() {
+        if (_ovNames) return _ovNames;
+        _ovNames = {};
+        var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+        ((B && B.CART_DAILY) || []).forEach(function (r) {
+            if (!r.cos && r.prov !== '香港') _ovNames[ovCountry(r)] = true;
+        });
+        return _ovNames;
+    }
+    function isOverseas(name) { return !!ovNames()[name]; }
 
     return {
         pad2: pad2,
@@ -63,6 +94,11 @@ window.CART_COMMON = (function () {
         roster: roster,
         isPartTime: isPartTime,
         backupOf: backupOf,
-        cosCity: cosCity
+        cosCity: cosCity,
+        NO_COS: NO_COS,
+        HK_COS: HK_COS,
+        cosName: cosName,
+        ovCountry: ovCountry,
+        isOverseas: isOverseas
     };
 })();

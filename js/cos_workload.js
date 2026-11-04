@@ -44,6 +44,11 @@
             var city = C.cosCity(n);
             h += '<option value="' + n + '">' + n + (city ? '（' + city + '）' : '') + (C.isPartTime(n) ? ' ·兼职' : '') + '</option>';
         });
+        var ovs = {};
+        EXEC.forEach(function (r) { if (!r.cos && r.prov !== '香港') ovs[C.cosName(r)] = true; });
+        Object.keys(ovs).sort().forEach(function (n) {
+            if (all.indexOf(n) < 0) h += '<option value="' + n + '">' + n + '（海外）</option>';
+        });
         $('#p35cos').html(h).val(selCos);
     }
 
@@ -51,7 +56,7 @@
         var ym = selY + '-' + pad2(selM);
         return EXEC.filter(function (r) {
             if (r.actual.slice(0, 7) !== ym) return false;
-            if (selCos !== 'ALL' && (r.cos || '未指定') !== selCos) return false;
+            if (selCos !== 'ALL' && C.cosName(r) !== selCos) return false;
             return true;
         });
     }
@@ -68,7 +73,7 @@
         var byDay = {};
         monthRows().forEach(function (r) {
             var d = parseInt(r.actual.slice(8, 10), 10);
-            var cos = r.cos || '未指定';
+            var cos = C.cosName(r);
             var g = byDay[d] || (byDay[d] = {});
             var c = g[cos] || (g[cos] = { ap: 0, re: 0 });
             if (r.type === 'apheresis') c.ap++; else c.re++;
@@ -88,9 +93,9 @@
             });
             var body = names.map(function (n) {
                 var o = g[n];
-                if (n === '未指定') return '<div class="cs-wl-i"><b>未指定</b><em>' + o.ap + '</em>/<i>' + o.re + '</i></div>';
                 var done = o.ap + o.re;
                 total += done;
+                // 只显示有条数的类型（如「海外 回1」），不出现「采0」
                 return '<div class="cs-wl-i' + (C.isPartTime(n) ? ' part' : '') + '" title="' + n + '：单采 ' + o.ap + ' / 回输 ' + o.re + '">' +
                     '<b>' + n + '</b>' +
                     (o.ap ? '<em>采' + o.ap + '</em>' : '') +
@@ -117,16 +122,16 @@
         var rows = monthRows();
         var agg = {};
         rows.forEach(function (r) {
-            var cos = r.cos || '未指定';
+            var cos = C.cosName(r);
             var o = agg[cos] || (agg[cos] = { ap: 0, re: 0 });
             if (r.type === 'apheresis') o.ap++; else o.re++;
         });
 
         var ro = C.roster();
         var names = Object.keys(ro).slice();
-        var extra = Object.keys(agg).filter(function (n) { return names.indexOf(n) < 0 && n !== '未指定'; }).sort();
+        var extra = Object.keys(agg).filter(function (n) { return names.indexOf(n) < 0 && n !== C.NO_COS; }).sort();
         names = names.concat(extra);
-        if (agg['未指定']) names.push('未指定');
+        if (agg[C.NO_COS]) names.push(C.NO_COS);
 
         var sumAp = 0, sumRe = 0, cards = '', trows = '';
         names.forEach(function (n) {
@@ -134,10 +139,10 @@
             if (!o.ap && !o.re) return;                       // 当月没工作的不占卡
             sumAp += o.ap; sumRe += o.re;
             var city = C.cosCity(n);
-            var cls = n === '未指定' ? ' other' : (C.isPartTime(n) ? ' part' : '');
+            var cls = C.isOverseas(n) ? ' other' : (C.isPartTime(n) ? ' part' : '');
             var tags = '';
-            if (n === '未指定') tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未指定</span>';
-            else if (!ro[n]) tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未在册</span>';
+            // 「海外」本身就是标签，不再重复加 tag
+            if (!ro[n] && !C.isOverseas(n)) tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未在册</span>';
             if (C.isPartTime(n)) tags += '<span class="tt-tag" style="background:rgba(255,207,77,.18);color:#ffcf4d">兼职·仅顶替' + C.backupOf(n) + '</span>';
             cards += '<div class="cs-wl-card' + cls + '">' +
                 '<div class="c-hd"><span class="c-name" title="' + n + '">' + n + '</span>' +

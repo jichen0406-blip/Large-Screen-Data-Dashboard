@@ -990,5 +990,9 @@ body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
 .bd-task .t-code{ flex:0 0 auto; color:rgba(255,255,255,.5); font-size:11px; }
 .bd-free{ display:flex; flex-wrap:wrap; gap:6px; }
 
-.bd-info{ margin-left:6px; width:18px; height:18px; border-radius:50%; border:1px solid rgba(79,227,255,.55); background:rgba(47,137,207,.18); color:#9fe8ff; font-size:12px; line-height:1; cursor:pointer; padding:0; }
-.bd-info:hover{ background:rgba(47,137,207,.45); color:#fff; }
+
+/* 工作预警标题旁的「查看逻辑」按钮：沿用日历 ⛶ 的外观（.map-fs），改为静态定位紧跟标题 */
+.map-fs.bd-info-fs{ position:static; width:24px; height:24px; line-height:22px; font-size:14px; font-style:italic; font-weight:700; margin-left:6px; flex:none; }
+
+/* 无 COS 的记录（海外订单）在日历卡片上弱化显示 */
+.cc-cos.no-cos{ color:rgba(159,232,255,.65); font-style:italic; }
