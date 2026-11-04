@@ -142,7 +142,7 @@
             var cls = C.isOverseas(n) ? ' other' : (C.isPartTime(n) ? ' part' : '');
             var tags = '';
             // 「海外」本身就是标签，不再重复加 tag
-            if (!ro[n] && !C.isOverseas(n)) tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">未在册</span>';
+            if (!ro[n] && !C.isOverseas(n)) tags += '<span class="tt-tag" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.55)">已离职</span>';
             if (C.isPartTime(n)) tags += '<span class="tt-tag" style="background:rgba(255,207,77,.18);color:#ffcf4d">兼职·仅顶替' + C.backupOf(n) + '</span>';
             cards += '<div class="cs-wl-card' + cls + '">' +
                 '<div class="c-hd"><span class="c-name" title="' + n + '">' + n + '</span>' +
