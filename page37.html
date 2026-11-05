@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>福可苏业绩总览 · 产能利用率</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/rz_common.js"></script>
+<script type="text/javascript" src="js/capacity_util.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+	<script>window.PAGE_KEY='capacity_util';</script>
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
+	<style>
+	/* 生产侧四页共用 */
+	.rz-bar{ flex:0 0 auto; margin:10px 0 0; }
+	.rz-sep{ color:rgba(159,232,255,.75); font-size:14px; }
+	.rz-body{ flex:1; min-height:0; display:flex; gap:12px; margin:10px 0 0; }
+	.rz-box{ flex:1; min-height:0; display:flex; flex-direction:column; border:1px solid rgba(7,118,181,.5);
+		box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 12px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:6px 12px 8px; overflow:hidden; }
+	.rz-chart{ flex:1; min-height:0; width:100%; }
+	.fs-body .rz-chart{ width:100%; height:100%; }
+	.rz-kpis{ flex:0 0 auto; margin:8px 0 0; flex-wrap:nowrap; }
+	.rz-kpis .kpi-card{ padding:6px 12px; min-width:0; }
+	.rz-kpis .kc-label{ font-size:12px; white-space:normal; line-height:1.2; }
+	.rz-kpis .kc-val{ font-size:22px; line-height:1.2; }
+	.rz-kpis .kc-val small{ font-size:12px; font-weight:400; color:rgba(159,232,255,.75); margin-left:3px; }
+	.rz-kpis .kc-sub{ font-size:11px; color:rgba(159,232,255,.7); white-space:normal; }
+	</style></head>
+<body>
+	<div class="login-mask" id="loginMask">
+		<div class="login-body">
+			<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
+			<div class="login-center">
+				<div class="login-shuzibg"></div>
+				<div class="login-title">
+					<img class="login-logo" src="images/logo-white.png" alt="驯鹿生物">
+					<p class="login-title-main">驯鹿生物大数据监控平台</p>
+					<p class="login-title-sub">登录页</p>
+				</div>
+				<div class="login-card">
+					<div class="login-welcome">欢迎登录系统!</div>
+					<div class="login-input">
+						<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+						<input type="text" id="loginUser" placeholder="请输入账号" autocomplete="off">
+					</div>
+					<div class="login-input">
+						<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+						<input type="password" id="loginPwd" placeholder="密码" autocomplete="off">
+					</div>
+					<label class="login-remember"><input type="checkbox" id="loginRemember"><span>记住密码</span></label>
+					<div class="login-err" id="loginErr"></div>
+					<div class="login-btn" id="loginBtn"><span>登 录</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="login-bolang"></div>
+	</div>
+	<div class="head clearfix">
+		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
+		<div class="head-left">
+			<div class="update" id="dataUpd">数据更新时间 --</div>
+			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
+		</div>
+		<div class="tm-wrap">
+			<div class="time" id="showTime">--</div>
+			<div class="weather" id="weather">上海 --</div>
+		</div>
+		<script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
+	</div>
+	<div class="mainbox page-fill">
+		<div class="pt-time rz-bar">
+			<span class="pt-time-tit">时间区间</span>
+			<select id="cpY1" class="pt-sel" title="起始年"></select>
+			<select id="cpM1" class="pt-sel" title="起始月"></select>
+			<span class="rz-sep">~</span>
+			<select id="cpY2" class="pt-sel" title="结束年"></select>
+			<select id="cpM2" class="pt-sel" title="结束月"></select>
+			<span class="pt-time-note" id="cpNote"></span>
+		</div>
+		<div class="kpi-grid rz-kpis" id="cpKpi"></div>
+		<div class="rz-body">
+			<div class="rz-box">
+				<div class="sec-head">细胞生产区利用率 &amp; 下半月需求占比 <span class="sub">两条线共用 0–100% 单一 Y 轴 · 红线=50%</span><button class="map-fs" type="button" data-fs="cpChart" data-title="产能利用率与下半月需求占比">⛶</button></div>
+				<div class="rz-chart" id="cpChart"></div>
+			</div>
+		</div>
+		<div class="insight-bar" id="cpAI"></div>
+	</div>
+	<!-- 网页导航菜单 -->
+	<div class="menu-mask" id="menuMask" style="display:none;">
+		<div class="menu-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit">网页导航</span>
+				<button class="menu-close" id="menuClose" type="button">×</button>
+			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
+		</div>
+	</div>
+	<script>
+	// 数据更新时间
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		$('#dataUpd').text((B && B.UPDATED) ? ('数据更新时间 ' + B.UPDATED) : '数据更新时间 --');
+	});
+	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
+	<script type="text/javascript" src="js/fs.js"></script>
+	<!-- 左侧悬浮导航栏 -->
+	<div class="side-nav" id="sideNav"></div>
+</body>
+</html>

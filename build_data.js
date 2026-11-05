@@ -1692,6 +1692,114 @@ async function buildSummaries() {
   CANCEL_MGMT.aiAt = DP;
 
 
+
+  // 10) 生产需求与产能匹配度
+  await (async function () {
+    var low = 0, n = 0, reqD = [], d1D = [];
+    FULL_OPS.forEach(function (r) {
+      if (r.req) { n++; reqD.push(+r.req.slice(8, 10)); if (+r.req.slice(8, 10) >= 16) low++; }
+      if (r.d1) d1D.push(+r.d1.slice(8, 10));
+    });
+    function med(a) { if (!a.length) return 0; var b = a.slice().sort(function (x, y) { return x - y; }); return b[Math.floor(b.length / 2)]; }
+    var M = DEMAND_CAP_METRICS || {};
+    DEMAND_CAP_TEXT = '全流程订单 ' + FULL_OPS.length + ' 单。要求生产时间有值 ' + n + ' 单，日期中位数第 ' +
+      (M.reqMed || med(reqD)).toFixed(1) + ' 天、Q3 第 ' + (M.reqQ3 || 0).toFixed(1) + ' 天，下半月（16–31 号）占 ' +
+      (M.lowShare || 0).toFixed(1) + '%；D1 有值 ' + d1D.length + ' 单，中位数第 ' + (M.d1Med || med(d1D)).toFixed(1) +
+      ' 天，比要求生产仅提前 ' + (M.leadDays || 0).toFixed(1) + ' 天；要求日与实际生产日不同的占 ' +
+      (M.mismatchShare || 0).toFixed(1) + '%（跨月积压）。';
+    var key = 'demand_cap', fp = 'v4|' + String(FULL_OPS.length) + '|' + low + '|' + med(reqD) + '|' + med(d1D);
+    if (cache[key] && cache[key].fp === fp && cache[key].summary) {
+      DEMAND_CAP_TEXT_AI = cache[key].summary; next[key] = cache[key];
+      console.log('AI 摘要（缓存命中）: 生产需求和产能匹配度');
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）: 生产需求和产能匹配度 …');
+      DEMAND_CAP_TEXT_AI = await deepseekSummary('生产需求和产能匹配度', DEMAND_CAP_TEXT,
+        '请写一段面向业务负责人的分析，180 字以内，按以下思路：① 先解释怎么看箱线图（箱体=25%~75% 分位、横线=中位数、须=1.5 倍四分位距内极值、橙点=离群值，红虚线是月中 15 号）；② 指出要求生产时间是否整体压在月内后半段（中位数第几号、Q3 第几号、下半月占比多少），说明这是每月重复的结构性分布而非偶发；③ 对比实际 D1 只比要求日提前了两三天，说明生产端柔性已用尽；④ 结论：问题不在总量而在月内时间结构，需要冗余产能吸收峰值。');
+      next[key] = { fp: fp, summary: DEMAND_CAP_TEXT_AI, at: DP };
+      console.log('  ✓ ' + DEMAND_CAP_TEXT_AI.slice(0, 40) + '…');
+    }
+  })();
+
+  // 11) 产能利用率
+  await (async function () {
+    var rs = CAPACITY.rows; if (!rs.length) return;
+    var rates = rs.map(function (r) { return r.rate; });
+    var avg = rates.reduce(function (a, b) { return a + b; }, 0) / rates.length;
+    var hi = rs.slice().sort(function (a, b) { return b.rate - a.rate; })[0];
+    var lo = rs.slice().sort(function (a, b) { return a.rate - b.rate; })[0];
+    var byM = {};
+    FULL_OPS.forEach(function (r) { if (r.req) { var ym = r.req.slice(0, 7); var o = byM[ym] || (byM[ym] = { a: 0, l: 0 }); o.a++; if (+r.req.slice(8, 10) >= 16) o.l++; } });
+    var lowAvg = (function () { var t = 0, k = 0; Object.keys(byM).forEach(function (m) { t += byM[m].l / byM[m].a * 100; k++; }); return k ? t / k : 0; })();
+    var CM = CAPACITY_METRICS || {};
+    CAPACITY.aiText = '产能利用率 ' + rs.length + ' 个月，平均 ' + avg.toFixed(1) + '%，最高 ' + hi.ym + ' ' + hi.rate +
+      '%（' + hi.used + '/' + hi.total + ' 天），最低 ' + lo.ym + ' ' + lo.rate + '%；下半月需求占比平均 ' + lowAvg.toFixed(1) +
+      '%，其中 ' + (CM.over50 || 0) + '/' + (CM.cnt || 0) + ' 个月高于 50%；产能最紧张的 ' +
+      (CM.peak ? CM.peak.ym + ' 利用率 ' + CM.peak.rate + '%、同期下半月占比 ' + CM.peak.share.toFixed(0) + '%' : '—') +
+      '；下半月占比 P90 = ' + (CM.p90Share || 0).toFixed(0) + '%，需求集中在半月内到来。';
+    var key = 'capacity_util', fp = 'v5|' + rs.length + '|' + avg.toFixed(2) + '|' + lowAvg.toFixed(2);
+    if (cache[key] && cache[key].fp === fp && cache[key].summary) {
+      CAPACITY.ai = cache[key].summary; next[key] = cache[key];
+      console.log('AI 摘要（缓存命中）: 产能利用率');
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）: 产能利用率 …');
+      CAPACITY.ai = await deepseekSummary('产能利用率', CAPACITY.aiText,
+        '请写一段面向业务负责人的分析，180 字以内，按以下思路：① 下半月需求占比有多少个月高于 50%，说明需求持续偏向下半月而不是均匀到来；② 利用率高峰月份与下半月需求最集中的月份是否同步，指出峰值月份的利用率与该月下半月占比；③ 结论：产能=月需求只是总量匹配，由于需求集中在下半月且生产无法库存，产能必须大于需求；④ 给出按半月排产、峰值月份预留弹性产能的建议。');
+      next[key] = { fp: fp, summary: CAPACITY.ai, at: DP };
+      console.log('  ✓ ' + CAPACITY.ai.slice(0, 40) + '…');
+    }
+    CAPACITY.aiAt = DP;
+  })();
+
+  // 12) 择期订单管理
+  await (async function () {
+    var t = { init: 0, mid: 0, ri: 0, rm: 0, can: 0, cur: 0 };
+    ZQ.rows.forEach(function (r) {
+      if (r.init) { t.init++; if (r.resume) t.ri++; }
+      if (r.mid) { t.mid++; if (r.resume) t.rm++; }
+      t.can += r.cancel; t.cur += r.cur;
+    });
+    ZQ.aiText = '择期订单：初始择期 ' + t.init + ' 单、中途择期 ' + t.mid + ' 单；已恢复生产（初始 ' + t.ri + ' / 中途 ' + t.rm + '），择期取消 ' + t.can + '，当前仍择期 ' + t.cur + ' 单。';
+    var key = 'zq_orders', fp = [t.init, t.mid, t.ri, t.rm, t.can, t.cur].join('|');
+    if (cache[key] && cache[key].fp === fp && cache[key].summary) {
+      ZQ.ai = cache[key].summary; next[key] = cache[key];
+      console.log('AI 摘要（缓存命中）: 择期订单管理');
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）: 择期订单管理 …');
+      ZQ.ai = await deepseekSummary('择期订单管理', ZQ.aiText,
+        '请写一段面向业务负责人的总结：说明择期订单的规模、初始择期与中途择期的结构、恢复生产与取消的转化比例，以及仍滞留（当前择期）订单的关注建议。控制在 120 字以内。');
+      next[key] = { fp: fp, summary: ZQ.ai, at: DP };
+      console.log('  ✓ ' + ZQ.ai.slice(0, 40) + '…');
+    }
+    ZQ.aiAt = DP;
+  })();
+
+  // 13) 择期订单恢复时长
+  await (async function () {
+    var d = ZQ.rows.filter(function (r) { return r.durDays != null; }).map(function (r) { return r.durDays; });
+    if (!d.length) return;
+    d.sort(function (a, b) { return a - b; });
+    var avg = d.reduce(function (a, b) { return a + b; }, 0) / d.length;
+    var med = d[Math.floor(d.length / 2)];
+    var b30 = d.filter(function (x) { return x < 30; }).length,
+        b90 = d.filter(function (x) { return x >= 30 && x < 90; }).length,
+        b180 = d.filter(function (x) { return x >= 90 && x < 180; }).length,
+        bMore = d.filter(function (x) { return x >= 180; }).length;
+    var top10 = d.slice(Math.floor(d.length * 0.9));
+    ZQ.durText = '择期恢复时长样本 ' + d.length + ' 单：平均 ' + avg.toFixed(1) + ' 天，中位 ' + med + ' 天，P90 ' + top10[0] + ' 天；分档 <30 天 ' + b30 + '、30–90 天 ' + b90 + '、90–180 天 ' + b180 + '、≥180 天 ' + bMore + '。';
+    var key = 'zq_duration', fp = d.length + '|' + avg.toFixed(1) + '|' + med;
+    if (cache[key] && cache[key].fp === fp && cache[key].summary) {
+      ZQ.durAI = cache[key].summary; next[key] = cache[key];
+      console.log('AI 摘要（缓存命中）: 择期订单恢复时长');
+    } else {
+      console.log('AI 摘要（调用 DeepSeek）: 择期订单恢复时长 …');
+      ZQ.durAI = await deepseekSummary('择期订单恢复时长', ZQ.durText,
+        '请写一段面向业务负责人的总结：说明择期单从单采血入库到恢复生产的时长水平、离散程度（均值与中位差）、长尾订单情况，以及对库存与生产计划的建议。控制在 120 字以内。');
+      next[key] = { fp: fp, summary: ZQ.durAI, at: DP };
+      console.log('  ✓ ' + ZQ.durAI.slice(0, 40) + '…');
+    }
+    ZQ.durAt = DP;
+  })();
+
   try { fs.writeFileSync(AI_CACHE_FILE, JSON.stringify(next, null, 2), 'utf-8'); } catch (e) { console.warn('⚠️ 写 AI 摘要缓存失败:', e.message); }
   ABN_MGMT.summaryAt = DP;
 }
@@ -2107,6 +2215,190 @@ try {
   console.error('⚠️ 读取 生产异常订单.xlsx Sheet2 失败:', e.message);
 }
 
+
+// ── 8z. 产能利用率：生产异常订单.xlsx Sheet1（月度：合计天数 / 实际使用天数 / 利用率%） ──
+var DEMAND_CAP_TEXT = '', DEMAND_CAP_TEXT_AI = '';
+var CAPACITY = { at: '', months: [], rows: [], aiText: '', ai: '', aiAt: '' };
+try {
+  var cpPath = path.join(rawDir, '生产异常订单.xlsx');
+  if (!fs.existsSync(cpPath)) cpPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '生产异常订单.xlsx');
+  if (fs.existsSync(cpPath)) {
+    CAPACITY.at = fmtDT(fs.statSync(cpPath).mtime);
+    var cpAoa = XLSX.utils.sheet_to_json(XLSX.readFile(cpPath).Sheets['Sheet1'], { header: 1, defval: '' });
+    var cpH = (cpAoa[0] || []).map(function (h) { return String(h).replace(/[\r\n\s]/g, ''); });
+    var cpMonth = cpH.indexOf('Month');
+    var cpTotal = -1, cpUsed = -1, cpRate = -1;
+    cpH.forEach(function (h, i) {
+      if (h.indexOf('月合计天数') >= 0) cpTotal = i;
+      if (h.indexOf('月实际使用天数') >= 0) cpUsed = i;
+      if (h.indexOf('利用率') >= 0) cpRate = i;
+    });
+    for (var ck2 = 1; ck2 < cpAoa.length; ck2++) {
+      var cr2 = cpAoa[ck2] || [];
+      var cmRaw = String(cr2[cpMonth] == null ? '' : cr2[cpMonth]).trim();
+      if (!/^\d{6}$/.test(cmRaw)) continue;
+      var cYm = cmRaw.slice(0, 4) + '-' + cmRaw.slice(4, 6);
+      if (cYm > DP.slice(0, 7)) continue;                 // 未来月份（如 12 月）不计
+      if (cYm === DP.slice(0, 7) && !(Number(cr2[cpUsed]) || 0)) continue;   // 当月尚未产生使用天数，避免 0% 拉低均值
+      var cTot = Number(cr2[cpTotal]) || 0, cUse = Number(cr2[cpUsed]) || 0;
+      var cRt = cr2[cpRate] !== '' && cr2[cpRate] != null ? Number(cr2[cpRate]) : (cTot > 0 ? cUse / cTot : 0);
+      if (cRt > 1.5) cRt = cRt / 100;                 // 兼容直接给百分数的写法
+      CAPACITY.rows.push({ ym: cYm, total: cTot, used: cUse, rate: Math.round(cRt * 1000) / 10 });
+    }
+    CAPACITY.rows.sort(function (a, b) { return a.ym < b.ym ? -1 : 1; });
+    CAPACITY.months = CAPACITY.rows.map(function (r) { return r.ym; });
+    console.log('产能利用率: ' + CAPACITY.rows.length + ' 个月 |',
+      CAPACITY.rows.slice(-3).map(function (r) { return r.ym + ' ' + r.rate + '%'; }).join(' / '));
+  } else {
+    console.warn('⚠️ 未找到 生产异常订单.xlsx，产能利用率数据为空');
+  }
+} catch (e) {
+  console.error('⚠️ 读取 产能利用率（Sheet1）失败:', e.message);
+}
+
+// ── 8z2. 择期订单：初始择期 / 中途择期 / 恢复生产 / 择期取消 / 当前择期 / 恢复时长 ──
+// 口径（2026-11-05 用户确认）：
+//   init   初始择期 = 支付方式含「择期」
+//   mid    中途择期 = order dict 的「申请修改为择期生产」非空，且非初始择期（互斥）
+//   resume 恢复生产 = 有恢复生产时间
+//   cancel 择期取消 = 取消回输标记=1 且【未恢复生产】（已恢复的取消单不计，否则校验等式不成立）
+//   cur    当前择期 = 择期且未恢复、未取消
+//   durDays 恢复时长 = 恢复生产时间 − 仓库接收单采血时间
+var ZQ = { at: '', rows: [], months: [], aiText: '', ai: '', aiAt: '', durText: '', durAI: '', durAt: '' };
+try {
+  var zqFlow = {};
+  (FLOW.orders || []).forEach(function (f) { zqFlow[f.no] = f; });
+  var ZQ_PLACE = /^(W{5,}|X{5,}|Y{5,}|H{6,}|L{6,}|M{6,}|N{6,})$/;
+  var zqMons = {};
+  PROD_OPS.rows.forEach(function (r) {
+    if (ZQ_PLACE.test(r.no || '')) return;
+    var f = zqFlow[r.no] || {};
+    var isInit = String(f.pay || '').indexOf('择期') >= 0;
+    var isMid = !!f.modZq && !isInit;
+    if (!isInit && !isMid) {
+      // 非择期单也保留（表格「下单数」要用），择期字段全为 0
+      ZQ.rows.push({ no: r.no, od: r.od || '', am: r.am || '', hosp: r.hosp || '', init: 0, mid: 0, resume: 0, cancel: 0, cur: 0, durDays: null });
+      if (r.od) zqMons[r.od.slice(0, 7)] = true;
+      return;
+    }
+    var resumed = !!r.resume;
+    var cancelled = String(f.cancel || '') === '1';
+    var cancelZq = cancelled && !resumed;
+    var dur = null;
+    if (resumed && r.receive) {
+      var dA = new Date(String(r.receive).replace(/-/g, '/')), dB = new Date(String(r.resume).replace(/-/g, '/'));
+      var dDay = Math.round((dB - dA) / 86400000);
+      if (isFinite(dDay) && dDay >= 0) dur = dDay;
+    }
+    ZQ.rows.push({
+      no: r.no, od: r.od || '', am: r.am || '', hosp: r.hosp || '',
+      init: isInit ? 1 : 0, mid: isMid ? 1 : 0,
+      resume: resumed ? 1 : 0, cancel: cancelZq ? 1 : 0,
+      cur: (!resumed && !cancelled) ? 1 : 0,
+      durDays: dur
+    });
+    if (r.od) zqMons[r.od.slice(0, 7)] = true;
+  });
+  ZQ.months = Object.keys(zqMons).sort();
+  ZQ.at = DP;
+  var zqT = { init: 0, mid: 0, ri: 0, rm: 0, can: 0, cur: 0 };
+  ZQ.rows.forEach(function (r) {
+    if (r.init) { zqT.init++; if (r.resume) zqT.ri++; }
+    if (r.mid) { zqT.mid++; if (r.resume) zqT.rm++; }
+    zqT.can += r.cancel; zqT.cur += r.cur;
+  });
+  console.log('择期订单: 初始 ' + zqT.init + ' / 中途 ' + zqT.mid + ' / 初始恢复 ' + zqT.ri +
+    ' / 中途恢复 ' + zqT.rm + ' / 取消 ' + zqT.can + ' / 当前择期 ' + zqT.cur +
+    ' | 校验 ' + (zqT.init + zqT.mid - zqT.ri - zqT.rm - zqT.can === zqT.cur ? '✓ 通过' : '✗ 不通过'));
+} catch (e) {
+  console.error('⚠️ 生成择期订单数据失败:', e.message);
+}
+
+
+// ── 8z3. 全流程订单明细（含要求生产时间/D1/下单时间），供生产需求与产能两页使用 ──
+// 全流程判定同看板既有口径：择期（支付方式含择期 或 有「申请修改为择期生产」）且未恢复生产 → 冻存，剔除
+var FULL_OPS = [];
+try {
+  var foFlow = {};
+  (FLOW.orders || []).forEach(function (f) { foFlow[f.no] = f; });
+  var FO_PLACE = /^(W{5,}|X{5,}|Y{5,}|H{6,}|L{6,}|M{6,}|N{6,})$/;
+  PROD_OPS.rows.forEach(function (r) {
+    if (FO_PLACE.test(r.no || '')) return;
+    var f = foFlow[r.no] || {};
+    var zq = (String(f.pay || '').indexOf('择期') >= 0) || !!f.modZq;
+    if (zq && !r.resume) return;                                   // 冻存单不计
+    FULL_OPS.push({
+      no: r.no, od: r.od || '', am: r.am || '', hosp: r.hosp || '',
+      req: r.resume || r.receive || '',                            // 要求生产时间：恢复生产优先，否则单采血入库
+      d1: r.d1 || '', receive: r.receive || '', resume: r.resume || ''
+    });
+  });
+  console.log('全流程订单（生产需求页口径）:', FULL_OPS.length, '单');
+} catch (e) {
+  console.error('⚠️ 生成全流程订单数据失败:', e.message);
+}
+
+
+// ── 8z4. 生产需求/产能 洞察指标（对应分析口径：月内分布、下半月占比、冗余测算） ──
+var DEMAND_CAP_METRICS = null, CAPACITY_METRICS = null;
+try {
+  (function () {
+    var reqDays = [], d1Days = [], both = 0, mismatch = 0, lowReq = 0, nReq = 0;
+    FULL_OPS.forEach(function (r) {
+      if (r.req) {
+        var d = +r.req.slice(8, 10); reqDays.push(d); nReq++; if (d >= 16) lowReq++;
+        if (r.d1) { both++; if (r.d1.slice(0, 7) !== r.req.slice(0, 7)) mismatch++; }
+      }
+      if (r.d1) d1Days.push(+r.d1.slice(8, 10));
+    });
+    function pct(a, p) { if (!a.length) return 0; var v = a.slice().sort(function (x, y) { return x - y; });
+      var k = (v.length - 1) * p, lo = Math.floor(k), hi = Math.min(lo + 1, v.length - 1);
+      return v[lo] + (v[hi] - v[lo]) * (k - lo); }
+    var reqMed = pct(reqDays, .5), reqQ3 = pct(reqDays, .75);
+    var d1Med = pct(d1Days, .5);
+    DEMAND_CAP_METRICS = {
+      nReq: nReq, lowShare: nReq ? lowReq / nReq * 100 : 0,
+      reqMed: reqMed, reqQ3: reqQ3, d1Med: d1Med,
+      leadDays: reqMed - d1Med,
+      mismatchShare: both ? mismatch / both * 100 : 0, both: both
+    };
+    console.log('洞察-需求: 中位第 ' + reqMed.toFixed(1) + ' 天 / Q3 第 ' + reqQ3.toFixed(1) + ' 天 / 下半月 ' +
+      DEMAND_CAP_METRICS.lowShare.toFixed(1) + '% / D1 中位第 ' + d1Med.toFixed(1) + ' 天 / 提前 ' +
+      DEMAND_CAP_METRICS.leadDays.toFixed(1) + ' 天 / 实际≠要求 ' + DEMAND_CAP_METRICS.mismatchShare.toFixed(1) + '%');
+  })();
+  (function () {
+    var rows = CAPACITY.rows; if (!rows.length) return;
+    var byM = {};
+    FULL_OPS.forEach(function (r) {
+      if (!r.req) return;
+      var ym2 = r.req.slice(0, 7);
+      var o = byM[ym2] || (byM[ym2] = { a: 0, l: 0 });
+      o.a++; if (+r.req.slice(8, 10) >= 16) o.l++;
+    });
+    var shares = [], over50 = 0, cnt = 0, peak = null;
+    rows.forEach(function (r) {
+      var o = byM[r.ym]; if (!o || !o.a) return;
+      var sh = o.l / o.a * 100;
+      shares.push(sh); cnt++; if (sh > 50) over50++;
+      if (!peak || r.rate > peak.rate) peak = { ym: r.ym, rate: r.rate, share: sh };
+    });
+    shares.sort(function (a, b) { return a - b; });
+    var p90 = shares.length ? shares[Math.min(shares.length - 1, Math.floor(shares.length * 0.9))] : 0;
+    var avgRate = rows.reduce(function (a, b) { return a + b.rate; }, 0) / rows.length;
+    CAPACITY_METRICS = {
+      avgRate: avgRate, months: rows.length,
+      over50: over50, cnt: cnt,
+      peak: peak,
+      p90Share: p90,
+      redundancy: p90 > 50 ? p90 / 50 - 1 : 0          // 下半月占比相对 50% 的超出比例 → 建议冗余
+    };
+    console.log('洞察-产能: 平均利用率 ' + avgRate.toFixed(1) + '% / 下半月>50% 的月 ' + over50 + '/' + cnt +
+      ' / 峰值月 ' + (peak ? peak.ym + ' ' + peak.rate + '%（下半月 ' + peak.share.toFixed(0) + '%）' : '—') +
+      ' / 建议冗余 ' + (CAPACITY_METRICS.redundancy * 100).toFixed(0) + '%');
+    CAPACITY.metrics = CAPACITY_METRICS;
+  })();
+} catch (e) { console.error('⚠️ 计算洞察指标失败:', e.message); }
+
 // ── 10. 输出 js/data.js（页面直接 <script> 引用） ──
 (async function () {
 await buildSummaries();
@@ -2145,7 +2437,11 @@ var outJS = '/* 自动生成文件 — 请勿手动修改，运行 node build_da
     TECH_BIZ: TECH_BIZ,
     COS_MAP: COS_MAP,
     INSURANCE: INSURANCE,
-    PROD_ABN: PROD_ABN
+    PROD_ABN: PROD_ABN,
+    DEMAND_CAP: { ai: DEMAND_CAP_TEXT_AI, stats: DEMAND_CAP_TEXT, at: DP, metrics: DEMAND_CAP_METRICS },
+    CAPACITY: CAPACITY,   // CAPACITY.metrics 在下方挂载
+    ZQ: ZQ,
+    FULL_OPS: FULL_OPS
   }, null, 2) + ';\n';
 var outPath = path.join(__dirname, 'js', 'data.js');
 fs.writeFileSync(outPath, outJS, 'utf-8');
