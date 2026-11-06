@@ -26,3 +26,6 @@ deepseek_api_key.txt
 
 # AI 摘要缓存（含异常订单管理 + 省份&医院数据，不入库）
 .ai_summary_cache.json
+
+# 手工备份（.bak_日期）不进 git
+*.bak_*
