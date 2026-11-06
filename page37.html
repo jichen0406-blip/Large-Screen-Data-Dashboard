@@ -19,6 +19,8 @@
 	.rz-bar{ flex:0 0 auto; margin:10px 0 0; }
 	.rz-sep{ color:rgba(159,232,255,.75); font-size:14px; }
 	.rz-body{ flex:1; min-height:0; display:flex; gap:12px; margin:10px 0 0; }
+	.rz-body-col{ flex-direction:column; }
+	.rz-body-col .rz-box{ flex:1 1 0; }
 	.rz-box{ flex:1; min-height:0; display:flex; flex-direction:column; border:1px solid rgba(7,118,181,.5);
 		box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 12px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:6px 12px 8px; overflow:hidden; }
 	.rz-chart{ flex:1; min-height:0; width:100%; }
@@ -93,13 +95,25 @@
 			<span class="pt-time-note" id="cpNote"></span>
 		</div>
 		<div class="kpi-grid rz-kpis" id="cpKpi"></div>
-		<div class="rz-body">
+		<div class="rz-body rz-body-col">
 			<div class="rz-box">
 				<div class="sec-head">细胞生产区利用率 &amp; 下半月需求占比 <span class="sub">两条线共用 0–100% 单一 Y 轴 · 红线=50%</span><button class="map-fs" type="button" data-fs="cpChart" data-title="产能利用率与下半月需求占比">⛶</button></div>
 				<div class="rz-chart" id="cpChart"></div>
 			</div>
+			<div class="rz-box">
+				<div class="sec-head">产能实际使用情况 <span class="sub">柱=月合计天数 / 月实际使用天数（天，左轴）· 绿线=利用率（右轴 0–100%）</span><button class="map-fs" type="button" data-fs="cpChart2" data-title="产能实际使用情况">⛶</button></div>
+				<div class="rz-chart" id="cpChart2"></div>
+			</div>
 		</div>
 		<div class="insight-bar" id="cpAI"></div>
+	</div>
+	<!-- 全屏放大 -->
+	<div class="fs-mask" id="fsMask" style="display:none;">
+		<div class="fs-head">
+			<span class="fs-title" id="fsTitle">--</span>
+			<button class="fs-close" id="fsClose" type="button">×</button>
+		</div>
+		<div class="fs-body" id="fsBody"></div>
 	</div>
 	<!-- 网页导航菜单 -->
 	<div class="menu-mask" id="menuMask" style="display:none;">

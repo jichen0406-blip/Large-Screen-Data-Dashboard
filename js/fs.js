@@ -59,7 +59,7 @@ $(function () {
             if (ex) { fsExtra = ex; ex._fsHome = ex.parentNode; $(ex).appendTo('#fsBody'); }
         }
         $('#fsTitle').text($(this).data('title'));
-        if (isChart) { el._ow = el.offsetWidth; el._oh = el.offsetHeight; }
+        el._ow = el.offsetWidth; el._oh = el.offsetHeight;
         $(el).appendTo('#fsBody');
         $('#fsMask').show();
         $(document).trigger('boardfs', { active: true });
@@ -74,7 +74,16 @@ $(function () {
                 _charts.forEach(function (ch) { ch.resize(); scaleChartFonts(ch, sc); });
             }, 50);
         } else {
-            setTimeout(function () { resizeChart(el); }, 50);
+            setTimeout(function () {
+                resizeChart(el);
+                var ow = el._ow || 1;
+                var sc = Math.min(1.8, Math.max(1, $('#fsBody').width() / ow));
+                var cs = (el.id === 'coeContrib') ? collectCharts(el) : [];   // 仅 COE 三页的 YTD 折线图做字号放大，其余保持原样
+                if (cs.length && sc > 1.05) {
+                    el._snap = cs.map(function (ch) { return JSON.parse(JSON.stringify(ch.getOption())); });
+                    cs.forEach(function (ch) { scaleChartFonts(ch, sc); });
+                }
+            }, 50);
         }
     });
     $('#fsClose').on('click', closeFs);

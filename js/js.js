@@ -123,7 +123,7 @@ function monthlyTrend() {
                 itemHeight: 12,
                 itemGap: 30
             },
-            grid: { left: '0%', top: '18%', right: '0%', bottom: '0%', containLabel: true },
+            grid: { left: '0%', top: '18%', right: '0%', bottom: 8, containLabel: true },
             xAxis: [{
                 type: 'category',
                 data: months,
@@ -143,21 +143,24 @@ function monthlyTrend() {
                 type: 'line',
                 smooth: true,
                 data: curData,
-                symbolSize: 5,
-                itemStyle: { normal: { color: curColor } },
+                symbolSize: 7,
+                itemStyle: { normal: { color: '#ffffff', borderColor: curColor, borderWidth: 2 } },
                 lineStyle: { color: curColor, width: 2 }
             }, {
                 name: lyLabel,
                 type: 'line',
                 smooth: true,
                 data: ly,
-                symbolSize: 4,
-                itemStyle: { normal: { color: '#c0c0c0' } },
+                symbolSize: 6,
+                itemStyle: { normal: { color: '#ffffff', borderColor: '#c0c0c0', borderWidth: 2 } },
                 lineStyle: { color: '#c0c0c0', width: 2 }
             }]
         };
         myChart.setOption(option);
         window.addEventListener("resize", function () { myChart.resize(); });
+        // 容器尺寸在首屏布局后可能再变（字体/滚动条/换行），补一次 resize 并持续监听，避免坐标轴标签压到容器边框
+        setTimeout(function () { myChart.resize(); }, 300);
+        if (window.ResizeObserver) { try { new ResizeObserver(function () { myChart.resize(); }).observe(el); } catch (e) { } }
     }
     build('orderMonthlyTrendChart', B.MONTH.O, B.MONTH.OLY);
     build('reinfusionMonthlyTrendChart', B.MONTH.R, B.MONTH.RLY, '#62c98d');

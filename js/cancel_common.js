@@ -183,8 +183,8 @@
             label: { show: true, position: 'inside', color: '#0b1f3a', fontSize: 12, fontWeight: 700 }
           },
           {
-            name: '趋势', type: 'line', data: yrN, smooth: true, symbol: 'circle', symbolSize: 7,
-            itemStyle: { color: '#9fe8ff' }, lineStyle: { color: '#9fe8ff', width: 1.6, type: 'dashed' },
+            name: '趋势', type: 'line', data: yrN, smooth: true, symbol: 'circle', symbolSize: 9,
+            itemStyle: { color: '#ffffff', borderColor: '#9fe8ff', borderWidth: 2 }, lineStyle: { color: '#9fe8ff', width: 1.6, type: 'dashed' },
             label: {
               show: true, position: 'top', distance: 8, color: '#daf9ff', fontSize: 11,
               formatter: function (p) { return pct(yrN[p.dataIndex], yrDenom[yrs[p.dataIndex]] || 0); }

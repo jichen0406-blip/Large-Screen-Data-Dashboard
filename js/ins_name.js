@@ -1,5 +1,5 @@
-// 惠民保 & 商保 名称统计（page29）
-// 口径：组合值（如「惠军保+苏惠保」）已拆开分别计数，故名称合计略大于该类订单数
+// 保险综合统计（page29）：惠民保 / 商保 的险种类型分布
+// 口径：组合值（如「惠军保+苏惠保」）已拆开分别计数，故保险类型条目数略大于该类订单数
 $(function () {
     var B = window.BOARD_DATA;
     var I = B && B.INSURANCE;
@@ -107,13 +107,13 @@ $(function () {
 
         // 卡片
         document.getElementById('nmKpi').innerHTML =
-            '<div class="kpi-card" style="--ac:#4fe3ff"><div class="kc-label">惠民保名称数</div>' +
+            '<div class="kpi-card" style="--ac:#4fe3ff"><div class="kc-label">惠民保类型</div>' +
             '<div class="kc-val">' + Object.keys(nameHb).length + '<small>个</small></div>' +
             '<div class="kc-sub">' + thousands(hbOrders) + ' 单</div></div>' +
-            '<div class="kpi-card" style="--ac:#ffcf4d"><div class="kc-label">商保名称数</div>' +
+            '<div class="kpi-card" style="--ac:#ffcf4d"><div class="kc-label">商保类型</div>' +
             '<div class="kc-val">' + Object.keys(nameBx).length + '<small>个</small></div>' +
             '<div class="kc-sub">' + thousands(bxOrders) + ' 单</div></div>' +
-            '<div class="kpi-card" style="--ac:#62c98d"><div class="kc-label">名称合计</div>' +
+            '<div class="kpi-card" style="--ac:#62c98d"><div class="kc-label">保险类型</div>' +
             '<div class="kc-val">' + list.length + '<small>项</small></div>' +
             '<div class="kc-sub">组合值已拆开计数</div></div>';
 

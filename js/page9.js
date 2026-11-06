@@ -41,8 +41,8 @@
             yAxis: { type: 'value', minInterval: 1, axisLabel: { color: 'rgba(255,255,255,.55)' }, splitLine: { lineStyle: { color: 'rgba(255,255,255,.08)' } } },
             series: META.map(function (m) {
                 return {
-                    name: m.label, type: 'line', smooth: true, symbol: 'circle', symbolSize: 4,
-                    lineStyle: { width: 2, color: COLORS[m.cls] }, itemStyle: { color: COLORS[m.cls] },
+                    name: m.label, type: 'line', smooth: true, symbol: 'circle', symbolSize: 6,
+                    lineStyle: { width: 2, color: COLORS[m.cls] }, itemStyle: { color: '#ffffff', borderColor: COLORS[m.cls], borderWidth: 2 },
                     data: B.DAILY30.map(function (d) { return total(d[m.key]); })
                 };
             })

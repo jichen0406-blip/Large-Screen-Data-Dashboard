@@ -1583,7 +1583,7 @@ async function buildSummaries() {
     Object.keys(hb).forEach(function (k) { all.push({ n: k, t: '惠民保', v: hb[k] }); });
     Object.keys(bx).forEach(function (k) { all.push({ n: k, t: '商保', v: bx[k] }); });
     all.sort(function (a, b) { return b.v - a.v; });
-    return '惠民保名称 ' + Object.keys(hb).length + ' 个（' + nh + ' 单），商保名称 ' +
+    return '惠民保类型 ' + Object.keys(hb).length + ' 个（' + nh + ' 单），商保类型 ' +
       Object.keys(bx).length + ' 个（' + nb + ' 单）。\nTop10：' +
       all.slice(0, 10).map(function (x) { return x.t + '·' + x.n + ' ' + x.v + ' 单'; }).join('、') + '。';
   }
@@ -1592,13 +1592,13 @@ async function buildSummaries() {
       ask: '请写一段面向业务负责人的总结：说明惠民保的渗透水平（订单占比）、区域集中度与主力险种，并指出可提升的方向。控制在 120 字以内，不要罗列所有数字。' },
     { k: 'ins_bx', name: '商保管理', text: insStatsText('bx', '商保'), fld: 'bx',
       ask: '请写一段面向业务负责人的总结：说明商保的渗透水平（订单占比）、区域集中度与主力险种，并指出可提升的方向。控制在 120 字以内，不要罗列所有数字。' },
-    { k: 'ins_name', name: '惠民保 & 商保名称统计', text: nameStatsText(), fld: 'name',
-      ask: '请写一段面向业务负责人的总结：说明两类险种的名称集中度与长尾特征，指出值得加码或整合的名称，控制在 120 字以内。' }
+    { k: 'ins_name', name: '保险综合统计', text: nameStatsText(), fld: 'name', fpv: 'v3_',
+      ask: '请写一段面向业务负责人的总结：说明两类险种的类型集中度与长尾特征，指出值得加码或整合的险种类型。统一用「类型」表述（例如「惠民保类型 36 个、310 单」），不要用「名称」「类」等说法。控制在 120 字以内，不要罗列所有数字。' }
   ];
   INSURANCE.ai = INSURANCE.ai || {};
   for (var ia = 0; ia < INS_AI.length; ia++) {
     var iaItem = INS_AI[ia];
-    var iaFp = 'v1_' + iaItem.k + '_' + INS_TOT + '_' + INSURANCE.rows.length;
+    var iaFp = (iaItem.fpv || 'v1_') + iaItem.k + '_' + INS_TOT + '_' + INSURANCE.rows.length;
     if (cache[iaItem.k] && cache[iaItem.k].fp === iaFp && cache[iaItem.k].summary) {
       INSURANCE.ai[iaItem.fld] = cache[iaItem.k].summary;
       next[iaItem.k] = cache[iaItem.k];
@@ -1710,10 +1710,10 @@ async function buildSummaries() {
     var key = 'demand_cap', fp = 'v4|' + String(FULL_OPS.length) + '|' + low + '|' + med(reqD) + '|' + med(d1D);
     if (cache[key] && cache[key].fp === fp && cache[key].summary) {
       DEMAND_CAP_TEXT_AI = cache[key].summary; next[key] = cache[key];
-      console.log('AI 摘要（缓存命中）: 生产需求和产能匹配度');
+      console.log('AI 摘要（缓存命中）: 生产需求匹配度');
     } else {
-      console.log('AI 摘要（调用 DeepSeek）: 生产需求和产能匹配度 …');
-      DEMAND_CAP_TEXT_AI = await deepseekSummary('生产需求和产能匹配度', DEMAND_CAP_TEXT,
+      console.log('AI 摘要（调用 DeepSeek）: 生产需求匹配度 …');
+      DEMAND_CAP_TEXT_AI = await deepseekSummary('生产需求匹配度', DEMAND_CAP_TEXT,
         '请写一段面向业务负责人的分析，180 字以内，按以下思路：① 先解释怎么看箱线图（箱体=25%~75% 分位、横线=中位数、须=1.5 倍四分位距内极值、橙点=离群值，红虚线是月中 15 号）；② 指出要求生产时间是否整体压在月内后半段（中位数第几号、Q3 第几号、下半月占比多少），说明这是每月重复的结构性分布而非偶发；③ 对比实际 D1 只比要求日提前了两三天，说明生产端柔性已用尽；④ 结论：问题不在总量而在月内时间结构，需要冗余产能吸收峰值。');
       next[key] = { fp: fp, summary: DEMAND_CAP_TEXT_AI, at: DP };
       console.log('  ✓ ' + DEMAND_CAP_TEXT_AI.slice(0, 40) + '…');

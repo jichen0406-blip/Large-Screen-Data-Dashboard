@@ -19,7 +19,13 @@ $(function () {
     R.initRange('cp', CAP.months.slice(), B.DP);
 
     var chart = echarts.init(document.getElementById('cpChart'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
-    function resize() { try { chart.resize(); } catch (e) { } }
+    var chart2 = echarts.init(document.getElementById('cpChart2'), null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
+    var last = null;
+    function resize() {
+        try { chart.resize(); } catch (e) { }
+        try { chart2.resize(); } catch (e) { }
+        if (last) { try { renderBars(last.rows, last.ms); } catch (e) { } }   // 标注框按像素定位，宽度变了要重算
+    }
     window.addEventListener('resize', resize);
     $(document).on('boardfs', function () { setTimeout(resize, 80); });
     $(document).on('boardlogin', function () { setTimeout(resize, 80); });
@@ -67,14 +73,14 @@ $(function () {
             series: [
                 {
                     name: '细胞生产区利用率', type: 'line',
-                    data: rate, symbol: 'circle', symbolSize: 7, smooth: false,
-                    lineStyle: { color: '#4fe3ff', width: 2.4 }, itemStyle: { color: '#4fe3ff' },
+                    data: rate, symbol: 'circle', symbolSize: 9, smooth: false,
+                    lineStyle: { color: '#4fe3ff', width: 2.4 }, itemStyle: { color: '#ffffff', borderColor: '#4fe3ff', borderWidth: 2 },
                     label: { show: false }
                 },
                 {
                     name: '下半月需求占比', type: 'line',
-                    data: low, symbol: 'circle', symbolSize: 7, connectNulls: true,
-                    lineStyle: { color: '#37d67a', width: 2.4 }, itemStyle: { color: '#37d67a' },
+                    data: low, symbol: 'circle', symbolSize: 9, connectNulls: true,
+                    lineStyle: { color: '#37d67a', width: 2.4 }, itemStyle: { color: '#ffffff', borderColor: '#37d67a', borderWidth: 2 },
                     markLine: {
                         silent: true, symbol: 'none',
                         lineStyle: { color: '#ff4d4f', type: 'dashed', width: 1.4 },
@@ -85,6 +91,7 @@ $(function () {
             ]
         }, true);
 
+        renderBars(rows, ms);
         renderKpi(rows, low);
         var note = document.getElementById('cpNote');
         if (note && rows.length) {
@@ -98,6 +105,119 @@ $(function () {
         var el = document.getElementById(id);
         if (el) el.addEventListener('change', render);
     });
+    // ── 下图：产能实际使用情况（柱=月合计天数/月实际使用天数，左轴天；绿线=利用率，右轴 %）──
+    // 图上要圈出的特殊月份在此维护：a=起始月, b=结束月, t=标注文案
+    var NOTES = [
+        { a: '2025-07', b: '2025-09', t: '人员培训，产能爬坡中' },
+        { a: '2026-02', b: '2026-02', t: '工厂维保' }
+    ];
+    function renderBars(rows, ms) {
+        var totals = rows.map(function (r) { return r.total; });
+        var used = rows.map(function (r) { return r.used; });
+        var rates = rows.map(function (r) { return r.rate; });
+        var maxT = Math.max.apply(null, totals.concat([0]));
+        var yMax = Math.max(100, Math.ceil(maxT * 1.45 / 100) * 100);   // 留足上方空间，避免柱顶数字与利用率折线标签打架
+        var dense = ms.length > 24;              // 月份太多时不再逐个标数字，避免糊成一片
+
+        var areas = [];
+        NOTES.forEach(function (n) {
+            var i = ms.indexOf(n.a), j = ms.indexOf(n.b);
+            if (i < 0 && j < 0) return;          // 整段不在所选区间
+            if (i < 0) i = 0;                    // 起点早于区间 → 裁到左边界
+            if (j < 0) j = ms.length - 1;
+            if (i > j) return;
+            areas.push({ i: i, j: j, t: n.t });
+        });
+
+        // 标注框（含单月）用 graphic 画：markArea 在「起止同月」时宽度为 0，画不出来
+        var GR = { l: 58, r: 62, t: 44, b: 44 };
+        var W = chart2.getWidth(), H = chart2.getHeight();
+        var band = ms.length ? (W - GR.l - GR.r) / ms.length : 0;
+        var els = [];
+        areas.forEach(function (a, k) {
+            var x1 = GR.l + a.i * band, x2 = GR.l + (a.j + 1) * band;
+            els.push({
+                type: 'rect', id: 'cpNote' + k, silent: true,
+                left: x1, top: GR.t, width: Math.max(x2 - x1, 2), height: H - GR.t - GR.b,
+                style: { fill: 'rgba(255,77,79,.05)', stroke: '#ff4d4f', lineWidth: 1.2, lineDash: [4, 3] }
+            });
+            els.push({
+                type: 'text', id: 'cpNoteT' + k, silent: true,
+                left: x1 + 4, top: GR.t + 4,
+                style: { text: a.t, fill: '#ff8a80', font: '12px sans-serif' }
+            });
+        });
+
+        last = { rows: rows, ms: ms };
+        chart2.resize();
+        chart2.setOption({
+            animation: false,
+            grid: { left: GR.l, right: GR.r, top: GR.t, bottom: GR.b },
+            tooltip: $.extend(R.barTooltip(), {
+                trigger: 'axis',
+                textStyle: { color: '#dff4ff', fontSize: 13 },
+                formatter: function (ps) {
+                    var i = ps[0].dataIndex, r = rows[i];
+                    return '<b style="font-size:14px">' + ms[i] + '</b><br/>' +
+                        '月合计天数：<b>' + r.total + '</b> 天<br/>' +
+                        '月实际使用：<b>' + r.used + '</b> 天<br/>' +
+                        '利用率：<b>' + r.rate + '%</b>';
+                }
+            }),
+            legend: {
+                top: 6, left: 'center', itemWidth: 16, itemHeight: 9,
+                textStyle: { color: 'rgba(223,244,255,.85)', fontSize: 13 },
+                data: ['月合计天数', '月实际使用天数', '利用率']
+            },
+            graphic: { elements: els },
+            xAxis: {
+                type: 'category', data: ms,
+                axisLine: { lineStyle: { color: 'rgba(112,187,252,.45)' } },
+                axisLabel: { color: 'rgba(223,244,255,.8)', fontSize: 11, rotate: 0, interval: 'auto', formatter: function (v) { return v.slice(2); } },
+                axisTick: { show: false }
+            },
+            yAxis: [
+                {
+                    type: 'value', min: 0, max: yMax, interval: yMax > 500 ? 100 : 50,
+                    name: '天', nameTextStyle: { color: 'rgba(223,244,255,.7)', fontSize: 12 },
+                    axisLine: { show: false },
+                    axisLabel: { color: 'rgba(223,244,255,.8)', fontSize: 12 },
+                    splitLine: { lineStyle: { color: 'rgba(255,255,255,.07)' } }
+                },
+                {
+                    type: 'value', min: 0, max: 100, interval: 20,
+                    name: '%', nameTextStyle: { color: 'rgba(223,244,255,.7)', fontSize: 12 },
+                    axisLine: { show: false },
+                    axisLabel: { color: '#7ff0a8', fontSize: 12, formatter: '{value}%' },
+                    splitLine: { show: false }
+                }
+            ],
+            series: [
+                {
+                    name: '月合计天数', type: 'bar', barWidth: '38%', barGap: '-100%', data: totals, z: 10,
+                    itemStyle: { color: 'transparent', borderColor: '#7cc0ff', borderWidth: 1.4, borderType: 'dashed' },
+                    label: { show: !dense, position: 'top', color: 'rgba(159,232,255,.85)', fontSize: 10 }
+                },
+                {
+                    name: '月实际使用天数', type: 'bar', barWidth: '38%', data: used,
+                    itemStyle: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: 'rgba(79,227,255,.85)' },
+                            { offset: 1, color: 'rgba(47,137,207,.30)' }
+                        ])
+                    },
+                    label: { show: !dense, position: 'inside', color: '#ffffff', fontSize: 11, fontWeight: 700 }
+                },
+                {
+                    name: '利用率', type: 'line', yAxisIndex: 1, data: rates,
+                    symbol: 'circle', symbolSize: 9,
+                    lineStyle: { color: '#37d67a', width: 2.2 }, itemStyle: { color: '#ffffff', borderColor: '#37d67a', borderWidth: 2 },
+                    label: { show: false }        // 逐点标注会和柱顶数字打架，百分比看右轴刻度 + 悬浮提示
+                }
+            ]
+        }, true);
+    }
+
     // 顶部洞察指标卡：跟随当前时间区间实时计算
     function renderKpi(rows, low) {
         var box = document.getElementById('cpKpi');

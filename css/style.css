@@ -126,6 +126,7 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .fs-close{ margin-left:auto; background:none; border:1px solid rgba(255,255,255,.4); color:#fff; width:28px; height:28px; line-height:26px; border-radius:50%; cursor:pointer; font-size:18px; }
 .fs-close:hover{ border-color:#f4e925; color:#f4e925; }
 .fs-body{ position:relative; flex:1; min-height:0; }
+.fs-body .coe-chart{ width:100%; height:100%; }
 .fs-body .map{ height:100%; }
 
 .mainbox{padding: 0px 10px; margin-top: 14.4px; margin-left: 66px; overflow: hidden;}
@@ -143,7 +144,8 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .nav2{}
 .nav2>li:first-child{border:none;}
 /* .tit01 已并入 .sec-head */
-.nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height: clamp(200px, calc(100vh - 720px), 380px); padding: 0 10px 10px 10px; display: flex; flex-direction: column;}
+.nav2>li>.sec-head{ padding-top:4px; padding-bottom:6px; margin-bottom:6px; }
+.nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height: clamp(190px, calc(100vh - 740px), 360px); padding: 0 10px 10px 10px; display: flex; flex-direction: column;}
 
 .ftechart{ flex: 1; min-height: 0; width: 100%; }
 .chart-box{ position: relative; flex: 1; min-height: 0; }

@@ -107,13 +107,13 @@
         series: [
           {
             name: 'YTD下单贡献', type: 'line', data: oPct, connectNulls: false,
-            symbol: 'circle', symbolSize: 7,
-            lineStyle: { width: 2, color: ORDER_C }, itemStyle: { color: ORDER_C }
+            symbol: 'circle', symbolSize: 9,
+            lineStyle: { width: 2, color: ORDER_C }, itemStyle: { color: '#ffffff', borderColor: ORDER_C, borderWidth: 2 }
           },
           {
             name: 'YTD回输贡献', type: 'line', data: rPct, connectNulls: false,
-            symbol: 'circle', symbolSize: 7,
-            lineStyle: { width: 2, color: REINF_C }, itemStyle: { color: REINF_C }
+            symbol: 'circle', symbolSize: 9,
+            lineStyle: { width: 2, color: REINF_C }, itemStyle: { color: '#ffffff', borderColor: REINF_C, borderWidth: 2 }
           }
         ]
       }, true);

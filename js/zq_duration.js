@@ -105,8 +105,8 @@ $(function () {
                 },
                 {
                     name: '月中位（天）', type: 'line',
-                    data: med, symbol: 'circle', symbolSize: 7, connectNulls: true,
-                    lineStyle: { color: '#ffcf4d', width: 2.4 }, itemStyle: { color: '#ffcf4d' }
+                    data: med, symbol: 'circle', symbolSize: 9, connectNulls: true,
+                    lineStyle: { color: '#ffcf4d', width: 2.4 }, itemStyle: { color: '#ffffff', borderColor: '#ffcf4d', borderWidth: 2 }
                 }
             ]
         }, true);
