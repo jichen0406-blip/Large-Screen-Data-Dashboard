@@ -206,10 +206,10 @@
         // 列优先排布，每列最多 10 个；列数按分组数均衡（12 个 → 2 列 × 6 行）
         var $grid = $nav.find('.side-grid');
         var grpCount = $grid.children('.side-grp').length;
-        var cols = Math.max(1, Math.ceil(grpCount / 10));
-        var rows = Math.max(1, Math.min(10, grpCount));   // 第一列先堆满 10 个再开第二列
-        $grid[0].style.gridTemplateColumns = 'repeat(' + cols + ', 46px)';
-        $grid[0].style.gridTemplateRows = 'repeat(' + rows + ', 46px)';
+        var cols = Math.max(1, Math.ceil(grpCount / 12));
+        var rows = Math.max(1, Math.min(12, grpCount));   // 第一列先堆满 12 个再开第二列
+        $grid[0].style.gridTemplateColumns = 'repeat(' + cols + ', var(--nav-ico))';
+        $grid[0].style.gridTemplateRows = 'repeat(' + rows + ', var(--nav-ico))';
         // 一级菜单是列优先网格：子菜单统一贴在整块导航右缘之外，按所在列实时算 left，并按需上下翻转
         function placeSub(grp) {
             var nav = $nav[0], sub = grp && grp.querySelector('.side-sub');
