@@ -138,7 +138,7 @@
         { label: '海外福可苏业务', iconId: 'page3.html', keys: ['reg', 'sales', 'channels'] },
         { label: '每日跟进', iconId: 'page9.html', keys: ['daily30', 'cart_daily', 'cart_detail', 'cos_workload', 'overdue'] },
         { label: '辖区管理', iconId: 'page5.html', keys: ['region2', 'region3', 'region4', 'coe_scoe', 'coe_coe', 'coe_rcoe'] },
-        { label: '择期生产（择期）订单管理', iconId: 'page38.html', keys: ['zq_orders', 'zq_duration'] },
+        { label: '择期生产（冻存）管理', iconId: 'page38.html', keys: ['zq_orders', 'zq_duration'] },
         { label: '惠民保 & 商保管理', iconId: 'page27.html', keys: ['ins_hb', 'ins_bx', 'ins_name'] },
         { label: '订单生产运营管理', iconId: 'page23.html', keys: ['prod_wait', 'prod_cycle', 'reinf_wait', 'demand_cap', 'capacity_util'] },
         { label: '运营异常订单管理', iconId: 'page11.html', keys: ['abn_nosample', 'abn_noproduction', 'abn_noreinfusion'] },
@@ -199,29 +199,96 @@
                         (isCur ? '<em>当前</em>' : '') + '</a>';
                 }).join('') + '</div></div>';
         }
-        $nav.html(html);
+        $nav.html('<button class="side-tab" type="button" title="展开 / 收起导航">导 航</button>' +
+            '<div class="side-hd">导航栏</div>' +
+            '<div class="side-grid">' + html + '</div>' +
+            '<div class="side-ft"><i>•</i> 支持悬停预览二级菜单，<br><i>•</i> 点击图标即可选中并跳转至对应页面</div>');
+        // 列优先排布，每列最多 10 个；列数按分组数均衡（12 个 → 2 列 × 6 行）
+        var $grid = $nav.find('.side-grid');
+        var grpCount = $grid.children('.side-grp').length;
+        var cols = Math.max(1, Math.ceil(grpCount / 10));
+        var rows = Math.max(1, Math.min(10, grpCount));   // 第一列先堆满 10 个再开第二列
+        $grid[0].style.gridTemplateColumns = 'repeat(' + cols + ', 46px)';
+        $grid[0].style.gridTemplateRows = 'repeat(' + rows + ', 46px)';
+        // 一级菜单是列优先网格：子菜单统一贴在整块导航右缘之外，按所在列实时算 left，并按需上下翻转
+        function placeSub(grp) {
+            var nav = $nav[0], sub = grp && grp.querySelector('.side-sub');
+            if (!sub || !nav) return;
+            sub.style.left = (nav.offsetWidth - grp.offsetLeft + 8) + 'px';
+            var h = sub.offsetHeight;
+            if (!h) { sub.style.display = 'block'; h = sub.offsetHeight; sub.style.display = ''; }
+            // body{zoom:.8} 下 getBoundingClientRect 是屏幕像素，全部换算回 CSS 像素再比
+            var z = nav.offsetWidth ? (nav.getBoundingClientRect().width / nav.offsetWidth) : 1;
+            var topCss = grp.getBoundingClientRect().top / (z || 1);
+            var vhCss = window.innerHeight / (z || 1);
+            var over = (topCss - 8 + h) - vhCss + 12;
+            sub.style.top = (over > 0 ? (-8 - over) : -8) + 'px';
+        }
         // 分组图标点击：钉住/收起该组子菜单（无 hover 设备可用）；仅绑定一次
         if (!sideNavClickBound) {
             sideNavClickBound = true;
+            $nav.on('mouseenter focusin', '.side-grp', function () { placeSub(this); });
             $nav.on('click', '.side-item', function () {
                 var $g = $(this).closest('.side-grp');
                 $nav.find('.side-grp.open').not($g).removeClass('open');
                 $g.toggleClass('open');
+                if ($g.hasClass('open')) { placeSub($g[0]); if (window.boardRailShow) window.boardRailShow(); }
             });
         }
     }
     // 导航栏固定（CSS top:72px 不动），高度匹配右侧内容，至少填满可视区
+    // 导航条高度与内容区等高（body{zoom} 下 rect 是屏幕像素，需换算回 CSS 像素）
     function sizeSideNav() {
         var $nav = $('#sideNav');
         var $mb = $('.mainbox');
         if (!$nav.length || !$mb.length) return;
+        var z = parseFloat(window.getComputedStyle(document.body).zoom) || 1;
         var r = $mb[0].getBoundingClientRect();
-        var h = Math.max(r.height, window.innerHeight - r.top - 20);
-        $nav.css({ height: Math.round(h) + 'px' });
+        var topCss = Math.round(r.top / z);
+        var h = Math.max(300, Math.round(r.bottom / z) - topCss);
+        // 顶部与内容区第一条边框对齐，高度与内容区齐平
+        $nav.css({ top: topCss + 'px', height: h + 'px', maxHeight: '' });
+    }
+
+    // ── 左侧导航：整条常驻（高度同内容区），左侧「导 航」竖栏与导航条一体，点击竖栏/悬停展开收起 ──
+    var railBound = false;
+    function bindRail() {
+        if (railBound) return;
+        var $nav = $('#sideNav');
+        if (!$nav.length) return;
+        railBound = true;
+        var hideTimer = null;
+        function showRail() { clearTimeout(hideTimer); $nav.removeClass('is-hidden'); }
+        function hideRail() {
+            clearTimeout(hideTimer);
+            $nav.addClass('is-hidden').find('.side-grp.open').removeClass('open');
+        }
+        window.boardRailShow = showRail;
+        window.boardRailHide = hideRail;
+        $nav.on('mouseenter focusin', showRail);
+        $nav.on('mouseleave', function () {
+            clearTimeout(hideTimer);
+            // 有钉住的分组时不收起，避免子菜单被一起关掉
+            hideTimer = setTimeout(function () { if (!$nav.find('.side-grp.open').length) hideRail(); }, 300);
+        });
+        // 点左侧「导 航」竖栏：展开 / 收起
+        $nav.on('click', '.side-tab', function (e) {
+            e.stopPropagation();
+            if ($nav.hasClass('is-hidden')) showRail(); else hideRail();
+        });
+        $nav.on('click', '.side-subitem', function () { hideRail(); });
+        $(document).on('keydown', function (e) { if (e.key === 'Escape') hideRail(); });
+        $(document).on('click', function (e) {
+            if ($(e.target).closest('#sideNav').length) return;
+            $nav.find('.side-grp.open').removeClass('open');
+            hideRail();
+        });
+        hideRail();   // 每次进页默认收起
     }
 
     $(function () {
         renderSideNav();
+        bindRail();
         sizeSideNav();
         renderHeadPage();
         // 登录成功后按权限重渲染导航（隐藏无权限页、管理员显示管理入口）+ 重算表头页名芯片

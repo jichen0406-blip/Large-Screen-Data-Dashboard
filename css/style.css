@@ -129,7 +129,7 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .fs-body .coe-chart{ width:100%; height:100%; }
 .fs-body .map{ height:100%; }
 
-.mainbox{padding: 0px 10px; margin-top: 14.4px; margin-left: 66px; overflow: hidden;}
+.mainbox{padding: 0px 10px; margin-top: 14.4px; margin-left: 24px; overflow: hidden;}  /* 左侧导航默认收起，只留 24px 给左缘把手，内容区不再空一条 */
 .nav1{margin-left: -6px; margin-right:-6px;}
 .nav1>li{padding:0 6px; float: left;}
 
@@ -433,18 +433,37 @@ table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
 .fs-body .pt-sum-tit{ font-size: 14px; }
 
 /* ── 左侧悬浮导航（分组图标常驻，hover 滑出该组页面子菜单） ── */
-.side-nav{ position:fixed; left:0; top:72px; z-index:980; display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:10px 6px; background:rgba(2,24,61,.6); border-right:1px solid rgba(47,137,207,.45); border-top-right-radius:10px; border-bottom-right-radius:10px; }
+.side-nav{ box-sizing:border-box; position:fixed; left:0; top:72px; z-index:980; display:flex; flex-direction:column; gap:10px; padding:10px 30px 6px 6px; background:linear-gradient(180deg, rgba(6,36,78,.985), rgba(2,18,45,.985)); border:1px solid rgba(79,227,255,.45); border-left:none; border-radius:0 10px 10px 0; box-shadow: inset 0 0 12px rgba(47,137,207,.35), 0 0 16px rgba(79,227,255,.28), 0 0 14px rgba(79,227,255,.18), 8px 0 22px rgba(0,0,0,.35); transition: width .18s ease; }
+/* 收起态：整条只剩左侧「导 航」竖栏，图标淡出（不用 overflow 以免裁掉子菜单） */
+.side-nav.is-hidden{ width:24px; padding-left:0; padding-right:0; }
+.side-nav.is-hidden .side-grp, .side-nav.is-hidden .side-hd, .side-nav.is-hidden .side-ft{ opacity:0; visibility:hidden; pointer-events:none; }
+.side-tab{ position:absolute; right:0; top:0; bottom:0; width:24px; display:flex; align-items:center; justify-content:center; writing-mode:vertical-rl; letter-spacing:3px; font-size:12px; color:#9fe8ff; background:transparent; border-left:1px solid rgba(79,227,255,.45); border-top:none; border-right:none; border-bottom:none; border-radius:0 10px 10px 0; cursor:pointer; transition: background .2s, color .2s; }
+.side-tab:hover{ background:rgba(79,227,255,.10); color:#fff; }
+/* 导航标题 / 图标网格 / 底部指引 */
+.side-hd{ flex:none; font-size:13px; font-weight:700; color:#4fe3ff; letter-spacing:3px; padding:2px 6px 8px; border-bottom:1px solid rgba(79,227,255,.35); }
+.side-grid{ flex:1 1 auto; min-height:0; display:grid; grid-auto-flow:column; grid-auto-columns:46px; column-gap:8px; align-content:space-between; align-items:start; }
+.side-ft i{ font-style:normal; color:#4fe3ff; font-weight:700; margin-right:2px; }
+.side-ft{ flex:none; margin-top:auto; width:0; min-width:100%; font-size:11px; line-height:1.75; color:rgba(159,232,255,.72); letter-spacing:0; padding:8px 6px 4px; border-top:1px solid rgba(79,227,255,.22); word-break:break-all; white-space:normal; }
+.side-nav.is-hidden .side-tab{ width:100%; border-left:none; border-radius:0 10px 10px 0; background:transparent; }
 .side-grp{ position:relative; display:flex; }
-.side-item{ display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:10px; background:rgba(2,24,61,.85); border:1px solid rgba(47,137,207,.6); color:#7fd8ff; cursor:pointer; text-decoration:none; transition: box-shadow .2s, background .2s, border-color .2s; }
+.side-item{ position:relative; display:flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:10px; background:rgba(2,24,61,.85); border:1px solid rgba(47,137,207,.6); color:#7fd8ff; cursor:pointer; text-decoration:none; transition: box-shadow .2s, background .2s, border-color .2s; }
 .side-ico{ line-height:0; }
-.side-ico svg{ width:26px; height:26px; fill:#fff; }
+.side-ico svg{ width:26px; height:26px; fill:#fff; transition: fill .2s; }
 .side-item .side-name{ display:none; }
-.side-item:hover{ box-shadow:0 0 14px rgba(79,227,255,.5); background:rgba(47,137,207,.55); border-color:#4ba6e0; }
-.side-item.cur{ background:rgba(79,227,255,.22); border-color:#4fe3ff; box-shadow:0 0 14px rgba(79,227,255,.6), inset 0 0 8px rgba(79,227,255,.25); }
-.side-item.cur .side-ico svg{ fill:#4fe3ff; }
+/* 悬停 / 展开（临时态）：暖黄，跟「当前页」的青色区分开 */
+.side-grp:hover .side-item, .side-grp.open .side-item{ background:rgba(244,233,37,.10); border-color:#f4e925; box-shadow:0 0 12px rgba(244,233,37,.45); }
+.side-grp:hover .side-item .side-ico svg, .side-grp.open .side-item .side-ico svg{ fill:#f4e925; }
+/* 当前页所在组（持久态）：青色实心底 + 左侧 3px 指示条 */
+.side-grp.cur .side-item{ background:rgba(79,227,255,.22); border-color:#4fe3ff; box-shadow:0 0 14px rgba(79,227,255,.6), inset 0 0 8px rgba(79,227,255,.25); }
+.side-grp.cur .side-item .side-ico svg{ fill:#4fe3ff; }
+.side-grp.cur .side-item::before{ content:''; position:absolute; left:-6px; top:50%; transform:translateY(-50%); width:3px; height:22px; border-radius:2px; background:#4fe3ff; box-shadow:0 0 8px rgba(79,227,255,.9); }
+.side-grp.cur:hover .side-item, .side-grp.cur.open .side-item{ background:rgba(79,227,255,.28); border-color:#4fe3ff; box-shadow:0 0 18px rgba(79,227,255,.85), inset 0 0 8px rgba(79,227,255,.3); }
+.side-grp.cur:hover .side-item .side-ico svg, .side-grp.cur.open .side-item .side-ico svg{ fill:#4fe3ff; }
+/* 一级菜单 2 列；如需让内容区右移给导航腾位，给 body 加 .rail-wide 即可 */
+body.rail-wide .mainbox{ margin-left:122px; }
 /* 该组页面子菜单：hover 分组图标显示；点击图标可钉住（open）
-   子菜单左缘与图标重叠（left 略小于图标右缘），鼠标从图标平移过来不掉 hover */
-.side-sub{ position:absolute; left:42px; top:-8px; z-index:990; display:none; min-width:248px; max-width:320px; max-height:calc(100vh - 120px); overflow-y:auto; background:linear-gradient(rgba(2,20,55,.97), rgba(2,20,55,.97)); border:1px solid rgba(79,227,255,.55); border-radius:10px; box-shadow:0 0 18px rgba(47,137,207,.5); padding:6px; }
+   一级菜单是 2 列网格，子菜单统一贴在整块导航的右缘之外（left 由 nav.js 按列实时计算） */
+.side-sub{ position:absolute; left:calc(100% + 8px); top:-8px; z-index:990; display:none; min-width:248px; max-width:320px; max-height:calc(100vh - 120px); overflow-y:auto; background:linear-gradient(rgba(5,30,66,1), rgba(3,20,48,1)); border:1px solid rgba(79,227,255,.55); border-radius:10px; box-shadow:0 0 18px rgba(47,137,207,.5); padding:6px; }
 .side-grp:hover .side-sub, .side-grp.open .side-sub{ display:block; }
 .side-sub-hd{ display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:#4fe3ff; letter-spacing:2px; padding:6px 10px 9px; border-bottom:1px dotted rgba(112,187,252,.3); margin-bottom:4px; }
 .side-sub-hd svg{ width:18px; height:18px; fill:#4fe3ff; }
