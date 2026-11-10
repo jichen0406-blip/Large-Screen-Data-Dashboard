@@ -424,6 +424,8 @@ table.pt.pt-sum th{ font-size:12px; }
 table.pt.pt-ov td{ color:#fff; }
 table.pt.pt-ov .pt-total-row td{ color:#4fe3ff; font-weight:700; background:rgba(2,37,101,.35); }
 table.pt .pt-type{ min-width:52px; text-align:center; color:#daf9ff; }
+/* 表格自动换行：全量表（pt-ov）左侧名称列过长时换行，不再被裁切 */
+table.pt.pt-ov .pt-lbl{ white-space:normal; word-break:break-word; line-height:1.35; }
 
 /* Page3 表格全屏（§9 标准：容器进 fsBody 撑满 + 字号放大） */
 .fs-body .pt-tbl-wrap{ height: 100% !important; max-height: none; overflow: auto; }
@@ -773,7 +775,8 @@ body.rail-wide .mainbox{ margin-left:122px; }
 .abn-cnt b{ color:#4fe3ff; font-size:15px; }
 /* 明细表 */
 .abn-tbl th, .abn-tbl td{ white-space:nowrap; }
-.abn-tbl .abn-txt{ max-width:220px; overflow:hidden; text-overflow:ellipsis; }
+/* 长文本列自动换行（原来用省略号截断），行高自适应  */
+.abn-tbl .abn-txt{ max-width:220px; white-space:normal; word-break:break-word; overflow:visible; text-overflow:clip; line-height:1.5; }
 .abn-empty{ text-align:center; padding:30px; color:rgba(255,255,255,.4); }
 .abn-dur{ font-weight:700; color:#ffd666; }
 .abn-blank{ color:rgba(255,255,255,.3); }
