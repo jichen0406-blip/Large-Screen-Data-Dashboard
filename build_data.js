@@ -949,7 +949,7 @@ try {
 //   生产等待期用**最早**的（等待只算到首次开始生产）、产品生产周期用**最晚**的（只算最后一次实际生产）
 //   这样「返工占用的那段间隔」不会抬高任何一个 KPI
 function loadPbsD1() {
-  var out = { map: {}, hit: 0, blank: 0, merged: 0 };
+  var out = { map: {}, hit: 0, blank: 0, merged: 0, rows: [] };   // rows: 逐批 [{code, date}]，供「D1 生产批数」按月统计
   var pbsPath = path.join(rawDir, 'pbs_d1.xlsx');
   if (!fs.existsSync(pbsPath)) pbsPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'pbs_d1.xlsx');
   try {
@@ -987,6 +987,7 @@ function loadPbsD1() {
         var pv = String(pr[pbsC.d1] == null ? '' : pr[pbsC.d1]).trim().slice(0, 10); // 源值是「YYYY-MM-DD HH:mm:ss」
         if (!/^\d{4}-\d{2}-\d{2}$/.test(pv)) continue;
         out.hit++;
+        out.rows.push({ code: pk, date: pv });
         var cur = out.map[pk];
         if (!cur) out.map[pk] = { min: pv, max: pv, n: 1 };
         else { cur.n++; if (pv < cur.min) cur.min = pv; if (pv > cur.max) cur.max = pv; }
@@ -2156,7 +2157,7 @@ var INSURANCE = { at: '', months: [], denom: {}, rows: [], amList: [], unmapped:
 
 // ── 8x. 生产异常订单：生产异常订单.xlsx Sheet2（逐单明细） ──
 // 分类：PBMC分选失败 / 第一次生产失败 / 二次生产失败（展示统一为「PBMC 分选失败」）
-var PROD_ABN = { at: '', cats: ['PBMC 分选失败', '第一次生产失败', '二次生产失败'], months: [], monthly: {}, rows: [] };
+var PROD_ABN = { at: '', cats: ['PBMC 分选失败', '第一次生产失败', '二次生产失败'], months: [], monthly: {}, rows: [], d1: {} };
 try {
   var paPath = path.join(rawDir, '生产异常订单.xlsx');
   if (!fs.existsSync(paPath)) paPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', '生产异常订单.xlsx');
@@ -2222,6 +2223,21 @@ try {
   PROD_ABN.rows.forEach(function (r) { var k = PROD_ABN.cats.indexOf(r.cat); if (k >= 0) pSum[k]++; });
   console.log('生产异常: ' + PROD_ABN.rows.length + ' 条 | PBMC ' + pSum[0] + ' / 第一次 ' + pSum[1] + ' / 二次 ' + pSum[2] +
     ' | 月份 ' + PROD_ABN.months.length + ' | 唯一订单 ' + Object.keys(PROD_ABN.rows.reduce(function (o, r) { o[r.no] = 1; return o; }, {})).length);
+
+  // ── 生产失败率的分母：D1 生产批数（按「D1执行时间」归月，§8p-2 的 PBS_D1.rows 逐批） ──
+  // AM 与异常单同源（追溯码 → 订单号 → order dict 的 AM），保证「选某个 AM」时分子分母是一套口径
+  var code2no = {};
+  records.forEach(function (r) { if (r.code) code2no[r.code] = r.no; });
+  var d1Total = 0;
+  PBS_D1.rows.forEach(function (b) {
+    var ymk = b.date.slice(0, 7);
+    var no2 = code2no[b.code];
+    var am2 = amClean[dictAM2[no2]] || dictAM2[no2] || '';
+    var o2 = PROD_ABN.d1[ymk] || (PROD_ABN.d1[ymk] = { n: 0, am: {} });
+    o2.n++; d1Total++;
+    if (am2) o2.am[am2] = (o2.am[am2] || 0) + 1;
+  });
+  console.log('D1 生产批数: ' + d1Total + ' 批 / ' + Object.keys(PROD_ABN.d1).length + ' 个月');
 } catch (e) {
   console.error('⚠️ 读取 生产异常订单.xlsx Sheet2 失败:', e.message);
 }

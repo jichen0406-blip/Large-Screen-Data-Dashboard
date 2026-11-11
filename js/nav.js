@@ -244,7 +244,7 @@
         $nav.html('<button class="side-tab" type="button" title="展开 / 收起导航">导 航</button>' +
             '<div class="side-hd">导航栏</div>' +
             '<div class="side-grid">' + html + '</div>' +
-            '<div class="side-ft"><i>•</i> 悬停停留 0.5 秒预览二级菜单，<br><i>•</i> 点击图标即可选中并跳转至对应页面</div>');
+            '<div class="side-ft"><i>•</i> 鼠标悬停于导航栏图标 0.5 秒后，自动展开二级菜单，并支持点击交互</div>');
         // 列优先排布，每列最多 10 个；列数按分组数均衡（12 个 → 2 列 × 6 行）
         var $grid = $nav.find('.side-grid');
         var grpCount = $grid.children('.side-grp').length;

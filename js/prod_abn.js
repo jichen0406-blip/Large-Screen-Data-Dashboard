@@ -75,6 +75,16 @@ $(function () {
             return r.ym >= ym1() && r.ym <= ym2() && (st.am === 'ALL' || r.am === st.am);
         });
     }
+    // 「生产失败率」的分母：所选区间 + AM 的 D1 生产批数（按 D1 执行时间归月，构建时算好 P.d1）
+    function d1BatchesIn() {
+        var d = P.d1 || {}, a = ym1(), b = ym2(), n = 0;
+        Object.keys(d).forEach(function (k) {
+            if (k < a || k > b) return;
+            var v = d[k];
+            n += (st.am === 'ALL') ? (v.n || 0) : ((v.am && v.am[st.am]) || 0);
+        });
+        return n;
+    }
 
     /* ══ 视图 1：总览（3 卡片 + 3 柱状图） ══ */
     var charts = [];
@@ -86,12 +96,20 @@ $(function () {
 
         var cardBox = document.getElementById('paCards');
         if (cardBox) {
+            // 生产失败率 =（第一次 + 二次生产失败）/ D1 生产批数，随年月区间与 AM 筛选实时重算
+            var failN = cnt[1] + cnt[2];
+            var d1N = d1BatchesIn();
+            var rate = d1N > 0 ? (failN / d1N * 100).toFixed(1) + '%' : '—';
             cardBox.innerHTML = CATS.map(function (c, i) {
                 return '<div class="kpi-card" style="--ac:' + COLOR[i] + '">' +
                     '<div class="kc-label">' + c + '</div>' +
                     '<div class="kc-val">' + thousands(cnt[i]) + '<small>单</small></div>' +
                     '<div class="kc-sub">占三类 ' + pct(cnt[i], total) + '</div></div>';
-            }).join('');
+            }).join('') +
+                '<div class="kpi-card" style="--ac:#ff4d4f">' +
+                '<div class="kc-label">生产失败率</div>' +
+                '<div class="kc-val">' + rate + '</div>' +
+                '<div class="kc-sub">一次+二次 ' + failN + ' / D1 生产批 ' + thousands(d1N) + '</div></div>';
         }
 
         // 月度数据（范围内连续月份，无数据补 0）
