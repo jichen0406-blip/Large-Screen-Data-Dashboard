@@ -943,8 +943,64 @@ try {
   console.error('⚠️ 读取 COS名单.xlsx 失败:', e.message);
 }
 
+// ── 8p-2. pbs_d1（D1 执行时间）统一加载：§8q 异常订单判定 + §8u 生产运营管理共用同一份 ──
+// 表头不在首行、列可能带偏移 → 按「列名」在前 10 行里找表头，不写死列索引
+// 一个追溯码可能有多条 D1（首次生产批 C + 返工批 CR）→ **两条都留**：
+//   生产等待期用**最早**的（等待只算到首次开始生产）、产品生产周期用**最晚**的（只算最后一次实际生产）
+//   这样「返工占用的那段间隔」不会抬高任何一个 KPI
+function loadPbsD1() {
+  var out = { map: {}, hit: 0, blank: 0, merged: 0 };
+  var pbsPath = path.join(rawDir, 'pbs_d1.xlsx');
+  if (!fs.existsSync(pbsPath)) pbsPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'pbs_d1.xlsx');
+  try {
+    var pbsWb = XLSX.readFile(pbsPath);
+    var pbsWs = pbsWb.Sheets[pbsWb.SheetNames[0]];
+    // 展开合并单元格：Excel 合并区只有左上角存值，其余读出来是空
+    // （pbs_d1 的「追溯码」列把同一次单采的「生产批 C」与「返工批 CR」两行**纵向合并**，
+    //   不展开则 CR 行的追溯码读成空、整行被丢掉，D1 就取不到「最新」的那次 —— 如 A1D0315）
+    (pbsWs['!merges'] || []).forEach(function (m) {
+      var anchor = pbsWs[XLSX.utils.encode_cell(m.s)];
+      if (!anchor || anchor.v === undefined || anchor.v === '') return;
+      for (var R = m.s.r; R <= m.e.r; R++) {
+        for (var C = m.s.c; C <= m.e.c; C++) {
+          if (R === m.s.r && C === m.s.c) continue;
+          var ad = XLSX.utils.encode_cell({ r: R, c: C });
+          if (!pbsWs[ad] || pbsWs[ad].v === undefined || pbsWs[ad].v === '') { pbsWs[ad] = { t: anchor.t, v: anchor.v }; out.merged++; }
+        }
+      }
+    });
+    var pbsArr = XLSX.utils.sheet_to_json(pbsWs, { header: 1, defval: '' });
+    var pbsC = {}, pbsHdr = -1, hi;
+    for (hi = 0; hi < Math.min(pbsArr.length, 10); hi++) {
+      var cand = (pbsArr[hi] || []).map(function (x) { return String(x == null ? '' : x).replace(/[\r\n\s]/g, ''); });
+      if (cand.indexOf('追溯码') >= 0 && cand.indexOf('D1执行时间') >= 0) {
+        cand.forEach(function (h, i) { if (h === '追溯码') pbsC.code = i; if (h === 'D1执行时间') pbsC.d1 = i; });
+        pbsHdr = hi; break;
+      }
+    }
+    if (pbsHdr < 0) console.warn('⚠️ pbs_d1.xlsx 未找到「追溯码 / D1执行时间」表头行，D1 数据留空');
+    else {
+      for (var pi = pbsHdr + 1; pi < pbsArr.length; pi++) {
+        var pr = pbsArr[pi]; if (!pr) continue;
+        var pk = String(pr[pbsC.code] == null ? '' : pr[pbsC.code]).trim();
+        if (!pk) { out.blank++; continue; }
+        var pv = String(pr[pbsC.d1] == null ? '' : pr[pbsC.d1]).trim().slice(0, 10); // 源值是「YYYY-MM-DD HH:mm:ss」
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(pv)) continue;
+        out.hit++;
+        var cur = out.map[pk];
+        if (!cur) out.map[pk] = { min: pv, max: pv, n: 1 };
+        else { cur.n++; if (pv < cur.min) cur.min = pv; if (pv > cur.max) cur.max = pv; }
+      }
+    }
+  } catch (e) { console.warn('⚠️ 读取 pbs_d1.xlsx 失败:', e.message); }
+  return out;
+}
+var PBS_D1 = loadPbsD1();   // map: 追溯码 → { min, max, n }
+
 // ── 8q. 异常订单管理：三类异常订单（从 bs_order + order dict 重算；人工字段取自 异常订单管理.xlsx） ──
-// 长期未单采 = 有单 且 无实际单采开始；长期未转生产 = 已单采 且 无质量放行；长期未回输 = 已放行 且 无实际回输开始
+// 长期未单采 = 有单 且 无实际单采开始；长期未转生产 = 已单采 且 无 D1 执行时间；长期未回输 = 已放行 且 无实际回输开始
+// 「未转生产」原用「无质量放行(qa)」判定，但生产没开始过就不可能有放行 —— 改用 D1 执行时间（pbs_d1）更贴近业务：
+//   已单采、生产也已开始、只是还没放行的单，属于「已转生产、待放行」，不该再挂在「长期未转生产」里
 // 三者均剔除取消/终止单（order dict 取消回输标记='1'）；按流程阶段递进，天然互斥不重叠
 // 预估时间列归一化：源表同一列混用三种写法，统一成 YYYY-MM-DD / YYYY-MM
 //   ① Excel 日期单元格（导出成裸序列号，如 46289）      → 2026-09-24
@@ -1004,7 +1060,8 @@ var ABN_BUCKETS = {
   noproduction: [[0, 6], [6, 12], [12, 24], [24, Infinity]],
   noreinfusion: [[0, 3], [3, 6], [6, Infinity]]
 };
-var ABN_EXPIRE = { noproduction: 12, noreinfusion: 6 };
+var ABN_EXPIRE = { noproduction: 12, noreinfusion: 6 };   // 过期阈值（月）：产品有效期，m ≥ 阈值 = 已过期
+var ABN_WARN = { noproduction: 2, noreinfusion: 2 };      // 即将过期预警窗口（月）：距阈值不足 N 个月即为「即将过期」（2026-11-11 由 1 个月放宽到 2 个月）
 function abnLabel(a, b) { return b === Infinity ? ('≥' + a + ' 月') : (a === 0 ? ('0~' + b + ' 月') : (a + '~' + b + ' 月')); }
 function abnBucketOf(m, key) {
   var bs = ABN_BUCKETS[key];
@@ -1022,13 +1079,15 @@ function abnMonths(d) {
 function abnRisk(m, key) {
   var th = ABN_EXPIRE[key];
   if (!th || m === null) return '';
+  var warn = ABN_WARN[key] || 1;
   if (m >= th) return '已过期';
-  if (m >= th - 1) return '即将过期';
+  if (m >= th - warn) return '即将过期';
   return '未过期';
 }
 var ABN_SPECS = [
   { key: 'nosample',     pred: function (r) { return !r.ap; },               base: function (r) { return r.od; } },
-  { key: 'noproduction', pred: function (r) { return !!r.ap && !r.qa; },     base: function (r) { return r.receive; } },
+  // !r.qa 是兜底：正常数据里「有放行必然有 D1」（已核对 0 例外），加上它可防 pbs_d1 回填缺失时把已放行的单错算进来
+  { key: 'noproduction', pred: function (r) { return !!r.ap && !PBS_D1.map[r.code] && !r.qa; }, base: function (r) { return r.receive; } },
   { key: 'noreinfusion', pred: function (r) { return !!r.qa && !r.reStart; }, base: function (r) { return r.qa; } }
 ];
 var ABN_MGMT = { UPDATED: UPDATED, summaryAt: '', pages: {} };
@@ -1068,59 +1127,9 @@ console.log('异常订单（重算）: 未单采=' + ABN_MGMT.pages.nosample.row
 // 本层输出原始日期 + 三段天数，三页共用同一份数组，各自按需筛选（不做任何过滤）
 var PROD_OPS = { at: '', ai: {}, aiAt: '', rows: [] };
 (function () {
-  // pbs_d1：表头不在首行、列可能带偏移 → 按「列名」在前 10 行里找表头，不写死列索引
-  // 一个追溯码可能有多条 D1（首次生产批 C + 返工批 CR）→ **两条都留**：
-  //   生产等待期用**最早**的（等待只算到首次开始生产）、产品生产周期用**最晚**的（只算最后一次实际生产）
-  //   这样「返工占用的那段间隔」不会抬高任何一个 KPI
-  var pbsPath = path.join(rawDir, 'pbs_d1.xlsx');
-  if (!fs.existsSync(pbsPath)) pbsPath = path.join(__dirname, '..', 'fucaso-dashboard', 'rawdata', 'pbs_d1.xlsx');
-  var pbsMap = {}, pbsHit = 0, pbsBlank = 0, pbsMulti = 0;
-  try {
-    var pbsWb = XLSX.readFile(pbsPath);
-    var pbsWs = pbsWb.Sheets[pbsWb.SheetNames[0]];
-    // 展开合并单元格：Excel 合并区只有左上角存值，其余读出来是空
-    // （pbs_d1 的「追溯码」列把同一次单采的「生产批 C」与「返工批 CR」两行**纵向合并**，
-    //   不展开则 CR 行的追溯码读成空、整行被丢掉，D1 就取不到「最新」的那次 —— 如 A1D0315）
-    var pbsMerged = 0;
-    (pbsWs['!merges'] || []).forEach(function (m) {
-      var anchor = pbsWs[XLSX.utils.encode_cell(m.s)];
-      if (!anchor || anchor.v === undefined || anchor.v === '') return;
-      for (var R = m.s.r; R <= m.e.r; R++) {
-        for (var C = m.s.c; C <= m.e.c; C++) {
-          if (R === m.s.r && C === m.s.c) continue;
-          var ad = XLSX.utils.encode_cell({ r: R, c: C });
-          if (!pbsWs[ad] || pbsWs[ad].v === undefined || pbsWs[ad].v === '') { pbsWs[ad] = { t: anchor.t, v: anchor.v }; pbsMerged++; }
-        }
-      }
-    });
-    var pbsArr = XLSX.utils.sheet_to_json(pbsWs, { header: 1, defval: '' });
-    var pbsC = {}, pbsHdr = -1, hi;
-    for (hi = 0; hi < Math.min(pbsArr.length, 10); hi++) {
-      var cand = (pbsArr[hi] || []).map(function (x) { return String(x == null ? '' : x).replace(/[\r\n\s]/g, ''); });
-      if (cand.indexOf('追溯码') >= 0 && cand.indexOf('D1执行时间') >= 0) {
-        cand.forEach(function (h, i) { if (h === '追溯码') pbsC.code = i; if (h === 'D1执行时间') pbsC.d1 = i; });
-        pbsHdr = hi; break;
-      }
-    }
-    if (pbsHdr < 0) console.warn('⚠️ pbs_d1.xlsx 未找到「追溯码 / D1执行时间」表头行，D1 数据留空');
-    else {
-      for (var pi = pbsHdr + 1; pi < pbsArr.length; pi++) {
-        var pr = pbsArr[pi]; if (!pr) continue;
-        var pk = String(pr[pbsC.code] == null ? '' : pr[pbsC.code]).trim();
-        if (!pk) { pbsBlank++; continue; }
-        var pv = String(pr[pbsC.d1] == null ? '' : pr[pbsC.d1]).trim().slice(0, 10); // 源值是「YYYY-MM-DD HH:mm:ss」
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(pv)) continue;
-        pbsHit++;
-        var cur = pbsMap[pk];
-        if (!cur) pbsMap[pk] = { min: pv, max: pv, n: 1 };
-        else {
-          cur.n++;
-          if (pv < cur.min) cur.min = pv;
-          if (pv > cur.max) cur.max = pv;
-        }
-      }
-    }
-  } catch (e) { console.warn('⚠️ 读取 pbs_d1.xlsx 失败:', e.message); }
+  // pbs_d1 由 §8p-2 的 loadPbsD1() 统一加载，异常订单（§8q）与本节共用同一份
+  var pbsMap = PBS_D1.map, pbsHit = PBS_D1.hit, pbsBlank = PBS_D1.blank, pbsMerged = PBS_D1.merged;
+  var pbsMulti = 0;
 
   // 天数差：用斜杠解析本地时间，避免 ISO 的 UTC 偏移（同 abnMonths）
   function days(a, b) {
@@ -1309,10 +1318,12 @@ function cancelHospStatsText() {
 // ── 9. AI 摘要（构建时调 DeepSeek；数据未变走缓存不重复调用） ──
 // 覆盖：异常订单管理三页 + 省份&医院数据页两张表
 var AI_CACHE_FILE = path.join(__dirname, '.ai_summary_cache.json');
-var ABN_PAGE_NAME = { nosample: '长期未单采订单', noproduction: '长期未转生产', noreinfusion: '长期未回输订单' };
+var ABN_PAGE_NAME = { nosample: '长期未单采订单', noproduction: '长期未转生产订单', noreinfusion: '长期未回输订单' };
 function sha1(s) { return require('crypto').createHash('sha1').update(s).digest('hex'); }
-function abnFingerprint(rows) {
-  return sha1(rows.map(function (r) { return [r.no, r.months, r.status, r.reason, r.action, r.planTime].join('~'); }).join('|'));
+function abnFingerprint(key, rows) {
+  // 指纹 = 页面名 + 实际喂给 LLM 的统计文本：数据、口径（过期阈值 / 即将过期窗口 / 判定谓词）或页面名一变就失效，
+  // 避免规则改了还沿用旧摘要（旧实现只哈希订单字段，风险重新分档不会让缓存失效 —— 2026-11-11 修）
+  return sha1(ABN_PAGE_NAME[key] + '\n' + abnStatsText(key, rows));
 }
 // 喂给 LLM 的统计文本（不传订单级明细，避免泄露敏感信息）
 function abnStatsText(key, rows) {
@@ -1457,7 +1468,7 @@ async function buildSummaries() {
   // 1) 异常订单管理三页
   for (var i = 0; i < ABN_SPECS.length; i++) {
     var key = ABN_SPECS[i].key, rows = ABN_MGMT.pages[key].rows;
-    var fp = abnFingerprint(rows);
+    var fp = abnFingerprint(key, rows);
     if (cache[key] && cache[key].fp === fp && cache[key].summary) {
       ABN_MGMT.pages[key].summary = cache[key].summary;
       next[key] = cache[key];

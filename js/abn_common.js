@@ -1,4 +1,4 @@
-// abn_common.js — 异常订单管理（3 页共用）：长期未单采订单 / 长期未转生产 / 长期未回输订单
+// abn_common.js — 异常订单管理（3 页共用）：长期未单采订单 / 长期未转生产订单 / 长期未回输订单
 // 由 window.PAGE_KEY 决定渲染哪一页；数据来自 BOARD_DATA.ABN_MGMT（构建时从 bs_order 重算 + 异常订单管理.xlsx 人工字段）
 (function () {
   $(function () {
@@ -73,14 +73,19 @@
             : '<div class="ib-hd"><span class="ib-tag">AI 总结</span></div><div class="ib-txt ib-empty">暂无总结（构建时未生成）</div>';
     }
 
-    // ── 卡片式汇总（按时长分档）──
+    // ── 卡片式汇总（按时长分档）—— 与表格同源（rowsVisible），随筛选实时联动 ──
     function renderCards() {
         var el = document.getElementById('abnCards');
         if (!el) return;
-        var total = DATA.length;
-        var maxM = {}; DATA.forEach(function (r) { if (!(r.bucket in maxM) || r.months > maxM[r.bucket]) maxM[r.bucket] = r.months; });
-        var cnt = {}; DATA.forEach(function (r) { cnt[r.bucket] = (cnt[r.bucket] || 0) + 1; });
-        var h = '<div class="kpi-card kpi-card-all"><div class="kc-label">全部</div><div class="kc-val">' + total + '</div><div class="kc-sub">100% · 最久 ' + (total ? Math.max.apply(null, DATA.map(function (r) { return r.months; })) : 0) + ' 月</div></div>';
+        var rows = rowsVisible();
+        var total = rows.length;
+        var cnt = {}, maxM = {}, allMax = 0;
+        rows.forEach(function (r) {
+            cnt[r.bucket] = (cnt[r.bucket] || 0) + 1;
+            if (!(r.bucket in maxM) || r.months > maxM[r.bucket]) maxM[r.bucket] = r.months;
+            if (r.months > allMax) allMax = r.months;
+        });
+        var h = '<div class="kpi-card kpi-card-all"><div class="kc-label">全部</div><div class="kc-val">' + total + '</div><div class="kc-sub">' + (total ? '100%' : '0%') + ' · 最久 ' + allMax + ' 月</div></div>';
         CFG.buckets.forEach(function (b) {
             var n = cnt[b] || 0;
             var pct = total ? Math.round(n / total * 100) : 0;
@@ -209,21 +214,21 @@
     function bind() {
         var map = { abnFCode: 'code', abnFNo: 'no', abnFAm: 'am', abnFHosp: 'hosp' };
         Object.keys(map).forEach(function (id) {
-            $('#' + id).on('input', function () { f[map[id]] = String(this.value || '').trim().toLowerCase(); renderTable(); });
+            $('#' + id).on('input', function () { f[map[id]] = String(this.value || '').trim().toLowerCase(); renderAll(); });
         });
-        $('#abnFBucket').on('change', function () { f.bucket = this.value; renderTable(); });
+        $('#abnFBucket').on('change', function () { f.bucket = this.value; renderAll(); });
         $('#abnFStatus').on('click', '.cart-light', function () {
             var v = $(this).data('v');
             var next = !f.status[v];
             if (!next && !(f.status['全流程'] || f.status['冻存'])) return; // 至少留一个
-            f.status[v] = next; $(this).toggleClass('on', next); renderTable();
+            f.status[v] = next; $(this).toggleClass('on', next); renderAll();
         });
         $('#abnFRisk').on('click', '.cart-light', function () {
             var v = $(this).data('v');
             var next = !f.risk[v];
             var onCnt = RISKS.filter(function (r) { return f.risk[r.k]; }).length;
             if (!next && onCnt <= 1) return;
-            f.risk[v] = next; $(this).toggleClass('on', next); renderTable();
+            f.risk[v] = next; $(this).toggleClass('on', next); renderAll();
         });
         $('#abnClear').on('click', function () {
             f.code = f.no = f.am = f.hosp = ''; f.bucket = '';
@@ -231,7 +236,7 @@
             $('#abnFBucket').val('');
             if (CFG.status) { f.status = { '全流程': true, '冻存': true }; $('#abnFStatus .cart-light').addClass('on'); }
             RISKS.forEach(function (r) { f.risk[r.k] = true; }); $('#abnFRisk .cart-light').addClass('on');
-            renderTable();
+            renderAll();
         });
     }
 

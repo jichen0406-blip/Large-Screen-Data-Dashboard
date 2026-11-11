@@ -35,7 +35,7 @@
         { id: 'page36.html', key: 'demand_cap', num: 'P29', name: '生产需求匹配度' },
         { id: 'page37.html', key: 'capacity_util', num: 'P30', name: '产能利用率' },
         { id: 'page12.html', key: 'abn_nosample', num: 'P31', name: '长期未单采订单' },
-        { id: 'page13.html', key: 'abn_noproduction', num: 'P32', name: '长期未转生产' },
+        { id: 'page13.html', key: 'abn_noproduction', num: 'P32', name: '长期未转生产订单' },
         { id: 'page14.html', key: 'abn_noreinfusion', num: 'P33', name: '长期未回输订单' },
         { id: 'page30.html', key: 'pabn_sum', num: 'P34', name: '生产异常订单管理' },
         { id: 'page31.html', key: 'pabn_hosp', num: 'P35', name: '医院生产异常订单' },
@@ -151,7 +151,49 @@
         return NAV_GROUPS.slice();
     }
     var sideNavClickBound = false;
-    // 左侧悬浮导航：分组图标常驻，hover 滑出该组页面（分组随权限过滤；当前页所在组高亮）
+    // ── 二级菜单「悬停停留」状态机 ──
+    // 鼠标在图标上停留 NAV_DWELL_MS 才展开（快速划过不闪）；点击图标钉住（.open）立即生效、不受延迟影响；
+    // 图标高亮仍走 CSS :hover，进去就亮，给即时反馈。
+    var NAV_DWELL_MS = 500;      // 停留多久才展开（调参只改这里）
+    var NAV_SUB_GRACE_MS = 150;  // 离开后的收起宽限：足够跨过导航条与子菜单之间的 8px 缝隙
+    var dwellTimer = null, dwellGrp = null;
+    // 一级菜单是列优先网格：子菜单统一贴在整块导航右缘之外，按所在列实时算 left，并按需上下翻转
+    function placeSub(grp) {
+        var nav = $('#sideNav')[0], sub = grp && grp.querySelector('.side-sub');
+        if (!sub || !nav) return;
+        sub.style.left = (nav.offsetWidth - grp.offsetLeft + 8) + 'px';
+        var h = sub.offsetHeight;
+        if (!h) { sub.style.display = 'block'; h = sub.offsetHeight; sub.style.display = ''; }
+        // body{zoom:.8} 下 getBoundingClientRect 是屏幕像素，全部换算回 CSS 像素再比
+        var z = nav.offsetWidth ? (nav.getBoundingClientRect().width / nav.offsetWidth) : 1;
+        var topCss = grp.getBoundingClientRect().top / (z || 1);
+        var vhCss = window.innerHeight / (z || 1);
+        var over = (topCss - 8 + h) - vhCss + 12;
+        sub.style.top = (over > 0 ? (-8 - over) : -8) + 'px';
+    }
+    function navSubClearTimers(grp) {
+        if (dwellTimer) { clearTimeout(dwellTimer); dwellTimer = null; }
+        dwellGrp = null;
+        if (grp && grp.__subHideTimer) { clearTimeout(grp.__subHideTimer); grp.__subHideTimer = null; }
+    }
+    function navSubShow(grp) {
+        if (!grp) return;
+        if (grp.__subHideTimer) { clearTimeout(grp.__subHideTimer); grp.__subHideTimer = null; }
+        $('#sideNav').find('.side-grp.show').not(grp).removeClass('show');   // 同时只展开一个
+        $(grp).addClass('show');
+        placeSub(grp);
+        if (window.boardRailShow) window.boardRailShow();
+    }
+    function navSubHide(grp) {
+        if (!grp) return;
+        if (grp.__subHideTimer) { clearTimeout(grp.__subHideTimer); grp.__subHideTimer = null; }
+        if (!grp.classList.contains('open')) grp.classList.remove('show');   // 钉住的不收
+    }
+    function navSubHideAll() {
+        navSubClearTimers(null);
+        $('#sideNav').find('.side-grp.show, .side-grp.open').removeClass('show open');
+    }
+    // 左侧悬浮导航：分组图标常驻，悬停停留后滑出该组页面（分组随权限过滤；当前页所在组高亮）
     function renderSideNav() {
         var $nav = $('#sideNav');
         if (!$nav.length) return;
@@ -202,7 +244,7 @@
         $nav.html('<button class="side-tab" type="button" title="展开 / 收起导航">导 航</button>' +
             '<div class="side-hd">导航栏</div>' +
             '<div class="side-grid">' + html + '</div>' +
-            '<div class="side-ft"><i>•</i> 支持悬停预览二级菜单，<br><i>•</i> 点击图标即可选中并跳转至对应页面</div>');
+            '<div class="side-ft"><i>•</i> 悬停停留 0.5 秒预览二级菜单，<br><i>•</i> 点击图标即可选中并跳转至对应页面</div>');
         // 列优先排布，每列最多 10 个；列数按分组数均衡（12 个 → 2 列 × 6 行）
         var $grid = $nav.find('.side-grid');
         var grpCount = $grid.children('.side-grp').length;
@@ -210,29 +252,39 @@
         var rows = Math.max(1, Math.min(12, grpCount));   // 第一列先堆满 12 个再开第二列
         $grid[0].style.gridTemplateColumns = 'repeat(' + cols + ', var(--nav-ico))';
         $grid[0].style.gridTemplateRows = 'repeat(' + rows + ', var(--nav-ico))';
-        // 一级菜单是列优先网格：子菜单统一贴在整块导航右缘之外，按所在列实时算 left，并按需上下翻转
-        function placeSub(grp) {
-            var nav = $nav[0], sub = grp && grp.querySelector('.side-sub');
-            if (!sub || !nav) return;
-            sub.style.left = (nav.offsetWidth - grp.offsetLeft + 8) + 'px';
-            var h = sub.offsetHeight;
-            if (!h) { sub.style.display = 'block'; h = sub.offsetHeight; sub.style.display = ''; }
-            // body{zoom:.8} 下 getBoundingClientRect 是屏幕像素，全部换算回 CSS 像素再比
-            var z = nav.offsetWidth ? (nav.getBoundingClientRect().width / nav.offsetWidth) : 1;
-            var topCss = grp.getBoundingClientRect().top / (z || 1);
-            var vhCss = window.innerHeight / (z || 1);
-            var over = (topCss - 8 + h) - vhCss + 12;
-            sub.style.top = (over > 0 ? (-8 - over) : -8) + 'px';
-        }
-        // 分组图标点击：钉住/收起该组子菜单（无 hover 设备可用）；仅绑定一次
+        // 分组图标：悬停停留才展开；点击钉住/收起（无 hover 设备可用）；仅绑定一次
         if (!sideNavClickBound) {
             sideNavClickBound = true;
-            $nav.on('mouseenter focusin', '.side-grp', function () { placeSub(this); });
+            // 悬停进入：重新计时（划过多个图标时只有最后一个能展开）
+            $nav.on('mouseenter', '.side-grp', function () {
+                if (dwellTimer) { clearTimeout(dwellTimer); dwellTimer = null; }
+                var grp = this;
+                dwellGrp = grp;
+                if (grp.__subHideTimer) { clearTimeout(grp.__subHideTimer); grp.__subHideTimer = null; }
+                dwellTimer = setTimeout(function () {
+                    dwellTimer = null;
+                    if (dwellGrp === grp) navSubShow(grp);   // 停留够久才展开
+                }, NAV_DWELL_MS);
+            });
+            // 悬停离开：取消计时；已展开的延迟收起（宽限跨过 8px 缝隙，进子菜单不会闪）
+            $nav.on('mouseleave', '.side-grp', function () {
+                var grp = this;
+                if (dwellGrp === grp) { if (dwellTimer) { clearTimeout(dwellTimer); dwellTimer = null; } dwellGrp = null; }
+                if (grp.classList.contains('open')) return;   // 钉住的不自动收
+                if (grp.__subHideTimer) clearTimeout(grp.__subHideTimer);
+                grp.__subHideTimer = setTimeout(function () { grp.__subHideTimer = null; navSubHide(grp); }, NAV_SUB_GRACE_MS);
+            });
+            // 键盘聚焦：无障碍优先，不做延迟
+            $nav.on('focusin', '.side-grp', function () { navSubClearTimers(null); navSubShow(this); });
             $nav.on('click', '.side-item', function () {
-                var $g = $(this).closest('.side-grp');
+                navSubClearTimers(null);
+                var $g = $(this).closest('.side-grp'), grp = $g[0];
+                if (grp.__subHideTimer) { clearTimeout(grp.__subHideTimer); grp.__subHideTimer = null; }
                 $nav.find('.side-grp.open').not($g).removeClass('open');
+                $nav.find('.side-grp.show').not($g).removeClass('show');
                 $g.toggleClass('open');
-                if ($g.hasClass('open')) { placeSub($g[0]); if (window.boardRailShow) window.boardRailShow(); }
+                if ($g.hasClass('open')) navSubShow(grp);      // 点击立即展开，不等 500ms
+                else $g.removeClass('show');
             });
         }
     }
@@ -261,7 +313,8 @@
         function showRail() { clearTimeout(hideTimer); $nav.removeClass('is-hidden'); }
         function hideRail() {
             clearTimeout(hideTimer);
-            $nav.addClass('is-hidden').find('.side-grp.open').removeClass('open');
+            navSubHideAll();   // 清 .show/.open 与所有悬停计时器，否则收起后菜单可能自己冒出来
+            $nav.addClass('is-hidden');
         }
         window.boardRailShow = showRail;
         window.boardRailHide = hideRail;
@@ -280,7 +333,6 @@
         $(document).on('keydown', function (e) { if (e.key === 'Escape') hideRail(); });
         $(document).on('click', function (e) {
             if ($(e.target).closest('#sideNav').length) return;
-            $nav.find('.side-grp.open').removeClass('open');
             hideRail();
         });
         hideRail();   // 每次进页默认收起
