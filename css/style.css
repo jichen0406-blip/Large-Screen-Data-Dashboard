@@ -454,9 +454,10 @@ body{ --nav-ico:clamp(38px, 2.4vw, 56px); --nav-gap:clamp(6px, .42vw, 11px); --n
 .side-ico{ line-height:0; }
 .side-ico svg{ width:calc(var(--nav-ico) * .565); height:calc(var(--nav-ico) * .565); fill:#fff; transition: fill .2s; }
 .side-item .side-name{ display:none; }
-/* 悬停 / 展开（临时态）：暖黄，跟「当前页」的青色区分开 */
-.side-grp:hover .side-item, .side-grp.show .side-item, .side-grp.open .side-item{ background:rgba(244,233,37,.10); border-color:#f4e925; box-shadow:0 0 12px rgba(244,233,37,.45); }
-.side-grp:hover .side-item .side-ico svg, .side-grp.show .side-item .side-ico svg, .side-grp.open .side-item .side-ico svg{ fill:#f4e925; }
+/* 悬停 / 展开（临时态）：与「当前页」同一青色系，底色更淡、光晕更弱；
+   当前页靠更实的底色 + 左侧 3px 指示条区分（2026-11-11 由暖黄改为青色，与选中态统一） */
+.side-grp:hover .side-item, .side-grp.show .side-item, .side-grp.open .side-item{ background:rgba(79,227,255,.14); border-color:#4fe3ff; box-shadow:0 0 12px rgba(79,227,255,.45); }
+.side-grp:hover .side-item .side-ico svg, .side-grp.show .side-item .side-ico svg, .side-grp.open .side-item .side-ico svg{ fill:#4fe3ff; }
 /* 当前页所在组（持久态）：青色实心底 + 左侧 3px 指示条 */
 .side-grp.cur .side-item{ background:rgba(79,227,255,.22); border-color:#4fe3ff; box-shadow:0 0 14px rgba(79,227,255,.6), inset 0 0 8px rgba(79,227,255,.25); }
 .side-grp.cur .side-item .side-ico svg{ fill:#4fe3ff; }
@@ -478,7 +479,7 @@ body.rail-wide .mainbox{ margin-left:122px; }
 .side-subitem .ss-name{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .side-subitem.cur{ background:rgba(79,227,255,.18); color:#fff; }
 .side-subitem.cur .ss-ico svg{ fill:#4fe3ff; }
-.side-subitem em{ font-style:normal; font-size:11px; color:#f4e925; border:1px solid rgba(244,233,37,.5); padding:0 6px; border-radius:9px; flex:none; }
+.side-subitem em{ font-style:normal; font-size:11px; color:#4fe3ff; border:1px solid rgba(79,227,255,.5); padding:0 6px; border-radius:9px; flex:none; }
 /* 桌面端（侧边栏可见）隐藏 ☰ 网页导航按钮，手机端保留 */
 @media (min-width: 769px){ .menu-btn{ display:none; } }
 @media (max-width: 768px){ .side-nav{ display:none; } }
