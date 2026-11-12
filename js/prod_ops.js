@@ -14,6 +14,7 @@
     var C_LINE = '#9b8fd6';                // 散点圆圈边线：深紫
     var C_BAR = '#f0a35e';                 // 柱状：琥珀橙
     var C_AVG = 'rgba(255,255,255,.7)';    // 平均参考线：中性白（避免蓝色系）
+    var C_MED = '#4fe3ff';                 // 中位数参考线：青色点线
     var AXIS = 'rgba(112,187,252,.5)';
 
     // 该页只统计「该段时长可算」的单（其余不参与，分母随之变小）
@@ -54,6 +55,12 @@
         if (!rows.length) return 0;
         var s = 0; rows.forEach(function (r) { s += r[F]; });
         return s / rows.length;
+    }
+    function medianOf(rows) {                          // 中位数：不受长尾/离群单影响
+        if (!rows.length) return 0;
+        var a = rows.map(function (r) { return r[F]; }).sort(function (x, y) { return x - y; });
+        var i = (a.length - 1) / 2, lo = Math.floor(i), hi = Math.ceil(i);
+        return a[lo] + (a[hi] - a[lo]) * (i - lo);
     }
     function rangeYM() {
         var s = sY + '-' + pad2(sM), e = eY + '-' + pad2(eM);
@@ -117,10 +124,14 @@
     function renderScatter(vis) {
         var d = scatterData(vis);
         var avgVis = avgOf(vis);
+        var medVis = medianOf(vis);
         var maxD = d.length ? d[d.length - 1].v : 1;
+        var xMax = logMode ? Math.max(maxD, 1) * 1.4 : Math.max(1, Math.ceil(maxD * 1.08));
+        // 均值与中位数太近（差 < 轴长的 3%）时两个标签会叠在一起 → 合成一个标签，线仍画两条
+        var closeLbl = Math.abs(avgVis - medVis) < xMax * 0.03;
         var xo = logMode
-            ? { type: 'log', logBase: 10, min: LOG_MIN, max: Math.max(maxD, 1) * 1.4 }
-            : { type: 'value', min: 0, max: Math.max(1, Math.ceil(maxD * 1.08)) };
+            ? { type: 'log', logBase: 10, min: LOG_MIN, max: xMax }
+            : { type: 'value', min: 0, max: xMax };
         xo.name = CFG.xName; xo.nameLocation = 'middle'; xo.nameGap = 26;
         xo.axisLine = { lineStyle: { color: AXIS } };
         xo.axisLabel = { color: '#9fc6e8', fontSize: 11 };
@@ -148,10 +159,20 @@
                 emphasis: { itemStyle: { color: 'rgba(79,227,255,.35)', borderColor: '#4fe3ff', borderWidth: 2 } },
                 markLine: {
                     silent: true, symbol: 'none', animation: false,
-                    lineStyle: { color: C_AVG, width: 1, type: 'dashed' },
-                    // 竖线上的标签用 'end'（画在轴线顶端外侧）；'insideEndTop' 在竖线上会被顶出画布
-                    label: { show: true, position: 'end', color: '#daf9ff', fontSize: 11, formatter: '平均 ' + fmt1(avgVis) },
-                    data: [{ xAxis: logMode ? Math.max(avgVis, LOG_MIN) : avgVis }]
+                    // 两条参考线，标签都在顶端：白色虚线 = 均值、青色点线 = 中位数；
+                    // 两者数值接近时只显示一个合并标签（平均 x · 中位 y），避免文字重叠
+                    data: [
+                        {
+                            xAxis: logMode ? Math.max(avgVis, LOG_MIN) : avgVis,
+                            lineStyle: { color: C_AVG, width: 1, type: 'dashed' },
+                            label: { show: true, position: 'end', color: '#daf9ff', fontSize: 11, formatter: '平均 ' + fmt1(avgVis) + (closeLbl ? ' · 中位 ' + fmt1(medVis) : '') }
+                        },
+                        {
+                            xAxis: logMode ? Math.max(medVis, LOG_MIN) : medVis,
+                            lineStyle: { color: C_MED, width: 1.2, type: 'dotted' },
+                            label: { show: !closeLbl, position: 'end', color: C_MED, fontSize: 11, formatter: '中位 ' + fmt1(medVis) }
+                        }
+                    ]
                 }
             }]
         }, true);
@@ -203,10 +224,14 @@
     function renderBar(vis) {
         var d = barData(vis);
         var avgVis = avgOf(vis);
+        var medVis = medianOf(vis);
         var ymax = d.reduce(function (a, x) { return Math.max(a, x.avg); }, 1);
+        var yMax = logMode ? Math.max(ymax, 1) * 1.4 : Math.max(1, Math.ceil(ymax * 1.25));
+        // 与散点同规则：均值/中位数太近时合并标签，避免两条线的文字叠在一起
+        var closeLbl = Math.abs(avgVis - medVis) < yMax * 0.03;
         var yo = logMode
-            ? { type: 'log', logBase: 10, min: LOG_MIN, max: Math.max(ymax, 1) * 1.4 }
-            : { type: 'value', min: 0, max: Math.max(1, Math.ceil(ymax * 1.25)) };
+            ? { type: 'log', logBase: 10, min: LOG_MIN, max: yMax }
+            : { type: 'value', min: 0, max: yMax };
         yo.axisLine = { show: false };
         yo.axisLabel = { color: '#9fc6e8', fontSize: 11 };
         yo.splitLine = { lineStyle: { color: 'rgba(112,187,252,.12)' } };
@@ -214,7 +239,8 @@
         barChart.setOption({
             backgroundColor: 'transparent',
             animationDuration: 350,
-            grid: { left: 20, right: 62, top: 26, bottom: 12, containLabel: true },
+            // 右侧留白：合并标签（平均 x · 中位 y）比单个标签长，需要更宽的边距才不会被裁掉
+            grid: { left: 20, right: closeLbl ? 120 : 62, top: 26, bottom: 12, containLabel: true },
             tooltip: {
                 trigger: 'axis', axisPointer: { type: 'shadow' },
                 backgroundColor: 'rgba(2,24,61,.95)', borderColor: 'rgba(47,137,207,.8)',
@@ -238,10 +264,20 @@
                 label: { show: true, position: 'top', color: '#daf9ff', fontSize: 10, formatter: function (p) { return fmt1(p.data.avg); } },
                 markLine: {
                     silent: true, symbol: 'none', animation: false,
-                    lineStyle: { color: C_AVG, width: 1, type: 'dashed' },
-                    // 横线上的标签放最右端（'end' = 线的末端外侧）
-                    label: { show: true, position: 'end', color: '#daf9ff', fontSize: 11, formatter: '平均 ' + fmt1(avgVis) },
-                    data: [{ yAxis: logMode ? Math.max(avgVis, LOG_MIN) : avgVis }]
+                    // 两条参考线，标签都在右端：白色虚线 = 均值、青色点线 = 中位数；
+                    // 两者数值接近时只显示合并标签，避免文字重叠
+                    data: [
+                        {
+                            yAxis: logMode ? Math.max(avgVis, LOG_MIN) : avgVis,
+                            lineStyle: { color: C_AVG, width: 1, type: 'dashed' },
+                            label: { show: true, position: 'end', color: '#daf9ff', fontSize: 11, formatter: '平均 ' + fmt1(avgVis) + (closeLbl ? ' · 中位 ' + fmt1(medVis) : '') }
+                        },
+                        {
+                            yAxis: logMode ? Math.max(medVis, LOG_MIN) : medVis,
+                            lineStyle: { color: C_MED, width: 1.2, type: 'dotted' },
+                            label: { show: !closeLbl, position: 'end', color: C_MED, fontSize: 11, formatter: '中位 ' + fmt1(medVis) }
+                        }
+                    ]
                 }
             }]
         }, true);
