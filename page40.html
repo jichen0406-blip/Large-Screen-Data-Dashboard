@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>福可苏业绩总览 · 冻存过期订单</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/expiry_common.js"></script>
+<link rel="stylesheet" href="css/style.css">
+	<style>
+	/* 质量过期订单页（page40 / page41 共用样式） */
+	.exp-bar{ flex:0 0 auto; display:flex; align-items:center; gap:10px; margin:12px 0 0; padding:8px 14px; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.4), 0 0 14px rgba(47,137,207,.2); background:rgba(2,24,61,.3); flex-wrap:wrap; }
+	.exp-lab{ font-size:14px; color:#9fe8ff; letter-spacing:1px; }
+	.exp-sep{ color:rgba(159,232,255,.6); font-size:14px; }
+	.exp-cnt{ margin-left:auto; font-size:13px; color:#4fe3ff; }
+	.exp-cnt b{ font-size:15px; }
+	.exp-cards{ flex:0 0 auto; display:flex; gap:12px; margin:10px 0 0; }
+	.exp-cards .kpi-card{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; justify-content:center; padding:10px 16px; }
+	.exp-cards .kc-label{ font-size:14px; }
+	.exp-cards .kc-val{ font-size:28px; }
+	.exp-cards .kc-val small{ font-size:14px; font-weight:400; color:rgba(159,232,255,.75); margin-left:3px; }
+	.exp-cards .kc-sub{ font-size:12px; }
+	.exp-panel{ display:flex; flex-direction:column; min-height:0; border:1px solid rgba(7,118,181,.5); box-shadow: inset 0 0 10px rgba(7,118,181,.3), 0 0 12px rgba(47,137,207,.15); background:rgba(2,24,61,.25); padding:4px 12px 8px; margin-top:10px; }
+	.exp-chartbox{ flex:1 1 0; min-height:170px; }
+	.exp-tblbox{ flex:1.5 1 0; min-height:200px; margin-bottom:10px; }
+	.exp-chart{ flex:1; min-height:0; }
+	.exp-tblbox .pt-tbl-wrap{ flex:1; min-height:0; max-height:none; }
+	.exp-tbl{ min-width:1520px; }
+	.exp-tbl .exp-age{ font-weight:700; color:#4fe3ff; }
+	.fs-body .exp-chart{ width:100%; height:100%; }
+	</style>
+	<script>window.PAGE_KEY='qual_cryo';</script>
+	<script type="text/javascript" src="js/users.js"></script>
+	<script type="text/javascript" src="js/auth.js"></script>
+</head>
+<body>
+	<div class="login-mask" id="loginMask">
+		<div class="login-body">
+			<div class="login-left"><img src="images/login29/qiu.png" alt=""></div>
+			<div class="login-center">
+				<div class="login-shuzibg"></div>
+				<div class="login-title">
+					<img class="login-logo" src="images/logo-white.png" alt="驯鹿生物">
+					<p class="login-title-main">驯鹿生物大数据监控平台</p>
+					<p class="login-title-sub">登录页</p>
+				</div>
+				<div class="login-card">
+					<div class="login-welcome">欢迎登录系统!</div>
+					<div class="login-input">
+						<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+						<input type="text" id="loginUser" placeholder="请输入账号" autocomplete="off">
+					</div>
+					<div class="login-input">
+						<div class="login-ico"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></div>
+						<input type="password" id="loginPwd" placeholder="密码" autocomplete="off">
+					</div>
+					<label class="login-remember"><input type="checkbox" id="loginRemember"><span>记住密码</span></label>
+					<div class="login-err" id="loginErr"></div>
+					<div class="login-btn" id="loginBtn"><span>登 录</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="login-bolang"></div>
+	</div>
+	<div class="head clearfix">
+		<h1><img class="head-logo" src="images/logo-white.png" alt="驯鹿生物">驯鹿生物大数据监控平台</h1>
+		<div class="head-left">
+			<div class="update" id="dataUpd">数据更新时间 --</div>
+			<button class="menu-btn" id="menuBtn" type="button"><i>☰</i><span>网页导航</span></button>
+		</div>
+		<div class="tm-wrap">
+			<div class="time" id="showTime">--</div>
+			<div class="weather" id="weather">上海 --</div>
+		</div>
+		<script>
+		var t = null;
+		t = setTimeout(time, 1000);
+		function time() {
+			clearTimeout(t);
+			var dt = new Date();
+			var y = dt.getFullYear(), mt = dt.getMonth() + 1, day = dt.getDate();
+			var h = dt.getHours(), m = dt.getMinutes(), s = dt.getSeconds();
+			document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+			t = setTimeout(time, 1000);
+		}
+		</script>
+	</div>
+	<div class="mainbox page-fill">
+		<div class="exp-bar" id="expCtl"></div>
+		<div class="exp-cards" id="expCards"></div>
+		<div class="exp-panel exp-chartbox">
+			<div class="sec-head">月龄分布 <span class="sub">横轴=月龄 · 橙=临期(9–11月) · 红=已过期(≥12月)</span><button class="map-fs" type="button" data-fs="expChart" data-title="冻存过期订单 · 月龄分布">⛶</button></div>
+			<div class="exp-chart" id="expChart"></div>
+		</div>
+		<div class="exp-panel exp-tblbox">
+			<div class="sec-head" data-xls="expTbl">过期 / 临期订单明细 <span class="sub">按月龄降序 · 时间筛选按下单年月</span></div>
+			<div class="pt-tbl-wrap" id="expTbl"></div>
+		</div>
+	</div>
+	<!-- 全屏层 -->
+	<div class="fs-mask" id="fsMask" style="display:none;">
+		<div class="fs-head">
+			<span class="fs-title" id="fsTitle">--</span>
+			<button class="fs-close" id="fsClose" type="button">×</button>
+		</div>
+		<div class="fs-body" id="fsBody"></div>
+	</div>
+	<!-- 网页导航菜单 -->
+	<div class="menu-mask" id="menuMask" style="display:none;">
+		<div class="menu-panel">
+			<div class="menu-panel-head">
+				<span class="menu-panel-tit">网页导航</span>
+				<button class="menu-close" id="menuClose" type="button">×</button>
+			</div>
+			<ul class="menu-list" id="menuList"></ul>
+			<div class="menu-pager" id="menuPager"></div>
+		</div>
+	</div>
+	<script>
+	// 数据更新时间
+	$(function () {
+		var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
+		$('#dataUpd').text((B && B.UPDATED) ? ('数据更新时间 ' + B.UPDATED) : '数据更新时间 --');
+	});
+	</script>
+	<script type="text/javascript" src="js/excel_export.js"></script>
+	<script type="text/javascript" src="js/fs.js"></script>
+	<!-- 左侧悬浮导航栏 -->
+	<div class="side-nav" id="sideNav"></div>
+</body>
+</html>

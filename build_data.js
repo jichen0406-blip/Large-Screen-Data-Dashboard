@@ -1062,7 +1062,8 @@ var ABN_BUCKETS = {
   noreinfusion: [[0, 3], [3, 6], [6, Infinity]]
 };
 var ABN_EXPIRE = { noproduction: 12, noreinfusion: 6 };   // 过期阈值（月）：产品有效期，m ≥ 阈值 = 已过期
-var ABN_WARN = { noproduction: 2, noreinfusion: 2 };      // 即将过期预警窗口（月）：距阈值不足 N 个月即为「即将过期」（2026-11-11 由 1 个月放宽到 2 个月）
+var ABN_WARN = { noproduction: 3, noreinfusion: 3 };      // 即将过期预警窗口（月）：距阈值不足 N 个月即为「即将过期」
+                                                          // 2026-11-11 由 1 → 2；2026-11-13 由 2 → 3，与「质量过期订单」两页的临期口径统一（冻存 9~12 月、生产 3~6 月）
 function abnLabel(a, b) { return b === Infinity ? ('≥' + a + ' 月') : (a === 0 ? ('0~' + b + ' 月') : (a + '~' + b + ' 月')); }
 function abnBucketOf(m, key) {
   var bs = ABN_BUCKETS[key];
