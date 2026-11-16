@@ -72,12 +72,61 @@
                 if (remEl && remEl.checked) localStorage.setItem('board_remember', JSON.stringify({ user: String(uname || '').trim(), pwd: pwd }));
                 else localStorage.removeItem('board_remember');
             } catch (e) {}
+            /* 登录瞬间先铺一层黑幕：动画运行时还要加载/初始化，避免闪出 dashboard */
+            var cover = document.createElement('div');
+            cover.id = 'boardSplashCover';
+            cover.style.cssText = 'position:fixed;inset:0;background:#000;z-index:2147482999;';
+            document.body.appendChild(cover);
+            function dropCover() { var c = document.getElementById('boardSplashCover'); if (c && c.parentNode) c.parentNode.removeChild(c); }
             hideMask();
             if (window.jQuery) $(document).trigger('boardlogin');
-            if (!canAccess(curKey())) location.replace(home());
+            if (!canAccess(curKey())) { location.replace(home()); return; }
+            if (window.boardSplash) {
+                window.boardSplash(String(uname || '').trim());
+                var waited = 0;
+                var iv = setInterval(function () {
+                    waited += 100;
+                    if (document.getElementById('dsh-startup-root')) {
+                        clearInterval(iv);
+                        setTimeout(dropCover, 400);   // 动画已铺满，再撤黑幕
+                    } else if (waited >= 3000) {
+                        clearInterval(iv);
+                        dropCover();                  // 兜底：3 秒内没起来就不挡了
+                    }
+                }, 100);
+            } else {
+                dropCover();
+            }
         });
     }
     function init() {
+        /* ── 开机动画（测试环境试装）：登录成功后播放，随机换成驯鹿品牌配置 ── */
+        window.__DSH_STARTUP_SKIP__ = true;                       // 先不自动播，等登录成功
+        window.__DSH_STARTUP_SCRIPT_URL__ = 'js/splash/splash.js';
+        window.__DSH_STARTUP__ = {
+            enabled: true, mode: 'always', theme: 'dark', speed: 1,
+            requireInteraction: false, allowSkip: true,
+            sound: true, voice: true, voiceLang: 'en',
+            identity: 'Anonymous User', identityId: '9527', accessLevel: 'Top Secret',
+            brand1: 'IASO', brand2: 'BIOTHERAPEUTICS', brand3a: 'DATA', brand3b: 'PLATFORM',
+            orgZh: '驯鹿生物', orgEn: 'IASO', orgSub: 'IASO BIOTHERAPEUTICS',
+            welcomeBox: 'IASO BIOTHERAPEUTICS', footer: 'POWERED BY IASO BIOTHERAPEUTICS',
+            accent: '#4fe3ff', glitchA: '#ff3b30', glitchB: '#2971b8'
+        };
+        (function () {
+            if (window.__boardSplashLoaded) return;
+            window.__boardSplashLoaded = true;
+            var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = 'css/splash/splash.css';
+            document.head.appendChild(l);
+            var sc = document.createElement('script'); sc.src = 'js/splash/splash.js';
+            document.head.appendChild(sc);
+        })();
+        window.boardSplash = function (name) {
+            try {
+                window.__DSH_STARTUP__.identity = name || 'Anonymous User';
+                if (window.__DSH_STARTUP_API__ && window.__DSH_STARTUP_API__.replay) window.__DSH_STARTUP_API__.replay();
+            } catch (e) {}
+        };
         loadSession();
         if (CURRENT && CURRENT.authed === '1') {
             hideMask();
