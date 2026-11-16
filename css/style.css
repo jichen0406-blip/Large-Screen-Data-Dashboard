@@ -145,7 +145,18 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .nav2>li:first-child{border:none;}
 /* .tit01 已并入 .sec-head */
 .nav2>li>.sec-head{ padding-top:4px; padding-bottom:6px; margin-bottom:6px; }
-.nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height: clamp(190px, calc(100vh - 740px), 360px); padding: 0 10px 10px 10px; display: flex; flex-direction: column;}
+.nav2>li{float: left;border-left:1px solid rgba(7,118,181,.2); height: clamp(190px, calc(100vh - 711px), 380px); padding: 0 10px 10px 10px; display: flex; flex-direction: column;}
+
+/* ── 首页第一排：一行定高 + 三列弹性填充，三列底边严格对齐 ──
+   552px = 中间地图面板 550px + 上下边框；左右两列按行高自动伸缩，
+   这样标题栏高度随字体/缩放变化时也不会再错位（2026-11-16） */
+.nav1.idx-eq{ display:flex; align-items:stretch; height:552px; }
+.nav1.idx-eq>li{ float:none; display:flex; flex-direction:column; min-width:0; }
+.nav1.idx-eq>li>.box{ flex:1 1 0; min-height:0; display:flex; flex-direction:column; margin-bottom:10px; }
+.nav1.idx-eq>li>.box:last-child{ margin-bottom:0; }
+.nav1.idx-eq>li>.box>.boxnav{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; }
+.nav1.idx-eq>li>.box>.boxnav:not(.mapc){ height:auto !important; }   /* 左右两列跟行高走，中间 .mapc 保留 550 */
+.nav1.idx-eq .tbl-scroll, .nav1.idx-eq .sev-scroll{ flex:1 1 auto; min-height:0; height:auto !important; }
 
 .ftechart{ flex: 1; min-height: 0; width: 100%; }
 .chart-box{ position: relative; flex: 1; min-height: 0; }
@@ -296,7 +307,10 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 	.head .head-left .update{ line-height: 1.4; display: inline; }
 	.head .tm-wrap{ position: static; transform: none; justify-content: center; margin-top: 4px; line-height: 1.4; }
 
-	/* 总览页第一排/第二排：纵向堆叠 */
+	/* 总览页第一排/第二排：纵向堆叠（取消第一排的定高/等高，回到固定高） */
+	.nav1.idx-eq{ display: block; height: auto; }
+	.nav1.idx-eq>li{ display: block; float: none; }
+	.nav1.idx-eq>li>.box{ display: block; }
 	.nav1>li{ width: 100% !important; float: none; padding: 0; }
 	.nav1>li>.box{ margin-bottom: 12px; }
 	.nav2>li{ width: 100% !important; float: none; height: auto; padding: 0 10px 10px; }
@@ -307,6 +321,10 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 	/* 地图等容器高度压缩 */
 	.boxnav{ height: 320px !important; }
 	.boxnav.mapc{ height: 380px !important; }
+	/* 取消桌面端第一排的弹性高度，恢复手机端固定高（选择器要压过 .nav1.idx-eq 那几条） */
+	.mainbox .nav1.idx-eq>li>.box>.boxnav:not(.mapc){ height: 320px !important; }
+	.mainbox .nav1.idx-eq .tbl-scroll{ height: 200px !important; flex: none; }
+	.mainbox .nav1.idx-eq .sev-scroll{ height: 100% !important; flex: none; }
 
 	/* 地图左右指标卡片压缩，给地图留空间 */
 	.mapnav div, .mapnav3 div{ width: 78px; padding: 14px 4px; }
