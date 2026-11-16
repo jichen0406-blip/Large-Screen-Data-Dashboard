@@ -470,17 +470,17 @@
 .dsu-ret-rot-a { transform-origin: 50% 50%; animation: dsu-spin 9s linear infinite; }
 .dsu-ret-rot-b { transform-origin: 50% 50%; animation: dsu-spin 5.4s linear infinite reverse; }
 @keyframes dsu-spin { to { transform: rotate(360deg); } }
-.dsu-reticle .dsu-ring-a { fill: none; stroke: var(--dsu-ink); stroke-width: 6; }
-/* 内圈用橙色（和 IASO 标识的橙呼应）；原先用 --dsu-box-ink，深色主题下等于背景黑，整圈看不见 */
-.dsu-reticle .dsu-ring-b { fill: none; stroke: #ff7500; stroke-width: 2.6; opacity: 0.95; }
-.dsu-reticle .dsu-dot-a { fill: var(--dsu-ink); }
-.dsu-reticle .dsu-dot-b { fill: #ff7500; }
-.dsu-reticle .dsu-dot-o { fill: var(--dsu-accent); }
+/* 准星配色（2026-11-16 指定）：外圈白 / 中间弧冰蓝 / 内圈弧中灰 / 全部点琥珀橙 */
+.dsu-reticle .dsu-ring-a { fill: none; stroke: #ffffff; stroke-width: 6; }
+.dsu-reticle .dsu-ring-b { fill: none; stroke: #4fc3f7; stroke-width: 2.6; opacity: 1; }
+.dsu-reticle .dsu-dot-a { fill: #ffffff; }    /* 外圈端点跟外圈弧同色 */
+.dsu-reticle .dsu-dot-b { fill: #4fc3f7; }    /* 中间弧端点跟中间弧同色 */
+.dsu-reticle .dsu-dot-o { fill: #ff9e45; }
 .dsu-reticle .dsu-bracket {
   fill: none;
-  stroke: var(--dsu-ink);
+  stroke: #ffffff;
   stroke-width: 1.6;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 /* 读取阶段的十六进制瀑布：放到原片里最空的上右区，不去和主体挤中间 */
@@ -556,9 +556,18 @@
 .dsu-btn-zh { font-family: var(--dsu-zh); font-weight: 500; }
 .dsu-btn-en { font-family: var(--dsu-mono); font-size: 11px; letter-spacing: 0.24em; opacity: 0.62; }
 .dsu-btn.dsu-pulse { animation: dsu-pulse 1.9s ease-in-out infinite; }
+/* 呼吸光晕：三层叠加做出由内到外的渐变衰减（原来是单层硬边环，颜色一换就发平） */
 @keyframes dsu-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 117, 0, 0); }
-  50% { box-shadow: 0 0 0 7px rgba(255, 117, 0, 0.14); }
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(79, 195, 247, 0),
+                0 0 0 0 rgba(79, 195, 247, 0),
+                0 0 0 0 rgba(79, 195, 247, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.30),
+                0 0 12px 5px rgba(79, 195, 247, 0.18),
+                0 0 28px 12px rgba(79, 195, 247, 0.10);
+  }
 }
 .dsu-hint {
   font-family: var(--dsu-zh);
@@ -934,9 +943,9 @@
   top: 48px;
   z-index: 30;
   font-family: var(--dsu-mono);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.24em;
-  color: var(--dsu-muted);
+  color: #ffffff;
   border: 1px solid transparent;
   padding: 5px 10px;
   cursor: pointer;
