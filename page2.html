@@ -9,6 +9,7 @@
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/time_range.js"></script>
 <script type="text/javascript" src="js/world-data.js"></script>
 <script type="text/javascript" src="js/page2.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -75,7 +76,12 @@
 				<div class="kpi-card run"><div class="kc-label">国内导流 下单</div><div class="kc-val" id="p2dO">--</div></div>
 				<div class="kpi-card run"><div class="kc-label">国内导流 回输</div><div class="kc-val" id="p2dR">--</div></div>
 			</div>
-			<div class="p2-years" id="p2years"></div>
+			<div class="p2-years" style="flex-wrap:wrap;gap:8px">
+				<span class="pt-time-tit">时间区间</span>
+				<select id="p2y1" class="pt-sel" title="开始年"></select><select id="p2m1" class="pt-sel" title="开始月"></select>
+				<span class="tr-sep">~</span>
+				<select id="p2y2" class="pt-sel" title="结束年"></select><select id="p2m2" class="pt-sel" title="结束月"></select>
+			</div>
 		</div>
 		<ul class="clearfix nav1">
 			<li style="width: 50%">

@@ -10,7 +10,7 @@ $(function () {
     var yearKeys = {};
     Object.keys(REGIONS.ND || {}).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
     function updateAll() { renderTables(); }
-    initPtTime('#p5y', '#p5m', yearKeys, updateAll);
+    var RG = initPtRange(['#p5y1', '#p5m1', '#p5y2', '#p5m2'], Object.keys(REGIONS.ND || {}), B.DP, updateAll);
 
     // 挑战目标取值：ent = 'DOM'/'DOM:AM名'/'HK'/'SG'/'KSA'/'ALL'
     function chalV(ent, y, mo, fld) {
@@ -33,20 +33,19 @@ $(function () {
 
     // 通用「每实体五行」表
     function renderEntTable(elId, title, bucket, ents) {
-        var y = parseInt($('#p5y').val(), 10), m = parseInt($('#p5m').val(), 10);
-        var ly = y - 1;
+        var rg = RG.read(), y = rg.y2, ly = y - 1, m1 = rg.m1, m2 = rg.m2;
         var h = '<table class="pt"><thead><tr><th class="pt-lbl">' + title + '</th>';
-        for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
+        for (var i = 1; i <= 12; i++) h += '<th' + (i < m1 ? ' class="pt-off"' : '') + '>' + i + '月</th>';
+        h += '<th class="pt-ytd">区间</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
         ents.forEach(function (e) {
             h += '<tr class="pt-grp' + (e.cls ? ' pt-grp-' + e.cls : '') + '"><td class="pt-lbl" colspan="15">' + e.label + '</td></tr>';
             ['Tar', 'Act', 'Act%', 'LY', 'YOY'].forEach(function (mt) {
-                var row = ptMetricRowHTML(mt, m, function (i) {
+                var row = ptMetricRowHTML(mt, m2, function (i) {
                     var t = e.tar ? chalV(e.tar, y, i, e.fld) : 0;
                     var a = mVal(bucket, y, i, e.key, e.fld);
                     var l = mVal(bucket, ly, i, e.key, e.fld);
                     return { t: t, a: a, l: l };
-                }, 0, 0, 0);
+                }, 0, 0, 0, m1);
                 h += row.h;
             });
         });

@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/time_range.js"></script>
 <script type="text/javascript" src="js/pt-common.js"></script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
 <script type="text/javascript" src="js/page22.js"></script>
@@ -117,9 +118,10 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="pt-time p22-time">
-			<span class="pt-time-tit">时间控制</span>
-			<select id="p22y" class="pt-sel" title="年份"></select>
-			<select id="p22m" class="pt-sel" title="月份"></select>
+			<span class="pt-time-tit">时间区间</span>
+			<select id="p22y1" class="pt-sel" title="开始年"></select><select id="p22m1" class="pt-sel" title="开始月"></select>
+			<span class="tr-sep">~</span>
+			<select id="p22y2" class="pt-sel" title="结束年"></select><select id="p22m2" class="pt-sel" title="结束月"></select>
 			<span class="p22-lab">医院搜索</span>
 			<input type="text" id="p22Search" class="p22-inp" placeholder="医院名称" autocomplete="off">
 			<button type="button" class="cart-btn ghost" id="p22Clear">清空</button>
@@ -144,8 +146,8 @@
 		</div>
 		<div class="p22-box">
 			<div class="p22-chart" id="p22Chart"></div>
-			<div class="p22-ax" id="p22axY">YTD平均下单 --</div>
-			<div class="p22-ax" id="p22axX">YTD平均回输 --</div>
+			<div class="p22-ax" id="p22axY">区间平均下单 --</div>
+			<div class="p22-ax" id="p22axX">区间平均回输 --</div>
 			<div class="p22-q p22-q-lt" id="p22qLT" data-q="lt" title="点击看该象限医院明细"></div>
 			<div class="p22-q p22-q-rt" id="p22qRT" data-q="rt" title="点击看该象限医院明细"></div>
 			<div class="p22-q p22-q-lb" id="p22qLB" data-q="lb" title="点击看该象限医院明细"></div>

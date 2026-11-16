@@ -19,7 +19,7 @@ $(function () {
     var B = window.BOARD_DATA;
     if (!B || !B.OVERSEAS) return;
     var OVERSEAS = B.OVERSEAS;
-    var curYear = 'all';
+
 
     // 英文区域名 → 中文（注册地图时直接改名，避开 ECharts4 map 系列不支持 nameMap 匹配的问题）
     var NAME_MAP = {
@@ -61,17 +61,44 @@ $(function () {
         if (f.properties.cp) centroids[f.properties.name] = f.properties.cp;
     });
 
-    // 年份按钮（全部 + 数据实际年份，2027 等自动出现）
-    var yearsHtml = '<span class="p2y-label">数据年份</span><div class="p2y-btns"><button type="button" class="p2y-btn active" data-y="all">全部</button>';
-    OVERSEAS.YEARS.forEach(function (y) {
-        yearsHtml += '<button type="button" class="p2y-btn" data-y="' + y + '">' + y + '</button>';
+    // 时间区间：开始年/月 ~ 结束年/月（默认当年 1 月 ~ 当前月，口径见 项目文档 §10.5）
+    var RG = TR.init({
+        y1: '#p2y1', m1: '#p2m1', y2: '#p2y2', m2: '#p2m2',
+        months: (OVERSEAS.MONTHS || []),
+        sameYear: false,
+        storageKey: 'p2_range',
+        onChange: function () { $('#p2PanelMask').hide(); renderCards(); renderMaps(); }
     });
-    yearsHtml += '</div>';
-    $('#p2years').html(yearsHtml);
 
-    function agg(obj) { return curYear === 'all' ? obj.all : (obj.y[curYear] || {}); }
+    // 把按月分桶按区间累加（数字相加、对象递归）
+    function mergeAdd(dst, src) {
+        Object.keys(src || {}).forEach(function (k) {
+            var v = src[k];
+            if (typeof v === 'number') dst[k] = (dst[k] || 0) + v;
+            else if (v && typeof v === 'object') { dst[k] = dst[k] || {}; mergeAdd(dst[k], v); }
+        });
+        return dst;
+    }
+    function agg(obj) {
+        var rg = RG.read(), out = {};
+        rg.months.forEach(function (mk) { var b = obj.m && obj.m[mk]; if (b) mergeAdd(out, b); });
+        return out;
+    }
     function cardData() {
-        return curYear === 'all' ? OVERSEAS.CARD.all : (OVERSEAS.CARD.y[curYear] || { npO: 0, npR: 0, dO: 0, dR: 0 });
+        var rg = RG.read(), out = { npO: 0, npR: 0, dO: 0, dR: 0 };
+        rg.months.forEach(function (mk) {
+            var b = OVERSEAS.CARD.m && OVERSEAS.CARD.m[mk];
+            if (!b) return;
+            out.npO += b.npO || 0; out.npR += b.npR || 0; out.dO += b.dO || 0; out.dR += b.dR || 0;
+        });
+        return out;
+    }
+    // Top 医院按区间重算（原始是按月分桶的 {医院:单数}）
+    function topFor(zh) {
+        var merged = agg(OVERSEAS.TOP10), d = merged[zh];
+        if (!d) return null;
+        function toList(m) { return Object.keys(m || {}).map(function (h) { return { name: h, v: m[h] }; }).sort(function (a, b) { return b.v - a.v; }).slice(0, 10); }
+        return { o: toList(d.o), r: toList(d.r) };
     }
     function renderCards() {
         var c = cardData();
@@ -411,21 +438,11 @@ $(function () {
         document.getElementById(id)._dup = false;
     }
 
-    // 年份切换
-    $('#p2years').on('click', 'button', function () {
-        curYear = $(this).data('y');
-        $('#p2years .p2y-btn').removeClass('active');
-        $(this).addClass('active');
-        $('#p2PanelMask').hide();
-        renderCards();
-        renderMaps();
-    });
-
     // Top10 浮窗（右侧海外商业化地图点击区域或散点）
     function chartPause(chart) { chart._p2paused = true; clearInterval(chart._p2timer); }
     function openTop10(zh) {
-        var top = curYear === 'all' ? OVERSEAS.TOP10.all : (OVERSEAS.TOP10.y[curYear] || {});
-        var d = top[zh];
+        var top = agg(OVERSEAS.TOP10);
+        var d = topFor(zh);
         $('#p2Title').text(cnLabel(zh) + ' · 海外商业化');
         function fill(id, list) {
             if (!list || !list.length) { $('#' + id).html('<li class="prov-rank-empty">暂无数据</li>'); return; }
@@ -451,7 +468,7 @@ $(function () {
     leftChart.on('mouseover', function (params) {
         var zh = (params.seriesType === 'effectScatter' && params.data) ? params.data.name : (params.componentType === 'geo' ? params.name : null);
         if (!zh) return;
-        var data = (curYear === 'all' ? OVERSEAS.LEFT.all : (OVERSEAS.LEFT.y[curYear] || {}))[zh];
+        var data = agg(OVERSEAS.LEFT)[zh];
         if (!data) return;
         var evt = params.event, x = 200, y = 120;
         if (evt && evt.offsetX != null) { x = evt.offsetX; y = evt.offsetY; }
@@ -463,7 +480,7 @@ $(function () {
     rightChart.on('click', function (params) {
         var zh = (params.seriesType === 'effectScatter' && params.data) ? params.data.name : (params.componentType === 'geo' ? params.name : null);
         if (!zh) return;
-        var has = (curYear === 'all' ? OVERSEAS.RIGHT.all : (OVERSEAS.RIGHT.y[curYear] || {}))[zh];
+        var has = agg(OVERSEAS.RIGHT)[zh];
         if (has) openTop10(zh);
     });
     $('#p2Close').on('click', function () {

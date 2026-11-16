@@ -49,8 +49,8 @@ $(function () {
     var QROWS = { lt: [], rt: [], lb: [], rb: [] };
 
     // ── 取数：按「医院实体」聚合 YTD（同一医院的多 AM 合并），与 page6.js:128「下单医院数去重」同口径 ──
-    function accumulate(y, m) {
-        var ly = y - 1, acc = {};
+    function accumulate(rg) {
+        var y = rg.y2, ly = y - 1, acc = {};
         function bump(bk, isCur) {
             Object.keys(bk).forEach(function (k) {
                 var p = k.split('|'); // AM|省份|城市|医院
@@ -64,8 +64,9 @@ $(function () {
                 else { v.lo += bk[k].o || 0; v.lr += bk[k].r || 0; }
             });
         }
-        for (var i = 1; i <= m; i++) {
-            var b1 = HOSP[y + '-' + pad(i)], b2 = HOSP[ly + '-' + pad(i)];
+        for (var k = 0; k < rg.months.length; k++) {
+            var mk = rg.months[k];
+            var b1 = HOSP[mk], b2 = HOSP[ly + mk.slice(4)];
             if (b1) bump(b1, true);
             if (b2) bump(b2, false);
         }
@@ -73,8 +74,8 @@ $(function () {
     }
 
     // 当前时间窗内有下单或回输的医院实体
-    function currentRows(y, m) {
-        var acc = accumulate(y, m), rows = [];
+    function currentRows(rg) {
+        var acc = accumulate(rg), rows = [];
         Object.keys(acc).forEach(function (hk) {
             var v = acc[hk];
             if (!(v.o > 0 || v.r > 0)) return;
@@ -127,8 +128,8 @@ $(function () {
         if (!d || !d.hosp) return '';
         return '<div style="font-size:14px;color:#fff;font-weight:700;padding:10px 14px 6px;border-bottom:1px solid rgba(47,137,207,.5);letter-spacing:1px;">' + d.hosp + '</div>' +
             '<div style="padding:8px 14px 12px;font-size:13px;">' +
-            tipRow('YTD下单', d.o, '单', yoyStr(d.o, d.lo), SEM.order) +
-            tipRow('YTD回输', d.r, '单', yoyStr(d.r, d.lr), SEM.reinfuse) +
+            tipRow('区间下单', d.o, '单', yoyStr(d.o, d.lo), SEM.order) +
+            tipRow('区间回输', d.r, '单', yoyStr(d.r, d.lr), SEM.reinfuse) +
             '<div style="margin-top:6px;line-height:20px;font-size:12px;color:rgba(255,255,255,.6);">' +
             '分类：' + d.coe + '　' + d.prov + '·' + (d.city || '--') +
             '</div>' +
@@ -183,14 +184,14 @@ $(function () {
         var rows = (QROWS[which] || []).slice().sort(function (a, b) { return b.o - a.o || b.r - a.r; });
         var sumO = 0, sumR = 0;
         rows.forEach(function (r) { sumO += r.o; sumR += r.r; });
-        $('#p22PopTit').html(QNAME[which] + '　<span class="p22-pop-sub">' + rows.length + ' 家　YTD下单 ' + sumO + ' · YTD回输 ' + sumR +
+        $('#p22PopTit').html(QNAME[which] + '　<span class="p22-pop-sub">' + rows.length + ' 家　区间下单 ' + sumO + ' · 区间回输 ' + sumR +
             '　（合计对均值：下单 ' + ALL.S.avgO.toFixed(1) + ' · 回输 ' + ALL.S.avgR.toFixed(1) + '）</span>');
         if (!rows.length) {
             $('#p22PopBody').html('<div class="p22-pop-empty">该象限当前没有医院</div>');
         } else {
             var h = '<table class="pt"><thead><tr>' +
                 '<th>医院名称</th><th>分类</th><th>AM</th><th>省份</th><th>城市</th>' +
-                '<th class="pt-ytd">YTD下单</th><th>下单同比</th><th class="pt-ytd">YTD回输</th><th>回输同比</th>' +
+                '<th class="pt-ytd">区间下单</th><th>下单同比</th><th class="pt-ytd">区间回输</th><th>回输同比</th>' +
                 '</tr></thead><tbody>';
             rows.forEach(function (r) {
                 h += '<tr>' +
@@ -337,11 +338,10 @@ $(function () {
 
     // recompute=false：只按搜索/AM/坐标类型重绘（轴范围沿用全量，保持不动）
     function redraw(recompute, animate) {
-        var y = parseInt($('#p22y').val(), 10), m = parseInt($('#p22m').val(), 10);
-        if (!y || !m) return;
+        var rg = RG.read();
         closeQuad(); // 象限成员会变，浮窗先关掉避免显示旧数据
         if (recompute !== false) {
-            ALL.rows = currentRows(y, m);
+            ALL.rows = currentRows(rg);
             ALL.S = stats(ALL.rows);
             ALL.maxO = 1; ALL.maxR = 1;
             ALL.rows.forEach(function (r) {
@@ -360,7 +360,7 @@ $(function () {
 
     var yearKeys = {};
     Object.keys(HOSP).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
-    initPtTime('#p22y', '#p22m', yearKeys, function () { redraw(true, true); });
+    var RG = initPtRange(['#p22y1', '#p22m1', '#p22y2', '#p22m2'], Object.keys(HOSP), B.DP, function () { redraw(true, true); });
 
     $('#p22Search').on('input', function () {
         query = String(this.value || '').trim();

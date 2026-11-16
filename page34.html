@@ -9,6 +9,7 @@
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
 <script type="text/javascript" src="js/cart_common.js"></script>
+<script type="text/javascript" src="js/time_range.js"></script>
 <script type="text/javascript" src="js/cart_detail.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<style>
@@ -80,9 +81,10 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="pt-time">
-			<span class="pt-time-tit">年月控制</span>
-			<select id="p10y" class="pt-sel" title="年份"></select>
-			<select id="p10m" class="pt-sel" title="月份"></select>
+			<span class="pt-time-tit">时间区间</span>
+			<select id="p10y1" class="pt-sel" title="开始年"></select><select id="p10m1" class="pt-sel" title="开始月"></select>
+			<span class="tr-sep">~</span>
+			<select id="p10y2" class="pt-sel" title="结束年"></select><select id="p10m2" class="pt-sel" title="结束月"></select>
 			<span class="cart-sep"></span>
 			<span class="cart-ctl-lab">状态筛选（多选）</span>
 			<div class="cart-lights" id="p10lights"></div>

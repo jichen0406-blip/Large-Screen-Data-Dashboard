@@ -377,6 +377,12 @@ a:hover{ color:#4ba6e0; text-decoration: none!important}
 .pt-time-tit{ font-size:16px; color:#daf9ff; letter-spacing:2px; white-space:nowrap; }
 .pt-sel{ height:32px; padding:0 8px; background:rgba(2,24,61,.8); border:1px solid rgba(47,137,207,.7); border-radius:6px; color:#fff; font-size:14px; outline:none; cursor:pointer; }
 .pt-time-note{ margin-left:auto; font-size:12px; color:rgba(255,255,255,.5); }
+/* ── 时间区间控件（全站标准，见 项目文档 §10.5）：开始月 ~ 结束月 ── */
+.tr-sep{ color:rgba(159,232,255,.6); font-size:14px; }
+.tr-note{ display:none; font-size:12px; color:#ff8c42; letter-spacing:.5px; }
+.tr-note.on{ display:inline; }
+/* 区间外月份置灰（年矩阵表用） */
+.pt td.pt-off, .pt th.pt-off{ opacity:.3; }
 .p4-kpis{ display:flex; gap:32px; }
 .p4-col{ flex:1; min-width:0; }
 .sec-num{ margin-left:10px; color:#fff; font-size:12px; letter-spacing:1px; }

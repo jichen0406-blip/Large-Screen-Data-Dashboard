@@ -13,26 +13,12 @@
     var monthSet = {};
     DATA.forEach(function (r) { monthSet[r.plan.slice(0, 7)] = true; });
     var YMS = Object.keys(monthSet).sort();
-    var DEF_YM = YMS.length ? YMS[YMS.length - 1] : beijingToday().slice(0, 7);
-    var yearSet = {};
-    YMS.forEach(function (ym) { yearSet[ym.slice(0, 4)] = true; });
-    var YEARS = Object.keys(yearSet).sort().reverse();
-
-    var selY = parseInt(DEF_YM.slice(0, 4), 10);
-    var selM = parseInt(DEF_YM.slice(5, 7), 10);
+    var RG = null;   // 时间区间控件（开始年/月 ~ 结束年/月，全站统一）
     var selLights = { red: true, gray: true, yellow: true, green: true };
     var hl = null, focus = null;
 
     function inFocus(r) { return focus && r.code === focus.code && r.type === focus.type; }
 
-    function fillYearMonth() {
-        var $y = $('#p10y'), $m = $('#p10m');
-        $y.empty(); YEARS.forEach(function (y) { $y.append('<option value="' + y + '">' + y + ' 年</option>'); });
-        var mh = '';
-        for (var i = 1; i <= 12; i++) mh += '<option value="' + i + '">' + i + ' 月</option>';
-        $m.html(mh);
-        $y.val(String(selY)); $m.val(String(selM));
-    }
     function renderLights() {
         var s = '';
         LIGHTS.forEach(function (l) {
@@ -56,10 +42,10 @@
     ];
     function renderTable() {
         var today = beijingToday();
-        var ym = selY + '-' + pad2(selM);
+        var rg = RG.read();
         var recs = DATA.filter(function (r) {
             if (focus) return inFocus(r);
-            return r.plan.slice(0, 7) === ym && selLights[stateOf(r, today)];
+            return TR.inRange(r.plan.slice(0, 7), rg) && selLights[stateOf(r, today)];
         }).sort(function (a, b) {
             var d = stateOrder(a, today) - stateOrder(b, today);
             if (d) return d;
@@ -68,7 +54,7 @@
         });
         var hd = '<div class="cart-tbl-hdr">' + TH.map(function (c) { return '<span class="' + c.cls + '">' + c.t + '</span>'; }).join('') + '</div>';
         if (!recs.length) {
-            $('#p10tbl').html(hd + '<div class="cart-tbl-empty">本月无记录</div>');
+            $('#p10tbl').html(hd + '<div class="cart-tbl-empty">区间内无记录</div>');
             $('#p10tblstat').text('');
             return;
         }
@@ -118,13 +104,11 @@
             renderTable();
             return;
         }
-        selY = parseInt(hitRec.plan.slice(0, 4), 10);
-        selM = parseInt(hitRec.plan.slice(5, 7), 10);
         LIGHTS.forEach(function (l) { selLights[l.k] = true; });
-        $('#p10y').val(String(selY)); $('#p10m').val(String(selM));
+        RG.setRange(hitRec.plan.slice(0, 7), hitRec.plan.slice(0, 7));   // 区间收到该订单所在月
         hl = { code: code, type: qtype };
         focus = { code: code, type: qtype };
-        $('#p10msg').text('已定位：' + code + '（' + TYPE_LABEL[qtype] + '，' + hitRec.plan + '）· 仅显示该订单，点「清空」返回整月').removeClass('err');
+        $('#p10msg').text('已定位：' + code + '（' + TYPE_LABEL[qtype] + '，' + hitRec.plan + '）· 仅显示该订单，点「清空」返回区间').removeClass('err');
         renderTable();
     }
     function doClear() {
@@ -136,8 +120,6 @@
     function rerender() { hl = null; focus = null; $('#p10msg').text('').removeClass('err'); renderTable(); }
 
     function bindEvents() {
-        $('#p10y').on('change', function () { selY = parseInt(this.value, 10); rerender(); });
-        $('#p10m').on('change', function () { selM = parseInt(this.value, 10); rerender(); });
         $('#p10lights').on('click', '.cart-light', function () {
             var k = $(this).data('k');
             var next = !selLights[k];
@@ -152,7 +134,13 @@
     }
 
     $(function () {
-        fillYearMonth();
+        RG = TR.init({
+            y1: '#p10y1', m1: '#p10m1', y2: '#p10y2', m2: '#p10m2',
+            months: YMS,
+            sameYear: false,          // 逐单明细：允许跨年
+            storageKey: 'cart_range',
+            onChange: rerender
+        });
         renderLights();
         bindEvents();
         renderTable();

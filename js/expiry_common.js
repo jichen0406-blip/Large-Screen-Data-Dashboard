@@ -21,33 +21,10 @@
         function fmt1(v) { return (Math.round(v * 10) / 10).toFixed(1); }
         function pct(a, b) { return b > 0 ? (a / b * 100).toFixed(1) + '%' : '0%'; }
 
-        // ── 年月选项（按订单月 ym 自适应）──
+        // ── 月份集合（按订单月 ym 自适应）──
         var YMS = ALL.map(function (r) { return r.ym; }).filter(Boolean).sort();
-        var YEARS = [], byYear = {};
-        YMS.forEach(function (ym) {
-            var y = ym.slice(0, 4), m = +ym.slice(5, 7);
-            if (!byYear[y]) { byYear[y] = []; YEARS.push(y); }
-            if (byYear[y].indexOf(m) < 0) byYear[y].push(m);
-        });
-        YEARS.sort();
-        Object.keys(byYear).forEach(function (y) { byYear[y].sort(function (a, b) { return a - b; }); });
-
-        // 默认区间 = 全部（超龄单可能下单很早，默认收窄会把它们藏起来）
-        var st = {
-            y1: YMS.length ? YMS[0].slice(0, 4) : '', m1: YMS.length ? +YMS[0].slice(5, 7) : 1,
-            y2: YMS.length ? YMS[YMS.length - 1].slice(0, 4) : '', m2: YMS.length ? +YMS[YMS.length - 1].slice(5, 7) : 12,
-            am: '__all'
-        };
-
-        function fillYears(sel, val) {
-            sel.innerHTML = YEARS.map(function (y) { return '<option value="' + y + '">' + y + ' 年</option>'; }).join('');
-            sel.value = val;
-        }
-        function fillMonths(sel, y, val) {
-            var ms = byYear[y] || [1];
-            sel.innerHTML = ms.map(function (m) { return '<option value="' + m + '">' + m + ' 月</option>'; }).join('');
-            sel.value = String(val);
-        }
+        var st = { am: '__all' };
+        var RG = null;   // 时间区间控件（全站统一，见 项目文档 §10.5）
 
         // ── 控制区 ──
         function renderControls() {
@@ -55,30 +32,32 @@
             if (!el) return;
             var ams = {};
             ALL.forEach(function (r) { if (r.am) ams[r.am] = true; });
-            var h = '<span class="exp-lab">下单年月</span>' +
-                '<select id="expY1" class="pt-sel"></select><select id="expM1" class="pt-sel"></select>' +
+            var h = '<span class="exp-lab">下单年月区间</span>' +
+                '<select id="expY1" class="pt-sel" title="开始年"></select><select id="expM1" class="pt-sel" title="开始月"></select>' +
                 '<span class="exp-sep">~</span>' +
-                '<select id="expY2" class="pt-sel"></select><select id="expM2" class="pt-sel"></select>' +
+                '<select id="expY2" class="pt-sel" title="结束年"></select><select id="expM2" class="pt-sel" title="结束月"></select>' +
                 '<span class="exp-sep">|</span><span class="exp-lab">AM</span>' +
                 '<select id="expAM" class="pt-sel"><option value="__all">全部 AM</option>' +
                 Object.keys(ams).sort().map(function (a) { return '<option value="' + esc(a) + '">' + esc(a) + '</option>'; }).join('') +
                 '</select><span class="exp-cnt" id="expCnt"></span>';
             el.innerHTML = h;
-            var $Y1 = document.getElementById('expY1'), $M1 = document.getElementById('expM1');
-            var $Y2 = document.getElementById('expY2'), $M2 = document.getElementById('expM2');
-            fillYears($Y1, st.y1); fillMonths($M1, st.y1, st.m1);
-            fillYears($Y2, st.y2); fillMonths($M2, st.y2, st.m2);
-            $Y1.addEventListener('change', function () { fillMonths($M1, $Y1.value, 1); render(); });
-            $Y2.addEventListener('change', function () { fillMonths($M2, $Y2.value, 12); render(); });
-            [$M1, $M2, document.getElementById('expAM')].forEach(function (x) { x.addEventListener('change', render); });
+            // 默认区间 = 有数据的月份范围（这批订单可能下单很早，收窄成 YTD 会把超龄单藏起来）
+            var M0 = YMS.length ? YMS[0] : TR.nowYm(), M1 = YMS.length ? YMS[YMS.length - 1] : TR.nowYm();
+            RG = TR.init({
+                y1: '#expY1', m1: '#expM1', y2: '#expY2', m2: '#expM2',
+                months: YMS, dp: B.DP,
+                defaultY1: +M0.slice(0, 4), defaultM1: +M0.slice(5, 7),
+                defaultY2: +M1.slice(0, 4), defaultM2: +M1.slice(5, 7),
+                sameYear: false,               // 逐单明细页：允许跨月跨年
+                storageKey: 'qual_range',
+                onChange: render
+            });
+            document.getElementById('expAM').addEventListener('change', render);
         }
-        function ym1() { return st.y1 + '-' + pad2(st.m1); }
-        function ym2() { return st.y2 + '-' + pad2(st.m2); }
         function rowsIn() {
-            var a = ym1(), b = ym2();
-            if (a > b) { var t = a; a = b; b = t; }   // 起止颠倒自动对调
+            var rg = RG.read();
             return ALL.filter(function (r) {
-                if (!r.ym || r.ym < a || r.ym > b) return false;
+                if (!r.ym || !TR.inRange(r.ym, rg)) return false;
                 if (st.am !== '__all' && r.am !== st.am) return false;
                 return true;
             });
@@ -228,10 +207,9 @@
             renderTable(rows);
         }
         function readState() {
-            var $Y1 = document.getElementById('expY1'), $M1 = document.getElementById('expM1');
-            var $Y2 = document.getElementById('expY2'), $M2 = document.getElementById('expM2'), $AM = document.getElementById('expAM');
-            if (!$Y1) return;
-            st.y1 = $Y1.value; st.m1 = +$M1.value; st.y2 = $Y2.value; st.m2 = +$M2.value; st.am = $AM.value;
+            var $AM = document.getElementById('expAM');
+            if (!$AM) return;
+            st.am = $AM.value;
         }
 
         // ── 初始化 ──

@@ -428,20 +428,26 @@ function normCN(c) {
   return String(c).trim(); // 港澳台不并入中国，单独展示
 }
 function isOverseas(c) { return OVERSEAS[c] || c === '中国'; }
-var p2Card = { all: { npO: 0, npR: 0, dO: 0, dR: 0 }, y: {} };
-var p2Left = { all: {}, y: {} }, p2Right = { all: {}, y: {} };
-var p2RightD = { all: {}, y: {} }; // 右侧表格：国家 × 导流分类
-var p2Top = { all: {}, y: {} };
-var yearSet = {};
-function cnt(bucket, yk, country, k) {
+var p2Card = { all: { npO: 0, npR: 0, dO: 0, dR: 0 }, y: {}, m: {} };   // m = 按月（'YYYY-MM'）分桶，时间区间筛选用
+var p2Left = { all: {}, y: {}, m: {} }, p2Right = { all: {}, y: {}, m: {} };
+var p2RightD = { all: {}, y: {}, m: {} }; // 右侧表格：国家 × 导流分类
+var p2Top = { all: {}, y: {}, m: {} };
+var yearSet = {}, monthSet = {};
+function cnt(bucket, yk, country, k, mk) {
   if (!country) return;
   bucket.all[country] = bucket.all[country] || { o: 0, r: 0 };
   bucket.all[country][k]++;
   bucket.y[yk] = bucket.y[yk] || {};
   bucket.y[yk][country] = bucket.y[yk][country] || { o: 0, r: 0 };
   bucket.y[yk][country][k]++;
+  if (mk) {
+    bucket.m = bucket.m || {};
+    var mb = bucket.m[mk] || (bucket.m[mk] = {});
+    mb[country] = mb[country] || { o: 0, r: 0 };
+    mb[country][k]++;
+  }
 }
-function cntCat(bucket, yk, country, cat, k) {
+function cntCat(bucket, yk, country, cat, k, mk) {
   if (!country || !cat) return;
   bucket.all[country] = bucket.all[country] || {};
   bucket.all[country][cat] = bucket.all[country][cat] || { o: 0, r: 0 };
@@ -450,14 +456,27 @@ function cntCat(bucket, yk, country, cat, k) {
   bucket.y[yk][country] = bucket.y[yk][country] || {};
   bucket.y[yk][country][cat] = bucket.y[yk][country][cat] || { o: 0, r: 0 };
   bucket.y[yk][country][cat][k]++;
+  if (mk) {
+    bucket.m = bucket.m || {};
+    var mb = bucket.m[mk] || (bucket.m[mk] = {});
+    mb[country] = mb[country] || {};
+    mb[country][cat] = mb[country][cat] || { o: 0, r: 0 };
+    mb[country][cat][k]++;
+  }
 }
-function topCnt(yk, country, hosp, k) {
+function topCnt(yk, country, hosp, k, mk) {
   if (!country || !hosp) return;
   var a = p2Top.all[country] || (p2Top.all[country] = { o: {}, r: {} });
   a[k][hosp] = (a[k][hosp] || 0) + 1;
   p2Top.y[yk] = p2Top.y[yk] || {};
   var b = p2Top.y[yk][country] || (p2Top.y[yk][country] = { o: {}, r: {} });
   b[k][hosp] = (b[k][hosp] || 0) + 1;
+  if (mk) {
+    p2Top.m = p2Top.m || {};
+    var c = p2Top.m[mk] || (p2Top.m[mk] = {});
+    var e = c[country] || (c[country] = { o: {}, r: {} });
+    e[k][hosp] = (e[k][hosp] || 0) + 1;
+  }
 }
 records.forEach(function (r) {
   var d = dictMap[r.no];
@@ -478,21 +497,25 @@ records.forEach(function (r) {
   var ry = r.re ? r.re.slice(0, 4) : null;
   if (oy) {
     yearSet[oy] = true;
-    var yko = String(oy);
+    var yko = String(oy), mko = r.od.slice(0, 7);
+    monthSet[mko] = true;
     if (!p2Card.y[yko]) p2Card.y[yko] = { npO: 0, npR: 0, dO: 0, dR: 0 };
-    if (isNp) { p2Card.all.npO++; p2Card.y[yko].npO++; }
-    if (isD) { p2Card.all.dO++; p2Card.y[yko].dO++; }
-    if (d.cat === 'ref') { cnt(p2Left, yko, country, 'o'); cntCat(p2RightD, yko, '中国', d.flow, 'o'); topCnt(yko, '中国', r.hosp, 'o'); }
-    if (isNp) { cnt(p2Right, yko, country, 'o'); cnt(p2Left, yko, country, 'o'); cntCat(p2RightD, yko, country, d.cat === 'npp' ? 'NPP' : '商业化', 'o'); topCnt(yko, country, r.hosp, 'o'); }
+    if (!p2Card.m[mko]) p2Card.m[mko] = { npO: 0, npR: 0, dO: 0, dR: 0 };
+    if (isNp) { p2Card.all.npO++; p2Card.y[yko].npO++; p2Card.m[mko].npO++; }
+    if (isD) { p2Card.all.dO++; p2Card.y[yko].dO++; p2Card.m[mko].dO++; }
+    if (d.cat === 'ref') { cnt(p2Left, yko, country, 'o', mko); cntCat(p2RightD, yko, '中国', d.flow, 'o', mko); topCnt(yko, '中国', r.hosp, 'o', mko); }
+    if (isNp) { cnt(p2Right, yko, country, 'o', mko); cnt(p2Left, yko, country, 'o', mko); cntCat(p2RightD, yko, country, d.cat === 'npp' ? 'NPP' : '商业化', 'o', mko); topCnt(yko, country, r.hosp, 'o', mko); }
   }
   if (ry) {
     yearSet[ry] = true;
-    var ykr = String(ry);
+    var ykr = String(ry), mkr = r.re.slice(0, 7);
+    monthSet[mkr] = true;
     if (!p2Card.y[ykr]) p2Card.y[ykr] = { npO: 0, npR: 0, dO: 0, dR: 0 };
-    if (isNp) { p2Card.all.npR++; p2Card.y[ykr].npR++; }
-    if (isD) { p2Card.all.dR++; p2Card.y[ykr].dR++; }
-    if (d.cat === 'ref') { cnt(p2Left, ykr, country, 'r'); cntCat(p2RightD, ykr, '中国', d.flow, 'r'); topCnt(ykr, '中国', r.hosp, 'r'); }
-    if (isNp) { cnt(p2Right, ykr, country, 'r'); cnt(p2Left, ykr, country, 'r'); cntCat(p2RightD, ykr, country, d.cat === 'npp' ? 'NPP' : '商业化', 'r'); topCnt(ykr, country, r.hosp, 'r'); }
+    if (!p2Card.m[mkr]) p2Card.m[mkr] = { npO: 0, npR: 0, dO: 0, dR: 0 };
+    if (isNp) { p2Card.all.npR++; p2Card.y[ykr].npR++; p2Card.m[mkr].npR++; }
+    if (isD) { p2Card.all.dR++; p2Card.y[ykr].dR++; p2Card.m[mkr].dR++; }
+    if (d.cat === 'ref') { cnt(p2Left, ykr, country, 'r', mkr); cntCat(p2RightD, ykr, '中国', d.flow, 'r', mkr); topCnt(ykr, '中国', r.hosp, 'r', mkr); }
+    if (isNp) { cnt(p2Right, ykr, country, 'r', mkr); cnt(p2Left, ykr, country, 'r', mkr); cntCat(p2RightD, ykr, country, d.cat === 'npp' ? 'NPP' : '商业化', 'r', mkr); topCnt(ykr, country, r.hosp, 'r', mkr); }
   }
 });
 function topToLists(tb) {
@@ -507,7 +530,7 @@ function topToLists(tb) {
 }
 var p2TopList = { all: topToLists(p2Top.all), y: {} };
 Object.keys(p2Top.y).forEach(function (yk) { p2TopList.y[yk] = topToLists(p2Top.y[yk]); });
-var OVERSEAS = { YEARS: Object.keys(yearSet).sort(), CARD: p2Card, LEFT: p2Left, RIGHT: p2Right, RIGHTD: p2RightD, TOP10: p2TopList };
+var OVERSEAS = { YEARS: Object.keys(yearSet).sort(), MONTHS: Object.keys(monthSet).sort(), CARD: p2Card, LEFT: p2Left, RIGHT: p2Right, RIGHTD: p2RightD, TOP10: p2TopList };
 
 // ── 8k. Page3：目标（Target.xlsx 公司目标）+ 月度实际下单/回输 ──
 var tgtPath = path.join(rawDir, 'Target.xlsx');

@@ -48,15 +48,17 @@ function spark(arr, m, w, h) {
     return out + '</svg>';
 }
 
-// 五行单元格（Tar/Act/Act%/LY/YOY）：未来月（>所选月）仅 Act/Act%/YOY 留空，Tar/LY 显示全月
-function ptCell(mt, i, m, t, a, l) {
+// 五行单元格（Tar/Act/Act%/LY/YOY）：未来月（>结束月）仅 Act/Act%/YOY 留空，Tar/LY 显示全月
+// m1 = 开始月（区间外月份加 pt-off 置灰，年矩阵页用，见 项目文档 §10.5）
+function ptCell(mt, i, m, t, a, l, m1) {
     var c = '--';
     if (mt === 'Tar') c = t > 0 ? t : '--';
     else if (mt === 'Act') c = (i <= m && a > 0) ? a : '';
     else if (mt === 'Act%') c = (i <= m) ? pctHTML(a, t) : '';
     else if (mt === 'LY') c = l > 0 ? l : '--';
     else c = (i <= m) ? yoyStr(a, l) : '';
-    return '<td' + (i === m ? ' class="pt-cur"' : '') + '>' + c + '</td>';
+    var cls = i === m ? ' class="pt-cur"' : ((m1 && i < m1) ? ' class="pt-off"' : '');
+    return '<td' + cls + '>' + c + '</td>';
 }
 function ptYtdCell(mt, yt, ya, yl) {
     var yc = '--';
@@ -68,15 +70,17 @@ function ptYtdCell(mt, yt, ya, yl) {
     return '<td class="pt-ytd">' + yc + '</td>';
 }
 // 五行整行：calcMonth(i) 返回 {t,a,l}；yt/ya/yl 为该行累计（传入初始 0）
+// m1 = 开始月：累计只算区间 [m1, m]，区间外月份置灰
 // 末列「趋势图」：目标/实际/去年三行画迷你折线（同 SCOE 页），其余指标行留空占位
-function ptMetricRowHTML(mt, m, calcMonth, yt, ya, yl) {
+function ptMetricRowHTML(mt, m, calcMonth, yt, ya, yl, m1) {
+    m1 = m1 || 1;
     var h = '<tr class="pt-mtr"><td class="pt-lbl">' + mt + '</td>';
     var hasSpark = (mt === 'Tar' || mt === 'Act' || mt === 'LY');
     var series = [];
     for (var i = 1; i <= 12; i++) {
         var v = calcMonth(i);
-        if (i <= m) { yt += v.t; ya += v.a; yl += v.l; }
-        h += ptCell(mt, i, m, v.t, v.a, v.l);
+        if (i >= m1 && i <= m) { yt += v.t; ya += v.a; yl += v.l; }
+        h += ptCell(mt, i, m, v.t, v.a, v.l, m1);
         if (hasSpark) series.push(mt === 'Tar' ? v.t : (mt === 'Act' ? v.a : v.l));
     }
     var sp = hasSpark ? '<td class="pt-spark">' + spark(series, m) + '</td>' : '<td class="pt-spark"></td>';
@@ -118,4 +122,14 @@ function initPtTime(selY, selM, yearKeys, onchange) {
     function save() { try { sessionStorage.setItem('pt_time', JSON.stringify({ y: $(selY).val(), m: parseInt($(selM).val(), 10) })); } catch (e) {} }
     $(selY).on('change', function () { save(); onchange(); });
     $(selM).on('change', function () { save(); onchange(); });
+}
+
+// 区间时间控制（辖区 8 页共用）：4 个下拉「开始年/月 ~ 结束年/月」
+// 默认当年 1 月 ~ 系统当前月（= 原 YTD），同一 pt_range 共享，矩阵页限同年
+function initPtRange(ids, months, dp, onchange) {
+    return window.TR.init({
+        y1: ids[0], m1: ids[1], y2: ids[2], m2: ids[3],
+        months: months, dp: dp, sameYear: true,
+        storageKey: 'pt_range', onChange: onchange
+    });
 }

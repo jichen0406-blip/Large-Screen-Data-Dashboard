@@ -23,13 +23,13 @@ $(function () {
     var yearKeys = {};
     Object.keys(HOSP).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
     function updateAll() { renderTables(); }
-    initPtTime('#p6y', '#p6m', yearKeys, updateAll);
+    var RG = initPtRange(['#p6y1', '#p6m1', '#p6y2', '#p6m2'], Object.keys(HOSP), B.DP, updateAll);
 
     // 按年累计：key('AM|省份|城市|医院') → {o,r,lo,lr}（当前/去年 YTD 窗口）
-    function accumulate(y, m) {
-        var ly = y - 1, acc = {};
-        for (var i = 1; i <= m; i++) {
-            var ym = y + '-' + pad(i), lym = ly + '-' + pad(i);
+    function accumulate(rg) {
+        var ly = rg.y2 - 1, acc = {};
+        for (var k = 0; k < rg.months.length; k++) {
+            var mk = rg.months[k], ym = mk, lym = (parseInt(mk.slice(0, 4), 10) - 1) + mk.slice(4);
             var b1 = HOSP[ym], b2 = HOSP[lym];
             if (b1) Object.keys(b1).forEach(function (key) {
                 var v = acc[key] || (acc[key] = { o: 0, r: 0, lo: 0, lr: 0 });
@@ -45,8 +45,8 @@ $(function () {
 
     // 当前时间窗内、有下单或回输的医院行（拆开 hospital key）
     function currentRows() {
-        var y = parseInt($('#p6y').val(), 10), m = parseInt($('#p6m').val(), 10);
-        var acc = accumulate(y, m), rows = [];
+        var rg = RG.read();
+        var acc = accumulate(rg), rows = [];
         Object.keys(acc).forEach(function (key) {
             var v = acc[key];
             // 保留「今年或去年有活动」的医院：今年零活动的医院也必须留在行集里，
@@ -83,7 +83,7 @@ $(function () {
     }
 
     // 医院数据：先按 COE 分类（SCOE→COE→RCOE→Others），分类内按下单量降序
-    // 受 COE 筛选 + 医院名模糊搜索影响；表上方汇总当前可见行的 YTD下单/YTD回输
+    // 受 COE 筛选 + 医院名模糊搜索影响；表上方汇总当前可见行的 区间下单/区间回输
     function renderHS(rows) {
         rows.forEach(function (r) { r.coe = coeOf(r); });
         var visible = rows.filter(function (r) {
@@ -98,16 +98,16 @@ $(function () {
             return a.hosp < b.hosp ? -1 : 1;
         });
 
-        // 汇总（仅 YTD下单 / YTD回输）
+        // 汇总（仅 区间下单 / 区间回输）
         var sumO = 0, sumR = 0;
         visible.forEach(function (r) { sumO += r.o; sumR += r.r; });
         $('#p6hsSum').html('<span class="p6-sum-lbl">当前可见 ' + visible.length + ' 家</span>' +
-            '<span class="p6-sum-item">YTD下单 <b>' + sumO + '</b></span>' +
-            '<span class="p6-sum-item">YTD回输 <b>' + sumR + '</b></span>');
+            '<span class="p6-sum-item">区间下单 <b>' + sumO + '</b></span>' +
+            '<span class="p6-sum-item">区间回输 <b>' + sumR + '</b></span>');
 
         var h = '<table class="pt"><thead><tr>' +
             '<th>AM</th><th>省份</th><th>城市</th><th>医院名称</th><th>COE</th>' +
-            '<th>YTD下单</th><th>下单同比</th><th>YTD回输</th><th>回输同比</th>' +
+            '<th>区间下单</th><th>下单同比</th><th>区间回输</th><th>回输同比</th>' +
             '<th>最近一次下单日期</th><th>下单空窗期</th>' +
             '</tr></thead><tbody>';
         visible.forEach(function (r) {
@@ -142,7 +142,7 @@ $(function () {
 
         var h = '<table class="pt"><thead><tr>' +
             '<th>AM</th><th>省份名称</th><th>下单医院数</th>' +
-            '<th>YTD下单</th><th>下单同比</th><th>YTD回输</th><th>回输同比</th>' +
+            '<th>区间下单</th><th>下单同比</th><th>区间回输</th><th>回输同比</th>' +
             '</tr></thead><tbody>';
         list.forEach(function (g) {
             h += '<tr><td>' + g.ams + '</td><td class="pt-lbl">' + g.prov + '</td><td>' + (g.n > 0 ? g.n : '') + '</td>' +

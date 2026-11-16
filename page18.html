@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/time_range.js"></script>
 <script type="text/javascript" src="js/pt-common.js"></script>
 <script type="text/javascript" src="js/page_channels.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -71,10 +72,11 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="pt-time">
-			<span class="pt-time-tit">时间控制</span>
-			<select id="chY" class="pt-sel" title="年份"></select>
-			<select id="chM" class="pt-sel" title="月份"></select>
-			<span class="pt-time-note">YTD = 当年 1 月～所选月累计；仅统计达成（Act）</span>
+			<span class="pt-time-tit">时间区间</span>
+			<select id="chY1" class="pt-sel" title="开始年"></select><select id="chM1" class="pt-sel" title="开始月"></select>
+			<span class="tr-sep">~</span>
+			<select id="chY2" class="pt-sel" title="结束年"></select><select id="chM2" class="pt-sel" title="结束月"></select>
+			<span class="pt-time-note">区间累计（开始月 ~ 结束月）；仅统计达成（Act）</span>
 		</div>
 		<div class="pt-tables">
 			<div class="pt-tbl-row">

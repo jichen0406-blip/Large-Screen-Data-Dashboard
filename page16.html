@@ -8,12 +8,13 @@
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/time_range.js"></script>
 <script type="text/javascript" src="js/pt-common.js"></script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
 <script type="text/javascript" src="js/coe_common.js"></script>
 <link rel="stylesheet" href="css/style.css">
 	<style>
-	/* 2026-10-13：4 张卡片占半宽 + 右侧 YTD 贡献折线图；搜索控件并入时间控制行。
+	/* 2026-10-13：4 张卡片占半宽 + 右侧 YTD 贡献折线图；搜索控件并入时间区间行。
 	   注意：**不要给表格 id 设 min-height / max-height / height** —— id 级尺寸会压过 .page-fill
 	   的 flex 链（.pt-tables → .pt-tbl-row → .pt-tbl-col → .pt-tbl-wrap 逐级 flex），
 	   浏览器缩放或窗口变矮时可用高度小于该固定值，表格就会溢出容器下边框（§10.4）。 */
@@ -87,18 +88,19 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="pt-time coe-time">
-			<span class="pt-time-tit">时间控制</span>
-			<select id="coeY" class="pt-sel" title="年份"></select>
-			<select id="coeM" class="pt-sel" title="月份"></select>
+			<span class="pt-time-tit">时间区间</span>
+			<select id="coeY1" class="pt-sel" title="开始年"></select><select id="coeM1" class="pt-sel" title="开始月"></select>
+			<span class="tr-sep">~</span>
+			<select id="coeY2" class="pt-sel" title="结束年"></select><select id="coeM2" class="pt-sel" title="结束月"></select>
 			<div class="coe-search" id="coeSearch"></div>
-			<span class="pt-time-note">YTD = 当年 1 月～所选月累计；贡献比例分母为全盘（含 Others）</span>
+			<span class="pt-time-note">区间累计（开始月 ~ 结束月）；贡献比例分母为全盘（含 Others）</span>
 		</div>
 		<div class="coe-mid">
 			<div class="coe-mid-l">
 				<div class="kpi-grid" id="coeCards"></div>
 			</div>
 			<div class="pt-tbl-col coe-mid-r">
-				<div class="sec-head">YTD 贡献占比<span class="sub">横轴年份 · 各点均截至所选月</span><button class="map-fs" type="button" data-fs="coeContrib" data-title="YTD 贡献占比">⛶</button></div>
+				<div class="sec-head">区间贡献占比<span class="sub">横轴年份 · 各点按同一区间</span><button class="map-fs" type="button" data-fs="coeContrib" data-title="区间贡献占比">⛶</button></div>
 				<div class="coe-chart" id="coeContrib"></div>
 			</div>
 		</div>

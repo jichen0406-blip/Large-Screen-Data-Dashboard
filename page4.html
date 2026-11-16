@@ -8,6 +8,7 @@
 <script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/time_range.js"></script>
 <script type="text/javascript" src="js/pt-common.js"></script>
 <script type="text/javascript" src="js/page4.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -75,14 +76,15 @@
 	</div>
 	<div class="mainbox page-fill">
 		<div class="pt-time">
-			<span class="pt-time-tit">时间控制</span>
-			<select id="p4y" class="pt-sel" title="年份"></select>
-			<select id="p4m" class="pt-sel" title="月份"></select>
-			<span class="pt-time-note">下单按下单日期 / 回输按回输日期分别截止；同比按完整月对比</span>
+			<span class="pt-time-tit">时间区间</span>
+			<select id="p4y1" class="pt-sel" title="开始年"></select><select id="p4m1" class="pt-sel" title="开始月"></select>
+			<span class="tr-sep">~</span>
+			<select id="p4y2" class="pt-sel" title="结束年"></select><select id="p4m2" class="pt-sel" title="结束月"></select>
+			<span class="pt-time-note">开始月 ~ 结束月（默认当年 1 月 ~ 当前月 = 原 YTD）；同比取去年同月区间</span>
 		</div>
 		<div class="p4-kpis">
 			<div class="p4-col">
-				<div class="sec-head">YTD（截至所选月）<span class="sub">公司目标</span><span class="sec-num" id="p4ytdNum"></span></div>
+				<div class="sec-head">区间累计（开始月 ~ 结束月）<span class="sub">公司目标</span><span class="sec-num" id="p4ytdNum"></span></div>
 				<div class="p4-grp"><div class="kpi-grid">
 					<div class="kpi-card run"><span class="kc-tag">下单</span><div class="kc-label"><i><svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="9" fill="none" stroke="#ff3b30" stroke-width="2.5"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="#ff9500" stroke-width="2.5"/><circle cx="12" cy="12" r="1.5" fill="#ff3b30"/></svg></i>目标</div><div class="kc-val" id="ytdOtgt">--</div></div>
 					<div class="kpi-card run"><span class="kc-tag">下单</span><div class="kc-label"><i><svg viewBox="0 0 24 24" width="15" height="15"><path d="M4 12.5 L9.5 18.5 L20 6" fill="none" stroke="#2ecc40" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></i>达成</div><div class="kc-val" id="ytdOact">--</div></div>
@@ -97,7 +99,7 @@
 				</div></div>
 			</div>
 			<div class="p4-col">
-				<div class="sec-head">MTD（所选月）<span class="sub">公司目标</span><span class="sec-num" id="p4mtdNum"></span></div>
+				<div class="sec-head">结束月（单月）<span class="sub">公司目标</span><span class="sec-num" id="p4mtdNum"></span></div>
 				<div class="p4-grp"><div class="kpi-grid">
 					<div class="kpi-card run"><span class="kc-tag">下单</span><div class="kc-label"><i><svg viewBox="0 0 24 24" width="15" height="15"><circle cx="12" cy="12" r="9" fill="none" stroke="#ff3b30" stroke-width="2.5"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="#ff9500" stroke-width="2.5"/><circle cx="12" cy="12" r="1.5" fill="#ff3b30"/></svg></i>目标</div><div class="kc-val" id="mtdOtgt">--</div></div>
 					<div class="kpi-card run"><span class="kc-tag">下单</span><div class="kc-label"><i><svg viewBox="0 0 24 24" width="15" height="15"><path d="M4 12.5 L9.5 18.5 L20 6" fill="none" stroke="#2ecc40" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></i>达成</div><div class="kc-val" id="mtdOact">--</div></div>

@@ -1,5 +1,6 @@
 // page4.js — 福可苏目标管理（key region1，原「目标数据管理」）：KPI 目标达成（公司目标）+ 国内&海外月度表 1/2（公司DOM&OB目标）
-// 共享函数见 js/pt-common.js；时间控制 辖区1/2/3 共享（sessionStorage pt_time）
+// 时间筛选：开始月 ~ 结束月（默认当年 1 月 ~ 系统当前月 = 原 YTD）；按年 12 月矩阵，区间限同一年。
+// 口径见 项目文档 §10.5；表格累计列 = 区间累计，区间外月份置灰。
 $(function () {
     var B = window.BOARD_DATA;
     if (!B || !B.REGION1_KPI) return;
@@ -7,31 +8,42 @@ $(function () {
     var TARGET = REGION1_KPI.TARGET || {}, MO = REGION1_KPI.MONTH_O || {}, MR = REGION1_KPI.MONTH_R || {};
     var REGIONS = B.REGIONS;
 
-    var yearKeys = {};
-    Object.keys(TARGET).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
-    Object.keys(MO).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
-    function updateAll() { calc(); renderTables(); }
-    initPtTime('#p4y', '#p4m', yearKeys, updateAll);
+    // 可选月份：目标/实际/辖区数据里出现过的月份
+    var pool = {};
+    [TARGET, MO, MR].forEach(function (o) {
+        Object.keys(o).forEach(function (k) { if (TR.isYm(k)) pool[k] = 1; });
+    });
+    if (REGIONS) Object.keys(REGIONS.ND || {}).forEach(function (k) { if (TR.isYm(k)) pool[k] = 1; });
 
-    // KPI 卡片（公司目标）
+    var RG = TR.init({
+        y1: '#p4y1', m1: '#p4m1', y2: '#p4y2', m2: '#p4m2',
+        months: Object.keys(pool),
+        dp: B.DP,
+        sameYear: true,                 // 12 月矩阵页：区间限同一年
+        storageKey: 'pt_range',         // 辖区 1/2/3 共用同一个区间
+        onChange: function () { calc(); renderTables(); }
+    });
+
+    // KPI 卡片（公司目标）：区间累计 + 结束月单月（原 YTD / MTD）
     function calc() {
-        var y = $('#p4y').val(), m = parseInt($('#p4m').val(), 10);
-        var ly = String(parseInt(y, 10) - 1);
-        var ytgtO = 0, ytgtR = 0, yactO = 0, yactR = 0, lyactO = 0, lyactR = 0;
-        for (var i = 1; i <= m; i++) {
-            var k = y + '-' + pad(i), lk = ly + '-' + pad(i);
+        var rg = RG.read(), y = rg.y2, ly = y - 1;
+        var tgtO = 0, tgtR = 0, actO = 0, actR = 0, lyO = 0, lyR = 0;
+        rg.months.forEach(function (k) {
             var t = TARGET[k] || { o: 0, r: 0 };
-            ytgtO += t.o; ytgtR += t.r;
-            yactO += MO[k] || 0; yactR += MR[k] || 0;
-            lyactO += MO[lk] || 0; lyactR += MR[lk] || 0;
-        }
-        set('ytdOtgt', ytgtO); set('ytdOact', yactO); set('ytdOrate', rate(yactO, ytgtO)); set('ytdOyoy', yoy(yactO, lyactO));
-        set('ytdRtgt', ytgtR); set('ytdRact', yactR); set('ytdRrate', rate(yactR, ytgtR)); set('ytdRyoy', yoy(yactR, lyactR));
-        var mk = y + '-' + pad(m), mlk = ly + '-' + pad(m);
+            tgtO += t.o; tgtR += t.r;
+            actO += MO[k] || 0; actR += MR[k] || 0;
+            var lk = (parseInt(k.slice(0, 4), 10) - 1) + k.slice(4);
+            lyO += MO[lk] || 0; lyR += MR[lk] || 0;
+        });
+        set('ytdOtgt', tgtO); set('ytdOact', actO); set('ytdOrate', rate(actO, tgtO)); set('ytdOyoy', yoy(actO, lyO));
+        set('ytdRtgt', tgtR); set('ytdRact', actR); set('ytdRrate', rate(actR, tgtR)); set('ytdRyoy', yoy(actR, lyR));
+        $('#p4ytdNum').text('下单' + actO + ' · 回输' + actR);
+
+        // 结束月单月（原 MTD）
+        var mk = rg.b, mlk = ly + mk.slice(4);
         var mtgt = TARGET[mk] || { o: 0, r: 0 };
         set('mtdOtgt', mtgt.o); set('mtdOact', MO[mk] || 0); set('mtdOrate', rate(MO[mk] || 0, mtgt.o)); set('mtdOyoy', yoy(MO[mk] || 0, MO[mlk] || 0));
         set('mtdRtgt', mtgt.r); set('mtdRact', MR[mk] || 0); set('mtdRrate', rate(MR[mk] || 0, mtgt.r)); set('mtdRyoy', yoy(MR[mk] || 0, MR[mlk] || 0));
-        $('#p4ytdNum').text('下单' + yactO + ' · 回输' + yactR);
         $('#p4mtdNum').text('下单' + (MO[mk] || 0) + ' · 回输' + (MR[mk] || 0));
     }
     function set(id, v) {
@@ -53,26 +65,25 @@ $(function () {
         return (b && b[cat] && b[cat][fld]) || 0;
     }
     function renderND(elId, fld, name) {
-        var y = parseInt($('#p4y').val(), 10), m = parseInt($('#p4m').val(), 10);
-        var ly = y - 1;
+        var rg = RG.read(), y = rg.y2, ly = y - 1, m1 = rg.m1, m2 = rg.m2;
         var gs = [
             { label: '国内', dom: true },
             { label: '海外', dom: false },
             { label: 'Total', dom: null }
         ];
         var h = '<table class="pt"><thead><tr><th class="pt-lbl">' + name + '</th>';
-        for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
+        for (var i = 1; i <= 12; i++) h += '<th' + ((m1 && (i < m1 || i > m2)) ? ' class="pt-off"' : '') + '>' + i + '月</th>';
+        h += '<th class="pt-ytd">区间</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
         gs.forEach(function (g) {
             h += '<tr class="pt-grp"><td class="pt-lbl" colspan="15">' + g.label + '</td></tr>';
             ['Tar', 'Act', 'Act%', 'LY', 'YOY'].forEach(function (mt) {
-                var row = ptMetricRowHTML(mt, m, function (i) {
+                var row = ptMetricRowHTML(mt, m2, function (i) {
                     var t, a, l;
                     if (g.dom === true) { t = compV(y + '-' + pad(i), 'DOM', fld); a = mVal(ND, y, i, 'dom', fld); l = mVal(ND, ly, i, 'dom', fld); }
                     else if (g.dom === false) { t = compV(y + '-' + pad(i), 'OB', fld); a = mVal(ND, y, i, 'ov', fld); l = mVal(ND, ly, i, 'ov', fld); }
                     else { t = compV(y + '-' + pad(i), 'DOM', fld) + compV(y + '-' + pad(i), 'OB', fld); a = mVal(ND, y, i, 'dom', fld) + mVal(ND, y, i, 'ov', fld); l = mVal(ND, ly, i, 'dom', fld) + mVal(ND, ly, i, 'ov', fld); }
                     return { t: t, a: a, l: l };
-                }, 0, 0, 0);
+                }, 0, 0, 0, m1);
                 h += row.h;
             });
         });
@@ -85,5 +96,6 @@ $(function () {
         renderND('p4t42', 'r', '2. 国内&海外 回输月度');
     }
 
-    updateAll();
+    calc();
+    renderTables();
 });

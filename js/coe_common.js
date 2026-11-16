@@ -18,15 +18,14 @@
     Object.keys(TOT).forEach(function (y) { yearKeys[y] = true; });
 
     function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
-    function ytd(a, m) { var s = 0; for (var i = 0; i < m; i++) s += (a && a[i]) || 0; return s; }
-    function curY() { return String($('#coeY').val() || ''); }
-    function curM() { return parseInt($('#coeM').val(), 10) || 12; }
+    function ytd(a, m1, m2) { var s = 0; for (var i = (m1 || 1) - 1; i < (m2 || 12); i++) s += (a && a[i]) || 0; return s; }
+    function range() { return RG.read(); }
 
     // 该分类 / 全盘 的 YTD 合计（取自 totals，含 Others，DOM 口径）
-    function catTotals(y, m) {
+    function catTotals(y, m1, m2) {
       var t = TOT[y] || {}, o = 0, r = 0, allO = 0, allR = 0;
       ALLCATS.forEach(function (c) {
-        var b = t[c] || {}, co = ytd(b.o, m), cr = ytd(b.r, m);
+        var b = t[c] || {}, co = ytd(b.o, m1, m2), cr = ytd(b.r, m1, m2);
         allO += co; allR += cr;
         if (c === CAT) { o = co; r = cr; }
       });
@@ -36,10 +35,11 @@
     // 迷你趋势图 spark(arr, m, w, h) 已提取到 js/pt-common.js（全局共享，见 §12 命名规范）
 
     // ── 顶部卡片：下单/回输 总计 + 各自占全盘贡献占比（4 张，YTD） ──
-    function renderCards(y, m) {
+    function renderCards(rg) {
+      var y = rg.y2;
       var el = document.getElementById('coeCards');
       if (!el) return;
-      var t = catTotals(y, m);
+      var t = catTotals(y, rg.m1, rg.m2);
       function kpi(label, val, cls) {
         return '<div class="kpi-card ' + cls + '"><div class="kc-label">' + label + '</div><div class="kc-val">' + val + '</div></div>';
       }
@@ -58,13 +58,13 @@
     var CONTRIB_YEARS = Object.keys(TOT).sort();
     var contribChart = null;
     function pct1(v) { return Math.round(v * 1000) / 10; }   // 0.1 位百分比
-    function renderContrib(m) {
+    function renderContrib(rg) {
       var el = document.getElementById('coeContrib');
       if (!el || !window.echarts || !CONTRIB_YEARS.length) return;
       if (!contribChart) contribChart = echarts.init(el, null, { devicePixelRatio: Math.max(window.devicePixelRatio || 1, 2) });
       var oPct = [], rPct = [];
       CONTRIB_YEARS.forEach(function (y) {
-        var t = catTotals(y, m);
+        var t = catTotals(y, rg.m1, rg.m2);
         // 该年截至所选月还没有任何数据（如 2023 年 1~6 月）→ 置 null 断线，不画成 0%
         oPct.push(t.allO > 0 ? pct1(t.o / t.allO) : null);
         rPct.push(t.allR > 0 ? pct1(t.r / t.allR) : null);
@@ -76,7 +76,7 @@
         legend: {
           left: 'center', top: 0, itemWidth: 14, itemHeight: 9, itemGap: 18,
           textStyle: { color: '#cfe8ff', fontSize: 12 },
-          data: ['YTD下单贡献', 'YTD回输贡献']
+          data: ['区间下单贡献', '区间回输贡献']
         },
         tooltip: {
           trigger: 'axis',
@@ -106,12 +106,12 @@
         },
         series: [
           {
-            name: 'YTD下单贡献', type: 'line', data: oPct, connectNulls: false,
+            name: '区间下单贡献', type: 'line', data: oPct, connectNulls: false,
             symbol: 'circle', symbolSize: 9,
             lineStyle: { width: 2, color: ORDER_C }, itemStyle: { color: '#ffffff', borderColor: ORDER_C, borderWidth: 2 }
           },
           {
-            name: 'YTD回输贡献', type: 'line', data: rPct, connectNulls: false,
+            name: '区间回输贡献', type: 'line', data: rPct, connectNulls: false,
             symbol: 'circle', symbolSize: 9,
             lineStyle: { width: 2, color: REINF_C }, itemStyle: { color: '#ffffff', borderColor: REINF_C, borderWidth: 2 }
           }
@@ -144,18 +144,19 @@
       Object.keys(map).forEach(function (id) {
         $('#' + id).on('input', function () {
           flt[map[id]] = String(this.value || '').trim().toLowerCase();
-          renderTable(curY(), curM());
+          renderTable(RG.read());
         });
       });
       $('#coeClear').on('click', function () {
         flt.am = flt.city = flt.hosp = '';
         ['coeFAm', 'coeFCity', 'coeFHosp'].forEach(function (id) { $('#' + id).val(''); });
-        renderTable(curY(), curM());
+        renderTable(RG.read());
       });
     }
 
     // ── 明细表 ──
-    function renderTable(y, m) {
+    function renderTable(rg) {
+      var y = rg.y2, m1 = rg.m1, m2 = rg.m2;
       var ly = String(parseInt(y, 10) - 1);
       var total = PAGE.hospitals.length;
       var rows = PAGE.hospitals.filter(function (h) {
@@ -166,8 +167,8 @@
         return {
           am: h.am, prov: h.prov, city: h.city, hosp: h.hosp,
           o: o, r: r,
-          ytdO: ytd(o, m), ytdR: ytd(r, m),
-          lyO: ytd(last.o, m), lyR: ytd(last.r, m)
+          ytdO: ytd(o, m1, m2), ytdR: ytd(r, m1, m2),
+          lyO: ytd(last.o, m1, m2), lyR: ytd(last.r, m1, m2)
         };
       }).sort(function (a, b) { return b.ytdO - a.ytdO || b.ytdR - a.ytdR; });
 
@@ -177,8 +178,8 @@
         '<col span="12" style="width:44px">' +
         '<col style="width:96px"><col style="width:66px">' +
         '</colgroup><thead><tr>' +
-        '<th>AM</th><th>省份</th><th>城市</th><th>医院名称</th><th>分类</th><th class="pt-ytd">YTD</th>';
-      for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
+        '<th>AM</th><th>省份</th><th>城市</th><th>医院名称</th><th>分类</th><th class="pt-ytd">区间</th>';
+      for (var i = 1; i <= 12; i++) h += '<th' + (i < m1 ? ' class="pt-off"' : '') + '>' + i + '月</th>';
       h += '<th data-xls-skip>趋势图</th><th>同比%</th></tr></thead><tbody>';
 
       if (!rows.length) {
@@ -200,9 +201,9 @@
           h += '<td class="coe-fld">' + (isO ? '下单' : '回输') + '</td>' +
             '<td class="pt-ytd">' + (ytdV > 0 ? ytdV : '') + '</td>';
           for (var i = 1; i <= 12; i++) {
-            h += '<td>' + (i <= m && arr[i - 1] ? arr[i - 1] : '') + '</td>';
+            h += '<td' + (i < m1 ? ' class="pt-off"' : '') + '>' + (i <= m2 && arr[i - 1] ? arr[i - 1] : '') + '</td>';
           }
-          h += '<td>' + spark(arr, m, 90, 24) + '</td>' +
+          h += '<td>' + spark(arr, m2, 90, 24) + '</td>' +
             '<td>' + yoyStr(ytdV, lyV) + '</td></tr>';
         });
       });
@@ -211,18 +212,20 @@
       var cnt = document.getElementById('coeCnt');
       if (cnt) cnt.innerHTML = '共 <b>' + rows.length + '</b> 家医院' +
         (rows.length < total ? '（已筛选，全部 ' + total + ' 家）' : '') +
-        ' · ' + y + ' 年 1–' + m + ' 月累计';
+        ' · ' + y + ' 年 ' + m1 + '–' + m2 + ' 月累计';
     }
 
     function render() {
-      var y = curY(), m = curM();
-      if (!y) return;
-      renderCards(y, m);
-      renderContrib(m);
-      renderTable(y, m);
+      var rg = RG.read();
+      renderCards(rg);
+      renderContrib(rg);
+      renderTable(rg);
     }
 
-    initPtTime('#coeY', '#coeM', yearKeys, render);
+    // COE 数据按年 × 12 月数组存（totals['2025'].SCOE.o[12]），可选月份要展开成 'YYYY-MM'
+    var COE_MONTHS = [];
+    Object.keys(TOT).forEach(function (y) { for (var mm = 1; mm <= 12; mm++) COE_MONTHS.push(y + '-' + (mm < 10 ? '0' + mm : mm)); });
+    var RG = initPtRange(['#coeY1', '#coeM1', '#coeY2', '#coeM2'], COE_MONTHS, B.DP, render);
     renderAI();
     renderSearch();
     render();

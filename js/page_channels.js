@@ -16,19 +16,18 @@ $(function () {
 
     var yearKeys = {};
     Object.keys(OV).forEach(function (k) { yearKeys[k.slice(0, 4)] = true; });
-    initPtTime('#chY', '#chM', yearKeys, render);
+    var RG = initPtRange(['#chY1', '#chM1', '#chY2', '#chM2'], Object.keys(OV), B.DP, render);
 
     // 仅达成（白字），Total 蓝色行；首列「类型」合并区分下单/回输
     function render() {
-        var y = parseInt($('#chY').val(), 10), m = parseInt($('#chM').val(), 10);
-        if (!y) return;
+        var rg = RG.read(), y = rg.y2, m1 = rg.m1, m2 = rg.m2;
         var groups = [
             { type: '下单', fld: 'o', items: CH_ITEMS },
             { type: '回输', fld: 'r', items: CH_ITEMS }
         ];
         var h = '<table class="pt pt-ov"><thead><tr><th class="pt-type">类型</th><th class="pt-lbl">渠道</th>';
-        for (var i = 1; i <= 12; i++) h += '<th>' + i + '月</th>';
-        h += '<th class="pt-ytd">YTD</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
+        for (var i = 1; i <= 12; i++) h += '<th' + (i < m1 ? ' class="pt-off"' : '') + '>' + i + '月</th>';
+        h += '<th class="pt-ytd">区间</th><th data-xls-skip>趋势图</th></tr></thead><tbody>';
         groups.forEach(function (g) {
             g.items.forEach(function (it, idx) {
                 h += '<tr class="' + (it.total ? 'pt-total-row' : '') + '">' +
@@ -38,12 +37,12 @@ $(function () {
                 for (var i = 1; i <= 12; i++) {
                     var a = mVal(OV, y, i, it.key, g.fld);
                     series.push(a);
-                    if (i > m) { h += '<td></td>'; continue; }
-                    ya += a;
-                    h += '<td' + (i === m ? ' class="pt-cur"' : '') + '>' + (a > 0 ? a : '') + '</td>';
+                    if (i > m2) { h += '<td' + (i < m1 ? ' class="pt-off"' : '') + '></td>'; continue; }
+                    if (i >= m1) ya += a;
+                    h += '<td' + (i === m2 ? ' class="pt-cur"' : (i < m1 ? ' class="pt-off"' : '')) + '>' + (i >= m1 && a > 0 ? a : '') + '</td>';
                 }
                 h += '<td class="pt-ytd">' + (ya > 0 ? ya : '') + '</td>' +
-                    '<td class="pt-spark">' + spark(series, m) + '</td></tr>';
+                    '<td class="pt-spark">' + spark(series, m2) + '</td></tr>';
             });
         });
         h += '</tbody></table>';
