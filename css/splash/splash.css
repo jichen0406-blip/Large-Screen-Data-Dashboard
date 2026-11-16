@@ -471,9 +471,10 @@
 .dsu-ret-rot-b { transform-origin: 50% 50%; animation: dsu-spin 5.4s linear infinite reverse; }
 @keyframes dsu-spin { to { transform: rotate(360deg); } }
 .dsu-reticle .dsu-ring-a { fill: none; stroke: var(--dsu-ink); stroke-width: 6; }
-.dsu-reticle .dsu-ring-b { fill: none; stroke: var(--dsu-box-ink); stroke-width: 2.2; opacity: 0.95; }
+/* 内圈用橙色（和 IASO 标识的橙呼应）；原先用 --dsu-box-ink，深色主题下等于背景黑，整圈看不见 */
+.dsu-reticle .dsu-ring-b { fill: none; stroke: #ff7500; stroke-width: 2.6; opacity: 0.95; }
 .dsu-reticle .dsu-dot-a { fill: var(--dsu-ink); }
-.dsu-reticle .dsu-dot-b { fill: var(--dsu-box-ink); }
+.dsu-reticle .dsu-dot-b { fill: #ff7500; }
 .dsu-reticle .dsu-dot-o { fill: var(--dsu-accent); }
 .dsu-reticle .dsu-bracket {
   fill: none;

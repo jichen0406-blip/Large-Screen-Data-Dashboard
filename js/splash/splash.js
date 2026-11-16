@@ -129,6 +129,7 @@
       btnZh: '授予访问权限',
       btnEn: 'GRANT ACCESS',
       hold: 900,
+      cardHold: 2000,       // 操作卡片（授予访问权限）亮 2 秒再收起，语音照常念完
       progress: 0.34
     },
     {
@@ -143,7 +144,7 @@
       btnZh: '确认身份',
       btnEn: 'CONFIRM IDENTITY',
       hold: 700,
-      extra: 1000,          // 账号登录信息多留 1 秒
+      cardHold: 2000,       // 账号信息卡片（确认身份）同样亮 2 秒再收起
       progress: 0.5
     },
     {
@@ -1529,21 +1530,17 @@
         }
 
         if (step.action === 'grant' || step.action === 'confirm') {
+          /* 操作卡片（授予访问权限 / 确认身份）从亮起算固定亮 cardHold 毫秒再收起；
+             语音不掐断，等这一句念完才进下一步 */
+          var cardAt = Date.now()
           showAction(step)
           return wait(520).then(function () { return waitAction() }).then(function () {
-            if (!step.extra) {
-              hideAction()
-              audio.confirm()
-              ui.caret.classList.remove('dsu-on')
-              return spoke
-            }
-            /* 带 extra 的步（账号登录信息）：等语音念完，卡片再多留 extra 毫秒再收起 */
-            return spoke.then(function () { return wait(ms(step.extra)) }).then(function () {
-              hideAction()
-              audio.confirm()
-              ui.caret.classList.remove('dsu-on')
-            })
-          }).then(function () { return wait(ms(320)) })
+            return wait(Math.max(0, ms(step.cardHold || 0) - (Date.now() - cardAt)))
+          }).then(function () {
+            hideAction()
+            audio.confirm()
+            ui.caret.classList.remove('dsu-on')
+          }).then(function () { return spoke }).then(function () { return wait(ms(320)) })
         }
         if (step.hex) {
           return spoke.then(holdFor).then(function () { stopHex() })
