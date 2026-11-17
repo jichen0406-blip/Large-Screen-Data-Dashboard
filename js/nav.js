@@ -361,6 +361,12 @@
             ro.observe($mb[0]);
         }
         var $mask = $('#menuMask');
+        /* 导航弹层升级为原生 Popover（顶层渲染 + 轻量关闭）；不支持 popover 的浏览器回落到原来的 display 显隐 */
+        var maskEl = document.getElementById('menuMask');
+        var usePopover = !!(maskEl && typeof maskEl.showPopover === 'function');
+        if (usePopover) { maskEl.setAttribute('popover', 'manual'); maskEl.style.display = ''; }
+        function openMenu() { render(); if (usePopover) { try { maskEl.showPopover(); } catch (e) { $mask.show(); } } else { $mask.show(); } }
+        function closeMenu() { if (usePopover) { try { maskEl.hidePopover(); } catch (e) {} } else { $mask.hide(); } }
         var $list = $('#menuList');
         var $pager = $('#menuPager');
         if (!$mask.length || !$list.length) return;
@@ -393,14 +399,16 @@
             $pager.html(total > 1 ? ph : '');
         }
 
-        $('#menuBtn').on('click', function () { curPage = 0; render(); $mask.show(); });
-        $mask.on('click', function (e) { if (e.target === this) $mask.hide(); });
-        $('#menuClose').on('click', function () { $mask.hide(); });
+        $('#menuBtn').on('click', function () { curPage = 0; openMenu(); });
+        $mask.on('click', function (e) { if (e.target === this) closeMenu(); });
+        $('#menuClose').on('click', function () { closeMenu(); });
+        /* Esc 关闭（manual popover 不会自动关） */
+        $(document).on('keydown.navmenu', function (e) { if (e.key === 'Escape' && $mask.is(':visible')) closeMenu(); });
 
         // 跳转页面
         $list.on('click', '.menu-item', function () {
             var href = $(this).data('href');
-            if (href && href !== cur) { location.href = href; } else { $mask.hide(); }
+            if (href && href !== cur) { location.href = href; } else { closeMenu(); }
         });
         // 📌 设为默认首页
         $list.on('click', '.mi-pin', function (e) {

@@ -145,7 +145,11 @@
         var btn = document.getElementById('loginBtn');
         if (btn) btn.addEventListener('click', check);
         var pwd = document.getElementById('loginPwd');
-        if (pwd) pwd.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+        /* 输入法组合中按 Enter 是选字，不是提交（isComposing / keyCode 229） */
+        if (pwd) pwd.addEventListener('keydown', function (e) {
+            if (e.isComposing || e.keyCode === 229) return;
+            if (e.key === 'Enter') check();
+        });
         var user = document.getElementById('loginUser');
         if (user) user.focus();
     }

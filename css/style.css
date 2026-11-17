@@ -1062,3 +1062,49 @@ body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
 
 /* 无 COS 的记录（海外订单）在日历卡片上弱化显示 */
 .cc-cos.no-cos{ color:rgba(159,232,255,.65); font-style:italic; }
+
+/* ── 现代平台特性（2026-11-17，Modern Web Guidance 落地）────────────────────
+   1) 跨文档转场：站内点击链接切页时由浏览器做淡入淡出（Chrome 126+；
+      不支持的浏览器忽略这条，行为与现在完全一致）
+   2) 大表按行惰性渲染：视口外的行跳过布局/绘制，首帧后记住真实高度不抖动
+   3) 网页导航层用 Popover 顶层渲染（见 nav.js），这里补 UA 默认样式覆盖 */
+
+@view-transition { navigation: auto; }
+
+@supports (content-visibility: auto) {
+  /* 表格行级惰性渲染：CART 明细、生产异常、医院表这类上千行的页面收益最大 */
+  .pt tbody tr,
+  .cart-tbl-row,
+  .p9-row {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 28px;
+  }
+}
+
+/* Popover 版导航弹层：顶层渲染，跳过 z-index 战争；未支持 popover 时走原来的 display 显隐 */
+.menu-mask[popover]{
+  position: fixed; inset: 0; margin: 0; padding: 0; border: 0;
+  width: 100%; height: 100%; max-width: none; max-height: none;
+  background: rgba(2,20,55,.55); overflow: auto;
+  display: flex; align-items: center; justify-content: center;
+}
+.menu-mask[popover]:not(:popover-open){ display: none; }
+
+/* 全屏 ⛶ 层同样走 Popover 顶层（未支持时回落到原来的 display 显隐） */
+.fs-mask[popover]{
+  inset: 0; margin: 0; padding: 0; border: 0;
+  width: 100%; height: 100%; max-width: none; max-height: none;
+  background: rgba(2,20,55,.97);
+  display: flex; flex-direction: column;
+}
+.fs-mask[popover]:not(:popover-open){ display: none; }
+
+/* 海外地图悬停提示：Popover 顶层 + 视口定位 */
+.p2-click-tip[popover]{ position: fixed; inset: auto; margin: 0; }
+.p2-click-tip[popover]:popover-open{ display: block; }
+
+/* 省份浮窗：Popover 顶层 + 视口定位（几何由 map.js 按地图容器换算） */
+.prov-panel[popover]{
+  position: fixed; inset: auto; margin: 0; transform: none; z-index: auto;
+}
+.prov-panel[popover]:popover-open{ display: block; }

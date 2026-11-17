@@ -3,6 +3,12 @@
 // page2 表格展开行钩子（window.p2SetTblRows）仅在 page2 存在时生效。
 $(function () {
     var fsEl = null, fsExtra = null;
+    /* 全屏层用原生 Popover 顶层渲染（不再和导航层/提示弹层抢 z-index）；老浏览器回落 display 显隐 */
+    var fsMaskEl = document.getElementById('fsMask');
+    var fsUsePop = !!(fsMaskEl && typeof fsMaskEl.showPopover === 'function');
+    if (fsUsePop) { fsMaskEl.setAttribute('popover', 'manual'); fsMaskEl.style.display = ''; }
+    function showFsMask() { if (fsUsePop) { try { fsMaskEl.showPopover(); return; } catch (e) {} } $('#fsMask').show(); }
+    function hideFsMask() { if (fsUsePop) { try { fsMaskEl.hidePopover(); } catch (e) {} } else { $('#fsMask').hide(); } }
     function resizeChart(el) {
         var ch = echarts.getInstanceByDom(el);
         if (ch) { ch.resize(); return; }
@@ -42,7 +48,7 @@ $(function () {
             fsEl = null;
         }
         if (fsExtra) { $(fsExtra).appendTo(fsExtra._fsHome); delete fsExtra._fsHome; fsExtra = null; }
-        $('#fsMask').hide();
+        hideFsMask();
         $(document).trigger('boardfs', { active: false });
     }
     $('.map-fs').on('click', function () {
@@ -61,7 +67,7 @@ $(function () {
         $('#fsTitle').text($(this).data('title'));
         el._ow = el.offsetWidth; el._oh = el.offsetHeight;
         $(el).appendTo('#fsBody');
-        $('#fsMask').show();
+        showFsMask();
         $(document).trigger('boardfs', { active: true });
         if (isChart) {
             var ow = el._ow, oh = el._oh;

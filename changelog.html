@@ -108,6 +108,14 @@
 	// 更新日志：主要新开发功能，按时间从新到旧
 	$(function () {
 		var CHANGES = [
+			{ d: '2026-11-17', t: [
+				'**接入 Modern Web Guidance 体检**：对全站跑了 Google 维护的 `legacy-scan`（只读），40 条提示里只采纳**低风险、浏览器可自动降级**的几条，不引入构建链、不替换 jQuery / ECharts 4；取舍与写法沉淀为项目标准 §14.10',
+				'**页面切换加跨文档转场**：`css/style.css` 加 `@view-transition { navigation: auto; }`，站内点链接切页由 Chrome 126+ 自动淡入淡出，老浏览器忽略',
+				'**大表行级惰性渲染**：`.pt tbody tr / .cart-tbl-row / .p9-row` 加 `content-visibility:auto`（视口外不渲染、记住真实行高），CART 明细 593 行等长表首屏更轻',
+				'**浮层全面改用 Popover**：网页导航层 `#menuMask`、全屏 ⛶ 层 `#fsMask`、省份浮窗 `#provPanel`、海外地图悬停提示 `#p2ClickTip` 四处都升级为 `popover="manual"` + `showPopover/hidePopover`，走浏览器顶层渲染，不再和 z-index 抢层；低版本浏览器自动回落到原来的 display 显隐。省份浮窗/悬停提示按容器 rect 换算视口坐标（`style = rect / body zoom`）',
+				'**修复中文输入法误触**：登录框、CART 追溯码搜索里按 Enter 选字会被当成提交，三处都加了 `isComposing / keyCode 229` 判断',
+				'**滚动条回归标准**：清掉 `page9.html` 里 6px 的页面级 `::-webkit-scrollbar` 覆盖，统一走 §14.0.1 的 14px 全局规则',
+			] },
 			{ d: '2026-11-16', t: [
 				'**登录成功后播放开机动画**：六幕（黑幕标识 → 过曝洗白 → 档案底板 → 五步授权 → 揭幕），品牌/文案/配音全部改为驯鹿版（IASO / 驯鹿生物、主色 `#4fe3ff`、英文 Zira 配音，最后一句 `Welcome to use IASO.`）；**只在手动点击「登录」成功后播放**，刷新或已登录自动进入不播；右上角 SKIP / Esc 可跳过，整段约 36 秒',
 				'**登录瞬间加黑幕**：点击登录到动画层起来之间插一层全屏黑（`#boardSplashCover`），动画铺满后 400ms 自动撤掉，3 秒兜底；实测 dashboard 裸露帧数为 0、动画层约 81ms 出现，不再闪一下看板',

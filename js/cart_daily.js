@@ -360,7 +360,7 @@
             renderLights(); rerender();
         });
         $('#p10qbtn').on('click', doSearch);
-        $('#p10code').on('keydown', function (e) { if (e.key === 'Enter') doSearch(); });
+        $('#p10code').on('keydown', function (e) { if (e.isComposing || e.keyCode === 229) return; if (e.key === 'Enter') doSearch(); });
         $('#p10cbtn').on('click', doClear);
     }
 

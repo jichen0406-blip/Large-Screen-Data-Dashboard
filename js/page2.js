@@ -458,12 +458,26 @@ $(function () {
         chartPause(rightChart);
     }
     // 海外患者地图：不轮播，鼠标移入区域展示该国家下单/回输，移开隐藏
-    var tipEl = null;
-    function hideClickTip() { if (tipEl) tipEl.hide(); }
+    /* 悬停提示：改用 Popover 顶层渲染（不会被地图容器裁切），坐标按 body zoom 换算回 CSS px */
+    var tipEl = null, tipUsePop = false;
+    var ZOOM = parseFloat(getComputedStyle(document.body).zoom) || 1;
+    function hideClickTip() {
+        if (!tipEl) return;
+        if (tipUsePop) { try { tipEl[0].hidePopover(); return; } catch (e) {} }
+        tipEl.hide();
+    }
     function showClickTip(zh, o, r, x, y) {
-        if (!tipEl) tipEl = $('<div class="p2-click-tip" id="p2ClickTip"></div>').appendTo($('#overseaPatientMap').parent());
+        if (!tipEl) {
+            tipEl = $('<div class="p2-click-tip" id="p2ClickTip"></div>').appendTo(document.body);
+            tipUsePop = typeof tipEl[0].showPopover === 'function';
+            if (tipUsePop) tipEl.attr('popover', 'manual');
+        }
         tipEl.html('<div class="p2ct-name">' + zh + '</div><div>下单：<span style="color:#2f89cf;font-weight:700">' + o + '</span> 单</div><div>回输：<span style="color:#62c98d;font-weight:700">' + r + '</span> 单</div>');
-        tipEl.css({ left: (x + 14) + 'px', top: (y + 14) + 'px' }).show();
+        var host = document.getElementById('overseaPatientMap');
+        var hr = host ? host.getBoundingClientRect() : { left: 0, top: 0 };
+        tipEl.css({ left: (hr.left / ZOOM + x + 14) + 'px', top: (hr.top / ZOOM + y + 14) + 'px' });
+        if (tipUsePop) { try { tipEl[0].showPopover(); return; } catch (e) {} }
+        tipEl.show();
     }
     leftChart.on('mouseover', function (params) {
         var zh = (params.seriesType === 'effectScatter' && params.data) ? params.data.name : (params.componentType === 'geo' ? params.name : null);

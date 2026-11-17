@@ -356,7 +356,7 @@ $(function () {
             $('#provStats').text('');
             $('#provPanelChart').empty();
             $('#provLoading').text('加载中…').show();
-            $('#provPanel').show();
+            openProvPanel();
             function renderGeo(geo) {
                 if (!geo || !geo.features) { $('#provLoading').text('地图数据缺失').show(); return; }
                 $('#provLoading').hide();
@@ -412,7 +412,32 @@ $(function () {
                 if (key) openProvince(key);
             }
         });
-        $('#provClose').on('click', function () { panelOpen = false; $('#provPanel').hide(); startAuto(); });
+    /* 省份浮窗：Popover 顶层渲染；位置按地图容器几何换算成视口坐标（body zoom 需除回去） */
+    var provEl = document.getElementById('provPanel');
+    var provUsePop = !!(provEl && typeof provEl.showPopover === 'function');
+    if (provUsePop) { provEl.setAttribute('popover', 'manual'); provEl.style.display = ''; }
+    function placeProvPanel() {
+        var host = provEl.parentNode;
+        if (!host) return;
+        var hr = host.getBoundingClientRect();
+        var z = parseFloat(getComputedStyle(document.body).zoom) || 1;
+        var w = hr.width * 0.58 / z, h = hr.height * 0.88 / z;
+        provEl.style.width = w + 'px';
+        provEl.style.height = h + 'px';
+        provEl.style.left = ((hr.width / z - w) / 2 + hr.left / z) + 'px';
+        provEl.style.top = ((hr.height / z - h) / 2 + hr.top / z) + 'px';
+    }
+    function openProvPanel() {
+        if (provUsePop) { placeProvPanel(); try { provEl.showPopover(); return; } catch (e) {} }
+        $('#provPanel').show();
+    }
+    function closeProvPanel() {
+        if (provUsePop) { try { provEl.hidePopover(); } catch (e) {} }
+        else $('#provPanel').hide();
+        provEl.style.width = provEl.style.height = provEl.style.left = provEl.style.top = '';
+    }
+        $('#provClose').on('click', function () { panelOpen = false; closeProvPanel(); startAuto(); });
+        $(window).on('resize', function () { if (provUsePop && provEl.matches(':popover-open')) placeProvPanel(); });
     }
 
 })
