@@ -40,13 +40,14 @@
         { id: 'page12.html', key: 'abn_nosample', num: 'P34', name: '长期未单采订单' },
         { id: 'page13.html', key: 'abn_noproduction', num: 'P35', name: '长期未转生产订单' },
         { id: 'page14.html', key: 'abn_noreinfusion', num: 'P36', name: '长期未回输订单' },
-        { id: 'page30.html', key: 'pabn_sum', num: 'P37', name: '生产异常订单管理' },
-        { id: 'page31.html', key: 'pabn_hosp', num: 'P38', name: '医院生产异常订单' },
-        { id: 'page32.html', key: 'pabn_list', num: 'P39', name: '生产异常订单明细' },
-        { id: 'page19.html', key: 'cancel_ytd', num: 'P40', name: 'YTD取消订单管理' },
-        { id: 'page20.html', key: 'cancel_all', num: 'P41', name: '全量取消订单管理' },
-        { id: 'page21.html', key: 'cancel_hosp', num: 'P42', name: '医院取消订单管理' },
-        { id: 'page8.html', key: 'reserved', num: 'P43', name: '预留' },
+        { id: 'page43.html', key: 'abn_inproduction', num: 'P37', name: '生产未放行订单' },
+        { id: 'page30.html', key: 'pabn_sum', num: 'P38', name: '生产异常订单管理' },
+        { id: 'page31.html', key: 'pabn_hosp', num: 'P39', name: '医院生产异常订单' },
+        { id: 'page32.html', key: 'pabn_list', num: 'P40', name: '生产异常订单明细' },
+        { id: 'page19.html', key: 'cancel_ytd', num: 'P41', name: 'YTD取消订单管理' },
+        { id: 'page20.html', key: 'cancel_all', num: 'P42', name: '全量取消订单管理' },
+        { id: 'page21.html', key: 'cancel_hosp', num: 'P43', name: '医院取消订单管理' },
+        { id: 'page8.html', key: 'reserved', num: 'P44', name: '预留' },
     ];
     var PAGES = window.BOARD_PAGES;
     var PER = 4; // 每屏最多 4 项
@@ -84,7 +85,7 @@
         var auth = window.BoardAuth;
         if (!auth || !auth.current()) return PAGES.slice();
         var list = PAGES.filter(function (p) { return auth.canAccess(p.key); });
-        if (auth.isAdmin()) list.push({ id: 'page7.html', key: 'admin', num: 'P0', name: '后台管理' });
+        if (auth.isAdmin()) list.push({ id: 'page7.html', key: 'admin', num: 'P45', name: '后台管理' });
         return list;
     }
 
@@ -97,6 +98,7 @@
         'page11.html': '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>',
         'page12.html': '<svg viewBox="0 0 24 24"><path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.64 2.35 5.66 2.35 4.1-.79 5.66-2.35 2.34-3.67 2.34-5.67S19.22 9.56 17.66 8z"/></svg>',
         'page13.html': '<svg viewBox="0 0 24 24"><path d="M18 22l-.01-6L14 12l3.99-4.01L18 2H6l.01 5.99L10 12l-3.99 4L6 22h12z"/></svg>',
+        'page43.html': '<svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>',
         'page14.html': '<svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>',
         'page15.html': '<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>',
         'page16.html': '<svg viewBox="0 0 24 24"><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/></svg>',
@@ -149,7 +151,7 @@
         { label: '惠民保 & 商保管理', iconId: 'page27.html', keys: ['ins_hb', 'ins_bx', 'ins_name'] },
         { label: '择期生产（冻存）管理', iconId: 'page38.html', keys: ['zq_orders', 'zq_duration'] },
         { label: '订单生产运营管理', iconId: 'page23.html', keys: ['prod_wait', 'prod_cycle', 'reinf_wait', 'demand_cap', 'capacity_util'] },
-        { label: '运营异常订单管理', iconId: 'page11.html', keys: ['abn_nosample', 'abn_noproduction', 'abn_noreinfusion'] },
+        { label: '运营异常订单管理', iconId: 'page11.html', keys: ['abn_nosample', 'abn_noproduction', 'abn_noreinfusion', 'abn_inproduction'] },
         { label: '生产异常订单管理', iconId: 'page30.html', keys: ['pabn_sum', 'pabn_hosp', 'pabn_list'] },
         { label: '取消订单管理', iconId: 'cancel.html', keys: ['cancel_ytd', 'cancel_all', 'cancel_hosp'] },
         { label: '彩蛋', iconId: 'page8.html', keys: ['reserved', 'region3_ytd'] },

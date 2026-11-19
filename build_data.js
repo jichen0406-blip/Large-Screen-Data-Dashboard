@@ -1076,7 +1076,7 @@ var abnManual = {}; // key → { 合同号 → {reason, action, planTime} }
     console.log('异常订单管理人工字段:', Object.keys(abnManual).map(function (k) { return k + '=' + Object.keys(abnManual[k]).length; }).join(' / '));
   } catch (e) { console.warn('⚠️ 读取 运营异常订单管理.xlsx 失败:', e.message); }
 })();
-['nosample', 'noproduction', 'noreinfusion'].forEach(function (k) { if (!abnManual[k]) abnManual[k] = {}; });
+['nosample', 'noproduction', 'noreinfusion', 'inproduction'].forEach(function (k) { if (!abnManual[k]) abnManual[k] = {}; });
 
 // 时长分档（左闭右开 [a,b)）与过期阈值（月）
 var ABN_BUCKETS = {
@@ -1088,6 +1088,21 @@ var ABN_EXPIRE = { noproduction: 12, noreinfusion: 6 };   // 过期阈值（月�
 var ABN_WARN = { noproduction: 3, noreinfusion: 3 };      // 即将过期预警窗口（月）：距阈值不足 N 个月即为「即将过期」
                                                           // 2026-11-11 由 1 → 2；2026-11-13 由 2 → 3，与「质量过期订单」两页的临期口径统一（冻存 9~12 月、生产 3~6 月）
 function abnLabel(a, b) { return b === Infinity ? ('≥' + a + ' 月') : (a === 0 ? ('0~' + b + ' 月') : (a + '~' + b + ' 月')); }
+// 「正在生产订单」是按天计的在产时长，单独一套分档
+var ABN_DAY_BUCKETS = [[0, 7], [7, 30], [30, 90], [90, Infinity]];
+function abnDayLabel(a, b) { return b === Infinity ? ('≥' + a + ' 天') : (a === 0 ? ('0~' + b + ' 天') : (a + '~' + b + ' 天')); }
+function abnDayBucketOf(d) {
+  for (var i = 0; i < ABN_DAY_BUCKETS.length; i++) if (d >= ABN_DAY_BUCKETS[i][0] && d < ABN_DAY_BUCKETS[i][1]) return abnDayLabel(ABN_DAY_BUCKETS[i][0], ABN_DAY_BUCKETS[i][1]);
+  var last = ABN_DAY_BUCKETS[ABN_DAY_BUCKETS.length - 1];
+  return abnDayLabel(last[0], last[1]);
+}
+function abnDays(d) {
+  if (!d) return null;
+  var t1 = new Date(String(d).slice(0, 10).replace(/-/g, '/'));
+  if (isNaN(t1.getTime())) return null;
+  var t0 = new Date(DP.replace(/-/g, '/'));
+  return Math.round((t0 - t1) / 86400000);
+}
 function abnBucketOf(m, key) {
   var bs = ABN_BUCKETS[key];
   for (var i = 0; i < bs.length; i++) if (m >= bs[i][0] && m < bs[i][1]) return abnLabel(bs[i][0], bs[i][1]);
@@ -1113,7 +1128,9 @@ var ABN_SPECS = [
   { key: 'nosample',     pred: function (r) { return !r.ap; },               base: function (r) { return r.od; } },
   // !r.qa 是兜底：正常数据里「有放行必然有 D1」（已核对 0 例外），加上它可防 pbs_d1 回填缺失时把已放行的单错算进来
   { key: 'noproduction', pred: function (r) { return !!r.ap && !PBS_D1.map[r.code] && !r.qa; }, base: function (r) { return r.receive; } },
-  { key: 'noreinfusion', pred: function (r) { return !!r.qa && !r.reStart; }, base: function (r) { return r.qa; } }
+  { key: 'noreinfusion', pred: function (r) { return !!r.qa && !r.reStart; }, base: function (r) { return r.qa; } },
+  // 正在生产：有 D1 执行时间、未质量放行、未回输（取消单在下面统一剔除）；基准 = 最近一次 D1
+  { key: 'inproduction', pred: function (r) { var p = PBS_D1.map[r.code]; return !!(p && p.max) && !r.qa && !r.re; }, base: function (r) { return (PBS_D1.map[r.code] || {}).max; } }
 ];
 var ABN_MGMT = { UPDATED: UPDATED, summaryAt: '', pages: {} };
 ABN_SPECS.forEach(function (spec) {
@@ -1134,17 +1151,19 @@ ABN_SPECS.forEach(function (spec) {
       // 已「恢复生产」的择期单已走生产流程，属全流程（取消单上面已剔除）
       status: ((String(r.pay || '').indexOf('择期') >= 0 || !!d.modZq) && !d.resume) ? '冻存' : '全流程',
       baseTime: spec.base(r), months: months, planRe: r.planRe || '',
-      bucket: abnBucketOf(months, spec.key),
+      bucket: spec.key === 'inproduction' ? abnDayBucketOf(abnDays(spec.base(r))) : abnBucketOf(months, spec.key),
       risk: abnRisk(months, spec.key),
-      reason: man.reason || '', action: man.action || '', planTime: man.planTime || ''
+      reason: man.reason || '', action: man.action || '', planTime: man.planTime || '',
+      days: spec.key === 'inproduction' ? abnDays(spec.base(r)) : undefined
     });
   });
-  rows.sort(function (a, b) { return b.months - a.months; });
+  rows.sort(function (a, b) { return (spec.key === 'inproduction') ? (b.days || 0) - (a.days || 0) : b.months - a.months; });
   ABN_MGMT.pages[spec.key] = { rows: rows };
 });
 console.log('异常订单（重算）: 未单采=' + ABN_MGMT.pages.nosample.rows.length +
   ' 未转生产=' + ABN_MGMT.pages.noproduction.rows.length +
-  ' 未回输=' + ABN_MGMT.pages.noreinfusion.rows.length);
+  ' 未回输=' + ABN_MGMT.pages.noreinfusion.rows.length +
+  ' 生产未放行=' + ABN_MGMT.pages.inproduction.rows.length);
 
 
 // ── 8u. 订单生产运营管理（3 页）：生产等待期 / 产品生产周期 / 回输等待期 ──
@@ -1493,6 +1512,7 @@ async function buildSummaries() {
   // 1) 异常订单管理三页
   for (var i = 0; i < ABN_SPECS.length; i++) {
     var key = ABN_SPECS[i].key, rows = ABN_MGMT.pages[key].rows;
+    if (key === 'inproduction') { ABN_MGMT.pages[key].summary = ''; continue; }   // 新页不做 AI 总结（无人工 sheet 输入）
     var fp = abnFingerprint(key, rows);
     if (cache[key] && cache[key].fp === fp && cache[key].summary) {
       ABN_MGMT.pages[key].summary = cache[key].summary;
@@ -2262,6 +2282,20 @@ try {
     if (am2) o2.am[am2] = (o2.am[am2] || 0) + 1;
   });
   console.log('D1 生产批数: ' + d1Total + ' 批 / ' + Object.keys(PROD_ABN.d1).length + ' 个月');
+
+  // 生产未放行（ABN inproduction）：剔除已在「生产异常订单」里登记过的追溯码
+  // （同一批细胞已判失败/返工的，不再算「仍在生产、只是未放行」）
+  (function () {
+    var bad = {};
+    PROD_ABN.rows.forEach(function (r) { if (r.code) bad[r.code] = 1; });
+    var pg = ABN_MGMT.pages.inproduction;
+    if (!pg) return;
+    var before = pg.rows.length;
+    pg.rows = pg.rows.filter(function (r) { return !bad[r.code]; });
+    if (before !== pg.rows.length) {
+      console.log('生产未放行：剔除生产异常追溯码 ' + (before - pg.rows.length) + ' 单（' + before + ' → ' + pg.rows.length + '）');
+    }
+  })();
 } catch (e) {
   console.error('⚠️ 读取 生产异常订单.xlsx Sheet2 失败:', e.message);
 }

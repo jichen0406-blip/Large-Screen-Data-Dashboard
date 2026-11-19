@@ -72,6 +72,16 @@
                 if (remEl && remEl.checked) localStorage.setItem('board_remember', JSON.stringify({ user: String(uname || '').trim(), pwd: pwd }));
                 else localStorage.removeItem('board_remember');
             } catch (e) {}
+            /* 跳过开场动画：勾选后直进看板（不铺黑幕、不播动画） */
+            var skipEl = document.getElementById('loginSkipSplash');
+            var skipSplash = !!(skipEl && skipEl.checked);
+            try { localStorage.setItem('board_skip_splash', skipSplash ? '1' : ''); } catch (e) {}
+            if (skipSplash) {
+                hideMask();
+                if (window.jQuery) $(document).trigger('boardlogin');
+                if (!canAccess(curKey())) { location.replace(home()); }
+                return;
+            }
             /* 登录瞬间先铺一层黑幕：动画运行时还要加载/初始化，避免闪出 dashboard */
             var cover = document.createElement('div');
             cover.id = 'boardSplashCover';
@@ -133,6 +143,12 @@
             if (window.jQuery) $(document).trigger('boardlogin'); // 通知导航按权限重渲染
             if (!canAccess(curKey())) { location.replace(home()); return; }
         }
+        // 跳过开场动画的勾选状态（上次的选择）
+        try {
+            if (localStorage.getItem('board_skip_splash') === '1') {
+                var ski = document.getElementById('loginSkipSplash'); if (ski) ski.checked = true;
+            }
+        } catch (e) {}
         // 记住密码预填
         try {
             var rem = JSON.parse(localStorage.getItem('board_remember') || 'null');

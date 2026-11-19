@@ -4,7 +4,7 @@
   $(function () {
     var B = (typeof BOARD_DATA !== 'undefined') ? BOARD_DATA : null;
     if (!B || !B.ABN_MGMT || !B.ABN_MGMT.pages) return;
-    var KEYMAP = { abn_nosample: 'nosample', abn_noproduction: 'noproduction', abn_noreinfusion: 'noreinfusion' };
+    var KEYMAP = { abn_nosample: 'nosample', abn_noproduction: 'noproduction', abn_noreinfusion: 'noreinfusion', abn_inproduction: 'inproduction' };
     var key = KEYMAP[window.PAGE_KEY];
     if (!key) return;
     var PAGE = B.ABN_MGMT.pages[key] || { rows: [] };
@@ -20,7 +20,14 @@
         noproduction: {
             baseLabel: '单采血入库时间', durLabel: '累计冻存时长（月）',
             colTitle: '长期未转生产原因', actTitle: '如何尽快转生产（行动计划）', planTitle: '预估生产时间',
-            buckets: ['0~6 月', '6~12 月', '12~24 月', '≥24 月'], risk: true, status: false
+            buckets: ['0~6 月', '6~12 月', '12~24 月', '≥24 月'], risk: true, status: true
+        },
+        // 生产未放行订单：按天计未放行时长；筛选区右侧只放一行文字、不出分类筛选、无人工三列
+        inproduction: {
+            baseLabel: 'PD1 时间（最近一次 D1）', durLabel: '距今（天）',
+            buckets: ['0~7 天', '7~30 天', '30~90 天', '≥90 天'],
+            unit: '天', risk: false, status: false,
+            bucketFilter: false, manualCols: false, singleCard: true
         },
         noreinfusion: {
             baseLabel: '质量放行时间', durLabel: '累计时长（月）',
@@ -40,7 +47,8 @@
     var SEV = {
         '0~1 月': 1, '1~2 月': 2, '2~3 月': 3, '3~6 月': 4, '6~12 月': 5, '≥12 月': 6,
         '0~6 月': 2, '12~24 月': 5, '≥24 月': 6,
-        '0~3 月': 2, '≥6 月': 6
+        '0~3 月': 2, '≥6 月': 6,
+        '0~7 天': 2, '7~30 天': 3, '30~90 天': 5, '≥90 天': 6
     };
 
     // 筛选状态
@@ -54,7 +62,7 @@
         return DATA.filter(function (r) {
             if (!hit(r.code, f.code)) return false;
             if (!hit(r.no, f.no)) return false;
-            if (!hit(r.am, f.am)) return false;
+            if (f.am && r.am !== f.am) return false;   // AM 为下拉，精确匹配
             if (!hit(r.hosp, f.hosp)) return false;
             if (f.bucket && r.bucket !== f.bucket) return false;
             if (CFG.status && !f.status[r.status]) return false;
@@ -75,9 +83,18 @@
 
     // ── 卡片式汇总（按时长分档）—— 与表格同源（rowsVisible），随筛选实时联动 ──
     function renderCards() {
+        var rows0 = rowsVisible();
+        if (CFG.singleCard) {   // 新页：只一张卡，放筛选区右侧
+            var kp = document.getElementById('abnKpi');
+            if (kp) {
+                var mx = rows0.reduce(function (a, r) { return Math.max(a, r.days || 0); }, 0);
+                kp.innerHTML = '生产未放行订单 <b>' + rows0.length + '</b> 单 · 最久 <b>' + mx + '</b> 天';
+            }
+            return;
+        }
         var el = document.getElementById('abnCards');
         if (!el) return;
-        var rows = rowsVisible();
+        var rows = rows0;
         var total = rows.length;
         var cnt = {}, maxM = {}, allMax = 0;
         rows.forEach(function (r) {
@@ -101,24 +118,33 @@
     function renderControls() {
         var el = document.getElementById('abnCtl');
         if (!el) return;
+        // AM 选项：当前页数据里出现过的 AM（去重排序）
+        var amSet = {};
+        DATA.forEach(function (r) { if (r.am) amSet[r.am] = true; });
+        var amOpts = Object.keys(amSet).sort().map(function (a) { return '<option value="' + esc(a) + '">' + esc(a) + '</option>'; }).join('');
         var h = '<div class="abn-ctl-row">' +
             '<span class="abn-lab">追溯码</span><input type="text" id="abnFCode" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
             '<span class="abn-lab">合同号</span><input type="text" id="abnFNo" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
-            '<span class="abn-lab">AM</span><input type="text" id="abnFAm" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
+            '<span class="abn-lab">AM</span><select id="abnFAm" class="pt-sel abn-sel"><option value="">全部 AM</option>' + amOpts + '</select>' +
             '<span class="abn-lab">医院名称</span><input type="text" id="abnFHosp" class="abn-inp abn-inp-wide" placeholder="模糊搜索" autocomplete="off">' +
-            '<button type="button" class="cart-btn ghost" id="abnClear">清空</button>' +
-            '</div><div class="abn-ctl-row">' +
-            '<span class="abn-lab">分类</span><select id="abnFBucket" class="pt-sel abn-sel"><option value="">全部</option>' +
-            CFG.buckets.map(function (b) { return '<option value="' + esc(b) + '">' + esc(b) + '</option>'; }).join('') + '</select>';
+            '<button type="button" class="cart-btn ghost" id="abnClear">清空</button>';
+        // 单行页（生产未放行）：汇总文字与筛选栏同一行，靠右
+        if (CFG.singleCard) h += '<span class="abn-kpi" id="abnKpi"></span>';
+        h += '<span class="abn-cnt" id="abnCnt"></span></div>';
+        var row2 = '';
+        if (CFG.bucketFilter !== false) {
+            row2 += '<span class="abn-lab">分类</span><select id="abnFBucket" class="pt-sel abn-sel"><option value="">全部</option>' +
+                CFG.buckets.map(function (b) { return '<option value="' + esc(b) + '">' + esc(b) + '</option>'; }).join('') + '</select>';
+        }
         if (CFG.status) {
-            h += '<span class="abn-lab">订单状态</span><div class="cart-lights" id="abnFStatus">' +
+            row2 += '<span class="abn-lab">订单状态</span><div class="cart-lights" id="abnFStatus">' +
                 ['全流程', '冻存'].map(function (s) { return '<button type="button" class="cart-light' + (f.status[s] ? ' on' : '') + '" data-v="' + s + '">' + statusIcon(s) + s + '</button>'; }).join('') + '</div>';
         }
         if (CFG.risk) {
-            h += '<span class="abn-lab">风险提示</span><div class="cart-lights" id="abnFRisk">' +
+            row2 += '<span class="abn-lab">风险提示</span><div class="cart-lights" id="abnFRisk">' +
                 RISKS.map(function (r) { return '<button type="button" class="cart-light' + (f.risk[r.k] ? ' on' : '') + '" data-v="' + r.k + '">' + r.ico + r.k + '</button>'; }).join('') + '</div>';
         }
-        h += '<span class="abn-cnt" id="abnCnt"></span></div>';
+        if (row2) h += '<div class="abn-ctl-row">' + row2 + '</div>';
         el.innerHTML = h;
     }
     function statusIcon(s) { return s === '冻存' ? '❄ ' : '▶ '; }
@@ -143,15 +169,17 @@
             { t: CFG.baseLabel, v: function (r) { return r.baseTime || '--'; } }
         ];
         if (CFG.extraLabel) cols.push({ t: CFG.extraLabel, v: function (r) { return r.planRe || '--'; } });
-        cols.push({ t: CFG.durLabel, v: function (r) { return r.months; }, cls: 'abn-dur' });
+        cols.push({ t: CFG.durLabel, v: function (r) { return (CFG.unit === '天') ? (r.days == null ? '--' : r.days) : r.months; }, cls: 'abn-dur' });
         cols.push({
             t: '分类', v: function (r) { return r.bucket; },
             html: function (r) { return '<span class="abn-bkt sev-' + (SEV[r.bucket] || 1) + '">' + esc(r.bucket) + '</span>'; }
         });
         if (CFG.risk) cols.push({ t: '风险提示', v: function (r) { return r.risk || '--'; }, html: function (r) { return renderRisk(r.risk); } });
-        cols.push({ t: CFG.colTitle, v: function (r) { return r.reason || '--'; }, txt: true });
-        cols.push({ t: CFG.actTitle, v: function (r) { return r.action || '--'; }, txt: true });
-        cols.push({ t: CFG.planTitle, v: function (r) { return r.planTime || '--'; }, txt: true });
+        if (CFG.manualCols !== false) {
+            cols.push({ t: CFG.colTitle, v: function (r) { return r.reason || '--'; }, txt: true });
+            cols.push({ t: CFG.actTitle, v: function (r) { return r.action || '--'; }, txt: true });
+            cols.push({ t: CFG.planTitle, v: function (r) { return r.planTime || '--'; }, txt: true });
+        }
         return cols;
     }
 
@@ -193,6 +221,7 @@
         if (c.t === '细胞追溯码') return 16;
         if (c.t === CFG.colTitle || c.t === CFG.actTitle || c.t === CFG.planTitle) return 40;
         if (c.t === '合同号' || c.t === '患者名称') return 12;
+        if (c.t === CFG.baseLabel) return 22;
         return 10;
     }
     function exportExcel() {
@@ -212,10 +241,12 @@
 
     // ── 事件 ──
     function bind() {
-        var map = { abnFCode: 'code', abnFNo: 'no', abnFAm: 'am', abnFHosp: 'hosp' };
+        var map = { abnFCode: 'code', abnFNo: 'no', abnFHosp: 'hosp' };
         Object.keys(map).forEach(function (id) {
             $('#' + id).on('input', function () { f[map[id]] = String(this.value || '').trim().toLowerCase(); renderAll(); });
         });
+        // AM 下拉：精确匹配（三页 + 正在生产页共用）
+        $('#abnFAm').on('change', function () { f.am = this.value; renderAll(); });
         $('#abnFBucket').on('change', function () { f.bucket = this.value; renderAll(); });
         $('#abnFStatus').on('click', '.cart-light', function () {
             var v = $(this).data('v');
@@ -232,7 +263,8 @@
         });
         $('#abnClear').on('click', function () {
             f.code = f.no = f.am = f.hosp = ''; f.bucket = '';
-            ['abnFCode', 'abnFNo', 'abnFAm', 'abnFHosp'].forEach(function (id) { $('#' + id).val(''); });
+            ['abnFCode', 'abnFNo', 'abnFHosp'].forEach(function (id) { $('#' + id).val(''); });
+            $('#abnFAm').val('');
             $('#abnFBucket').val('');
             if (CFG.status) { f.status = { '全流程': true, '冻存': true }; $('#abnFStatus .cart-light').addClass('on'); }
             RISKS.forEach(function (r) { f.risk[r.k] = true; }); $('#abnFRisk .cart-light').addClass('on');

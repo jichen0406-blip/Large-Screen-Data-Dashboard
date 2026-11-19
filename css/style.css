@@ -1108,3 +1108,16 @@ body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
   position: fixed; inset: auto; margin: 0; transform: none; z-index: auto;
 }
 .prov-panel[popover]:popover-open{ display: block; }
+
+/* 登录页：第二个勾选项（跳过开场动画）与「记住密码」紧挨着 */
+.login-remember + .login-remember{ margin-top:-8px; }
+
+/* 正在生产订单页：唯一一张卡放在筛选区右侧 */
+.abn-kpi{ margin-left:auto; display:flex; align-items:center; }
+.abn-kpi .kpi-card{ min-width:160px; padding:6px 16px; }
+.abn-kpi .kpi-card .kc-val{ font-size:22px; }
+.abn-kpi + .abn-cnt{ margin-left:10px; }
+
+/* 生产未放行订单：筛选区右侧一行文字（原卡片已取消） */
+.abn-kpi{ margin-left:auto; display:flex; align-items:center; font-size:13px; color:#daf9ff; letter-spacing:.5px; }
+.abn-kpi b{ color:#4fe3ff; font-size:16px; margin:0 2px; }
