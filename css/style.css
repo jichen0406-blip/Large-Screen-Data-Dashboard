@@ -1134,14 +1134,37 @@ html.mobile-nav .mainbox{ margin-left: 0 !important; }
 html.mobile-nav.rail-wide .mainbox{ margin-left: 0 !important; }
 /* 手机整页按 980 布局缩放显示（没有 viewport），所以这里的尺寸要按“放大 2.5 倍”写，
    换算到真实屏幕才够大、够点：菜单占 92% 宽、行高与字号同步放大 */
-html.mobile-nav .menu-btn{ height: 64px; padding: 0 28px; font-size: 28px; border-radius: 32px; }
-html.mobile-nav .menu-btn i{ font-size: 32px; }
-html.mobile-nav .menu-panel{ width: 92vw; max-width: none; max-height: 84vh; overflow: auto; }
-html.mobile-nav .menu-panel-head{ padding: 22px 28px; }
-html.mobile-nav .menu-panel-tit{ font-size: 34px; }
-html.mobile-nav .menu-close{ width: 58px; height: 58px; line-height: 54px; font-size: 34px; }
-html.mobile-nav .menu-item{ padding: 30px 36px; font-size: 32px; gap: 18px; }
-html.mobile-nav .menu-item .mi-ico{ font-size: 32px; }
-html.mobile-nav .menu-item em{ font-size: 24px; padding: 2px 14px; border-radius: 18px; }
+html.mobile-nav .menu-btn{ height: 150px; padding: 0 56px; font-size: 52px; border-radius: 75px; }
+html.mobile-nav .menu-btn i{ font-size: 56px; }
+html.mobile-nav .menu-panel{ width: 96vw; max-width: none; max-height: 84vh; overflow: auto; }
+html.mobile-nav .menu-pager{ display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+html.mobile-nav .menu-panel-head{ padding: 34px 40px; }
+html.mobile-nav .menu-panel-tit{ font-size: 52px; }
+html.mobile-nav .menu-close{ width: 96px; height: 96px; line-height: 90px; font-size: 52px; }
+html.mobile-nav .menu-item{ padding: 44px 52px; font-size: 50px; gap: 26px; }
+html.mobile-nav .menu-item .mi-ico{ font-size: 50px; }
+html.mobile-nav .menu-item em{ font-size: 34px; padding: 3px 18px; border-radius: 22px; }
 html.mobile-nav .menu-pager{ padding: 16px 10px; gap: 12px; }
-html.mobile-nav .menu-pg{ padding: 12px 22px; font-size: 28px; }
+html.mobile-nav .menu-pg{ padding: 16px 30px; font-size: 44px; }
+
+/* 手机端表头：桌面版是绝对定位的一行（按钮会压住标题），这里改成纵向流式，尺寸按 980 布局缩放换算 */
+html.mobile-nav .head{
+  height: auto; padding: 18px 20px 14px; display: flex; flex-direction: column;
+  align-items: center; gap: 12px; text-align: center;
+}
+html.mobile-nav .head h1{
+  font-size: 52px; line-height: 1.3; letter-spacing: 0; width: 100%;
+}
+html.mobile-nav .head h1 img.head-logo{ height: 56px; margin-right: 18px; }
+html.mobile-nav .head .head-left{
+  position: static; transform: none; line-height: 1.4; white-space: normal;
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 0;
+}
+html.mobile-nav .head .head-left .update{
+  position: static; transform: none; line-height: 1.4; font-size: 34px; padding: 0;
+}
+html.mobile-nav .head .tm-wrap{
+  position: static; transform: none; line-height: 1.4; margin-top: 0;
+}
+html.mobile-nav .head .time,
+html.mobile-nav .head .weather{ font-size: 34px; }
