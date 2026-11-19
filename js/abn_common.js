@@ -51,6 +51,11 @@
         '0~7 天': 2, '7~30 天': 3, '30~90 天': 5, '≥90 天': 6
     };
 
+    // AM 筛选在「运营异常订单管理」四页之间共享（sessionStorage，与辖区 pt_range 同类做法）
+    var AM_STORE = 'abn_am';
+    function readAmShared() { try { return String(sessionStorage.getItem(AM_STORE) || ''); } catch (e) { return ''; } }
+    function writeAmShared(v) { try { if (v) sessionStorage.setItem(AM_STORE, v); else sessionStorage.removeItem(AM_STORE); } catch (e) {} }
+
     // 筛选状态
     var f = { code: '', no: '', am: '', hosp: '', bucket: '', status: { '全流程': true, '冻存': true }, risk: {} };
     RISKS.forEach(function (r) { f.risk[r.k] = true; });
@@ -121,7 +126,12 @@
         // AM 选项：当前页数据里出现过的 AM（去重排序）
         var amSet = {};
         DATA.forEach(function (r) { if (r.am) amSet[r.am] = true; });
-        var amOpts = Object.keys(amSet).sort().map(function (a) { return '<option value="' + esc(a) + '">' + esc(a) + '</option>'; }).join('');
+        var savedAm = readAmShared();
+        if (savedAm && !amSet[savedAm]) savedAm = '';   // 本页没有这个 AM → 显示「全部」，但不清掉共享值
+        f.am = savedAm;
+        var amOpts = Object.keys(amSet).sort().map(function (a) {
+            return '<option value="' + esc(a) + '"' + (a === savedAm ? ' selected' : '') + '>' + esc(a) + '</option>';
+        }).join('');
         var h = '<div class="abn-ctl-row">' +
             '<span class="abn-lab">追溯码</span><input type="text" id="abnFCode" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
             '<span class="abn-lab">合同号</span><input type="text" id="abnFNo" class="abn-inp" placeholder="模糊搜索" autocomplete="off">' +
@@ -246,7 +256,7 @@
             $('#' + id).on('input', function () { f[map[id]] = String(this.value || '').trim().toLowerCase(); renderAll(); });
         });
         // AM 下拉：精确匹配（三页 + 正在生产页共用）
-        $('#abnFAm').on('change', function () { f.am = this.value; renderAll(); });
+        $('#abnFAm').on('change', function () { f.am = this.value; writeAmShared(this.value); renderAll(); });
         $('#abnFBucket').on('change', function () { f.bucket = this.value; renderAll(); });
         $('#abnFStatus').on('click', '.cart-light', function () {
             var v = $(this).data('v');
@@ -264,7 +274,7 @@
         $('#abnClear').on('click', function () {
             f.code = f.no = f.am = f.hosp = ''; f.bucket = '';
             ['abnFCode', 'abnFNo', 'abnFHosp'].forEach(function (id) { $('#' + id).val(''); });
-            $('#abnFAm').val('');
+            $('#abnFAm').val(''); writeAmShared('');
             $('#abnFBucket').val('');
             if (CFG.status) { f.status = { '全流程': true, '冻存': true }; $('#abnFStatus .cart-light').addClass('on'); }
             RISKS.forEach(function (r) { f.risk[r.k] = true; }); $('#abnFRisk .cart-light').addClass('on');
