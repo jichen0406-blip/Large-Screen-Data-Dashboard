@@ -1,3 +1,12 @@
+
+// 手机端（无 viewport meta，页面按 980 宽度渲染，媒体查询不会触发）：
+// 用真实设备短边判定，给 <html> 打 mobile-nav，CSS 隐藏左侧竖栏、显示头部「网页导航」弹层
+(function () {
+    try {
+        var short = Math.min((window.screen && screen.width) || 9999, (window.screen && screen.height) || 9999);
+        if (short <= 820) document.documentElement.classList.add('mobile-nav');
+    } catch (e) {}
+})();
 // 网页导航公共脚本：命名 P序号（页面名），每屏最多 4 项 + 页码条，📌 默认首页，当前页徽章
 // 所有页面引入 <script src="js/nav.js"></script>，菜单结构由 nav.js 自动渲染
 (function () {

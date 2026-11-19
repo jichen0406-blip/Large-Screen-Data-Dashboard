@@ -1121,3 +1121,27 @@ body > .mainbox.page-fill, .mainbox.page-fill{ height: calc(125vh - 108px); }
 /* 生产未放行订单：筛选区右侧一行文字（原卡片已取消） */
 .abn-kpi{ margin-left:auto; display:flex; align-items:center; font-size:13px; color:#daf9ff; letter-spacing:.5px; }
 .abn-kpi b{ color:#4fe3ff; font-size:16px; margin:0 2px; }
+
+/* ── 手机端导航（2026-11-19）──────────────────────────────────────────
+   看板没有 viewport meta，手机按 980 宽度渲染 → max-width:768px 媒体查询不生效。
+   nav.js 用设备短边判定后给 <html> 打 .mobile-nav：
+   隐藏左侧竖栏，改用头部「☰ 网页导航」弹层（42 页全量列表 + 分页）。 */
+html.mobile-nav .side-nav,
+html.mobile-nav .side-tab{ display:none !important; }
+html.mobile-nav .menu-btn{ display:inline-flex !important; }
+html.mobile-nav body{ --nav-tab: 0px; }
+html.mobile-nav .mainbox{ margin-left: 0 !important; }
+html.mobile-nav.rail-wide .mainbox{ margin-left: 0 !important; }
+/* 手机整页按 980 布局缩放显示（没有 viewport），所以这里的尺寸要按“放大 2.5 倍”写，
+   换算到真实屏幕才够大、够点：菜单占 92% 宽、行高与字号同步放大 */
+html.mobile-nav .menu-btn{ height: 64px; padding: 0 28px; font-size: 28px; border-radius: 32px; }
+html.mobile-nav .menu-btn i{ font-size: 32px; }
+html.mobile-nav .menu-panel{ width: 92vw; max-width: none; max-height: 84vh; overflow: auto; }
+html.mobile-nav .menu-panel-head{ padding: 22px 28px; }
+html.mobile-nav .menu-panel-tit{ font-size: 34px; }
+html.mobile-nav .menu-close{ width: 58px; height: 58px; line-height: 54px; font-size: 34px; }
+html.mobile-nav .menu-item{ padding: 30px 36px; font-size: 32px; gap: 18px; }
+html.mobile-nav .menu-item .mi-ico{ font-size: 32px; }
+html.mobile-nav .menu-item em{ font-size: 24px; padding: 2px 14px; border-radius: 18px; }
+html.mobile-nav .menu-pager{ padding: 16px 10px; gap: 12px; }
+html.mobile-nav .menu-pg{ padding: 12px 22px; font-size: 28px; }
