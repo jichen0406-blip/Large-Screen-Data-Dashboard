@@ -194,7 +194,7 @@
             var aoa = [cols.map(function (c) { return c.t; })];
             rows.forEach(function (r) { aoa.push(cols.map(function (c) { return c.v(r); })); });
             var pn = (typeof BoardXLS !== 'undefined' && BoardXLS.pageName) ? BoardXLS.pageName() : CFG.title;
-            BoardXLS.exportAoa(aoa, pn, { sheet: CFG.title, cols: cols.map(function (c) { return { wch: c.txt ? 40 : 14 }; }) });
+            BoardXLS.exportAoa(aoa, CFG.title || pn, { sheet: CFG.title, cols: cols.map(function (c) { return { wch: c.txt ? 40 : 14 }; }) });
         }
         (window.BOARD_XLS_CUSTOM = window.BOARD_XLS_CUSTOM || {})['expTbl'] = exportExcel;
 

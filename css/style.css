@@ -1168,3 +1168,29 @@ html.mobile-nav .head .tm-wrap{
 }
 html.mobile-nav .head .time,
 html.mobile-nav .head .weather{ font-size: 34px; }
+
+/* ── 导出格式选择（Popover）：白底报表 / 深色看板（§14.11）── */
+/* Popover 顶层渲染：用 inset:0 + margin:auto 让浏览器自己居中（写 left/top + transform 会被 UA 的 inset 覆盖） */
+.xls-theme-pop{
+  position: fixed; inset: 0; margin: auto;
+  width: min(92vw, 420px); height: fit-content; max-height: 86vh; overflow: auto;
+  padding: 18px; border: 1px solid rgba(79,227,255,.55); border-radius: 12px;
+  background: linear-gradient(rgba(5,30,66,.985), rgba(3,20,48,.985));
+  box-shadow: 0 0 30px rgba(47,137,207,.55); color: #dff4ff;
+}
+.xls-theme-pop:not(:popover-open){ display: none; }
+.xls-theme-pop .xtp-t{ font-size: 15px; letter-spacing: 2px; color: #4fe3ff; margin-bottom: 4px; }
+.xtp-btn{ display: block; width: 100%; margin-top: 10px; padding: 12px 14px; border-radius: 8px;
+  border: 1px solid rgba(47,137,207,.6); background: rgba(47,137,207,.12);
+  color: #dff4ff; font-size: 15px; cursor: pointer; text-align: left; }
+.xtp-btn i{ display: block; margin-top: 4px; font-style: normal; font-size: 12px; color: rgba(223,244,255,.6); }
+.xtp-btn:hover{ border-color: #4fe3ff; }
+.xtp-btn.on{ border-color: #4fe3ff; box-shadow: 0 0 12px rgba(79,227,255,.5); }
+
+/* 导出格式弹窗：右上角关闭按钮 */
+.xls-theme-pop .xtp-hd{ display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.xls-theme-pop .xtp-hd .xtp-t{ flex: 1; margin-bottom: 0; }
+.xtp-x{ flex: none; width: 26px; height: 26px; padding: 0; line-height: 22px; text-align: center;
+  border-radius: 50%; border: 1px solid rgba(255,255,255,.4); background: none; color: #fff;
+  font-size: 16px; cursor: pointer; }
+.xtp-x:hover{ border-color: #4fe3ff; color: #4fe3ff; }

@@ -241,7 +241,7 @@
         var aoa = [cols.map(function (c) { return c.t; })];
         rows.forEach(function (r) { aoa.push(cols.map(function (c) { return c.v(r); })); });
         var tn = pageTitle(), pn = BoardXLS.pageName();
-        BoardXLS.exportAoa(aoa, (pn === tn ? tn : pn + '_' + tn),
+        BoardXLS.exportAoa(aoa, tn || pn,
             { cols: cols.map(function (c) { return { wch: colWidth(c) }; }), sheet: tn });
     }
     // 本文件在 <head> 里、早于 js/excel_export.js 加载，故走全局挂载点注册（模块加载时合并）

@@ -4,7 +4,9 @@
 (function () {
     'use strict';
 
-    var XLSX_SRC = 'js/xlsx.full.min.js';
+    var XLSX_SRC = 'js/xlsx.full.min.js';          // 旧写入器（保留兼容，导出已不再使用）
+    var EXCELJS_SRC = 'js/exceljs.min.js';        // 新写入器：支持单元格样式
+    var STYLE_SRC = 'js/xls_style.js';            // 语义类 → Excel 样式映射（§14.11）
     var loading = false, queue = [];
     var custom = {};   // 容器 id → 自定义导出函数（见 register）
 
@@ -29,11 +31,47 @@
         document.head.appendChild(s);
     }
 
+    // ── 通用按需加载：样式模块 + ExcelJS（并发安全、失败可重试）──
+    var sState = {};   // src → { ok, queue }
+    function loadScript(src, ok, fail) {
+        var st = sState[src];
+        if (st && st.done) { st.okArr.forEach(function (f) { f(); }); ok(); return; }
+        if (!st) st = sState[src] = { loading: false, done: false, okArr: [], failArr: [] };
+        st.okArr.push(ok); st.failArr.push(fail);
+        if (st.loading) return;
+        st.loading = true;
+        var el = document.createElement('script');
+        el.src = src;
+        el.onload = function () {
+            st.loading = false; st.done = true;
+            var oks = st.okArr, fs2 = st.failArr; st.okArr = []; st.failArr = [];
+            oks.forEach(function (f) { f(); });
+        };
+        el.onerror = function () {
+            st.loading = false;
+            var fs2 = st.failArr; st.okArr = []; st.failArr = [];
+            fs2.forEach(function (f) { f(); });
+        };
+        document.head.appendChild(el);
+    }
+    function loadStudio(ok, fail) {
+        if (window.XLS_STYLE && window.ExcelJS) { ok(); return; }
+        loadScript(STYLE_SRC, function () {
+            if (window.ExcelJS) { ok(); return; }
+            loadScript(EXCELJS_SRC, ok, fail);
+        }, fail);
+    }
+
     function pad2(n) { return (n < 10 ? '0' : '') + n; }
     // 北京时间当天（UTC+8），与 abn_common.js 的取法一致
     function todayStr() {
         var d = new Date(Date.now() + 8 * 3600000);
         return d.getUTCFullYear() + '-' + pad2(d.getUTCMonth() + 1) + '-' + pad2(d.getUTCDate());
+    }
+    // 导出文件名的时间戳：YYYY-MM-DD_HHmmss（北京时间，秒级避免同名覆盖）
+    function nowStamp() {
+        var d = new Date(Date.now() + 8 * 3600000);
+        return todayStr() + '_' + pad2(d.getUTCHours()) + pad2(d.getUTCMinutes()) + pad2(d.getUTCSeconds());
     }
     function clean(s) {
         return String(s == null ? '' : s).replace(/[\\\/:*?"<>|·]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -41,6 +79,47 @@
     function pageName() {
         var t = String(document.title || '').split('·');
         return clean(t[t.length - 1]).slice(0, 40) || '看板';
+    }
+
+    // ── 单元格 → 语义 token（供 xls_style 映射成 Excel 样式）──
+    // 只记录"这是什么"，不记录颜色 —— 切换主题时无需重新抓取
+    function tokenOf(td, tr) {
+        var t = [], cl = td.classList, i;
+        if (td.tagName === 'TH') t.push('th');
+        if (cl.contains('pt-ytd')) t.push('ytd');
+        if (cl.contains('pt-cur')) t.push('cur');
+        if (cl.contains('pt-off')) t.push('off');
+        if (cl.contains('pt-grp') || (tr && tr.classList.contains('pt-grp'))) t.push('grp');
+        if (cl.contains('pt-grp-agg') || (tr && tr.classList.contains('pt-grp-agg'))) t.push('grpagg');
+        if (cl.contains('pt-total-row') || (tr && tr.classList.contains('pt-total-row'))) t.push('total');
+        if (cl.contains('pt-yu')) t.push('yu');
+        if (cl.contains('pt-yd')) t.push('yd');
+        if (cl.contains('pt-ny')) t.push('ny');
+        if (cl.contains('pt-pct-red')) t.push('pred');
+        if (cl.contains('pt-pct-yellow')) t.push('pyellow');
+        if (cl.contains('pt-pct-green')) t.push('pgreen');
+        // 订单状态：类在内层 span（.abn-st），不在单元格上
+        var stEl = td.querySelector('.abn-st') || td;
+        if (stEl.classList && stEl.classList.contains('abn-st-full')) t.push('stfull');
+        if (stEl.classList && stEl.classList.contains('abn-st-cryo')) t.push('stcryo');
+        if (cl.contains('abn-dur')) t.push('dur');
+        if (cl.contains('abn-txt')) t.push('txt');
+        if (cl.contains('abn-blank')) t.push('blank');
+        // 严重度色阶：类可能在单元格本身，也可能在内层 span（.abn-bkt）
+        var nodes = [td, td.firstElementChild];
+        for (var n = 0; n < nodes.length; n++) {
+            if (!nodes[n] || !nodes[n].classList) continue;
+            for (i = 1; i <= 6; i++) if (nodes[n].classList.contains('sev-' + i)) { t.push('sev' + i); n = nodes.length; break; }
+        }
+        // 风险提示：颜色是 JS 内联写的，直接读 style 里的色值
+        var rk = td.querySelector('.abn-risk');
+        if (rk) {
+            var col = (rk.getAttribute('style') || '').toLowerCase();
+            if (col.indexOf('ff4d4f') >= 0 || col.indexOf('255, 77, 79') >= 0) t.push('risk0');
+            else if (col.indexOf('ffb800') >= 0 || col.indexOf('255, 184, 0') >= 0) t.push('risk1');
+            else if (col.indexOf('62c98d') >= 0 || col.indexOf('98, 201, 141') >= 0) t.push('risk2');
+        }
+        return t.length ? t : null;
     }
 
     // ── 单元格 → 纯文本 ──
@@ -104,11 +183,11 @@
             trs = trs.filter(function (t) { return rows.indexOf(t) < 0 || keepTr.indexOf(t) >= 0; });
         })();
 
-        var occ = {}, out = [], merges = [], maxCol = 0;
+        var occ = {}, out = [], merges = [], maxCol = 0, tokRows = [];
         for (var ri = 0; ri < trs.length; ri++) {
             var tr = trs[ri];
             var skip = tr.matches(skipRowSel);
-            var row = [], c = 0, cells = tr.children;
+            var row = [], rowTok = [], c = 0, cells = tr.children;
             for (var ci = 0; ci < cells.length; ci++) {
                 var td = cells[ci];
                 var cs = Math.max(1, parseInt(td.getAttribute('colspan') || '1', 10) || 1);
@@ -119,7 +198,8 @@
                 if (skip) { c += cs; continue; }
                 var isJunk = td.classList.contains(skipColCls) || td.hasAttribute('data-xls-skip');
                 row[c] = isJunk ? '' : cellText(td);
-                for (var e = 1; e < cs; e++) row[c + e] = '';
+                rowTok[c] = isJunk ? null : tokenOf(td, tr);
+                for (var e = 1; e < cs; e++) { row[c + e] = ''; rowTok[c + e] = null; }
                 if (rs > 1 || cs > 1)
                     merges.push({ s: { r: out.length, c: c }, e: { r: out.length + rs - 1, c: c + cs - 1 } });
                 c += cs;
@@ -128,8 +208,9 @@
             for (var z = 0; z < row.length; z++) if (row[z] === undefined) row[z] = '';
             maxCol = Math.max(maxCol, row.length);
             out.push(row);
+            tokRows.push(rowTok);
         }
-        if (!out.length) return { aoa: [], merges: [], cols: [] };
+        if (!out.length) return { aoa: [], merges: [], cols: [], tokens: [] };
         for (var r0 = 0; r0 < out.length; r0++)
             for (var z0 = 0; z0 < maxCol; z0++) if (out[r0][z0] === undefined) out[r0][z0] = '';
 
@@ -154,29 +235,122 @@
             }
             if (keep.length && keep.length < maxCol) {
                 out = out.map(function (r) { return keep.map(function (kk) { return r[kk]; }); });
-                merges = merges
-                    .map(function (m) { return { s: { r: m.s.r, c: map[m.s.c] }, e: { r: m.e.r, c: map[m.e.c] } }; })
-                    .filter(function (m) { return m.s.c >= 0 && m.e.c >= 0; });
+                tokRows = tokRows.map(function (r) { return keep.map(function (kk) { return r[kk] || null; }); });
+                // 终点列被裁掉时，把合并收窄到最后一个保留列（例：分组行 colspan 跨到被丢弃的「趋势图」列）
+                merges = merges.map(function (m) {
+                    var sc = map[m.s.c], ec = map[m.e.c];
+                    if (sc < 0) return null;
+                    if (ec < 0) ec = keep.length - 1;
+                    return { s: { r: m.s.r, c: sc }, e: { r: m.e.r, c: ec } };
+                }).filter(Boolean);
             }
         }
-        return { aoa: out, merges: merges, cols: autoCols(out) };
+        return { aoa: out, merges: merges, cols: autoCols(out), tokens: tokRows };
     }
 
-    // ── 写文件（所有导出都走这里，统一列宽与命名） ──
+    // ── 导出主题：白底报表 / 深色看板（Popover 选择，记住上次）──
+    var THEME_LIST = [
+        { id: 'navy',     name: '商务海军蓝', desc: '深藏青表头 · 适合财报 / 转发' },
+        { id: 'graphite', name: '石墨灰',     desc: '最克制 · 黑白打印最干净' },
+        { id: 'teal',     name: '深青商务',   desc: '与看板主色同色系' }
+    ];
+    function themeOf() {
+        var v = '';
+        try { v = localStorage.getItem('xls_theme') || ''; } catch (e) {}
+        return (window.XLS_STYLE && XLS_STYLE.norm) ? XLS_STYLE.norm(v) : (v || 'navy');
+    }
+    function pickTheme(cb) {
+        var el = document.createElement('div');
+        el.className = 'xls-theme-pop';
+        el.setAttribute('popover', 'manual');
+        var cur = themeOf();
+        el.innerHTML = '<div class="xtp-hd"><span class="xtp-t">导出格式</span><button type="button" class="xtp-x" aria-label="关闭">×</button></div>' +
+            THEME_LIST.map(function (t) {
+                return '<button type="button" class="xtp-btn' + (cur === t.id ? ' on' : '') + '" data-theme="' + t.id + '">' +
+                    t.name + '<i>' + t.desc + '</i></button>';
+            }).join('');
+        document.body.appendChild(el);
+        var usePop = typeof el.showPopover === 'function';
+        if (usePop) { try { el.showPopover(); } catch (e) {} } else { el.style.display = 'block'; }
+        function close() {
+            if (usePop) { try { el.hidePopover(); } catch (e) {} }
+            setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 0);
+        }
+        function done(t) {
+            try { localStorage.setItem('xls_theme', t); } catch (e) {}
+            close(); cb(t);
+        }
+        el.addEventListener('click', function (e) {
+            if (e.target.closest && e.target.closest('.xtp-x')) { close(); return; }   // 右上角 ×：只关闭，不导出
+            var b = e.target.closest ? e.target.closest('[data-theme]') : null;
+            if (b) { done(b.getAttribute('data-theme')); return; }
+            if (e.target === el) close();
+        });
+        document.addEventListener('keydown', function esc(ev) {
+            if (ev.key === 'Escape') { document.removeEventListener('keydown', esc); close(); }
+        });
+    }
+
+    // ── 写文件（所有导出都走这里：列宽 + 合并 + 表头样式 + 冻结 + 筛选）──
     function exportAoa(aoa, baseName, opts) {
         opts = opts || {};
         if (!aoa || !aoa.length) { alert('当前无可导出的记录。'); return; }
         var nm = clean(baseName).slice(0, 60) || '导出';
-        loadXLSX(function () {
-            var ws = XLSX.utils.aoa_to_sheet(aoa);
-            ws['!cols'] = opts.cols || autoCols(aoa);
-            if (opts.merges && opts.merges.length) ws['!merges'] = opts.merges;
-            var wb = XLSX.utils.book_new();
-            var sheet = (clean(opts.sheet || baseName).slice(0, 31) || 'Sheet1');
-            XLSX.utils.book_append_sheet(wb, ws, sheet);
-            XLSX.writeFile(wb, nm + '_' + todayStr() + '.xlsx');
-        }, function () {
-            alert('导出库加载失败：' + XLSX_SRC + '，请确认文件存在。');
+        pickTheme(function (theme) {
+            loadStudio(function () {
+                writeWorkbook(aoa, nm, opts, theme);
+            }, function () {
+                alert('导出库加载失败：' + EXCELJS_SRC + ' / ' + STYLE_SRC + '，请确认文件存在。');
+            });
+        });
+    }
+
+    function writeWorkbook(aoa, nm, opts, theme) {
+        var wb = new ExcelJS.Workbook();
+        var sheetName = (clean(opts.sheet || nm).slice(0, 31) || 'Sheet1');
+        var ws = wb.addWorksheet(sheetName, { views: [{ state: 'frozen', ySplit: 1 }] });
+        var maxCol = 0;
+        aoa.forEach(function (r) { if (r.length > maxCol) maxCol = r.length; });
+        var cols = opts.cols || autoCols(aoa);
+        // 注意：必须用 getColumn().width 逐个设，不能先 ws.columns=[] 再 push 普通对象
+        // （ExcelJS 的 columns 是 Column 实例数组，push 普通对象会让 toModel 调 equivalentTo 时报错）
+        for (var ci = 0; ci < maxCol; ci++) {
+            var wch = (cols[ci] && cols[ci].wch) || 10;
+            ws.getColumn(ci + 1).width = Math.max(8, Math.min(60, wch));
+        }
+        var tokens = opts.tokens || null;
+        for (var r = 0; r < aoa.length; r++) {
+            var row = ws.getRow(r + 1);
+            for (var c = 0; c < maxCol; c++) {
+                var cell = row.getCell(c + 1);
+                var v = aoa[r][c];
+                cell.value = (v === '' || v === null || v === undefined) ? '' : v;
+                var tok = tokens ? (tokens[r] && tokens[r][c]) : (r === 0 ? ['th'] : null);
+                if (r === 0) tok = ['th'];
+                else if (r % 2 === 0) tok = ['zebra'].concat(tok || []);   // 隔行斑马纹
+                cell.style = XLS_STYLE.style(theme, tok);
+            }
+        }
+        (opts.merges || []).forEach(function (m) {
+            var c1 = Math.min(m.s.c, maxCol - 1), c2 = Math.min(m.e.c, maxCol - 1);
+            if (c2 < c1) return;
+            try { ws.mergeCells(m.s.r + 1, c1 + 1, m.e.r + 1, c2 + 1); } catch (e) {}
+        });
+        if (aoa.length > 1 && maxCol > 0) {
+            ws.autoFilter = { from: { row: 1, column: 1 }, to: { row: aoa.length, column: maxCol } };
+        }
+        wb.xlsx.writeBuffer().then(function (buf) {
+            var blob = new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = nm + '_' + nowStamp() + '.xlsx';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(function () { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, 1500);
+        }).catch(function (e) {
+            console.error('[xls] 写入失败', e);
+            alert('导出失败：' + ((e && e.message) || e));
         });
     }
 
@@ -207,9 +381,8 @@
         var r = tableToAoa(table, opts);
         if (!r.aoa.length) { alert('当前无可导出的记录。'); return; }
         var tn = clean(opts.title || '');
-        var base = tn ? (pageName() + '_' + tn) : pageName();
-        if (pageName() === tn) base = tn;                       // 页面名与表名相同时不重复
-        exportAoa(r.aoa, base, { cols: r.cols, merges: opts.fillDown ? [] : r.merges, sheet: tn || pageName() });
+        var base = tn || pageName();                            // 命名规则：表名 + 日期时间（§14.11）
+        exportAoa(r.aoa, base, { cols: r.cols, merges: opts.fillDown ? [] : r.merges, tokens: r.tokens, sheet: tn || pageName() });
     }
 
     // ── 自定义导出（不按 DOM 抓取的表格，如异常订单三页有列定义单一来源） ──
